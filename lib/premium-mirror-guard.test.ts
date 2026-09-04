@@ -1,7 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { readdirSync, readFileSync } from 'node:fs'
-import { fileURLToPath } from 'node:url'
-import path from 'node:path'
+import { migrationsDansLOrdre } from '@/lib/migrations-lecture'
 import { canAccessMindMaps, type Tier } from './subscription'
 
 // Garde du MIROIR SQL ↔ application des paliers premium.
@@ -24,9 +22,6 @@ import { canAccessMindMaps, type Tier } from './subscription'
 // redéfinitions comme aux ajouts (7 gates au 2026-07-23 : 002, 007, 181, 183×2,
 // 184, 192).
 
-const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..')
-const MIGRATIONS_DIR = path.join(ROOT, 'supabase')
-
 const ALL_TIERS: Tier[] = ['anonymous', 'free', 'tier1', 'tier2', 'tier3']
 
 type Gate = { file: string; tiers: string[]; isDomain: boolean }
@@ -44,11 +39,15 @@ type Gate = { file: string; tiers: string[]; isDomain: boolean }
  * `free` : un gate qui laisserait passer `free` serait sinon reclassé en
  * domaine et échapperait au contrôle — soit exactement le trou à surveiller.
  */
+// Le balayage complet des 21 Mo de `supabase/` est fait UNE fois : les trois
+// `it()` de ce fichier l'appelaient chacun, et le dernier tombait au hasard
+// sur le délai de 5 s de Vitest.
+let gatesCache: Gate[] | null = null
+
 function tierListsInMigrations(): Gate[] {
+  if (gatesCache !== null) return gatesCache
   const gates: Gate[] = []
-  const files = readdirSync(MIGRATIONS_DIR).filter((f) => f.endsWith('.sql'))
-  for (const file of files) {
-    const sql = readFileSync(path.join(MIGRATIONS_DIR, file), 'utf8')
+  for (const { file, sql } of migrationsDansLOrdre()) {
     for (const m of sql.matchAll(/\(\s*('[^)]*')\s*\)/g)) {
       const tiers = [...m[1].matchAll(/'([^']+)'/g)].map((x) => x[1])
       if (!tiers.includes('tier1')) continue
@@ -60,6 +59,7 @@ function tierListsInMigrations(): Gate[] {
       })
     }
   }
+  gatesCache = gates
   return gates
 }
 

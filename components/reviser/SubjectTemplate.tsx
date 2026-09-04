@@ -12,7 +12,7 @@ import CarteDictee from '@/components/francais/dictee/CarteDictee'
 import ReviewBanner from '@/components/reviser/ReviewBanner'
 import ExamBanner from '@/components/reviser/ExamBanner'
 import AnnalesPanel from '@/components/reviser/AnnalesPanel'
-import AiFab from '@/components/reviser/AiFab'
+import MarcelFab from '@/components/reviser/MarcelFab'
 import {
   chapterUnit,
   disciplineLabel,
@@ -89,7 +89,9 @@ export default function SubjectTemplate({
         grade={data.grade}
         progress={progress}
         unit={unit}
-        discipline={active.discipline ? disciplineLabel(active.discipline) : null}
+        discipline={
+          active.discipline ? disciplineLabel(active.discipline) : null
+        }
         gardien={ecusson}
         standing={
           data.standing ? (
@@ -106,9 +108,7 @@ export default function SubjectTemplate({
           active={tabId(active)}
           onChange={setTab}
           bulle={
-            gardien.bulle && jeuId
-              ? { tab: jeuId, label: gardien.bulle }
-              : null
+            gardien.bulle && jeuId ? { tab: jeuId, label: gardien.bulle } : null
           }
         />
       </SubjectHeader>
@@ -165,7 +165,11 @@ export default function SubjectTemplate({
               ) : null}
             </>
           ) : mode === 'annales' && exam ? (
-            <AnnalesPanel subject={data.subject} exam={exam} papers={data.papers} />
+            <AnnalesPanel
+              subject={data.subject}
+              exam={exam}
+              papers={data.papers}
+            />
           ) : (
             // L'onglet « Mode de jeu » porte DEUX familles, dans cet ordre :
             // le gardien de la matière (le rendez-vous), puis les jeux de
@@ -187,7 +191,10 @@ export default function SubjectTemplate({
         </div>
       </div>
 
-      <AiFab />
+      {/* Marcel, avec la matière sous le bras : c'est lui qui génère fiches,
+          exercices et flashcards sur mesure — l'ancienne baguette « IA,
+          bientôt » promettait exactement cela sans jamais le faire. */}
+      <MarcelFab matiere={data.subject.slug} />
     </div>
   )
 }

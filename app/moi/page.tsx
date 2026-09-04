@@ -11,17 +11,14 @@ import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
 import WorldBackdrop from '@/components/WorldBackdrop'
 import CarteProfil from '@/components/moi/CarteProfil'
-import CouronnesMatieres from '@/components/moi/CouronnesMatieres'
-import CouronnesRangee from '@/components/moi/CouronnesRangee'
-import MesChiffres from '@/components/moi/MesChiffres'
-import HistoriqueTravail from '@/components/moi/HistoriqueTravail'
+import Classement from '@/components/moi/Classement'
+import Preuves from '@/components/moi/Preuves'
 import TuileMoyenne from '@/components/moi/TuileMoyenne'
+import Vitrine from '@/components/moi/Vitrine'
+import RythmeBarres from '@/components/moi/RythmeBarres'
 import TrajectoryCard from '@/components/moi/TrajectoryCard'
-import EffortParMatiere from '@/components/moi/EffortParMatiere'
-import StandingLine from '@/components/StandingLine'
 import { parseGradeStandings } from '@/lib/percentile'
-import { buildEffort } from '@/lib/effort'
-import { weightsForGrade } from '@/lib/exam-weights'
+import { axesSecondaires } from '@/lib/moi/classement'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { readRowTolerant } from '@/lib/profile-read'
@@ -40,7 +37,6 @@ import {
 import { appliquerValidationsAuto } from '@/lib/moi/journal'
 import {
   formatDuree,
-  libelleCetteSemaine,
   phraseRythme,
   rythmeHebdo,
   JOURS_HISTORIQUE,
@@ -69,16 +65,6 @@ import type { Habit, HabitLog, CommuteSlot } from '@/lib/types'
 
 export const metadata = { title: 'Moi — Studuel' }
 export const dynamic = 'force-dynamic'
-
-/**
- * FENÊTRE DU DIAGRAMME D'EFFORT, en jours.
- *
- * Trente, et pas le cumul depuis l'inscription : un total « depuis toujours »
- * ment sur le présent. Un élève qui a bachoté les maths en septembre passerait
- * pour un matheux jusqu'en juin, alors que le diagramme est là pour dire ce
- * qu'il fait EN CE MOMENT — c'est la seule lecture sur laquelle il peut agir.
- */
-const EFFORT_JOURS = 30
 
 // Les colonnes du profil que cet écran affiche, toutes migrations confondues.
 type MoiProfileRow = {
@@ -134,6 +120,21 @@ type MoiProfileRow = {
 // niveau conditionne la lecture du programme), tout le reste part avec lui.
 // `getProfileData` (la carte de joueur) rejoint la première vague ; la file SRS,
 // qui ne servait qu'à désigner la matière du moment, a disparu avec elle.
+//
+// REFONTE DU 2026-09-03 (Lucas : « les blocs sont bas de gamme »). Cinq blocs,
+// dans cet ordre, et pas un de plus :
+//   1. LA CARTE DE JOUEUR, devenue un objet (violet radial, anneau d'or, trois
+//      compteurs en verre, un reflet holographique à l'ouverture).
+//   2. « TON CLASSEMENT » — le « top X % » passe de 11 px sous le pseudo à
+//      46 px en tête de bloc, avec la foule animée ; les trois mesures réunies,
+//      jamais fondues en une (lib/moi/classement, lib/percentile).
+//   3. LES TROIS PREUVES en tuiles (série · temps · moyenne).
+//   4. LA VITRINE DES COURONNES, la prochaine nommée et menée.
+//   5. LE RYTHME en barres, l'objectif en pointillé.
+// Ont quitté l'écran : la plaque de six chiffres (les stats d'arène ont
+// l'arène), l'étagère et son ⋮, le diagramme d'effort en toile (et sa RPC
+// `effort_by_subject` : une requête de moins), l'historique 30 jours (redit par
+// le rythme). La trajectoire bac reste, seulement quand des notes existent.
 // -----------------------------------------------------------------------------
 export default async function MoiPage() {
   const supabase = await createClient()
@@ -185,7 +186,6 @@ export default async function MoiPage() {
     { data: storedLogs },
     { data: workDays, error: workError },
     { data: standingsRow },
-    { data: effortRows, error: effortError },
     subjects,
     mastery,
     chapitresVus,
@@ -259,17 +259,6 @@ export default async function MoiPage() {
     // Place de l'élève dans sa cohorte (223) : RPC SECURITY DEFINER, jamais une
     // jointure — la RLS de `profiles` ne laisserait voir que sa propre ligne.
     supabase.rpc('my_grade_standings'),
-    // L'EFFORT PAR MATIÈRE (325) : l'agrégat descend en base, comme la maîtrise
-    // (321). `test_sessions` est la table qui grossit le plus vite du projet —
-    // en lire les lignes pour n'en tirer qu'une somme par matière la ferait
-    // transférer entière à chaque ouverture de /moi.
-    //
-    // TOLÉRÉE, et l'erreur est GARDÉE : tant que la 325 n'est pas exécutée,
-    // PostgREST répond « function does not exist », et la carte disparaît au
-    // lieu d'annoncer « tu n'as rien travaillé » à un élève assidu. C'est le
-    // mode de panne n°1 du projet (cf. lib/sante.ts) : mieux vaut une carte
-    // absente qu'une carte qui ment.
-    supabase.rpc('effort_by_subject', { p_days: EFFORT_JOURS }),
     // --- Ce qu'il faut pour DÉCERNER les couronnes ---------------------------
     // Le catalogue est en cache serveur (identique pour tous), la maîtrise et
     // les chapitres déclarés sont personnels. Aucun des trois n'a besoin du
@@ -409,88 +398,24 @@ export default async function MoiPage() {
     : null
   const gradeLabel = gradeLevel ? GRADE_FULL_LABELS[gradeLevel] : null
 
-  // --- Preuve n°4 : OÙ va le travail ---------------------------------------
-  // Le diagramme ne dit pas « combien » (la carte de joueur le fait déjà) mais
-  // « au bon endroit ou non ». Il compare, ligne par ligne, la part de travail
-  // reçue par une matière au poids qu'elle a à l'épreuve — l'écart entre les
-  // deux est tout son propos (cf. lib/effort.ts).
-  //
-  // La carte disparaît si la 325 n'est pas passée : `effortError` porte alors
-  // « function does not exist », et un diagramme à zéro contredirait le cumul
-  // affiché juste au-dessus.
-  const effortDisponible = !isMissingSchemaObject(effortError)
-  const matieresDuDiagramme =
-    selected.length > 0
-      ? suivies
-      : suivies.filter((s) => s.levels.includes(profile?.grade_level ?? ''))
-
-
-  // LA MOYENNE PAR MATIÈRE, sur 20, pondérée par les coefficients saisis. C'est
-  // la troisième dimension du diagramme, et celle qui lui donne son tranchant :
-  // le travail dit un CHOIX, la moyenne dit un BESOIN. Les notes sont déjà
-  // lues plus haut pour la moyenne générale (`schoolGrades`) — aucune requête
-  // de plus, seulement un regroupement par slug.
-  const parMoyenne = new Map<string, { points: number; coef: number }>()
-  for (const g of schoolGrades) {
-    if (!(g.outOf > 0) || !(g.coefficient > 0)) continue
-    const cumul = parMoyenne.get(g.subject) ?? { points: 0, coef: 0 }
-    // Ramené sur 20 : un contrôle sur 40 et une interro sur 10 ne se moyennent
-    // pas tels quels.
-    cumul.points += (g.score / g.outOf) * 20 * g.coefficient
-    cumul.coef += g.coefficient
-    parMoyenne.set(g.subject, cumul)
-  }
-  const moyennesParMatiere: Record<string, number | null> = {}
-  for (const [slug, { points, coef }] of parMoyenne) {
-    if (coef > 0) moyennesParMatiere[slug] = points / coef
-  }
-
-  const effort = buildEffort({
-    // ⚠️ La RPC nomme sa colonne `subject_slug`, pas `slug` — lire `r.slug`
-    // rendait `undefined`, et le diagramme affichait une matière nommée
-    // « undefined ». Le mapping se fait ICI, une fois.
-    effort: (
-      (effortRows ?? []) as {
-        subject_slug: string
-        questions: number
-        lessons: number
-      }[]
-    ).map((r) => ({
-      slug: String(r.subject_slug),
-      questions: Number(r.questions) || 0,
-      lessons: Number(r.lessons) || 0,
-    })),
-    // TOUTES SES MATIÈRES ONT UNE BRANCHE, travaillées ou non — une matière
-    // qu'il suit sans jamais l'ouvrir est ce que la toile doit lui montrer.
-    //
-    // Le périmètre est BORNÉ ici, et il doit l'être : `suivies` vaut le
-    // catalogue ENTIER quand l'élève n'a coché aucune matière à l'onboarding
-    // (une trentaine), ce qui dessinerait une toile illisible dont presque
-    // toutes les branches seraient à zéro. Sans choix explicite, on retombe
-    // donc sur les matières de SA CLASSE.
-    subjects: matieresDuDiagramme.map((s) => ({ slug: s.slug, name: s.name })),
-    // Les poids viennent du NIVEAU, et les spécialités des matières suivies :
-    // en terminale, c'est le profil de l'élève qui dit laquelle pèse 16.
-    weights: weightsForGrade(profile?.grade_level ?? '', suivies),
-    moyennes: moyennesParMatiere,
-  })
   const level = workLevel(secondesTotal)
   const standings = parseGradeStandings(standingsRow)
+  // Les deux autres mesures sous l'assiduité : l'arène et la meilleure matière.
+  const axes = axesSecondaires(standings)
+  const initiale = (profilJeu?.displayName ?? profile?.full_name ?? 'M')
+    .trim()
+    .charAt(0)
+    .toUpperCase()
 
   return (
     <div>
       <WorldBackdrop className="tab-bg" />
 
-      {/* LE RYTHME DE LA PAGE. La carte porte tout ce qui dit QUI EST cet élève
-          et CE QU'IL A GAGNÉ ; le rythme et les habitudes reprennent ensuite
-          l'écart courant. Un espacement constant entre cinq blocs, c'est une
-          liste ; un espacement qui varie, c'est une lecture.
-
-          Il y a deux blocs de moins qu'avant : « Mes chiffres » a rejoint la
-          carte en pied de celle-ci (components/moi/MesChiffres.tsx), et « Mes
-          couronnes » s'est replié dans l'étagère de la carte, derrière le ⋮
-          (components/moi/CouronnesRangee.tsx). */}
-      <div className="flex flex-col">
+      {/* CINQ BLOCS, UN SEUL ESPACEMENT : la carte (qui je suis), le classement
+          (où je suis), les preuves (ce que j'ai fait), la vitrine (ce que j'ai
+          gagné), le rythme (à quelle cadence). Chacun est un objet posé sur le
+          crème, aucun n'est un titre suivi d'une liste. */}
+      <div className="flex flex-col gap-4">
         {profilJeu ? (
           <CarteProfil
             data={{
@@ -507,94 +432,54 @@ export default async function MoiPage() {
               equippedBadgeIds: profilJeu.equippedBadgeIds,
             }}
             workTitle={level.title}
-            // L'étagère : un emplacement par matière suivie, vide tant que la
-            // couronne n'est pas gagnée. Rendue ici (côté serveur) et passée en
-            // nœud — la carte, elle, est un composant client. Elle porte
-            // maintenant le DÉTAIL en enfant : le ⋮ au bout de la rangée le
-            // déroule sur place, il n'y a plus de bloc « Mes couronnes » sous
-            // la carte.
-            couronnes={
-              <CouronnesRangee liste={listeCouronnes} bilan={bilan}>
-                <CouronnesMatieres liste={listeCouronnes} bilan={bilan} />
-              </CouronnesRangee>
-            }
-            // « Tu travailles plus que 96 % des 3e ». Sur cet onglet la mesure
-            // est l'ASSIDUITÉ et pas les trophées : /moi est le miroir du
-            // travail fourni, l'arène a déjà le classement de la compétition.
-            standing={
-              <StandingLine
-                standing={standings.assiduite}
-                grade={standings.grade ?? gradeLevel}
-                className="text-white/90"
-              />
-            }
-            // LE PIED DE LA CARTE. « Mes chiffres » n'est plus une section :
-            // il est devenu la plaque de statistiques de la carte de joueur.
-            // Passé en nœud (et non importé par la carte) pour qu'il reste
-            // rendu côté serveur — il n'a aucun état client.
-            chiffres={
-              <MesChiffres
-                serie={serie}
-                record={record}
-                temps={formatDuree(secondesTotal)}
-                tempsTendance={libelleCetteSemaine(semaines)}
-                // LA TUILE DES NOTES, entière et cliente : c'est la seule
-                // cellule du bloc qui ouvre quelque chose (la saisie des
-                // moyennes de trimestre), et la seule qui change de nature
-                // selon qu'une moyenne est connue ou non.
-                tuileMoyenne={
-                  <TuileMoyenne
-                    bilan={moyenne}
-                    terms={terms}
-                    disabled={Boolean(termError)}
-                  />
-                }
-                arene={{
-                  duels: profilJeu.summary.gamesPlayed,
-                  victoires:
-                    profilJeu.summary.gamesPlayed > 0
-                      ? profilJeu.summary.winRateLabel
-                      : null,
-                  trophees: profilJeu.summary.trophies,
-                  recordTrophees: profilJeu.summary.bestTrophies,
-                  meilleureSerie: profilJeu.summary.bestStreak,
-                }}
-              />
-            }
+            // Les trois compteurs en verre : ce que l'élève montre. La série
+            // et le temps reviennent en tuiles dessous avec leur détail ; les
+            // trophées n'ont que cette place ici — l'arène a le reste.
+            compteurs={[
+              { valeur: `${serie} j`, legende: 'série' },
+              { valeur: formatDuree(secondesTotal), legende: 'de travail' },
+              {
+                valeur: profilJeu.summary.trophies.toLocaleString('fr-FR'),
+                legende: 'trophées',
+              },
+            ]}
           />
         ) : null}
 
-        {/* OÙ VA LE TRAVAIL — juste après la carte, et AVANT le rythme.
-            L'ordre est le raisonnement : la carte dit ce que l'élève a gagné,
-            ce bloc dit s'il le gagne au bon endroit, le rythme dit à quelle
-            cadence. Le « où » avant le « quand » : c'est sur le premier qu'il
-            peut agir dès aujourd'hui. */}
-        {effortDisponible ? (
-          <div className="mt-7">
-            <EffortParMatiere diagram={effort} jours={EFFORT_JOURS} />
-          </div>
-        ) : null}
+        {/* « Tu es dans le top 8 % des 5e ». Sur cet onglet la mesure en grand
+            est l'ASSIDUITÉ : /moi est le miroir du travail fourni, l'arène a
+            déjà le classement de la compétition — il passe ici en seconde
+            ligne, avec la meilleure matière. */}
+        <Classement
+          principal={standings.assiduite}
+          grade={standings.grade ?? gradeLevel}
+          secondaires={axes}
+          initiale={initiale}
+        />
+
+        <Preuves
+          serie={serie}
+          record={record}
+          secondesTotal={secondesTotal}
+          semaines={semaines}
+          // LA TUILE DES NOTES, entière et cliente : la seule qui ouvre
+          // quelque chose (la saisie des moyennes de trimestre).
+          tuileMoyenne={
+            <TuileMoyenne bilan={moyenne} terms={terms} disabled={Boolean(termError)} />
+          }
+        />
+
+        <Vitrine liste={listeCouronnes} bilan={bilan} />
 
         {rythmeDisponible ? (
-          <div className="mt-7">
-            <HistoriqueTravail
-              jours={workDays ?? []}
-              today={today}
-              phrase={phraseRythme(semaines)}
-            />
-          </div>
+          <RythmeBarres semaines={semaines} phrase={phraseRythme(semaines)} />
         ) : null}
 
         {/* La trajectoire ne s'affiche QUE s'il y a de quoi projeter. Sans
             notes, elle occupait un tiers de l'écran pour demander une saisie —
-            ce bouton vit maintenant dans le bloc des chiffres. */}
+            ce bouton vit dans la tuile des notes. */}
         {trajectory.hasData ? (
-          <div className="mt-5">
-            <TrajectoryCard
-              trajectory={trajectory}
-              needsMigration={Boolean(termError)}
-            />
-          </div>
+          <TrajectoryCard trajectory={trajectory} needsMigration={Boolean(termError)} />
         ) : null}
       </div>
     </div>

@@ -2217,16 +2217,6 @@ a:active > .arena-menu-row {
     28px 28px,
     28px 28px;
 }
-/* Halo ambré derrière la flamme de niveau. */
-.moi-glow {
-  background: radial-gradient(closest-side, oklch(0.76 0.14 62 / 0.4), transparent 72%);
-}
-.moi-chip {
-  color: oklch(0.47 0.26 310);
-}
-.moi-track {
-  background: oklch(0.93 0.022 50);
-}
 /* La carte « jouet » : liseré violet léger + socle d'ombre dure violette.
    Recalée sur la teinte de la marque (295) comme la carte de joueur : le liseré
    tirait sur le magenta (305) et, sous une carte de joueur devenue franchement
@@ -2236,11 +2226,6 @@ a:active > .arena-menu-row {
   box-shadow:
     0 5px 0 oklch(0.45 0.19 295 / 0.34),
     0 16px 24px -16px oklch(0.4 0.18 296 / 0.28);
-}
-/* Jeton de jour validé (carte « 7 jours ») : violet vif, halo assorti. */
-.moi-token-done {
-  background: linear-gradient(160deg, oklch(0.6 0.23 300), oklch(0.47 0.24 295));
-  box-shadow: 0 0 0 3px oklch(0.6 0.23 300 / 0.3);
 }
 /* --- Onglet Moi v8 : le PANNEAU d'identité -----------------------------------
    L'écran était une pile de six cartes blanches de même taille, de même rayon,
@@ -2262,60 +2247,6 @@ a:active > .arena-menu-row {
     inset 0 1px 0 oklch(1 0 0 / 0.18),
     0 18px 34px -22px oklch(0.4 0.18 310 / 0.75);
 }
-/* L'étagère des trois preuves, posée DANS le panneau : un verre légèrement
-   plus clair que le violet, pas une carte blanche de plus. */
-.moi-etagere {
-  background: oklch(1 0 0 / 0.12);
-  box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.22);
-}
-/* Le séparateur entre deux preuves : un filet, pas une bordure de carte. */
-.moi-filet {
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    oklch(1 0 0 / 0.28),
-    transparent
-  );
-}
-/* LE SEUL MOMENT ANIMÉ DE L'ONGLET : la vague du rythme se dessine.
-   Un écran qui anime tout n'anime rien ; celui-ci n'a qu'un geste, et il tombe
-   sur la seule chose qui raconte une durée. Il rejoue au changement de période
-   (le tracé est re-monté), ce qui fait aussi office d'accusé de réception.
-
-   `pathLength: 1` normalise la longueur du chemin : le même réglage vaut pour
-   7 points comme pour 30, sans mesurer quoi que ce soit en JavaScript.
-   Décélération exponentielle, jamais de rebond. */
-@keyframes moi-trace {
-  from {
-    stroke-dashoffset: 1;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-.moi-trace {
-  stroke-dasharray: 1;
-  animation: moi-trace 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-.moi-trace-halo {
-  animation: moi-halo 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-@keyframes moi-halo {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .moi-trace,
-  .moi-trace-halo {
-    animation: none;
-    stroke-dasharray: none;
-  }
-}
-
 /* --- Onglet Moi v9 : LA CARTE DE JOUEUR --------------------------------------
    Le panneau d'identité (v8) était une surface violette qui portait un avatar
    et trois chiffres. La carte porte en plus une BANNIÈRE illustrée choisie par
@@ -2359,18 +2290,6 @@ a:active > .arena-menu-row {
     0 18px 34px -22px oklch(0.4 0.18 296 / 0.75);
 }
 
-/* LE PIED DE LA CARTE DE JOUEUR — la plaque blanche des chiffres, ENCASTRÉE
-   dans le violet plutôt que posée dessus. Une simple bande blanche collée sous
-   la carte se lisait comme une seconde carte empilée, c'est-à-dire exactement
-   ce que la fusion vient de supprimer. L'ombre interne du haut la creuse d'un
-   cran et le filet clair fait la lèvre du logement : la carte n'a plus qu'un
-   seul volume, à deux matières. */
-.moi-carte-socle {
-  box-shadow:
-    inset 0 8px 12px -6px oklch(0.24 0.12 294 / 0.55),
-    inset 0 1px 0 oklch(1 0 0 / 0.6);
-}
-
 /* LES PASTILLES D'ICÔNE DE « MES CHIFFRES » (components/moi/ChiffreCell.tsx).
    Trois teintes, pas six : la flamme pour la série, le violet pour le travail,
    l'or pour l'arène — exactement les familles que le bloc raconte déjà. Elles
@@ -2410,51 +2329,8 @@ a:active > .arena-menu-row {
   transform: scale(1.08);
 }
 
-/* Une ligne de la liste des couronnes. Pas de fond au repos : la carte blanche
-   qui la porte suffit, et huit lignes teintées feraient un tableau rayé. */
-.moi-couronne-ligne:hover {
-  background: oklch(0.965 0.02 300);
-}
-.moi-couronne-ligne:active {
-  background: oklch(0.945 0.03 300);
-}
-
-/* La jauge d'une couronne GAGNÉE : violet plein, la couleur de l'action et de
-   la marque. Le métal, lui, est déjà dit par la couronne à gauche — le répéter
-   dans la barre (une barre bronze, une barre or…) aurait donné quatre couleurs
-   de jauge pour une seule idée, et deux d'entre elles se seraient confondues
-   avec le jaune de la récompense. */
-.moi-couronne-jauge {
-  background: linear-gradient(90deg, oklch(0.6 0.23 300), oklch(0.5 0.24 295));
-}
-
-/* La bande « matière du moment » : le seul bloc de l'écran qui sort du cadre et
-   qui porte une illustration. Crème PROFOND (la teinte des cartes matières de
-   Réviser, assombrie) — surtout pas un pastel par matière : six fonds pastel
-   avaient déjà dispersé l'accueil Réviser, la couleur de la matière se
-   concentre sur sa barre d'accent. */
-.moi-bande {
-  background:
-    radial-gradient(70% 120% at 100% 50%, oklch(0.93 0.05 82 / 0.9), transparent 70%),
-    linear-gradient(100deg, oklch(0.965 0.026 84), oklch(0.925 0.045 80));
-  box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.7);
-}
-
-/* Tableau scolaire (bandeau v4) : ardoise violet profond, cadre bois crème,
-   même famille que l'arène Défi — le violet reste la couleur du monde. */
-.moi-board {
-  background:
-    radial-gradient(90% 70% at 18% 8%, oklch(1 0 0 / 0.06), transparent 60%),
-    radial-gradient(80% 60% at 85% 92%, oklch(0.55 0.18 310 / 0.22), transparent 65%),
-    linear-gradient(172deg, oklch(0.33 0.09 302), oklch(0.25 0.08 296));
-  border: 8px solid oklch(0.84 0.055 70);
-  box-shadow:
-    inset 0 0 0 2px oklch(0.2 0.06 296 / 0.6),
-    inset 0 10px 24px oklch(0.15 0.05 296 / 0.45),
-    0 5px 0 oklch(0.66 0.07 65),
-    0 16px 24px -16px oklch(0.4 0.18 310 / 0.35);
-}
 /* Écriture à la craie : blanc cassé + halo poudreux léger. */
+  /* Écriture à la craie : blanc cassé + halo poudreux léger. */
 .moi-chalk {
   color: oklch(0.97 0.008 90);
   text-shadow: 0 0 6px oklch(1 0 0 / 0.22);
@@ -3819,6 +3695,76 @@ a:active > .arena-menu-row {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+/* --- LES TEINTES DES OUTILS DE MARCEL ---------------------------------------
+   Marcel ne fait pas qu'une chose : il explique, il résume en fiche, il
+   débloque un exercice, il fabrique des cartes, il écoute un oral. Cinq gestes
+   qui n'ont rien à voir, et qui portaient tous le même violet — le rail se
+   lisait comme une file de cartes identiques, et on ne se souvenait d'aucune.
+
+   LA COULEUR EST ICI UNE IDENTITÉ, PAS UN RÔLE, et c'est la nuance qui la rend
+   compatible avec la doctrine maison (violet = action, jaune = récompense,
+   corail = alerte). Elle ne touche QUE l'icône, sa pastille et le liseré de la
+   carte : dans ces cartes, tous les boutons d'action restent violets, et rien
+   de coloré ne prétend être cliquable en soi.
+
+   Une seule variable par teinte (`--outil`), déclinée par `color-mix` : le jour
+   où une teinte bouge, elle bouge partout. En oklch comme les robes des jeux,
+   pour que deux teintes voisines aient la même clarté perçue — sinon le rose
+   « saute » à côté du bleu. */
+[data-teinte='violet'] {
+  --outil: var(--primary);
+}
+[data-teinte='rose'] {
+  --outil: oklch(0.6 0.19 5);
+}
+[data-teinte='bleu'] {
+  --outil: oklch(0.56 0.16 250);
+}
+[data-teinte='vert'] {
+  --outil: oklch(0.54 0.14 155);
+}
+[data-teinte='ambre'] {
+  --outil: oklch(0.62 0.15 62);
+}
+[data-teinte='indigo'] {
+  --outil: oklch(0.5 0.17 285);
+}
+[data-teinte='corail'] {
+  --outil: oklch(0.6 0.18 22);
+}
+[data-teinte='turquoise'] {
+  --outil: oklch(0.55 0.11 200);
+}
+
+/* L'encre de la teinte — pour l'icône et le mot qui la nomme. */
+.outil-encre {
+  color: var(--outil, var(--primary));
+}
+/* La pastille sous l'icône : la teinte très diluée, jamais un aplat saturé. */
+.outil-pastille {
+  background: color-mix(in oklch, var(--outil, var(--primary)), transparent 88%);
+  color: var(--outil, var(--primary));
+}
+/* Le liseré de gauche : ce qui fait qu'on reconnaît la carte du coin de l'œil,
+   sans repeindre le fond blanc qui porte le texte. */
+.outil-carte {
+  box-shadow:
+    inset 4px 0 0 var(--outil, var(--primary)),
+    inset 0 0 0 1.5px color-mix(in oklch, var(--outil, var(--primary)), transparent 86%),
+    0 14px 26px -22px rgba(36, 48, 79, 0.9);
+}
+/* La carte pleine — réservée à la mission du jour, la seule qui recommande. */
+.outil-carte-pleine {
+  background: linear-gradient(
+    180deg,
+    var(--outil, var(--primary)),
+    color-mix(in oklch, var(--outil, var(--primary)), black 16%)
+  );
+  box-shadow:
+    0 4px 0 color-mix(in oklch, var(--outil, var(--primary)), black 34%),
+    0 16px 26px -20px color-mix(in oklch, var(--outil, var(--primary)), black 20%);
 }
 
 /* Les bulles de Marcel. Contour plutôt que fond plein : ce sont des paroles
@@ -5345,5 +5291,1244 @@ a:active > .arena-menu-row {
     /* Le cadre du tableau est un `ring`, c'est-à-dire une ombre portée : les
        navigateurs ne les impriment pas. Un vrai filet prend le relais. */
     border: 0.5pt solid #999 !important;
+  }
+}
+
+/* =============================================================================
+   ONGLET MOI — refonte du 03/09/2026 : la carte de joueur devient un objet, le
+   classement devient LE bloc, les preuves deviennent des tuiles, les couronnes
+   une vitrine, le rythme des barres. Tout est dérivé des tokens ; les seules
+   couleurs en dur sont les MÉTAUX des médailles (couche illustrative, même
+   précédent que components/moi/CouronneArt.tsx).
+   ========================================================================== */
+
+/* Un bloc de l'onglet : blanc, sans bord, une ombre douce et violette qui le
+   décolle du crème. Pas de liseré — quatre blocs à liseré font un formulaire. */
+.moi-bloc {
+  background: var(--card);
+  box-shadow:
+    0 1px 0 oklch(0.3 0.05 278 / 0.04),
+    0 10px 30px -12px oklch(0.4 0.18 296 / 0.28);
+}
+.moi-preuve {
+  display: flex;
+  border-radius: 1.125rem;
+  padding: 0.75rem 0.625rem 0.625rem;
+  background: var(--card);
+  box-shadow:
+    0 1px 0 oklch(0.3 0.05 278 / 0.04),
+    0 10px 30px -12px oklch(0.4 0.18 296 / 0.28);
+}
+/* Le sourcil d'un bloc : petites capitales espacées, en encre atténuée. */
+.moi-sourcil {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+/* LE REFLET HOLOGRAPHIQUE de la carte de joueur : une bande claire en biais
+   qui traverse la carte une fois. `mix-blend-mode: screen` la fait réagir au
+   violet dessous au lieu de le blanchir. Il ne joue qu'au montage et au
+   toucher (composant), jamais en boucle. */
+.moi-foil {
+  position: absolute;
+  inset: -40%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  background: linear-gradient(
+    115deg,
+    transparent 40%,
+    oklch(1 0 0 / 0) 44%,
+    oklch(1 0 0 / 0.38) 50%,
+    oklch(1 0 0 / 0) 56%,
+    transparent 60%
+  );
+  animation: moi-foil 1.6s cubic-bezier(0.2, 0.7, 0.2, 1) 1 both;
+}
+@keyframes moi-foil {
+  from {
+    transform: translateX(-70%);
+  }
+  to {
+    transform: translateX(70%);
+  }
+}
+
+/* LA FOULE du classement : cinquante silhouettes qui se lèvent, puis passent
+   au violet quand le marqueur les dépasse. */
+.moi-silhouette {
+  display: block;
+  height: 100%;
+  border-radius: 3px;
+  background: var(--muted);
+  transform: scaleY(0.25);
+  transform-origin: bottom;
+  transition:
+    transform 0.35s ease,
+    background-color 0.35s ease;
+}
+.moi-silhouette[data-levee='true'] {
+  transform: scaleY(1);
+}
+.moi-silhouette[data-etat='derriere'] {
+  background: var(--secondary);
+}
+.moi-silhouette[data-etat='devant'] {
+  background: var(--primary);
+}
+/* Le marqueur de l'élève : un disque d'or avec son initiale, et un fil qui
+   descend jusqu'à la foule. Il glisse (transition sur `left`). */
+.moi-marqueur {
+  position: absolute;
+  top: -12px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  margin-left: -17px;
+  border-radius: 9999px;
+  background: var(--highlight);
+  border: 3px solid var(--card);
+  box-shadow: 0 6px 14px -4px oklch(0 0 0 / 0.35);
+  font-family: var(--font-baloo), var(--font-nunito), sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  color: color-mix(in oklch, var(--highlight), black 55%);
+  transition: left 1.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.moi-marqueur::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  margin-left: -1px;
+  background: var(--highlight);
+}
+.moi-jauge {
+  transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* LES MÉDAILLES de la vitrine : un métal peint (couche illustrative), un
+   creux d'ombre en bas, un éclat en haut à gauche. */
+.moi-medaille {
+  box-shadow:
+    inset 0 -3px 6px oklch(0 0 0 / 0.25),
+    inset 0 2px 3px oklch(1 0 0 / 0.45),
+    0 4px 10px -4px oklch(0 0 0 / 0.4);
+}
+.moi-medaille--bronze {
+  background: radial-gradient(circle at 35% 30%, #f0b27a, #a8642b);
+}
+.moi-medaille--argent {
+  background: radial-gradient(circle at 35% 30%, #ffffff, #98a6b8);
+}
+.moi-medaille--or {
+  background: radial-gradient(circle at 35% 30%, #fff0b8, #d9a11a);
+}
+.moi-medaille--diamant {
+  background: radial-gradient(circle at 35% 30%, #ffffff, #55b0e6);
+}
+/* La prochaine : un anneau de progression en or (`--part`, posé par le
+   composant), le compte des chapitres au centre. */
+.moi-medaille--prochaine {
+  background: conic-gradient(var(--highlight) 0 var(--part, 0%), var(--muted) var(--part, 0%) 100%);
+}
+
+/* La semaine courante du rythme : la seule barre allumée. */
+.moi-barre--courante {
+  background: linear-gradient(180deg, color-mix(in oklch, var(--primary), white 30%), var(--primary));
+  box-shadow: 0 6px 14px -6px oklch(0.4 0.18 296 / 0.7);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .moi-foil {
+    animation: none;
+    opacity: 0;
+  }
+  .moi-silhouette,
+  .moi-marqueur,
+  .moi-jauge {
+    transition: none;
+  }
+}
+
+/* =============================================================================
+   LA COURSE — le duel classé (components/duel/*)
+   Deux couloirs qui se remplissent vers le drapeau, la carte de question en
+   crème dessous, le tout sur le voile violet de la salle de duel (.duel-scrim).
+   Or = mon couloir (le gain en train de se faire) ; violet clair = le rival.
+   Importé par globals.css. Les couleurs hex reprennent la palette de l'arène
+   (plaques `.arena-plate--*`, `.olympe-gold`) : c'est le monde de l'arène.
+   ========================================================================== */
+
+/* La course est en PLEIN ÉCRAN (lib/quiz-chrome) : AppMain ne pose aucune
+   marge, ni bandeau ni barre d'onglets — la scène gère elle-même l'encoche. */
+.course-scene {
+  position: relative;
+  display: flex;
+  min-height: 100dvh;
+  flex-direction: column;
+  padding: calc(env(safe-area-inset-top) + 0.75rem) 0.875rem
+    calc(env(safe-area-inset-bottom) + 1.25rem);
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .course-scene {
+    padding: 1.25rem 2rem 2rem;
+  }
+}
+
+/* --- l'en-tête ------------------------------------------------------------ */
+.course-entete {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto 10px;
+  width: 100%;
+  max-width: 36rem;
+}
+.course-retour {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  transition: transform 0.1s var(--ease);
+}
+.course-retour:active {
+  transform: scale(0.9);
+}
+.course-matiere {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-heading), 'Baloo 2', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+}
+.course-chrono {
+  min-width: 64px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 4px 10px;
+  text-align: center;
+  font-family: var(--font-mono, ui-monospace), ui-monospace, monospace;
+  font-size: 20px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+.course-chrono--urgent {
+  color: #ffb4b4;
+  animation: jeu-urgence 620ms ease-in-out infinite;
+}
+.course-chrono--muet {
+  opacity: 0.35;
+}
+
+/* --- la piste ------------------------------------------------------------- */
+.course-corps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 36rem;
+}
+.course-piste {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 22px;
+  border: 3px solid #1e1638;
+  background: rgba(24, 12, 48, 0.78);
+  padding: 12px 14px 12px 12px;
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.1),
+    0 4px 0 #1e1638,
+    0 10px 24px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+/* Le sprint : les bords battent en corail, comme un cœur. */
+@keyframes course-coeur {
+  0%,
+  100% {
+    box-shadow:
+      inset 0 2px 0 rgba(255, 255, 255, 0.1),
+      0 4px 0 #1e1638,
+      0 10px 24px rgba(0, 0, 0, 0.35),
+      0 0 0 0 rgba(241, 86, 108, 0);
+  }
+  50% {
+    box-shadow:
+      inset 0 2px 0 rgba(255, 255, 255, 0.1),
+      0 4px 0 #1e1638,
+      0 10px 24px rgba(0, 0, 0, 0.35),
+      0 0 0 5px rgba(241, 86, 108, 0.35);
+  }
+}
+.course-piste--sprint {
+  border-color: #6b1d2c;
+  animation: course-coeur 0.7s ease-in-out infinite;
+}
+.course-drapeau {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 9999px;
+  background: #fffdf7;
+  color: #24304f;
+  box-shadow: 0 2px 0 #1e1638;
+}
+
+.course-couloir {
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding-right: 28px;
+}
+.course-tete {
+  position: relative;
+  width: 44px;
+  height: 44px;
+}
+.course-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  background: #2d1c4a;
+  overflow: hidden;
+  transition:
+    transform 0.2s var(--ease),
+    border-color 0.2s var(--ease);
+}
+.course-couloir--tete .course-avatar {
+  transform: scale(1.08);
+  border-color: #fcd34d;
+}
+.course-robot {
+  position: absolute;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 6px;
+  background: #1e1638;
+  padding: 1px 4px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  color: #c9bde6;
+  box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.35);
+}
+.course-robot--grand {
+  right: 2px;
+  bottom: 2px;
+  font-size: 11px;
+  padding: 2px 6px;
+}
+
+.course-rail {
+  position: relative;
+  height: 18px;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.45);
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.5);
+  overflow: visible;
+}
+.course-remplissage {
+  position: relative;
+  height: 100%;
+  min-width: 0;
+  border-radius: 9999px;
+  transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.course-remplissage--moi {
+  background: linear-gradient(180deg, #fcd34d 0%, #f5b722 55%, #d97706 100%);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.45),
+    0 0 12px rgba(245, 183, 34, 0.45);
+}
+.course-remplissage--rival {
+  background: linear-gradient(180deg, #c4a9ff 0%, #9b6fe8 55%, #6d31d0 100%);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.35),
+    0 0 12px rgba(155, 111, 232, 0.4);
+}
+.course-pointe {
+  position: absolute;
+  right: -3px;
+  top: 50%;
+  width: 10px;
+  height: 22px;
+  border-radius: 6px;
+  background: #fffdf7;
+  transform: translateY(-50%);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+.course-legende {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 46px;
+  line-height: 1.05;
+}
+.course-nom {
+  max-width: 72px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.72);
+}
+.course-score {
+  font-family: var(--font-mono, ui-monospace), ui-monospace, monospace;
+  font-size: 18px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.course-couloir--moi .course-score {
+  color: #fcd34d;
+}
+.course-couloir--rival .course-score {
+  color: #d9ccff;
+}
+
+/* Les points qui tombent dans mon couloir. */
+@keyframes course-flotte {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 6px) scale(0.8);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -6px) scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -30px) scale(1);
+  }
+}
+.course-flotteur {
+  position: absolute;
+  left: 50%;
+  top: -6px;
+  pointer-events: none;
+  font-family: var(--font-mono, ui-monospace), ui-monospace, monospace;
+  font-size: 18px;
+  font-weight: 800;
+  color: #fcd34d;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+  animation: course-flotte 0.9s ease-out forwards;
+}
+
+/* La bulle du rival, posée sur son épaule. */
+@keyframes course-bulle-pop {
+  0% {
+    opacity: 0;
+    transform: translateY(calc(-50% + 6px)) scale(0.6);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.05);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(calc(-50% - 4px)) scale(0.9);
+  }
+}
+/* Posée à DROITE de l'avatar, à sa hauteur — jamais au-dessus : les deux
+   couloirs se touchent, et une bulle qui monte se lit sur le couloir d'en haut. */
+.course-bulle {
+  position: absolute;
+  left: 48px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  white-space: nowrap;
+  border-radius: 12px 12px 12px 3px;
+  background: #fffdf7;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #24304f;
+  box-shadow: 0 2px 0 #1e1638;
+  animation: course-bulle-pop 1.5s ease-out forwards;
+}
+.course-bulle--juste {
+  color: #1f9d57;
+}
+.course-bulle--faux {
+  color: #d3323d;
+}
+.course-bulle--pense {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  padding: 6px 8px;
+  animation: none;
+  opacity: 0.85;
+}
+@keyframes course-point {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.6);
+    opacity: 0.4;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.course-bulle--pense i {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 9999px;
+  background: #5b6480;
+  animation: course-point 1.1s ease-in-out infinite;
+}
+.course-bulle--pense i:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.course-bulle--pense i:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* --- le bandeau ----------------------------------------------------------- */
+.course-bandeau-zone {
+  display: grid;
+  min-height: 34px;
+  place-items: center;
+}
+@keyframes course-bandeau {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.85);
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(0) scale(1.04);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(4px) scale(0.96);
+  }
+}
+.course-bandeau {
+  border-radius: 9999px;
+  padding: 5px 14px;
+  font-family: var(--font-heading), 'Baloo 2', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  color: #fff;
+  box-shadow: 0 3px 0 #1e1638;
+  animation: course-bandeau 1.6s ease-out forwards;
+}
+.course-bandeau--neutre {
+  background: #7a3fe0;
+}
+.course-bandeau--moi {
+  background: linear-gradient(180deg, #fcd34d, #d97706);
+  color: #3b2200;
+}
+.course-bandeau--rival {
+  background: linear-gradient(180deg, #ff7d7d, #d3323d);
+}
+.course-bandeau--dore {
+  background: linear-gradient(180deg, #fff2b0, #f5b722);
+  color: #5a3a00;
+  box-shadow:
+    0 3px 0 #1e1638,
+    0 0 18px rgba(252, 211, 77, 0.7);
+}
+
+/* --- la carte de question ------------------------------------------------- */
+@keyframes course-carte-entree {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.course-carte {
+  position: relative;
+  border-radius: 22px;
+  border: 3px solid #1e1638;
+  background: #fffdf7;
+  padding: 16px;
+  color: #24304f;
+  box-shadow:
+    0 4px 0 #1e1638,
+    0 12px 28px rgba(0, 0, 0, 0.35);
+  animation: course-carte-entree 0.28s var(--ease) both;
+}
+@keyframes course-or {
+  0%,
+  100% {
+    box-shadow:
+      0 4px 0 #1e1638,
+      0 0 0 0 rgba(252, 211, 77, 0.35),
+      0 0 22px 4px rgba(252, 211, 77, 0.45);
+  }
+  50% {
+    box-shadow:
+      0 4px 0 #1e1638,
+      0 0 0 6px rgba(252, 211, 77, 0.18),
+      0 0 34px 10px rgba(252, 211, 77, 0.65);
+  }
+}
+.course-carte--doree {
+  border-color: #b8700a;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 245, 200, 0.9),
+    rgba(255, 253, 247, 1) 45%,
+    rgba(255, 240, 180, 0.9)
+  );
+  animation:
+    course-carte-entree 0.28s var(--ease) both,
+    course-or 1.4s ease-in-out infinite;
+}
+.course-carte-doree-titre {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+  border-radius: 9999px;
+  background: linear-gradient(180deg, #fcd34d, #f5b722);
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #5a3a00;
+}
+.course-enonce {
+  font-family: var(--font-heading), 'Baloo 2', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.22;
+  text-wrap: balance;
+}
+
+/* --- le gel de l'arrivée -------------------------------------------------- */
+.course-gel {
+  display: grid;
+  min-height: 220px;
+  place-items: center;
+}
+@keyframes course-gel-mot {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.course-gel-mot {
+  font-family: var(--font-heading), 'Baloo 2', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: #fff;
+  -webkit-text-stroke: 2px #1e1638;
+  paint-order: stroke fill;
+  text-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+  animation: course-gel-mot 0.5s var(--ease) both;
+}
+
+/* --- le pied --------------------------------------------------------------- */
+.course-pied {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 2px 4px;
+}
+.course-serie {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 9999px;
+  background: rgba(252, 211, 77, 0.18);
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #fcd34d;
+}
+.course-abandon {
+  min-height: 40px;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 0 16px;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+/* --- l'écran VS ----------------------------------------------------------- */
+.course-vs {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 36rem;
+  text-align: center;
+}
+.course-vs-matiere {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+.course-vs-rangee {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+.course-vs-fiche {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  border-radius: 22px;
+  border: 3px solid #1e1638;
+  padding: 14px 8px 12px;
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.2),
+    0 4px 0 #1e1638;
+}
+.course-vs-fiche--moi {
+  background: linear-gradient(180deg, #ffd66b 0%, #e8a020 100%);
+  color: #3b2200;
+}
+.course-vs-fiche--rival {
+  background: linear-gradient(180deg, #a97bf0 0%, #6d31d0 100%);
+  color: #fff;
+}
+.course-vs-avatar {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  border-radius: 9999px;
+  border: 3px solid rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.25);
+}
+.course-vs-avatar > :first-child {
+  border-radius: 9999px;
+  overflow: hidden;
+}
+.course-vs-nom {
+  margin-top: 4px;
+  font-family: var(--font-heading), 'Baloo 2', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+.course-vs-trophees {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.course-vs-legende {
+  font-size: 11px;
+  line-height: 1.25;
+  opacity: 0.85;
+  text-wrap: balance;
+}
+.course-vs-centre {
+  display: grid;
+  min-width: 64px;
+  place-items: center;
+}
+.course-vs-mot,
+.course-vs-compte {
+  display: block;
+  font-family: var(--font-heading), 'Baloo 2', sans-serif;
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1;
+  color: #fcd34d;
+  -webkit-text-stroke: 2px #1e1638;
+  paint-order: stroke fill;
+  text-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+}
+.course-vs-compte {
+  font-size: 56px;
+  animation: course-gel-mot 0.45s var(--ease) both;
+}
+.course-vs-regle {
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* --- l'écran de fin ------------------------------------------------------- */
+.course-fin {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 28rem;
+  border-radius: 26px;
+  border: 3px solid #1e1638;
+  background: #fffdf7;
+  padding: 22px 18px 18px;
+  text-align: center;
+  color: #24304f;
+  box-shadow:
+    0 4px 0 #1e1638,
+    0 18px 40px rgba(0, 0, 0, 0.4);
+  animation: course-carte-entree 0.35s var(--ease) both;
+}
+.course-fin-eyebrow {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #8f8a78;
+}
+.course-fin-titre {
+  font-family: var(--font-heading), 'Baloo 2', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+}
+.course-fin--gagnee .course-fin-titre {
+  color: #b8700a;
+}
+.course-fin--perdue .course-fin-titre {
+  color: #5b6480;
+}
+.course-fin-legende {
+  font-size: 14px;
+  color: #5b6480;
+  text-wrap: balance;
+}
+.course-fin-face {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+.course-fin-camp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  border-radius: 18px;
+  border: 2px solid #e2dac6;
+  background: #f3ecdd;
+  padding: 10px 6px;
+}
+.course-fin-camp--gagnant {
+  border-color: #f5b722;
+  background: #fff4cf;
+}
+.course-fin-avatar {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 9999px;
+}
+.course-fin-avatar > :first-child {
+  border-radius: 9999px;
+  overflow: hidden;
+}
+.course-fin-nom {
+  margin-top: 4px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 700;
+  color: #5b6480;
+}
+.course-fin-score {
+  font-family: var(--font-mono, ui-monospace), ui-monospace, monospace;
+  font-size: 26px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.course-fin-vs {
+  font-family: var(--font-heading), 'Baloo 2', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #8f8a78;
+}
+.course-fin-stats {
+  font-size: 13px;
+  color: #5b6480;
+}
+.course-fin-trophees {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  width: 100%;
+  border-radius: 16px;
+  background: #f3ecdd;
+  padding: 8px 12px;
+}
+.course-fin-delta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 9999px;
+  padding: 6px 14px;
+  font-family: var(--font-mono, ui-monospace), ui-monospace, monospace;
+  font-size: 22px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  animation: course-gel-mot 0.5s var(--ease) both;
+}
+.course-fin-delta--plus {
+  background: linear-gradient(180deg, #fcd34d, #f5b722);
+  color: #3b2200;
+}
+.course-fin-delta--moins {
+  background: #e2dac6;
+  color: #5b6480;
+}
+.course-fin-compteur {
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+  color: #5b6480;
+}
+.course-fin-compteur strong {
+  color: #24304f;
+}
+.course-fin-compteur em {
+  font-style: normal;
+  font-weight: 800;
+  color: #b8700a;
+}
+.course-fin-attente {
+  font-size: 13px;
+  color: #8f8a78;
+}
+.course-fin-lignes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+.course-fin-pilule {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 9999px;
+  background: #ede7d6;
+  padding: 5px 12px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.course-fin-pilule--or {
+  background: rgba(252, 211, 77, 0.35);
+}
+.course-fin-note {
+  font-size: 12px;
+  color: #8f8a78;
+  text-wrap: balance;
+}
+.course-fin-boutons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  padding-top: 4px;
+}
+
+/* --- l'emballage : onde, éclair, couronne, reflet, vignette, tampon ------- */
+
+/* L'onde de choc du VS : un anneau d'or qui part du mot et s'évanouit. */
+@keyframes course-onde {
+  0% {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(3.4);
+    opacity: 0;
+  }
+}
+.course-onde {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+  border-radius: 9999px;
+  border: 4px solid #fcd34d;
+  pointer-events: none;
+  animation: course-onde 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+}
+/* L'éclair : une lueur dorée au centre de la scène, une fois. */
+@keyframes course-flash {
+  0% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.course-vs-flash {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at 50% 46%,
+    rgba(252, 211, 77, 0.55),
+    rgba(252, 211, 77, 0) 58%
+  );
+  animation: course-flash 0.9s ease-out 0.45s both;
+}
+.course-vs-rangee {
+  position: relative;
+  z-index: 1;
+}
+.course-vs-compte--go {
+  color: #fffdf7;
+  -webkit-text-stroke-color: #b8700a;
+  font-size: 64px;
+}
+
+/* La couronne du leader, posée sur l'avatar. */
+.course-couronne {
+  position: absolute;
+  left: 50%;
+  top: -13px;
+  transform: translateX(-50%) rotate(-10deg);
+  color: #fcd34d;
+  filter: drop-shadow(0 2px 0 #1e1638);
+  animation: course-gel-mot 0.35s var(--ease) both;
+}
+
+/* Le couloir qui prend la tête s'allume, le temps d'un éclair. */
+@keyframes course-flash-moi {
+  0%,
+  100% {
+    background: transparent;
+  }
+  25% {
+    background: rgba(252, 211, 77, 0.24);
+  }
+}
+@keyframes course-flash-rival {
+  0%,
+  100% {
+    background: transparent;
+  }
+  25% {
+    background: rgba(241, 86, 108, 0.3);
+  }
+}
+.course-couloir {
+  margin: -4px -6px;
+  padding: 4px 34px 4px 6px;
+  border-radius: 14px;
+}
+.course-couloir--flash-moi {
+  animation: course-flash-moi 0.75s ease-out;
+}
+.course-couloir--flash-rival {
+  animation: course-flash-rival 0.75s ease-out;
+}
+
+/* Le reflet qui court sur ma jauge : elle vit, même quand je lis. */
+@keyframes course-reflet {
+  0% {
+    background-position:
+      0 0,
+      -80px 0;
+  }
+  100% {
+    background-position:
+      0 0,
+      calc(100% + 80px) 0;
+  }
+}
+.course-remplissage--moi {
+  background-image:
+    linear-gradient(180deg, #fcd34d 0%, #f5b722 55%, #d97706 100%),
+    linear-gradient(
+      110deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.55) 50%,
+      rgba(255, 255, 255, 0) 70%
+    );
+  background-size:
+    100% 100%,
+    80px 100%;
+  background-repeat: no-repeat;
+  background-blend-mode: normal, screen;
+  animation: course-reflet 2.4s linear infinite;
+}
+
+/* Le chiffre qui pope à chaque changement de score. */
+@keyframes course-pop {
+  0% {
+    transform: scale(1.4);
+    color: #fff;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.course-score--pop {
+  display: inline-block;
+  animation: course-pop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* La vignette du sprint : les bords de l'écran battent en corail. */
+.course-vignette {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0;
+  box-shadow: inset 0 0 90px 28px rgba(241, 86, 108, 0.5);
+  transition: opacity 0.4s var(--ease);
+}
+.course-vignette--on {
+  opacity: 1;
+  animation: jeu-urgence 0.72s ease-in-out infinite;
+}
+
+/* La tête de la carte : le numéro, la série, la dorée. */
+.course-carte-tete {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.course-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 9999px;
+  background: #ede7d6;
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: #5b6480;
+}
+.course-chip--feu {
+  background: linear-gradient(180deg, #ffd7a1, #ff9f43);
+  color: #5a2a00;
+  animation: course-pop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.course-chip--or {
+  background: linear-gradient(180deg, #fcd34d, #f5b722);
+  color: #5a3a00;
+}
+
+/* Le mot de l'arrivée perdue, en sourdine. */
+.course-gel-mot--perdu {
+  color: #d9ccff;
+}
+.course-gel {
+  position: relative;
+}
+
+/* Le verdict tombe comme un tampon. */
+@keyframes course-tampon {
+  0% {
+    transform: scale(2.2) rotate(-12deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(0.94) rotate(-3deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(-3deg);
+  }
+}
+.course-tampon {
+  display: inline-block;
+  animation: course-tampon 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .course-piste--sprint,
+  .course-chrono--urgent,
+  .course-carte--doree,
+  .course-bulle--pense i,
+  .course-onde,
+  .course-vs-flash,
+  .course-remplissage--moi,
+  .course-vignette--on,
+  .course-score--pop,
+  .course-chip--feu,
+  .course-tampon {
+    animation: none;
+  }
+  .course-remplissage {
+    transition: none;
   }
 }

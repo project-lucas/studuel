@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest'
 import {
   cleDeRegroupement,
   formatDuree,
+  hauteursBarres,
   JOURS_HISTORIQUE,
   libelleCetteSemaine,
   lundiDe,
@@ -251,5 +252,29 @@ describe('serieTravail', () => {
 describe('JOURS_HISTORIQUE', () => {
   it('couvre la plus large des portées', () => {
     expect(JOURS_HISTORIQUE).toBe(365)
+  })
+})
+
+describe('hauteursBarres', () => {
+  const sem = (secondes: number, i: number): SemaineTravail => ({
+    lundi: `2026-08-${String(3 + i * 7).padStart(2, '0')}`,
+    secondes,
+  })
+
+  it('met les barres et l’objectif sur la même échelle, sans toucher le plafond', () => {
+    const { hauteurs, objectifPct } = hauteursBarres([sem(0, 0), sem(1800, 1), sem(3600, 2)], 3600)
+    // Plafond = objectif × 1,25 = 4 500 s : l'objectif est à 80 %, l'heure pleine aussi.
+    expect(objectifPct).toBe(80)
+    expect(hauteurs).toEqual([0, 40, 80])
+  })
+
+  it('laisse une grosse semaine dépasser l’objectif sans sortir du cadre', () => {
+    const { hauteurs, objectifPct } = hauteursBarres([sem(9000, 0)], 3600)
+    expect(hauteurs).toEqual([100])
+    expect(objectifPct).toBe(40)
+  })
+
+  it('tient sans aucune semaine', () => {
+    expect(hauteursBarres([], 3600)).toEqual({ hauteurs: [], objectifPct: 80 })
   })
 })

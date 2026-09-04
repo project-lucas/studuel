@@ -1006,3 +1006,212 @@ dessins denses écraser leurs voisins.
 Prompts détaillés de ces lots retirés le 2026-07-22 (le dossier faisait 656
 lignes pour ~90 % de travail terminé). Pour régénérer un asset à l'identique :
 `git log -p docs/nano-banana-prompts.md`.
+
+---
+
+## La cohérence avec Marcel — le prompt maître des boss (2026-09-02)
+
+La première série de boss chibi a raté sa cible pour une raison **matérielle** :
+la référence jointe était `public/images/nav/marcel.webp`, qui fait **256 × 256**.
+À cette taille, le modèle ne voit ni le trait, ni le dégradé, ni le liseré de
+lumière — il ne voit qu'une silhouette de personnage mignon, et complète avec son
+préjugé maison : autocollant vectoriel plat.
+
+**La référence à joindre est `public/images/arene/arena-mascotte.webp` (1080 × 1935).**
+C'est la seule image de Marcel où le rendu est lisible.
+
+### Les six constantes de Marcel
+
+Mesurées sur l'image d'arène, pas devinées :
+
+1. **Proportions** — environ **deux têtes et demie** de haut, cheveux compris
+   (la tête occupe ~40 % de la hauteur). Un vrai cou, des épaules, des jambes
+   courtes mais articulées. Le chibi n'est pas le problème ; la tête à la moitié
+   du corps, si.
+2. **Trait** — sombre, presque noir chaud, **d'épaisseur variable** : gras sur la
+   silhouette, fin à l'intérieur, effilé aux extrémités. Jamais un trait vectoriel
+   d'épaisseur constante.
+3. **Rendu** — **peint**, pas aplati : dégradés doux dans chaque aplat, ombre
+   d'occlusion sous le menton, sous les bras et dans les plis, texture de tissu
+   visible sur la veste.
+4. **Lumière** — un **liseré chaud** venu de derrière sur l'épaule et le haut des
+   bras, un **liseré violet froid** sur les cheveux. C'est la signature du style :
+   s'il manque, l'image n'est pas de la même main.
+5. **Visage** — yeux **petits à moyens**, iris et pupille visibles, un seul reflet ;
+   les **sourcils** portent l'expression ; un vrai nez avec son ombre ; le rose des
+   joues est bas et fondu, jamais deux pastilles plates.
+6. **Valeurs** — le personnage est **plus sombre que son fond**. Couleurs sourdes
+   (brun poussière, denim marine) ; seul le métal est saturé. Halo clair derrière
+   la tête, vignetage aux quatre coins, poussières lumineuses en suspension.
+
+### Le prompt maître corrigé — à coller tel quel
+
+Référence unique : `arena-mascotte.webp`. Format 16:9 coché dans l'interface.
+
+```
+Painted cartoon key art for a mobile learning game, in the EXACT art style of the
+reference image — same studio, same hand, same render.
+
+STYLE BIBLE — copied from the reference, this outranks every other instruction:
+- PROPORTIONS: about two and a half heads tall. A big head with a real neck and
+  real shoulders, short sturdy legs, hands smaller than the head. NOT a
+  bobble-head: the head is never half the body.
+- LINE: a dark, warm near-black outline of VARYING weight — heavy on the outer
+  silhouette, thin inside, tapering at the ends like a brush stroke. Never a
+  uniform vector stroke, never a sticker die-cut.
+- RENDER: PAINTED, not flat. Soft airbrushed gradients inside every colour area,
+  occlusion shadows under the chin, under the arms and in every cloth fold,
+  visible fabric texture on clothing, painterly strands in the hair.
+- LIGHT: a warm rim light from behind along the shoulders and the top of the arms,
+  and a cooler violet rim on the hair. A soft contact shadow under the feet.
+  This rim light is the signature of the style and must be clearly visible.
+- FACE: small to medium eyes with a visible iris, pupil and ONE glossy highlight;
+  thick expressive eyebrows carrying the whole expression; a real nose with a
+  small shadow under it; a small mouth; soft low blush fading into the cheek.
+  NO huge oval anime eyes, NO flat circles of blush.
+- COLOUR AND VALUE: muted, slightly dusty mid-tones; only metal and gold are
+  saturated. The character reads DARKER and richer than the background, which is
+  a hazy warm glow behind the head. Corner vignette, floating light motes.
+- ATTITUDE: relaxed, weight on one leg, shoulders down.
+
+THE JOKE IS DEADPAN. He is caught in the middle of something perfectly ordinary,
+completely unbothered, and lifts his eyes toward the viewer with a flat, faintly
+annoyed look — as if you had just interrupted him. No slapstick, no wacky grin,
+no sweat drops, no motion lines. The humour comes from how CALM he is.
+
+COMPOSITION — full-bleed, filling the ENTIRE canvas edge to edge: no frame, no
+border, no white margin, no card, no mockup, no letterboxing. The character sits
+in the RIGHT THIRD, about three quarters of the image height, head and torso on
+the horizontal midline. His own environment fills the left two thirds and grows
+darker toward the left edge, carrying only glow, haze and light motes there —
+no objects and no characters on the left side. Every floating prop stays on the
+RIGHT of his head.
+
+No text, no letters, no numbers, no logo, no watermark.
+```
+
+Pour un **buste carré** (`public/images/boss/<id>.webp`), remplacer le dernier
+paragraphe par : *half body from mid-chest up, facing the viewer, centered,
+filling most of the square, plain flat white background.*
+
+### Les mots qui ont cassé le style
+
+`chibi` seul, `sticker`, `flat cel shading`, `thick smooth outlines of even
+weight`, `simple readable shapes`, `two or three tones per colour` : chacun tire
+vers l'aplat vectoriel. Ils sont remplacés ci-dessus par `painted`, `soft
+gradients`, `occlusion`, `rim light`, `varying line weight`.
+
+### Le test des cinq secondes
+
+Devant un rendu, dans cet ordre — le premier « non » suffit à jeter l'image :
+
+1. Y a-t-il un **liseré de lumière** sur l'épaule et les cheveux ?
+2. Le **trait** s'épaissit-il sur la silhouette et s'affine-t-il à l'intérieur ?
+3. Le personnage est-il **plus sombre que son fond** ?
+4. Les **sourcils** jouent-ils plus que les yeux ?
+5. La tête fait-elle **40 %** de la hauteur, et non la moitié ?
+
+### La règle du set
+
+Dès qu'un boss est validé, le joindre en **seconde référence** avec Marcel pour
+tous les suivants. Dix-sept générations indépendantes contre une seule référence
+donnent dix-sept styles voisins ; deux références donnent une famille.
+
+### Deux réglages payés sur Imperator (validé le 2026-09-02)
+
+**Le liseré ne vient pas tout seul** — il a fallu le demander comme une ARÊTE, pas
+comme une lueur, et placer la source derrière le personnage :
+
+```
+The light source sits BEHIND him on the left: a bright warm rim traces the
+top-left edge of the helmet crest, the shoulder and the upper arms, and a cool
+violet rim answers on the opposite edge. The rim must be a crisp bright line,
+not a soft glow — it separates him from the background.
+```
+
+C'est ce paragraphe, seul, qui a fait basculer l'image dans le monde de l'arène :
+le modèle a assombri le ciel en crépuscule violet et posé des poussières dorées
+et violettes, sans qu'on les demande. **Le liseré tire toute la DA derrière lui.**
+
+**Les coiffes hautes se font couper.** Le ticket recadre une 16:9 en 2,94:1 : il
+mange ~20 % en haut. La panache d'Imperator y perd sa pointe. Pour tout boss à
+casque, plumet, chapeau ou couronne, ajouter :
+
+> `His whole silhouette including his headgear stays inside the central band of
+> the image, well clear of the top edge.`
+
+### Le cadrage se règle en post, pas dans le prompt (leçon Grammatork)
+
+Trois consignes de cadrage successives — « clear space above his head », « the top
+of his head sits one quarter down from the top edge » — n'ont **jamais** été
+suivies : les deux images de référence pèsent plus lourd que n'importe quelle
+phrase sur la composition. Le ticket rognant 20 % en haut, le crâne était rasé à
+chaque rendu.
+
+**La solution est un post-traitement**, pas une relance. `scripts/` peut le
+refaire en une passe sharp :
+
+1. un **lit flouté** = l'image redimensionnée en 1024 × 576, `blur(28)`,
+   luminosité 0,82 ;
+2. l'**illustration nette** réduite à 84 % (860 × 484, ratio conservé), posée en
+   bas à droite ;
+3. ses bords haut et gauche **fondus sur 80 px** (masque en dégradé, `dest-in`)
+   pour que la jonction disparaisse.
+
+Le personnage gagne 16 % de ciel au-dessus de la tête et 16 % de pénombre à
+gauche — exactement les deux zones que le ticket réclame. Le raccord est
+invisible parce que ces deux zones ne portent que du dégradé.
+
+Corollaire pour les prochains boss : **ne plus relancer une génération pour un
+problème de cadrage**. On juge le personnage, la lumière et la palette ; le
+cadre, on le fabrique.
+
+### Règle permanente : aucun boss ne montre, ne présente, ni ne démontre
+
+Delta a été rendu trois fois de suite le **bras tendu vers le tableau**, malgré
+une consigne explicite « il ne pointe pas ». Deux causes, et les deux comptent :
+
+- **nommer un objet ET une main dans la même phrase** suffit à déclencher
+  l'archétype du professeur : `finger` + `blackboard` + `circle` = bras tendu,
+  quoi qu'on écrive autour ;
+- si le **rendu précédent est laissé en image de référence**, la pose est
+  verrouillée : les références priment sur le texte, toujours.
+
+D'où une clause à porter dans TOUS les prompts de boss, au même titre que le
+déadpan :
+
+```
+POSE — absolute rule: he never points, never presents, never demonstrates and
+never explains. No raised arm, no extended index finger, no gesture toward
+anything, no teaching pose. Both hands stay below chest height with the elbows
+touching his sides. He is a character caught living his own life, never an
+instructor showing something to the viewer.
+```
+
+Un gardien qui montre quelque chose devient un professeur — c'est le seul registre
+que l'app ne veut pas pour eux : ils sont là pour être dérangés, pas pour faire
+cours.
+
+### Le texte se peint en post, jamais dans le prompt
+
+Les modèles écrivent mal, et tous nos prompts interdisent le texte de toute façon.
+Quand une image doit porter un mot (une formule au tableau, une pancarte), on
+**laisse une zone vide** au rendu et on l'écrit ensuite, en une passe sharp :
+
+```js
+const craie = Buffer.from('<svg width="'+W+'" height="'+H+'">'+
+  '<g transform="rotate(-3 430 470)" opacity="0.72">'+
+  '<text x="250" y="470" font-family="Ink Free, Segoe Script, Comic Sans MS, cursive"'+
+  ' font-size="58" fill="#f2f5ef">P(victoire) = 0</text></g></svg>')
+await sharp(src).composite([{ input: await sharp(craie).blur(1.1).toBuffer() }])
+```
+
+`Ink Free` (Windows 10+) donne une écriture manuscrite convaincante ; l'opacité à
+0,72 et un `blur(1.1)` font le grain de la craie. Orthographe garantie, aucune
+relance.
+
+**Et le texte reste en français.** Sur le tableau de Delta, la blague est
+`P(victoire) = 0` — la version mathématique de sa propre réplique (« Tes
+probabilités de victoire ? Proches de zéro. »). Une app dont toute l'interface est
+en français, et qui enseigne l'anglais par ailleurs, ne peut pas afficher un
+« your lose » fautif à l'écran.

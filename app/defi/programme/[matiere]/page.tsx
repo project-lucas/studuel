@@ -1,32 +1,27 @@
 import { redirect } from 'next/navigation'
 import { contentLevelFor } from '@/lib/grades'
-import GameTable from '@/components/jeux/GameTable'
+import DuelCourse from '@/components/duel/DuelCourse'
 import { SALONS } from '@/lib/jeux/catalog'
 import {
   MIN_PROGRAMME_QUESTIONS,
-  PROGRAMME_FORMAT,
-  PROGRAMME_GAME_ID,
-  PROGRAMME_NAME,
   orderQuizzesByWeakness,
   programmeSlug,
   subjectFromProgrammeSlug,
 } from '@/lib/jeux/programme'
-import { poolSizeFor } from '@/lib/jeux/formats'
 import { toModeQuestions, type QuickQuestionRow } from '@/lib/defi/quick-pool'
 import { getChapterMastery } from '@/lib/mastery-server'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
-import { fetchGameGhost } from '@/lib/jeux/ghost-server'
 import { drawSubjectSession } from '@/lib/questions/server-draw'
-import { getSubjectOpponents } from '@/lib/subject-rank-server'
-import {
-  calibratedBot,
-  pickOpponent,
-  type MatchOpponent,
-} from '@/lib/defi/matchmaking'
 import { subjectTotal, type GameTrophyRow } from '@/lib/trophy-road'
+import { normalizeAvatarConfig } from '@/lib/avatar'
+import { toDayKey } from '@/lib/streak'
+import { COURSE_QUESTION_BUFFER } from '@/lib/duel/course'
+import { botOpponent, type Opponent } from '@/lib/duel/opponent'
+import { chooseOpponent, fetchReplayCandidates } from '@/lib/duel/opponent-server'
+import type { ModeQuestion } from '@/lib/defi-modes'
 
-export const metadata = { title: 'Ton programme — Studuel' }
+export const metadata = { title: 'Duel classé — Studuel' }
 export const dynamic = 'force-dynamic'
 
 function shuffle<T>(arr: readonly T[]): T[] {
@@ -39,23 +34,32 @@ function shuffle<T>(arr: readonly T[]): T[] {
 }
 
 /**
- * Route /defi/programme/[matiere] — le jeu « Ton programme » d'une matière.
+ * Route /defi/programme/[matiere] — LE DUEL CLASSÉ d'une matière, devenu une
+ * COURSE (components/duel). C'est ce que lance le bouton DUEL de l'arène.
  *
- * C'est le seul jeu de la Route des trophées dont la banque vient de la BASE et
- * non d'un builder local : il sert les `quiz_questions` de la classe de l'élève,
- * chapitres les moins maîtrisés en tête. Il se joue avec la même table que les
- * jeux de salon (`GameTable`) — seul le pool change de provenance.
+ * La page décide trois choses, et rien d'autre :
+ *   1. LES QUESTIONS — celles du programme de la classe, servies par le moteur
+ *      de sélection (60 % d'échues, 30 % d'inédites, fenêtre anti-répétition),
+ *      avec le classement par faiblesse de chapitre en repli tant que la 239
+ *      n'est pas passée. Une course consomme jusqu'à trente questions.
+ *   2. L'ADVERSAIRE — un vrai élève du même niveau, à portée de trophées, dont
+ *      on rejoue la course (migration 351) ; sinon un robot du banc, marqué
+ *      comme tel. `?vs=` demande la revanche contre le même, `?sans=` écarte le
+ *      robot d'avant.
+ *   3. LA GRAINE — elle change à chaque `?n=`, donc la question dorée, l'ordre
+ *      et le rival aussi. Deux courses ne se ressemblent jamais.
  *
- * Sous `MIN_PROGRAMME_QUESTIONS`, on renvoie à l'arène plutôt que d'ouvrir une
- * partie qui reboucle sur six questions : un trophée gagné sur une banque trop
- * courte ne mesure plus rien.
+ * Sous `MIN_PROGRAMME_QUESTIONS`, on renvoie à l'arène : un trophée gagné sur
+ * une banque trop courte ne mesure plus rien.
  */
 export default async function ProgrammePage({
   params,
+  searchParams,
 }: {
   params: Promise<{ matiere: string }>
+  searchParams: Promise<{ n?: string; vs?: string; sans?: string }>
 }) {
-  const { matiere } = await params
+  const [{ matiere }, { n, vs, sans }] = await Promise.all([params, searchParams])
   const subject = subjectFromProgrammeSlug(matiere)
   if (!subject) redirect('/defi')
 
@@ -65,205 +69,190 @@ export default async function ProgrammePage({
   const supabase = await createClient()
   const { data: profile } = await supabase
     .from('profiles')
-    .select('grade_level')
+    .select('grade_level, full_name, avatar')
     .eq('id', user.id)
     .maybeSingle()
 
   const grade = profile?.grade_level ?? null
   if (!grade) redirect('/onboarding')
 
-  // Les quiz de la classe. Pas de HORS_NIVEAU ici, contrairement aux modes de
-  // l'Arène : ce jeu porte LE PROGRAMME, la culture générale n'y a pas sa place.
-  const { data: allQuizzes } = await supabase
-    .from('quizzes')
-    .select('id, subject, lesson_id')
-    .eq('grade_level', contentLevelFor(grade))
-
-  // Le nom de matière des quiz n'est pas garanti identique à celui du catalogue
-  // de salons — on rapproche par SLUG, comme `salonSubjectFor` le fait dans
-  // l'autre sens (lib/defi/modes-catalog.ts).
   const wanted = programmeSlug(subject)
+  const round = Number.isFinite(Number(n)) ? Math.max(0, Math.floor(Number(n))) : 0
+  const today = toDayKey(new Date())
+  // La graine : un élève, une matière, un jour, un tour. Le tour change à
+  // chaque « Revanche » ou « Nouvel adversaire » (?n=), donc la course entière.
+  const seed = `${user.id}#${wanted}#${today}#${round}`
+
+  // Les trois lectures qui ne dépendent pas les unes des autres partent
+  // ensemble : les quiz de la classe, mes trophées sur la matière, la session
+  // du moteur de questions.
+  const [{ data: allQuizzes }, { data: mesTrophees }, drawn] = await Promise.all([
+    supabase.from('quizzes').select('id, subject, lesson_id').eq('grade_level', contentLevelFor(grade)),
+    supabase.from('game_trophies').select('subject_slug, game_id, trophies').eq('user_id', user.id),
+    drawSubjectSession({
+      supabase,
+      userId: user.id,
+      subjectSlug: wanted,
+      level: grade,
+      count: COURSE_QUESTION_BUFFER,
+    }),
+  ])
+
   const quizzes = (allQuizzes ?? []).filter(
     (q) => programmeSlug(String(q.subject ?? '')) === wanted,
   )
   if (quizzes.length === 0) redirect('/defi')
 
-  const size = poolSizeFor(PROGRAMME_FORMAT)
-
-  // ------------------------------------------------------------ LE MOTEUR
-  // Chemin normal depuis la migration 239 : la session est composée par le
-  // moteur de sélection (lib/questions) — 60 % d'échues, 30 % d'inédites, le
-  // reste tiré au sort, et la fenêtre glissante qui empêche de reposer ce qui
-  // vient d'être vu. Le classement « par faiblesse de chapitre » qu'on servait
-  // ici n'avait aucune mémoire : deux parties d'affilée sur le même chapitre
-  // faible repiochaient dans les mêmes quiz, mélangés autrement.
-  const drawn = await drawSubjectSession({
-    supabase,
-    userId: user.id,
-    subjectSlug: wanted,
-    level: grade,
-    count: size,
+  const rows: GameTrophyRow[] = (Array.isArray(mesTrophees) ? mesTrophees : []).flatMap((row) => {
+    const value = Number(row?.trophies)
+    if (!row?.subject_slug || !row?.game_id || !Number.isFinite(value)) return []
+    return [{ subject: String(row.subject_slug), gameId: String(row.game_id), trophies: value }]
   })
+  const myTrophies = subjectTotal(rows, wanted)
 
-  /**
-   * L'ADVERSAIRE DU CLASSÉ. Apparié sur le couple (matière, trophées ±150),
-   * fourchette élargie par paliers si personne n'est à portée, et repli sur
-   * l'entraîneur calibré en tout dernier recours (cf. lib/defi/matchmaking).
-   *
-   * Le fantôme d'AMI garde la priorité quand il existe : jouer contre la ligne
-   * de quelqu'un qu'on connaît vaut mieux qu'un inconnu du même niveau, et
-   * c'est déjà la doctrine de `game_ghost`. L'appariement large ne sert donc
-   * qu'à combler le silence — ce qu'il fait presque tout le temps dans une
-   * matière peu jouée.
-   */
-  async function trouverAdversaire(taille: number) {
-    const [amical, viviers, { data: mesTrophees }] = await Promise.all([
-      fetchGameGhost(supabase, wanted, PROGRAMME_GAME_ID),
-      getSubjectOpponents(supabase, wanted),
-      supabase
-        .from('game_trophies')
-        .select('subject_slug, game_id, trophies')
-        .eq('user_id', user!.id),
-    ])
-    if (amical) return { ghost: amical, opponent: null as MatchOpponent | null }
-
-    const rows: GameTrophyRow[] = (
-      Array.isArray(mesTrophees) ? mesTrophees : []
-    ).flatMap((row) => {
-      const value = Number(row?.trophies)
-      if (!row?.subject_slug || !row?.game_id || !Number.isFinite(value)) return []
-      return [
-        {
-          subject: String(row.subject_slug),
-          gameId: String(row.game_id),
-          trophies: value,
-        },
-      ]
-    })
-
-    const opponent = pickOpponent(
-      viviers,
-      subjectTotal(rows, wanted),
-      calibratedBot(taille),
-    )
-    return {
-      ghost: opponent ? { name: opponent.name, score: opponent.score } : null,
-      opponent,
-    }
-  }
-
+  // ------------------------------------------------------------ LES QUESTIONS
+  let pool: ModeQuestion[] = []
   if (drawn.length >= MIN_PROGRAMME_QUESTIONS) {
     const { data: engineRows } = await supabase
       .from('quiz_questions')
       .select('id, quiz_id, question, kind, options, correct_index, explanation')
-      .in(
-        'id',
-        drawn.map((ref) => ref.questionId),
-      )
+      .in('id', drawn.map((ref) => ref.questionId))
       .returns<QuickQuestionRow[]>()
-
-    // `.in()` rend les lignes dans un ordre arbitraire : on rejoue l'ordre
-    // décidé par le moteur, sinon le mélange final du tirage — celui qui
-    // empêche l'élève de lire les buckets — serait perdu à la lecture.
+    // `.in()` rend les lignes dans un ordre arbitraire : on rejoue l'ordre du
+    // moteur, sinon le mélange qui empêche de lire les buckets serait perdu.
     const parId = new Map((engineRows ?? []).map((row) => [row.id, row]))
-    const enOrdre = drawn.flatMap((ref) => {
-      const row = parId.get(ref.questionId)
-      return row ? [row] : []
-    })
-
-    const moteurPool = toModeQuestions(enOrdre, () => subject)
-    if (moteurPool.length >= MIN_PROGRAMME_QUESTIONS) {
-      const emojiMoteur = SALONS.find((s) => s.subject === subject)?.emoji ?? '📘'
-      const { ghost: ghostMoteur } = await trouverAdversaire(size)
-      return (
-        <GameTable
-          format={PROGRAMME_FORMAT}
-          // Hors échelle de paliers : la difficulté du « Programme » est celle
-          // du programme de la classe, pas un réglage qu'on choisit avant de jouer.
-          palier={null}
-          pool={moteurPool.slice(0, size)}
-          name={PROGRAMME_NAME}
-          subject={subject}
-          subjectEmoji={emojiMoteur}
-          ghost={ghostMoteur}
-        />
-      )
-    }
-  }
-
-  // ------------------------------------------------------------- LE REPLI
-  // Tant que la 239 n'est pas exécutée (la vue `question_scope` n'existe pas),
-  // ou pour un contenu que la vue ne couvre pas (quiz sans leçon rattachée), on
-  // retombe sur le classement par faiblesse de chapitre. Le jeu reste jouable :
-  // il perd la mémoire anti-répétition, pas sa banque.
-
-  // Maîtrise par chapitre, pour servir les points faibles en premier. Les deux
-  // lectures sont indépendantes → en parallèle.
-  const lessonIds = quizzes
-    .map((q) => q.lesson_id)
-    .filter((id): id is string => !!id)
-  const [mastery, { data: lessons }] = await Promise.all([
-    getChapterMastery(supabase, user.id),
-    lessonIds.length > 0
-      ? supabase.from('lessons').select('id, chapter_id').in('id', lessonIds)
-      : Promise.resolve({ data: null }),
-  ])
-
-  const chapterByLesson = new Map<string, string>()
-  for (const lesson of lessons ?? []) {
-    chapterByLesson.set(String(lesson.id), String(lesson.chapter_id))
-  }
-
-  // On mélange AVANT de trier : le tri par faiblesse est stable, donc deux
-  // parties d'affilée sur le même chapitre faible ne servent pas les mêmes quiz.
-  const ordered = orderQuizzesByWeakness(
-    shuffle(quizzes),
-    chapterByLesson,
-    (chapterId) => mastery.get(chapterId)?.value,
-  )
-
-  // Assez de quiz pour couvrir le pool, avec de la marge : un quiz ne porte pas
-  // forcément dix questions.
-  const picked = ordered.slice(0, Math.max(8, size))
-  const { data: rows } = await supabase
-    .from('quiz_questions')
-    .select('id, quiz_id, question, kind, options, correct_index, explanation')
-    .in(
-      'quiz_id',
-      picked.map((q) => q.id),
+    pool = toModeQuestions(
+      drawn.flatMap((ref) => {
+        const row = parId.get(ref.questionId)
+        return row ? [row] : []
+      }),
+      () => subject,
     )
-    .returns<QuickQuestionRow[]>()
+  }
 
-  // `.in()` rend les lignes dans un ordre arbitraire : sans ce report du
-  // classement, le tri par faiblesse ne survivrait pas à la lecture et la
-  // partie servirait n'importe quel chapitre. On rejoue donc le rang du quiz
-  // sur ses questions (mélangées entre elles, pour ne pas figer l'ordre du
-  // quiz d'une partie à l'autre).
-  const rankOfQuiz = new Map(picked.map((q, index) => [q.id, index]))
-  const sortedRows = shuffle(rows ?? [])
-    .map((row, index) => ({
-      row,
-      index,
-      rank: rankOfQuiz.get(row.quiz_id) ?? Number.MAX_SAFE_INTEGER,
-    }))
-    .sort((a, b) => a.rank - b.rank || a.index - b.index)
-    .map((entry) => entry.row)
-
-  const pool = toModeQuestions(sortedRows, () => subject)
+  // LE REPLI, tant que la 239 n'est pas passée : classement par faiblesse de
+  // chapitre. La course reste jouable, elle perd la mémoire anti-répétition.
+  if (pool.length < MIN_PROGRAMME_QUESTIONS) {
+    const lessonIds = quizzes.map((q) => q.lesson_id).filter((id): id is string => !!id)
+    const [mastery, { data: lessons }] = await Promise.all([
+      getChapterMastery(supabase, user.id),
+      lessonIds.length > 0
+        ? supabase.from('lessons').select('id, chapter_id').in('id', lessonIds)
+        : Promise.resolve({ data: null }),
+    ])
+    const chapterByLesson = new Map<string, string>()
+    for (const lesson of lessons ?? []) {
+      chapterByLesson.set(String(lesson.id), String(lesson.chapter_id))
+    }
+    const ordered = orderQuizzesByWeakness(
+      shuffle(quizzes),
+      chapterByLesson,
+      (chapterId) => mastery.get(chapterId)?.value,
+    )
+    const picked = ordered.slice(0, Math.max(8, Math.ceil(COURSE_QUESTION_BUFFER / 4)))
+    const { data: fallbackRows } = await supabase
+      .from('quiz_questions')
+      .select('id, quiz_id, question, kind, options, correct_index, explanation')
+      .in('quiz_id', picked.map((q) => q.id))
+      .returns<QuickQuestionRow[]>()
+    const rankOfQuiz = new Map(picked.map((q, index) => [q.id, index]))
+    const sortedRows = shuffle(fallbackRows ?? [])
+      .map((row, index) => ({
+        row,
+        index,
+        rank: rankOfQuiz.get(row.quiz_id) ?? Number.MAX_SAFE_INTEGER,
+      }))
+      .sort((a, b) => a.rank - b.rank || a.index - b.index)
+      .map((entry) => entry.row)
+    pool = toModeQuestions(sortedRows, () => subject).slice(0, COURSE_QUESTION_BUFFER)
+  }
   if (pool.length < MIN_PROGRAMME_QUESTIONS) redirect('/defi')
 
+  // ------------------------------------------------------------ L'ADVERSAIRE
+  const opponent = await resolveOpponent({
+    supabase,
+    wanted,
+    myTrophies,
+    seed,
+    myName: profile?.full_name ?? null,
+    vs,
+    sans,
+  })
+
   const emoji = SALONS.find((s) => s.subject === subject)?.emoji ?? '📘'
-  const { ghost } = await trouverAdversaire(size)
+  const firstName = (profile?.full_name ?? '').trim().split(' ')[0] || 'Toi'
+  const base = `/defi/programme/${wanted}`
+  const revancheVs = opponent.kind === 'bot' ? `bot:${opponent.botId}` : `replay:${opponent.replayId}`
 
   return (
-    <GameTable
-      format={PROGRAMME_FORMAT}
-      palier={null}
-      pool={pool.slice(0, size)}
-      name={PROGRAMME_NAME}
+    <DuelCourse
+      pool={pool.slice(0, COURSE_QUESTION_BUFFER)}
       subject={subject}
+      subjectSlug={wanted}
       subjectEmoji={emoji}
-      ghost={ghost}
+      seed={seed}
+      opponent={opponent}
+      me={{
+        name: firstName,
+        avatar: normalizeAvatarConfig(profile?.avatar),
+        trophies: myTrophies,
+      }}
+      hrefs={{
+        revanche: `${base}?n=${round + 1}&vs=${encodeURIComponent(revancheVs)}`,
+        nouveau:
+          opponent.kind === 'bot'
+            ? `${base}?n=${round + 1}&sans=${encodeURIComponent(opponent.botId)}`
+            : `${base}?n=${round + 1}`,
+        arene: '/defi',
+      }}
     />
   )
+}
+
+// L'adversaire de la course. La REVANCHE (`?vs=`) rend le même rival — le
+// robot par son id, le replay par le sien s'il est toujours à portée du
+// vivier ; sinon on retombe sur l'appariement normal, qui préfère toujours un
+// vrai élève et écarte le robot d'avant (`?sans=`).
+async function resolveOpponent(input: {
+  supabase: Awaited<ReturnType<typeof createClient>>
+  wanted: string
+  myTrophies: number
+  seed: string
+  myName: string | null
+  vs?: string
+  sans?: string
+}): Promise<Opponent> {
+  const { supabase, wanted, myTrophies, seed, myName, vs, sans } = input
+  if (vs?.startsWith('bot:')) {
+    const bot = botOpponent(vs.slice(4), myTrophies)
+    if (bot) return bot
+  }
+  if (vs?.startsWith('replay:')) {
+    const id = vs.slice(7)
+    const candidates = await fetchReplayCandidates(supabase, wanted)
+    const found = candidates.find((c) => c.replayId === id)
+    if (found) {
+      return {
+        kind: 'replay',
+        replayId: found.replayId,
+        steps: found.steps,
+        range: Math.abs(found.trophies - myTrophies) <= 150 ? 150 : null,
+        identity: {
+          name: found.name,
+          avatar: normalizeAvatarConfig(found.avatar),
+          trophies: found.trophies,
+          isBot: false,
+          tagline: 'A vraiment joué cette matière',
+        },
+      }
+    }
+  }
+  return chooseOpponent({
+    supabase,
+    subjectSlug: wanted,
+    myTrophies,
+    seed,
+    myName,
+    lastBotId: sans ?? null,
+  })
 }

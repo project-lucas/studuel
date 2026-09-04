@@ -4,6 +4,12 @@ import { estChromeMasque, estOnboarding, estPleinEcran } from '@/lib/quiz-chrome
 describe('estPleinEcran', () => {
   it('masque le chrome sur une session de quiz ouverte', () => {
     expect(estPleinEcran('/test/abc-123')).toBe(true)
+    // La course du duel classé : une matière, en plein écran ; le préfixe seul
+    // (qui n'est pas une page) garde son chrome comme toute liste.
+    expect(estPleinEcran('/defi/programme/maths')).toBe(true)
+    expect(estPleinEcran('/defi/programme/histoire-geo?n=2')).toBe(true)
+    expect(estPleinEcran('/defi/programme')).toBe(false)
+    expect(estPleinEcran('/defi/programme/')).toBe(false)
   })
 
   it('le GARDE sur la liste des quiz', () => {

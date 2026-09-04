@@ -50,6 +50,14 @@ const PREFIXES_PLEIN_ECRAN = [
   // c'est une page de navigation, elle garde sa barre d'onglets. C'est le
   // contrôle de longueur ci-dessous qui fait la différence.
   '/reviser/francais/dictee/',
+  // LA COURSE du duel classé (`/defi/programme/<matière>`) : deux barres qui
+  // se remplissent, un rival qui répond en même temps, un chrono. Le bandeau
+  // du haut y mentirait (les trophées ne bougent qu'à la fin) et la barre
+  // d'onglets volerait la place des réponses — les mêmes trois raisons que le
+  // quiz, plus une : un duel qu'on peut quitter par un onglet n'est pas un
+  // duel. Il n'y a pas de liste `/defi/programme` à protéger : le contrôle de
+  // longueur ci-dessous la laisse de toute façon avec son chrome.
+  '/defi/programme/',
 ] as const
 
 /**

@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { claimPendingReferral } from '@/lib/referral-claim'
+import { cheminInterne } from '@/lib/auth-portes'
 
 // Retour des liens email Supabase (réinitialisation de mot de passe,
 // confirmations) : échange le code PKCE contre une session (cookies),
@@ -8,8 +9,7 @@ import { claimPendingReferral } from '@/lib/referral-claim'
 export async function GET(request: Request): Promise<Response> {
   const { searchParams, origin } = new URL(request.url)
   const code = searchParams.get('code')
-  const nextRaw = searchParams.get('next') ?? '/'
-  const next = nextRaw.startsWith('/') && !nextRaw.startsWith('//') ? nextRaw : '/'
+  const next = cheminInterne(searchParams.get('next'))
 
   if (code) {
     const supabase = await createClient()
@@ -28,6 +28,16 @@ export async function GET(request: Request): Promise<Response> {
     // toujours ne laissait AUCUNE trace : impossible de distinguer un code
     // réellement périmé d'une configuration Supabase cassée.
     console.error('[auth] échange du code impossible:', error.message)
+  }
+
+  // Sans code mais avec `error` : le fournisseur OAuth a refusé ou l'élève a
+  // annulé chez lui. Ce n'est pas un lien périmé — on le renvoie d'où il
+  // vient, avec le message qui parle de ce service-là.
+  if (!code && searchParams.get('error')) {
+    const retour = next.startsWith('/bienvenue')
+      ? '/bienvenue?erreur=oauth'
+      : '/login?error=oauth'
+    return NextResponse.redirect(`${origin}${retour}`)
   }
 
   return NextResponse.redirect(`${origin}/login?error=lien-expire`)

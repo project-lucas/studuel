@@ -1,49 +1,69 @@
+'use client'
+
 import Link from 'next/link'
-import { BarChart3, BookOpenCheck, GraduationCap, Mic, Timer } from 'lucide-react'
-import type { LucideIcon } from 'lucide-react'
-import { cn } from '@/lib/utils'
 import {
-  MARCEL_ENTREES,
-  vueHref,
-  type MarcelVueSecondaire,
-} from '@/lib/coach/marcel-vues'
+  BarChart3,
+  BookOpenCheck,
+  GraduationCap,
+  Layers,
+  Mic,
+  NotebookPen,
+  Sigma,
+  Timer,
+  type LucideIcon,
+} from 'lucide-react'
+import { cn } from '@/lib/utils'
+import { sfx } from '@/lib/sounds'
+import { MODES, TEINTE_VUE, type ModeCle, type Teinte } from '@/lib/coach/outils'
+import { vueHref, type MarcelVueSecondaire } from '@/lib/coach/marcel-vues'
+import { MARCEL_ENTREES } from '@/lib/coach/marcel-vues'
+import { useCoachFil } from './CoachFil'
 
 // CE QUE MARCEL SAIT FAIRE — le rail de cartes, juste sous le personnage.
 //
-// Il remplace la grille de quatre tuiles, qui remplaçait elle-même une barre de
-// cinq filtres muets. Ce qui l'a fait bouger une fois de plus n'est pas la
-// grille (elle marchait) mais sa PLACE : elle arrivait après deux pavés de
-// texte, tout en bas d'un écran qu'il fallait faire défiler. Sur un rail posé
-// sous la mascotte, les cartes répondent à la bulle qui vient d'être lue, et la
-// carte coupée sur le bord droit dit qu'il y en a d'autres — un rail qui déborde
-// s'attrape au doigt, une grille qui déborde ne se voit pas.
+// Il mélange volontairement DEUX natures, parce que l'élève, lui, n'en voit
+// qu'une (« qu'est-ce que Marcel peut faire pour moi ? ») :
+//   • les MODES arment le champ — faire une fiche, débloquer un exercice,
+//     fabriquer des cartes. Ils appellent le modèle, et se paient ;
+//   • les PAGES ouvrent un écran déjà calculé — la mission du jour, la méthode,
+//     l'oral, l'entraînement, les progrès. Elles ne coûtent rien.
+// La différence se voit sans être expliquée : une carte armée reste ALLUMÉE
+// (liseré épais, coche), une page s'ouvre et l'écran change.
 //
-// Trois choses font le travail que les segments ne faisaient pas, et elles ne
-// bougent pas :
+// CHAQUE OUTIL A SA TEINTE. Avant, huit cartes violettes se suivaient : on ne
+// se souvenait d'aucune, et il fallait lire chaque titre à chaque fois. La
+// couleur ne touche que l'icône, sa pastille et le liseré — les boutons
+// d'action restent violets (cf. `.outil-*` dans globals.css).
 //
-// 1. UNE ICÔNE par entrée — une icône se reconnaît sans lire.
-// 2. UNE LIGNE D'EXPLICATION sous chaque mot. « Méthode » ne dit rien ;
-//    « comment on travaille chaque matière » se comprend du premier coup.
-// 3. UN CHIFFRE quand il en existe un (durée de la séance, matières prêtes, %
-//    du programme). Il répond à la seule question qui compte devant une carte :
-//    est-ce que j'ai quelque chose à y faire ? Aucun n'est fabriqué ici — ils
-//    sont déjà calculés par le snapshot de la page, donc gratuits.
-//
-// La PREMIÈRE carte est pleine (violet, encre claire) : c'est la mission du
-// jour, la réponse par défaut. Les autres sont blanches. Une seule couleur
-// d'icône partout, et c'est voulu : ce sont toutes des ACTIONS, et l'action est
-// violette dans cette maison — cinq teintes inventées auraient fait croire à
-// cinq natures différentes.
-//
-// Composant serveur : ce sont des liens, il n'y a rien à embarquer côté client.
+// La carte coupée sur le bord droit dit qu'il y en a d'autres : un rail qui
+// déborde s'attrape au doigt, une grille qui déborde ne se voit pas.
 
-const ICONE: Record<MarcelVueSecondaire, LucideIcon> = {
+const ICONE_MODE: Record<ModeCle, LucideIcon> = {
+  question: GraduationCap,
+  fiche: NotebookPen,
+  exercice: Sigma,
+  flashcards: Layers,
+}
+
+const ICONE_VUE: Record<MarcelVueSecondaire, LucideIcon> = {
   mission: BookOpenCheck,
   methode: GraduationCap,
   oral: Mic,
   entrainement: Timer,
   progres: BarChart3,
 }
+
+/** Les modes montrés en carte — « poser une question » est déjà le champ. */
+const MODES_RAIL: ModeCle[] = ['fiche', 'exercice', 'flashcards']
+
+type Carte = {
+  cle: string
+  label: string
+  hint: string
+  teinte: Teinte
+  Icone: LucideIcon
+  stat?: string
+} & ({ mode: ModeCle } | { href: string })
 
 export default function CoachSuggestions({
   matiere,
@@ -52,73 +72,152 @@ export default function CoachSuggestions({
   /** Matière courante, emportée vers les vues qui en dépendent. */
   matiere?: string | null
   /**
-   * Le repère chiffré de chaque carte, quand il existe — laisser vide plutôt
-   * que d'inventer. « L'oral » n'en a pas : son état demande deux requêtes de
-   * plus, que l'écran d'accueil n'a aucune raison de payer.
+   * Le repère chiffré d'une carte, quand il existe — laisser vide plutôt que
+   * d'inventer. « L'oral » n'en a pas : son état demande deux requêtes de plus,
+   * que l'écran d'accueil n'a aucune raison de payer.
    */
   stats?: Partial<Record<MarcelVueSecondaire, string>>
 }) {
+  const { mode: modeActif, choisirMode } = useCoachFil()
+
+  // L'ordre est celui de l'usage : ce que Marcel recommande aujourd'hui, puis
+  // ce qu'on lui demande le plus souvent, puis ses écrans de fond.
+  const mission = MARCEL_ENTREES.find((e) => e.key === 'mission')
+  const autresVues = MARCEL_ENTREES.filter((e) => e.key !== 'mission')
+
+  const cartes: Carte[] = [
+    ...(mission
+      ? [
+          {
+            cle: mission.key,
+            label: mission.label,
+            hint: mission.hint,
+            teinte: TEINTE_VUE[mission.key] ?? 'violet',
+            Icone: ICONE_VUE[mission.key],
+            stat: stats?.[mission.key],
+            href: vueHref(mission.key, matiere),
+          } as Carte,
+        ]
+      : []),
+    ...MODES_RAIL.map((cle) => {
+      const m = MODES[cle]
+      return {
+        cle,
+        label: m.label,
+        hint: m.hint,
+        teinte: m.teinte,
+        Icone: ICONE_MODE[cle],
+        mode: cle,
+      } as Carte
+    }),
+    ...autresVues.map(
+      (e) =>
+        ({
+          cle: e.key,
+          label: e.label,
+          hint: e.hint,
+          teinte: TEINTE_VUE[e.key] ?? 'violet',
+          Icone: ICONE_VUE[e.key],
+          stat: stats?.[e.key],
+          href: vueHref(e.key, matiere),
+        }) as Carte,
+    ),
+  ]
+
   return (
     <nav aria-label="Ce que Marcel peut faire" className="mt-4">
       {/* Le rail déborde des marges de la page (`-mx-4`) et les rend en
           rembourrage : la première carte reste alignée sur le texte, la
           dernière peut aller mourir au bord de l'écran. */}
       <ul className="-mx-4 flex snap-x gap-3 overflow-x-auto px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        {MARCEL_ENTREES.map(({ key, label, hint }, index) => {
-          const Icone = ICONE[key]
-          const stat = stats?.[key]
+        {cartes.map((carte, index) => {
+          const { Icone } = carte
           const pleine = index === 0
+          const arme = 'mode' in carte && modeActif === carte.mode
 
-          return (
-            <li key={key} className="w-[62%] max-w-[224px] min-w-[172px] shrink-0 snap-start">
-              <Link
-                href={vueHref(key, matiere)}
-                className={cn(
-                  'flex h-full min-h-[132px] flex-col rounded-[22px] p-3.5 transition-transform active:translate-y-0.5',
-                  pleine
-                    ? 'from-primary bg-gradient-to-b to-[color-mix(in_oklch,var(--primary),black_16%)] text-white shadow-[0_4px_0_color-mix(in_oklch,var(--primary),black_34%),0_16px_26px_-20px_color-mix(in_oklch,var(--primary),black_20%)]'
-                    : 'bg-card shadow-[0_2px_0_rgba(36,48,79,.06),0_14px_26px_-22px_rgba(36,48,79,.9)]',
-                )}
-              >
-                <span className="mb-2 flex items-start justify-between gap-2">
-                  <span
-                    className={cn(
-                      'grid size-10 shrink-0 place-items-center rounded-2xl',
-                      pleine
-                        ? 'bg-white/18 text-white'
-                        : 'bg-primary/12 text-primary',
-                    )}
-                  >
-                    <Icone aria-hidden="true" className="size-5" strokeWidth={2.2} />
-                  </span>
-                  {/* Le chiffre est un repère, pas un titre : discret, et jamais
-                      seul porteur du sens — la ligne d'explication reste là. */}
-                  {stat ? (
-                    <span
-                      className={cn(
-                        'rounded-full px-2 py-0.5 text-[10.5px] font-extrabold',
-                        pleine
-                          ? 'bg-white/20 text-white'
-                          : 'bg-foreground/6 text-muted-foreground',
-                      )}
-                    >
-                      {stat}
-                    </span>
-                  ) : null}
-                </span>
-
-                <b className="font-heading text-[15px] leading-tight font-extrabold text-balance">
-                  {label}
-                </b>
+          const contenu = (
+            <>
+              <span className="mb-2 flex items-start justify-between gap-2">
                 <span
                   className={cn(
-                    'mt-1 text-xs leading-snug font-semibold text-balance',
-                    pleine ? 'text-white/80' : 'text-muted-foreground',
+                    'grid size-10 shrink-0 place-items-center rounded-2xl',
+                    pleine ? 'bg-white/18 text-white' : 'outil-pastille',
                   )}
                 >
-                  {hint}
+                  <Icone aria-hidden="true" className="size-5" strokeWidth={2.2} />
                 </span>
-              </Link>
+                {/* Le chiffre est un repère, pas un titre : discret, et jamais
+                    seul porteur du sens — la ligne d'explication reste là. */}
+                {carte.stat ? (
+                  <span
+                    className={cn(
+                      'rounded-full px-2 py-0.5 text-[10.5px] font-extrabold',
+                      pleine
+                        ? 'bg-white/20 text-white'
+                        : 'bg-foreground/6 text-muted-foreground',
+                    )}
+                  >
+                    {carte.stat}
+                  </span>
+                ) : null}
+                {arme ? (
+                  <span className="outil-encre text-[10.5px] font-extrabold">
+                    Choisi
+                  </span>
+                ) : null}
+              </span>
+
+              <b
+                className={cn(
+                  'font-heading text-[15px] leading-tight font-extrabold text-balance',
+                  !pleine && arme && 'outil-encre',
+                )}
+              >
+                {carte.label}
+              </b>
+              <span
+                className={cn(
+                  'mt-1 text-xs leading-snug font-semibold text-balance',
+                  pleine ? 'text-white/80' : 'text-muted-foreground',
+                )}
+              >
+                {carte.hint}
+              </span>
+            </>
+          )
+
+          const classeCarte = cn(
+            'flex h-full min-h-[132px] w-full flex-col rounded-[22px] p-3.5 text-left transition-transform active:translate-y-0.5',
+            pleine ? 'outil-carte-pleine text-white' : 'bg-card outil-carte',
+            arme && 'ring-[2.5px] ring-[var(--outil)]',
+          )
+
+          return (
+            <li
+              key={carte.cle}
+              data-teinte={carte.teinte}
+              className="w-[62%] max-w-[224px] min-w-[172px] shrink-0 snap-start"
+            >
+              {'href' in carte ? (
+                <Link href={carte.href} className={classeCarte}>
+                  {contenu}
+                </Link>
+              ) : (
+                <button
+                  type="button"
+                  aria-pressed={arme}
+                  onClick={() => {
+                    sfx.tap()
+                    // Re-toucher la carte armée revient au mode ordinaire :
+                    // sans ça, on reste coincé en « fiche » sans comprendre
+                    // pourquoi Marcel ne répond plus normalement.
+                    choisirMode(arme ? 'question' : carte.mode)
+                  }}
+                  className={classeCarte}
+                >
+                  {contenu}
+                </button>
+              )}
             </li>
           )
         })}

@@ -29,6 +29,7 @@ const CATALOG: BossEntry[] = [
     epithet: "l'Androïde du Calcul",
     emoji: '🧮',
     image: '/images/boss/delta.webp',
+    scene: '/images/boss/delta-scene.webp',
     intro: 'Tes probabilités de victoire ? Proches de zéro.',
     defeat: 'Impossible… mes calculs étaient parfaits !',
     victory: 'CQFD. Reviens quand tu sauras compter.',

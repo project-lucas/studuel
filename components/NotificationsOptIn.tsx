@@ -154,7 +154,15 @@ export default function NotificationsOptIn() {
     }
   }
 
-  if (status === 'loading' || status === 'unsupported') return null
+  // Sans clé VAPID (`unconfigured`), la section disparaît comme sur un
+  // navigateur qui ne sait pas faire : un bloc « Rappels » qui n'annonce
+  // qu'un « bientôt » est une promesse de plus dans les réglages, pas un réglage.
+  if (
+    status === 'loading' ||
+    status === 'unsupported' ||
+    status === 'unconfigured'
+  )
+    return null
 
   return (
     <section className="bg-card mx-auto mt-4 w-full max-w-md rounded-xl border p-4 shadow-sm">
@@ -167,11 +175,7 @@ export default function NotificationsOptIn() {
         garder ta série.
       </p>
 
-      {status === 'unconfigured' ? (
-        <p className="text-muted-foreground text-sm">
-          Les rappels push arrivent très bientôt.
-        </p>
-      ) : status === 'ios-a-installer' ? (
+      {status === 'ios-a-installer' ? (
         <p className="text-muted-foreground text-sm">
           Sur iPhone et iPad, les rappels ne fonctionnent qu’une fois Studuel
           ajouté à ton écran d’accueil : appuie sur <strong>Partager</strong>,
@@ -184,7 +188,8 @@ export default function NotificationsOptIn() {
         </p>
       ) : status === 'on' ? (
         <Button variant="outline" onClick={disable}>
-          <BellOff className="size-4" aria-hidden="true" /> Désactiver les rappels
+          <BellOff className="size-4" aria-hidden="true" /> Désactiver les
+          rappels
         </Button>
       ) : (
         <Button onClick={enable} disabled={status === 'busy'}>

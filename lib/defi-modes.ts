@@ -162,6 +162,12 @@ export type ModeQuestion = {
   correctIndex: number
   explanation: string | null
   subject: string | null
+  /**
+   * La forme de la question en base (`quiz_questions.kind`). Optionnelle : les
+   * banques locales des jeux de salon n'en ont pas. La course s'en sert pour
+   * poser un vrai/faux en deux grandes plaques plutôt qu'en liste.
+   */
+  kind?: 'mcq' | 'true_false'
 }
 
 // ------------------------------------------------------------------- duel BO3

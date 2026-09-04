@@ -14,10 +14,12 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { signIn, signUp, type AuthState } from '@/app/login/actions'
+import { auMoinsUnePorteOAuth, type PortesOAuth } from '@/lib/auth-portes'
+import BoutonsOAuth from '@/components/auth/BoutonsOAuth'
 
 const initialState: AuthState = { error: null, message: null }
 
-export default function LoginForm() {
+export default function LoginForm({ portes }: { portes: PortesOAuth }) {
   const [mode, setMode] = useState<'signin' | 'signup'>('signin')
   const [showPassword, setShowPassword] = useState(false)
   const [signInState, signInAction, signInPending] = useActionState(
@@ -46,6 +48,26 @@ export default function LoginForm() {
       </CardHeader>
 
       <CardContent>
+        {/* Un compte créé avec Google ou Apple n'a PAS de mot de passe : sans
+            ces portes ici, il ne pouvait plus se reconnecter depuis /login
+            (où renvoient toutes les pages gardées). Elles n'apparaissent que
+            si le fournisseur est activé côté Supabase. */}
+        {auMoinsUnePorteOAuth(portes) ? (
+          <>
+            <BoutonsOAuth
+              portes={portes}
+              next="/login/suite"
+              retour="/login?error=oauth"
+              className="flex flex-col gap-2.5"
+            />
+            <p
+              aria-hidden
+              className="my-4 flex items-center gap-3 text-xs font-semibold text-muted-foreground before:h-px before:flex-1 before:bg-border after:h-px after:flex-1 after:bg-border"
+            >
+              ou avec un e-mail
+            </p>
+          </>
+        ) : null}
         <form
           action={mode === 'signin' ? signInAction : signUpAction}
           className="flex flex-col gap-4"

@@ -2,6 +2,35 @@
 // Le temps est mesuré en secondes par le chronomètre du Défi (voir DefiTimer)
 // et cumulé sur profiles.work_seconds.
 
+// Les noms français des jours et des mois. Ils vivent ICI parce que trois
+// écrans les recopiaient à l'identique (« Mercredi 2 septembre » chez Marcel,
+// « il y a 3 jours » dans son historique…) : une seule liste, et l'app parle
+// d'une seule voix. `JOURS_FR` est indexé par `Date.getDay()` (0 = dimanche).
+export const JOURS_FR = [
+  'Dimanche',
+  'Lundi',
+  'Mardi',
+  'Mercredi',
+  'Jeudi',
+  'Vendredi',
+  'Samedi',
+] as const
+
+export const MOIS_FR = [
+  'janvier',
+  'février',
+  'mars',
+  'avril',
+  'mai',
+  'juin',
+  'juillet',
+  'août',
+  'septembre',
+  'octobre',
+  'novembre',
+  'décembre',
+] as const
+
 // Formate une durée en minutes : « 45 min », « 3 h », « 12 h 05 ».
 export function formatDuration(minutes: number): string {
   const total = Math.max(0, Math.round(minutes))

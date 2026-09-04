@@ -17,6 +17,17 @@ import {
 } from '@/lib/game-audio'
 import { pressBuzz, pressTones, type PressIntent } from '@/lib/press'
 import {
+  fillTone,
+  finishTones,
+  goldenTones,
+  heartbeatTones,
+  overtakeTones,
+  rivalGoodTones,
+  rivalWrongTones,
+  sprintTones,
+  vsTones,
+} from '@/lib/duel/audio'
+import {
   battleTones,
   edgeBumpTones,
   noticeKoTones,
@@ -312,6 +323,57 @@ export function gameSfx(timbre: GameTimbre): GameSfx {
     win: () => playTones(winTones(timbre)),
     lose: () => playTones(loseTones(timbre)),
     countdown: (n) => playTones([countdownTone(timbre, n)]),
+  }
+}
+
+// ------------------------------------------------------------ la course (duel)
+// Les sons DE L'AUTRE et ceux de la position, que seul le duel classé possède.
+// La partition est pure (lib/duel/audio) ; ici on ne fait que la jouer, avec
+// l'haptique qui va avec — un dépassement se SENT dans la main.
+
+export type DuelSfx = {
+  /** Le rival vient de répondre juste / faux. */
+  rivalGood: () => void
+  rivalWrong: () => void
+  /** Changement de tête : `up` quand JE passe devant. */
+  overtake: (up: boolean) => void
+  /** Ma barre monte : la note suit le remplissage (0..1). */
+  fill: (ratio: number) => void
+  /** Un battement du cœur du sprint. */
+  heartbeat: () => void
+  /** La question dorée arrive. */
+  golden: () => void
+  /** L'écran VS. */
+  vs: () => void
+  /** Le sprint s'ouvre. */
+  sprint: () => void
+  /** L'arrivée. */
+  finish: (won: boolean) => void
+}
+
+export function duelSfx(): DuelSfx {
+  return {
+    rivalGood: () => playTones(rivalGoodTones()),
+    rivalWrong: () => playTones(rivalWrongTones()),
+    overtake: (up) => {
+      playTones(overtakeTones(up))
+      uiVibrate(up ? [10, 30, 18] : [22, 40, 22])
+    },
+    fill: (ratio) => playTones([fillTone(ratio)]),
+    heartbeat: () => playTones(heartbeatTones()),
+    golden: () => {
+      playTones(goldenTones())
+      uiVibrate(14)
+    },
+    vs: () => {
+      playTones(vsTones())
+      uiVibrate([16, 60, 24])
+    },
+    sprint: () => playTones(sprintTones()),
+    finish: (won) => {
+      playTones(finishTones(won))
+      if (won) uiVibrate([18, 40, 18, 40, 30])
+    },
   }
 }
 

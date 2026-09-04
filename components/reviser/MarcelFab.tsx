@@ -38,11 +38,18 @@ import marcelTete from '@/public/images/nav/marcel.webp'
  * sûre du bas), la même hauteur que le « + » du carnet — les deux ne coexistent
  * jamais, chacun vivant dans son volet (le volet inactif est `hidden`, donc
  * retiré du rendu, `fixed` compris).
+ *
+ * Sur une page de matière, la tête emmène chez Marcel AVEC la matière
+ * (`/marcel?matiere=<slug>`) : ses modes fiche · exercice · flashcards
+ * s'ouvrent alors sur le bon programme, sans que l'élève ait à le redire.
  */
-export default function MarcelFab() {
+export default function MarcelFab({ matiere }: { matiere?: string }) {
+  const href = matiere
+    ? `/marcel?matiere=${encodeURIComponent(matiere)}`
+    : '/marcel'
   return (
     <Link
-      href="/marcel"
+      href={href}
       onClick={() => sfx.tap()}
       aria-label="Demander à Marcel, ton coach"
       title="Marcel, ton coach"

@@ -2,8 +2,6 @@
 
 import { revalidatePath } from 'next/cache'
 import { contentLevelFor } from '@/lib/grades'
-import { redirect } from 'next/navigation'
-import { headers } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { claimPendingReferral } from '@/lib/referral-claim'
@@ -21,16 +19,6 @@ import {
   minutesToSessions,
   type OnboardingAnswers,
 } from '@/lib/welcome'
-
-// URL publique de l'app (dev et prod), pour le redirectTo OAuth.
-async function siteOrigin(): Promise<string> {
-  const h = await headers()
-  const explicit = h.get('origin')
-  if (explicit) return explicit
-  const proto = h.get('x-forwarded-proto') ?? 'http'
-  const host = h.get('x-forwarded-host') ?? h.get('host') ?? 'localhost:3000'
-  return `${proto}://${host}`
-}
 
 // -----------------------------------------------------------------------------
 // Mini-quiz de placement (écran 10) — puise dans les quiz GRATUITS de la classe
@@ -175,28 +163,8 @@ export async function signUpWelcome(input: {
   return { status: 'session' }
 }
 
-// -----------------------------------------------------------------------------
-// OAuth (écran 13) — démarre la connexion Apple / Google. Au retour, le callback
-// ramène sur /bienvenue?finish=1 : le parcours applique alors les réponses du
-// brouillon local au profil (applyOnboarding).
-// NOTE CONFIG : les fournisseurs Apple & Google doivent être activés dans
-// Supabase (Dashboard → Authentication → Providers) avec leurs identifiants
-// OAuth respectifs — sinon Supabase renvoie une erreur « provider is not enabled ».
-// -----------------------------------------------------------------------------
-export async function startOAuth(provider: 'google' | 'apple'): Promise<void> {
-  const supabase = await createClient()
-  const origin = await siteOrigin()
-  const { data, error } = await supabase.auth.signInWithOAuth({
-    provider,
-    options: {
-      redirectTo: `${origin}/auth/callback?next=${encodeURIComponent('/bienvenue?finish=1')}`,
-    },
-  })
-  if (error || !data.url) {
-    redirect('/bienvenue?erreur=oauth')
-  }
-  redirect(data.url)
-}
+// Le démarrage OAuth (écran 13) vit dans `app/auth/actions.ts` : il sert
+// aussi à /login, avec une destination de retour différente.
 
 // -----------------------------------------------------------------------------
 // Application des réponses au profil pour les inscriptions OAuth (qui ne passent

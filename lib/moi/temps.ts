@@ -319,3 +319,30 @@ export function serieTravail(
 export function totalSerie(points: readonly PointTemps[]): number {
   return points.reduce((s, p) => s + p.secondes, 0)
 }
+
+// ------------------------------------------------------------ les barres du rythme
+
+/**
+ * L'objectif hebdomadaire dessiné en pointillé sur le graphique : une heure.
+ * Un repère, pas une consigne — il n'est écrit nulle part que l'élève doit
+ * l'atteindre, il est là pour qu'une semaine pleine se voie.
+ */
+export const OBJECTIF_HEBDO_SECONDES = 3600
+
+/**
+ * Les hauteurs des barres (0..100) et celle de la ligne d'objectif, sur UNE
+ * même échelle : le maximum entre la meilleure semaine et l'objectif majoré
+ * d'un quart, pour que ni l'un ni l'autre ne touche le plafond. Une semaine
+ * vide fait 0 ; le composant lui laisse un liseré minimal.
+ */
+export function hauteursBarres(
+  semaines: readonly SemaineTravail[],
+  objectifSecondes: number,
+): { hauteurs: number[]; objectifPct: number } {
+  const meilleure = Math.max(0, ...semaines.map((s) => s.secondes))
+  const plafond = Math.max(meilleure, objectifSecondes * 1.25, 1)
+  return {
+    hauteurs: semaines.map((s) => Math.round((Math.max(0, s.secondes) / plafond) * 100)),
+    objectifPct: Math.round((objectifSecondes / plafond) * 100),
+  }
+}

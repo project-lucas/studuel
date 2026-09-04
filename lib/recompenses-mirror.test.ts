@@ -1,7 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { readFileSync, readdirSync } from 'node:fs'
-import { fileURLToPath } from 'node:url'
-import path from 'node:path'
+import { derniereDefinition } from '@/lib/migrations-lecture'
 import {
   QUEST_CATALOG,
   QUESTS_PER_DAY,
@@ -31,28 +29,16 @@ import {
 // Même famille de piège que la rotation des boss (corrigée par la 194) ; ce
 // fichier suit le modèle de lib/bosses-mirror.test.ts.
 
-const SUPABASE_DIR = path.join(
-  path.dirname(fileURLToPath(import.meta.url)),
-  '..',
-  'supabase',
-)
-
-function migrationsInOrder(): { file: string; sql: string }[] {
-  return readdirSync(SUPABASE_DIR)
-    .filter((f) => f.endsWith('.sql'))
-    .sort()
-    .map((file) => ({
-      file,
-      sql: readFileSync(path.join(SUPABASE_DIR, file), 'utf8'),
-    }))
-}
-
-/** La DERNIÈRE migration définissant une fonction gagne (CREATE OR REPLACE). */
+/**
+ * La DERNIÈRE migration définissant une fonction gagne (CREATE OR REPLACE).
+ *
+ * La lecture ET la recherche sont mémoïsées (lib/migrations-lecture.ts) : ce
+ * fichier interroge dix-huit fonctions, ce qui relisait dix-huit fois les
+ * 21 Mo de `supabase/` et faisait dépasser le délai de Vitest au hasard.
+ */
 function effectiveSql(fnName: string): { file: string; sql: string } {
-  const found = migrationsInOrder()
-    .filter((m) => m.sql.includes(`FUNCTION public.${fnName}`))
-    .at(-1)
-  expect(found, `aucune migration ne définit ${fnName}`).toBeDefined()
+  const found = derniereDefinition(fnName)
+  expect(found, `aucune migration ne définit ${fnName}`).not.toBeNull()
   return found!
 }
 

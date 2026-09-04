@@ -85,8 +85,8 @@ function ResultsPanel({ stats }: { stats: CourseStats }) {
   if (stats.totalAttempts === 0) {
     return (
       <p className="rounded-2xl bg-muted/40 px-3 py-4 text-center text-sm text-muted-foreground">
-        Pas encore de statistiques — lance ta première session avec le bouton
-        « Réviser » 🎯
+        Pas encore de statistiques — lance ta première session avec le bouton «
+        Réviser » 🎯
       </p>
     )
   }
@@ -98,7 +98,11 @@ function ResultsPanel({ stats }: { stats: CourseStats }) {
       count: stats.struggling,
       className: 'bg-destructive',
     },
-    { label: 'Jamais vues', count: stats.neverSeen, className: 'bg-muted-foreground/40' },
+    {
+      label: 'Jamais vues',
+      count: stats.neverSeen,
+      className: 'bg-muted-foreground/40',
+    },
   ]
 
   return (
@@ -108,7 +112,10 @@ function ResultsPanel({ stats }: { stats: CourseStats }) {
           label="Réussite"
           value={stats.successPct !== null ? `${stats.successPct} %` : '—'}
         />
-        <StatTile label="Réponses données" value={String(stats.totalAttempts)} />
+        <StatTile
+          label="Réponses données"
+          value={String(stats.totalAttempts)}
+        />
       </div>
       <div className="flex flex-col gap-2.5 rounded-2xl bg-muted/40 p-3">
         {rows.map((r) => (
@@ -319,6 +326,7 @@ export default function CourseScreen({
   etiquettes = [],
   reglages,
   matieres = [],
+  photoDisponible = false,
 }: {
   course: CourseHeader
   chapters: CourseChapter[]
@@ -329,6 +337,8 @@ export default function CourseScreen({
   /** Les réglages de révision du cours (migrations 315 / 316). */
   reglages: CourseReglages
   matieres?: MatiereChoix[]
+  /** Un lecteur d'images est branché côté serveur (voir la page). */
+  photoDisponible?: boolean
 }) {
   const router = useRouter()
   const params = useSearchParams()
@@ -393,7 +403,6 @@ export default function CourseScreen({
       }
     })
   }
-
 
   return (
     <div className="relative mx-auto w-full max-w-md pb-28">
@@ -796,7 +805,11 @@ export default function CourseScreen({
                   className="flex w-full cursor-pointer items-center gap-3 rounded-2xl bg-muted/60 px-4 py-3 text-left text-sm font-bold text-foreground hover:bg-muted disabled:opacity-60"
                 >
                   <span className="flex size-8 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                    <TypeIcon className="size-4" strokeWidth={2.2} aria-hidden="true" />
+                    <TypeIcon
+                      className="size-4"
+                      strokeWidth={2.2}
+                      aria-hidden="true"
+                    />
                   </span>
                   {TYPE_LABEL[type]}
                 </button>
@@ -812,6 +825,7 @@ export default function CourseScreen({
       <GenerationIaSheet
         courseId={course.id}
         chapterId={createTarget}
+        photoDisponible={photoDisponible}
         open={aiOpen}
         onClose={() => setAiOpen(false)}
       />

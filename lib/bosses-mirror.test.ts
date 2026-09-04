@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest'
-import { readFileSync, readdirSync } from 'node:fs'
-import { fileURLToPath } from 'node:url'
-import path from 'node:path'
+import {
+  derniereOccurrence,
+  migrationsDansLOrdre,
+} from '@/lib/migrations-lecture'
 import { ALL_BOSSES, weeklyBoss, weeklyTrophyId } from '@/lib/bosses'
 import { WIN_COINS, WIN_COINS_DAILY_CAP } from '@/lib/defi/duel-record'
 import { DAILY_GOAL_OPTIONS } from '@/lib/daily-goal'
@@ -41,21 +42,10 @@ const LUNDI_TO_VENDREDI = [
 // le trophée hebdomadaire ne pouvait plus être réclamé. Corrigé par la
 // migration 194 ; ce fichier existe pour que ça ne se reproduise pas.
 
-const SUPABASE_DIR = path.join(
-  path.dirname(fileURLToPath(import.meta.url)),
-  '..',
-  'supabase',
-)
-
-function migrationsInOrder(): { file: string; sql: string }[] {
-  return readdirSync(SUPABASE_DIR)
-    .filter((f) => f.endsWith('.sql'))
-    .sort()
-    .map((file) => ({
-      file,
-      sql: readFileSync(path.join(SUPABASE_DIR, file), 'utf8'),
-    }))
-}
+// La lecture des 21 Mo de `supabase/` est mémoïsée une fois pour tout le
+// fichier (cf. lib/migrations-lecture.ts) : chaque constante vérifiée ici
+// relisait sinon le dossier entier, et l'`it()` dépassait les 5 s de Vitest.
+const migrationsInOrder = migrationsDansLOrdre
 
 /**
  * La rotation des boss telle que la BASE la verra : la DERNIÈRE définition de
@@ -139,14 +129,7 @@ describe('La Traque : lib/traque.ts ↔ migrations SQL', () => {
   // écrase la précédente. Ce qui compte est donc, pour chaque règle, la
   // DERNIÈRE écriture dans l'ordre des migrations — exactement ce que la base
   // aura appliqué.
-  const lastMatch = (re: RegExp): { file: string; m: RegExpMatchArray } | null => {
-    let found: { file: string; m: RegExpMatchArray } | null = null
-    for (const { file, sql } of migrationsInOrder()) {
-      const m = sql.match(re)
-      if (m) found = { file, m }
-    }
-    return found
-  }
+  const lastMatch = derniereOccurrence
 
   /** Le match effectif, ou un échec de test explicite. */
   const effective = (re: RegExp, what: string): RegExpMatchArray => {

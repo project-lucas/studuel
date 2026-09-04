@@ -1,7 +1,9 @@
 import Link from 'next/link'
 import { ArrowLeft, Flame } from 'lucide-react'
 import PageHeader from '@/components/PageHeader'
+import BoutonHistorique from '@/components/marcel/BoutonHistorique'
 import CoachEntete from '@/components/marcel/CoachEntete'
+import { CoachFilProvider } from '@/components/marcel/CoachFil'
 import CoachSuggestions from '@/components/marcel/CoachSuggestions'
 import VueHeader from '@/components/marcel/VueHeader'
 import PointDuJourHero from '@/components/marcel/PointDuJourHero'
@@ -18,6 +20,8 @@ import { getOralSnapshot } from '@/lib/coach/oral-server'
 import { countPretes, entrainementsFor } from '@/lib/coach/entrainement'
 import { couvertureGlobale } from '@/lib/coach/couverture'
 import { parseVue, titreVue } from '@/lib/coach/marcel-vues'
+import { visionDisponible } from '@/lib/coach/ia-vision'
+import { JOURS_FR, MOIS_FR } from '@/lib/time'
 
 export const metadata = { title: 'Marcel — Studuel' }
 export const dynamic = 'force-dynamic'
@@ -36,33 +40,9 @@ export const dynamic = 'force-dynamic'
 // ne fait qu'assembler et afficher. Aucun appel IA au rendu — tout ce qu'on lit
 // sur cet écran est déterministe ; seul le champ, à la demande, coûte.
 
-const JOURS = [
-  'Dimanche',
-  'Lundi',
-  'Mardi',
-  'Mercredi',
-  'Jeudi',
-  'Vendredi',
-  'Samedi',
-]
-const MOIS = [
-  'janvier',
-  'février',
-  'mars',
-  'avril',
-  'mai',
-  'juin',
-  'juillet',
-  'août',
-  'septembre',
-  'octobre',
-  'novembre',
-  'décembre',
-]
-
 function dateDuJour(): string {
   const now = new Date()
-  return `${JOURS[now.getDay()]} ${now.getDate()} ${MOIS[now.getMonth()]}`
+  return `${JOURS_FR[now.getDay()]} ${now.getDate()} ${MOIS_FR[now.getMonth()]}`
 }
 
 export default async function MarcelPage({
@@ -125,7 +105,10 @@ export default async function MarcelPage({
     <div className="pb-6">
       <div className="px-4 pt-2">
         {vue === 'aujourdhui' ? (
-          <>
+          // Le fil en cours est partagé par la pastille d'historique (en haut)
+          // et par le champ (tout en bas) : le contexte les relie sans obliger
+          // la page à devenir un composant client.
+          <CoachFilProvider>
             {/* LA SORTIE. Marcel n'a plus d'onglet : on entre ici par sa tête
                 flottante, en bas à droite de Réviser. Sans cette flèche,
                 l'accueil du coach est un cul-de-sac — la barre du bas n'y
@@ -140,17 +123,24 @@ export default async function MarcelPage({
                 la mission, où elle veut dire quelque chose (« voilà ton travail
                 de ce mardi »). Ici, elle volait la place du logo. */}
             <div className="mx-0.5 mb-1 flex items-start justify-between">
-              <Link
-                href="/reviser"
-                aria-label="Revenir à Réviser"
-                className="bg-card text-primary flex size-10 shrink-0 items-center justify-center rounded-full shadow-sm ring-1 ring-black/5 transition active:translate-y-px active:scale-95"
-              >
-                <ArrowLeft
-                  aria-hidden="true"
-                  className="size-5"
-                  strokeWidth={2.6}
-                />
-              </Link>
+              {/* Deux pastilles empilées, comme deux boutons d'un même jeu :
+                  sortir, et retrouver ses conversations. L'historique est SOUS
+                  la sortie parce qu'il sert moins souvent — et parce que la
+                  colonne se lit de haut en bas. */}
+              <div className="flex flex-col gap-2">
+                <Link
+                  href="/reviser"
+                  aria-label="Revenir à Réviser"
+                  className="bg-card text-primary flex size-10 shrink-0 items-center justify-center rounded-full shadow-sm ring-1 ring-black/5 transition active:translate-y-px active:scale-95"
+                >
+                  <ArrowLeft
+                    aria-hidden="true"
+                    className="size-5"
+                    strokeWidth={2.6}
+                  />
+                </Link>
+                <BoutonHistorique />
+              </div>
               {streak >= 2 && (
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-[#ffeed2] px-2.5 py-1 text-xs font-extrabold text-[#b4550c]">
                   <Flame aria-hidden="true" className="size-3.5" />
@@ -193,8 +183,13 @@ export default async function MarcelPage({
               gemmes={demande.gemmes}
               matieres={matieres.map((m) => ({ slug: m.slug, name: m.name }))}
               matiereParDefaut={point.matiere?.slug ?? null}
+              // Lire une photo demande un modèle qui en est capable, et il est
+              // configuré à part (lib/coach/ia-vision). Quand il manque, on ne
+              // propose pas la porte : un bouton qui échoue à tous les coups est
+              // pire que pas de bouton.
+              vision={visionDisponible()}
             />
-          </>
+          </CoachFilProvider>
         ) : (
           <>
             {titre ? <VueHeader titre={titre} /> : null}

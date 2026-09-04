@@ -43,6 +43,7 @@ import {
   PlanStep,
 } from './EngageSteps'
 import SignUpStep from './SignUpStep'
+import type { PortesOAuth } from '@/lib/auth-portes'
 
 // Écrans à bouton « Continuer » standard (footer géré par le flux). Les autres
 // portent leurs propres boutons.
@@ -59,10 +60,13 @@ const STANDARD_FOOTER: WelcomeStep[] = [
 
 export default function WelcomeFlow({
   subjects,
+  portes,
   finish = false,
   oauthFailed = false,
 }: {
   subjects: Subject[]
+  /** Les fournisseurs OAuth réellement activés côté Supabase (écran 13). */
+  portes: PortesOAuth
   finish?: boolean
   /** Le lancement OAuth a échoué (fournisseur non activé côté Supabase, panne).
    *  On reprend à l'écran de création de compte, PAS à l'intro : renvoyer
@@ -358,6 +362,7 @@ export default function WelcomeFlow({
         return (
           <SignUpStep
             answers={answers}
+            portes={portes}
             initialError={
               oauthFailed
                 ? 'La connexion avec ce service n’a pas pu démarrer. Réessaie, ou crée ton compte avec un e-mail.'

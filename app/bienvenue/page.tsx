@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation'
 import WelcomeFlow from '@/components/welcome/WelcomeFlow'
 import { getSubjectsCached } from '@/lib/catalog'
+import { getPortesOAuthCached } from '@/lib/supabase/portes-oauth'
 import { getCurrentUser } from '@/lib/supabase/user'
 
 export const metadata = { title: 'Bienvenue — Studuel' }
@@ -33,7 +34,12 @@ export default async function BienvenuePage({
 
   // Les couples (matière, niveau) ayant du contenu ne sont plus lus ici : le
   // sélecteur propose tout le programme (voir ci-dessous).
-  const allSubjects = await getSubjectsCached()
+  // Les portes Apple / Google ne s'affichent que si le fournisseur est
+  // activé côté Supabase — lu à la source, en cache (voir portes-oauth.ts).
+  const [allSubjects, portes] = await Promise.all([
+    getSubjectsCached(),
+    getPortesOAuthCached(),
+  ])
   // LE PROGRAMME ENTIER, contenu ou pas. Le sélecteur ne montrait que les
   // matières ayant des chapitres (`narrowLevelsToContent`), pour qu'un futur 2de
   // ne coche pas « SNT » et ne tombe pas sur une page vide à sa première visite.
@@ -50,6 +56,7 @@ export default async function BienvenuePage({
   return (
     <WelcomeFlow
       subjects={subjects}
+      portes={portes}
       finish={isFinish}
       oauthFailed={oauthFailed}
     />

@@ -1,10 +1,9 @@
 'use client'
 
 import Link from 'next/link'
-import { useState, useTransition, type ReactNode } from 'react'
+import { useEffect, useState, useTransition, type ReactNode } from 'react'
 import { Check, GraduationCap, Pencil, School, Settings } from 'lucide-react'
 import AvatarRender from '@/components/avatar/AvatarRender'
-import ProfileBannerArt from '@/components/defi/ProfileBannerArt'
 import ProfileEditor from '@/components/defi/ProfileEditor'
 import BadgeGallery from '@/components/defi/BadgeGallery'
 import RankBadge, { type BadgeRank } from '@/components/defi/RankBadge'
@@ -15,45 +14,29 @@ import { sfx } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
 
 // -----------------------------------------------------------------------------
-// LA CARTE DE JOUEUR — le nouveau haut de l'onglet Moi.
+// LA CARTE DE JOUEUR — un OBJET, plus un bandeau.
 //
-// CE QU'ELLE REMPLACE, ET POURQUOI. `PanneauIdentite` posait un avatar, un
-// prénom, un « rang de travail » numéroté et trois preuves chiffrées. Deux
-// défauts, et le second était grave :
+// Refonte du 03/09/2026 (Lucas : « les blocs sont bas de gamme »). La carte
+// d'avant était un aplat violet avec un visage dans un coin, une plaque blanche
+// de six chiffres en pied, et une étagère de couronnes entre les deux : trois
+// matières collées, aucune ne pesait. Celle-ci n'a qu'une matière — le violet
+// profond — et une seule chose qui brille.
 //
-//   1. Elle affichait « Assidu · niveau 5 » avec sa barre, à trois centimètres
-//      du bandeau du haut qui affiche « Niveau 6 · 93 % ». Deux nombres, deux
-//      échelles sans rapport, le même mot. Le rang de travail garde ici son
-//      TITRE — « Assidu » dit quelque chose — et perd son numéro : il n'y a plus
-//      qu'un seul niveau dans l'app, celui du bandeau.
+//   • LE VIOLET EST RADIAL : une source de lumière en haut à gauche, un halo
+//     doré en haut à droite, le fond qui s'assombrit vers le bas. C'est ce qui
+//     fait lire un objet et non un fond (`.moi-carte`).
+//   • L'AVATAR PORTE UN ANNEAU D'OR, et son niveau dans l'angle — celui du
+//     bandeau du haut, même nombre, même échelle.
+//   • TROIS COMPTEURS EN VERRE (série · temps · trophées) : ce que l'élève
+//     montre. Les autres chiffres vivent dans les tuiles sous la carte.
+//   • LE REFLET HOLOGRAPHIQUE balaie la carte UNE fois à l'ouverture, façon
+//     carte à collectionner, et rejoue quand on la touche. C'est le seul effet
+//     de l'écran — un seul objet le mérite, et il perd tout s'il est partagé.
 //
-//   2. Le profil de JEU — bannière, badges, blason, école, pseudo — existait
-//      déjà en entier, mais enfermé dans une modale de `/defi`. Une modale n'a
-//      pas d'URL, pas de retour arrière, pas de partage : personne n'y va « pour
-//      voir ». L'onglet dont l'icône est le visage de l'élève ne portait pas son
-//      profil. Il le porte.
-//
-// LA BANNIÈRE EST LE FOND, PAS UNE VIGNETTE. C'est elle qui fait qu'une carte
-// est la sienne : elle prend toute la largeur, l'avatar la chevauche, et le
-// voile sombre en bas n'existe que pour que le pseudo reste lisible quelle que
-// soit l'illustration.
-//
-// LE CRAYON N'OUVRE PAS UNE MODALE. Il déplie un panneau SOUS la carte
-// (pseudo · bannière · badges). Même monde, même scroll, aucun piège de focus —
-// et le vestiaire, lui, garde son écran plein : changer de visage n'est pas
-// régler un profil.
-//
-// ELLE A DEUX ÉTAGES DEPUIS QU'ELLE A AVALÉ « MES CHIFFRES ». L'identité seule
-// laissait la moitié droite de la carte vide — un grand aplat violet avec un
-// visage dans un coin — pendant que six chiffres qui disent EXACTEMENT la même
-// chose (qui est cet élève, ce qu'il a fait) vivaient deux blocs plus bas dans
-// leur propre carte, sous leur propre titre. L'écran posait deux fois la même
-// question à deux endroits.
-//
-// La carte prend donc la forme d'une carte à collectionner : le PORTRAIT en
-// haut sur le violet, la PLAQUE DE STATISTIQUES en bas, blanche et encastrée
-// (`chiffres`). Le pied de la carte est ce que l'élève montre — c'est là que
-// vont les nombres, pas dans une carte de plus.
+// CE QUI N'A PAS BOUGÉ : le crayon déplie le panneau de personnalisation SOUS
+// la carte (pseudo · bannière · badges), l'engrenage mène au compte, l'avatar
+// au vestiaire. Le classement et les couronnes ont quitté la carte pour leurs
+// propres blocs, où ils ont la place de compter.
 // -----------------------------------------------------------------------------
 
 export type CarteProfilData = {
@@ -70,17 +53,22 @@ export type CarteProfilData = {
   equippedBadgeIds: string[]
 }
 
-/** Les 3 badges mis en avant, posés sur la bannière. */
+export type CompteurCarte = {
+  valeur: string
+  legende: string
+}
+
+/** Les 3 badges mis en avant, en pied de carte. */
 function BadgesEnAvant({ badges }: { badges: BadgeState[] }) {
   if (badges.length === 0) return null
   return (
-    <ul role="list" className="flex items-center gap-1.5">
+    <ul role="list" className="flex items-center gap-2">
       {badges.map((b) => (
         <li
           key={b.id}
           title={b.title}
           aria-label={b.title}
-          className="flex size-8 items-center justify-center rounded-xl bg-white/15 text-lg ring-1 ring-white/25 backdrop-blur-sm"
+          className="flex size-[34px] items-center justify-center rounded-xl bg-white/14 text-base ring-1 ring-white/18"
         >
           <span aria-hidden="true">{b.icon}</span>
         </li>
@@ -92,42 +80,34 @@ function BadgesEnAvant({ badges }: { badges: BadgeState[] }) {
 export default function CarteProfil({
   data,
   workTitle,
-  couronnes = null,
-  standing = null,
-  chiffres = null,
+  compteurs,
+  suite = null,
 }: {
   data: CarteProfilData
-  /** Le titre d'assiduité (« Assidu »), SANS numéro — cf. en-tête du fichier. */
+  /** Le titre d'assiduité (« Assidu »), sans numéro. */
   workTitle: string
-  /**
-   * L'ÉTAGÈRE DES COURONNES (`components/moi/CouronnesRangee`), un emplacement
-   * par matière. Passée en nœud pour la même raison que `chiffres` : elle n'a
-   * aucun état, et l'importer ici l'aurait embarquée — avec les icônes de
-   * matières — dans le paquet du navigateur pour rien.
-   */
-  couronnes?: ReactNode
-  /** « Tu travailles plus que 96 % des 3e », rendu par le serveur. */
-  standing?: ReactNode
-  /**
-   * LE PIED DE LA CARTE — « Mes chiffres », rendu par le serveur et passé ici
-   * en nœud plutôt qu'importé : le bloc n'a besoin d'aucun état client, et le
-   * faire traverser cette frontière l'aurait embarqué dans le paquet du
-   * navigateur pour rien.
-   */
-  chiffres?: ReactNode
+  /** Les trois compteurs en verre : série, temps, trophées. */
+  compteurs: [CompteurCarte, CompteurCarte, CompteurCarte]
+  /** Rendu sous la carte, dans la même section (l'écran continue). */
+  suite?: ReactNode
 }) {
   const [editing, setEditing] = useState(false)
   const [banner, setBanner] = useState(data.profileBanner)
   const [equipped, setEquipped] = useState<string[]>(data.equippedBadgeIds)
   const [, startTransition] = useTransition()
+  // Le reflet : joué au montage, rejoué au toucher. Le compteur force une
+  // nouvelle animation à chaque toucher (la classe seule ne rejouerait pas).
+  const [reflet, setReflet] = useState(0)
+  useEffect(() => {
+    const id = window.setTimeout(() => setReflet(1), 250)
+    return () => window.clearTimeout(id)
+  }, [])
 
   const earnedIds = new Set(data.badges.filter((b) => b.earned).map((b) => b.id))
   const enAvant = equipped
     .map((id) => data.badges.find((b) => b.id === id))
     .filter((b): b is BadgeState => b !== undefined)
 
-  // Équiper/retirer un badge : maj optimiste (ordre conservé, ≤3), puis
-  // persistance serveur qui re-nettoie contre les badges réellement acquis.
   const toggleEquip = (id: string) => {
     if (!earnedIds.has(id)) return
     setEquipped((prev) => {
@@ -146,62 +126,33 @@ export default function CarteProfil({
   }
 
   return (
-    <section
-      aria-label="Ma carte de joueur"
-      // Pleine largeur ET jusqu'au bord HAUT de l'écran. `-mt-16` annule
-      // exactement le `pt-16` de <main> (la hauteur du bandeau flottant) :
-      // la carte passe DERRIÈRE les pastilles du HUD au lieu de commencer
-      // sous elles. C'est ce qui supprime la bande crème orpheline du haut —
-      // 56 px de fond de page coincés entre le bord de l'écran et le violet,
-      // qui faisaient lire le bandeau comme une barre d'appli posée sur rien.
-      // Sur desktop le bandeau n'existe pas : `md:-mt-10` annule le `py-10`.
-      className="relative -mx-4 -mt-16 md:-mx-8 md:-mt-10"
-    >
-      <div className="moi-carte overflow-hidden rounded-b-[2rem] md:rounded-b-[2.5rem]">
-        {/* --- La bannière ------------------------------------------------- */}
-        {/* Elle porte maintenant les 56 px du bandeau flottant EN PLUS de sa
-            propre hauteur (128 px mobile, 144 px desktop où le bandeau n'existe
-            pas) : l'illustration file jusqu'au bord de l'écran et les pastilles
-            de niveau et de monnaies flottent DESSUS, comme sur l'arène. Rien
-            n'est repoussé vers le bas — l'avatar et le pseudo restent à la même
-            hauteur d'écran qu'avant. */}
-        <div className="relative h-[11.5rem] sm:h-48 md:h-36">
-          {/* `withGradient={false}` : LA BANNIÈRE NE PEINT PLUS DE FOND, elle ne
-              peint qu'un visuel s'il en existe un. Son dégradé de repli était
-              un second violet — bleuté — posé sur le violet magenta de la
-              carte, et c'est cette superposition, pas un mauvais réglage, qui
-              tirait une ligne en travers de l'écran. Aujourd'hui le repli, il
-              est DANS la carte (`.moi-carte`), et il n'y en a qu'un.
+    <section aria-label="Ma carte de joueur" className="relative">
+      {/* La carte commence SOUS le bandeau flottant du haut (pt-16 de <main>),
+          comme un objet posé sur la table — plus de bannière qui file jusqu'au
+          bord de l'écran : un objet a des bords. */}
+      <div
+        className="moi-carte relative overflow-hidden rounded-3xl text-white"
+        onClick={() => setReflet((n) => n + 1)}
+      >
+        {/* Le reflet holographique. `key` relance l'animation à chaque toucher. */}
+        {reflet > 0 ? <span key={reflet} className="moi-foil" aria-hidden="true" /> : null}
 
-              LES DEUX VOILES NOIRS SONT PARTIS AVEC. Ils n'existaient que pour
-              détacher du texte d'une illustration ; sur un aplat qui est déjà
-              la bonne couleur, ils ne faisaient qu'assombrir la zone de la
-              bannière et donc RECRÉER la marche qu'on venait de supprimer. Le
-              jour où des visuels de bannières existeront (public/banners/ est
-              vide : aucun n'a jamais été généré), ils reviendront collés au
-              visuel, pas au bloc. */}
-          <ProfileBannerArt banner={banner} withGradient={false} />
-
-          {/* Réglages et édition, dans l'angle. L'engrenage mène au compte —
-              c'était jusqu'ici la seule porte de /compte, et elle vivait dans
-              le bandeau du haut, loin de tout ce qu'elle règle. */}
-          {/* Sous le bandeau flottant, pas dessous au sens du z-index : la
-              bannière ayant grandi vers le haut, ces deux boutons doivent
-              redescendre d'autant pour rester à la même hauteur d'écran et ne
-              pas venir buter dans l'engrenage du HUD. */}
-          <div className="absolute top-16 right-2 flex items-center gap-2 md:top-3">
+        <div className="relative px-4 pt-4 pb-4">
+          {/* Réglages et personnalisation, dans l'angle. */}
+          <div className="absolute top-3 right-3 flex items-center gap-1.5">
             <button
               type="button"
-              onClick={() => {
+              onClick={(e) => {
+                e.stopPropagation()
                 sfx.tap()
                 setEditing((v) => !v)
               }}
               aria-expanded={editing}
               aria-controls="moi-profil-edition"
-              className="flex size-10 items-center justify-center rounded-full bg-black/35 text-white ring-1 ring-white/25 backdrop-blur-sm transition active:scale-90"
+              className="flex size-9 items-center justify-center rounded-full bg-white/14 text-white ring-1 ring-white/20 transition active:scale-90"
             >
               {editing ? (
-                <Check className="size-5" strokeWidth={2.6} aria-hidden="true" />
+                <Check className="size-[18px]" strokeWidth={2.6} aria-hidden="true" />
               ) : (
                 <Pencil className="size-4" strokeWidth={2.6} aria-hidden="true" />
               )}
@@ -211,50 +162,47 @@ export default function CarteProfil({
             </button>
             <Link
               href="/compte"
-              onClick={() => sfx.tap()}
-              className="flex size-10 items-center justify-center rounded-full bg-black/35 text-white ring-1 ring-white/25 backdrop-blur-sm transition active:scale-90"
+              onClick={(e) => {
+                e.stopPropagation()
+                sfx.tap()
+              }}
+              className="flex size-9 items-center justify-center rounded-full bg-white/14 text-white ring-1 ring-white/20 transition active:scale-90"
             >
-              <Settings className="size-5" strokeWidth={2.4} aria-hidden="true" />
+              <Settings className="size-[18px]" strokeWidth={2.4} aria-hidden="true" />
               <span className="sr-only">Réglages du compte</span>
             </Link>
           </div>
 
-          {/* Les badges mis en avant : sur la bannière, à gauche, là où on les
-              cherche sur une carte de joueur. */}
-          <div className="absolute bottom-2 left-3">
-            <BadgesEnAvant badges={enAvant} />
-          </div>
-        </div>
-
-        {/* --- L'identité, à cheval sur la bannière -------------------------- */}
-        {/* Plus de fond à elle : le dégradé de `.moi-carte` traverse la carte
-            entière, bannière comprise. Une bande qui repeint sa propre tranche
-            de violet, c'est exactement ce qui fabriquait la couture. */}
-        <div className="relative px-4 pb-4 md:px-8">
-          <div className="-mt-11 flex items-end gap-3">
-            {/* L'avatar mène au vestiaire — c'est le geste le plus visible de
-                l'onglet, et il ne doit pas se confondre avec le crayon (qui
-                règle le profil, pas le visage). */}
+          {/* --- L'identité --------------------------------------------------- */}
+          <div className="flex items-center gap-3.5 pr-20">
             <Link
               href="/moi/avatar"
-              onClick={() => sfx.tap()}
+              onClick={(e) => {
+                e.stopPropagation()
+                sfx.tap()
+              }}
               aria-label="Changer mon avatar"
-              className="group relative block size-24 shrink-0 rounded-3xl bg-white/95 p-1 shadow-lg ring-2 ring-white/60 transition-transform active:scale-[0.97]"
+              className="relative block size-[72px] shrink-0 transition-transform active:scale-[0.96]"
             >
-              <AvatarRender config={data.avatar} className="overflow-hidden rounded-[1.15rem]" />
-              {/* Le niveau, dans l'angle : c'est CELUI du bandeau du haut, le
-                  même nombre, la même échelle. */}
-              <span className="absolute -right-1.5 -bottom-1.5 flex min-w-8 items-center justify-center rounded-full bg-primary px-1.5 py-0.5 text-[13px] leading-none font-extrabold text-primary-foreground shadow-md ring-2 ring-white tabular-nums">
-                {data.level}
+              {/* L'anneau d'or : le seul or de la carte, avec le niveau. */}
+              <span
+                aria-hidden="true"
+                className="absolute inset-0 rounded-full bg-highlight shadow-[0_6px_16px_-6px_rgba(0,0,0,.5)]"
+              />
+              <span className="absolute inset-[3px] overflow-hidden rounded-full bg-white">
+                <AvatarRender config={data.avatar} className="size-full" />
+              </span>
+              <span className="font-heading absolute -right-1 -bottom-1 rounded-full bg-highlight px-2 py-0.5 text-[12px] leading-tight font-extrabold text-[#6b4a00] shadow-md tabular-nums">
+                Niv. {data.level}
                 <span className="sr-only"> — niveau</span>
               </span>
             </Link>
 
-            <div className="min-w-0 flex-1 pb-0.5">
-              <h1 className="font-heading truncate text-[22px] leading-tight font-extrabold text-white drop-shadow-sm">
+            <div className="min-w-0 flex-1">
+              <h1 className="font-heading truncate text-[24px] leading-[1.1] font-extrabold tracking-[0.2px]">
                 {data.displayName}
               </h1>
-              <p className="mt-0.5 flex flex-wrap items-center gap-x-2.5 gap-y-0.5 text-[11px] font-bold text-white/85">
+              <p className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[12px] font-bold text-white/85">
                 {data.gradeLabel ? (
                   <span className="flex items-center gap-1">
                     <GraduationCap className="size-3.5" aria-hidden="true" />
@@ -268,44 +216,54 @@ export default function CarteProfil({
                   </span>
                 ) : null}
               </p>
-              {/* Le titre d'assiduité : un mot, sans numéro et sans barre.
-                  Il est monté en PASTILLE le jour où la carte est devenue une
-                  vraie carte de joueur : posé à plat, un mot jaune sous deux
-                  lignes blanches se lisait comme une quatrième ligne d'état
-                  civil. Un titre se porte, il ne se déclare pas — et le jaune
-                  est la couleur du gain dans la charte, il a droit à son
-                  cartouche. */}
               <p className="mt-1.5">
-                <span className="inline-flex items-center rounded-full bg-highlight/18 px-2 py-0.5 text-[10px] font-extrabold tracking-[0.08em] text-highlight uppercase ring-1 ring-highlight/35">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/14 px-2.5 py-[3px] text-[10.5px] font-extrabold tracking-[0.06em] uppercase">
                   {workTitle}
+                  <span aria-hidden="true" className="opacity-60">
+                    ·
+                  </span>
+                  {/* « Bronze IV » : le libellé porte déjà sa division. */}
+                  {data.rank.label}
                 </span>
               </p>
             </div>
-
-            {/* Le blason de rang : la mesure de l'arène, à sa place sur une
-                carte de joueur. */}
-            <div className="shrink-0 pb-2">
-              <RankBadge rank={data.rank} size={54} />
-            </div>
           </div>
 
-          {standing ? <div className="mt-2.5">{standing}</div> : null}
+          {/* Le blason de l'arène, en bas à droite de l'identité. */}
+          <div className="absolute top-[68px] right-3">
+            <RankBadge rank={data.rank} size={46} hideDivision />
+          </div>
 
-          {/* L'ÉTAGÈRE DES COURONNES ferme le portrait. Une carte de joueur
-              montre ce qu'on a gagné ; ici on montre en plus ce qui reste à
-              gagner, parce que ce sont des trophées SCOLAIRES : la case vide
-              d'une matière est une information que l'élève a le droit d'avoir
-              sous les yeux. Le détail chiffré est replié DEDANS, derrière le ⋮
-              au bout de la rangée — il n'y a plus de bloc « Mes couronnes »
-              sous la carte. */}
-          {couronnes ? <div className="mt-3">{couronnes}</div> : null}
+          {/* --- Les trois compteurs en verre --------------------------------- */}
+          <dl className="mt-4 grid grid-cols-3 gap-2">
+            {compteurs.map((c) => (
+              <div
+                key={c.legende}
+                className="rounded-2xl border border-white/16 bg-white/12 px-2 py-2 text-center backdrop-blur-[4px]"
+              >
+                <dd className="font-heading text-[19px] leading-none font-extrabold tabular-nums">
+                  {c.valeur}
+                </dd>
+                <dt className="mt-1 text-[10px] font-bold tracking-[0.05em] text-white/80 uppercase">
+                  {c.legende}
+                </dt>
+              </div>
+            ))}
+          </dl>
+
+          {enAvant.length > 0 ? (
+            <div className="mt-3">
+              <BadgesEnAvant badges={enAvant} />
+            </div>
+          ) : null}
         </div>
 
-        {/* --- Le panneau d'édition, déplié sous la carte ------------------- */}
+        {/* --- Le panneau de personnalisation, déplié sous la carte ---------- */}
         {editing ? (
           <div
             id="moi-profil-edition"
-            className="border-t border-white/15 px-4 py-4 md:px-8"
+            onClick={(e) => e.stopPropagation()}
+            className="relative border-t border-white/15 px-4 py-4"
           >
             <ProfileEditor
               gamertag={data.gamertag}
@@ -334,18 +292,8 @@ export default function CarteProfil({
             </Link>
           </div>
         ) : null}
-
-        {/* --- Le pied chiffré ---------------------------------------------- */}
-        {/* Hors du padding de l'identité : la plaque touche les deux bords de
-            la carte, et c'est ce débord qui la fait lire comme un ÉTAGE et non
-            comme un encart posé dedans. Le `overflow-hidden` de la carte lui
-            taille ses deux coins bas.
-
-            EN DERNIER, même quand le panneau d'édition est déplié : c'est le
-            PIED de la carte. Glissé au-dessus du panneau, il coupait la carte
-            en violet / blanc / violet et le bas cessait d'être un bord. */}
-        {chiffres}
       </div>
+      {suite}
     </section>
   )
 }

@@ -2,7 +2,16 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
-import { Mic, MicOff, Play, Square, Check, Send, Users } from 'lucide-react'
+import {
+  Mic,
+  MicOff,
+  Play,
+  Square,
+  Check,
+  Send,
+  Sparkles,
+  Users,
+} from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
@@ -17,7 +26,11 @@ import {
   type Criteres,
   type EpreuveId,
 } from '@/lib/coach/oral'
-import { demanderEcoute, enregistrerPassage } from '@/app/marcel/oral-actions'
+import {
+  conseilsOral,
+  demanderEcoute,
+  enregistrerPassage,
+} from '@/app/marcel/oral-actions'
 
 // L'atelier d'oral — barreaux 2, 3 et 4 de l'échelle (doctrine COACH-PROF §4).
 //
@@ -32,6 +45,13 @@ import { demanderEcoute, enregistrerPassage } from '@/app/marcel/oral-actions'
 // Marcel ne NOTE pas l'oral. Il fait répéter, il compte le temps, et il rend la
 // grille d'auto-évaluation. Toute tentative future de « scorer » un oral par une
 // machine contredirait la promesse affichée à l'écran.
+//
+// L'AVIS DE MARCEL (bouton du bilan) ne change rien à ça, et c'est pour cette
+// raison qu'il est défendable : il part de la DURÉE tenue, du sujet annoncé et
+// des cases que l'élève vient de cocher — jamais du son. Marcel ne l'a pas
+// entendu, l'écran le dit sous le bouton, et un test le vérifie
+// (lib/coach/oral-conseils.test.ts). C'est le seul geste payant de l'atelier, et
+// il faut le demander.
 
 type Ami = { id: string; nom: string }
 type Etape = 'reglage' | 'pret' | 'encours' | 'bilan'
@@ -55,6 +75,9 @@ export default function OralAtelier({
   const [message, setMessage] = useState<string | null>(null)
   const [erreurMicro, setErreurMicro] = useState<string | null>(null)
   const [enregistre, setEnregistre] = useState(false)
+  // L'avis de Marcel sur le passage : demandé à la main, jamais automatique.
+  const [conseils, setConseils] = useState<string[] | null>(null)
+  const [avisEnCours, setAvisEnCours] = useState(false)
 
   const epreuve = epreuveOf(epreuveId)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
@@ -85,7 +108,9 @@ export default function OralAtelier({
 
     if (avecMicro) {
       try {
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
+        const stream = await navigator.mediaDevices.getUserMedia({
+          audio: true,
+        })
         const rec = new MediaRecorder(stream)
         chunksRef.current = []
         rec.ondataavailable = (e) => {
@@ -147,10 +172,44 @@ export default function OralAtelier({
     )
   }
 
+  /**
+   * L'avis de Marcel. Il ne reçoit AUCUN audio — seulement l'épreuve, le sujet
+   * annoncé, la durée tenue et les cases que l'élève vient de cocher. C'est le
+   * seul appel au modèle de l'atelier, et il se décompte du quota du jour.
+   */
+  const demanderAvis = async () => {
+    if (avisEnCours) return
+    setAvisEnCours(true)
+    setMessage(null)
+    const r = await conseilsOral({
+      epreuveId,
+      sujet,
+      secondes,
+      criteres: avecMicro ? criteres : CRITERES_VIDES,
+    })
+    setAvisEnCours(false)
+    if (r.ok && r.conseils) {
+      setConseils(r.conseils)
+      return
+    }
+    setMessage(
+      r.plafond
+        ? 'Tu as beaucoup travaillé aujourd’hui. On reprend demain.'
+        : r.quota
+          ? 'Tes questions du jour sont passées. L’atelier, lui, reste ouvert.'
+          : r.unavailable
+            ? 'L’avis de Marcel n’est pas disponible pour l’instant.'
+            : 'Marcel n’a pas réussi à répondre. Réessaie.',
+    )
+  }
+
   if (!disponible) {
     return (
       <div className="bg-card rounded-[20px] p-6 text-center">
-        <MicOff className="text-muted-foreground mx-auto size-7" aria-hidden="true" />
+        <MicOff
+          className="text-muted-foreground mx-auto size-7"
+          aria-hidden="true"
+        />
         <p className="font-heading mt-2 font-extrabold">
           L’atelier d’oral n’est pas encore ouvert.
         </p>
@@ -211,7 +270,9 @@ export default function OralAtelier({
             className="mt-0.5 size-4"
           />
           <span>
-            <span className="font-extrabold">M’enregistrer pour me réécouter</span>
+            <span className="font-extrabold">
+              M’enregistrer pour me réécouter
+            </span>
             <span className="text-muted-foreground block text-xs">
               L’enregistrement reste sur cet appareil et n’est jamais envoyé. Il
               disparaît quand tu fermes la page.
@@ -244,7 +305,10 @@ export default function OralAtelier({
         </div>
 
         {erreurMicro ? (
-          <p role="alert" className="text-destructive mt-3 text-xs font-semibold">
+          <p
+            role="alert"
+            className="text-destructive mt-3 text-xs font-semibold"
+          >
             {erreurMicro}
           </p>
         ) : null}
@@ -330,6 +394,44 @@ export default function OralAtelier({
             </fieldset>
           ) : null}
 
+          {/* L'AVIS DE MARCEL. Il n'a rien entendu, et l'ecran le dit : il lit
+              la duree tenue et les cases cochees. C'est le seul geste payant de
+              l'atelier, et il est declenche a la main. */}
+          <div className="mt-4">
+            {conseils ? (
+              <div className="bg-accent/50 rounded-[18px] p-3">
+                <p className="text-accent-foreground/80 mb-1.5 flex items-center gap-1.5 text-[11px] font-extrabold tracking-wide uppercase">
+                  <Sparkles aria-hidden="true" className="size-3.5" />
+                  Pour ton prochain passage
+                </p>
+                <ul className="space-y-1.5">
+                  {conseils.map((conseil) => (
+                    <li
+                      key={conseil}
+                      className="text-accent-foreground text-[13px] leading-snug font-semibold"
+                    >
+                      · {conseil}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : (
+              <Button
+                variant="outline"
+                className="w-full rounded-full font-bold"
+                disabled={avisEnCours}
+                onClick={() => void demanderAvis()}
+              >
+                <Sparkles className="size-4" aria-hidden="true" />
+                {avisEnCours ? 'Marcel regarde…' : 'Demander l’avis de Marcel'}
+              </Button>
+            )}
+            <p className="text-muted-foreground mt-1.5 text-center text-[11px] font-semibold">
+              Il ne t’entend pas : ton enregistrement reste sur ton téléphone.
+              Il lit ta durée et tes cases.
+            </p>
+          </div>
+
           <Button
             className="mt-4 w-full rounded-full font-bold"
             variant={enregistre ? 'outline' : 'default'}
@@ -403,14 +505,17 @@ function BarreauQuatre({
         Le dernier barreau : quelqu’un t’écoute
       </h2>
       <p className="text-muted-foreground mt-1 text-sm">
-        C’est le vrai test — et c’est ce que font les élèves qui réussissent leur
-        oral. Ton ami cochera les mêmes trois cases que toi.
+        C’est le vrai test — et c’est ce que font les élèves qui réussissent
+        leur oral. Ton ami cochera les mêmes trois cases que toi.
       </p>
 
       {amis.length === 0 ? (
         <p className="text-muted-foreground mt-3 text-sm">
           Tu n’as pas encore d’ami sur Studuel.{' '}
-          <Link href="/amis/ajouter" className="text-primary underline underline-offset-2">
+          <Link
+            href="/amis/ajouter"
+            className="text-primary underline underline-offset-2"
+          >
             En ajouter un
           </Link>{' '}
           — c’est la seule chose qui manque à ton échelle.
@@ -427,7 +532,9 @@ function BarreauQuatre({
                 <Button
                   size="sm"
                   variant={fait ? 'outline' : 'secondary'}
-                  disabled={fait || occupe === ami.id || sujet.trim().length < 3}
+                  disabled={
+                    fait || occupe === ami.id || sujet.trim().length < 3
+                  }
                   onClick={() => void envoyer(ami)}
                 >
                   {fait ? (

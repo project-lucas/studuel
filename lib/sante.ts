@@ -2215,6 +2215,43 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     decision:
       'LE MODÈLE VIENT DE CLASH ROYALE : on n’y gagne pas d’XP en jouant des matchs, on en gagne en améliorant ses cartes — le niveau mesure la collection bâtie, pas le temps passé. Ici, l’XP ne paye plus que l’acquisition, et la clé devient OBLIGATOIRE : l’index `xp_events_once_per_key` (192) fait qu’une notion ne se paye qu’une fois. ⚠️ EFFET DE BORD LE PLUS DANGEREUX, ET TRAITÉ : la série stockée n’avançait QUE dans `wallet_award_xp` — couper l’XP du jeu aurait tué la gemme des 7 jours pour qui ne fait que jouer. D’où `wallet_touch()`, que toute activité appelle. ⚠️ SOCLE GELÉ : l’XP déjà gagnée reste acquise, les sources historiques renvoient 0 au lieu d’échouer — personne ne redescend d’un niveau. La doctrine de lib/gems.ts est inchangée : aucune conversion écus → gemmes.',
   },
+  {
+    id: '349',
+    fichier: '349_marcel_conversations.sql',
+    feature:
+      'Les conversations avec Marcel sont GARDÉES : un fil par sujet (nommé par sa première question, renommable, supprimable), retrouvable par la pastille d’historique — et c’est ce fil qui rend possibles « explique autrement » et « envoie ça dans mon carnet »',
+    siAbsente:
+      'Chaque question à Marcel repart de zéro : la réponse s’affiche, puis disparaît au rechargement. L’élève ne peut pas la retrouver le lendemain, « explique autrement » n’a aucun « quoi » à reprendre, et « envoie ça dans mon carnet » ne trouve rien à ranger — les trois manquent pour la même raison. L’écran, lui, continue de fonctionner : les questions partent et les réponses s’affichent, elles ne sont juste pas gardées.',
+    // Sondable par la table des fils, qu'elle crée.
+    sonde: { type: 'table', table: 'coach_conversations' },
+    decision:
+      'RLS ORDINAIRE, PAS DE FONCTION DEFINER — la différence avec la 215 tient en une phrase : là-bas on écrivait des COMPTEURS, qui décident de ce qui est payant ; ici on écrit le texte de l’élève, dans ses propres lignes (modèle du carnet, 186). ⚠️ LE COÛT NE BOUGE PAS : la porte reste `coach_ask_allowed`, et le fil ne repart PAS en entier au modèle — deux tours tronqués (lib/coach/conversations.ts, testé), pas trente, sinon un fil de trente messages se repaierait trente fois. Un ordre « range ça dans mon carnet » ne passe par AUCUN modèle : il est reconnu en pur (lib/coach/vers-carnet.ts) et ne décompte rien. Longueurs bornées EN BASE et pas seulement dans le code.',
+  },
+  {
+    id: '350',
+    fichier: '350_questions_a_trous.sql',
+    feature:
+      'La TROISIÈME FORME de question du quiz devient visible : 100 questions d’espagnol et d’anglais passent au texte à trous (Tle, 1re et 2de) — la phrase s’affiche avec un creux, et l’option touchée vient s’y poser',
+    siAbsente:
+      'La forme à trous reste morte. Le lecteur existe pourtant depuis le 01/09 (lib/quiz-trous.ts + components/quiz/EnonceATrou), mais il s’active sur un `___` dans l’énoncé et AUCUNE des ~3 300 questions du catalogue n’en portait un : la fonctionnalité était livrée sans qu’un seul élève puisse la rencontrer. Sans cette migration, le quiz continue d’alterner deux formes seulement, QCM et vrai/faux, sur huit écrans d’affilée.',
+    // Rien à sonder par table : c'est une ÉCRITURE. La sonde ne compare qu'à
+    // l'égalité, et un énoncé recopié ici mentirait au premier mot corrigé.
+    sonde: null,
+    decision:
+      'ÉCRITURE PURE, AUCUN UUID TOUCHÉ — et c’est ce qui a demandé le vrai travail. L’UUID d’une question se dérivait de SON ÉNONCÉ (`uuid(chapitre|qN|texte)`) : reformuler la déplaçait, le seed rejoué aurait inséré un DOUBLON, et les `review_items` des élèves — qui portent cet id sans clé étrangère — auraient pointé dans le vide, le compteur « X à revoir » comptant alors des questions mortes. Le générateur dérive désormais l’UUID d’une CLÉ D’ORIGINE (5e élément du tuple : l’énoncé sous lequel la question a été semée) ; vérifié, les 374 identifiants du seed 231 sont inchangés. La migration se régénère par `node scripts/seed-trous.mjs --num 350 --modules espagnol-tle`, et le seed 231 par `npm run contenu` — les deux lisent le même module et doivent être régénérés ENSEMBLE. Le choix des questions n’est pas mécanique : on ne troue que là où la réponse est un MOT qui se pose dans une phrase (*Quiero que ___ mañana*), jamais une question de raisonnement — et l’option devient la forme réelle, ce qui fait passer l’exercice du métalangage (« le verbe est au subjonctif ») à la production.',
+  },
+  {
+    id: '351',
+    fichier: '351_duel_course.sql',
+    feature:
+      'LA COURSE : le duel classé d’une matière devient une course à deux barres (première pleine gagne, 90 s max) contre un rival qui répond EN MÊME TEMPS — et ce rival est un VRAI élève du même niveau, dont on rejoue la dernière course sur la matière (table `duel_replays`, RPC `duel_replay_opponents` / `duel_replay_get` / `duel_save_replay`). Chaque course jouée dépose sa trace et devient l’adversaire de quelqu’un.',
+    siAbsente:
+      'La course se joue quand même — contre un robot du banc (lib/duel/bots, marqué « IA »), jamais contre un élève : le vivier est vide et aucune trace ne se dépose. Les trophées, la série, le clan et les quêtes continuent d’être versés (RPC de la 238, 174, 204, 205). Ce qui manque, c’est le rival réel : le duel reste jouable mais personne ne court contre personne.',
+    // Sondable par la table des traces, qu'elle crée.
+    sonde: { type: 'table', table: 'duel_replays' },
+    decision:
+      'LES POINTS NE SONT PAS STOCKÉS, LES PAS LE SONT. Une trace ne garde que (instant, juste/faux, temps de réflexion) : le client comme le serveur RECALCULENT le score avec le barème et la question dorée du duel courant (lib/duel/rival.timelineFromSteps). Un score stocké aurait figé un barème, et un client aurait pu l’inventer. Même périmètre que subject_ranked_ghosts (238) : même niveau de classe, prénom seul, avatar dessiné, aucune donnée de contact. Une trace par (élève, matière), la dernière — on court contre la version actuelle de quelqu’un, pas contre son record d’il y a six mois.',
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

@@ -30,6 +30,11 @@
 //         questions: [
 //           ['Question ?', ['a', 'b', 'c', 'd'], 0, 'Explication.'],
 //           ['Affirmation.', ['Vrai', 'Faux'], 1, 'Explication.'],
+//           // Texte à trous : `___` là où le mot manque. Le 5e élément est la
+//           // CLÉ D'ORIGINE — l'énoncé sous lequel la question a été semée la
+//           // première fois — sans quoi la reformulation déplacerait l'UUID.
+//           ['Le sujet est ___ ici.', ['a', 'b', 'c', 'd'], 0, 'Explication.',
+//            'Quel mot complète la phrase ?'],
 //         ],
 //       }],
 //     }],
@@ -87,7 +92,8 @@ function verifie(module) {
       if ((ch.questions ?? []).length < 6)
         p(`moins de 6 questions : ${ch.titre} (${ch.questions?.length ?? 0})`)
 
-      for (const [texte, options, bonne, explication] of ch.questions ?? []) {
+      for (const [texte, options, bonne, explication, cleOrigine] of ch.questions ??
+        []) {
         if (!texte || !explication) p(`question incomplète : ${ch.titre}`)
         if (![2, 4].includes(options?.length))
           p(`question à ${options?.length} options : ${texte}`)
@@ -97,6 +103,26 @@ function verifie(module) {
           p(`bonne réponse hors bornes : ${texte}`)
         if (new Set(options).size !== options?.length)
           p(`options en double : ${texte}`)
+
+        // La CLÉ D'ORIGINE (5e élément) : l'énoncé sous lequel la question a
+        // été semée la première fois. Elle sert à REFORMULER un énoncé sans
+        // déplacer son UUID — cf. le commentaire de `uuid()` plus bas.
+        if (cleOrigine !== undefined) {
+          if (typeof cleOrigine !== 'string' || cleOrigine.length === 0)
+            p(`clé d'origine vide : ${texte}`)
+          else if (cleOrigine === texte)
+            p(`clé d'origine identique à l'énoncé (inutile) : ${texte}`)
+        }
+
+        // LE TEXTE À TROUS (cf. lib/quiz-trous.ts). Deux creux demanderaient
+        // deux réponses : la question s'afficherait alors avec ses soulignés
+        // bruts. On la refuse à la source plutôt qu'à l'écran.
+        const trous = (texte?.match(/___/g) ?? []).length
+        if (trous > 1) p(`${trous} trous dans un seul énoncé : ${texte}`)
+        if (trous === 1 && options?.length === 2)
+          p(`texte à trous en vrai/faux (il faut 4 options) : ${texte}`)
+        if (trous === 1 && cleOrigine === undefined)
+          p(`texte à trous sans clé d'origine (l'UUID bougerait) : ${texte}`)
       }
 
       // Unicité du titre par (matière, niveau) : c'est la contrainte de la base.
@@ -199,9 +225,23 @@ for (const mod of modules) {
           chapitre: ch.titre,
           lecon: idLe,
         })
-        ch.questions.forEach(([texte, options, bonne, explication], j) => {
+        ch.questions.forEach(([texte, options, bonne, explication, cleOrigine], j) => {
           questions.push({
-            id: uuid(`${cleCh}|q${j}|${texte}`),
+            // ⚠️ L'UUID SE DÉRIVE DE LA CLÉ D'ORIGINE, PAS DE L'ÉNONCÉ AFFICHÉ.
+            //
+            // Sans cela, corriger une virgule dans une question déplace son
+            // identifiant : le seed rejoué INSÈRE un doublon au lieu de ne rien
+            // faire, et les `review_items` des élèves (qui portent l'ancien id,
+            // sans clé étrangère) pointent dans le vide — le compteur « X à
+            // revoir » compte alors des questions mortes.
+            //
+            // Une question est identifiée par sa PLACE dans le quiz et par le
+            // texte sous lequel elle a été semée. On reformule en gardant la
+            // clé : `[nouvelÉnoncé, options, bonne, explication, ancienÉnoncé]`.
+            // C'est la même règle que les leçons, dont l'UUID tient au titre et
+            // non au cours — ce qui a permis aux migrations 341→347 de réécrire
+            // 1 682 cours sans toucher un seul identifiant.
+            id: uuid(`${cleCh}|q${j}|${cleOrigine ?? texte}`),
             quiz: idQz,
             texte,
             kind: options.length === 2 ? 'true_false' : 'mcq',

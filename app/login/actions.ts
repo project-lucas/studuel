@@ -2,11 +2,12 @@
 
 import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
-import { headers } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { claimPendingReferral } from '@/lib/referral-claim'
 import { GRADE_LEVELS } from '@/lib/types'
+import { destinationApresConnexion } from '@/lib/auth-portes'
+import { siteOrigin } from '@/lib/supabase/site-origin'
 
 export type AuthState = {
   error: string | null
@@ -26,16 +27,6 @@ function toFrench(message: string): string {
       "Le nouveau mot de passe doit être différent de l'ancien.",
   }
   return map[message] ?? message
-}
-
-// URL publique de l'app, reconstruite depuis la requête (dev et prod).
-async function siteOrigin(): Promise<string> {
-  const h = await headers()
-  const explicit = h.get('origin')
-  if (explicit) return explicit
-  const proto = h.get('x-forwarded-proto') ?? 'http'
-  const host = h.get('x-forwarded-host') ?? h.get('host') ?? 'localhost:3000'
-  return `${proto}://${host}`
 }
 
 export async function signIn(
@@ -69,13 +60,10 @@ export async function signIn(
     .maybeSingle<{ onboarded: boolean | null; profile_type: string | null }>()
 
   revalidatePath('/', 'layout')
-  // Un parent n'a pas de classe : l'envoyer sur les onglets élève le faisait
-  // atterrir sur « Dis-nous ta classe », un écran qui ne le concerne pas et
-  // dont la seule issue est de s'en inventer une. Seule la toute première
-  // session le routait correctement ; à partir de la deuxième, il était perdu
-  // (/parents n'est dans aucune barre de navigation).
-  if (profile?.profile_type === 'parent') redirect('/parents')
-  redirect(profile?.onboarded ? '/defi' : '/onboarding')
+  // Parent → son espace, compte jamais configuré → onboarding, sinon l'arène.
+  // La règle est partagée avec le retour OAuth (/login/suite), qui ne passe
+  // pas par ici : voir `destinationApresConnexion`.
+  redirect(destinationApresConnexion(profile))
 }
 
 export async function signUp(
@@ -200,8 +188,16 @@ export async function updatePassword(
   const { error } = await supabase.auth.updateUser({ password })
   if (error) return { error: toFrench(error.message) }
 
+  // Même règle qu'à la connexion : un parent qui vient de changer son mot de
+  // passe atterrissait sur l'arène des élèves, sans issue vers /parents.
+  const { data: profile } = await supabase
+    .from('profiles')
+    .select('onboarded, profile_type')
+    .eq('id', user.id)
+    .maybeSingle<{ onboarded: boolean | null; profile_type: string | null }>()
+
   revalidatePath('/', 'layout')
-  redirect('/defi')
+  redirect(destinationApresConnexion(profile))
 }
 
 export async function signOut(): Promise<void> {

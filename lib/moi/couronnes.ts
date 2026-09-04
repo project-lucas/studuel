@@ -162,7 +162,7 @@ export function couronneMatiere(matiere: MatiereACouronner): Couronne {
  * La part du chemin parcouru DANS le palier courant, 0..1.
  *
  * Pourquoi pas simplement `ratio` ? Parce que l'anneau de l'étagère
- * (`components/moi/CouronnesRangee`) doit bouger entre deux couronnes. Un élève
+ * (`components/moi/Vitrine`) doit bouger entre deux couronnes. Un élève
  * qui passe de 26 % à 48 % du programme n'a rien gagné au sens des métaux — il
  * a pourtant fait presque toute la route du bronze vers l'argent, et c'est
  * cette route-là que l'anneau montre. Sur `ratio` brut, l'anneau d'un élève de

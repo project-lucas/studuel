@@ -4,6 +4,17 @@ import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { REGIMES, regimeOf } from '@/lib/coach/regimes'
+import { MODES, consigneFor, parseMode } from '@/lib/coach/outils'
+import { lireCartes, phraseCartes, type CarteIa } from '@/lib/coach/cartes-ia'
+import { refusPiece, type PieceJointe } from '@/lib/coach/piece-jointe'
+import { configVision } from '@/lib/coach/ia-vision'
+import { contexteFor, dernierEchange } from '@/lib/coach/conversations'
+import {
+  chargerMessages,
+  enregistrerEchange,
+} from '@/lib/coach/conversations-server'
+import { rangerEchange } from '@/lib/coach/carnet-pont'
+import { veutCarnet } from '@/lib/coach/vers-carnet'
 import { isMissingSchemaObject } from '@/lib/schema-fallback'
 
 // Demander quelque chose à Marcel.
@@ -15,9 +26,9 @@ import { isMissingSchemaObject } from '@/lib/schema-fallback'
 //   1. la PORTE est en SQL (`coach_ask_allowed`, migration 215) : quota du jour,
 //      puis jeton, jamais au-delà du plafond absolu. Le compteur monte avant la
 //      réponse du modèle, y compris sur un refus ;
-//   2. la RÉPONSE est courte (`max_tokens` serré) et sans historique : on
-//      recompose un contexte compact à chaque tour, un fil de 30 messages se
-//      repaierait 30 fois ;
+//   2. la RÉPONSE est courte (`max_tokens` serré) et le fil ne repart PAS en
+//      entier : on rappelle deux tours tronqués (lib/coach/conversations), pas
+//      trente — un fil de 30 messages se repaierait 30 fois ;
 //   3. le TEXTE de l'élève est isolé entre balises, et ne part jamais dans les
 //      logs (l'objet d'erreur du SDK porte le corps de la requête).
 //
@@ -26,11 +37,22 @@ import { isMissingSchemaObject } from '@/lib/schema-fallback'
 
 const AI_DEFAULT_MODEL = 'gpt-4o-mini'
 const MAX_QUESTION_LEN = 400
-const MAX_REPONSE_TOKENS = 320
 
 export type DemandeResult = {
   ok: boolean
   reponse?: string
+  /** Le fil où l'échange a été gardé — `null` si la 349 n'est pas passée. */
+  conversationId?: string | null
+  /** Son titre, pour l'afficher sans recharger l'historique. */
+  titre?: string
+  /** L'échange est parti dans le carnet : de quoi proposer d'y aller. */
+  carnet?: { courseId: string; cours: string } | null
+  /** Rendu SANS appeler le modèle : rien n'a été décompté du quota. */
+  gratuit?: boolean
+  /** Mode « flashcards » : les cartes proposées, à relire avant de les ranger. */
+  cartes?: CarteIa[]
+  /** Un refus qui se dit à l'élève tel quel (pièce jointe illisible, trop lourde). */
+  erreur?: string
   /** Quota et jetons épuisés — ce n'est pas une panne. */
   quota?: boolean
   /** Plafond quotidien de coût atteint : rien ne le lève. */
@@ -43,13 +65,19 @@ function aiKey(): string | null {
   return process.env.AI_API_KEY ?? process.env.OPENAI_API_KEY ?? null
 }
 
-async function aiClient() {
-  const apiKey = aiKey()
+/**
+ * Le client du fournisseur. `vision` bascule sur le modèle capable de LIRE une
+ * image (cf. lib/coach/ia-vision) : le modèle de texte principal, lui, refuse
+ * la photo avec une 400 — et ce refus arriverait après avoir dépensé le quota.
+ */
+async function aiClient(config?: { apiKey: string; baseURL?: string }) {
+  const apiKey = config?.apiKey ?? aiKey()
   if (!apiKey) return null
+  const base = config ? config.baseURL : process.env.AI_BASE_URL
   const { default: OpenAI } = await import('openai')
   return new OpenAI({
     apiKey,
-    ...(process.env.AI_BASE_URL ? { baseURL: process.env.AI_BASE_URL } : {}),
+    ...(base ? { baseURL: base } : {}),
     // Les défauts du SDK (10 min, 2 réessais) laisseraient l'élève sur un
     // « Marcel réfléchit… » pendant une demi-heure.
     timeout: 20_000,
@@ -58,44 +86,129 @@ async function aiClient() {
 }
 
 /**
- * La consigne de Marcel. Elle porte le RÉGIME de la matière : c'est ce qui fait
- * qu'il ne répond pas en histoire comme en maths — et c'est gratuit, la phrase
- * étant écrite d'avance dans lib/coach/regimes.
+ * La phrase de MÉTHODE de la matière, écrite d'avance dans lib/coach/regimes.
  *
- * Elle lui interdit surtout de faire le devoir à la place de l'élève : c'est
- * défendable pédagogiquement, vendable aux parents, et trois fois moins cher
- * qu'un corrigé rédigé.
+ * C'est ce qui fait que Marcel ne répond pas en histoire comme en maths, et ça
+ * ne coûte rien : la phrase existe déjà, on ne la demande pas au modèle. Le
+ * reste de la consigne (la voix de Marcel, la règle « jamais la réponse toute
+ * faite », la forme attendue) est décidé par le MODE — cf. lib/coach/outils.
  */
-function consigneSysteme(matiereSlug: string | null): string {
+function methodeDe(matiereSlug: string | null): string | null {
   const regime = matiereSlug ? regimeOf(matiereSlug) : null
-  const methode = regime ? ` Méthode de cette matière : ${REGIMES[regime].consigne}` : ''
+  return regime ? REGIMES[regime].consigne : null
+}
 
-  return [
-    'Tu es Marcel, le professeur de Studuel. Tu tutoies un élève français de collège ou de lycée.',
-    'Tu réponds en français, en 4 phrases maximum, sans liste et sans emoji.',
-    'RÈGLE ABSOLUE : tu ne donnes JAMAIS la réponse toute faite ni un devoir rédigé.',
-    'Tu donnes un indice, puis la première étape, et tu rends la main à l’élève.',
-    'Si la question ne concerne pas les cours, tu réponds simplement que tu es là pour le travail scolaire.',
-    `Tu finis par une question courte qui remet l’élève au travail.${methode}`,
-  ].join(' ')
+/**
+ * Ce qui est GARDÉ dans le fil à la place de la question.
+ *
+ * La pièce jointe, elle, n'est pas gardée : une photo de cahier dans chaque
+ * message ferait grossir la base sans que personne ne la relise. Mais un fil
+ * qui montrerait une réponse sur une photo disparue serait incompréhensible —
+ * d'où la mention, et le nom du mode quand ce n'était pas une simple question.
+ */
+function etiquette(
+  question: string,
+  piece: PieceJointe | null,
+  modeLabel: string,
+): string {
+  const marques: string[] = []
+  if (piece?.type === 'image') marques.push('photo jointe')
+  if (piece?.type === 'texte') marques.push(`fichier joint : ${piece.nom}`)
+  if (modeLabel) marques.push(modeLabel.toLowerCase())
+
+  const suffixe = marques.length > 0 ? ` [${marques.join(' · ')}]` : ''
+  const base = question.length > 0 ? question : 'Regarde ça'
+  return `${base}${suffixe}`
 }
 
 /**
  * Pose une question à Marcel. `matiereSlug` sert uniquement à choisir la
  * méthode : aucune donnée de l'élève n'est envoyée au modèle.
+ *
+ * `conversationId` rattache la question à un fil existant. Deux choses en
+ * découlent, et une seule coûte :
+ *   • le fil est GARDÉ (migration 349), donc retrouvable le lendemain ;
+ *   • ses deux derniers tours sont rappelés au modèle, tronqués — juste de quoi
+ *     que « explique autrement » ait un « quoi ».
+ *
+ * Un ordre « envoie ça dans mon carnet » est traité ICI, avant la porte : il ne
+ * passe par aucun modèle, donc il ne se paie pas.
  */
 export async function demanderAMarcel(
   question: string,
   matiereSlug: string | null,
+  conversationId: string | null = null,
+  options: { mode?: string; piece?: PieceJointe | null } = {},
 ): Promise<DemandeResult> {
   const user = await getCurrentUser()
   if (!user) return { ok: false }
 
+  // Le MODE décide de la consigne, du budget de sortie et de la forme du
+  // résultat. Il vient du client : il est donc normalisé, jamais cru.
+  const mode = MODES[parseMode(options.mode)]
+
   const propre =
     typeof question === 'string' ? question.trim().slice(0, MAX_QUESTION_LEN) : ''
-  if (propre.length === 0) return { ok: false }
+  const piece = options.piece ?? null
+  // Une pièce jointe seule est une demande valable : la photo d'un exercice se
+  // passe très bien de légende.
+  if (propre.length === 0 && !piece) return { ok: false }
+
+  const vision = piece?.type === 'image' ? configVision() : null
+
+  if (piece) {
+    const refus = refusPiece(piece)
+    // Refus AVANT la porte : une photo illisible ne doit pas coûter une des
+    // trois questions du jour.
+    if (refus) return { ok: false, erreur: refus.erreur }
+    if (piece.type === 'image' && !vision) {
+      // Aucun modèle capable de lire une image n'est branché. On le dit, et on
+      // ne dépense rien : le fournisseur refuserait de toute façon.
+      return {
+        ok: false,
+        erreur:
+          'Je ne sais pas encore lire les photos. Recopie l’essentiel, ou joins un fichier texte.',
+      }
+    }
+  }
 
   const supabase = await createClient()
+  const fil = typeof conversationId === 'string' ? conversationId : null
+  const messages = fil ? await chargerMessages(supabase, fil) : []
+
+  // ---------------------------------------------------- « dans mon carnet »
+  // L'élève ne demande pas une explication : il demande de RANGER celle d'avant.
+  // Aucun appel au modèle, donc rien à décompter — la porte ne s'ouvre que pour
+  // ce qui se paie. C'est aussi ce qui rend l'ordre gratuit et illimité : une
+  // bonne explication doit pouvoir partir en révision sans y réfléchir.
+  if (veutCarnet(propre)) {
+    const echange = dernierEchange(messages)
+    const range = echange ? await rangerEchange(supabase, user.id, echange) : null
+
+    // Marcel répond TOUJOURS quelque chose, y compris quand il n'a rien pu
+    // faire : un ordre qui ne reçoit pas de réponse se lit comme une panne.
+    const reponse = range
+      ? `C’est rangé dans ton carnet, dans « ${range.cours} ». Tu le reverras en révision.`
+      : echange
+        ? 'Je n’ai pas réussi à écrire dans ton carnet. Réessaie dans un instant.'
+        : 'Je n’ai encore rien à ranger : pose-moi d’abord une question.'
+
+    const garde = await enregistrerEchange(supabase, user.id, {
+      conversationId: fil,
+      question: propre,
+      reponse,
+      matiereSlug,
+    })
+
+    return {
+      ok: true,
+      reponse,
+      conversationId: garde?.conversationId ?? fil,
+      titre: garde?.titre,
+      carnet: range,
+      gratuit: true,
+    }
+  }
 
   // La porte, côté serveur. Absente (migration 215 pas exécutée) → on REFUSE :
   // c'est une fonctionnalité neuve, personne ne perd rien, et le trou ne peut
@@ -112,23 +225,78 @@ export async function demanderAMarcel(
   if (verdict === 'plafond') return { ok: false, plafond: true }
   if (verdict !== 'quota' && verdict !== 'jeton') return { ok: false, quota: true }
 
-  const client = await aiClient()
+  const client = await aiClient(vision ?? undefined)
   if (!client) return { ok: false, unavailable: true }
+
+  // Ce que l'élève envoie : son texte, et sa pièce jointe s'il en a une. Une
+  // photo devient une part d'image (le modèle la LIT) ; un fichier texte est
+  // recollé sous la question, entre balises, comme le reste.
+  const contenu: (
+    | { type: 'text'; text: string }
+    | { type: 'image_url'; image_url: { url: string } }
+  )[] = [
+    {
+      type: 'text',
+      text:
+        piece?.type === 'texte'
+          ? `<question>\n${propre || 'Regarde ce document.'}\n</question>\n<document>\n${piece.data}\n</document>`
+          : `<question>\n${propre || 'Regarde cette photo.'}\n</question>`,
+    },
+  ]
+  if (piece?.type === 'image') {
+    contenu.push({ type: 'image_url', image_url: { url: piece.data } })
+  }
 
   try {
     const completion = await client.chat.completions.create({
-      model: process.env.AI_MODEL ?? AI_DEFAULT_MODEL,
-      max_tokens: MAX_REPONSE_TOKENS,
+      model: vision?.model ?? process.env.AI_MODEL ?? AI_DEFAULT_MODEL,
+      max_tokens: mode.maxTokens,
       messages: [
-        { role: 'system', content: consigneSysteme(matiereSlug) },
+        { role: 'system', content: consigneFor(mode.cle, methodeDe(matiereSlug)) },
+        // Le rappel du fil : deux tours, tronqués. Les tours de l’élève y sont
+        // balisés comme la question courante — un « ignore les instructions
+        // précédentes » écrit trois messages plus tôt ne doit pas revenir nu.
+        ...contexteFor(messages).map((m) =>
+          m.role === 'eleve'
+            ? {
+                role: 'user' as const,
+                content: `<question>\n${m.texte}\n</question>`,
+              }
+            : { role: 'assistant' as const, content: m.texte },
+        ),
         // Le texte de l'élève est ISOLÉ : concaténé nu, un « ignore les
         // instructions précédentes » passerait sans effort.
-        { role: 'user', content: `<question>\n${propre}\n</question>` },
+        { role: 'user', content: contenu },
       ],
     })
-    const reponse = completion.choices[0]?.message?.content?.trim()
-    if (!reponse) return { ok: false }
-    return { ok: true, reponse }
+    const brut = completion.choices[0]?.message?.content?.trim()
+    if (!brut) return { ok: false }
+
+    // Le mode « flashcards » ne rend pas du texte mais un tableau JSON. On le
+    // lit ici (lib/coach/cartes-ia, testé) : le fil garde une PHRASE, et les
+    // cartes partent à part vers l'écran de relecture. Un tableau JSON collé
+    // dans l'historique n'aurait aucun sens à relire trois jours plus tard.
+    const cartes = mode.cartes ? lireCartes(brut) : null
+    const reponse = cartes ? phraseCartes(cartes.length) : brut
+
+    // Le fil est gardé APRÈS la réponse : si l’écriture échoue (migration 349
+    // pas encore exécutée), l’élève garde quand même son explication à l’écran.
+    const garde = await enregistrerEchange(supabase, user.id, {
+      conversationId: fil,
+      // Ce qui est gardé dit ce qui s'est passé : sans cette mention, un fil
+      // relu demain montrerait une réponse sur une photo qu'on ne voit plus.
+      question: etiquette(propre, piece, mode.cle === 'question' ? '' : mode.label),
+      reponse,
+      matiereSlug,
+    })
+
+    return {
+      ok: true,
+      reponse,
+      conversationId: garde?.conversationId ?? fil,
+      titre: garde?.titre,
+      ...(cartes ? { cartes } : {}),
+    }
   } catch (err) {
     // Le message SEUL : l'objet d'erreur du SDK porte le corps de la requête,
     // donc la question de l'élève, qui n'a rien à faire dans les logs.

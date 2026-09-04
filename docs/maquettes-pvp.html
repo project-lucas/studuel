@@ -1,0 +1,857 @@
+<title>Trois boucles d'arène</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+  :root{
+    --creme:#ede7d6; --papier:#fffdf7; --encre:#24304f; --encre-doux:#5b6480;
+    --violet:#7a3fe0; --violet-clair:#eee7fc; --violet-fonce:#2b1450; --violet-nuit:#190b30;
+    --or:#f5b722; --or-clair:#fcd34d; --or-fonce:#d97706;
+    --corail:#f1566c; --vert:#1f9d57; --taupe:#8f8a78; --bord:#e2dac6;
+    --ombre:0 4px 0 var(--encre);
+  }
+  *{box-sizing:border-box}
+  body{
+    background:var(--creme); color:var(--encre);
+    font-family:'Nunito',ui-sans-serif,system-ui,sans-serif;
+    font-size:16px; line-height:1.6; margin:0;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Baloo 2','Nunito',sans-serif; line-height:1.12; text-wrap:balance; margin:0}
+  .wrap{max-width:1140px; margin:0 auto; padding:0 22px}
+  .eyebrow{
+    font-size:12px; font-weight:800; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--taupe); margin:0 0 10px;
+  }
+  code{font-family:ui-monospace,Menlo,Consolas,monospace; font-size:13px; background:#f3ecdd; padding:1px 5px; border-radius:5px}
+
+  /* ---------- en-tete ---------- */
+  header.hero{
+    background:linear-gradient(165deg,var(--violet-fonce) 0%,var(--violet-nuit) 100%);
+    color:#fff; padding:54px 0 44px; border-bottom:4px solid var(--encre);
+  }
+  header.hero .eyebrow{color:var(--or)}
+  header.hero h1{font-size:clamp(38px,6vw,64px); font-weight:800; letter-spacing:-.01em}
+  header.hero p.deck{max-width:62ch; color:#dcd2f2; font-size:18px; margin:16px 0 0}
+  header.hero code{background:rgba(255,255,255,.12); color:#e8dcff}
+  .race{
+    margin-top:34px; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.16);
+    border-radius:20px; padding:18px 20px; max-width:520px;
+  }
+  .race-line{display:flex; align-items:center; gap:12px; margin:0 0 12px}
+  .race-line:last-child{margin-bottom:0}
+  .race-name{width:64px; font-weight:800; font-size:13px}
+  .race-track{flex:1; height:14px; border-radius:99px; background:rgba(0,0,0,.32); overflow:hidden}
+  .race-fill{display:block; height:100%; width:0; border-radius:99px}
+  .race-fill.moi{background:linear-gradient(90deg,var(--or-clair),var(--or)); animation:runA 6s cubic-bezier(.4,.1,.3,1) infinite}
+  .race-fill.rival{background:linear-gradient(90deg,#a97bf0,#6d31d0); animation:runB 6s cubic-bezier(.5,.05,.4,1) infinite}
+  .race-score{width:58px; text-align:right; font-weight:800; font-variant-numeric:tabular-nums; font-size:14px}
+  .race-note{margin:14px 0 0; font-size:13px; color:#c9bde6}
+  @keyframes runA{0%{width:0}18%{width:16%}34%{width:24%}52%{width:52%}70%{width:63%}88%,100%{width:88%}}
+  @keyframes runB{0%{width:0}22%{width:20%}40%{width:38%}58%{width:46%}76%{width:70%}92%,100%{width:79%}}
+  @media (prefers-reduced-motion:reduce){
+    .race-fill.moi{animation:none; width:88%}
+    .race-fill.rival{animation:none; width:79%}
+  }
+
+  /* ---------- sections ---------- */
+  section{padding:56px 0}
+  section + section{border-top:2px solid var(--bord)}
+  .sec-head{max-width:70ch; margin-bottom:30px}
+  .sec-head h2{font-size:clamp(26px,3.4vw,36px); font-weight:800}
+  .sec-head p{color:var(--encre-doux); margin:12px 0 0}
+
+  /* ---------- les manques ---------- */
+  .manques{display:grid; grid-template-columns:repeat(auto-fit,minmax(232px,1fr)); gap:16px}
+  .manque{
+    background:var(--papier); border:2px solid var(--bord); border-left:6px solid var(--corail);
+    border-radius:14px; padding:16px 18px;
+  }
+  .manque h3{font-size:17px; font-weight:700}
+  .manque p{margin:8px 0 0; font-size:14.5px; color:var(--encre-doux)}
+  .manque code{background:var(--violet-clair); color:#4a2597; font-size:12.5px}
+
+  /* ---------- variantes ---------- */
+  .var-head{display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:6px}
+  .var-lettre{
+    font-family:'Baloo 2',sans-serif; font-size:30px; font-weight:800; color:#fff;
+    background:var(--violet); width:52px; height:52px; border-radius:14px;
+    display:grid; place-items:center; border:3px solid var(--encre); box-shadow:var(--ombre); flex:none;
+  }
+  .var-head h2{font-size:clamp(26px,3.4vw,36px); font-weight:800}
+  .var-ref{font-size:12.5px; font-weight:800; color:var(--taupe); text-transform:uppercase; letter-spacing:.1em}
+  .these{max-width:68ch; font-size:18px; color:var(--encre-doux); margin:14px 0 26px}
+  .these strong{color:var(--encre)}
+
+  .chaine{display:flex; flex-wrap:wrap; align-items:stretch; gap:8px; margin-bottom:28px}
+  .maillon{
+    background:var(--violet-clair); color:#3d1c85; border:2px solid #d9c9f7;
+    border-radius:12px; padding:9px 13px; font-size:13.5px; font-weight:700; flex:1 1 auto; min-width:128px;
+  }
+  .maillon span{display:block; font-weight:600; font-size:12px; color:#6b53a8; margin-top:2px}
+  .maillon.cle{background:linear-gradient(180deg,var(--or-clair),var(--or)); border-color:var(--or-fonce); color:#4a2c00}
+  .maillon.cle span{color:#6b4200}
+  .fleche{align-self:center; color:var(--taupe); font-weight:800}
+
+  /* ---------- telephones ---------- */
+  .ecrans{display:flex; gap:20px; overflow-x:auto; padding:4px 4px 20px; scroll-snap-type:x proximity}
+  .ecran{flex:none; width:238px; scroll-snap-align:start; margin:0}
+  .ecran figcaption{margin-top:12px; font-size:13.5px; color:var(--encre-doux)}
+  .ecran figcaption b{display:block; color:var(--encre); font-family:'Baloo 2',sans-serif; font-size:15px; font-weight:700}
+  .phone{
+    width:238px; height:474px; border-radius:30px; border:4px solid var(--encre);
+    background:linear-gradient(170deg,#33195c 0%,var(--violet-nuit) 100%);
+    box-shadow:0 8px 0 rgba(36,48,79,.22); overflow:hidden; color:#fff;
+    display:flex; flex-direction:column; padding:12px; gap:9px; font-size:12px;
+  }
+  .phone.clair{background:linear-gradient(170deg,#fffdf7,#f3ecdd); color:var(--encre)}
+  .hud{display:flex; gap:6px; align-items:center}
+  .pill{
+    background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.22);
+    border-radius:99px; padding:3px 9px; font-weight:800; font-size:11px;
+  }
+  .pill.or{background:rgba(245,183,34,.18); border-color:rgba(245,183,34,.5); color:var(--or-clair)}
+  .pill.plein{background:var(--or); color:#4a2c00; border-color:var(--or-fonce)}
+  .titre-ecran{font-family:'Baloo 2',sans-serif; font-weight:800; font-size:17px; line-height:1.15}
+  .sous{font-size:11.5px; color:#c6b8e6}
+  .phone.clair .sous{color:var(--taupe)}
+  .plaque{background:rgba(255,255,255,.09); border:1px solid rgba(255,255,255,.18); border-radius:14px; padding:10px 11px}
+  .phone.clair .plaque{background:#fff; border:2px solid var(--bord)}
+  .cta{
+    background:linear-gradient(180deg,var(--or-clair) 0%,var(--or) 52%,var(--or-fonce) 100%);
+    border:3px solid var(--encre); border-radius:16px; box-shadow:0 4px 0 var(--encre);
+    color:#3b2200; font-family:'Baloo 2',sans-serif; font-weight:800; font-size:16px;
+    text-align:center; padding:11px 8px; letter-spacing:.02em;
+  }
+  .cta.violet{background:linear-gradient(180deg,#9a63ee,var(--violet) 60%,#5a26b3); color:#fff}
+  .cta.sobre{background:transparent; border:2px solid rgba(255,255,255,.35); box-shadow:none; color:#e5dcf8; font-size:13px; padding:8px}
+  .grand-score{font-family:'Baloo 2',sans-serif; font-weight:800; font-size:26px; font-variant-numeric:tabular-nums; line-height:1}
+  .barre{height:9px; border-radius:99px; background:rgba(0,0,0,.35); overflow:hidden}
+  .barre i{display:block; height:100%; border-radius:99px; background:linear-gradient(90deg,var(--or-clair),var(--or))}
+  .barre i.v{background:linear-gradient(90deg,#a97bf0,#6d31d0)}
+  .phone.clair .barre{background:#e6dcc6}
+  .ticket{
+    position:relative; height:82px; border-radius:16px; overflow:hidden;
+    border:2px solid var(--encre); box-shadow:0 3px 0 rgba(0,0,0,.35);
+    background-size:cover; background-position:center right; display:flex; align-items:center;
+  }
+  .ticket::after{
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(90deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.16) 48%,rgba(0,0,0,0) 78%);
+  }
+  .ticket-txt{position:relative; z-index:1; padding-left:11px; max-width:62%; display:flex; flex-direction:column; gap:4px; align-items:flex-start}
+  .ticket-nom{
+    font-family:'Baloo 2',sans-serif; font-weight:800; font-size:17px; line-height:1.05; color:#fff;
+    text-shadow:0 2px 0 rgba(0,0,0,.55);
+  }
+  .ticket-chip{
+    background:var(--or); color:#3b2200; border-radius:99px; padding:1px 8px;
+    font-size:10px; font-weight:800; box-shadow:0 2px 5px rgba(0,0,0,.4);
+  }
+  .slots{display:flex; gap:6px}
+  .slot{
+    flex:1; aspect-ratio:1/1.15; border-radius:12px; display:flex; flex-direction:column;
+    align-items:center; justify-content:center; gap:2px; font-size:9.5px; font-weight:800;
+    border:2px dashed rgba(255,255,255,.28); color:#b7a7dc; text-align:center; line-height:1.15;
+  }
+  .slot.plein{border:2px solid var(--encre); background:linear-gradient(180deg,#e8b45a,#b9762a); color:#3b2200}
+  .slot.rare{border:2px solid var(--encre); background:linear-gradient(180deg,#d6def0,#8fa3c9); color:#1c2540}
+  .slot.encours{border:2px solid rgba(245,183,34,.6); background:rgba(245,183,34,.12); color:var(--or-clair)}
+  .cartes{display:flex; gap:6px}
+  .carte-mini{
+    flex:1; border-radius:10px; padding:8px 5px; text-align:center; font-size:9.5px; font-weight:800;
+    border:2px solid var(--encre); line-height:1.2;
+  }
+  .carte-mini.commune{background:#efe6d4; color:#4a4131}
+  .carte-mini.rare{background:linear-gradient(180deg,#cfe0ff,#89a8e8); color:#12224a}
+  .carte-mini.epique{background:linear-gradient(180deg,#e3c7ff,#9d5ff0); color:#2b0e56}
+  .ligne-ligue{display:flex; align-items:center; gap:7px; padding:5px 7px; border-radius:9px; font-size:11px}
+  .ligne-ligue b{width:16px; text-align:right; font-variant-numeric:tabular-nums; color:#cbbdea}
+  .ligne-ligue .nom{flex:1; font-weight:700}
+  .ligne-ligue .pts{font-variant-numeric:tabular-nums; font-weight:800}
+  .ligne-ligue.moi{background:var(--or); color:#3b2200; border:2px solid var(--encre)}
+  .ligne-ligue.moi b{color:#6b4200}
+  .ligne-ligue.promo{background:rgba(245,183,34,.14)}
+  .ligne-ligue.chute{background:rgba(241,86,108,.16)}
+  .sep{height:1px; background:rgba(255,255,255,.2); margin:2px 0}
+  .sep-txt{display:flex; align-items:center; gap:6px; font-size:9px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#a794d0}
+  .sep-txt::before,.sep-txt::after{content:''; flex:1; height:1px; background:rgba(255,255,255,.18)}
+  .avatar{width:26px; height:26px; border-radius:99px; background:linear-gradient(160deg,#f0c674,#c9803b); border:2px solid var(--encre); flex:none}
+  .avatar.b{background:linear-gradient(160deg,#9fd6ff,#4b7fd6)}
+  .avatar.c{background:linear-gradient(160deg,#f5a3b6,#c9506d)}
+  .chrono{font-variant-numeric:tabular-nums; font-weight:800; color:var(--or-clair)}
+  .push-dots{display:flex; gap:5px}
+  .push-dots i{flex:1; height:9px; border-radius:99px; background:rgba(255,255,255,.16)}
+  .push-dots i.ok{background:var(--vert)}
+  .push-dots i.now{background:var(--or); box-shadow:0 0 0 2px rgba(245,183,34,.3)}
+  .mise{font-family:'Baloo 2',sans-serif; font-weight:800; font-size:22px; color:var(--or-clair)}
+  .qcm{background:rgba(255,255,255,.14); border-radius:9px; padding:7px 9px; font-size:11.5px}
+
+  /* ---------- accroche / cout ---------- */
+  .bilan{display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:18px; margin-top:8px}
+  .bloc{background:var(--papier); border:2px solid var(--bord); border-radius:16px; padding:18px 20px}
+  .bloc h4{
+    font-family:'Nunito',sans-serif; font-size:12px; font-weight:800; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--taupe); margin-bottom:12px;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  .bloc ul{margin:0; padding-left:18px}
+  .bloc li{margin:0 0 8px; font-size:14.5px}
+  .bloc li:last-child{margin-bottom:0}
+  .bloc.accroche{border-left:6px solid var(--vert)}
+  .bloc.cout{border-left:6px solid var(--violet)}
+  .badge{
+    display:inline-block; font-size:10.5px; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
+    padding:3px 10px; border-radius:99px; border:2px solid var(--encre); margin-left:auto;
+  }
+  .badge.faible{background:#cdf0dc; color:#0d5c33}
+  .badge.moyen{background:#fdecc7; color:#5a3d00}
+  .badge.eleve{background:#ffd9df; color:#8c1330}
+
+  /* ---------- bots ---------- */
+  .tableau-wrap{overflow-x:auto; border:2px solid var(--bord); border-radius:16px; background:var(--papier)}
+  table{border-collapse:collapse; width:100%; min-width:660px; font-size:14.5px}
+  th,td{padding:11px 14px; text-align:left; border-bottom:1px solid var(--bord)}
+  th{font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--taupe); font-weight:800; background:#f7f2e6}
+  tr:last-child td{border-bottom:none}
+  td.num{font-variant-numeric:tabular-nums; text-align:right}
+  td b{font-family:'Baloo 2',sans-serif; font-size:15.5px}
+  .temp{font-size:12px; font-weight:800; padding:2px 9px; border-radius:99px; white-space:nowrap}
+  .temp.sprint{background:#ffe0e6; color:#8c1330}
+  .temp.diesel{background:#d8ecff; color:#12406e}
+  .temp.metronome{background:#dff3e6; color:#0d5c33}
+  .temp.lunatique{background:#f0e3ff; color:#4a2597}
+  .note{font-size:13.5px; color:var(--taupe); margin-top:10px}
+
+  .encadre{
+    background:var(--violet-clair); border:2px solid #d9c9f7; border-left:6px solid var(--violet);
+    border-radius:14px; padding:18px 20px; margin-top:24px;
+  }
+  .encadre h4{font-size:18px; margin-bottom:8px; color:#3d1c85}
+  .encadre p{margin:0; font-size:14.5px; color:#4a3a72}
+  .encadre p + p{margin-top:10px}
+
+  /* ---------- plan ---------- */
+  .etapes{counter-reset:etape; display:grid; gap:14px; margin-top:6px}
+  .etape{
+    display:flex; gap:16px; align-items:flex-start; background:var(--papier);
+    border:2px solid var(--bord); border-radius:16px; padding:16px 18px;
+  }
+  .etape::before{
+    counter-increment:etape; content:counter(etape);
+    font-family:'Baloo 2',sans-serif; font-weight:800; font-size:20px; color:#fff;
+    background:var(--encre); width:38px; height:38px; border-radius:11px; display:grid; place-items:center; flex:none;
+  }
+  .etape h4{font-size:17px; margin-bottom:4px}
+  .etape p{margin:0; font-size:14.5px; color:var(--encre-doux)}
+  footer{padding:34px 0 60px; color:var(--taupe); font-size:13.5px}
+</style>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Studuel · arène</p>
+    <h1>Trois boucles d'arène</h1>
+    <p class="deck">Le Duel 90 s est déjà un bon cœur de jeu : un rival déterministe dont le score grimpe
+      pendant que tu réponds. Ce qui manque n'est pas dans le duel — c'est tout ce qui vient
+      <em>après</em> lui. Voici trois boucles complètes, et le banc de bots pour les jouer seul.</p>
+
+    <div class="race" aria-hidden="true">
+      <div class="race-line">
+        <span class="race-name">Toi</span>
+        <span class="race-track"><i class="race-fill moi"></i></span>
+        <span class="race-score">4 820</span>
+      </div>
+      <div class="race-line">
+        <span class="race-name">Nina</span>
+        <span class="race-track"><i class="race-fill rival"></i></span>
+        <span class="race-score">4 190</span>
+      </div>
+      <p class="race-note">Ça, c'est fait : <code>lib/duel90.ts</code> — rival gradué, barème vitesse × série.</p>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Le constat</p>
+      <h2>Cinq trous entre la fin d'un duel et le duel suivant</h2>
+      <p>Les organes Supercell existent déjà quelque part dans le code — saison, pass, quêtes du jour,
+        semaine de clan, route des trophées. Ils ne sont simplement jamais dans le champ de vision au
+        moment exact où l'élève décide de rejouer ou de fermer l'app.</p>
+    </div>
+    <div class="manques">
+      <div class="manque">
+        <h3>Rien ne s'ouvre à la fin</h3>
+        <p>Le duel verse trophées, couronnes, points de clan — des compteurs qui montent. Aucun objet ne
+          tombe. Chez Supercell, la partie n'est pas la récompense : elle donne le <em>droit</em> à la récompense.</p>
+      </div>
+      <div class="manque">
+        <h3>Le rival n'a pas de visage</h3>
+        <p><code>DuelArena</code> tire un prénom au hasard dans une liste, à chaque duel. Aucun portrait,
+          aucune école, aucune mémoire. Pas de rival ⇒ pas de revanche ⇒ pas de rancune.</p>
+      </div>
+      <div class="manque">
+        <h3>Rien n'est jamais en jeu</h3>
+        <p><code>+30 / −15</code>, fixes, duel après duel. Jamais une mise qui monte, jamais un palier à
+          défendre, jamais le choix « je continue ou j'encaisse ».</p>
+      </div>
+      <div class="manque">
+        <h3>La session n'a pas de forme</h3>
+        <p>« Rejouer » recharge la page à l'identique. Rien ne dit « il t'en reste deux avant la caisse » —
+          donc rien ne dit non plus quand s'arrêter, ce qui est la même information.</p>
+      </div>
+      <div class="manque">
+        <h3>Aucune échéance sous les yeux</h3>
+        <p>La saison se termine, la semaine de clan aussi. L'élève ne l'apprend jamais au moment où ça
+          pourrait le faire rejouer : dimanche soir, sur l'écran de fin de duel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="var-head">
+      <span class="var-lettre">A</span>
+      <h2>La Route</h2>
+      <span class="var-ref">d'après Clash Royale</span>
+    </div>
+    <p class="these">Gagner ne donne pas la récompense : gagner donne une <strong>caisse</strong>, qui
+      demande du temps. Quatre emplacements, quatre horloges, et une route de trophées où chaque palier
+      porte un nom. La boucle ne tourne plus sur une session — elle tourne sur <strong>la journée</strong>.</p>
+
+    <div class="chaine">
+      <div class="maillon">Duel 90 s<span>l'action, inchangée</span></div>
+      <span class="fleche">→</span>
+      <div class="maillon cle">Une caisse tombe<span>bronze · argent · or</span></div>
+      <span class="fleche">→</span>
+      <div class="maillon">Elle prend un emplacement<span>4 max, sinon plus rien ne tombe</span></div>
+      <span class="fleche">→</span>
+      <div class="maillon cle">15 min · 3 h · 8 h<span>ou des gemmes</span></div>
+      <span class="fleche">→</span>
+      <div class="maillon">L'ouverture, en 3 cartes<span>le seul écran spectacle</span></div>
+      <span class="fleche">→</span>
+      <div class="maillon">La Route avance<span>prochain palier nommé</span></div>
+    </div>
+
+    <div class="ecrans">
+      <figure class="ecran">
+        <div class="phone">
+          <div class="hud"><span class="pill or">1 148 🏆</span><span class="pill">24 💎</span><span class="pill">310 🪙</span></div>
+          <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:8px">
+            <div class="sep-txt">le gardien du jour</div>
+            <div class="ticket" style="background-image:url(data:image/webp;base64,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)">
+              <div class="ticket-txt">
+                <span class="ticket-nom">Imperator</span>
+                <span class="ticket-chip">LATIN · ×2 XP</span>
+              </div>
+            </div>
+            <div class="plaque" style="display:flex;gap:9px;align-items:center">
+              <span class="avatar c"></span>
+              <div><b style="font-size:13px">Nina · 3e B</b><div class="sous">t'attend en anglais</div></div>
+            </div>
+          </div>
+          <div class="cta">DUEL 90 s</div>
+          <div class="sep-txt">tes caisses</div>
+          <div class="slots">
+            <div class="slot plein">CAISSE<br>bronze<br>▸ ouvrir</div>
+            <div class="slot rare">CAISSE<br>argent<br>▸ ouvrir</div>
+            <div class="slot encours">2 h 41<br>⏳</div>
+            <div class="slot">vide</div>
+          </div>
+        </div>
+        <figcaption><b>L'arène</b>Le ticket porte la vraie illustration d'Imperator, aux proportions exactes du composant (<code>136 px</code>, <code>object-cover</code>, voile noir à gauche). Dessous, les quatre emplacements de caisse.</figcaption>
+      </figure>
+
+      <figure class="ecran">
+        <div class="phone">
+          <div class="titre-ecran" style="color:var(--or-clair)">VICTOIRE</div>
+          <div class="plaque">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <span style="font-weight:800">Toi</span><span class="grand-score">4 820</span>
+            </div>
+            <div class="barre" style="margin:6px 0 9px"><i style="width:88%"></i></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;opacity:.78">
+              <span style="font-weight:700">Nina · 3e B</span><span style="font-weight:800;font-size:16px">4 190</span>
+            </div>
+            <div class="barre" style="margin-top:6px"><i class="v" style="width:79%"></i></div>
+          </div>
+          <div class="plaque" style="display:flex;gap:9px;align-items:center">
+            <span style="font-size:20px">🏆</span>
+            <div><b style="font-size:14px">+30 trophées</b><div class="sous">1 148 → 1 178</div></div>
+          </div>
+          <div class="plaque" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;border-color:rgba(245,183,34,.5)">
+            <div style="font-size:34px">🎁</div>
+            <b style="font-size:14px">Caisse d'argent</b>
+            <div class="sous">tombe dans l'emplacement 3</div>
+          </div>
+          <div class="cta">ENCORE UN DUEL</div>
+        </div>
+        <figcaption><b>La victoire</b>Les trophées volent vers le bandeau — c'est déjà branché. Puis la caisse tombe. Deux temps, jamais un : l'objet arrive <em>après</em> le compteur.</figcaption>
+      </figure>
+
+      <figure class="ecran">
+        <div class="phone">
+          <div class="sous" style="text-align:center">Caisse d'argent · 3 cartes</div>
+          <div class="plaque" style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:12px">
+            <div class="cartes">
+              <div class="carte-mini commune">🪙<br>120<br>écus</div>
+              <div class="carte-mini rare">🎨<br>Fond<br>Colisée</div>
+              <div class="carte-mini epique">💎<br>15<br>gemmes</div>
+            </div>
+            <div class="sous" style="text-align:center">La 3<sup>e</sup> carte se retourne en dernier.<br>C'est elle qui varie.</div>
+          </div>
+          <div class="plaque" style="text-align:center">
+            <b style="font-size:13px">Emplacement libéré</b>
+            <div class="sous">il en reste un vide</div>
+          </div>
+          <div class="cta violet">Retour à l'arène</div>
+        </div>
+        <figcaption><b>L'ouverture</b>Jamais d'XP dans une caisse : l'XP mesure l'acquis depuis la 348. Des écus surtout, du cosmétique, et la gemme rare qui fait la variance.</figcaption>
+      </figure>
+
+      <figure class="ecran">
+        <div class="phone clair">
+          <div class="titre-ecran">La Route · Anglais</div>
+          <div class="sous">1 178 trophées</div>
+          <div class="plaque" style="flex:1;display:flex;flex-direction:column;gap:10px;justify-content:center">
+            <div style="display:flex;gap:9px;align-items:center;opacity:.5">
+              <span style="font-size:19px">🏛️</span>
+              <div><b style="font-size:13px">1 000 · Arène de marbre</b><div class="sous">obtenu</div></div>
+            </div>
+            <div style="display:flex;gap:9px;align-items:center;border:2px solid var(--or);background:#fdf3dc;border-radius:11px;padding:8px">
+              <span style="font-size:19px">🏆</span>
+              <div style="flex:1">
+                <b style="font-size:13px">1 200 · Colisée d'or</b>
+                <div class="sous">débloque le duel 3 matières</div>
+                <div class="barre" style="margin-top:6px"><i style="width:89%"></i></div>
+              </div>
+            </div>
+            <div style="display:flex;gap:9px;align-items:center;opacity:.5">
+              <span style="font-size:19px">🔒</span>
+              <div><b style="font-size:13px">1 500 · Panthéon</b><div class="sous">titre « Invaincu »</div></div>
+            </div>
+          </div>
+          <div class="plaque" style="text-align:center;background:#fdf3dc;border-color:var(--or)">
+            <b style="font-size:13px">Plus que 22 trophées</b><div class="sous">une victoire suffit</div>
+          </div>
+        </div>
+        <figcaption><b>La Route</b>Un seul palier visible, nommé, et ce qu'il ouvre. « Plus que 22 » est la phrase qui relance — pas le compteur.</figcaption>
+      </figure>
+    </div>
+
+    <div class="bilan">
+      <div class="bloc accroche">
+        <h4>Ce qui accroche</h4>
+        <ul>
+          <li><b>Récompense à ratio variable.</b> La 3<sup>e</sup> carte est le seul endroit du jeu où l'élève ignore ce qu'il va recevoir. Le levier le plus puissant, et le plus économe.</li>
+          <li><b>Les horloges créent le rendez-vous.</b> Deux retours par jour sans notification agressive : la caisse de 3 h ouvre à 18 h si tu as joué à 15 h.</li>
+          <li><b>Les emplacements pleins font pression.</b> Quatre caisses en attente = « je ne peux plus rien gagner ». On ouvre, et on rejoue.</li>
+        </ul>
+      </div>
+      <div class="bloc cout">
+        <h4>Ce que ça coûte <span class="badge moyen">chantier moyen</span></h4>
+        <ul>
+          <li>Une table <code>arena_crates</code> (emplacement, rareté, heure d'ouverture) et ses policies RLS : <b>une migration</b>.</li>
+          <li>Un écran d'ouverture — le seul écran vraiment neuf des trois maquettes.</li>
+          <li><b>Piège de vocabulaire :</b> « coffre » est déjà pris (<code>lib/coffre.ts</code> = la boutique). D'où <b>caisse</b> ici, à trancher avant d'écrire une ligne.</li>
+          <li><b>Piège d'économie :</b> la fuite de gemmes vient d'être colmatée. Une caisse donne des écus ; la gemme reste rare, sinon la boutique meurt.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="var-head">
+      <span class="var-lettre">B</span>
+      <h2>La Poussée</h2>
+      <span class="var-ref">d'après Brawl Stars</span>
+    </div>
+    <p class="these">On n'ouvre plus un duel : on ouvre <strong>une poussée de cinq duels</strong>. La mise
+      monte à chaque victoire (×1 → ×2 → ×3), une défaite ne coûte que la mise en cours, et entre deux
+      duels il n'y a <strong>aucun retour au menu</strong> — cinq secondes de décompte, c'est tout.</p>
+
+    <div class="chaine">
+      <div class="maillon">« Lancer une poussée »<span>un seul appui</span></div>
+      <span class="fleche">→</span>
+      <div class="maillon">Duel 1 · mise ×1<span>90 s</span></div>
+      <span class="fleche">→</span>
+      <div class="maillon cle">5 s → duel suivant<span>le menu ne revient jamais</span></div>
+      <span class="fleche">→</span>
+      <div class="maillon cle">La mise monte ×2, ×3<span>l'escalade</span></div>
+      <span class="fleche">→</span>
+      <div class="maillon">Palier atteint = protégé<span>on ne redescend plus</span></div>
+      <span class="fleche">→</span>
+      <div class="maillon">Bilan 5/5 + caisse<span>« nouvelle poussée »</span></div>
+    </div>
+
+    <div class="ecrans">
+      <figure class="ecran">
+        <div class="phone">
+          <div class="hud"><span class="pill or">1 178 🏆</span><span class="pill">Anglais</span></div>
+          <div class="plaque">
+            <div class="sous" style="margin-bottom:7px">Poussée du soir · duel 3 sur 5</div>
+            <div class="push-dots"><i class="ok"></i><i class="ok"></i><i class="now"></i><i></i><i></i></div>
+          </div>
+          <div class="plaque" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;text-align:center">
+            <div class="sous">mise en cours</div>
+            <div class="mise">× 2</div>
+            <div style="font-weight:800;font-size:13px">+60 trophées si tu gagnes</div>
+            <div class="sous">−15 seulement si tu perds</div>
+          </div>
+          <div class="plaque" style="display:flex;gap:9px;align-items:center">
+            <span class="avatar c"></span>
+            <div><b style="font-size:13px">Nina · 3e B</b><div class="sous">1 190 🏆 · tu mènes 2–1</div></div>
+          </div>
+          <div class="cta">COMBATTRE</div>
+        </div>
+        <figcaption><b>La poussée</b>Cinq pastilles disent où on en est et combien il reste. La mise est l'information la plus grosse de l'écran.</figcaption>
+      </figure>
+
+      <figure class="ecran">
+        <div class="phone">
+          <div class="hud"><span class="pill plein">0:41</span><span class="pill">série ×3</span><span class="pill or">mise ×2</span></div>
+          <div class="plaque">
+            <div style="display:flex;justify-content:space-between;align-items:baseline">
+              <span style="font-weight:800;font-size:11px">TOI</span><span class="grand-score">3 240</span>
+            </div>
+            <div class="barre" style="margin-top:5px"><i style="width:72%"></i></div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:10px;opacity:.8">
+              <span style="font-weight:800;font-size:11px">NINA</span><span style="font-weight:800;font-size:17px">3 010</span>
+            </div>
+            <div class="barre" style="margin-top:5px"><i class="v" style="width:67%"></i></div>
+          </div>
+          <div class="plaque" style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:7px">
+            <div style="font-weight:700;font-size:12.5px">« Which sentence is correct? »</div>
+            <div class="qcm">She has been living here since 2019</div>
+            <div class="qcm">She is living here since 2019</div>
+          </div>
+        </div>
+        <figcaption><b>Le duel</b>Inchangé, sauf la pastille de mise en haut. Elle rappelle l'enjeu à chaque seconde des 90.</figcaption>
+      </figure>
+
+      <figure class="ecran">
+        <div class="phone">
+          <div class="titre-ecran" style="color:var(--or-clair)">GAGNÉ · mise ×2</div>
+          <div class="plaque" style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-weight:800">3 240</span><span class="sous">contre</span><span style="font-weight:800;opacity:.8">3 010</span>
+          </div>
+          <div class="plaque" style="text-align:center">
+            <div class="grand-score" style="color:var(--or-clair)">+60 🏆</div>
+            <div class="sous">1 178 → 1 238</div>
+          </div>
+          <div class="plaque">
+            <div class="sous" style="margin-bottom:7px">3 sur 5 · mise suivante ×3</div>
+            <div class="push-dots"><i class="ok"></i><i class="ok"></i><i class="ok"></i><i class="now"></i><i></i></div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px">
+            <div class="chrono" style="font-size:32px;font-family:'Baloo 2',sans-serif">5</div>
+            <div class="sous">duel suivant…</div>
+          </div>
+          <div class="cta">MAINTENANT</div>
+          <div class="cta sobre">Arrêter la poussée</div>
+        </div>
+        <figcaption><b>Les cinq secondes</b>Le cœur de la maquette. Continuer est passif : il suffit de ne rien faire. S'arrêter demande un geste — et se dit sans culpabiliser.</figcaption>
+      </figure>
+
+      <figure class="ecran">
+        <div class="phone">
+          <div class="titre-ecran" style="text-align:center;color:var(--or-clair)">PALIER TENU</div>
+          <div class="plaque" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;text-align:center;border-color:rgba(245,183,34,.55)">
+            <div style="font-size:40px">🛡️</div>
+            <b style="font-size:17px;font-family:'Baloo 2',sans-serif">Diamant III</b>
+            <div class="sous">1 200 trophées</div>
+            <div style="background:rgba(31,157,87,.22);border:1px solid rgba(31,157,87,.5);border-radius:9px;padding:8px 9px;font-size:11.5px">
+              Tu ne peux plus redescendre<br>sous 1 200. Jamais.
+            </div>
+          </div>
+          <div class="plaque" style="text-align:center">
+            <b style="font-size:13px">Poussée 4/5 — encore un</b>
+            <div class="sous">le 5<sup>e</sup> ouvre la caisse de poussée</div>
+          </div>
+          <div class="cta">DERNIER DUEL</div>
+        </div>
+        <figcaption><b>Le plancher</b>La protection de palier retire la peur de jouer le soir. C'est elle qui fait relancer à 22 h au lieu de « garder son rang ».</figcaption>
+      </figure>
+    </div>
+
+    <div class="bilan">
+      <div class="bloc accroche">
+        <h4>Ce qui accroche</h4>
+        <ul>
+          <li><b>Le coût de démarrage tombe à zéro.</b> C'est <em>la</em> raison qui fait enchaîner dix parties de Brawl Stars : on ne décide jamais de rejouer, on décide seulement d'arrêter.</li>
+          <li><b>La mise qui monte crée l'escalade.</b> Perdre à ×3 fait mal — c'est précisément ce qui rend la victoire à ×3 mémorable.</li>
+          <li><b>Le plancher tue la peur.</b> Sans lui, un élève bien classé arrête de jouer pour protéger son rang : l'inverse du but.</li>
+          <li><b>La poussée borne la session.</b> Cinq duels ≈ neuf minutes : une promesse tenable un soir de semaine, et un endroit honnête où s'arrêter.</li>
+        </ul>
+      </div>
+      <div class="bloc cout">
+        <h4>Ce que ça coûte <span class="badge faible">chantier faible</span></h4>
+        <ul>
+          <li>Rien de neuf sous le duel : une <b>machine à états au-dessus</b> de <code>DuelArena</code> (index, mise, résultats).</li>
+          <li>La poussée peut vivre côté client pour la V1 : <b>zéro migration</b> pour tester. Une petite table seulement pour la reprendre après fermeture de l'app.</li>
+          <li><code>duel90Trophies</code> gagne un multiplicateur, et le plancher devient un <code>max(plancher, trophées)</code> vérifié côté serveur.</li>
+          <li><b>À surveiller :</b> l'auto-relance ne doit pas réveiller la modale « Tu nous quittes déjà » entre deux duels.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="var-head">
+      <span class="var-lettre">C</span>
+      <h2>La Ligue des rivaux</h2>
+      <span class="var-ref">ligue Duolingo × clan Clash</span>
+    </div>
+    <p class="these">Vingt élèves, une semaine, un tableau qui <strong>bouge sous tes yeux</strong>. Les
+      trophées deviennent une course entre gens qui ont un prénom, une école et un historique contre toi.
+      Dimanche 20 h, cinq montent et cinq descendent — et samedi soir, quelqu'un te double.</p>
+
+    <div class="chaine">
+      <div class="maillon">Lundi : 20 rivaux tirés<span>réels + bots, même niveau</span></div>
+      <span class="fleche">→</span>
+      <div class="maillon">Chaque duel gagné = points<span>la ligne monte en direct</span></div>
+      <span class="fleche">→</span>
+      <div class="maillon cle">Un nemesis se détache<span>celui qui t'a battu</span></div>
+      <span class="fleche">→</span>
+      <div class="maillon cle">Samedi 20 h : « X t'a doublé »<span>la seule notification qui marche</span></div>
+      <span class="fleche">→</span>
+      <div class="maillon">Dimanche 20 h : clôture<span>5 montent · 5 descendent</span></div>
+    </div>
+
+    <div class="ecrans">
+      <figure class="ecran">
+        <div class="phone">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span class="titre-ecran" style="font-size:15px">Ligue d'Argent</span>
+            <span class="chrono">2 j 04 h</span>
+          </div>
+          <div class="sep-txt">montent en Or</div>
+          <div class="plaque" style="flex:1;padding:6px;display:flex;flex-direction:column;gap:2px;overflow:hidden">
+            <div class="ligne-ligue promo"><b>1</b><span class="avatar b"></span><span class="nom">Sofiane</span><span class="pts">1 640</span></div>
+            <div class="ligne-ligue promo"><b>2</b><span class="avatar"></span><span class="nom">Nina</span><span class="pts">1 512</span></div>
+            <div class="ligne-ligue promo"><b>3</b><span class="avatar c"></span><span class="nom">Yasmine</span><span class="pts">1 388</span></div>
+            <div class="ligne-ligue moi"><b>4</b><span class="avatar"></span><span class="nom">Toi</span><span class="pts">1 340</span></div>
+            <div class="ligne-ligue promo"><b>5</b><span class="avatar b"></span><span class="nom">Malo</span><span class="pts">1 302</span></div>
+            <div class="sep"></div>
+            <div class="ligne-ligue"><b>6</b><span class="avatar c"></span><span class="nom">Camille</span><span class="pts">1 240</span></div>
+            <div class="ligne-ligue"><b>7</b><span class="avatar"></span><span class="nom">Ilyes</span><span class="pts">1 187</span></div>
+            <div class="sep"></div>
+            <div class="ligne-ligue chute"><b>18</b><span class="avatar b"></span><span class="nom">Tom</span><span class="pts">640</span></div>
+          </div>
+          <div class="cta">GAGNER DES POINTS</div>
+        </div>
+        <figcaption><b>Le tableau</b>Cinq places de promotion, cinq de relégation, un chrono. Ta ligne reste au milieu de l'écran, même quand on te double.</figcaption>
+      </figure>
+
+      <figure class="ecran">
+        <div class="phone">
+          <div class="sous" style="text-align:center">ta bête noire</div>
+          <div class="plaque" style="display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center">
+            <span class="avatar" style="width:52px;height:52px"></span>
+            <b style="font-family:'Baloo 2',sans-serif;font-size:17px">Nina</b>
+            <div class="sous">3<sup>e</sup> B · Collège Jean-Moulin</div>
+          </div>
+          <div class="plaque">
+            <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:800">
+              <span style="color:#ff9aa9">Elle : 3</span><span class="sous">face à face</span><span style="color:var(--or-clair)">Toi : 1</span>
+            </div>
+            <div class="barre" style="margin-top:8px;background:rgba(241,86,108,.4)"><i style="width:25%"></i></div>
+          </div>
+          <div class="plaque" style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:5px">
+            <div class="sous">ses matières fortes</div>
+            <div style="font-weight:700;font-size:12.5px">Anglais · Histoire-Géo</div>
+            <div class="sous" style="margin-top:6px">là où tu la bats</div>
+            <div style="font-weight:700;font-size:12.5px">Maths — 2 victoires sur 2</div>
+          </div>
+          <div class="cta">REVANCHE · MATHS</div>
+        </div>
+        <figcaption><b>Le nemesis</b>Une fiche par rival, avec le face-à-face. La revanche se propose <em>sur ta matière</em> : on offre au joueur le terrain où il gagne.</figcaption>
+      </figure>
+
+      <figure class="ecran">
+        <div class="phone">
+          <div class="titre-ecran" style="color:var(--or-clair)">VICTOIRE</div>
+          <div class="plaque" style="text-align:center">
+            <div class="grand-score">+42</div><div class="sous">points de ligue</div>
+          </div>
+          <div class="plaque" style="flex:1;padding:6px;display:flex;flex-direction:column;gap:3px;justify-content:center">
+            <div class="ligne-ligue promo" style="opacity:.6"><b>2</b><span class="avatar"></span><span class="nom">Nina</span><span class="pts">1 512</span></div>
+            <div class="ligne-ligue moi"><b>3</b><span class="avatar"></span><span class="nom">Toi</span><span class="pts">1 382</span></div>
+            <div class="ligne-ligue" style="opacity:.6"><b>4</b><span class="avatar c"></span><span class="nom">Yasmine</span><span class="pts">1 358</span></div>
+          </div>
+          <div class="plaque" style="text-align:center;border-color:rgba(245,183,34,.5)">
+            <b style="font-size:13px">Tu passes 3<sup>e</sup></b>
+            <div class="sous">130 points de la 2<sup>e</sup> place</div>
+          </div>
+          <div class="cta">ENCORE</div>
+        </div>
+        <figcaption><b>Le dépassement</b>La ligne glisse par-dessus celle de Yasmine, une fois, lentement. L'animation la plus rentable de la maquette.</figcaption>
+      </figure>
+
+      <figure class="ecran">
+        <div class="phone">
+          <div class="sous" style="text-align:center">dimanche · 20 h 00</div>
+          <div class="plaque" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;text-align:center;border-color:rgba(245,183,34,.55)">
+            <div style="font-size:40px">🥇</div>
+            <b style="font-family:'Baloo 2',sans-serif;font-size:18px">Ligue d'Or</b>
+            <div class="sous">tu finis 3<sup>e</sup> sur 20</div>
+            <div class="cartes" style="width:100%;margin-top:2px">
+              <div class="carte-mini commune">🪙<br>400<br>écus</div>
+              <div class="carte-mini rare">🎖️<br>Titre<br>Argent</div>
+            </div>
+          </div>
+          <div class="plaque">
+            <div class="sous">nouvelle ligue lundi</div>
+            <b style="font-size:13px">19 nouveaux rivaux</b>
+          </div>
+          <div class="cta violet">Voir ma ligue d'Or</div>
+        </div>
+        <figcaption><b>La clôture</b>Une date, une heure, un verdict. Et surtout dix-neuf inconnus lundi — donc une raison de revenir lundi.</figcaption>
+      </figure>
+    </div>
+
+    <div class="bilan">
+      <div class="bloc accroche">
+        <h4>Ce qui accroche</h4>
+        <ul>
+          <li><b>La comparaison sociale.</b> Le levier n°1 de Duolingo : la 4<sup>e</sup> place à 40 points de la 3<sup>e</sup> fait rejouer plus fort que n'importe quelle récompense.</li>
+          <li><b>La date limite.</b> Dimanche 20 h est une contrainte réelle, pas un compteur. Elle concentre l'usage sur le week-end, quand un élève a du temps.</li>
+          <li><b>Le nemesis raconte une histoire.</b> « Elle t'a battu 3 fois sur 4 » transforme une file d'attente en rivalité.</li>
+        </ul>
+      </div>
+      <div class="bloc cout">
+        <h4>Ce que ça coûte <span class="badge eleve">chantier élevé</span></h4>
+        <ul>
+          <li>Une table de ligue et son affectation hebdomadaire. La semaine se <b>dérive</b> du calendrier, comme <code>lib/saison.ts</code> et <code>clan-week</code> : toujours pas de cron, mais la composition, elle, se stocke.</li>
+          <li>Recouvrement avec la <b>semaine de clan</b> déjà en place : deux classements hebdomadaires côte à côte, c'est un de trop. Il faut choisir lequel porte la semaine.</li>
+          <li><b>Ça n'a de goût qu'avec du monde.</b> À vingt inscrits, la ligue est vide : cette maquette <em>dépend</em> du banc de bots, et pas l'inverse.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Le banc d'essai</p>
+      <h2>Vingt-quatre rivaux pour jouer seul</h2>
+      <p>Le moteur existe : <code>buildRival(clé, nom, niveauRival, monNiveau)</code> fabrique déjà une
+        courbe de score déterministe à partir d'une graine. Il lui manque une <b>identité</b> et une
+        <b>mémoire</b>. Un fichier — <code>lib/defi/bots.ts</code>, pur et testé — suffit à rendre les
+        trois maquettes jouables ce soir, sans un seul autre élève inscrit.</p>
+    </div>
+
+    <div class="tableau-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Rival</th><th>Établissement</th><th>Tempérament</th>
+            <th class="num">Cadence</th><th class="num">Précision</th><th class="num">Trophées</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><b>Nina</b></td><td>Collège Jean-Moulin · 3<sup>e</sup> B</td><td><span class="temp sprint">part en flèche</span></td><td class="num">3,4 s</td><td class="num">0,78</td><td class="num">1 190</td></tr>
+          <tr><td><b>Sofiane</b></td><td>Lycée Voltaire · 2<sup>de</sup> 4</td><td><span class="temp diesel">finit fort</span></td><td class="num">5,1 s</td><td class="num">0,81</td><td class="num">1 320</td></tr>
+          <tr><td><b>Yasmine</b></td><td>Collège Camus · 4<sup>e</sup> A</td><td><span class="temp metronome">métronome</span></td><td class="num">4,2 s</td><td class="num">0,72</td><td class="num">1 070</td></tr>
+          <tr><td><b>Malo</b></td><td>Collège Jean-Moulin · 3<sup>e</sup> A</td><td><span class="temp lunatique">irrégulier</span></td><td class="num">3,9 s</td><td class="num">0,64</td><td class="num">980</td></tr>
+          <tr><td><b>Camille</b></td><td>Lycée Rosa-Parks · 1<sup>re</sup> G</td><td><span class="temp metronome">métronome</span></td><td class="num">4,8 s</td><td class="num">0,69</td><td class="num">910</td></tr>
+          <tr><td><b>Ilyes</b></td><td>Collège Camus · 3<sup>e</sup> C</td><td><span class="temp sprint">part en flèche</span></td><td class="num">3,1 s</td><td class="num">0,58</td><td class="num">840</td></tr>
+          <tr><td><b>Tom</b></td><td>Collège Prévert · 5<sup>e</sup> B</td><td><span class="temp lunatique">irrégulier</span></td><td class="num">6,3 s</td><td class="num">0,52</td><td class="num">610</td></tr>
+          <tr><td><b>Awa</b></td><td>Lycée Voltaire · T<sup>le</sup> spé</td><td><span class="temp diesel">finit fort</span></td><td class="num">4,5 s</td><td class="num">0,85</td><td class="num">1 480</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Huit des vingt-quatre. Le tempérament n'est pas un décor : il déforme la courbe de
+      <code>buildRival</code> — « part en flèche » marque tôt puis ralentit, « finit fort » accélère dans
+      les vingt-cinq dernières secondes. C'est ce qui rend un rival reconnaissable au bout de trois duels.</p>
+
+    <div class="bilan" style="margin-top:26px">
+      <div class="bloc accroche">
+        <h4>Les trois règles de calibrage</h4>
+        <ul>
+          <li><b>≈ 60 % de victoires pour le joueur.</b> Supercell ne fait pas du 50/50 : on gagne un peu plus qu'on ne perd, sinon on s'en va.</li>
+          <li><b>Un duel sur trois se joue à moins de 5 % d'écart.</b> Le presque-perdu est ce qui donne envie de relancer — et il se règle par la cadence du bot, pas par sa précision.</li>
+          <li><b>Jamais deux défaites d'affilée contre le même rival</b> dans les dix premiers duels d'un élève. Le nemesis est un plaisir de joueur installé, pas d'accueil.</li>
+        </ul>
+      </div>
+      <div class="bloc cout">
+        <h4>Ce que ça demande <span class="badge faible">chantier faible</span></h4>
+        <ul>
+          <li><code>lib/defi/bots.ts</code> : roster fermé — id, prénom, portrait pris dans le roster illustré, établissement, tempérament, trophées — sur le modèle de <code>lib/bosses.ts</code>.</li>
+          <li>Un <code>bot_id</code> dans l'historique des duels : lui seul rend possibles le face-à-face, la revanche et le nemesis.</li>
+          <li>Les bots peuplent aussi le vivier d'appariement — <code>lib/defi/matchmaking.ts</code> les traite déjà en repli — et la ligue de la maquette C.</li>
+          <li>Une graine fixe (<code>?seed=…</code>) pour rejouer deux fois le même duel : indispensable pour juger une maquette sans que le hasard t'induise en erreur.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="encadre">
+      <h4>Un arbitrage à rendre avant que j'écrive le roster</h4>
+      <p>Aujourd'hui l'app est honnête : l'adversaire du mode classé est le score réel de quelqu'un, et
+        quand il n'y a personne, l'écran dit « entraînement calibré ». Des bots avec prénom, portrait et
+        collège rendent la boucle jouable seul — mais ils ressemblent à des élèves.</p>
+      <p><b>Ma position :</b> les bots gardent une marque discrète et constante (une pastille sur le
+        portrait, un mot dans leur fiche) et jamais un établissement réel. On garde le plaisir du rival
+        sans raconter à un enfant qu'il affronte un camarade qui n'existe pas. Dis-moi si tu vois ça
+        autrement — ça change le roster, pas le code.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Ce que je ferais</p>
+      <h2>Dans cet ordre, et pour cette raison</h2>
+      <p>Les trois maquettes ne sont pas concurrentes : ce sont les trois étages d'une même boucle — la
+        session, la récompense, la semaine. Elles s'empilent, mais l'ordre compte : la troisième ne vaut
+        rien sans joueurs, et la première ne coûte presque rien.</p>
+    </div>
+    <div class="etapes">
+      <div class="etape">
+        <div>
+          <h4>La Poussée (B) — la session</h4>
+          <p>Le meilleur rapport accroche / travail du lot : aucune migration pour une V1, et elle
+            transforme « un duel » en « une soirée ». C'est aussi celle qui se teste le mieux seul, dès
+            que les bots ont un prénom.</p>
+        </div>
+      </div>
+      <div class="etape">
+        <div>
+          <h4>Le banc de bots — le partenaire</h4>
+          <p>Vingt-quatre rivaux, leur tempérament, leur mémoire. Il rend la poussée réellement jouable et
+            prépare tout le reste : revanche, nemesis, ligue.</p>
+        </div>
+      </div>
+      <div class="etape">
+        <div>
+          <h4>Les caisses (A) — la récompense</h4>
+          <p>Une fois qu'on enchaîne cinq duels, il faut que ça débouche sur un objet. La caisse de fin de
+            poussée est le point de jonction naturel des deux maquettes, et le seul endroit du jeu avec de
+            la variance.</p>
+        </div>
+      </div>
+      <div class="etape">
+        <div>
+          <h4>La Ligue (C) — la semaine</h4>
+          <p>À garder pour le moment où il y a du monde, et à fusionner avec la semaine de clan plutôt
+            qu'à poser à côté. C'est l'étage de la rétention à trente jours, pas celui du plaisir immédiat.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Maquettes de travail · Studuel · septembre 2026. Les écrans sont dessinés en HTML aux couleurs de
+    l'app (crème, violet, or) — ce ne sont pas des captures.
+  </div>
+</footer>

@@ -38,6 +38,7 @@ export default function GenerationIaSheet({
   courseId,
   chapterId,
   niveau,
+  photoDisponible = false,
   open,
   onClose,
 }: {
@@ -45,6 +46,9 @@ export default function GenerationIaSheet({
   chapterId: string | null
   /** Classe de l'élève, pour caler le niveau des questions. */
   niveau?: string
+  /** Un modèle qui lit les images est branché (`visionDisponible()`). Sans lui,
+   *  l'onglet Photo n'est pas proposé : il menait à un échec garanti. */
+  photoDisponible?: boolean
   open: boolean
   onClose: () => void
 }) {
@@ -161,7 +165,9 @@ export default function GenerationIaSheet({
                   key={i}
                   className={cn(
                     'flex items-start gap-2 rounded-2xl px-3 py-2.5 transition',
-                    gardee ? 'bg-white ring-1 ring-black/5' : 'bg-muted/40 opacity-50',
+                    gardee
+                      ? 'bg-white ring-1 ring-black/5'
+                      : 'bg-muted/40 opacity-50',
                   )}
                 >
                   <span className="min-w-0 flex-1">
@@ -185,7 +191,9 @@ export default function GenerationIaSheet({
                     }}
                     aria-pressed={gardee}
                     aria-label={
-                      gardee ? `Retirer la question ${i + 1}` : `Garder la question ${i + 1}`
+                      gardee
+                        ? `Retirer la question ${i + 1}`
+                        : `Garder la question ${i + 1}`
                     }
                     className={cn(
                       'flex size-8 shrink-0 cursor-pointer items-center justify-center rounded-lg transition',
@@ -245,39 +253,41 @@ export default function GenerationIaSheet({
   return (
     <BottomSheet open={open} onClose={fermer} title="Ton cours → questions">
       <div className="flex flex-col gap-3">
-        <div
-          role="tablist"
-          aria-label="Source du cours"
-          className="flex gap-1.5 rounded-2xl bg-muted/60 p-1"
-        >
-          {(
-            [
+        {/* Le choix de la source n'a de sens qu'à deux : sans lecteur d'images,
+            le texte est la seule porte et une barre à un onglet ne dit rien. */}
+        {photoDisponible ? (
+          <div
+            role="tablist"
+            aria-label="Source du cours"
+            className="flex gap-1.5 rounded-2xl bg-muted/60 p-1"
+          >
+            {[
               { id: 'texte' as Source, label: 'Texte', Icon: Type },
               { id: 'photo' as Source, label: 'Photo du cours', Icon: Camera },
-            ]
-          ).map((t) => (
-            <button
-              key={t.id}
-              type="button"
-              role="tab"
-              aria-selected={source === t.id}
-              onClick={() => {
-                sfx.tap()
-                setSource(t.id)
-                setMessage(null)
-              }}
-              className={cn(
-                'font-heading flex flex-1 cursor-pointer items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-xs font-extrabold transition',
-                source === t.id
-                  ? 'bg-white text-foreground shadow-sm'
-                  : 'text-muted-foreground',
-              )}
-            >
-              <t.Icon className="size-3.5" aria-hidden="true" />
-              {t.label}
-            </button>
-          ))}
-        </div>
+            ].map((t) => (
+              <button
+                key={t.id}
+                type="button"
+                role="tab"
+                aria-selected={source === t.id}
+                onClick={() => {
+                  sfx.tap()
+                  setSource(t.id)
+                  setMessage(null)
+                }}
+                className={cn(
+                  'font-heading flex flex-1 cursor-pointer items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-xs font-extrabold transition',
+                  source === t.id
+                    ? 'bg-white text-foreground shadow-sm'
+                    : 'text-muted-foreground',
+                )}
+              >
+                <t.Icon className="size-3.5" aria-hidden="true" />
+                {t.label}
+              </button>
+            ))}
+          </div>
+        ) : null}
 
         {source === 'texte' ? (
           <label className="flex flex-col gap-1.5">
@@ -344,13 +354,11 @@ export default function GenerationIaSheet({
         </label>
 
         <div className="flex gap-1.5">
-          {(
-            [
-              { id: 'mixte' as const, label: 'Mélangé' },
-              { id: 'qcm' as const, label: 'QCM' },
-              { id: 'flashcard' as const, label: 'Flashcards' },
-            ]
-          ).map(({ id, label }) => (
+          {[
+            { id: 'mixte' as const, label: 'Mélangé' },
+            { id: 'qcm' as const, label: 'QCM' },
+            { id: 'flashcard' as const, label: 'Flashcards' },
+          ].map(({ id, label }) => (
             <button
               key={id}
               type="button"

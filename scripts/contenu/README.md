@@ -500,6 +500,53 @@ export default {
 }
 ```
 
+### Le texte à trous, et la CLÉ D'ORIGINE
+
+La troisième forme de question du quiz n'exige aucune colonne : une question à
+trou **est** un QCM. Il suffit d'écrire `___` là où le mot manque, et l'app
+(`lib/quiz-trous.ts` → `components/quiz/EnonceATrou`) affiche la phrase avec un
+creux dans lequel l'option touchée vient se poser.
+
+```js
+// AVANT — le métalangage : l'élève reconnaît une règle sans jamais la produire.
+['Après « Quiero que… », le verbe est…', ['Au subjonctif', 'À l’indicatif', 'À l’infinitif', 'Au conditionnel'], 0, 'La volonté commande le subjonctif.'],
+
+// APRÈS — la production, avec la CLÉ D'ORIGINE en 5e élément.
+['*Quiero que ___ mañana.*', ['vengas', 'vienes', 'venir', 'vendrás'], 0, 'La volonté commande le subjonctif dès que le sujet change.', 'Après « Quiero que… », le verbe est…'],
+```
+
+⚠️ **La clé d'origine n'est pas décorative : sans elle, l'identifiant bouge.**
+L'UUID d'une question se dérive de `slug|niveau|chapitre|qN|texte`. Reformuler
+l'énoncé déplacerait donc l'identifiant, et trois choses casseraient d'un coup :
+le seed rejoué **insérerait un doublon** au lieu de ne rien faire, les
+`review_items` des élèves — qui portent cet id **sans clé étrangère** —
+pointeraient dans le vide, et le compteur « X à revoir » compterait des
+questions mortes. Le 5e élément est l'énoncé **sous lequel la question a été
+semée la première fois** : il fige l'identité pendant que le texte évolue.
+C'est la règle des leçons, dont l'UUID tient au titre et non au cours — ce qui a
+permis aux migrations 341→347 de réécrire 1 682 cours sans en déplacer un seul.
+
+Le générateur refuse : deux `___` dans un énoncé (il faudrait deux réponses),
+un trou en vrai/faux, une clé d'origine vide, une clé identique à l'énoncé, et
+surtout **un trou sans clé d'origine**.
+
+**Deux fichiers à régénérer, toujours ensemble** — ils lisent le même module :
+
+```bash
+node scripts/seed-contenu.mjs --num 231 --modules espagnol-tle > supabase/231_contenu_espagnol_tle.sql
+node scripts/seed-trous.mjs   --num 350 --modules espagnol-tle,anglais-tle,anglais-1re,anglais-2de > supabase/350_questions_a_trous.sql
+```
+
+Le premier tient la source de vérité (un clone neuf sort juste) ; le second est
+la **reprise pour la base en service**, qui ne rejouera jamais un seed déjà
+exécuté — ses INSERT sont gardés par `ON CONFLICT DO NOTHING`. Vérifier après
+coup que rien n'a bougé : les UUID du seed régénéré doivent être **identiques**
+à ceux du fichier commité.
+
+⚠️ **Un module peut alimenter plusieurs migrations.** `anglais-tle.mjs` est
+importé par `anglais-1re.mjs` et `anglais-2de.mjs` : y toucher oblige à
+régénérer **226, 266 et 286**. `grep -rl <module> supabase/*.sql` le dit.
+
 ### Trois champs facultatifs
 
 ```js

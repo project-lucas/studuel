@@ -10,7 +10,13 @@ import {
   verifierSujet,
   type BarreauId,
   type Criteres,
+  type EpreuveId,
 } from '@/lib/coach/oral'
+import {
+  CONSIGNE_ORAL,
+  ficheOral,
+  lireConseils,
+} from '@/lib/coach/oral-conseils'
 
 // Les actions de l'échelle de l'oral (migration 222).
 //
@@ -158,5 +164,108 @@ export async function refuserEcoute(requestId: string): Promise<EcouteResult> {
     return { statut: 'erreur' }
   }
   revalidatePath('/amis')
-  return (data as string) === 'ok' ? { statut: 'ok' } : { statut: 'introuvable' }
+  return (data as string) === 'ok'
+    ? { statut: 'ok' }
+    : { statut: 'introuvable' }
+}
+
+// -----------------------------------------------------------------------------
+// L'AVIS DE MARCEL SUR UN PASSAGE — le seul appel au modèle de tout l'atelier.
+//
+// La promesse de l'écran ne bouge pas : l'audio reste sur l'appareil. Marcel
+// n'entend RIEN. Il lit les faits que l'élève vient de produire (épreuve, sujet
+// annoncé, durée tenue, cases cochées après réécoute) et rend quatre actions
+// pour le prochain passage. La fiche envoyée est fabriquée par un module pur et
+// testé (lib/coach/oral-conseils), dont un test vérifie qu'aucune trace d'audio
+// ne peut s'y glisser.
+//
+// C'est un geste EXPLICITE de l'élève, jamais automatique, et il passe par la
+// même porte que les questions (`coach_ask_allowed`) : il se décompte du quota
+// du jour comme le reste. Les quatre barreaux de l'échelle, eux, restent
+// gratuits de bout en bout — c'est l'avis, et lui seul, qui se paie.
+// -----------------------------------------------------------------------------
+
+const AI_DEFAULT_MODEL = 'gpt-4o-mini'
+
+export type ConseilsResult = {
+  ok: boolean
+  conseils?: string[]
+  quota?: boolean
+  plafond?: boolean
+  unavailable?: boolean
+}
+
+export async function conseilsOral(input: {
+  epreuveId: string
+  sujet: string
+  secondes: number
+  criteres: Criteres
+}): Promise<ConseilsResult> {
+  const user = await getCurrentUser()
+  if (!user) return { ok: false }
+
+  const supabase = await createClient()
+
+  const { data: verdict, error } = await supabase.rpc('coach_ask_allowed', {
+    p_kind: 'oral',
+  })
+  if (error) {
+    if (error.code !== 'PGRST202') {
+      console.error('[oral] porte illisible:', error.message)
+    }
+    return { ok: false, unavailable: true }
+  }
+  if (verdict === 'plafond') return { ok: false, plafond: true }
+  if (verdict !== 'quota' && verdict !== 'jeton')
+    return { ok: false, quota: true }
+
+  const apiKey = process.env.AI_API_KEY ?? process.env.OPENAI_API_KEY ?? null
+  if (!apiKey) return { ok: false, unavailable: true }
+
+  const fiche = ficheOral({
+    epreuveId: epreuveOf(input?.epreuveId ?? '').id as EpreuveId,
+    sujet: typeof input?.sujet === 'string' ? input.sujet : '',
+    secondes: Number.isFinite(input?.secondes)
+      ? Math.min(7200, Math.max(0, Math.floor(input.secondes)))
+      : 0,
+    criteres: {
+      intro: input?.criteres?.intro === true,
+      plan: input?.criteres?.plan === true,
+      transitions: input?.criteres?.transitions === true,
+    },
+  })
+
+  try {
+    const { default: OpenAI } = await import('openai')
+    const client = new OpenAI({
+      apiKey,
+      ...(process.env.AI_BASE_URL ? { baseURL: process.env.AI_BASE_URL } : {}),
+      timeout: 20_000,
+      maxRetries: 1,
+    })
+
+    const completion = await client.chat.completions.create({
+      model: process.env.AI_MODEL ?? AI_DEFAULT_MODEL,
+      max_tokens: 320,
+      messages: [
+        { role: 'system', content: CONSIGNE_ORAL },
+        {
+          role: 'user',
+          content: `<passage>
+${fiche}
+</passage>`,
+        },
+      ],
+    })
+
+    const conseils = lireConseils(completion.choices[0]?.message?.content ?? '')
+    if (conseils.length === 0) return { ok: false }
+    return { ok: true, conseils }
+  } catch (err) {
+    console.error(
+      '[oral] avis impossible:',
+      err instanceof Error ? err.message : 'inconnu',
+    )
+    return { ok: false }
+  }
 }

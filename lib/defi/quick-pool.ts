@@ -45,6 +45,7 @@ export function toModeQuestions(
         correctIndex: shuffled.correctIndex,
         explanation: r.explanation,
         subject: subjectOf(r.quiz_id),
+        kind: r.kind,
       },
     ]
   })

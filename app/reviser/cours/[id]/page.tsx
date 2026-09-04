@@ -2,6 +2,7 @@ import { notFound, redirect } from 'next/navigation'
 import CourseScreen from '@/components/carnet/CourseScreen'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
+import { visionDisponible } from '@/lib/coach/ia-vision'
 import {
   computeCourseStats,
   isQuestionReady,
@@ -57,7 +58,9 @@ export default async function CoursePage({
       // sans mentir.
       supabase
         .from('carnet_review_attempts')
-        .select('question_id, is_correct, answered_at, carnet_questions!inner(course_id)')
+        .select(
+          'question_id, is_correct, answered_at, carnet_questions!inner(course_id)',
+        )
         .eq('user_id', user.id)
         .eq('carnet_questions.course_id', id)
         .order('answered_at', { ascending: false })
@@ -135,6 +138,7 @@ export default async function CoursePage({
       questions={questions}
       stats={stats}
       etiquettes={etiquettes}
+      photoDisponible={visionDisponible()}
       matieres={(subjectRows ?? []).map((m) => ({
         id: String(m.id),
         name: String(m.name),
@@ -145,7 +149,9 @@ export default async function CoursePage({
         // défauts que le SQL plutôt que sur NaN.
         newPerDay: Number(course.new_per_day ?? 15),
         reviewsPerDay: Number(course.reviews_per_day ?? 80),
-        tolerance: course.spell_tolerance ? String(course.spell_tolerance) : null,
+        tolerance: course.spell_tolerance
+          ? String(course.spell_tolerance)
+          : null,
         examOn: course.exam_on ? String(course.exam_on) : null,
         subjectId: course.subject_id ? String(course.subject_id) : null,
       }}

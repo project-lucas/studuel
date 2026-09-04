@@ -1,5 +1,6 @@
 'use server'
 
+import { configVision } from '@/lib/coach/ia-vision'
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
@@ -47,13 +48,14 @@ function aiKey(): string | null {
   return process.env.AI_API_KEY ?? process.env.OPENAI_API_KEY ?? null
 }
 
-async function aiClient() {
-  const apiKey = aiKey()
+async function aiClient(config?: { apiKey: string; baseURL?: string }) {
+  const apiKey = config?.apiKey ?? aiKey()
   if (!apiKey) return null
+  const baseURL = config ? config.baseURL : process.env.AI_BASE_URL
   const { default: OpenAI } = await import('openai')
   return new OpenAI({
     apiKey,
-    ...(process.env.AI_BASE_URL ? { baseURL: process.env.AI_BASE_URL } : {}),
+    ...(baseURL ? { baseURL } : {}),
     // Les défauts du SDK sont 10 MINUTES et 2 réessais — donc jusqu'à ~30 min
     // d'attente. Une Server Action bloquée aussi longtemps laisse l'élève sur
     // « Génération en cours… » sans aucune issue.
@@ -129,8 +131,7 @@ export type PropositionResult = AiResult & {
 
 /** La source du contenu : du texte collé, ou la photo d'un cours. */
 export type SourceIa =
-  | { kind: 'texte'; texte: string }
-  | { kind: 'image'; dataUrl: string }
+  { kind: 'texte'; texte: string } | { kind: 'image'; dataUrl: string }
 
 /**
  * PROPOSE des questions — sans rien écrire.
@@ -197,9 +198,17 @@ export async function proposerQuestions(
     }
   }
 
-  if (!(await quotaOk(supabase, 'generation'))) return { ok: false, quota: true }
+  // Une photo ne se lit qu'avec un modèle qui voit (lib/coach/ia-vision) : le
+  // modèle de texte principal répond « does not support image ». Sans lecteur
+  // branché, on le dit AVANT de dépenser le quota du jour.
+  const vision = source?.kind === 'image' ? configVision() : null
+  if (source?.kind === 'image' && !vision)
+    return { ok: false, unavailable: true }
 
-  const client = await aiClient()
+  if (!(await quotaOk(supabase, 'generation')))
+    return { ok: false, quota: true }
+
+  const client = await aiClient(vision ?? undefined)
   if (!client) return { ok: false, unavailable: true }
 
   const styleText =
@@ -220,7 +229,7 @@ export async function proposerQuestions(
   let raw = ''
   try {
     const completion = await client.chat.completions.create({
-      model: process.env.AI_MODEL ?? AI_DEFAULT_MODEL,
+      model: vision?.model ?? process.env.AI_MODEL ?? AI_DEFAULT_MODEL,
       max_tokens: 4_000,
       messages: [
         { role: 'system', content: GENERATION_SYSTEM },
@@ -343,7 +352,10 @@ export async function enregistrerQuestionsValidees(
 
   const { error } = await supabase.from('carnet_questions').insert(inserts)
   if (error) {
-    console.error('[carnet-ia] insertion des questions impossible:', error.message)
+    console.error(
+      '[carnet-ia] insertion des questions impossible:',
+      error.message,
+    )
     return { ok: false }
   }
   revalidatePath(`/reviser/cours/${courseId}`)

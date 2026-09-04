@@ -4,24 +4,33 @@ import { useState, useTransition } from 'react'
 import Link from 'next/link'
 import { Eye, EyeOff } from 'lucide-react'
 import type { OnboardingAnswers } from '@/lib/welcome'
-import { signUpWelcome, startOAuth } from '@/app/bienvenue/actions'
+import { auMoinsUnePorteOAuth, type PortesOAuth } from '@/lib/auth-portes'
+import { signUpWelcome } from '@/app/bienvenue/actions'
+import BoutonsOAuth from '@/components/auth/BoutonsOAuth'
 import PencilLogo from './PencilLogo'
 
-// Écran 13 — Créer un compte. Trois portes : Apple, Google (OAuth réel), e-mail.
+// Écran 13 — Créer un compte. Jusqu'à trois portes : Apple, Google (OAuth
+// réel, SEULEMENT si le fournisseur est activé côté Supabase), e-mail.
 // Sur session ouverte → on enchaîne sur le plan (14). Sur confirmation d'email
 // requise → message d'attente (pas de session immédiate).
 export default function SignUpStep({
   answers,
+  portes,
   onSignedUp,
   initialError = null,
 }: {
   answers: OnboardingAnswers
+  /** Les fournisseurs OAuth réellement activés. Sans aucun, l'e-mail est la
+   *  seule porte : on la montre d'emblée au lieu de la cacher derrière un
+   *  bouton « Continuer avec un e-mail » qui n'aurait plus rien à départager. */
+  portes: PortesOAuth
   onSignedUp: () => void
   /** Erreur venue de la redirection (échec du lancement OAuth), à afficher
    *  d'entrée : sans elle, l'élève revenait sur un écran muet. */
   initialError?: string | null
 }) {
-  const [showEmail, setShowEmail] = useState(false)
+  const oauthDisponible = auMoinsUnePorteOAuth(portes)
+  const [showEmail, setShowEmail] = useState(!oauthDisponible)
   const [showPassword, setShowPassword] = useState(false)
   const [fullName, setFullName] = useState('')
   const [email, setEmail] = useState('')
@@ -57,37 +66,15 @@ export default function SignUpStep({
       </p>
 
       <div className="mt-4 flex flex-col gap-[11px] text-left">
-        {/* Apple / Google : OAuth réel via Server Action (redirection). */}
-        <form action={startOAuth.bind(null, 'apple')}>
-          <ProviderButton
-            type="submit"
-            bg="var(--onb-ink)"
-            color="#fff"
-            border="var(--onb-ink)"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden>
-              <path d="M16 13c0-3 2-3.5 2-3.5-1-1.5-2.7-1.6-3.3-1.6-1.4-.1-2.7.8-3.4.8s-1.8-.8-3-.8A4.4 4.4 0 0 0 4.6 10c-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.3 3 2.3s1.6-.8 3-.8 1.8.8 3 .8 2.1-1.1 2.9-2.2c.6-.9.9-1.4 1.3-2.4-3.2-1.2-3.2-4.9-.2-5.8zM14.5 5.5A4 4 0 0 0 15.4 2 4.2 4.2 0 0 0 12.7 3.5 3.8 3.8 0 0 0 11.8 6.8 3.5 3.5 0 0 0 14.5 5.5z" />
-            </svg>
-            <span className="ml-2">Continuer avec Apple</span>
-          </ProviderButton>
-        </form>
-
-        <form action={startOAuth.bind(null, 'google')}>
-          <ProviderButton
-            type="submit"
-            bg="#fff"
-            color="var(--onb-ink)"
-            border="var(--onb-line)"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden>
-              <path fill="#4285F4" d="M21.6 12.2c0-.6 0-1.2-.2-1.8H12v3.5h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.2z" />
-              <path fill="#34A853" d="M12 22c2.7 0 5-1 6.6-2.6l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.7-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22z" />
-              <path fill="#FBBC05" d="M6.4 13.8a6 6 0 0 1 0-3.6V7.6H3.1a10 10 0 0 0 0 8.8z" />
-              <path fill="#EA4335" d="M12 6.3c1.5 0 2.8.5 3.8 1.5l2.8-2.8A10 10 0 0 0 3.1 7.6l3.3 2.6C7.2 8 9.4 6.3 12 6.3z" />
-            </svg>
-            <span className="ml-2">Continuer avec Google</span>
-          </ProviderButton>
-        </form>
+        {/* Apple / Google : OAuth réel via Server Action (redirection). Au
+            retour, ?finish=1 applique le brouillon local au profil. */}
+        <BoutonsOAuth
+          portes={portes}
+          next="/bienvenue?finish=1"
+          retour="/bienvenue?erreur=oauth"
+          monde="onb"
+          className="contents"
+        />
 
         {showEmail ? (
           <form onSubmit={submitEmail} className="flex flex-col gap-2.5">
@@ -135,14 +122,18 @@ export default function SignUpStep({
             </button>
           </form>
         ) : (
-          <ProviderButton
+          <button
+            type="button"
             onClick={() => setShowEmail(true)}
-            bg="var(--onb-pp)"
-            color="#fff"
-            border="var(--onb-pp)"
+            className="flex min-h-[48px] w-full cursor-pointer items-center justify-center rounded-2xl border-2 p-[13px_15px] text-[15px] font-extrabold"
+            style={{
+              background: 'var(--onb-pp)',
+              color: '#fff',
+              borderColor: 'var(--onb-pp)',
+            }}
           >
-            <span>Continuer avec un e-mail</span>
-          </ProviderButton>
+            Continuer avec un e-mail
+          </button>
         )}
       </div>
 
@@ -169,36 +160,6 @@ export default function SignUpStep({
         </Link>
       </p>
     </div>
-  )
-}
-
-// Bouton fournisseur (Apple/Google/e-mail) : rangée pleine largeur centrée.
-// Un VRAI <button> — en `type="submit"` dans les <form action> OAuth, sinon
-// le tap ne soumettait rien (un span dans un form n'a pas de submit).
-function ProviderButton({
-  bg,
-  color,
-  border,
-  type = 'button',
-  onClick,
-  children,
-}: {
-  bg: string
-  color: string
-  border: string
-  type?: 'button' | 'submit'
-  onClick?: () => void
-  children: React.ReactNode
-}) {
-  return (
-    <button
-      type={type}
-      onClick={onClick}
-      className="flex w-full cursor-pointer items-center justify-center rounded-2xl border-2 p-[13px_15px] text-[15px] font-extrabold"
-      style={{ background: bg, color, borderColor: border }}
-    >
-      {children}
-    </button>
   )
 }
 

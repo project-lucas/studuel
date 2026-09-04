@@ -20,6 +20,15 @@ const nextConfig: NextConfig = {
       dynamic: 120,
       static: 300,
     },
+    // Le corps d'une Server Action est plafonné à 1 Mo par défaut. Or deux
+    // écrans envoient des PHOTOS : la génération de questions du carnet, et le
+    // « + » de Marcel (la photo d'un exercice ou d'un cours). Les images sont
+    // réduites dans le navigateur avant l'envoi (lib/coach/piece-jointe :
+    // 1 400 px, JPEG 0,72 — 200 à 400 Ko), mais le plafond doit laisser passer
+    // une photo brute d'iPhone quand la réduction n'a pas pu se faire.
+    serverActions: {
+      bodySizeLimit: '8mb',
+    },
   },
 };
 

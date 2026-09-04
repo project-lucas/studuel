@@ -1,15 +1,20 @@
 'use client'
 
 import { useCallback, useMemo, useState, useTransition } from 'react'
-import { ChevronDown, Search, X } from 'lucide-react'
+import { Search, X } from 'lucide-react'
 import ChapterItem from '@/components/reviser/ChapterItem'
-import ChapterProgressBar from '@/components/reviser/ChapterProgressBar'
+import ChapitreEntete, { ROBES, etatChapitre } from '@/components/reviser/ChapitreEntete'
+import ResumeCard from '@/components/reviser/ResumeCard'
 import { chapterSupports } from '@/app/reviser/[subject]/supports-actions'
 import { cn } from '@/lib/utils'
+import { GRID_PATTERN } from '@/lib/subject-style'
 import {
   SEARCH_MIN_CHAPTERS,
+  chapterGroupProgress,
+  chapterQuizHref,
   chapterUnit,
   groupChaptersByTheme,
+  hasChapterQuiz,
   matchChapters,
   openGroupIndex,
   type ChapterRow,
@@ -176,6 +181,44 @@ export default function ChapterList({
     setOuvert(false)
   }
 
+  // LA FICHE À REPRENDRE, et le geste de la carte d'entrée : déplier son
+  // chapitre s'il est replié, ouvrir la fiche (ses supports se chargent), puis
+  // amener l'écran dessus. La carte ne mène pas ailleurs — elle mène ICI, à la
+  // ligne exacte où l'on continue.
+  const ficheAReprendre = resume
+    ? (chapters.find((c) => c.id === resume.chapterId) ?? null)
+    : null
+  const ouvrirLaReprise = () => {
+    if (!ficheAReprendre) return
+    const index = entiers.findIndex((g) =>
+      g.chapters.some((c) => c.id === ficheAReprendre.id),
+    )
+    if (index >= 0) {
+      const cle = cleDe(entiers[index], index)
+      setDeplies((d) => ({ ...d, [cle]: true }))
+      setChapitre(cle)
+    }
+    if (fiche !== ficheAReprendre.id) basculer(ficheAReprendre.id)
+    // Après le rendu qui déplie : la ligne n'existe pas encore dans le DOM au
+    // moment du clic si son chapitre était replié.
+    requestAnimationFrame(() => {
+      const ligne = document.getElementById(`ligne-${ficheAReprendre.id}`)
+      // Garde pour les environnements sans mise en page (tests) où la méthode
+      // n'existe pas.
+      if (ligne && typeof ligne.scrollIntoView === 'function') {
+        ligne.scrollIntoView({ block: 'center', behavior: 'smooth' })
+      }
+    })
+  }
+  const carteDEntree =
+    resume && ficheAReprendre && !cherche ? (
+      <ResumeCard
+        resume={resume}
+        chapter={ficheAReprendre}
+        onSelect={ouvrirLaReprise}
+      />
+    ) : null
+
   // `ranged` : la liste est rangée sous les chapitres du programme. Les lignes
   // n'y sont plus des chapitres mais des FICHES, numérotées dans leur chapitre
   // (1, 2, 3…) et non dans la matière — sans quoi « Chapitre 2 · Le groupe
@@ -203,6 +246,7 @@ export default function ChapterList({
       {rows.map((chapter) => (
         <li
           key={chapter.id}
+          id={`ligne-${chapter.id}`}
           className={cn(
             'transition-opacity duration-200',
             focus && chapter.id !== fiche ? EFFACE : null,
@@ -302,6 +346,7 @@ export default function ChapterList({
   if (entiers.length === 1 && entiers[0].theme === null) {
     return (
       <div>
+        {carteDEntree}
         {cherchable ? (
           <div className="mt-4">
             <div className="flex justify-end">{bouton}</div>
@@ -317,7 +362,9 @@ export default function ChapterList({
   }
 
   return (
-    <div className="mt-4 flex flex-col gap-3">
+    <div>
+      {carteDEntree}
+      <div className="mt-4 flex flex-col gap-3">
       {groups.map((group, i) => {
         const cle = cleDe(group, i)
         const porteLaBarre = cherchable && ouvert && i === 0
@@ -326,7 +373,23 @@ export default function ChapterList({
         // aussi, sinon elle se déplierait dans le vide.
         const deplie =
           cherche || porteLaBarre || (deplies[cle] ?? i === defaut)
-        const done = group.chapters.filter((c) => c.status === 'complete').length
+        // La jauge suit la RÈGLE DU HEADER : barre à la moyenne des
+        // avancements, compte des fiches terminées.
+        const avancement = chapterGroupProgress(group.chapters)
+        // LE QUIZ DU CHAPITRE — un contrôle se prépare par chapitre, pas
+        // fiche par fiche. Il est posé SUR L'EN-TÊTE, chapitre replié ou non :
+        // s'interroger sur « Le groupe nominal » coûte deux gestes (la matière,
+        // le quiz), sans avoir à déplier quoi que ce soit. Sous recherche, il
+        // s'efface : le bloc n'y montre que des trouvailles, pas le chapitre.
+        const quiz =
+          !cherche && group.theme && hasChapterQuiz(group)
+            ? chapterQuizHref(subjectSlug, group.theme)
+            : null
+        // L'ÉTAT DU CHAPITRE, VISIBLE. Une carte crème identique à 0 % et à
+        // 60 % ne rendait rien des heures passées dessus. La robe (crème,
+        // cernée de jaune, violet plein), le médaillon et les pastilles par
+        // fiche vivent dans `ChapitreEntete`.
+        const etat = etatChapitre(avancement)
         // Le chapitre EN AVANT garde sa netteté : il dit OÙ l'on est. Les
         // autres reculent avec leur en-tête, sinon quatre titres en gras
         // continueraient de tirer l'œil pendant qu'on travaille.
@@ -340,91 +403,51 @@ export default function ChapterList({
         return (
           <div
             key={cle}
+            data-etat={etat}
             className={cn(
-              'rounded-2xl border bg-card/60 px-3 py-2 transition-opacity duration-200',
-              deplie ? 'pb-3' : null,
+              'relative overflow-hidden rounded-3xl px-4 py-4 transition-opacity duration-200',
+              ROBES[etat],
               efface ? EFFACE : null,
             )}
           >
-            <div className="flex items-center gap-2">
-              {/* Le titre plie et déplie le bloc. La loupe est son VOISIN, pas
-                  son enfant : un bouton dans un bouton n'existe pas, et deux
-                  actions dans la même cible se marchent dessus. */}
-              <button
-                type="button"
-                onClick={() => basculerChapitre(cle, deplie)}
-                aria-expanded={deplie}
-                aria-controls={`bloc-${cle}`}
-                className="min-w-0 flex-1 cursor-pointer py-1.5 text-left"
-              >
-                <span className="block min-w-0">
-                  {/* Le titre du chapitre, SEUL. Il portait un surtitre violet
-                      « CHAPITRE 2 » — cf. le calcul des repères plus haut pour
-                      la raison de son retrait. */}
-                  <span className="font-heading block font-bold text-balance">
-                    {group.theme ?? 'Autres chapitres'}
-                  </span>
-                  {/* SOUS RECHERCHE, PAS DE JAUGE — juste le compte des
-                      résultats. `group.chapters` n'y contient que les
-                      trouvailles : une jauge remplie sur trois résultats
-                      parlerait d'un autre chapitre que celui affiché. Et le
-                      bloc qui porte la barre de recherche sans avoir de
-                      résultat ne compte rien du tout : « 0 fiche » sous le
-                      titre, alors que le bilan juste dessous annonce les
-                      trouvailles des autres blocs, se lirait comme un échec. */}
-                  {cherche ? (
-                    group.chapters.length === 0 ? null : (
-                      <span className="text-xs font-semibold text-muted-foreground tabular-nums">
-                        {group.chapters.length}{' '}
-                        {group.theme ? 'fiche' : 'chapitre'}
-                        {group.chapters.length > 1 ? 's' : ''}
-                      </span>
-                    )
-                  ) : (
-                    <ChapterProgressBar
-                      done={done}
-                      total={group.chapters.length}
-                      unit={group.theme ? 'fiche' : 'chapitre'}
-                    />
-                  )}
-                </span>
-              </button>
-              {/* La loupe ne sort que sur un bloc unique (`cherchable`) : elle
-                  cherche dans toute la liste, et posée sur l'un des cinq
-                  chapitres d'un programme, elle laisserait croire qu'elle ne
-                  fouille que celui-là. */}
-              {cherchable && i === 0 ? bouton : null}
-              {/* Le chevron reste à l'extrême droite, la place où on le
-                  cherche. C'est le JUMEAU visuel du titre : même action, et
-                  invisible pour les lecteurs d'écran, qui ne doivent pas
-                  s'entendre annoncer deux fois le même pli. */}
-              <button
-                type="button"
+            {/* Le quadrillage du header, en filigrane, sur la seule carte
+                finie : c'est la plaque violette de l'arène, pas une carte
+                crème teintée. */}
+            {etat === 'termine' ? (
+              <div
+                className="pointer-events-none absolute inset-0 opacity-[0.07]"
+                style={GRID_PATTERN}
                 aria-hidden="true"
-                tabIndex={-1}
-                onClick={() => basculerChapitre(cle, deplie)}
-                className="-mr-1 flex size-8 shrink-0 items-center justify-center rounded-full"
-              >
-                <ChevronDown
-                  className={cn(
-                    'size-5 text-muted-foreground transition-transform',
-                    deplie ? 'rotate-180' : null,
-                  )}
-                />
-              </button>
-            </div>
-
+              />
+            ) : null}
+            <ChapitreEntete
+              titre={group.theme ?? 'Autres chapitres'}
+              cle={cle}
+              fiches={group.chapters}
+              avancement={avancement}
+              unit={group.theme ? 'fiche' : 'chapitre'}
+              deplie={deplie}
+              onToggle={() => basculerChapitre(cle, deplie)}
+              quizHref={quiz}
+              cherche={cherche}
+              // La loupe ne sort que sur un bloc unique (`cherchable`) : elle
+              // cherche dans toute la liste, et posée sur l'un des cinq
+              // chapitres d'un programme, elle laisserait croire qu'elle ne
+              // fouille que celui-là.
+              loupe={cherchable && i === 0 ? bouton : null}
+            />
             {porteLaBarre ? barre : null}
             {porteLaBarre ? bilan : null}
 
             {deplie ? (
-              <div id={`bloc-${cle}`} className="mt-2">
+              <div id={`bloc-${cle}`} className="relative mt-3">
                 {list(group.chapters, group.theme !== null)}
               </div>
             ) : null}
           </div>
         )
       })}
+      </div>
     </div>
   )
 }

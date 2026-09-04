@@ -45,6 +45,8 @@ export default function ExamBlancPlayer({
   examTitle,
   lastScore,
   subjectName = null,
+  heading = 'Examen blanc',
+  unit = 'chapitre',
 }: {
   questions: ExamQuestion[]
   examTitle: string
@@ -52,7 +54,17 @@ export default function ExamBlancPlayer({
   // Examen ciblé sur UNE matière (lancé depuis son dossier) → l'intro le dit ;
   // null = examen multi-matières classique.
   subjectName?: string | null
+  /** Le grand titre de l'intro (« Examen blanc », « Quiz du chapitre »). */
+  heading?: string
+  /**
+   * Le mot du bilan. Le moteur groupe ses résultats par ligne de `chapters` :
+   * pour l'examen blanc c'est un chapitre, pour le quiz d'un chapitre du
+   * programme c'est une FICHE — et le bilan doit le dire avec le mot de la
+   * page d'où l'on vient.
+   */
+  unit?: 'chapitre' | 'fiche'
 }) {
+  const unites = unit === 'fiche' ? 'fiches' : 'chapitres'
   const router = useRouter()
   const duration = examDurationSeconds(questions.length)
 
@@ -174,14 +186,14 @@ export default function ExamBlancPlayer({
           <GraduationCap className="size-9" aria-hidden="true" />
         </span>
         <div className="space-y-1">
-          <h1 className="font-heading text-3xl font-bold">Examen blanc</h1>
+          <h1 className="font-heading text-3xl font-bold">{heading}</h1>
           <p className="text-sm font-semibold text-primary">{examTitle}</p>
           <p className="text-sm text-muted-foreground">
             {questions.length} questions · {formatClock(duration)} chrono ·{' '}
             {subjectName ?? 'toutes tes matières'}
             <br />
             Pas de correction pendant l&apos;épreuve — comme le jour J. Le
-            bilan chapitre par chapitre tombe à la fin.
+            bilan {unit} par {unit} tombe à la fin.
           </p>
         </div>
 
@@ -243,7 +255,7 @@ export default function ExamBlancPlayer({
             {globalVerdict === 'solide'
               ? 'Niveau examen — continue comme ça, tu es prêt·e.'
               : globalVerdict === 'fragile'
-                ? 'La base est là. Vise les chapitres fragiles ci-dessous.'
+                ? `La base est là. Vise les ${unites} fragiles ci-dessous.`
                 : 'Bon diagnostic : tu sais exactement quoi retravailler.'}
           </p>
         </div>
@@ -252,10 +264,10 @@ export default function ExamBlancPlayer({
             de travail qui sort de l'examen. */}
         <section
           className="w-full rounded-2xl border bg-card p-4 text-left shadow-sm"
-          aria-label="Bilan par chapitre"
+          aria-label={`Bilan par ${unit}`}
         >
           <h2 className="font-heading mb-3 text-base font-bold">
-            Bilan par chapitre
+            Bilan par {unit}
           </h2>
           <ul className="flex flex-col gap-2">
             {report.map((r) => {

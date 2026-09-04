@@ -1,8 +1,14 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import { render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import ChapterList from '@/components/reviser/ChapterList'
 import { SEARCH_MIN_CHAPTERS, type ChapterRow } from '@/lib/subject-template'
+
+// Déplier une fiche demande ses supports au serveur : ici, personne ne répond
+// — le test regarde le geste, pas les tuiles.
+vi.mock('@/app/reviser/[subject]/supports-actions', () => ({
+  chapterSupports: vi.fn(async () => []),
+}))
 
 // LA LISTE DU PROGRAMME, RANGÉE SOUS SES CHAPITRES.
 //
@@ -24,6 +30,7 @@ const row = (
   position,
   title,
   status: 'non_commence',
+  value: 0,
   crowns: 0,
   href: `/reviser/anglais/${id}`,
   examHint: null,
@@ -82,7 +89,7 @@ describe('ChapterList', () => {
         grade="Terminale"
       />,
     )
-    const nominal = screen.getByText('Le groupe nominal').closest('button')
+    const nominal = screen.getByText('Le groupe nominal').closest('[data-etat]')
     expect(within(nominal as HTMLElement).getByText('0/2 fiches')).toBeTruthy()
   })
 
@@ -205,8 +212,9 @@ describe('ChapterList — recherche', () => {
     const champ = await ouvrir(user)
     // Le bloc = la carte qui porte l'en-tête ; la barre doit vivre dedans, pas
     // au-dessus de la liste.
-    const bloc = screen.getByText('Fiches de lecture').closest('button')
-      ?.parentElement?.parentElement as HTMLElement
+    const bloc = screen
+      .getByText('Fiches de lecture')
+      .closest('[data-etat]') as HTMLElement
     expect(bloc.contains(champ)).toBe(true)
 
     await user.type(champ, 'rimbaud')
@@ -302,12 +310,9 @@ describe('ChapterList — recherche', () => {
       .getByText('« Un cœur simple », Gustave Flaubert')
       .closest('button')
     // Troisième fiche du chapitre : elle reste la 3, pas la 1re du résultat.
-    // Le rang est un NOMBRE PEINT depuis `components/reviser/numeros.ts` : il
-    // ne s'assertait plus par son texte, mais par le dessin choisi.
-    const rang = within(ligne as HTMLElement).getByRole('presentation', {
-      hidden: true,
-    })
-    expect(rang.getAttribute('src')).toContain('/3.webp')
+    // Le rang est ÉCRIT dans sa pastille (les chiffres peints ont été retirés
+    // le 04/09/2026).
+    expect(within(ligne as HTMLElement).getByText('3')).toBeTruthy()
   })
 
   it('le dit quand rien ne correspond, puis rend la liste une fois refermée', async () => {
@@ -361,7 +366,7 @@ const EFFACE = 'opacity-50'
 
 /** Le bloc d'un chapitre, atteint par son titre. */
 const bloc = (titre: string) =>
-  screen.getByText(titre).closest('[class*="bg-card/60"]') as HTMLElement
+  screen.getByText(titre).closest('[data-etat]') as HTMLElement
 
 const rendre = () =>
   render(
@@ -408,5 +413,111 @@ describe('ChapterList — le projecteur sur le chapitre', () => {
     await user.click(screen.getByText('La phrase'))
     expect(bloc('La phrase').className).not.toContain(EFFACE)
     expect(bloc('Le groupe verbal').className).toContain(EFFACE)
+  })
+})
+
+// LA PORTE D'ENTRÉE DU DOSSIER ET LE QUIZ DU CHAPITRE.
+//
+// Ce qu'ils gardent : le libellé calculé par le serveur (« Commencer » /
+// « Reprendre ») est ÉCRIT à l'écran, avec la fiche et son chapitre ; taper la
+// carte déplie la fiche à sa place ; et un chapitre déplié d'au moins deux
+// fiches offre son quiz.
+
+describe('ChapterList — la carte d’entrée', () => {
+  it('écrit le geste, la fiche, le chapitre et la durée', () => {
+    const avecDuree = anglais.map((c) =>
+      c.id === 'b' ? { ...c, minutes: 6 } : c,
+    )
+    render(
+      <ChapterList
+        chapters={avecDuree}
+        resume={{ chapterId: 'b', label: 'Commencer' }}
+        subjectSlug="anglais"
+        subjectName="Anglais"
+        grade="Terminale"
+      />,
+    )
+    const carte = screen.getByRole('button', {
+      name: 'Commencer : Exprimer une quantité — Le groupe nominal · ~6 min',
+    })
+    expect(carte).toBeTruthy()
+    expect(screen.getByText('On commence par ça')).toBeTruthy()
+  })
+
+  it('n’existe pas quand tout est terminé', () => {
+    render(
+      <ChapterList
+        chapters={anglais}
+        resume={null}
+        subjectSlug="anglais"
+        subjectName="Anglais"
+        grade="Terminale"
+      />,
+    )
+    expect(screen.queryByText('On commence par ça')).toBeNull()
+  })
+
+  it('taper la carte déplie la fiche à sa place', async () => {
+    const user = userEvent.setup()
+    render(
+      <ChapterList
+        chapters={anglais}
+        resume={{ chapterId: 'c', label: 'Reprendre' }}
+        subjectSlug="anglais"
+        subjectName="Anglais"
+        grade="Terminale"
+      />,
+    )
+    // La fiche « c » vit dans « Le groupe verbal », déplié par défaut puisque
+    // c'est lui qui porte la reprise ; sa ligne est encore repliée.
+    const ligne = screen.getByRole('button', { name: /^Les auxiliaires modaux/ })
+    expect(ligne.getAttribute('aria-expanded')).toBe('false')
+    await user.click(screen.getByRole('button', { name: /^Reprendre : / }))
+    expect(ligne.getAttribute('aria-expanded')).toBe('true')
+  })
+})
+
+describe('ChapterList — le quiz du chapitre', () => {
+  it('un chapitre d’au moins deux fiches porte son quiz sur l’en-tête, même replié', () => {
+    render(
+      <ChapterList
+        chapters={anglais}
+        resume={{ chapterId: 'd', label: 'Commencer' }}
+        subjectSlug="anglais"
+        subjectName="Anglais"
+        grade="Terminale"
+      />,
+    )
+    // « Le groupe nominal » (2 fiches) est REPLIÉ (la reprise est ailleurs) :
+    // son quiz est quand même là — deux gestes, la matière puis le quiz.
+    const quiz = screen.getByRole('link', {
+      name: 'Quiz du chapitre Le groupe nominal',
+    })
+    expect(quiz.getAttribute('href')).toBe(
+      '/reviser/examen-blanc?subject=anglais&chapitre=Le+groupe+nominal',
+    )
+    // Les chapitres d'une seule fiche n'en offrent pas : leur quiz est déjà
+    // celui de la fiche.
+    expect(screen.getAllByRole('link', { name: /^Quiz du chapitre/ })).toHaveLength(1)
+  })
+
+  it('la robe d’un chapitre dit son avancement', () => {
+    const avance = anglais.map((c) =>
+      c.id === 'a' ? { ...c, value: 0.5, status: 'en_cours' as const } : c,
+    )
+    render(
+      <ChapterList
+        chapters={avance}
+        resume={null}
+        subjectSlug="anglais"
+        subjectName="Anglais"
+        grade="Terminale"
+      />,
+    )
+    const carte = (titre: string) =>
+      screen.getByText(titre).closest('[data-etat]') as HTMLElement
+    expect(carte('Le groupe nominal').dataset.etat).toBe('entame')
+    expect(within(carte('Le groupe nominal')).getByText('25 %')).toBeTruthy()
+    expect(carte('Le groupe verbal').dataset.etat).toBe('vierge')
   })
 })

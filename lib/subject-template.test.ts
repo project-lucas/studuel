@@ -26,6 +26,12 @@ import {
   tabId,
   resumeCta,
   subjectProgress,
+  chapterGroupProgress,
+  chapterQuizHref,
+  deLaMatiere,
+  hasChapterQuiz,
+  STATUS_LABELS,
+  SUPPORT_LABELS,
   type ChapterRow,
 } from './subject-template'
 
@@ -255,6 +261,7 @@ const row = (
   position,
   title: `Chapitre ${position}`,
   status: 'non_commence',
+  value: 0,
   crowns: 0,
   href: `/reviser/anglais/${id}`,
   examHint: null,
@@ -626,5 +633,64 @@ describe('matchChapters', () => {
   test('trouve à l’accent et à la ligature près', () => {
     expect(matchChapters(rayon, 'coeur')).toEqual([rayon[2]])
     expect(matchChapters(rayon, 'CŒUR')).toEqual([rayon[2]])
+  })
+})
+
+describe('chapterGroupProgress — la jauge d’un chapitre suit la règle du header', () => {
+  test('la barre bouge dès le premier quiz, le compte attend les fiches terminées', () => {
+    const rows = [{ value: 0.5 }, { value: 0 }, { value: 0 }, { value: 0 }]
+    expect(chapterGroupProgress(rows)).toEqual({ done: 0, total: 4, pct: 13 })
+  })
+
+  test('une fiche à 80 % compte comme terminée', () => {
+    expect(chapterGroupProgress([{ value: 0.8 }, { value: 1 }])).toEqual({
+      done: 2,
+      total: 2,
+      pct: 90,
+    })
+  })
+
+  test('un chapitre vide ne compte rien', () => {
+    expect(chapterGroupProgress([])).toEqual({ done: 0, total: 0, pct: 0 })
+  })
+})
+
+describe('deLaMatiere — l’élision', () => {
+  test('élide devant une voyelle', () => {
+    expect(deLaMatiere('Anglais')).toBe('d’Anglais')
+    expect(deLaMatiere('Espagnol')).toBe('d’Espagnol')
+  })
+
+  test('élide devant un h muet', () => {
+    expect(deLaMatiere('Histoire-Géographie')).toBe('d’Histoire-Géographie')
+  })
+
+  test('ne touche pas aux consonnes', () => {
+    expect(deLaMatiere('Maths')).toBe('de Maths')
+    expect(deLaMatiere('Physique-Chimie')).toBe('de Physique-Chimie')
+  })
+})
+
+describe('le quiz d’un chapitre du programme', () => {
+  test('mène à l’examen blanc ciblé sur la matière ET le chapitre', () => {
+    expect(chapterQuizHref('anglais', 'Le groupe nominal')).toBe(
+      '/reviser/examen-blanc?subject=anglais&chapitre=Le+groupe+nominal',
+    )
+  })
+
+  test('n’existe que pour un chapitre titré d’au moins deux fiches', () => {
+    expect(hasChapterQuiz({ theme: 'Le groupe nominal', chapters: [1, 2] })).toBe(true)
+    expect(hasChapterQuiz({ theme: 'Le groupe nominal', chapters: [1] })).toBe(false)
+    expect(hasChapterQuiz({ theme: null, chapters: [1, 2, 3] })).toBe(false)
+  })
+})
+
+describe('les mots de l’écran', () => {
+  test('une fiche finie est « Terminé », pas « Complété »', () => {
+    expect(STATUS_LABELS.complete).toBe('Terminé')
+  })
+
+  test('le support de la carte mentale porte le nom de sa page', () => {
+    expect(SUPPORT_LABELS.carte).toBe('Carte mentale')
   })
 })

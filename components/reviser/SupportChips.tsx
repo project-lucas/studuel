@@ -42,8 +42,9 @@ const ICONES: Record<SupportKind, StaticImageData> = {
   cours: coursIcone,
   quiz: quizIcone,
   flashcards: flashcardsIcone,
-  // `carte` est le support « Fiches » — le nom de clé est un héritage de la
-  // carte mentale d'avant, le dessin est bien une fiche.
+  // `carte` est le support « Carte mentale » (SUPPORT_LABELS) ; son dessin est
+  // une fiche — c'est le nom qu'il a porté, et l'illustration n'a pas été
+  // refaite quand il a repris celui de sa page.
   carte: carteIcone,
   defi: defiIcone,
   erreurs: erreursIcone,

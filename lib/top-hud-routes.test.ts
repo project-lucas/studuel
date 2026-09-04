@@ -14,9 +14,16 @@ describe('isHudHidden', () => {
   })
 
   it('affiche le bandeau sur les onglets de l’app', () => {
-    for (const path of ['/', '/moi', '/defi', '/reviser', '/amis', '/coffre']) {
+    for (const path of ['/', '/defi', '/reviser', '/amis', '/coffre']) {
       expect(isHudHidden(path), path).toBe(false)
     }
+  })
+
+  it('le masque sur l’onglet Moi, dont la carte porte déjà tous ses chiffres', () => {
+    expect(isHudHidden('/moi')).toBe(true)
+    // Le vestiaire et les habitudes n'ont pas la carte : ils gardent le bandeau.
+    expect(isHudHidden('/moi/avatar')).toBe(false)
+    expect(isHudHidden('/moi/habitudes')).toBe(false)
   })
 
   it('ne masque pas une route qui commence par le même mot', () => {

@@ -105,9 +105,18 @@ export function isSplashReady(state: {
 // approchant du but et qui n'atteint 100 % que lorsque l'app est réellement
 // prête. Elle ne recule jamais et ne ment jamais sur la fin.
 
-/** Durée avant que la barre n'atteigne son plafond d'attente (ms). */
+/**
+ * Durée avant que la barre n'atteigne son plafond d'attente (ms).
+ *
+ * ⚠️ Recopiée dans `globals.css` (`@keyframes splash-prefill` /
+ * `splash-precount`, 900ms) : avant l'hydratation, c'est le CSS qui anime la
+ * barre, sur cette même courbe. Les deux durées doivent rester égales.
+ */
 export const SPLASH_RAMP_MS = 900
-/** Plafond tant que l'app n'est pas prête : on garde les 8 derniers % pour elle. */
+/**
+ * Plafond tant que l'app n'est pas prête : on garde les 8 derniers % pour elle.
+ * Recopié lui aussi dans `globals.css` (92 %).
+ */
 export const SPLASH_WAIT_CEILING = 92
 /**
  * Durée d'affichage minimale (ms) — le temps qu'il faut pour qu'un rideau ne
@@ -125,6 +134,10 @@ export const SPLASH_MIN_MS = 450
 
 /**
  * Avancement affiché (0 → 100) après `elapsedMs` d'attente.
+ *
+ * `elapsedMs` se compte depuis le DÉBUT DE LA NAVIGATION (le `timeOrigin` du
+ * navigateur), pas depuis le montage de l'écran : sur un chargement à froid,
+ * le HTML est là bien avant le JavaScript, et l'élève attend depuis la requête.
  *
  * Tant que `ready` est faux, la courbe monte vite puis s'aplatit sous le
  * plafond (ease-out) ; dès que l'app est prête ET la durée minimale écoulée,

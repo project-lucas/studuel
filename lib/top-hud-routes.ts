@@ -19,9 +19,20 @@
 
 import { estChromeMasque, estOnboarding } from '@/lib/quiz-chrome'
 
+/**
+ * L'ONGLET MOI N'A PAS DE BANDEAU. La carte de joueur porte déjà le niveau,
+ * la série, les trophées et les monnaies gagnées : les quatre pastilles du
+ * bandeau, juste au-dessus, les redisaient (Lucas, 04/09/2026 : « cela fait
+ * doublon, je veux que le bloc violet prenne la place du haut »). Exactement
+ * `/moi` : le vestiaire et les habitudes gardent leur bandeau.
+ */
+export function estOngletMoi(pathname: string): boolean {
+  return pathname === '/moi'
+}
+
 /** Le bandeau du haut doit-il être masqué sur ce chemin ? */
 export function isHudHidden(pathname: string): boolean {
-  return estChromeMasque(pathname)
+  return estChromeMasque(pathname) || estOngletMoi(pathname)
 }
 
 /**

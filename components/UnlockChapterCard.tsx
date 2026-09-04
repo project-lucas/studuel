@@ -9,6 +9,7 @@ import GemIcon from '@/components/ui/GemIcon'
 import { unlockChapterWithGem } from '@/app/reviser/[subject]/[chapter]/actions'
 import {
   GEM_COST_CHAPTER,
+  REFERRAL_GEM_REWARD,
   gemsAfterSpend,
   gemsLabel,
   missingGemsLabel,
@@ -55,8 +56,10 @@ export default function UnlockChapterCard({
           </span>
         </span>
 
+        {/* Le prix est écrit tel quel — le texte disait « avec une gemme »
+            au-dessus d'un bouton à « 30 gemmes » : deux prix pour un chapitre. */}
         <p className="font-heading max-w-xs font-semibold text-balance">
-          Débloque ce chapitre avec une gemme
+          Débloque ce chapitre pour {gemsLabel(GEM_COST_CHAPTER)}
         </p>
         <p className="text-muted-foreground max-w-xs text-sm text-balance">
           Tu gardes sa carte mentale et ses fiches de révision pour toujours.
@@ -80,7 +83,7 @@ export default function UnlockChapterCard({
           <GemIcon className="size-3.5" aria-hidden="true" />
           {canUnlock
             ? `Il te reste ${gemsLabel(gems)}`
-            : `${missing} — invite un ami : vous en gagnez chacun une`}
+            : `${missing} — invite un ami : vous en gagnez ${REFERRAL_GEM_REWARD} chacun`}
         </p>
 
         <Link

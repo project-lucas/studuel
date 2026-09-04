@@ -1,9 +1,7 @@
 'use client'
 
-import Image from 'next/image'
 import { Check, Clock3, Crown, Plus, Timer } from 'lucide-react'
 import SupportChips from '@/components/reviser/SupportChips'
-import { numeroIllustre } from '@/components/reviser/numeros'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import {
@@ -60,7 +58,6 @@ export default function ChapterItem({
   // Le rang affiché : celui du programme quand la liste est rangée sous ses
   // chapitres, sinon la position dans la matière.
   const numero = rank ?? chapter.position
-  const numeroPeint = numeroIllustre(numero)
 
   return (
     <div
@@ -85,21 +82,16 @@ export default function ChapterItem({
         started ? 'p-4' : 'px-4 py-3',
       )}
     >
-      {/* LE NUMÉRO DE LA FICHE — peint, et non plus écrit dans une pastille.
-          Le chiffre vivait en Baloo 2 au centre d'un carré violet pâle. La
-          pastille était là pour lui donner de la présence, comme elle le
-          faisait pour les pictogrammes de support : un caractère de 16 px sur
-          fond crème ne pèse rien. Le nombre dessiné, lui, porte son contour et
-          ses couleurs — la pastille n'ajoutait plus qu'une seconde forme muette
-          par-dessus, et le rapetissait au passage.
+      {/* LE NUMÉRO DE LA FICHE — écrit en Baloo 2 dans sa pastille violet
+          pâle. Il a été PEINT un temps (une illustration par nombre, 1 à 19,
+          `public/images/chiffres/`) : les chiffres dorés à contour prune
+          pesaient plus lourd que l'en-tête du chapitre au-dessus d'eux, et
+          Lucas a demandé le retour aux chiffres écrits, pour toutes les
+          matières, tous les chapitres et toutes les classes (04/09/2026). La
+          pastille de largeur fixe garde les titres alignés d'une ligne à
+          l'autre.
 
-          LA CASE, ELLE, RESTE — vide, mais de largeur fixe. Un « 12 » peint est
-          une fois et demie plus large qu'un « 1 » : c'est le comportement normal
-          d'un nombre, mais posé tel quel il décalerait le titre d'une ligne à
-          l'autre. La case garde donc les dimensions d'avant et le nombre s'y
-          centre, si bien que tous les titres de la liste restent alignés.
-
-          LA FICHE TERMINÉE garde SA pastille pleine : ce n'est plus un numéro
+          LA FICHE TERMINÉE porte SA pastille pleine : ce n'est plus un numéro
           qu'elle affiche mais une coche — un état, pas un rang. */}
       {chapter.status === 'complete' ? (
         <span
@@ -111,27 +103,7 @@ export default function ChapterItem({
         >
           <Check className="size-5.5" strokeWidth={3} />
         </span>
-      ) : numeroPeint ? (
-        <span
-          className={cn(
-            'flex shrink-0 items-center justify-center',
-            started ? 'size-11' : 'size-9',
-          )}
-          aria-hidden="true"
-        >
-          <Image
-            src={numeroPeint}
-            alt=""
-            sizes="44px"
-            className={cn(
-              'h-auto w-auto max-w-full',
-              started ? 'max-h-9' : 'max-h-7',
-            )}
-          />
-        </span>
       ) : (
-        /* Au-delà de la série dessinée (cf. components/reviser/numeros.ts) :
-           le chiffre écrit, dans sa pastille, exactement comme avant. */
         <span
           className={cn(
             'font-heading flex shrink-0 items-center justify-center rounded-xl bg-primary/10 font-bold text-primary',

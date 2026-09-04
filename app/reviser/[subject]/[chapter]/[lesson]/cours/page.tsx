@@ -61,16 +61,25 @@ export default async function CoursPage({
             <BackButton fallback={`/reviser/${subject.slug}`} />
             <LessonPrintButton />
           </div>
+          {/* LE TITRE DE LA PAGE EST CELUI DE LA FICHE — le mot sur lequel
+              l'élève vient de taper (« Les noms »). Il portait le titre de la
+              leçon (« Dénombrables, indénombrables, pluriels irréguliers ») :
+              on atterrissait sur un intitulé qu'on n'avait pas choisi, et il
+              fallait relire la ligne du dessous pour être sûr d'être au bon
+              endroit. La leçon, elle, se dit dessous — quand elle a son propre
+              nom. */}
           <h1 className="font-heading mt-4 text-center text-2xl font-bold text-balance md:text-3xl">
-            {lesson.title}
+            {chapter.title}
           </h1>
           {/* Une feuille imprimée quitte l'app : sans cette ligne, l'élève
               retrouve un titre nu au fond de son classeur, sans savoir de
-              quelle matière ni de quel chapitre il vient. À l'écran, elle
-              situe la leçon dans son chapitre — utile quand on arrive par un
-              lien direct. */}
+              quelle matière il vient. À l'écran, elle situe la leçon dans sa
+              fiche — utile quand on arrive par un lien direct. */}
           <p className="mt-1 text-center text-sm opacity-70">
-            {subject.name} · {chapter.title}
+            {subject.name}
+            {lesson.title.trim() !== chapter.title.trim()
+              ? ` · ${lesson.title}`
+              : ''}
           </p>
         </div>
       </header>

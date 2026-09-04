@@ -222,10 +222,13 @@ export function chapterStatus(value: number): ChapterStatus {
   return 'non_commence'
 }
 
+// « Terminé » et non « Complété » : le second est un calque de l'anglais
+// « completed », le premier est le mot français — et celui que la coche de la
+// ligne dit déjà.
 export const STATUS_LABELS: Record<ChapterStatus, string> = {
   non_commence: 'Non commencé',
   en_cours: 'En cours',
-  complete: 'Complété',
+  complete: 'Terminé',
 }
 
 // Nombre de couronnes (0..3) allumées pour une valeur d'avancement donnée.
@@ -250,6 +253,22 @@ export function subjectProgress(values: number[]): SubjectProgress {
       ? Math.round((values.reduce((s, v) => s + v, 0) / total) * 100)
       : 0
   return { done, total, pct }
+}
+
+/**
+ * L'avancement d'un CHAPITRE du programme (un groupe de fiches), avec la MÊME
+ * règle que le header de la matière : la barre suit la moyenne des
+ * avancements, le compte ne dit que les fiches terminées.
+ *
+ * La jauge d'un chapitre ne comptait que ses fiches à 80 % : sur un chapitre
+ * de quatorze fiches, elle restait à zéro pendant des jours alors que celle du
+ * header, en haut du même écran, bougeait au premier quiz. Deux jauges, deux
+ * règles — l'élève ne pouvait pas savoir laquelle croire.
+ */
+export function chapterGroupProgress(
+  rows: { value: number }[],
+): SubjectProgress {
+  return subjectProgress(rows.map((r) => r.value))
 }
 
 // ---------------------------------------------------------------------------
@@ -310,6 +329,44 @@ export function minutesLabel(minutes: number): string {
   return `~${minutes} min`
 }
 
+/**
+ * « de » + nom de matière, avec l'élision du français : « d’Anglais »,
+ * « d’Histoire », mais « de Maths ». Le « h » compte comme une voyelle — les
+ * matières qui commencent par un h (histoire, histoire-géo) sont toutes à h
+ * muet.
+ */
+export function deLaMatiere(name: string): string {
+  const voyelle = /^[aeiouyhàâäéèêëîïôöùûüœ]/i.test(name.trim())
+  return voyelle ? `d’${name}` : `de ${name}`
+}
+
+// ---------------------------------------------------------------------------
+// Le quiz d'un chapitre du programme.
+//
+// Les contrôles, au collège comme au lycée, tombent PAR CHAPITRE. Or le
+// chapitre du programme n'était qu'un dossier : pour réviser « Le groupe
+// nominal » d'un coup, il fallait enchaîner ses six quiz un par un, et
+// l'examen blanc, lui, tire sur toute la matière. Le quiz du chapitre tire
+// dans les questions de TOUTES ses fiches, en conditions d'examen blanc
+// (chrono, bilan fiche par fiche à la fin).
+
+/** En dessous, le chapitre n'a qu'une fiche : son quiz est déjà celui-là. */
+export const CHAPTER_QUIZ_MIN_FICHES = 2
+
+/** L'adresse du quiz d'un chapitre du programme (l'examen blanc, ciblé). */
+export function chapterQuizHref(subjectSlug: string, theme: string): string {
+  const params = new URLSearchParams({ subject: subjectSlug, chapitre: theme })
+  return `/reviser/examen-blanc?${params.toString()}`
+}
+
+/** Un chapitre du programme mérite-t-il son quiz ? */
+export function hasChapterQuiz(group: {
+  theme: string | null
+  chapters: unknown[]
+}): boolean {
+  return group.theme !== null && group.chapters.length >= CHAPTER_QUIZ_MIN_FICHES
+}
+
 /** Compte de mots d'un cours, tolérant au markdown et au contenu vide. */
 export function countWords(content: string | null | undefined): number {
   if (!content) return 0
@@ -354,6 +411,12 @@ export type ChapterRow = {
   position: number
   title: string
   status: ChapterStatus
+  /**
+   * Avancement 0..1 de la ligne (`chapterValue`). C'est lui que la jauge d'un
+   * chapitre du programme moyenne — le statut seul ne suffit pas : une barre
+   * ne se recompose pas depuis des « en cours ».
+   */
+  value: number
   crowns: number
   href: string
   examHint: ChapterExamHint | null
@@ -577,12 +640,14 @@ export const SUPPORT_LABELS: Record<SupportKind, string> = {
   cours: 'Cours',
   quiz: 'Quiz',
   flashcards: 'Flashcards',
-  // « Fiches » et non « Carte mentale » : c'est le mot que l'élève emploie pour
-  // les fiches de révision d'un chapitre — celui qu'il dit à voix haute quand
-  // il demande « t'as les fiches ? ». SEULE SOURCE du nom : il change ici pour
-  // l'écran de chapitre, le pied de cours, l'onglet Mode de jeu et la fiche
-  // dépliée à la fois. La page, elle, garde son titre propre.
-  carte: 'Fiches',
+  // « Carte mentale », comme le titre de la page qu'il ouvre. Le support s'est
+  // appelé « Fiches » : le mot que l'élève emploie pour ses fiches de révision.
+  // Mais dans un dossier rangé sous ses chapitres, le header compte déjà des
+  // « fiches » (les lignes du programme) — le même mot désignait deux choses,
+  // et la page derrière s'intitulait une troisième. SEULE SOURCE du nom : il
+  // change ici pour l'écran de chapitre, le pied de cours et la fiche dépliée
+  // à la fois.
+  carte: 'Carte mentale',
   defi: 'Défi',
   erreurs: 'Mes erreurs',
 }

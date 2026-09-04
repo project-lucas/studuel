@@ -412,6 +412,7 @@ export default async function SubjectPage({
     position: chapter.position,
     title: chapter.title,
     status: chapterStatus(values[i]),
+    value: values[i],
     crowns: crowns(values[i]),
     href: `/reviser/${subject.slug}/${chapter.id}`,
     examHint: examsByChapter[chapter.id] ?? null,

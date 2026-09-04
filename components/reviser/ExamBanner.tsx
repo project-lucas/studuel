@@ -3,9 +3,11 @@
 import Link from 'next/link'
 import { ChevronRight, GraduationCap } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
+import { deLaMatiere } from '@/lib/subject-template'
 
-// Bannière « Examen blanc de [Matière] » (conservée du template précédent) :
-// conditions réelles, bilan chapitre par chapitre.
+// Bannière « Examen blanc d’Anglais » / « de Maths » (conservée du template
+// précédent) : conditions réelles, bilan chapitre par chapitre. L'élision est
+// faite (`deLaMatiere`) : « de Anglais » ne se dit pas.
 export default function ExamBanner({
   subject,
 }: {
@@ -22,7 +24,7 @@ export default function ExamBanner({
       </span>
       <span className="min-w-0 flex-1">
         <span className="font-heading block text-sm leading-tight font-bold">
-          Examen blanc de {subject.name}
+          Examen blanc {deLaMatiere(subject.name)}
         </span>
         <span className="mt-0.5 block text-[11px] font-semibold text-white/75">
           Conditions réelles · bilan chapitre par chapitre

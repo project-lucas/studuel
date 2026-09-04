@@ -36,11 +36,20 @@ import { cn } from '@/lib/utils'
 export default function ChapterProgressBar({
   done,
   total,
+  pct,
   unit,
   className,
 }: {
   done: number
   total: number
+  /**
+   * Remplissage de la barre, en % — la MOYENNE des avancements des fiches
+   * (`chapterGroupProgress`), la même règle que la barre du header. Sans lui,
+   * la barre suit le compte des fiches terminées : sur un chapitre de quatorze
+   * fiches elle restait à zéro pendant des jours, quand celle du header, en
+   * haut du même écran, bougeait au premier quiz.
+   */
+  pct?: number
   /** « fiche » ou « chapitre » — le mot que compte ce bloc. */
   unit: string
   className?: string
@@ -48,7 +57,7 @@ export default function ChapterProgressBar({
   if (total <= 0) return null
   const fait = Math.max(0, Math.min(done, total))
   const complete = fait >= total
-  const ratio = fait / total
+  const ratio = pct !== undefined ? Math.max(0, Math.min(pct, 100)) / 100 : fait / total
 
   return (
     <span

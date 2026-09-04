@@ -43,9 +43,13 @@ export default async function ExamenBlancPage({
 }: {
   // `?subject=slug` : examen blanc ciblé sur UNE matière (lancé depuis son
   // dossier). Absent → examen multi-matières classique.
-  searchParams: Promise<{ subject?: string }>
+  // `&chapitre=<thème>` : LE QUIZ D'UN CHAPITRE DU PROGRAMME — le même moteur
+  // (chrono, pas de correction en route, bilan à la fin), restreint aux fiches
+  // du chapitre (`chapters.theme`). Les contrôles tombent par chapitre ; il
+  // fallait jusque-là enchaîner les quiz de ses fiches un par un.
+  searchParams: Promise<{ subject?: string; chapitre?: string }>
 }) {
-  const { subject: subjectParam } = await searchParams
+  const { subject: subjectParam, chapitre: chapitreParam } = await searchParams
   const supabase = await createClient()
   const user = await getCurrentUser()
 
@@ -152,6 +156,11 @@ export default async function ExamenBlancPage({
     ? (allSubjects.find((s) => s.slug === subjectParam) ?? null)
     : null
   const targetSubjectName = targetSubject?.name ?? null
+  // Le chapitre du programme visé, seulement avec sa matière : un thème sans
+  // matière ne désigne rien (« Le groupe nominal » existe en anglais ET en
+  // espagnol).
+  const chapitreVise =
+    targetSubject && chapitreParam?.trim() ? chapitreParam.trim() : null
 
   // Chapitre de chaque quiz (pour le bilan) : quiz → leçon → chapitre.
   const quizList = quizzes ?? []
@@ -175,6 +184,9 @@ export default async function ExamenBlancPage({
 
   const chapterByLesson = new Map<string, string>()
   const chapterTitles = new Map<string, string>()
+  // Le thème (chapitre du programme, migration 234) de chaque ligne de
+  // `chapters` : c'est lui que filtre le quiz d'un chapitre.
+  const chapterThemes = new Map<string, string | null>()
   const chapterChain = (async () => {
     if (lessonIds.length === 0) return
     const { data: lessons } = await supabase
@@ -186,12 +198,26 @@ export default async function ExamenBlancPage({
     }
     const chapterIds = [...new Set(chapterByLesson.values())]
     if (chapterIds.length === 0) return
-    const { data: chapters } = await supabase
+    // `theme` demandé en plus : tant que la 234 n'est pas jouée, PostgREST
+    // refuse la colonne et `data` arrive à null — on redemande alors sans
+    // elle, pour que l'examen blanc ordinaire ne casse pas.
+    type Row = { id: string; title: string; theme?: string | null }
+    let { data: chapters } = await supabase
       .from('chapters')
-      .select('id, title')
+      .select('id, title, theme')
       .in('id', chapterIds)
+      .returns<Row[]>()
+    if (chapters === null) {
+      const repli = await supabase
+        .from('chapters')
+        .select('id, title')
+        .in('id', chapterIds)
+        .returns<Row[]>()
+      chapters = repli.data
+    }
     for (const c of chapters ?? []) {
       chapterTitles.set(String(c.id), String(c.title))
+      chapterThemes.set(String(c.id), c.theme?.trim() || null)
     }
   })()
 
@@ -225,7 +251,16 @@ export default async function ExamenBlancPage({
       const chapterId = quiz.lesson_id
         ? (chapterByLesson.get(quiz.lesson_id) ?? null)
         : null
-      const list = bySubject.get(quiz.subject) ?? []
+      // Quiz d'un chapitre : seules ses fiches composent.
+      if (chapitreVise) {
+        if (!chapterId || chapterThemes.get(chapterId) !== chapitreVise) continue
+      }
+      // Le sujet s'équilibre entre ses POOLS (composeExam tourne dessus à tour
+      // de rôle) : les matières pour un examen, les FICHES pour le quiz d'un
+      // chapitre — six fiches, six questions chacune avant de repasser à la
+      // première, au lieu d'un tirage qui pourrait n'en toucher que deux.
+      const pool = chapitreVise ? (chapterId ?? quiz.subject) : quiz.subject
+      const list = bySubject.get(pool) ?? []
       const shuffled = permuteQuizOptions(q.kind, q.options, q.correct_index, q.id)
       list.push({
         id: q.id,
@@ -238,7 +273,7 @@ export default async function ExamenBlancPage({
         chapterId,
         chapterTitle: chapterId ? (chapterTitles.get(chapterId) ?? null) : null,
       })
-      bySubject.set(quiz.subject, list)
+      bySubject.set(pool, list)
     }
   }
 
@@ -252,19 +287,31 @@ export default async function ExamenBlancPage({
           compter dans le temps de travail était le plus gros trou du compteur. */}
       <WorkTimer />
       <PageHeader
-        title={targetSubjectName ? `Examen blanc · ${targetSubjectName}` : 'Examen blanc'}
+        title={
+          chapitreVise
+            ? `Quiz du chapitre · ${chapitreVise}`
+            : targetSubjectName
+              ? `Examen blanc · ${targetSubjectName}`
+              : 'Examen blanc'
+        }
         description={
-          targetSubjectName
-            ? `Comme le jour J, sur ${targetSubjectName} : chrono et bilan par chapitre.`
-            : 'Comme le jour J : chrono, plusieurs matières, bilan à la fin.'
+          chapitreVise
+            ? `Tout le chapitre d'un coup, en ${targetSubjectName} : chrono et bilan fiche par fiche.`
+            : targetSubjectName
+              ? `Comme le jour J, sur ${targetSubjectName} : chrono et bilan par chapitre.`
+              : 'Comme le jour J : chrono, plusieurs matières, bilan à la fin.'
         }
       />
       <ExamBlancPlayer
         questions={examQuestions}
+        heading={chapitreVise ? 'Quiz du chapitre' : 'Examen blanc'}
+        unit={chapitreVise ? 'fiche' : 'chapitre'}
         examTitle={
-          targetSubjectName
-            ? `Examen blanc · ${targetSubjectName}`
-            : (EXAM_TITLES[grade] ?? 'Contrôle toutes matières')
+          chapitreVise
+            ? `${chapitreVise} · ${targetSubjectName}`
+            : targetSubjectName
+              ? `Examen blanc · ${targetSubjectName}`
+              : (EXAM_TITLES[grade] ?? 'Contrôle toutes matières')
         }
         subjectName={targetSubjectName}
         // Le dernier score enregistré n'a pas de matière : ne le montrer que

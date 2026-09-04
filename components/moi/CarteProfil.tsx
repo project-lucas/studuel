@@ -4,9 +4,10 @@ import Link from 'next/link'
 import { useEffect, useState, useTransition, type ReactNode } from 'react'
 import { Check, GraduationCap, Pencil, School, Settings } from 'lucide-react'
 import AvatarRender from '@/components/avatar/AvatarRender'
+import CompteurVerre, { type CompteurCarte } from '@/components/moi/CompteurVerre'
 import ProfileEditor from '@/components/defi/ProfileEditor'
 import BadgeGallery from '@/components/defi/BadgeGallery'
-import RankBadge, { type BadgeRank } from '@/components/defi/RankBadge'
+import type { BadgeRank } from '@/components/defi/RankBadge'
 import { setEquippedBadges } from '@/app/defi/profile-actions'
 import { MAX_EQUIPPED, type BadgeState } from '@/lib/badges'
 import type { AvatarConfig } from '@/lib/avatar'
@@ -27,8 +28,13 @@ import { cn } from '@/lib/utils'
 //     fait lire un objet et non un fond (`.moi-carte`).
 //   • L'AVATAR PORTE UN ANNEAU D'OR, et son niveau dans l'angle — celui du
 //     bandeau du haut, même nombre, même échelle.
-//   • TROIS COMPTEURS EN VERRE (série · temps · trophées) : ce que l'élève
-//     montre. Les autres chiffres vivent dans les tuiles sous la carte.
+//   • QUATRE PASTILLES EN VERRE SUR UNE RANGÉE (série · travail · trophées ·
+//     notes), puis LE CLASSEMENT en verre. Ils ont été trois pastilles ici ET
+//     trois tuiles blanches dessous qui répétaient deux d'entre elles (« des
+//     éléments en doublon », Lucas, 04/09/2026) : tout est monté dans la
+//     carte, une fois — les chiffres d'abord (ses preuves), sa place ensuite.
+//   • LES BADGES MIS EN AVANT sont collés au titre, dans l'identité : en pied
+//     de carte, un badge seul flottait dans un coin.
 //   • LE REFLET HOLOGRAPHIQUE balaie la carte UNE fois à l'ouverture, façon
 //     carte à collectionner, et rejoue quand on la touche. C'est le seul effet
 //     de l'écran — un seul objet le mérite, et il perd tout s'il est partagé.
@@ -53,22 +59,17 @@ export type CarteProfilData = {
   equippedBadgeIds: string[]
 }
 
-export type CompteurCarte = {
-  valeur: string
-  legende: string
-}
-
 /** Les 3 badges mis en avant, en pied de carte. */
 function BadgesEnAvant({ badges }: { badges: BadgeState[] }) {
   if (badges.length === 0) return null
   return (
-    <ul role="list" className="flex items-center gap-2">
+    <ul role="list" className="flex items-center gap-1">
       {badges.map((b) => (
         <li
           key={b.id}
           title={b.title}
           aria-label={b.title}
-          className="flex size-[34px] items-center justify-center rounded-xl bg-white/14 text-base ring-1 ring-white/18"
+          className="flex size-[26px] items-center justify-center rounded-lg bg-white/14 text-[13px] ring-1 ring-white/18"
         >
           <span aria-hidden="true">{b.icon}</span>
         </li>
@@ -81,13 +82,19 @@ export default function CarteProfil({
   data,
   workTitle,
   compteurs,
+  tuileNotes = null,
+  classement = null,
   suite = null,
 }: {
   data: CarteProfilData
   /** Le titre d'assiduité (« Assidu »), sans numéro. */
   workTitle: string
-  /** Les trois compteurs en verre : série, temps, trophées. */
-  compteurs: [CompteurCarte, CompteurCarte, CompteurCarte]
+  /** Les pastilles en verre : série, travail, trophées. */
+  compteurs: CompteurCarte[]
+  /** La pastille des notes (cliente : elle ouvre la saisie), la quatrième. */
+  tuileNotes?: ReactNode
+  /** Le bloc du classement, rendu en verre sous les pastilles. */
+  classement?: ReactNode
   /** Rendu sous la carte, dans la même section (l'écran continue). */
   suite?: ReactNode
 }) {
@@ -127,9 +134,10 @@ export default function CarteProfil({
 
   return (
     <section aria-label="Ma carte de joueur" className="relative">
-      {/* La carte commence SOUS le bandeau flottant du haut (pt-16 de <main>),
-          comme un objet posé sur la table — plus de bannière qui file jusqu'au
-          bord de l'écran : un objet a des bords. */}
+      {/* La carte prend LE HAUT DE L'ÉCRAN : l'onglet Moi n'a plus de bandeau
+          (lib/top-hud-routes — la carte disait déjà tout ce qu'il affichait).
+          Elle reste un objet posé sur la table, avec ses bords, pas une
+          bannière qui file jusqu'au bord de l'écran. */}
       <div
         className="moi-carte relative overflow-hidden rounded-3xl text-white"
         onClick={() => setReflet((n) => n + 1)}
@@ -216,7 +224,7 @@ export default function CarteProfil({
                   </span>
                 ) : null}
               </p>
-              <p className="mt-1.5">
+              <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-white/14 px-2.5 py-[3px] text-[10.5px] font-extrabold tracking-[0.06em] uppercase">
                   {workTitle}
                   <span aria-hidden="true" className="opacity-60">
@@ -225,35 +233,31 @@ export default function CarteProfil({
                   {/* « Bronze IV » : le libellé porte déjà sa division. */}
                   {data.rank.label}
                 </span>
-              </p>
+                {enAvant.length > 0 ? <BadgesEnAvant badges={enAvant} /> : null}
+              </div>
             </div>
           </div>
 
-          {/* Le blason de l'arène, en bas à droite de l'identité. */}
-          <div className="absolute top-[68px] right-3">
-            <RankBadge rank={data.rank} size={46} hideDivision />
+          {/* PLUS DE BLASON D'ARÈNE dans l'angle : retiré à la demande de Lucas
+              (04/09/2026). Le rang se lit déjà en toutes lettres dans la
+              pastille (« Bronze IV ») et le trophée compte dans ses compteurs. */}
+
+          {/* --- Les pastilles en verre, sur une rangée ---------------------- */}
+          <div className="mt-4 grid grid-cols-4 gap-2">
+            {compteurs.map((c) => (
+              <CompteurVerre key={c.legende} {...c} />
+            ))}
+            {tuileNotes ? (
+              <div className="min-w-0" onClick={(e) => e.stopPropagation()}>
+                {tuileNotes}
+              </div>
+            ) : null}
           </div>
 
-          {/* --- Les trois compteurs en verre --------------------------------- */}
-          <dl className="mt-4 grid grid-cols-3 gap-2">
-            {compteurs.map((c) => (
-              <div
-                key={c.legende}
-                className="rounded-2xl border border-white/16 bg-white/12 px-2 py-2 text-center backdrop-blur-[4px]"
-              >
-                <dd className="font-heading text-[19px] leading-none font-extrabold tabular-nums">
-                  {c.valeur}
-                </dd>
-                <dt className="mt-1 text-[10px] font-bold tracking-[0.05em] text-white/80 uppercase">
-                  {c.legende}
-                </dt>
-              </div>
-            ))}
-          </dl>
-
-          {enAvant.length > 0 ? (
-            <div className="mt-3">
-              <BadgesEnAvant badges={enAvant} />
+          {/* --- Le classement, en verre ------------------------------------- */}
+          {classement ? (
+            <div className="mt-3" onClick={(e) => e.stopPropagation()}>
+              {classement}
             </div>
           ) : null}
         </div>

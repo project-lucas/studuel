@@ -1,9 +1,49 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { sfx } from '@/lib/sounds'
 import marcelTete from '@/public/images/nav/marcel.webp'
+
+/** Après le dernier événement de défilement, le temps avant que la tête revienne. */
+const REPOS_APRES_DEFILEMENT_MS = 320
+
+/**
+ * LA TÊTE SE CACHE PENDANT LE DÉFILEMENT.
+ *
+ * Fixée en bas à droite, elle est posée EXACTEMENT dans la colonne des « + »
+ * des fiches du programme : en descendant la liste sur un téléphone, elle en
+ * couvrait un sur trois — le bouton qu'on vient chercher, caché par le coach
+ * qu'on n'a pas appelé. Pendant qu'on fait défiler, on lit la liste, on
+ * n'appelle pas Marcel ; la tête glisse sous le bord et revient dès que le
+ * doigt s'arrête, comme la barre collante du header. À l'arrêt, elle ne
+ * recouvre plus qu'une ligne, que le pouce déplace d'un geste.
+ *
+ * L'écouteur est posé en CAPTURE sur le document : il entend aussi les zones
+ * qui défilent à l'intérieur de la page (une feuille, un panneau), pas
+ * seulement la fenêtre.
+ */
+function useCacheAuDefilement(): boolean {
+  const [cache, setCache] = useState(false)
+  useEffect(() => {
+    let minuteur: ReturnType<typeof setTimeout> | undefined
+    const surDefilement = () => {
+      setCache(true)
+      if (minuteur) clearTimeout(minuteur)
+      minuteur = setTimeout(() => setCache(false), REPOS_APRES_DEFILEMENT_MS)
+    }
+    document.addEventListener('scroll', surDefilement, {
+      capture: true,
+      passive: true,
+    })
+    return () => {
+      if (minuteur) clearTimeout(minuteur)
+      document.removeEventListener('scroll', surDefilement, { capture: true })
+    }
+  }, [])
+  return cache
+}
 
 /**
  * LA PORTE DE MARCEL — sa tête, posée en bas à droite de Réviser.
@@ -47,12 +87,16 @@ export default function MarcelFab({ matiere }: { matiere?: string }) {
   const href = matiere
     ? `/marcel?matiere=${encodeURIComponent(matiere)}`
     : '/marcel'
+  const cache = useCacheAuDefilement()
   return (
     <Link
       href={href}
       onClick={() => sfx.tap()}
       aria-label="Demander à Marcel, ton coach"
       title="Marcel, ton coach"
+      // `data-cache` : la glissade sous le bord vit dans globals.css avec le
+      // reste du matériau du bouton (`.coach-fab[data-cache='true']`).
+      data-cache={cache ? 'true' : 'false'}
       className="coach-fab bg-card fixed right-4 bottom-24 z-40 flex size-16 items-center justify-center overflow-hidden rounded-full md:bottom-8"
     >
       {/* Enveloppe : elle porte le frétillement du survol. S'il vivait sur

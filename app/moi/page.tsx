@@ -12,7 +12,6 @@ import PageHeader from '@/components/PageHeader'
 import WorldBackdrop from '@/components/WorldBackdrop'
 import CarteProfil from '@/components/moi/CarteProfil'
 import Classement from '@/components/moi/Classement'
-import Preuves from '@/components/moi/Preuves'
 import TuileMoyenne from '@/components/moi/TuileMoyenne'
 import Vitrine from '@/components/moi/Vitrine'
 import RythmeBarres from '@/components/moi/RythmeBarres'
@@ -57,7 +56,6 @@ import {
   normalizeTermGrades,
 } from '@/lib/trajectoire-bac'
 import { workLevel } from '@/lib/work-level'
-import { meilleureSerie } from '@/lib/moi/habitudes'
 import type { ChapitreProgression } from '@/lib/progression'
 import { GRADE_LEVELS, type GradeLevel, type Subject } from '@/lib/types'
 import { GRADE_FULL_LABELS } from '@/lib/grades'
@@ -311,7 +309,6 @@ export default async function MoiPage() {
     ].map((row) => String(row.created_at).slice(0, 10)),
   )
   const serie = computeStreak(joursActifs)
-  const record = meilleureSerie(joursActifs)
 
   // --- Preuve n°2 : le temps de travail ------------------------------------
   // Le CUMUL vient de `profiles.work_seconds` (014) ; le RYTHME du journal
@@ -432,42 +429,42 @@ export default async function MoiPage() {
               equippedBadgeIds: profilJeu.equippedBadgeIds,
             }}
             workTitle={level.title}
-            // Les trois compteurs en verre : ce que l'élève montre. La série
-            // et le temps reviennent en tuiles dessous avec leur détail ; les
-            // trophées n'ont que cette place ici — l'arène a le reste.
+            // « Tu es dans le top 8 % des 5e ». Sur cet onglet la mesure en
+            // grand est l'ASSIDUITÉ : /moi est le miroir du travail fourni,
+            // l'arène a déjà le classement de la compétition — il passe ici
+            // en seconde ligne, avec la meilleure matière. Rendu EN VERRE dans
+            // la carte, entre l'identité et les compteurs.
+            classement={
+              <Classement
+                principal={standings.assiduite}
+                grade={standings.grade ?? gradeLevel}
+                secondaires={axes}
+                initiale={initiale}
+                verre
+              />
+            }
+            // Les pastilles en verre — ce qui ne redescend jamais (série,
+            // temps) et ce que l'arène a donné (trophées). Courtes : le record
+            // et la semaine en cours n'ont pas leur place ici, le bloc du
+            // rythme sous la carte raconte les huit semaines.
             compteurs={[
               { valeur: `${serie} j`, legende: 'série' },
-              { valeur: formatDuree(secondesTotal), legende: 'de travail' },
+              {
+                valeur: secondesTotal > 0 ? formatDuree(secondesTotal) : '0 min',
+                legende: 'travail',
+              },
               {
                 valeur: profilJeu.summary.trophies.toLocaleString('fr-FR'),
                 legende: 'trophées',
               },
             ]}
+            // LA TUILE DES NOTES, entière et cliente : la seule qui ouvre
+            // quelque chose (la saisie des moyennes de trimestre).
+            tuileNotes={
+              <TuileMoyenne bilan={moyenne} terms={terms} disabled={Boolean(termError)} />
+            }
           />
         ) : null}
-
-        {/* « Tu es dans le top 8 % des 5e ». Sur cet onglet la mesure en grand
-            est l'ASSIDUITÉ : /moi est le miroir du travail fourni, l'arène a
-            déjà le classement de la compétition — il passe ici en seconde
-            ligne, avec la meilleure matière. */}
-        <Classement
-          principal={standings.assiduite}
-          grade={standings.grade ?? gradeLevel}
-          secondaires={axes}
-          initiale={initiale}
-        />
-
-        <Preuves
-          serie={serie}
-          record={record}
-          secondesTotal={secondesTotal}
-          semaines={semaines}
-          // LA TUILE DES NOTES, entière et cliente : la seule qui ouvre
-          // quelque chose (la saisie des moyennes de trimestre).
-          tuileMoyenne={
-            <TuileMoyenne bilan={moyenne} terms={terms} disabled={Boolean(termError)} />
-          }
-        />
 
         <Vitrine liste={listeCouronnes} bilan={bilan} />
 

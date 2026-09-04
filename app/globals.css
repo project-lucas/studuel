@@ -2290,45 +2290,6 @@ a:active > .arena-menu-row {
     0 18px 34px -22px oklch(0.4 0.18 296 / 0.75);
 }
 
-/* LES PASTILLES D'ICÔNE DE « MES CHIFFRES » (components/moi/ChiffreCell.tsx).
-   Trois teintes, pas six : la flamme pour la série, le violet pour le travail,
-   l'or pour l'arène — exactement les familles que le bloc raconte déjà. Elles
-   sont dérivées des tokens (règle du projet : pas de hex en dur hors la flamme
-   de série), et le fond est un lavis très clair : la plaque doit rester blanche
-   et lisible, la couleur ne sert qu'à donner une porte d'entrée à l'œil. */
-.moi-chiffre-pastille {
-  transition: transform 0.12s ease;
-}
-.moi-chiffre-pastille--travail {
-  background: color-mix(in oklch, var(--primary), white 88%);
-  color: var(--primary);
-}
-/* L'or pur (#f5b722) est illisible en encre sur blanc à 16 px : on l'assombrit
-   pour le trait et on ne garde le jaune franc que dans le fond. */
-.moi-chiffre-pastille--arene {
-  background: color-mix(in oklch, var(--highlight), white 84%);
-  color: color-mix(in oklch, var(--highlight), black 38%);
-}
-/* La série ne porte pas d'icône de trait mais l'image de la flamme : la
-   pastille n'est là que pour lui donner son halo ambré. */
-.moi-chiffre-pastille--serie {
-  background: color-mix(in oklch, var(--highlight), white 82%);
-}
-/* Série à zéro : le halo s'éteint avec la flamme. */
-.moi-chiffre-pastille--eteinte {
-  background: var(--muted);
-}
-
-/* La seule cellule cliquable du bloc (les notes). Au repos elle ne se distingue
-   pas des cinq autres — une cellule surlignée en permanence au milieu de
-   chiffres aurait fait lire les cinq autres comme éteintes. */
-.moi-chiffre-bouton:hover {
-  background: color-mix(in oklch, var(--primary), white 95%);
-}
-.moi-chiffre-bouton:hover .moi-chiffre-pastille {
-  transform: scale(1.08);
-}
-
 /* Écriture à la craie : blanc cassé + halo poudreux léger. */
   /* Écriture à la craie : blanc cassé + halo poudreux léger. */
 .moi-chalk {
@@ -3565,7 +3526,9 @@ a:active > .arena-menu-row {
     0 5px 0 2px var(--coach-socle);
   transition:
     transform 0.15s var(--ease),
-    box-shadow 0.15s var(--ease);
+    box-shadow 0.15s var(--ease),
+    translate 0.2s var(--ease),
+    opacity 0.2s var(--ease);
 
   /* SA PROPRE COUCHE DE COMPOSITION — sinon il saccade au scroll rapide.
      Ce bouton cumule tout ce qui rend une rastérisation chère : il est `fixed`,
@@ -3593,6 +3556,15 @@ a:active > .arena-menu-row {
   box-shadow:
     0 0 0 2px var(--coach-ring),
     0 7px 0 2px var(--coach-socle);
+}
+/* PENDANT LE DÉFILEMENT, la tête glisse sous le bord bas de l'écran (cf.
+   MarcelFab) : elle libère la colonne des « + » des fiches qu'elle recouvrait.
+   `translate` et non `transform` — le survol et l'appui écrivent déjà
+   `transform`, et les deux se seraient écrasés. */
+.coach-fab[data-cache='true'] {
+  translate: 0 calc(100% + 2rem);
+  opacity: 0;
+  pointer-events: none;
 }
 /* L'enfoncement : le disque descend EXACTEMENT de la hauteur de son socle, qui
    disparaît. C'est ce qui fait « toucher le fond » plutôt que « rétrécir ». */
@@ -4723,6 +4695,61 @@ a:active > .arena-menu-row {
   }
 }
 
+/* --- Avant l'hydratation : la barre et le chiffre bougent SANS JavaScript ---
+   Sur un chargement à froid, le HTML arrive bien avant le JavaScript qui
+   anime l'écran : l'élève regardait une barre vide et un « 0 % » figés pendant
+   toute la descente du bundle — puis un bond à 92 %, puis 100 %. Le rideau
+   passait pour bloqué. Tant que `data-hydrated` manque sur `.splash`, ces
+   deux animations CSS jouent la MÊME courbe que `splashProgress`
+   (lib/splash.ts) : ease-out cubique sur 900 ms (SPLASH_RAMP_MS) jusqu'à 92
+   (SPLASH_WAIT_CEILING). L'état React repart de là où elles se sont arrêtées,
+   puisqu'il compte depuis le début de la navigation. Les deux nombres doivent
+   rester alignés avec lib/splash.ts.
+
+   Le chiffre est un COMPTEUR CSS piloté par une propriété enregistrée
+   (`@property`, syntaxe <integer>) : c'est la seule façon d'animer un nombre
+   sans script. Un navigateur qui ne connaît pas `@property` n'anime pas la
+   propriété et affiche « 0 % », comme avant — rien ne casse. */
+@property --splash-pct {
+  syntax: '<integer>';
+  inherits: false;
+  initial-value: 0;
+}
+.splash:not([data-hydrated]) .splash-fill {
+  animation: splash-prefill 900ms cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+@keyframes splash-prefill {
+  from {
+    width: 0;
+  }
+  to {
+    width: 92%;
+  }
+}
+.splash-pct {
+  --splash-pct: 0;
+}
+.splash:not([data-hydrated]) .splash-pct {
+  animation: splash-precount 900ms cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  counter-reset: splash-pct var(--splash-pct);
+}
+.splash:not([data-hydrated]) .splash-pct > span {
+  display: none;
+}
+.splash:not([data-hydrated]) .splash-pct::after {
+  /* \202F : l'espace fine insécable du « 92 % » français, la même que
+     `formatSplashPercent`. */
+  content: counter(splash-pct) '\202F%';
+}
+@keyframes splash-precount {
+  from {
+    --splash-pct: 0;
+  }
+  to {
+    --splash-pct: 92;
+  }
+}
+
 /* Gouttière de la barre : creusée dans la pierre, façon jeu mobile. */
 .splash-track {
   position: relative;
@@ -5310,15 +5337,6 @@ a:active > .arena-menu-row {
     0 1px 0 oklch(0.3 0.05 278 / 0.04),
     0 10px 30px -12px oklch(0.4 0.18 296 / 0.28);
 }
-.moi-preuve {
-  display: flex;
-  border-radius: 1.125rem;
-  padding: 0.75rem 0.625rem 0.625rem;
-  background: var(--card);
-  box-shadow:
-    0 1px 0 oklch(0.3 0.05 278 / 0.04),
-    0 10px 30px -12px oklch(0.4 0.18 296 / 0.28);
-}
 /* Le sourcil d'un bloc : petites capitales espacées, en encre atténuée. */
 .moi-sourcil {
   font-size: 10.5px;
@@ -5408,6 +5426,22 @@ a:active > .arena-menu-row {
   height: 20px;
   margin-left: -1px;
   background: var(--highlight);
+}
+/* LA FOULE DANS LA CARTE DE JOUEUR : le classement y est rendu en verre sur
+   le violet. Les silhouettes passent au blanc translucide, celles qu'on
+   devance à l'or, et le marqueur emprunte le violet profond de la carte pour
+   son cerne (sur le blanc de `--card`, il aurait l'air découpé). */
+.moi-carte .moi-silhouette {
+  background: oklch(1 0 0 / 0.18);
+}
+.moi-carte .moi-silhouette[data-etat='derriere'] {
+  background: oklch(1 0 0 / 0.3);
+}
+.moi-carte .moi-silhouette[data-etat='devant'] {
+  background: var(--highlight);
+}
+.moi-carte .moi-marqueur {
+  border-color: oklch(0.32 0.15 294);
 }
 .moi-jauge {
   transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);

@@ -1,5 +1,6 @@
 import BackButton from '@/components/BackButton'
 import SubjectIcon from '@/components/SubjectIcon'
+import AnneauProgression from '@/components/reviser/AnneauProgression'
 import { cn } from '@/lib/utils'
 import {
   subjectTheme,
@@ -145,13 +146,16 @@ export default function SubjectHeader({
             </h1>
             <p className="text-sm font-medium opacity-70">
               {discipline ?? 'Programme'} de {grade} ·{' '}
-              {progress.done}/{progress.total} {unit}s · {progress.pct}%
+              {progress.done}/{progress.total} {unit}s
             </p>
             {/* Sous la ligne de programme, qui dit où l'élève en est DANS la
                 matière : celle-ci dit où il se situe PAR RAPPORT aux autres.
                 Deux informations différentes, d'où deux lignes. */}
             {standing}
           </div>
+          {/* LE POURCENTAGE, EN GRAND. Il finissait la ligne grise en « · 1% » :
+              des heures de travail ne changeaient rien de visible ici. */}
+          <AnneauProgression pct={progress.pct} />
         </div>
 
         {/* Barre de progression globale de la matière */}

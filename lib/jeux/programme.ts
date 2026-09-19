@@ -17,9 +17,10 @@
 // CE QU'IL RÉPARE. Sans lui, la Route des trophées pousserait l'élève vers les
 // seuls drills : on fabriquerait un très bon jeu qui enseigne moins que le
 // Classé qu'il remplace. Avec lui, chaque matière a une entrée qui suit le BO.
-// Accessoirement il égalise le catalogue — Maths, Français et Anglais ont trois
-// jeux quand SVT, Physique-Chimie et Espagnol n'en ont que deux, et un total de
-// matière « somme des jeux » aurait rendu « je suis fort en SVT » illisible.
+// Accessoirement il égalise le catalogue : chaque matière a au moins un jeu de
+// salon PLUS son Programme. Depuis le tri du 19/09/2026 (12 jeux), toutes en
+// ont deux, sauf les Maths (Calcul mental seul) — leur total de trophées se
+// construit donc sur deux tuiles au lieu de trois.
 import type { GameFormat } from '@/lib/jeux/formats'
 import { SALONS } from '@/lib/jeux/catalog'
 

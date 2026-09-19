@@ -11,7 +11,7 @@ import {
   recordAttempt,
   startReviewSession,
   type AttemptResult,
-} from '@/app/reviser/cours/actions'
+} from '@/app/carnet/cours/actions'
 import QuestionPlayer, {
   type PlayerResult,
 } from '@/components/carnet/QuestionPlayer'
@@ -92,7 +92,7 @@ export default function ReviewSession({
   const sessionIdRef = useRef<string | null>(repriseSessionId)
   const endedRef = useRef(false)
 
-  const exitHref = backHref ?? `/reviser/cours/${courseId}`
+  const exitHref = backHref ?? `/carnet/cours/${courseId}`
   const exitLabel = backLabel ?? 'Retour au cours'
 
   // Ouvre la session côté serveur, une seule fois — sauf reprise, où elle est

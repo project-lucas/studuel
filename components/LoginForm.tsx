@@ -80,12 +80,15 @@ export default function LoginForm({ portes }: { portes: PortesOAuth }) {
                 name="full_name"
                 autoComplete="name"
                 placeholder="Prénom et nom"
+                className="h-11"
               />
             </div>
           ) : null}
 
           <div className="flex flex-col gap-2">
             <Label htmlFor="email">Email</Label>
+            {/* h-11 (44 px) : la porte d'entrée se tape au pouce, sur un écran
+                où rien d'autre ne réclame l'attention. */}
             <Input
               id="email"
               name="email"
@@ -93,6 +96,7 @@ export default function LoginForm({ portes }: { portes: PortesOAuth }) {
               required
               autoComplete="email"
               placeholder="eleve@exemple.fr"
+              className="h-11"
             />
           </div>
 
@@ -109,7 +113,7 @@ export default function LoginForm({ portes }: { portes: PortesOAuth }) {
                   mode === 'signin' ? 'current-password' : 'new-password'
                 }
                 placeholder="••••••••"
-                className="pr-10"
+                className="h-11 pr-10"
               />
               <button
                 type="button"
@@ -158,7 +162,7 @@ export default function LoginForm({ portes }: { portes: PortesOAuth }) {
             ) : null}
           </div>
 
-          <Button type="submit" disabled={pending}>
+          <Button type="submit" size="lg" disabled={pending}>
             {pending
               ? 'Un instant…'
               : mode === 'signin'

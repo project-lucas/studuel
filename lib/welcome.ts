@@ -1,6 +1,7 @@
 import type { Subject } from '@/lib/types'
 import { GRADE_LEVELS } from '@/lib/types'
 import { GRADE_SHORT_LABELS } from '@/lib/grades'
+import { isPortraitKey, type PortraitKey } from '@/lib/portraits'
 
 // Parcours d'accueil « façon Duolingo » (page /bienvenue) — direction fidèle au
 // design handoff Studuel : 14 écrans, on qualifie l'élève, on l'accroche avec
@@ -49,6 +50,10 @@ export type OnboardingAnswers = {
   // création du compte (l'onboarding est pré-auth), d'où le stockage en brouillon.
   schoolName: string | null
   schoolCity: string | null
+  // Le blason de joueur choisi à l'écran « Ton avatar » (lib/portraits). Il
+  // part dans le metadata d'inscription (→ profiles.avatar par le trigger,
+  // migration 361) ou dans applyOnboarding au retour OAuth.
+  avatar: PortraitKey | null
 }
 
 export const EMPTY_ANSWERS: OnboardingAnswers = {
@@ -63,6 +68,7 @@ export const EMPTY_ANSWERS: OnboardingAnswers = {
   notificationsEnabled: false,
   schoolName: null,
   schoolCity: null,
+  avatar: null,
 }
 
 // Ordre des 14 écrans (numérotation du design handoff en commentaire).
@@ -78,6 +84,7 @@ export const WELCOME_STEPS = [
   'dailyGoal', //       8. Objectif quotidien (minutes)
   'placementIntro', //  9. Placement — intro
   'placementQuiz', //  10. Mini-quiz de placement
+  'avatar', //         10bis. Ton avatar (blason de joueur — ajouté le 16/09/2026)
   'friends', //        11. Défie tes amis
   'notifications', //  12. Notifications
   'signup', //         13. Créer un compte
@@ -95,6 +102,7 @@ const STEP_PROGRESS: Partial<Record<WelcomeStep, number>> = {
   grade: 0.2,
   placementIntro: 0.3,
   placementQuiz: 0.4,
+  avatar: 0.48,
   signup: 0.55,
   goal: 0.7,
   dailyGoal: 0.8,
@@ -144,6 +152,12 @@ export const FAST_PATH: readonly WelcomeStep[] = [
   ...STEPS_BEFORE_PLAY,
   'placementIntro', // → le jeu
   'placementQuiz', // ← LA démonstration
+  // Le blason de joueur, JUSTE AVANT le compte : l'élève vient de jouer, il se
+  // choisit un visage — et c'est ce visage qu'on lui demande d'enregistrer à
+  // l'écran suivant. Avant le compte et non après, pour que le choix parte
+  // dans le metadata d'inscription : le chemin « confirme ton e-mail » n'a
+  // aucune session pour l'écrire plus tard.
+  'avatar',
   'signup', // on demande le compte une fois la valeur montrée
   'goal', // à partir d'ici : du confort, plus de l'acquisition
   'dailyGoal',
@@ -310,6 +324,8 @@ export function canAdvance(
       return answers.subjects.length > 0
     case 'dailyGoal':
       return isDailyGoalMinutes(answers.dailyGoalMinutes)
+    case 'avatar':
+      return answers.avatar !== null
     default:
       return true
   }
@@ -368,6 +384,7 @@ export function parseAnswers(raw: string | null): OnboardingAnswers {
     typeof d.schoolCity === 'string' && d.schoolCity.trim().length > 0
       ? d.schoolCity.trim().slice(0, 80)
       : null
+  const avatar = isPortraitKey(d.avatar) ? d.avatar : null
 
   return {
     profileType,
@@ -381,6 +398,7 @@ export function parseAnswers(raw: string | null): OnboardingAnswers {
     notificationsEnabled,
     schoolName,
     schoolCity,
+    avatar,
   }
 }
 

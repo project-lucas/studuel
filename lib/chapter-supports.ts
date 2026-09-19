@@ -1,6 +1,6 @@
-// Les supports d'un chapitre — Cours · Quiz · Flashcards · Carte mentale ·
-// Défi, plus « Mes erreurs » les jours où il y en a — choisis et étiquetés au
-// même endroit pour les TROIS écrans qui les proposent :
+// Les supports d'un chapitre — Cours · Fiche · Flashcards · Quiz · Exercice ·
+// Moi vs IA, plus « Mes erreurs » les jours où il y en a — choisis et étiquetés
+// au même endroit pour les TROIS écrans qui les proposent :
 //
 //  1. l'écran de chapitre, où l'élève choisit par quoi il commence (rien n'est
 //     encore lu : chaque support pointe le premier de son genre) ;
@@ -13,12 +13,16 @@
 // racontent jamais deux histoires différentes du même chapitre.
 
 import {
+  BIENTOT_LABEL,
   COMPLETE_THRESHOLD,
   SUPPORT_LABELS,
+  cahierBadge,
+  cahierMeta,
   carteMeta,
-  defiMeta,
   erreursBadge,
   erreursMeta,
+  exerciceBadge,
+  exerciceMeta,
   flashcardsBadge,
   flashcardsMeta,
   quizBadge,
@@ -41,8 +45,6 @@ export type SupportLesson = {
   dueCount: number
   /** Meilleur essai du quiz PROPRE à la leçon, `null` s'il n'a jamais été joué. */
   best: { score: number; total: number; ratio: number } | null
-  /** Le défi de cette leçon a-t-il déjà été relevé ? */
-  defiAttempted: boolean
   /** Le quiz est-il celui de la leçon (`false` = emprunté au chapitre) ? */
   ownQuiz: boolean
   /**
@@ -63,14 +65,31 @@ export type ChapterSupportsInput = {
   lessons: SupportLesson[]
   /** Carte mentale du chapitre : existante (ou dérivable) et déverrouillée ? */
   carte: { available: boolean; locked: boolean }
+  /**
+   * L'exercice du chapitre (le faux contrôle IA) : la meilleure copie rendue,
+   * et l'élève a-t-il l'abonnement qui l'ouvre. La tuile se montre dans tous
+   * les cas — c'est l'offre — mais elle porte la couronne.
+   */
+  exercice: {
+    best: { note: number; sur: number } | null
+    premium: boolean
+    /**
+     * Le CAHIER d'exercices du chapitre (migration 372) : combien d'exercices
+     * réussis sur combien. Absent ou vide = le chapitre n'a pas encore le sien,
+     * la tuile parle alors du contrôle blanc (la meilleure copie).
+     */
+    cahier?: { reussis: number; total: number } | null
+  }
   /** Notions de CE chapitre dans la file de révision du jour (0 = pas de tuile). */
   erreurs: number
 }
 
 /**
- * Les supports du chapitre, dans l'ordre d'usage : lire (cours), réviser
- * (quiz), mémoriser (flashcards), prendre de la hauteur (carte), jouer (défi),
- * corriger (mes erreurs, seulement s'il y en a).
+ * Les supports du chapitre, dans l'ordre des trois groupes : APPRENDRE (cours,
+ * fiche), MÉMORISER (flashcards, mes erreurs s'il y en a), SE TESTER (quiz,
+ * exercice, moi vs IA). C'est `groupSupports` qui les range à l'écran ; ici
+ * on les émet déjà dans cet ordre pour que les rendus en ligne (fiche dépliée)
+ * le suivent sans rien savoir des groupes.
  *
  * `focusLessonId` (pied de cours) épingle la leçon que l'élève vient de lire :
  * ses supports à elle, pas ceux d'une autre. Sans lui (onglet « Mode de jeu »),
@@ -80,7 +99,7 @@ export function buildChapterSupports(
   input: ChapterSupportsInput,
   focusLessonId?: string,
 ): SupportChip[] {
-  const { subjectSlug, chapterId, lessons, carte, erreurs } = input
+  const { subjectSlug, chapterId, lessons, carte, exercice, erreurs } = input
   const focusIndex = focusLessonId
     ? lessons.findIndex((l) => l.id === focusLessonId)
     : -1
@@ -106,23 +125,16 @@ export function buildChapterSupports(
     })
   }
 
-  // Quiz : celui de la leçon lue, sinon le premier du chapitre qui n'est pas
-  // déjà acquis — reprendre un quiz à 10/10 n'apprend plus rien.
-  const quizLesson =
-    (focus?.ownQuiz && focus.quizId ? focus : null) ??
-    lessons.find(
-      (l) => l.ownQuiz && l.quizId && (l.best?.ratio ?? 0) < COMPLETE_THRESHOLD,
-    ) ??
-    lessons.find((l) => l.ownQuiz && l.quizId) ??
-    null
-  if (quizLesson?.quizId) {
+  // Carte mentale : portée par le chapitre, pas par la leçon.
+  if (carte.available) {
     chips.push({
-      kind: 'quiz',
-      label: SUPPORT_LABELS.quiz,
-      meta: quizMeta(quizLesson.best),
-      badge: quizBadge(quizLesson.best, quizLesson.questionCount),
-      href: `/test/${quizLesson.quizId}`,
-      done: (quizLesson.best?.ratio ?? 0) >= COMPLETE_THRESHOLD,
+      kind: 'carte',
+      label: SUPPORT_LABELS.carte,
+      meta: carteMeta(carte.locked),
+      badge: carte.locked ? carteMeta(true) : null,
+      href: `/reviser/${subjectSlug}/${chapterId}/carte`,
+      done: false,
+      locked: carte.locked,
     })
   }
 
@@ -148,36 +160,6 @@ export function buildChapterSupports(
     })
   }
 
-  // Carte mentale : portée par le chapitre, pas par la leçon.
-  if (carte.available) {
-    chips.push({
-      kind: 'carte',
-      label: SUPPORT_LABELS.carte,
-      meta: carteMeta(carte.locked),
-      badge: carte.locked ? carteMeta(true) : null,
-      href: `/reviser/${subjectSlug}/${chapterId}/carte`,
-      done: false,
-      locked: carte.locked,
-    })
-  }
-
-  // Défi : la leçon lue, sinon la première dont le défi n'a pas été relevé.
-  const defiLesson =
-    (focus && focus.questionCount > 0 ? focus : null) ??
-    lessons.find((l) => l.questionCount > 0 && !l.defiAttempted) ??
-    lessons.find((l) => l.questionCount > 0) ??
-    null
-  if (defiLesson) {
-    chips.push({
-      kind: 'defi',
-      label: SUPPORT_LABELS.defi,
-      meta: defiMeta(defiLesson.defiAttempted),
-      badge: null,
-      href: `/reviser/${subjectSlug}/${chapterId}/${defiLesson.id}/defi`,
-      done: defiLesson.defiAttempted,
-    })
-  }
-
   // Mes erreurs : la tuile n'apparaît QUE s'il y a des notions à corriger.
   // Une tuile « 0 à revoir » occuperait une place pour ne rien proposer — et
   // c'est le seul support qui puisse légitimement ne pas exister ce jour-là.
@@ -191,6 +173,61 @@ export function buildChapterSupports(
       done: false,
     })
   }
+
+  // Quiz : celui de la leçon lue, sinon le premier du chapitre qui n'est pas
+  // déjà acquis — reprendre un quiz à 10/10 n'apprend plus rien.
+  const quizLesson =
+    (focus?.ownQuiz && focus.quizId ? focus : null) ??
+    lessons.find(
+      (l) => l.ownQuiz && l.quizId && (l.best?.ratio ?? 0) < COMPLETE_THRESHOLD,
+    ) ??
+    lessons.find((l) => l.ownQuiz && l.quizId) ??
+    null
+  if (quizLesson?.quizId) {
+    chips.push({
+      kind: 'quiz',
+      label: SUPPORT_LABELS.quiz,
+      meta: quizMeta(quizLesson.best),
+      badge: quizBadge(quizLesson.best, quizLesson.questionCount),
+      href: `/test/${quizLesson.quizId}`,
+      done: (quizLesson.best?.ratio ?? 0) >= COMPLETE_THRESHOLD,
+    })
+  }
+
+  // Exercice : le faux contrôle du CHAPITRE (pas d'une leçon), rédigé et
+  // corrigé par l'IA. Toujours proposé dès qu'il y a de quoi l'écrire — le
+  // cours — et coiffé de la couronne Studuel+.
+  // Le chapitre a son cahier (trois exercices à étoiles) : la tuile compte les
+  // exercices réussis, et se coche quand les trois le sont.
+  const cahier = exercice.cahier && exercice.cahier.total > 0 ? exercice.cahier : null
+  chips.push({
+    kind: 'exercice',
+    label: SUPPORT_LABELS.exercice,
+    meta: cahier ? cahierMeta(cahier) : exerciceMeta(exercice.best),
+    badge: cahier ? cahierBadge(cahier) : exerciceBadge(exercice.best),
+    href: `/reviser/${subjectSlug}/${chapterId}/exercice`,
+    done: cahier
+      ? cahier.reussis >= cahier.total
+      : exercice.best !== null &&
+        exercice.best.sur > 0 &&
+        exercice.best.note / exercice.best.sur >= COMPLETE_THRESHOLD,
+    premium: true,
+    locked: !exercice.premium,
+  })
+
+  // Moi vs IA : le BLOC RÉSERVÉ. Pas de page derrière — la tuile dit
+  // « Bientôt » et ne mène nulle part. Elle tient sa place dans « Se tester »
+  // pour qu'on voie l'écran tel qu'il sera si Lucas y revient.
+  chips.push({
+    kind: 'ia',
+    label: SUPPORT_LABELS.ia,
+    meta: BIENTOT_LABEL,
+    badge: BIENTOT_LABEL,
+    href: '',
+    done: false,
+    premium: true,
+    bientot: true,
+  })
 
   return chips
 }

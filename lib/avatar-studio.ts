@@ -17,6 +17,7 @@ import {
   type AvatarConfig,
   type FreeAvatarFieldKey,
 } from '@/lib/avatar'
+import { PORTRAIT_KEYS } from '@/lib/portraits'
 
 // Les catégories que le vestiaire sait rendre. La table `avatar_items` en
 // accepte une de plus — `hair_color` — et c'est volontaire : Open Peeps dessine
@@ -65,6 +66,10 @@ export type ItemState = 'equipped' | 'owned' | 'buyable' | 'locked'
 // traits par lesquels un élève se reconnaît. Le catalogue payant reste ce qui
 // se collectionne (peau rare, coiffures, couleurs, hauts, objets, bannières).
 export const STUDIO_TABS = [
+  // Le PORTRAIT d'abord : le blason peint remplace tout le reste quand il est
+  // choisi (lib/portraits.ts). Les onglets suivants règlent l'avatar composé,
+  // qui reste visible si l'élève choisit « Avatar dessiné ».
+  { id: 'portrait', label: 'Portrait', categories: [], freeFields: ['portrait'] },
   { id: 'visage', label: 'Visage', categories: ['body_skin'], freeFields: ['face'] },
   { id: 'coiffure', label: 'Coiffure', categories: ['hair_style'], freeFields: [] },
   { id: 'details', label: 'Détails', categories: [], freeFields: ['accessories', 'facialHair'] },
@@ -95,6 +100,7 @@ export const CATEGORY_LABELS: Record<AvatarItemCategory, string> = {
 // option porte donc son nom français ici, à un seul endroit.
 
 export const FREE_FIELD_LABELS: Record<FreeAvatarFieldKey, string> = {
+  portrait: 'Portrait',
   face: 'Expression',
   accessories: 'Lunettes',
   facialHair: 'Barbe',
@@ -103,6 +109,7 @@ export const FREE_FIELD_LABELS: Record<FreeAvatarFieldKey, string> = {
 
 /** Ce que dit le bouton « aucun » de chaque champ libre qui l'accepte. */
 export const FREE_FIELD_NONE_LABELS: Partial<Record<FreeAvatarFieldKey, string>> = {
+  portrait: 'Avatar dessiné',
   accessories: 'Sans',
   facialHair: 'Imberbe',
   backgroundColor: 'Sans fond',
@@ -154,6 +161,13 @@ const FREE_OPTION_LABELS: Record<string, string> = {
 
 /** Le nom FR d'une option de champ libre (l'identifiant brut en dernier repli). */
 export function freeOptionLabel(field: FreeAvatarFieldKey, value: string): string {
+  // Les blasons n'ont pas de nom : ils se reconnaissent, ils ne se lisent pas.
+  // On les numérote dans l'ordre de la grille (« Blason 1 » … « Blason 13 »),
+  // pas par leur clé de fichier, qui commence à 2.
+  if (field === 'portrait') {
+    const i = (PORTRAIT_KEYS as readonly string[]).indexOf(value)
+    return i === -1 ? value : `Blason ${i + 1}`
+  }
   return FREE_OPTION_LABELS[`${field}:${value}`] ?? value
 }
 

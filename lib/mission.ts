@@ -13,7 +13,7 @@
 
 import {
   derivePlanView,
-  nearestActiveControle,
+  activeControlesSorted,
   launchChapterId,
   controleTitle,
   countdownTag,
@@ -63,6 +63,13 @@ export type MissionInput = {
 export type MissionPlan = {
   mission: Mission | null
   ensuite: Mission[]
+  /**
+   * Les AUTRES contrôles actifs, du plus proche au plus lointain (sans-date en
+   * dernier), quand l'élève en a annoncé plusieurs. L'accueil les empile SOUS
+   * la mission : chaque contrôle a sa carte, celle du haut est celui qui
+   * tombe en premier. Vide s'il n'y a qu'un contrôle, ou aucun.
+   */
+  autresControles: Mission[]
 }
 
 /** Nombre maximal de suggestions dans le rail « Ensuite ». */
@@ -117,27 +124,31 @@ export function pickMission(input: MissionInput): MissionPlan {
   const aCommencer = chapters.filter((c) => c.state === 'a_commencer')
   const queue = [...enCours, ...fragiles, ...aCommencer]
 
-  // 1. Un contrôle actif ? Sa session du jour est LA mission.
-  let mission: Mission | null = null
-  const next = nearestActiveControle(controles, today)
-  if (next) {
-    const view = derivePlanView(next, today)
-    const name = subjectNameBySlug[next.subject] ?? next.subject
-    mission = {
+  // La session du jour d'un contrôle, en mission.
+  const controleMission = (c: Controle): Mission => {
+    const view = derivePlanView(c, today)
+    const name = subjectNameBySlug[c.subject] ?? c.subject
+    return {
       kind: 'controle',
-      subjectSlug: next.subject,
+      subjectSlug: c.subject,
       subjectName: name,
-      chapterId: launchChapterId(view, next),
-      chapterTitle: controleTitle(next, name),
+      chapterId: launchChapterId(view, c),
+      chapterTitle: controleTitle(c, name),
       minutes:
         view.todaySession?.durationMin ??
         (goalMinutes > 0 ? goalMinutes : DEFAULT_GOAL_MINUTES),
       progress: null,
-      countdown: countdownTag(next.date, today),
-      controleId: next.id,
+      countdown: countdownTag(c.date, today),
+      controleId: c.id,
       isNew: false,
     }
   }
+
+  // 1. Un contrôle actif ? Sa session du jour est LA mission — et les autres
+  //    contrôles, s'il y en a, suivent dans l'ordre des dates.
+  const [next, ...autres] = activeControlesSorted(controles, today)
+  let mission: Mission | null = next ? controleMission(next) : null
+  const autresControles = autres.map(controleMission)
 
   // 2/3. Sinon, la tête de file devient la mission ; le reste nourrit « Ensuite ».
   const rest = mission ? queue : queue.slice(1)
@@ -149,5 +160,5 @@ export function pickMission(input: MissionInput): MissionPlan {
     .slice(0, ENSUITE_MAX)
     .map(repriseMission)
 
-  return { mission, ensuite }
+  return { mission, ensuite, autresControles }
 }

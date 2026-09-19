@@ -4,7 +4,6 @@ import { useCallback, useMemo, useState, useTransition } from 'react'
 import { Search, X } from 'lucide-react'
 import ChapterItem from '@/components/reviser/ChapterItem'
 import ChapitreEntete, { ROBES, etatChapitre } from '@/components/reviser/ChapitreEntete'
-import ResumeCard from '@/components/reviser/ResumeCard'
 import { chapterSupports } from '@/app/reviser/[subject]/supports-actions'
 import { cn } from '@/lib/utils'
 import { GRID_PATTERN } from '@/lib/subject-style'
@@ -24,8 +23,8 @@ import {
 
 // Liste des chapitres de la matière, rangée par axe du programme quand la base
 // porte des thèmes (migration 234) : 28 lignes à plat, personne ne les relit.
-// Chaque section est repliable ; celle du chapitre à reprendre s'ouvre à
-// l'arrivée, les autres restent fermées — l'élève voit le programme en entier
+// Chaque section est repliable ; celle de la DERNIÈRE SESSION s'ouvre à
+// l'arrivée (sa fiche porte un drapeau), les autres restent fermées — l'élève voit le programme en entier
 // et sa place dedans, en un écran.
 //
 // Sans thème en base, un seul groupe implicite : la liste à plat d'avant.
@@ -48,7 +47,7 @@ export default function ChapterList({
   grade,
 }: {
   chapters: ChapterRow[]
-  /** Le chapitre mis en avant (« Reprendre » / « Commencer »), s'il en reste. */
+  /** La fiche de la dernière session de révision, si l’élève en a une. */
   resume: ResumeCta | null
   /** Slug de la matière — les supports d'une fiche se demandent par lui. */
   subjectSlug: string
@@ -181,44 +180,6 @@ export default function ChapterList({
     setOuvert(false)
   }
 
-  // LA FICHE À REPRENDRE, et le geste de la carte d'entrée : déplier son
-  // chapitre s'il est replié, ouvrir la fiche (ses supports se chargent), puis
-  // amener l'écran dessus. La carte ne mène pas ailleurs — elle mène ICI, à la
-  // ligne exacte où l'on continue.
-  const ficheAReprendre = resume
-    ? (chapters.find((c) => c.id === resume.chapterId) ?? null)
-    : null
-  const ouvrirLaReprise = () => {
-    if (!ficheAReprendre) return
-    const index = entiers.findIndex((g) =>
-      g.chapters.some((c) => c.id === ficheAReprendre.id),
-    )
-    if (index >= 0) {
-      const cle = cleDe(entiers[index], index)
-      setDeplies((d) => ({ ...d, [cle]: true }))
-      setChapitre(cle)
-    }
-    if (fiche !== ficheAReprendre.id) basculer(ficheAReprendre.id)
-    // Après le rendu qui déplie : la ligne n'existe pas encore dans le DOM au
-    // moment du clic si son chapitre était replié.
-    requestAnimationFrame(() => {
-      const ligne = document.getElementById(`ligne-${ficheAReprendre.id}`)
-      // Garde pour les environnements sans mise en page (tests) où la méthode
-      // n'existe pas.
-      if (ligne && typeof ligne.scrollIntoView === 'function') {
-        ligne.scrollIntoView({ block: 'center', behavior: 'smooth' })
-      }
-    })
-  }
-  const carteDEntree =
-    resume && ficheAReprendre && !cherche ? (
-      <ResumeCard
-        resume={resume}
-        chapter={ficheAReprendre}
-        onSelect={ouvrirLaReprise}
-      />
-    ) : null
-
   // `ranged` : la liste est rangée sous les chapitres du programme. Les lignes
   // n'y sont plus des chapitres mais des FICHES, numérotées dans leur chapitre
   // (1, 2, 3…) et non dans la matière — sans quoi « Chapitre 2 · Le groupe
@@ -328,9 +289,11 @@ export default function ChapterList({
 
   // Ce que la recherche a trouvé, dit à voix haute : sans ce compte, une liste
   // filtrée ressemble à un dossier qui aurait perdu son contenu.
+  // `text-current` : à même la page (bloc unique) il prend l'encre ; dans la
+  // plaque violette d'un chapitre il prend le blanc.
   const bilan = cherche ? (
     <p
-      className="mt-2 px-1 text-xs font-semibold text-muted-foreground"
+      className="mt-2 px-1 text-xs font-semibold text-current opacity-75"
       role="status"
       aria-live="polite"
     >
@@ -346,7 +309,7 @@ export default function ChapterList({
   if (entiers.length === 1 && entiers[0].theme === null) {
     return (
       <div>
-        {carteDEntree}
+        
         {cherchable ? (
           <div className="mt-4">
             <div className="flex justify-end">{bouton}</div>
@@ -363,7 +326,7 @@ export default function ChapterList({
 
   return (
     <div>
-      {carteDEntree}
+      
       <div className="mt-4 flex flex-col gap-3">
       {groups.map((group, i) => {
         const cle = cleDe(group, i)
@@ -410,16 +373,14 @@ export default function ChapterList({
               efface ? EFFACE : null,
             )}
           >
-            {/* Le quadrillage du header, en filigrane, sur la seule carte
-                finie : c'est la plaque violette de l'arène, pas une carte
-                crème teintée. */}
-            {etat === 'termine' ? (
-              <div
-                className="pointer-events-none absolute inset-0 opacity-[0.07]"
-                style={GRID_PATTERN}
-                aria-hidden="true"
-              />
-            ) : null}
+            {/* Le quadrillage du header, en filigrane, sur CHAQUE carte :
+                c'est la plaque violette de l'arène (toutes les cartes la
+                portent depuis le 16/09/2026, cf. `ROBES`). */}
+            <div
+              className="pointer-events-none absolute inset-0 opacity-[0.07]"
+              style={GRID_PATTERN}
+              aria-hidden="true"
+            />
             <ChapitreEntete
               titre={group.theme ?? 'Autres chapitres'}
               cle={cle}

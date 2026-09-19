@@ -1,3 +1,4 @@
+import { CalendarDays } from 'lucide-react'
 import {
   OBJECTIF_HEBDO_SECONDES,
   formatDuree,
@@ -36,8 +37,15 @@ export default function RythmeBarres({
 
   return (
     <section aria-label="Ton rythme" className="moi-bloc rounded-[22px] p-4">
-      <h2 className="font-heading text-base leading-tight font-extrabold">Ton rythme</h2>
-      <p className="moi-sourcil mt-0.5">{phrase}</p>
+      <div className="flex items-center gap-2.5">
+        <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-secondary text-primary">
+          <CalendarDays className="size-5" strokeWidth={2.4} aria-hidden="true" />
+        </span>
+        <div className="min-w-0 flex-1">
+          <h2 className="font-heading text-base leading-tight font-extrabold">Ton rythme</h2>
+          <p className="moi-sourcil mt-0.5">{phrase}</p>
+        </div>
+      </div>
 
       <div className="relative mt-6 h-[84px]">
         {/* L'objectif : une ligne, pas une consigne. */}

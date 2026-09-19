@@ -7,6 +7,7 @@ import { getCurrentUser } from '@/lib/supabase/user'
 import { claimPendingReferral } from '@/lib/referral-claim'
 import { GRADE_LEVELS } from '@/lib/types'
 import { schoolLevelForGrade } from '@/lib/clan'
+import { isPortraitKey } from '@/lib/portraits'
 import {
   ensurePlacement,
   PLACEMENT_SIZE,
@@ -116,6 +117,9 @@ export async function signUpWelcome(input: {
     placement_level: a.placement?.level ?? null,
     notify_opt_in: a.notificationsEnabled === true,
     onboarded: true,
+    // Le blason choisi à l'écran « Ton avatar » : recopié dans profiles.avatar
+    // par le trigger (migration 361), même sans session (confirmation d'e-mail).
+    avatar: isPortraitKey(a.avatar) ? { portrait: a.avatar } : null,
   }
 
   const supabase = await createClient()
@@ -245,6 +249,9 @@ export async function applyOnboarding(
       placement_level: placementLevel,
       notify_opt_in: answers.notificationsEnabled === true,
       onboarded: true,
+      // Le blason choisi (écran « Ton avatar »). Un brouillon sans blason ne
+      // touche pas la colonne : l'avatar composé par défaut reste en place.
+      ...(isPortraitKey(answers.avatar) ? { avatar: { portrait: answers.avatar } } : {}),
     })
     .eq('id', user.id)
 

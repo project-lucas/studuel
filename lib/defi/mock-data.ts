@@ -44,7 +44,8 @@ const LEAGUE_XP: readonly number[] = [
 ]
 
 export const MOCK_LEAGUE: League = {
-  name: 'Ligue Bronze',
+  tier: 0,
+  name: 'Division Bronze',
   tierIcon: '🥉',
   resetLabel: 'Reset lundi',
   promotionCount: 5,

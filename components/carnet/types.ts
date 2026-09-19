@@ -1,6 +1,7 @@
 // Formes sérialisées passées du serveur aux composants du carnet — jamais le
 // contenu complet des questions dans les listes, seulement de quoi afficher.
 import type { CourseQuestionType } from '@/lib/carnet-cours'
+import type { OrigineQuestion } from '@/lib/carnet/origine'
 
 export type CourseHeader = {
   id: string
@@ -17,4 +18,6 @@ export type CourseQuestionRow = {
   position: number
   summary: string
   ready: boolean
+  /** D'où vient la question (migration 357) ; null avant elle. */
+  origine: OrigineQuestion | null
 }

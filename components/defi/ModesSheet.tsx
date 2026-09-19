@@ -1,75 +1,107 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-import Link from 'next/link'
+import { useEffect, useId, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import Image from 'next/image'
-import { plaqueClaire } from '@/lib/defi/plaque-claire'
-import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
-import { Swords, X } from 'lucide-react'
+import { AnimatePresence, motion, useDragControls, useReducedMotion } from 'framer-motion'
+import { ChevronDown, LayoutGrid } from 'lucide-react'
 import ModeTicketCard from '@/components/defi/ModeTicket'
+import { plaqueClaire } from '@/lib/defi/plaque-claire'
+import { casesPalmares, type LignePalmares } from '@/lib/palmares/palmares'
+import { isEpreuveId } from '@/lib/palmares/epreuves'
+import { ordinal } from '@/lib/percentile'
 import { FLANK_CLASS } from '@/components/defi/ArenaActionBar'
-import SubjectRoulette from '@/components/defi/SubjectRoulette'
 import { sfx } from '@/lib/sounds'
 import { useDialogFocus } from '@/lib/use-dialog'
 import { verrouillerDefilement } from '@/lib/scroll-lock'
 import { useRecords } from '@/lib/jeux/use-records'
+import { useEtoilesJeux } from '@/lib/jeux/use-etoiles-jeux'
 import {
-  ROULETTE_SUBJECTS,
-  subjectGameTickets,
   funModeTickets,
+  vueModes,
   type ModeTicket,
 } from '@/lib/defi/modes-catalog'
+import { cn } from '@/lib/utils'
+import styles from './ModesSheet.module.css'
 
 /**
- * La LISTE de billets d'une section, avec le record personnel de chacun. Les
- * records se lisent en une fois (localStorage, après montage) : chaque billet
- * annonce ainsi le chiffre à battre avant même qu'on tape dessus.
+ * « 1er cette semaine », « 7e sur 41 » : la place de la semaine de chaque
+ * épreuve, lue du palmarès serveur. Une épreuve sans place n'a pas d'entrée —
+ * le billet n'affiche alors rien plutôt qu'un rang inventé.
  */
-function TicketList({ tickets }: { tickets: ModeTicket[] }) {
-  const records = useRecords(
-    tickets.flatMap((t) => (t.recordKey ? [t.recordKey] : [])),
-  )
-  return (
-    <>
-      {tickets.map((t) => (
-        <ModeTicketCard
-          key={t.id}
-          ticket={t}
-          record={
-            records && t.recordKey ? (records[t.recordKey] ?? 0) : null
-          }
-        />
-      ))}
-    </>
-  )
+function placesDeLaSemaine(lignes: readonly LignePalmares[]): Record<string, string> {
+  const places: Record<string, string> = {}
+  for (const c of casesPalmares(lignes)) {
+    if (!isEpreuveId(c.mode) || c.semaine.kind === 'aucun') continue
+    places[c.mode] =
+      c.semaine.kind === 'rang'
+        ? c.semaine.rank <= 3
+          ? `${ordinal(c.semaine.rank)} cette semaine`
+          : `${ordinal(c.semaine.rank)} sur ${c.semaine.total}`
+        : c.semaine.side === 'top'
+          ? `Top ${c.semaine.value} %`
+          : `Mieux que ${c.semaine.value} %`
+  }
+  return places
+}
+
+// L'ouverture « smooth, légère » (Lucas, 19/09/2026) : la courbe des feuilles
+// d'iOS — un départ franc qui se pose en douceur, sans rebond —, un voile qui
+// se lève sans à-coup, et une fermeture plus vive que l'ouverture.
+const GLISSE = { type: 'tween', duration: 0.44, ease: [0.32, 0.72, 0, 1] } as const
+const REPLI = { type: 'tween', duration: 0.26, ease: [0.4, 0, 1, 1] } as const
+
+/** Le compte de trophées à la française : « 1 234 », espace fine insécable. */
+function nombre(n: number): string {
+  return Math.round(n).toLocaleString('fr-FR').replace(/\s/g, ' ')
 }
 
 /**
- * Le bouton « MODES DE JEU » de l'arène et sa feuille. Au tap, un panneau monte
- * du bas (même mécanique que les feuilles d'orbes). En haut, la ROULETTE de
- * matières ; en dessous, les JEUX de la matière choisie, puis les MODES FUN de
- * l'Arène (communs à toutes les matières). Le « Duel en direct » (QR) vit ici en
- * icône flottante (en-tête, haut à droite) ; le Match classé garde son CTA sur
- * l'écran d'arène.
+ * Le bouton « MODES DE JEU » de l'arène et sa feuille — l'écran des modes de
+ * Clash Royale (Lucas, 19/09/2026) :
+ *
+ *   · la feuille monte du bas mais NE COUVRE PAS tout : le haut de l'arène
+ *     reste visible, assombri — on sait d'où l'on vient, et un tap dessus
+ *     referme ; la languette à chevron aussi, comme le glisser vers le bas ;
+ *   · en tête, le titre « Modes de jeu », puis le TOTAL DE TROPHÉES ;
+ *   · puis la LISTE : le mode du jour en grand billet, chaque matière avec
+ *     UN jeu — son jeu libre —, et les modes de l'Arène. Le bouton en haut à
+ *     droite déplie TOUS les modes de chaque matière (les jeux Studuel+ sous
+ *     cadenas pour qui ne l'a pas, les « Bientôt ») : sans lui, un mode par
+ *     matière (Lucas, 19/09/2026).
+ *
+ * Plus de roulette de matières : la liste montre tout, comme au modèle, et
+ * chaque matière y porte sa vignette — la même que dans son dossier.
  */
 export default function ModesSheet({
   todayKey,
   liveDuel = false,
+  palmares = [],
+  trophees = null,
+  premium = false,
 }: {
   todayKey: string
-  /** Élève connecté : affiche l'icône flottante « Duel en direct » (QR). */
+  /** Élève connecté : les billets « Duel en direct » (QR) et « Mode Coop » rejoignent la liste. */
   liveDuel?: boolean
+  /** Mon palmarès (352) : la place de la semaine se pose sur les billets. */
+  palmares?: readonly LignePalmares[]
+  /** Mon total de trophées, null pour un visiteur. */
+  trophees?: number | null
+  /** Abonné Studuel+ : tous les jeux de chaque matière s'ouvrent. */
+  premium?: boolean
 }) {
   const [open, setOpen] = useState(false)
-  const [activeIndex, setActiveIndex] = useState(0)
+  // Tous les modes de chaque matière, ou un seul (le jeu libre) : le choix
+  // tient le temps de la visite de l'arène.
+  const [tout, setTout] = useState(false)
   const reduce = useReducedMotion()
   const panel = useRef<HTMLDivElement>(null)
+  const drag = useDragControls()
+  const titreId = useId()
   useDialogFocus(panel, open)
 
   // Fermeture au clavier (Échap) + verrou du défilement de la page tant que
-  // l'espace plein écran est ouvert (il couvre tout, la page derrière ne doit
-  // pas glisser).
+  // la feuille est ouverte.
   useEffect(() => {
     if (!open) return
     const onKey = (e: KeyboardEvent) => {
@@ -83,22 +115,41 @@ export default function ModesSheet({
     }
   }, [open])
 
-  const subject = ROULETTE_SUBJECTS[activeIndex]?.subject ?? ''
-  const gameTickets = subjectGameTickets(subject)
-  const funTickets = funModeTickets(todayKey)
+  const fermer = () => {
+    sfx.back()
+    setOpen(false)
+  }
+
+  // Le mode du jour, UN jeu par matière — et, derrière le bouton « tous les
+  // modes », le reste : seconds jeux, modes de l'Arène, Duel en direct, Coop.
+  const { vedette, sections, arene, replies } = vueModes({
+    dayKey: todayKey,
+    premium,
+    tout,
+    connecte: liveDuel,
+  })
+  const modes = funModeTickets(todayKey)
+  const places = placesDeLaSemaine(palmares)
+  const tousLesBillets = [...sections.flatMap((s) => s.tickets), ...modes]
+  const records = useRecords(tousLesBillets.flatMap((t) => (t.recordKey ? [t.recordKey] : [])))
+  const etoiles = useEtoilesJeux(tousLesBillets.flatMap((t) => (t.gameId ? [t.gameId] : [])))
+
+  const billet = (t: ModeTicket) => (
+    <ModeTicketCard
+      key={t.id}
+      ticket={t}
+      // Un jeu à paliers montre ses étoiles ; un mode au score, son record.
+      etoiles={t.gameId && etoiles && !t.verrou ? (etoiles[t.gameId] ?? 0) : null}
+      record={!t.gameId && records && t.recordKey ? (records[t.recordKey] ?? 0) : null}
+      place={places[t.id] ?? null}
+    />
+  )
 
   return (
     <>
       {/* Le déclencheur : PLAQUE DE FLANC, jumelle de celle qui tient l'autre
-          bord — même largeur, même biseau, même rayon, même ombre portée, et la
-          même grammaire interne : une icône de 30 px, puis le mot qui nomme la
-          plaque. Deux jumelles encadrent ; deux accessoires dépareillés, non.
-
-          Sombre exprès : dans la barre, seul l'or de COMBAT appelle. La gemme
-          violette ronde qui occupait ce cadre est partie avec le reste des
-          formes rondes — une icône nue sur la plaque suffit, et elle laisse à la
-          plaque son rôle de bouton. La liste des modes (Blitz · Chrono · Survie)
-          ne tient pas dans 92 px : elle vit dans l'`aria-label` et l'infobulle. */}
+          bord (même largeur, biseau, rayon, ombre). L'icône seule, en grand ;
+          la phrase entière vit dans l'`aria-label` et l'infobulle. */}
       <button
         type="button"
         onClick={() => {
@@ -109,33 +160,10 @@ export default function ModesSheet({
         aria-label="Modes de jeu — jeux par matière, Blitz, Chrono, Survie et boss"
         title="Modes de jeu — Blitz, Chrono, Survie, Boss"
         className={`arena-plate arena-plate--clair arena-plate--press ${FLANK_CLASS} flex cursor-pointer flex-col items-center justify-center focus-visible:ring-4 focus-visible:ring-white/60 focus-visible:outline-none`}
-        // Un seul fond, le MÊME que le flanc d'en face et fabriqué au même
-        // endroit : la pierre violette claire. Deux plaques qui encadrent un
-        // bouton doivent être jumelles — la moindre nuance entre elles se lit
-        // comme une différence de rang.
         style={{ background: plaqueClaire() }}
       >
-        {/* L'ICÔNE SEULE, EN GRAND — le mot « Modes » a été retiré.
-            Il occupait le tiers bas d'une plaque de 92 px pour redire ce que le
-            dessin montre déjà, et forçait l'illustration à tenir dans 36 px, où
-            elle n'était plus qu'une tache. Sans lui elle passe à 56 px et
-            redevient lisible d'un coup d'œil.
-
-            RIEN N'EST PERDU POUR QUI NE VOIT PAS : l'`aria-label` du bouton
-            porte la phrase entière (« Modes de jeu — jeux par matière, Blitz,
-            Chrono, Survie et boss »), et le `title` la rend au survol. Le mot
-            n'a disparu que du pixel.
-
-            ELLE A SON MÉDAILLON, comme le flanc voisin. Je l'avais d'abord
-            posée à même la plaque, en pensant qu'une icône peinte pour un fond
-            sombre s'en passerait. À l'écran, la manette est VIOLETTE sur une
-            plaque VIOLETTE : elle disparaissait. Le disque crème règle le cas,
-            et il le règle pour de bon — toutes les illustrations du jeu sont
-            peintes pour un fond clair, aucune ne tient sur le violet de
-            l'arène. Les deux flancs partagent donc la même construction :
-            plaque = cadre, médaillon = scène, illustration = sujet. */}
         <Image
-          src="/images/defi/icones/modes-v2.webp"
+          src="/images/defi/icones/modes-v4.webp"
           alt=""
           aria-hidden="true"
           width={256}
@@ -149,119 +177,164 @@ export default function ModesSheet({
         ? createPortal(
             <AnimatePresence>
               {open ? (
-                // L'espace PLEIN ÉCRAN : opaque, au-dessus de la barre d'onglets
-                // (z-[70] > nav en z-50), il monte du bas et couvre tout.
-                <motion.div
-                  ref={panel}
-                  data-no-swipe
-                  className="defi-modes-screen fixed inset-0 z-[70] flex flex-col outline-none"
-                  role="dialog"
-                  aria-modal="true"
-                  aria-label="Modes de jeu"
-                  initial={reduce ? { opacity: 0 } : { y: '100%' }}
-                  animate={reduce ? { opacity: 1 } : { y: 0 }}
-                  exit={reduce ? { opacity: 0 } : { y: '100%' }}
-                  transition={{ type: 'tween', duration: 0.3, ease: 'easeOut' }}
-                >
-                  {/* En-tête : gros bouton FERMER (croix, imposante et claire,
-                      cohérente avec les autres modales) + bandeau-titre en
-                      pierre, façon écran de modes. */}
-                  <header className="relative flex shrink-0 flex-col items-center gap-3 px-4 pt-[calc(env(safe-area-inset-top)+0.75rem)] pb-3">
-                    <button
-                      type="button"
-                      onClick={() => {
-                        sfx.back()
-                        setOpen(false)
-                      }}
-                      aria-label="Fermer les modes de jeu"
-                      className="olympe-gem olympe-press grid size-14 cursor-pointer place-items-center rounded-2xl focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
-                    >
-                      <X
-                        className="size-8 text-white"
-                        strokeWidth={3}
-                        aria-hidden="true"
-                      />
-                    </button>
-
-                    {/* « Duel en direct » (QR) : icône flottante en haut à droite
-                        de l'écran des modes — remplace l'ancien bouton pleine
-                        largeur de l'arène. Uniquement pour l'élève connecté. */}
-                    {liveDuel ? (
-                      <Link
-                        href="/defi/duel-rapide"
-                        onClick={() => sfx.tap()}
-                        aria-label="Duel en direct — invite un ami par QR"
-                        title="Duel en direct"
-                        className="olympe-gem olympe-press absolute top-[calc(env(safe-area-inset-top)+0.75rem)] right-4 z-10 grid size-14 cursor-pointer place-items-center rounded-2xl focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
+                <>
+                  {/* Le haut de l'arène, ASSOMBRI : visible, hors jeu. Un tap
+                      referme, comme au modèle. */}
+                  <motion.div
+                    key="voile"
+                    className={styles.voile}
+                    aria-hidden="true"
+                    onClick={fermer}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0, transition: { duration: 0.22 } }}
+                    transition={{ duration: 0.34, ease: 'easeOut' }}
+                  />
+                  <motion.div
+                    key="feuille"
+                    ref={panel}
+                    className={styles.feuille}
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby={titreId}
+                    initial={reduce ? { opacity: 0 } : { y: '100%' }}
+                    animate={reduce ? { opacity: 1 } : { y: 0 }}
+                    exit={reduce ? { opacity: 0 } : { y: '100%', transition: REPLI }}
+                    transition={GLISSE}
+                    // Glisser la languette ou le bandeau vers le bas referme ;
+                    // la liste, elle, garde son défilement.
+                    drag={reduce ? false : 'y'}
+                    dragListener={false}
+                    dragControls={drag}
+                    dragConstraints={{ top: 0, bottom: 0 }}
+                    dragElastic={{ top: 0, bottom: 0.7 }}
+                    onDragEnd={(_, info) => {
+                      if (info.offset.y > 110 || info.velocity.y > 600) fermer()
+                    }}
+                  >
+                    {/* La languette à chevron, qui dépasse du bandeau. */}
+                    <div className={styles.languette} onPointerDown={(e) => drag.start(e)}>
+                      <svg viewBox="0 0 285 115" preserveAspectRatio="none" aria-hidden="true">
+                        <defs>
+                          <linearGradient id="modes-languette" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0" className={styles.languetteHaut} />
+                            <stop offset="0.3" className={styles.languetteMilieu} />
+                            <stop offset="1" className={styles.languetteBas} />
+                          </linearGradient>
+                        </defs>
+                        <path
+                          d="M0 118 L38 16 Q44 2 60 2 H225 Q241 2 247 16 L285 118 Z"
+                          fill="url(#modes-languette)"
+                        />
+                        <path
+                          d="M40 13 Q46 3 60 3 H225 Q239 3 245 13"
+                          fill="none"
+                          strokeWidth="3"
+                          className={styles.languetteFilet}
+                        />
+                      </svg>
+                      <button
+                        type="button"
+                        onClick={fermer}
+                        aria-label="Fermer les modes de jeu"
+                        className={styles.poignee}
                       >
-                        <Swords className="size-7 text-white" aria-hidden="true" />
-                        <span
-                          aria-hidden="true"
-                          className="font-heading absolute -bottom-2.5 left-1/2 -translate-x-1/2 rounded-full bg-highlight px-1.5 py-0.5 text-[9px] font-extrabold tracking-wide text-foreground uppercase shadow-sm"
-                        >
-                          Direct
-                        </span>
-                      </Link>
-                    ) : null}
+                        <ChevronDown className={styles.chevron} strokeWidth={3.4} aria-hidden="true" />
+                      </button>
+                    </div>
 
-                    <div className="defi-modes-banner flex w-full max-w-md items-center justify-center gap-2 rounded-2xl px-5 py-2.5">
-                      {/* La MÊME icône que sur la plaque qui ouvre cette
-                          feuille : c'est ce qui rattache l'écran au geste qui
-                          l'a fait venir. Deux dessins différents pour la même
-                          chose obligeraient l'élève à réapprendre où il est. */}
-                      <Image
-                        src="/images/defi/icones/modes-v2.webp"
-                        alt=""
-                        aria-hidden="true"
-                        width={256}
-                        height={256}
-                        sizes="32px"
-                        className="size-8 object-contain"
-                      />
-                      <h2 className="font-heading text-center text-2xl font-extrabold tracking-wide text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+                    <header className={styles.bandeau} onPointerDown={(e) => drag.start(e)}>
+                      <h2 id={titreId} className={cn(styles.encre, styles.titre, 'font-heading font-extrabold')}>
                         Modes de jeu
                       </h2>
-                    </div>
-                  </header>
+                    </header>
 
-                  {/* La roulette de matières, collée sous l'en-tête. */}
-                  <div className="shrink-0 border-y border-white/10 bg-black/15 py-1">
-                    <div className="mx-auto w-full max-w-md">
-                      <SubjectRoulette
-                        items={ROULETTE_SUBJECTS}
-                        activeIndex={activeIndex}
-                        onSelect={setActiveIndex}
-                      />
-                    </div>
-                  </div>
+                    <div className={styles.liste}>
+                      <div className={styles.colonne}>
+                        <div className={styles.enTete}>
+                          {trophees !== null ? (
+                            <p className={cn(styles.total, 'font-heading font-extrabold')}>
+                              <Image
+                                src="/images/defi/icones/trophees-v3.webp"
+                                alt=""
+                                aria-hidden="true"
+                                width={96}
+                                height={96}
+                                className={styles.coupe}
+                              />
+                              <span className={styles.encre}>Total de trophées :</span>
+                              <span className={cn(styles.encre, styles.nombre, 'tabular-nums')}>
+                                {nombre(trophees)}
+                              </span>
+                            </p>
+                          ) : null}
 
-                  {/* Le corps défilant : jeux de la matière, puis modes fun. */}
-                  <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
-                    <div className="mx-auto flex w-full max-w-md flex-col gap-4 px-4 pt-4 pb-[calc(env(safe-area-inset-bottom)+1.5rem)]">
-                      {/* Les jeux de la matière choisie. */}
-                      <h3 className="font-heading flex items-center justify-center gap-2 text-sm font-extrabold tracking-wide text-white/80 uppercase">
-                        <span className="text-lg" aria-hidden="true">
-                          {ROULETTE_SUBJECTS[activeIndex]?.emoji}
-                        </span>
-                        Jeux · {subject}
-                      </h3>
-                      <TicketList tickets={gameTickets} />
-                      {/* Le billet « Boss de la matière » a QUITTÉ cette
-                          feuille (La Traque, lib/traque) : un gardien ne se
-                          choisit plus dans un menu, il se débusque en
-                          révisant. Il vit désormais dans la tuile Boss du rail
-                          — et Modes redevient une famille cohérente : des
-                          modes fun, tous jouables tout de suite. */}
+                          {/* TOUS LES MODES : sans lui, un jeu par matière. */}
+                          {replies > 0 ? (
+                            <button
+                              type="button"
+                              onClick={() => {
+                                sfx.tap()
+                                setTout((t) => !t)
+                              }}
+                              aria-pressed={tout}
+                              aria-label={
+                                tout
+                                  ? 'Revenir à un mode par matière'
+                                  : `Voir tous les modes de jeu (${replies} de plus)`
+                              }
+                              title={tout ? 'Un mode par matière' : 'Tous les modes de jeu'}
+                              className={styles.voirTout}
+                            >
+                              <LayoutGrid className={styles.voirToutIcone} strokeWidth={2.6} aria-hidden="true" />
+                              {tout ? null : (
+                                <span
+                                  className={cn(styles.voirToutCompte, 'font-heading font-extrabold tabular-nums')}
+                                  aria-hidden="true"
+                                >
+                                  +{replies}
+                                </span>
+                              )}
+                            </button>
+                          ) : null}
+                        </div>
 
-                      {/* Les modes fun de l'Arène, communs à toutes les
-                          matières. */}
-                      <h3 className="font-heading mt-3 border-t border-white/10 pt-4 text-center text-sm font-extrabold tracking-wide text-white/80 uppercase">
-                        Modes fun de l’Arène
-                      </h3>
-                      <TicketList tickets={funTickets} />
+                        {/* Le mode du jour : le grand billet, en tête. */}
+                        {vedette ? billet(vedette) : null}
+
+                        {sections.map((s) => (
+                          <section key={s.subject} aria-label={`Jeux · ${s.subject}`} className="contents">
+                            <h3 className={cn(styles.separateur, 'font-heading font-extrabold')}>
+                              {s.vignette ? (
+                                <Image
+                                  src={s.vignette}
+                                  alt=""
+                                  aria-hidden="true"
+                                  width={64}
+                                  height={64}
+                                  className={styles.vignette}
+                                />
+                              ) : (
+                                <span aria-hidden="true">{s.emoji}</span>
+                              )}
+                              <span className={styles.encre}>{s.subject}</span>
+                            </h3>
+                            {s.tickets.map(billet)}
+                          </section>
+                        ))}
+
+                        {arene.length > 0 ? (
+                          <section aria-label="Modes de l’Arène" className="contents">
+                            <h3 className={cn(styles.separateur, 'font-heading font-extrabold')}>
+                              <span className={styles.encre}>Modes de l’Arène</span>
+                            </h3>
+                            {arene.map(billet)}
+                          </section>
+                        ) : null}
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                </>
               ) : null}
             </AnimatePresence>,
             document.body,

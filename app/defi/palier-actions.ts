@@ -2,11 +2,56 @@
 
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
+import { isMissingSchemaObject } from '@/lib/schema-fallback'
 import {
   parsePalierStandings,
   type PalierTimeStanding,
 } from '@/lib/jeux/palier-standing'
 import { isPalierLevel, isPlausibleTime } from '@/lib/jeux/paliers'
+import { playableSalonGame } from '@/lib/jeux/catalog'
+import {
+  lireReclamation,
+  type EtoilesParPalier,
+} from '@/lib/jeux/palier-gemmes'
+
+/**
+ * Fait payer en gemmes les étoiles de ce jeu que le serveur n'a pas encore
+ * payées (migration 373 : palier N → N gemmes par étoile, une fois pour
+ * toujours). Appelée à la fin d'une partie qui a décroché une étoile, et par
+ * la carte du jeu quand le stockage local porte des étoiles jamais payées.
+ *
+ * Rend les gemmes versées PAR CET APPEL et les étoiles désormais payées, ou
+ * `null` sans bruit quand il n'y a rien à dire : visiteur, jeu hors catalogue,
+ * migration 373 pas encore exécutée.
+ */
+export async function reclamerGemmesPalier(
+  gameId: string,
+  etoiles: readonly number[],
+): Promise<{ gemmes: number; etoiles: EtoilesParPalier } | null> {
+  if (!playableSalonGame(String(gameId))) return null
+  if (!Array.isArray(etoiles) || etoiles.length !== 5) return null
+  const propres = etoiles.map((n) => {
+    const v = Math.floor(Number(n))
+    return Number.isFinite(v) ? Math.min(3, Math.max(0, v)) : 0
+  })
+
+  const user = await getCurrentUser()
+  if (!user) return null
+
+  const supabase = await createClient()
+  const { data, error } = await supabase.rpc('palier_gemmes_reclamer', {
+    p_game_id: String(gameId),
+    p_etoiles: propres,
+  })
+  if (error) {
+    if (!isMissingSchemaObject(error)) {
+      console.error('[defi] gemmes de palier non versées:', error.message)
+    }
+    return null
+  }
+  const reponse = lireReclamation(data)
+  return reponse.ok ? { gemmes: reponse.gemmes, etoiles: reponse.etoiles } : null
+}
 
 /**
  * Enregistre le TEMPS DE BOUCLAGE d'un palier et rend la place qu'il donne

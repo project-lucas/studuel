@@ -1,7 +1,7 @@
 import { existsSync } from 'node:fs'
 import path from 'node:path'
 import { describe, expect, it } from 'vitest'
-import { NAV_TABS, neighborTabPath, tabIndexForPath } from './nav-tabs'
+import { NAV_TABS, tabIndexForPath } from './nav-tabs'
 
 /** Les illustrations servies par la barre d'onglets, depuis la racine du dépôt. */
 const NAV_DIR = path.join(import.meta.dirname, '..', 'public', 'images', 'nav')
@@ -88,13 +88,6 @@ describe('NAV_TABS', () => {
     }
   })
 
-  it('a le cadre de laurier qui entoure l’avatar', () => {
-    // Sans lui l'onglet Moi ne casse pas non plus : il montre juste un visage nu
-    // et minuscule (58 % de sa case, la taille du trou du cadre) au milieu de
-    // quatre objets peints. Un défaut discret, donc à verrouiller.
-    expect(existsSync(path.join(NAV_DIR, 'cadre-avatar.webp'))).toBe(true)
-  })
-
   it('n’a qu’un seul onglet central', () => {
     expect(NAV_TABS.filter((tab) => tab.center)).toHaveLength(1)
   })
@@ -105,24 +98,3 @@ describe('NAV_TABS', () => {
   })
 })
 
-describe('neighborTabPath', () => {
-  it('balayer vers la gauche avance vers l’onglet de droite', () => {
-    expect(neighborTabPath('/defi', 'left')).toBe('/amis')
-  })
-
-  it('balayer vers la droite recule vers l’onglet de gauche', () => {
-    expect(neighborTabPath('/defi', 'right')).toBe('/reviser')
-  })
-
-  it('s’arrête au premier onglet', () => {
-    expect(neighborTabPath(NAV_TABS[0].path, 'right')).toBeNull()
-  })
-
-  it('s’arrête au dernier onglet', () => {
-    expect(neighborTabPath(NAV_TABS[NAV_TABS.length - 1].path, 'left')).toBeNull()
-  })
-
-  it('ne fait rien hors des onglets principaux', () => {
-    expect(neighborTabPath('/compte', 'left')).toBeNull()
-  })
-})

@@ -26,6 +26,7 @@ import PencilLogo from './PencilLogo'
 import OnbButton from './OnbButton'
 import { ProgressHeader } from './OnbBits'
 import {
+  AvatarStep,
   DailyGoalStep,
   GoalStep,
   GradeStep,
@@ -56,6 +57,7 @@ const STANDARD_FOOTER: WelcomeStep[] = [
   'school',
   'subjects',
   'dailyGoal',
+  'avatar',
 ]
 
 export default function WelcomeFlow({
@@ -356,6 +358,13 @@ export default function WelcomeFlow({
               setAnswers((a) => ({ ...a, notificationsEnabled: enabled }))
               go(nextStep('notifications', answers) ?? 'plan')
             }}
+          />
+        )
+      case 'avatar':
+        return (
+          <AvatarStep
+            answers={answers}
+            onPick={(avatar) => setAnswers((a) => ({ ...a, avatar }))}
           />
         )
       case 'signup':

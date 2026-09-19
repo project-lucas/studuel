@@ -416,35 +416,33 @@ describe('ChapterList — le projecteur sur le chapitre', () => {
   })
 })
 
-// LA PORTE D'ENTRÉE DU DOSSIER ET LE QUIZ DU CHAPITRE.
+// LE DRAPEAU DE LA DERNIÈRE SESSION ET LE QUIZ DU CHAPITRE.
 //
-// Ce qu'ils gardent : le libellé calculé par le serveur (« Commencer » /
-// « Reprendre ») est ÉCRIT à l'écran, avec la fiche et son chapitre ; taper la
-// carte déplie la fiche à sa place ; et un chapitre déplié d'au moins deux
-// fiches offre son quiz.
+// Les deux blocs d'entrée du dossier (« n notions à revoir », « On commence par
+// ça ») ont disparu le 17/09/2026. Reste un repère : la fiche de la dernière
+// session porte son drapeau, et son chapitre est déplié à l'arrivée.
 
-describe('ChapterList — la carte d’entrée', () => {
-  it('écrit le geste, la fiche, le chapitre et la durée', () => {
-    const avecDuree = anglais.map((c) =>
-      c.id === 'b' ? { ...c, minutes: 6 } : c,
-    )
+describe('ChapterList — le drapeau de la dernière session', () => {
+  it('pose le drapeau sur la fiche, et déplie son chapitre', () => {
     render(
       <ChapterList
-        chapters={avecDuree}
-        resume={{ chapterId: 'b', label: 'Commencer' }}
+        chapters={anglais}
+        resume={{ chapterId: 'c', label: 'Dernière session' }}
         subjectSlug="anglais"
         subjectName="Anglais"
         grade="Terminale"
       />,
     )
-    const carte = screen.getByRole('button', {
-      name: 'Commencer : Exprimer une quantité — Le groupe nominal · ~6 min',
-    })
-    expect(carte).toBeTruthy()
-    expect(screen.getByText('On commence par ça')).toBeTruthy()
+    // « c » vit dans « Le groupe verbal », déplié par défaut : sa ligne est là.
+    const ligne = screen.getByRole('button', { name: /^Les auxiliaires modaux/ })
+    expect(within(ligne).getByText('Dernière session')).toBeTruthy()
+    // Une seule fiche porte le drapeau.
+    expect(screen.getAllByText('Dernière session')).toHaveLength(1)
+    // Plus aucune carte d'entrée au-dessus de la liste.
+    expect(screen.queryByText('On commence par ça')).toBeNull()
   })
 
-  it('n’existe pas quand tout est terminé', () => {
+  it('sans session, aucun drapeau', () => {
     render(
       <ChapterList
         chapters={anglais}
@@ -454,26 +452,7 @@ describe('ChapterList — la carte d’entrée', () => {
         grade="Terminale"
       />,
     )
-    expect(screen.queryByText('On commence par ça')).toBeNull()
-  })
-
-  it('taper la carte déplie la fiche à sa place', async () => {
-    const user = userEvent.setup()
-    render(
-      <ChapterList
-        chapters={anglais}
-        resume={{ chapterId: 'c', label: 'Reprendre' }}
-        subjectSlug="anglais"
-        subjectName="Anglais"
-        grade="Terminale"
-      />,
-    )
-    // La fiche « c » vit dans « Le groupe verbal », déplié par défaut puisque
-    // c'est lui qui porte la reprise ; sa ligne est encore repliée.
-    const ligne = screen.getByRole('button', { name: /^Les auxiliaires modaux/ })
-    expect(ligne.getAttribute('aria-expanded')).toBe('false')
-    await user.click(screen.getByRole('button', { name: /^Reprendre : / }))
-    expect(ligne.getAttribute('aria-expanded')).toBe('true')
+    expect(screen.queryByText('Dernière session')).toBeNull()
   })
 })
 

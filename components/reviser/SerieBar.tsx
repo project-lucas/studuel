@@ -1,12 +1,12 @@
 'use client'
 
-import { useState } from 'react'
-import Image from 'next/image'
+import { useState, type ReactNode } from 'react'
 import { CalendarDays, Check, Plus } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { subjectTheme } from '@/lib/subject-style'
 import YearHistory from '@/components/YearHistory'
+import FlammeAnimee from '@/components/FlammeAnimee'
 import AddExamSheet, {
   type SubjectLite,
   type ChapterLite,
@@ -63,6 +63,7 @@ export default function SerieBar({
   chaptersBySubject = {},
   existingExamChapters = [],
   goalMinutes,
+  carnetSlot,
 }: {
   streak: number
   week: WeekDay[]
@@ -74,6 +75,12 @@ export default function SerieBar({
   chaptersBySubject?: Record<string, ChapterLite[]>
   existingExamChapters?: string[]
   goalMinutes: number
+  /**
+   * La porte de « Mon carnet », SOUS la semaine (Lucas, 17/09/2026 : « Mon
+   * carnet va dans le bloc semaine, dans le bloc blanc en dessous de samedi
+   * dimanche »). Elle vivait sur la ligne du titre, à côté de la classe.
+   */
+  carnetSlot?: ReactNode
 }) {
   const [historyOpen, setHistoryOpen] = useState(false)
   const [addOpen, setAddOpen] = useState(false)
@@ -108,21 +115,11 @@ export default function SerieBar({
       {/* Ligne du haut : la flamme et son compte à gauche, les deux commandes
           à droite (mon historique · annoncer un contrôle). */}
       <div className="flex items-center gap-3">
-        {/* La flamme illustrée, sans tuile derrière : elle porte son propre
+        {/* La flamme animée, sans tuile derrière : elle porte son propre
             cerne sombre, un fond coloré ne ferait que la répéter. Série à
             zéro = flamme éteinte (désaturée, en retrait) plutôt qu'absente :
             c'est la même place, à rallumer. */}
-        <Image
-          src="/images/serie/flamme.webp"
-          alt=""
-          aria-hidden="true"
-          width={128}
-          height={128}
-          className={cn(
-            'size-12 shrink-0 object-contain',
-            streak > 0 ? 'flame-breathe' : 'opacity-40 grayscale',
-          )}
-        />
+        <FlammeAnimee className="size-12" eteinte={streak === 0} />
 
         <div className="min-w-0 flex-1">
           <p className="font-heading text-base leading-tight font-extrabold text-foreground">
@@ -148,6 +145,19 @@ export default function SerieBar({
           <CalendarDays className="size-5" strokeWidth={2.3} aria-hidden="true" />
         </button>
 
+        {/* « NOUVEAU CONTRÔLE ? » — LA fonction clé de l'écran, et elle doit
+            se voir comme telle (Lucas, 16/09). Le bouton a été « + Contrôle »,
+            discret exprès pour laisser la carte violette mener l'œil ; mais
+            un élève qui n'annonce pas son contrôle n'a ni plan de révision, ni
+            carte, ni compte à rebours : c'est le geste qui déclenche tout le
+            reste. D'où le libellé en QUESTION, qui s'adresse à lui, et UN
+            mouvement continu : la respiration (`controle-appel`, globals.css),
+            une pulsation d'échelle et un halo violet qui s'écarte — le seul
+            bouton de l'accueil qui bouge. Il a porté aussi la bande de lumière
+            `attract-sheen` (celle qui traversait le DUEL de l'arène) ; retirée
+            le 16/09 (Lucas : « elle s'arrête au milieu, c'est bof — garde les
+            ombres, pas la bande »). Le halo reste : il désigne le bouton par
+            son POURTOUR sans rien poser sur le mot. */}
         <button
           type="button"
           onClick={() => {
@@ -155,11 +165,11 @@ export default function SerieBar({
             setAddOpen(true)
           }}
           aria-haspopup="dialog"
-          aria-label="Annoncer un contrôle"
-          className="font-heading flex min-h-11 shrink-0 items-center gap-1 rounded-full bg-primary pr-3.5 pl-2.5 text-xs font-extrabold text-primary-foreground shadow-sm transition active:translate-y-px"
+          aria-label="Annoncer un nouveau contrôle"
+          className="controle-appel font-heading flex min-h-11 shrink-0 items-center gap-1 rounded-full border-b-[3px] border-b-black/25 bg-primary pr-3.5 pl-2.5 text-xs font-extrabold text-primary-foreground shadow-sm transition active:translate-y-px active:border-b-0"
         >
           <Plus className="size-4" strokeWidth={2.8} aria-hidden="true" />
-          Contrôle
+          Nouveau contrôle&nbsp;?
         </button>
       </div>
 
@@ -260,6 +270,8 @@ export default function SerieBar({
           )
         })}
       </ul>
+
+      {carnetSlot ? <div className="mt-3">{carnetSlot}</div> : null}
 
       {historyOpen ? (
         <YearHistory

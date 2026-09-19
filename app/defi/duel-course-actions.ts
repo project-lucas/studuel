@@ -129,7 +129,7 @@ export async function recordDuelCourse(input: DuelCourseInput): Promise<DuelCour
   const steps = sanitizeSteps(input.steps)
   const answers = Array.isArray(input.answers) ? input.answers.slice(0, MAX_ANSWERS) : []
 
-  const [, award, clanPlay, clanWin, quests, trophies, crownPlay, crownWin, duelResult, replaySaved] =
+  const [, award, clanPlay, clanWin, quests, trophies, crownPlay, crownWin, , replaySaved] =
     await Promise.all([
       error ? Promise.resolve(null) : validateRevisionToday(supabase, user.id),
       error || !session?.id ? Promise.resolve(null) : walletTouch(supabase),
@@ -174,7 +174,6 @@ export async function recordDuelCourse(input: DuelCourseInput): Promise<DuelCour
     questDayDone: quests.allDone,
     gains: gainsVerses(award, {
       couronnes: crownPlay + crownWin,
-      ecus: duelResult,
     }),
     replaySaved,
   }

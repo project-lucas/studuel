@@ -41,12 +41,12 @@ describe('CarnetButton', () => {
       <CarnetButton coursesCount={3} questionsCount={42} />,
     )
     expect(
-      screen.getByRole('button', { name: 'Mon carnet — 3 cours · 42 questions' }),
+      screen.getByRole('link', { name: 'Mon carnet — 3 cours · 42 questions' }),
     ).toBeInTheDocument()
 
     rerender(<CarnetButton coursesCount={0} questionsCount={0} />)
     expect(
-      screen.getByRole('button', {
+      screen.getByRole('link', {
         name: 'Mon carnet — Crée tes cours et révise-les.',
       }),
     ).toBeInTheDocument()

@@ -11,13 +11,10 @@ import { MASTERY_THRESHOLDS, type ChapterMastery } from '@/lib/mastery'
 // dans POOL_BUILDERS (app/defi/jeux/[jeu]).
 export type SalonGameId =
   | 'capitales'
-  | 'orthographe'
   | 'conjugaison-eclair'
   | 'chasse-faute'
   | 'calcul-mental'
-  | 'suite-logique'
   | 'traduction-flash'
-  | 'faux-amis'
   | 'traduccion-flash'
   | 'falsos-amigos'
   | 'classe-moi-ca'
@@ -26,7 +23,6 @@ export type SalonGameId =
   | 'anatomie-express'
   | 'frise-folle'
   | 'phrase-en-vrac'
-  | 'compte-est-bon'
 
 export type SalonGame = {
   id: string
@@ -63,26 +59,12 @@ export const SALONS: Salon[] = [
         tagline: '5 événements à remettre dans l’ordre chronologique',
         implemented: true,
       },
-      {
-        id: 'pointe-carte',
-        name: 'Pointe la carte',
-        emoji: '📍',
-        tagline: 'Touche la bonne zone sur la carte muette',
-        implemented: false,
-      },
     ],
   },
   {
     subject: 'Français',
     emoji: '✏️',
     games: [
-      {
-        id: 'orthographe',
-        name: 'Duel d’orthographe',
-        emoji: '🖋️',
-        tagline: '40 secondes pour reconnaître la bonne orthographe',
-        implemented: true,
-      },
       {
         id: 'chasse-faute',
         name: 'Chasse à la faute',
@@ -110,20 +92,6 @@ export const SALONS: Salon[] = [
         tagline: 'Les opérations s’enchaînent de plus en plus vite',
         implemented: true,
       },
-      {
-        id: 'compte-est-bon',
-        name: 'Le compte est bon',
-        emoji: '🎯',
-        tagline: 'Six plaques, un nombre cible — fabrique le compte',
-        implemented: true,
-      },
-      {
-        id: 'suite-logique',
-        name: 'Suite logique',
-        emoji: '🔮',
-        tagline: 'Devine le terme suivant et grimpe de 10 étages',
-        implemented: true,
-      },
     ],
   },
   {
@@ -135,13 +103,6 @@ export const SALONS: Salon[] = [
         name: 'Traduction flash',
         emoji: '💬',
         tagline: 'Un mot, 4 traductions — vitesse pure',
-        implemented: true,
-      },
-      {
-        id: 'faux-amis',
-        name: 'Faux amis',
-        emoji: '🎭',
-        tagline: '« actually » ≠ actuellement — évite le piège',
         implemented: true,
       },
       {
@@ -213,6 +174,20 @@ export const SALONS: Salon[] = [
       },
     ],
   },
+]
+
+// LES JEUX RETIRÉS (Lucas, 19/09/2026 : « trop de modes de jeu ») : Duel
+// d'orthographe (Chasse à la faute tient la même compétence), Le compte est
+// bon et Suite logique (Calcul mental reste « le banger » des maths), Faux
+// amis (Phrase en vrac garde l'anglais scolaire), et la promesse « Pointe la
+// carte » jamais construite. Leur code est parti ; la BASE les connaît encore
+// (liste blanche des trophées, 238 ; palmarès, 355) — sans effet, aucune route
+// ne les sert plus. Cette liste dit aux tests miroirs que ces restes sont voulus.
+export const JEUX_RETIRES: readonly string[] = [
+  'orthographe',
+  'compte-est-bon',
+  'suite-logique',
+  'faux-amis',
 ]
 
 // Jeu jouable par id (les liens profonds ne doivent ouvrir que du réel).

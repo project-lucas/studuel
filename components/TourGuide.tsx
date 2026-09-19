@@ -151,7 +151,6 @@ export default function TourGuide({
       role="dialog"
       aria-modal="true"
       aria-label={`Tour guidé, étape ${stepNumber} sur ${TOUR_STEPS.length} : ${step.title}`}
-      data-no-swipe
       className="fixed inset-0 z-[95]"
     >
       {/* Spotlight : un trou transparent, l'ombre géante assombrit le reste.

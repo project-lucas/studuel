@@ -1,7 +1,8 @@
 'use client'
 
 import { useCallback, useRef, useState } from 'react'
-import { recordPalierTime } from '@/app/defi/palier-actions'
+import { reclamerGemmesPalier, recordPalierTime } from '@/app/defi/palier-actions'
+import { etoilesDeProgression } from '@/lib/jeux/palier-gemmes'
 import {
   applyRun,
   readPalierProgress,
@@ -34,6 +35,9 @@ import type { GameRun } from '@/lib/jeux/run'
 export function usePalierRun(gameId: string, palier: PalierRun | null) {
   const [outcome, setOutcome] = useState<PalierOutcome | null>(null)
   const [standing, setStanding] = useState<PalierTimeStanding | null>(null)
+  // Les gemmes que les étoiles de CETTE partie ont rapportées (migration 373),
+  // null tant que le serveur n'a pas répondu — ou quand il n'y a rien eu.
+  const [gemmes, setGemmes] = useState<number | null>(null)
   const partieRef = useRef(0)
   // Éclatées ici plutôt que lues dans le callback : deux nombres ont une
   // identité stable d'un rendu à l'autre, un objet de props non.
@@ -55,13 +59,27 @@ export function usePalierRun(gameId: string, palier: PalierRun | null) {
       )
       writePalierProgress(gameId, progress)
       setOutcome(next)
+      const partie = partieRef.current
+
+      // LES GEMMES DES ÉTOILES : une étoile neuve se paie tout de suite. On
+      // envoie TOUTES les étoiles du jeu, pas seulement celle-ci : le serveur
+      // ne paie que ce qu'il n'a jamais payé, et rattrape au passage une
+      // étoile dont la réclamation aurait échoué.
+      if (next.gained > 0) {
+        reclamerGemmesPalier(gameId, [...etoilesDeProgression(progress)])
+          .then((r) => {
+            if (partie === partieRef.current && r && r.gemmes > 0) setGemmes(r.gemmes)
+          })
+          .catch(() => {
+            // Réseau ou migration 373 absente : la carte du jeu réclamera plus tard.
+          })
+      }
 
       // Le classement de rapidité est le SEUL morceau qui ne puisse pas se
       // calculer en local : il faut la distribution des autres joueurs. On ne
       // l'appelle que sur une partie chronométrée (donc gagnée), et son échec
       // ne coûte qu'une ligne à l'écran.
       if (next.timeMs === null) return
-      const partie = partieRef.current
       recordPalierTime(gameId, level, next.timeMs)
         .then((place) => {
           if (partie === partieRef.current) setStanding(place)
@@ -78,8 +96,9 @@ export function usePalierRun(gameId: string, palier: PalierRun | null) {
   const reset = useCallback(() => {
     setOutcome(null)
     setStanding(null)
+    setGemmes(null)
     partieRef.current += 1
   }, [])
 
-  return { outcome, standing, record, reset }
+  return { outcome, standing, gemmes, record, reset }
 }

@@ -34,6 +34,8 @@ import {
 import { coteTitle, nextCoteTitle } from '@/lib/jeux/ultime'
 import { gradeLabel, worldLabel } from '@/lib/jeux/ultime-standing'
 import type { UltimeResult } from '@/lib/jeux/use-ultime-run'
+import { titreVerdict, verdictPartie, type BilanPartie } from '@/lib/palmares/bilan'
+import { ordinal, standingFor } from '@/lib/percentile'
 
 /**
  * L'écran de fin d'un jeu de salon. Il raconte la partie DANS LA LANGUE DU JEU
@@ -57,6 +59,7 @@ export default function GameOutcome({
   gains,
   trophies,
   ghost,
+  bilan = null,
   onReplay,
 }: {
   format: GameFormat
@@ -91,6 +94,12 @@ export default function GameOutcome({
   trophies?: GameTrophyOutcome
   /** Le meilleur score d'un ami sur ce jeu, s'il y en a un. */
   ghost?: GameGhost | null
+  /**
+   * Ma ligne de Palmarès pour cette partie (migration 355) : verdict contre
+   * ma dernière fois et mon record, place de la semaine dans ma classe,
+   * prochaine marche. Null tant que le serveur n'a rien dit.
+   */
+  bilan?: BilanPartie | null
   onReplay: () => void
   /**
    * Sortie du jeu. Désormais portée par la flèche retour du header ModeStage :
@@ -171,6 +180,7 @@ export default function GameOutcome({
 
       <TrophyLine trophies={trophies} />
       <GhostLine ghost={ghost} score={run.score} />
+      <PalmaresLine bilan={bilan} />
 
       <p className="min-h-5 text-sm text-muted-foreground">
         {saved === true
@@ -480,5 +490,52 @@ function Stat({ label, value }: { label: string; value: string }) {
       <dd className="font-mono text-lg font-bold tabular-nums">{value}</dd>
       <dt className="mt-0.5 leading-tight text-muted-foreground">{label}</dt>
     </div>
+  )
+}
+
+/**
+ * LA LIGNE DU PALMARÈS — ce que cette partie change à ma place dans la classe
+ * (migration 355). Le verdict vient du serveur, qui voit tout le monde ; on
+ * n'invente aucun rang. Rien tant qu'il n'a pas répondu.
+ */
+function PalmaresLine({ bilan }: { bilan: BilanPartie | null }) {
+  if (!bilan) return null
+  const verdict = verdictPartie({
+    score: bilan.score,
+    last: bilan.last,
+    bestBefore: bilan.bestBefore,
+  })
+  const place = standingFor({ rank: bilan.weekRank, total: bilan.weekTotal })
+  const placeLabel =
+    place.kind === 'rang'
+      ? `${ordinal(place.rank)} de ta classe cette semaine`
+      : place.kind === 'pourcentage'
+        ? place.side === 'top'
+          ? `Top ${place.value} % de ta classe cette semaine`
+          : `Mieux que ${place.value} % de ta classe cette semaine`
+        : null
+  const marche = bilan.next
+    ? `Prochaine marche : ${bilan.next.name} · ${bilan.next.score}`
+    : bilan.leader?.isMe
+      ? 'Tu mènes ta classe cette semaine.'
+      : null
+  return (
+    <Link
+      href="/moi"
+      className="flex w-full items-center gap-3 rounded-2xl border-2 border-border bg-card px-3 py-2.5 text-left transition active:scale-[0.99]"
+      aria-label={`Palmarès : ${titreVerdict(verdict)}${placeLabel ? `, ${placeLabel}` : ''}. Voir mon palmarès.`}
+    >
+      <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-highlight/25 text-lg" aria-hidden="true">
+        🏅
+      </span>
+      <span className="min-w-0 flex-1">
+        <span className="block text-sm font-extrabold">{titreVerdict(verdict)}</span>
+        {placeLabel ? (
+          <span className="block text-xs font-semibold text-muted-foreground">{placeLabel}</span>
+        ) : null}
+        {marche ? <span className="block text-xs text-muted-foreground">{marche}</span> : null}
+      </span>
+      <Trophy className="size-4 shrink-0 text-primary" aria-hidden="true" />
+    </Link>
   )
 }

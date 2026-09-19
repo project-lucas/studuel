@@ -74,7 +74,10 @@ export default function AddExamSheet({
 
   // Jours candidats proposés au 2e écran : de la veille du contrôle en remontant
   // jusqu'à aujourd'hui (au plus une semaine avant, le plan ne s'étale jamais
-  // au-delà). Sans date : uniquement aujourd'hui.
+  // au-delà). LA DATE EST OBLIGATOIRE depuis le 17/09/2026 (Lucas : « le bloc
+  // doit rappeler le nombre de jours avant le prochain contrôle ») — un
+  // contrôle sans date n'a ni compte à rebours ni vrai plan. Le repli « sans
+  // date : aujourd'hui seulement » reste pour un état transitoire du champ.
   const candidateDays = useMemo(() => {
     if (!examDate) return [today]
     const span = daysBetween(today, examDate)
@@ -248,7 +251,7 @@ export default function AddExamSheet({
 
             <label className="block">
               <span className="mb-1 block text-xs font-semibold text-muted-foreground">
-                Date du contrôle (facultatif)
+                Date du contrôle
               </span>
               <input
                 type="date"
@@ -262,10 +265,12 @@ export default function AddExamSheet({
             <button
               type="button"
               onClick={goToConfirm}
-              disabled={count === 0}
+              // Pas de plan sans chapitre NI sans date : c'est la date qui
+              // fait le compte à rebours de la carte et l'étalement du plan.
+              disabled={count === 0 || !examDate}
               className={cn(
                 'mt-1 flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-primary px-4 font-heading text-base font-extrabold text-primary-foreground shadow-sm transition active:translate-y-px',
-                count === 0 && 'opacity-60',
+                (count === 0 || !examDate) && 'opacity-60',
               )}
             >
               <Sparkles className="size-5" strokeWidth={2.6} aria-hidden="true" />

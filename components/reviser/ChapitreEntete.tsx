@@ -21,19 +21,27 @@ export function etatChapitre(avancement: SubjectProgress): EtatChapitre {
 export const MAX_PIPS = 24
 
 /**
- * LA ROBE DE LA CARTE D'UN CHAPITRE — ce qui l'habille selon son état.
+ * LA ROBE DE LA CARTE D'UN CHAPITRE — LA PLAQUE VIOLETTE, pour tous.
  *
- * Vierge : la carte crème du dossier, telle quelle. Entamée : la même carte,
- * cernée de jaune solaire (la couleur de la progression dans toute l'app).
- * Terminée : la carte passe au VIOLET plein, texte blanc, socle sombre — la
- * même plaque que l'examen blanc et les boutons d'action. Un chapitre fini
- * n'est plus une ligne de programme, c'est un trophée sur l'étagère.
+ * Elle a dit l'effort par la couleur : carte crème vierge, cernée de jaune
+ * une fois entamée, VIOLET plein une fois finie. Lucas a choisi la plaque
+ * violette pour TOUS les chapitres (16/09/2026, « je veux ce style pour mes
+ * chapitres ») : texte blanc, dégradé, socle sombre, quadrillage en filigrane
+ * — la plaque de l'examen blanc et des boutons d'action. Trois cartes
+ * violettes empilées font un programme qui a de la tenue, là où une crème,
+ * une jaune et une violette faisaient trois objets différents.
+ *
+ * L'ÉTAT NE SE PERD PAS, il change de porteur : le médaillon (anneau du
+ * pourcentage, ou disque d'or à la couronne une fois fini), les pastilles
+ * (blanches à 25 % éteintes, jaunes en marche, or pleines terminées) et le
+ * compte (« 2/2 fiches · Terminé »). `data-etat` reste posé sur la carte.
  */
+const PLAQUE =
+  'border-transparent border-b-4 border-b-black/25 bg-gradient-to-br from-primary to-[color-mix(in_oklch,var(--primary),black_18%)] text-white shadow-md'
 export const ROBES: Record<EtatChapitre, string> = {
-  vierge: 'rev-card border bg-card',
-  entame: 'rev-card border border-highlight/70 bg-card ring-2 ring-highlight/35',
-  termine:
-    'border-transparent border-b-4 border-b-black/25 bg-gradient-to-br from-primary to-[color-mix(in_oklch,var(--primary),black_18%)] text-white shadow-md',
+  vierge: PLAQUE,
+  entame: PLAQUE,
+  termine: PLAQUE,
 }
 
 /**
@@ -97,12 +105,15 @@ export default function ChapitreEntete({
           <Crown className="size-7 fill-current" strokeWidth={2.25} />
         </span>
       ) : (
+        /* Sur la plaque violette, l'anneau se dessine en blanc : rail blanc à
+           25 %, jauge jaune, chiffre blanc — en retrait tant que rien n'est
+           commencé. */
         <AnneauProgression
           pct={avancement.pct}
           size={56}
           className={cn(
             'text-[13px]',
-            etat === 'vierge' ? 'text-muted-foreground' : 'text-foreground',
+            etat === 'vierge' ? 'text-white/70' : 'text-white',
           )}
         />
       )}
@@ -136,8 +147,7 @@ export default function ChapitreEntete({
           >
             <ChevronDown
               className={cn(
-                'size-5 transition-transform',
-                termine ? 'text-white/70' : 'text-muted-foreground',
+                'size-5 text-white/70 transition-transform',
                 deplie ? 'rotate-180' : null,
               )}
             />
@@ -148,7 +158,7 @@ export default function ChapitreEntete({
           /* Sous recherche, le bloc ne contient que des trouvailles : une
              jauge y parlerait d'un autre chapitre. Juste le compte. */
           fiches.length === 0 ? null : (
-            <span className="block text-xs font-semibold text-muted-foreground tabular-nums">
+            <span className="block text-xs font-semibold text-white/80 tabular-nums">
               {fiches.length} {unit}
               {fiches.length > 1 ? 's' : ''}
             </span>
@@ -161,20 +171,18 @@ export default function ChapitreEntete({
                   className="flex flex-wrap items-center gap-1.5"
                   aria-hidden="true"
                 >
+                  {/* Une pastille par fiche, sur la plaque : éteinte (blanc à
+                      25 %), en marche (jaune à 55 %), terminée (or plein). */}
                   {fiches.map((f, i) => (
                     <span
                       key={i}
                       className={cn(
                         'h-2.5 w-5 rounded-full transition-colors',
                         f.status === 'complete'
-                          ? termine
-                            ? 'bg-highlight'
-                            : 'bg-primary'
+                          ? 'bg-highlight'
                           : f.status === 'en_cours'
-                            ? 'bg-highlight'
-                            : termine
-                              ? 'bg-white/25'
-                              : 'bg-black/10',
+                            ? 'bg-highlight/55'
+                            : 'bg-white/25',
                       )}
                     />
                   ))}
@@ -185,35 +193,27 @@ export default function ChapitreEntete({
                   total={avancement.total}
                   pct={avancement.pct}
                   unit={unit}
+                  sombre
                   className="mt-0"
                 />
               )}
               {pips ? (
-                <span
-                  className={cn(
-                    'mt-1.5 block text-xs font-bold tabular-nums',
-                    termine ? 'text-white/80' : 'text-muted-foreground',
-                  )}
-                >
+                <span className="mt-1.5 block text-xs font-bold text-white/80 tabular-nums">
                   {avancement.done}/{avancement.total} {unit}
                   {avancement.total > 1 ? 's' : ''}
                   {termine ? ' · Terminé' : null}
                 </span>
               ) : null}
             </div>
-            {/* LE QUIZ, en plaque : violette (l'action), or sur une carte
-                finie où le violet ne ressortirait pas. */}
+            {/* LE QUIZ, en plaque D'OR : sur une carte violette, le violet ne
+                ressort pas — l'or, si (la dérogation de l'arène, cf.
+                CLAUDE.md). */}
             {quizHref ? (
               <Link
                 href={quizHref}
                 onClick={() => sfx.tap()}
                 aria-label={`Quiz du chapitre ${titre}`}
-                className={cn(
-                  'inline-flex shrink-0 items-center gap-1.5 rounded-full border-b-[3px] px-3.5 py-2 text-sm font-extrabold transition-transform hover:-translate-y-px active:translate-y-[2px] active:border-b-0',
-                  termine
-                    ? 'border-b-black/30 bg-highlight text-foreground'
-                    : 'border-b-black/25 bg-primary text-primary-foreground',
-                )}
+                className="inline-flex shrink-0 items-center gap-1.5 rounded-full border-b-[3px] border-b-black/30 bg-highlight px-3.5 py-2 text-sm font-extrabold text-foreground transition-transform hover:-translate-y-px active:translate-y-[2px] active:border-b-0"
               >
                 <ListChecks className="size-4.5" strokeWidth={2.75} aria-hidden="true" />
                 Quiz

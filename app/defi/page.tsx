@@ -43,7 +43,6 @@ import { getProfileData } from '@/app/defi/profile-actions'
 import DuelHistory from '@/components/defi/DuelHistory'
 import SchoolTournament from '@/components/defi/SchoolTournament'
 import {
-  Crown,
   Gift,
   // Aliasé : `School` est déjà le TYPE d'une école (lib/clan) dans ce fichier.
 } from 'lucide-react'
@@ -90,16 +89,8 @@ import {
   type School,
 } from '@/lib/clan'
 import { clanWeekReward, type ClanWeekBoard } from '@/lib/clan-week'
-import {
-  claimableCount,
-  countdownLabel as seasonCountdown,
-  isSeasonLastDay,
-  tierProgress,
-  trackView,
-  type SeasonState,
-} from '@/lib/saison'
-import SeasonTrack from '@/components/defi/SeasonTrack'
-import SeasonBanner from '@/components/defi/SeasonBanner'
+import { fetchGems } from '@/lib/gems-access'
+import { lireFinBoostXp } from '@/lib/boutique/boosts-server'
 import {
   lastWeekKey,
 } from '@/lib/clan-week-server'
@@ -110,6 +101,8 @@ import { resolveCurrentChapter } from '@/lib/chapitre-courant-server'
 import { reasonLabel } from '@/lib/chapitre-courant'
 import DailyQuests from '@/components/defi/DailyQuests'
 import { duelGoal } from '@/lib/duel-cta'
+import { fetchMyPalmares } from '@/lib/palmares/palmares-server'
+import type { LignePalmares } from '@/lib/palmares/palmares'
 import ClanWeekCard from '@/components/defi/ClanWeekCard'
 import { normalizeLeagueStandings, buildLeague } from '@/lib/league'
 import type {
@@ -130,7 +123,10 @@ export const dynamic = 'force-dynamic'
 // taille, UNE seule graisse : c'est la régularité qui fait le menu propre. Les
 // objets illustrés (coupe, coffre) reviendront plus tard, mais tous ensemble —
 // deux dessins peints au milieu de cinq pictos au trait, c'était l'écart.
-const ORB_ICON = 'size-[18px] text-[#faf6ef]'
+// Le picto de trait du coffre d'équipe, dans le puits du menu : 24 px, pour
+// peser autant que les objets peints qui l'entourent. En violet depuis que le
+// menu est clair (18/09/2026) : l'or se perdait dans le puits lavande.
+const ORB_ICON = 'size-6 text-primary'
 const ORB_STROKE = 2.2
 
 // Convertit un classement (lib/clan) en tableau prêt pour RankingTabs.
@@ -215,6 +211,9 @@ export default async function DefiPage() {
   let hasSchool = true
   let duelEntries: ReturnType<typeof normalizeRankedHistory> = []
   let reviewCount = 0
+  // Mon palmarès des modes (352) — vide pour un visiteur ou tant que la
+  // migration dort ; la feuille des modes n'affiche alors aucune place.
+  let palmaresLignes: LignePalmares[] = []
   // Le roster de la Route des trophées. Construit à vide pour le visiteur : les
   // tuiles s'affichent à zéro plutôt que de disparaître — on montre ce qu'il y
   // a à gagner avant de demander de se connecter.
@@ -243,7 +242,14 @@ export default async function DefiPage() {
   let questClaimedIds: string[] = []
   let clanWeek: ClanWeekBoard | null = null
   let clanReward: { weekKey: string; label: string } | null = null
-  let season: SeasonState | null = null
+  // LA SÉRIE ET LES CRISTAUX, portés par la carte du joueur (Lucas, 17/09/2026 :
+  // « assemble ces trois blocs en un seul »). Le bandeau du haut (TopHud) se
+  // masque sur /defi ; c'est donc la page qui lit ces deux compteurs, comme le
+  // fait TopHudLoader ailleurs. `null` = visiteur ou base sans la RPC.
+  let gems: number | null = null
+  let streak: number | null = null
+  // Le Boost XP du Marché qui court : « ×2 XP » contre le niveau de la carte.
+  let boostXpJusqua: string | null = null
   // LA TRAQUE (212) : une jauge par matière, remplie en révisant. Vide tant que
   // la migration n'est pas passée — la tuile Boss affiche alors une carte
   // d'invitation à réviser, jamais une erreur.
@@ -291,14 +297,32 @@ export default async function DefiPage() {
     // Restent à côté : les quêtes (chaîne de lecture propre), le catalogue
     // (cache serveur, gratuit) et la maîtrise (son propre agrégat depuis la
     // 321).
-    const [vague1, questRes, claimedRes, catalogSubjects, quizMastery] =
-      await Promise.all([
-        fetchAreneVague1(supabase, user.id, todayKey, previousWeek),
-        fetchQuestViews(supabase, user.id, todayKey),
-        fetchClaimedQuestIds(supabase, user.id, todayKey),
-        getSubjectsCached(),
-        getChapterMastery(supabase, user.id),
-      ])
+    const [
+      vague1,
+      questRes,
+      claimedRes,
+      catalogSubjects,
+      quizMastery,
+      gemsRes,
+      streakRes,
+      boostXpRes,
+    ] = await Promise.all([
+      fetchAreneVague1(supabase, user.id, todayKey, previousWeek),
+      fetchQuestViews(supabase, user.id, todayKey),
+      fetchClaimedQuestIds(supabase, user.id, todayKey),
+      getSubjectsCached(),
+      getChapterMastery(supabase, user.id),
+      fetchGems(supabase, user.id),
+      // La RPC `my_streak` (migration 155) : tolérante, comme dans TopHudLoader.
+      supabase.rpc('my_streak'),
+      lireFinBoostXp(supabase, user.id),
+    ])
+    gems = gemsRes
+    boostXpJusqua = boostXpRes
+    if (!streakRes.error && streakRes.data != null) {
+      const n = Number(streakRes.data)
+      streak = Number.isFinite(n) ? Math.max(0, n) : null
+    }
 
     const {
       profile,
@@ -311,7 +335,6 @@ export default async function DefiPage() {
       weekRes,
       lastWeekRes,
       alreadyClaimed,
-      seasonRes,
       gaugesRes,
       overviewRes,
       gameTrophyRes,
@@ -354,6 +377,7 @@ export default async function DefiPage() {
       subjectLevels,
       gradeQuizRes,
       gradeChapters,
+      palmaresRes,
     ] = await Promise.all([
         // Déjà servis par la lecture groupée quand la 322 est passée : on ne
         // repart pas les chercher. Sinon, le chemin d'avant.
@@ -398,10 +422,14 @@ export default async function DefiPage() {
         profile.grade_level
           ? getGradeChaptersCached(profile.grade_level)
           : Promise.resolve([]),
+        // Mon palmarès des modes (352) : chaque billet de la feuille des modes
+        // porte ma place de la semaine. Vide tant que la migration dort.
+        fetchMyPalmares(supabase),
       ])
 
     duelEntries = normalizeRankedHistory(matchesRes.data)
     reviewCount = reviewQueue(reviews, todayKey).length
+    palmaresLignes = palmaresRes
 
     // LA ROUTE DES TROPHÉES : compteurs par (matière × jeu), plus la liste des
     // matières dont le « Programme » a de quoi tourner. Formes revalidées — la
@@ -543,7 +571,6 @@ export default async function DefiPage() {
     questViewList = questRes
     questClaimedIds = claimedRes
     clanWeek = weekRes
-    season = seasonRes
 
     // Le coffre de la semaine passée : proposé seulement s'il y a vraiment
     // quelque chose à ouvrir (contribution suffisante, clan classé, et pas
@@ -581,8 +608,7 @@ export default async function DefiPage() {
     {
       id: 'historique',
       label: 'Historique',
-      image: '/images/defi/icones/historique.webp',
-      imageIsTile: true,
+      image: '/images/defi/icones/historique-v3.webp',
       sheetTitle: 'Mes derniers matchs',
       sheetContent: (
         <DuelHistory
@@ -598,7 +624,7 @@ export default async function DefiPage() {
       // portaient le même dessin — on ne savait plus laquelle ouvrait quoi.
       id: 'classements',
       label: 'Classements',
-      image: '/images/defi/icones/classement-v2.webp',
+      image: '/images/defi/icones/classement-v3.webp',
       sub: rankingPreview,
       sheetTitle: 'Classements',
       sheetContent: <RankingTabs boards={boards} clanLabel={clanLabel} />,
@@ -609,7 +635,7 @@ export default async function DefiPage() {
       // comme un doublon).
       id: 'ligue',
       label: 'Ligue',
-      image: '/images/defi/icones/ligues-v2.webp',
+      image: '/images/defi/icones/ligues-v3.webp',
       sub: leaguePreview,
       sheetTitle: league.name,
       sheetContent: <WeeklyLeague league={league} isDemo={leagueIsDemo} />,
@@ -621,7 +647,7 @@ export default async function DefiPage() {
       // Amis, Gift pour le coffre) — un dessin, un sens.
       id: 'tournoi',
       label: 'Tournoi des écoles',
-      image: '/images/defi/icones/tournoi-v2.webp',
+      image: '/images/defi/icones/tournoi-v3.webp',
       dividerBefore: true,
       sheetTitle: 'Tournoi des écoles',
       sheetContent: (
@@ -673,35 +699,29 @@ export default async function DefiPage() {
       ),
     },
     {
+      // AMIS REVIENT DANS LE MENU (Lucas, 16/09/2026 : « supprime ce bloc ») :
+      // sa plaque de l'angle droit est retirée. Le dû qu'elle portait (une
+      // demande reçue) ne se perd pas : la pastille remonte sur le burger tant
+      // que le menu est fermé (menuAlertCount), et se lit ici dès qu'il s'ouvre.
+      id: 'amis',
+      label: 'Amis',
+      image: '/images/defi/icones/amis-v3.webp',
+      badge: friendRequests > 0 ? String(friendRequests) : undefined,
+      badgeTone: 'alert',
+      dividerBefore: true,
+      href: '/amis',
+    },
+    {
       // L'engrenage du bandeau a déménagé ici (lib/top-hud-routes) : sur
       // l'arène, le haut de l'écran est rendu au jeu. Un visiteur y trouve la
       // porte d'entrée plutôt qu'un réglage qui n'existe pas encore pour lui.
       id: 'reglages',
       label: user ? 'Paramètres' : 'Se connecter',
-      image: '/images/defi/icones/reglages-v2.webp',
-      dividerBefore: true,
+      image: '/images/defi/icones/reglages-v3.webp',
       href: user ? '/compte' : '/login',
     },
   ]
 
-  // LA BARRETTE DE L'ANGLE HAUT-DROIT, façon Clash Royale : les boutons qui
-  // vivent AU BORD, juste sous la bande des monnaies, le burger tout au coin et
-  // ses compagnons à sa gauche. Amis quitte le menu pour venir là : c'est la
-  // seule entrée du second rang qui porte un DÛ permanent (une demande reçue
-  // attend une réponse) — enfouie derrière le burger, elle ne se voyait plus.
-  const cornerTiles: RailTile[] = [
-    {
-      id: 'amis',
-      label:
-        friendRequests > 0
-          ? `Amis — ${friendRequests} demande${friendRequests > 1 ? 's' : ''} en attente`
-          : 'Amis',
-      image: '/images/defi/icones/amis-v2.webp',
-      badge: friendRequests > 0 ? String(friendRequests) : undefined,
-      badgeTone: 'alert',
-      href: '/amis',
-    },
-  ]
 
   // Rail GAUCHE — le duo missions, tuiles libres. La pastille des quêtes dit
   // le dû (corail : récompense à réclamer) ou le reste à faire (neutre) —
@@ -731,7 +751,7 @@ export default async function DefiPage() {
           {
             id: 'quetes',
             label: `Quêtes du jour — ${doneCount(questViewList)} sur ${questViewList.length} faites`,
-            image: '/images/defi/icones/quetes-v2.webp',
+            image: '/images/defi/icones/quetes-v3.webp',
             badge: questBadge ? String(questBadge.count) : undefined,
             badgeTone: questBadge?.tone,
             sheetTitle: 'Quêtes du jour',
@@ -761,7 +781,7 @@ export default async function DefiPage() {
             // contraste qui fait l'événement — d'où deux illustrations, et pas
             // une seule : le buste (posé sur la tuile ambre de l'urgence) ou le
             // médaillon, qui porte déjà son propre cadre.
-            image: traqueFeatured?.boss.image ?? '/images/defi/icones/boss-v2.webp',
+            image: traqueFeatured?.boss.image ?? '/images/defi/icones/boss-v3.webp',
             family: traqueFeatured ? ('amber' as const) : undefined,
             badge: traqueReady > 0 ? String(traqueReady) : undefined,
             badgeTone: 'alert' as const,
@@ -788,47 +808,14 @@ export default async function DefiPage() {
     colorBySlug: subjectColors,
   })
 
-  // La piste du Pass de saison, ouverte par le bandeau du haut.
-  const seasonViews = season
-    ? trackView(season.crowns, season.claimed, season.hasPass)
-    : null
-
-  // LA BANDE DU HAUT — le bandeau de saison (ou, sans la migration 207, la
-  // mention honnête de pré-saison). Il était collé au bloc CTA en bas ; il
-  // occupe désormais le centre de la bande haute, entre la pastille de niveau
-  // et les pièces, façon Pass Royale.
-  const seasonBand =
-    season && seasonViews ? (
-      <SeasonBanner
-        number={season.season.number}
-        name={season.season.name}
-        progress={tierProgress(season.crowns)}
-        countdown={seasonCountdown(todayKey)}
-        isLastDay={isSeasonLastDay(todayKey)}
-        claimable={claimableCount(seasonViews)}
-      >
-        <div className="p-4">
-          <SeasonTrack state={season} today={todayKey} />
-        </div>
-      </SeasonBanner>
-    ) : (
-      <p
-        className="olympe-glass mx-auto flex w-fit items-center gap-1.5 rounded-full px-3 py-1 text-[0.68rem] font-bold"
-        aria-label="Pré-saison : le classement est déjà actif, tes trophées comptent et sont conservés."
-      >
-        <Crown
-          className="size-3.5 shrink-0 text-highlight"
-          strokeWidth={2.4}
-          aria-hidden="true"
-        />
-        <span className="truncate">Classement · pré-saison</span>
-      </p>
-    )
+  // PLUS DE BANDE DE SAISON SUR L'ARÈNE (Lucas, 17/09/2026 : « supprime le
+  // bloc Saison 3, il est inutile »). La piste du Pass (lib/saison,
+  // SeasonTrack) reste en place, sans porte sur cet écran.
 
   // Niveau + XP vivent UNIQUEMENT dans la pastille du HUD (ProfileChip, qui
   // lit l'XP du portefeuille) ; le socle du personnage ne porte que le prénom.
   return (
-    <div className="-mx-4 -mt-16 -mb-24 flex h-dvh flex-col overflow-hidden px-3 pt-14 pb-[calc(4.75rem+env(safe-area-inset-bottom))] md:mx-0 md:-my-10 md:pt-4 md:pb-4">
+    <div className="-mx-4 -mt-16 -mb-24 flex h-dvh flex-col overflow-hidden px-3 pt-14 pb-[calc(5.75rem+env(safe-area-inset-bottom))] md:mx-0 md:-my-10 md:pt-4 md:pb-4">
       {/* Vigie de promotion : fête la montée de ligue depuis la dernière visite. */}
       {leagueTier !== null ? <LeaguePromotionWatch tier={leagueTier} /> : null}
       {/* Rythme vertical : gap-4 (2x) entre la scène/le podium et le groupe
@@ -848,7 +835,6 @@ export default async function DefiPage() {
               l'arène DIT déjà où l'on est. */}
           <ArenaHud
             leftTiles={leftTiles}
-            cornerTiles={cornerTiles}
             menuItems={menuItems}
             // L'appel Studuel+ n'existe que pour qui n'est pas (encore) abonné.
             premiumSlot={isPremium ? null : <PremiumPill key="premium" />}
@@ -858,17 +844,21 @@ export default async function DefiPage() {
             roadSlot={<TrophyRoadSheet key="road" />}
             profileSlot={
               profileData ? (
-                <ProfileChip data={profileData} trophies={trophies} />
+                <ProfileChip
+                  data={profileData}
+                  trophies={trophies}
+                  gems={gems}
+                  streak={streak}
+                  boostXpJusqua={boostXpJusqua}
+                />
               ) : null
             }
-            seasonSlot={seasonBand}
           >
             <ArenaHero />
           </ArenaHud>
 
           {/* Le GROUPE d'action du bas : CTA duel + ligne CLASSÉ / MODES, soudés
-              par un espacement x (gap-2). Le bandeau de saison n'y est plus : il
-              a rejoint la bande du haut (seasonSlot). */}
+              par un espacement x (gap-2). */}
           <div className="flex flex-col gap-2">
             {/* LE MESSAGE ÉCLAIR (façon 7DS) — il ne s'affiche QUE quand un
                 gardien vient d'être débusqué, et il prend alors la première
@@ -897,7 +887,17 @@ export default async function DefiPage() {
                 le HUD) : il porte la MATIÈRE, et un tap ouvre la feuille de
                 sélection. Modes garde le flanc gauche. */}
             <ArenaActionBar
-              left={<ModesSheet todayKey={todayKey} liveDuel={!!user} />}
+              left={
+                <ModesSheet
+                  todayKey={todayKey}
+                  liveDuel={!!user}
+                  palmares={palmaresLignes}
+                  // Le TOTAL DE TROPHÉES sous le titre de la feuille, et
+                  // l'accès Studuel+ qui ouvre tous les jeux d'une matière.
+                  trophees={user ? trophies : null}
+                  premium={isPremium}
+                />
+              }
               center={
                 <CombatButton
                   reason={duelReason}

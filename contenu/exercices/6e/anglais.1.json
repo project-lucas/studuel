@@ -1,0 +1,891 @@
+{
+  "niveau": "6e",
+  "matiere": "anglais",
+  "exercices": [
+    {
+      "chapitre": "c371d142-8ced-5f94-9a25-77ab3f83fd24",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Une carte postale du pays de Galles",
+      "competence": "comprendre-langue",
+      "situation": "Sam, le correspondant anglais d’Inès, passe les vacances dans la ferme de son grand-père, au pays de Galles. Il lui envoie une carte postale pleine d’animaux.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "texte",
+          "genre": "lettre",
+          "titre": "Sam’s postcard",
+          "source": "Carte imaginée pour l’exercice",
+          "blocs": [
+            "Dear Inès,",
+            "I’m at my grandad’s farm in Wales for the holidays. It’s great! There are two horses, four cows, twenty [[i|sheep]] and three cats. There are [[i|mice]] in the barn, so the cats are very happy!",
+            "My little cousins, Owen and Megan, are here too. The two [[i|children]] help Grandad every morning.",
+            "See you soon,",
+            "Sam"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Sam écrit **trois** noms au pluriel qui ne se terminent **pas** par -s. Touche-les.",
+          "reponse": [
+            "i"
+          ],
+          "aide": "Ce sont des pluriels irréguliers : deux animaux… et des personnes. Relis les paragraphes 2 et 3.",
+          "explication": "**sheep** (*one sheep, twenty sheep* : il ne change pas), **mice** (pluriel de *a mouse*) et **children** (pluriel de *a child*) sont des pluriels irréguliers : pas de -s."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de moutons y a-t-il à la ferme ?",
+          "reponse": 20,
+          "unite": "moutons",
+          "aide": "*Sheep* veut dire « mouton » : cherche le nombre écrit juste devant ce mot.",
+          "explication": "Il y a **20** moutons : *twenty sheep*. Et *sheep* ne prend jamais de -s, même après *twenty*."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète le résumé de la carte avec le bon pluriel.",
+          "texte": "On the farm, there are four ___ and twenty ___. There are ___ in the barn!",
+          "reponses": [
+            [
+              "cows"
+            ],
+            [
+              "sheep"
+            ],
+            [
+              "mice"
+            ]
+          ],
+          "banque": [
+            "cows",
+            "cowes",
+            "sheep",
+            "sheeps",
+            "mice",
+            "mouses"
+          ],
+          "aide": "Relis le paragraphe 2 : chaque animal y est écrit avec son nombre. Attention, trois mots de la banque n’existent pas !",
+          "explication": "four **cows** (pluriel régulier en -s), twenty **sheep** (invariable) et **mice** (pluriel irrégulier de *mouse*). *Sheeps*, *mouses* et *cowes* n’existent pas."
+        }
+      ]
+    },
+    {
+      "chapitre": "c371d142-8ced-5f94-9a25-77ab3f83fd24",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La salade de fruits de Granny Rose",
+      "competence": "analyser-document",
+      "situation": "Pour la kermesse de son école, à Brighton, Lucy prépare la salade de fruits de sa grand-mère. Voici la recette, recopiée sur une vieille fiche.",
+      "documents": [
+        {
+          "id": "recette",
+          "type": "fiche",
+          "modele": "recette",
+          "titre": "La fiche de Granny Rose",
+          "source": "Recette imaginée pour l’exercice",
+          "entete": "Granny Rose’s Fruit Salad",
+          "sousTitre": "Serves 8 people",
+          "emoji": "🍓",
+          "teinte": "corail",
+          "lignes": [
+            {
+              "texte": "**You need:**"
+            },
+            {
+              "texte": "4 apples",
+              "id": "l1"
+            },
+            {
+              "texte": "2 peaches",
+              "id": "l2"
+            },
+            {
+              "texte": "3 bananas",
+              "id": "l3"
+            },
+            {
+              "texte": "12 cherries",
+              "id": "l4"
+            },
+            {
+              "texte": "a few strawberries",
+              "id": "l5"
+            },
+            {
+              "texte": "some orange juice",
+              "id": "jus"
+            },
+            {
+              "texte": "a little sugar",
+              "id": "sucre"
+            },
+            {
+              "separateur": true
+            },
+            {
+              "texte": "**Tools:** 2 knives and a big bowl"
+            },
+            {
+              "separateur": true
+            },
+            {
+              "texte": "Cut the fruit into small pieces. Add the juice and the sugar. Put the bowl in the fridge for an hour."
+            }
+          ],
+          "pied": "Easy and yummy! — Granny Rose"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "recette",
+          "enonce": "Deux ingrédients sont **indénombrables** : on ne peut pas les compter un par un. Touche leurs **deux** lignes.",
+          "reponse": [
+            "jus",
+            "sucre"
+          ],
+          "aide": "Peut-on dire « two sugars » ou « three juices » dans une recette ? Regarde aussi les mots placés devant chaque ingrédient.",
+          "explication": "**some orange juice** et **a little sugar** : le jus et le sucre ne se comptent pas. Comme *water* ou *bread*, ces noms n’ont ni pluriel ni *a/an*."
+        },
+        {
+          "type": "texte",
+          "enonce": "La recette est pour huit personnes. Quel mot anglais, sous le titre, veut dire « personnes » ?",
+          "reponse": [
+            "people"
+          ],
+          "placeholder": "Un mot",
+          "aide": "Cherche sous le titre de la fiche, juste après le nombre 8.",
+          "explication": "**people** : c’est le pluriel irrégulier de *a person*. *Serves 8 people* veut dire « pour 8 personnes »."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range les pluriels de la recette selon la règle qu’ils suivent.",
+          "categories": [
+            "On ajoute -s",
+            "On ajoute -es",
+            "-y devient -ies",
+            "-f(e) devient -ves"
+          ],
+          "items": [
+            [
+              "apples",
+              0
+            ],
+            [
+              "bananas",
+              0
+            ],
+            [
+              "pieces",
+              0
+            ],
+            [
+              "peaches",
+              1
+            ],
+            [
+              "cherries",
+              2
+            ],
+            [
+              "strawberries",
+              2
+            ],
+            [
+              "knives",
+              3
+            ]
+          ],
+          "aide": "Pense au singulier de chaque mot : *a peach*, *a cherry*, *a knife*… Par quelles lettres finit-il ?",
+          "explication": "**-s** : apples, bananas, pieces · **-es** après -ch : peaches · **-ies** après consonne + y : cherries, strawberries · **-ves** : knives (*a knife*)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans quel mot de la recette le -s final se prononce-t-il /ɪz/, comme une syllabe de plus ?",
+          "options": [
+            "peaches",
+            "apples",
+            "bananas",
+            "cherries"
+          ],
+          "reponse": 0,
+          "aide": "Le pluriel ajoute une syllabe après un « sifflement » : s, sh, ch, x…",
+          "explication": "**peaches** se dit « pi-tchiz » : après le son « tch », le pluriel forme une syllabe /ɪz/, comme *buses* ou *watches*. Dans *apples*, *bananas* et *cherries*, le -s se prononce /z/."
+        }
+      ]
+    },
+    {
+      "chapitre": "c371d142-8ced-5f94-9a25-77ab3f83fd24",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une journée à Dino World",
+      "competence": "manier-langue",
+      "situation": "Harry, le correspondant anglais de Léo, passe la journée dans un parc de dinosaures. Il envoie à Léo la photo de l’affiche pour son exposé d’anglais… mais Léo fait encore quelques erreurs.",
+      "documents": [
+        {
+          "id": "affiche",
+          "type": "fiche",
+          "modele": "affiche",
+          "titre": "L’affiche du parc",
+          "source": "Affiche imaginée pour l’exercice",
+          "entete": "DINO WORLD",
+          "sousTitre": "Brighton · Open every day, 10 am – 6 pm",
+          "emoji": "🦖",
+          "teinte": "vert",
+          "lignes": [
+            {
+              "texte": "Meet **30 giant dinosaurs** in the forest!"
+            },
+            {
+              "texte": "See a T. rex and its **60 teeth**!"
+            },
+            {
+              "texte": "Put your **feet** in giant footprints!"
+            },
+            {
+              "separateur": true
+            },
+            {
+              "texte": "Tickets — adults:",
+              "valeur": "£12"
+            },
+            {
+              "texte": "Tickets — children (4–15):",
+              "valeur": "£8"
+            },
+            {
+              "texte": "Under 4:",
+              "valeur": "free"
+            }
+          ],
+          "pied": "Picnic area · Gift shop · Café"
+        },
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Les messages de Harry et Léo",
+          "participants": [
+            {
+              "nom": "Harry",
+              "emoji": "👦",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Léo",
+              "emoji": "🧒",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Harry",
+              "texte": "Hi Léo! I’m at Dino World with my mum and my two little brothers 🦖"
+            },
+            {
+              "qui": "Léo",
+              "texte": "Cool! Are the dinosaurs big?"
+            },
+            {
+              "qui": "Harry",
+              "texte": "Yes, they’re huge! The T. rex is my favourite 😱"
+            },
+            {
+              "qui": "Léo",
+              "texte": "Can you send me some [[e|informations]] about the park? It’s for my English project."
+            },
+            {
+              "qui": "Harry",
+              "texte": "Sure! Look at the poster 📸"
+            },
+            {
+              "qui": "Léo",
+              "texte": "Thanks! I can’t go out today: I’ve got a lot of [[e|homeworks]] 😩"
+            },
+            {
+              "qui": "Harry",
+              "texte": "Poor you! 😅"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sms",
+          "enonce": "Léo fait **deux** fautes de pluriel dans ses messages. Touche les deux mots fautifs.",
+          "reponse": [
+            "e"
+          ],
+          "aide": "Cherche deux noms qui prennent un -s en français, mais qui sont **indénombrables** en anglais.",
+          "explication": "**informations** et **homeworks** sont faux : en anglais, *information* et *homework* sont **indénombrables**. Léo aurait dû écrire *some information* et *a lot of homework*."
+        },
+        {
+          "type": "categories",
+          "enonce": "Pour son exposé, Léo trie des noms des deux documents. Range-les.",
+          "categories": [
+            "Dénombrable : a/an et pluriel",
+            "Indénombrable : ni a/an, ni pluriel"
+          ],
+          "items": [
+            [
+              "dinosaur",
+              0
+            ],
+            [
+              "ticket",
+              0
+            ],
+            [
+              "footprint",
+              0
+            ],
+            [
+              "brother",
+              0
+            ],
+            [
+              "information",
+              1
+            ],
+            [
+              "homework",
+              1
+            ]
+          ],
+          "aide": "Demande-toi si l’on peut dire « two … » : two tickets ? two informations ?",
+          "explication": "On compte les **dinosaurs**, les **tickets**, les **footprints** et les **brothers**. *Information* et *homework* sont **indénombrables** : *some information*, *a lot of homework*."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Harry (12 ans), ses deux petits frères (7 et 9 ans) et leur mère achètent leurs billets. Combien paient-ils en tout ?",
+          "reponse": 36,
+          "unite": "£",
+          "aide": "Sur l’affiche, trouve le prix pour les *children* et pour les *adults*. Combien y a-t-il d’enfants ?",
+          "explication": "3 enfants × 8 £ + 1 adulte × 12 £ = 24 + 12 = **36 £**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la fiche d’exposé de Léo : écris au pluriel le nom entre parenthèses.",
+          "texte": "At Dino World, there are 30 giant ___ (dinosaur). A T. rex has got 60 ___ (tooth)! ___ (child) under 4 don’t pay, and you can put your ___ (foot) in giant footprints.",
+          "reponses": [
+            [
+              "dinosaurs"
+            ],
+            [
+              "teeth"
+            ],
+            [
+              "children"
+            ],
+            [
+              "feet"
+            ]
+          ],
+          "aide": "Un seul de ces pluriels est régulier. Les trois autres changent de voyelle ou de terminaison : l’affiche peut t’aider.",
+          "explication": "**dinosaurs** (régulier), **teeth** (*a tooth*), **Children** (*a child*) et **feet** (*a foot*) : trois pluriels irréguliers à connaître par cœur."
+        }
+      ]
+    },
+    {
+      "chapitre": "e36d9e8d-8bf2-5795-9fa8-aed2e4f389f9",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le pique-nique de Ben",
+      "competence": "observer-schema",
+      "situation": "Ben, un petit Londonien, prépare un pique-nique à Hyde Park avec sa grande sœur. Voici tout ce qu’il a posé sur la nappe, avec le nom anglais de chaque objet.",
+      "documents": [
+        {
+          "id": "nappe",
+          "type": "schema",
+          "titre": "On the picnic blanket",
+          "largeur": 320,
+          "hauteur": 240,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 12,
+              "y": 12,
+              "l": 296,
+              "h": 216,
+              "arrondi": 16,
+              "teinte": "rose",
+              "motif": "clair"
+            },
+            {
+              "forme": "emoji",
+              "x": 50,
+              "y": 58,
+              "emoji": "🍎",
+              "taille": 32
+            },
+            {
+              "forme": "emoji",
+              "x": 123,
+              "y": 58,
+              "emoji": "🥪",
+              "taille": 32
+            },
+            {
+              "forme": "emoji",
+              "x": 197,
+              "y": 58,
+              "emoji": "🥚",
+              "taille": 32
+            },
+            {
+              "forme": "emoji",
+              "x": 270,
+              "y": 58,
+              "emoji": "🍌",
+              "taille": 32
+            },
+            {
+              "forme": "rect",
+              "id": "apple",
+              "zone": true,
+              "x": 18,
+              "y": 84,
+              "l": 64,
+              "h": 26,
+              "arrondi": 9,
+              "teinte": "blanc",
+              "motif": "plein",
+              "texte": "apple"
+            },
+            {
+              "forme": "rect",
+              "id": "sandwich",
+              "zone": true,
+              "x": 91,
+              "y": 84,
+              "l": 64,
+              "h": 26,
+              "arrondi": 9,
+              "teinte": "blanc",
+              "motif": "plein",
+              "texte": "sandwich"
+            },
+            {
+              "forme": "rect",
+              "id": "egg",
+              "zone": true,
+              "x": 165,
+              "y": 84,
+              "l": 64,
+              "h": 26,
+              "arrondi": 9,
+              "teinte": "blanc",
+              "motif": "plein",
+              "texte": "egg"
+            },
+            {
+              "forme": "rect",
+              "id": "banana",
+              "zone": true,
+              "x": 238,
+              "y": 84,
+              "l": 64,
+              "h": 26,
+              "arrondi": 9,
+              "teinte": "blanc",
+              "motif": "plein",
+              "texte": "banana"
+            },
+            {
+              "forme": "emoji",
+              "x": 50,
+              "y": 152,
+              "emoji": "☂️",
+              "taille": 32
+            },
+            {
+              "forme": "emoji",
+              "x": 123,
+              "y": 152,
+              "emoji": "🍰",
+              "taille": 32
+            },
+            {
+              "forme": "emoji",
+              "x": 197,
+              "y": 152,
+              "emoji": "🍊",
+              "taille": 32
+            },
+            {
+              "forme": "emoji",
+              "x": 270,
+              "y": 152,
+              "emoji": "⚽",
+              "taille": 32
+            },
+            {
+              "forme": "rect",
+              "id": "umbrella",
+              "zone": true,
+              "x": 18,
+              "y": 178,
+              "l": 64,
+              "h": 26,
+              "arrondi": 9,
+              "teinte": "blanc",
+              "motif": "plein",
+              "texte": "umbrella"
+            },
+            {
+              "forme": "rect",
+              "id": "cake",
+              "zone": true,
+              "x": 91,
+              "y": 178,
+              "l": 64,
+              "h": 26,
+              "arrondi": 9,
+              "teinte": "blanc",
+              "motif": "plein",
+              "texte": "cake"
+            },
+            {
+              "forme": "rect",
+              "id": "orange",
+              "zone": true,
+              "x": 165,
+              "y": 178,
+              "l": 64,
+              "h": 26,
+              "arrondi": 9,
+              "teinte": "blanc",
+              "motif": "plein",
+              "texte": "orange"
+            },
+            {
+              "forme": "rect",
+              "id": "ball",
+              "zone": true,
+              "x": 238,
+              "y": 178,
+              "l": 64,
+              "h": 26,
+              "arrondi": 9,
+              "teinte": "blanc",
+              "motif": "plein",
+              "texte": "ball"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "nappe",
+          "enonce": "Ben doit écrire *a* ou *an* devant chaque objet. Touche les étiquettes des **quatre** objets devant lesquels il faut écrire **an**.",
+          "reponse": [
+            "apple",
+            "egg",
+            "umbrella",
+            "orange"
+          ],
+          "aide": "Dis chaque mot à voix haute : commence-t-il par un **son** de voyelle (a, e, i, o, u) ?",
+          "explication": "**an apple**, **an egg**, **an umbrella**, **an orange** : ces mots commencent par un son de voyelle. On dit en revanche *a sandwich*, *a banana*, *a cake* et *a ball*."
+        },
+        {
+          "type": "trous",
+          "enonce": "Ben écrit un message à sa sœur. Complète-le avec *a*, *an* ou *the*.",
+          "texte": "In my bag, I’ve got ___ banana and ___ apple. ___ apple is red!",
+          "reponses": [
+            [
+              "a"
+            ],
+            [
+              "an"
+            ],
+            [
+              "the"
+            ]
+          ],
+          "banque": [
+            "a",
+            "an",
+            "the"
+          ],
+          "aide": "D’abord on présente un objet avec *a* ou *an* ; ensuite, quand on sait de quel objet on parle, on le désigne.",
+          "explication": "*a banana* et *an apple* : Ben les **présente**. Puis ***The** apple is red* : il parle de la pomme qu’il vient de citer."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le pique-nique commence dans une heure. Comment Ben écrit-il « dans une heure » ?",
+          "options": [
+            "in an hour",
+            "in a hour",
+            "in the hour",
+            "in hour"
+          ],
+          "reponse": 0,
+          "aide": "Dans *hour*, le **h** ne se prononce pas. Quel est donc le premier son du mot ?",
+          "explication": "**in an hour** : on n’entend pas le *h* de *hour*, le mot commence par un son de voyelle. C’est toujours le **son**, et non la lettre, qui décide."
+        }
+      ]
+    },
+    {
+      "chapitre": "e36d9e8d-8bf2-5795-9fa8-aed2e4f389f9",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le premier e-mail de Charlie",
+      "competence": "analyser-texte",
+      "situation": "Lina vient d’avoir un correspondant anglais, Charlie, qui habite à Manchester. Voici le premier e-mail qu’il lui envoie.",
+      "documents": [
+        {
+          "id": "mail",
+          "type": "texte",
+          "genre": "lettre",
+          "titre": "Charlie’s e-mail",
+          "source": "E-mail imaginé pour l’exercice",
+          "blocs": [
+            "Hi Lina,",
+            "My name is Charlie. I’m twelve and I live in Manchester, in the north of England. I’ve got a sister and a dog. The dog is called Biscuit, and he loves cheese!",
+            "I go to [[z|school]] by bus. My favourite subject is [[z|history]]. I play [[z|football]] with my cousin in the park, and I love [[z|music]].",
+            "What about you? Write soon!",
+            "Charlie"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "mail",
+          "portee": [
+            2
+          ],
+          "enonce": "Dans le paragraphe 3, Charlie emploie **quatre** noms **sans article**, là où le français en mettrait un (« l’ », « la », « au »…). Touche-les.",
+          "reponse": [
+            "z"
+          ],
+          "aide": "Cherche les noms qui n’ont devant eux ni *a/an*, ni *the*, ni *my*. Attention : « en bus » n’a pas d’article en français non plus.",
+          "explication": "**school**, **history**, **football** et **music** : pas d’article devant *school* dans sa fonction, les matières, les sports et les indénombrables pris en général. Le français dit pourtant « à l’école », « l’histoire », « au foot », « la musique »."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi Charlie écrit-il « **The** dog is called Biscuit », et non « A dog is called Biscuit » ?",
+          "options": [
+            "Parce qu’il a déjà présenté son chien juste avant",
+            "Parce que *dog* commence par une consonne",
+            "Parce qu’on met toujours *the* devant un animal",
+            "Parce que Biscuit est un nom propre"
+          ],
+          "reponse": 0,
+          "aide": "Relis la phrase d’avant : « I’ve got a sister and a dog. »",
+          "explication": "Charlie **présente** d’abord son chien (*a dog*), puis il le **désigne** : ***the** dog*, le chien dont on vient de parler."
+        },
+        {
+          "type": "trous",
+          "enonce": "Lina répond à Charlie. Complète son message avec *a*, *an* ou *the*.",
+          "texte": "Hi Charlie! I live in Lyon. I’ve got ___ brother and ___ hamster. ___ hamster is called Noisette. And my brother wants ___ iguana!",
+          "reponses": [
+            [
+              "a"
+            ],
+            [
+              "a"
+            ],
+            [
+              "the"
+            ],
+            [
+              "an"
+            ]
+          ],
+          "banque": [
+            "a",
+            "an",
+            "the"
+          ],
+          "aide": "Fais comme Charlie avec son chien : on présente avec *a/an*, on désigne avec *the*. Et écoute le premier son du mot qui suit.",
+          "explication": "**a** brother, **a** hamster (son de consonne : le *h* s’entend) ; ***The** hamster* : il vient d’être présenté ; **an** iguana : *iguana* commence par un son de voyelle."
+        },
+        {
+          "type": "texte",
+          "enonce": "Lina veut écrire : « Mon pays préféré, c’est la France. » Complète sa phrase : « My favourite country is ___. »",
+          "reponse": [
+            "France"
+          ],
+          "placeholder": "Le mot qui manque",
+          "aide": "Charlie écrit « in Manchester », « of England »… Met-il un article devant un nom de ville ou de pays ?",
+          "explication": "*My favourite country is* **France** : pas d’article devant un nom de pays, de ville ou de langue, alors que le français dit « **la** France »."
+        }
+      ]
+    },
+    {
+      "chapitre": "e36d9e8d-8bf2-5795-9fa8-aed2e4f389f9",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "De New York à Amsterdam",
+      "competence": "analyser-document",
+      "situation": "Jade, une collégienne française, passe ses vacances à New York. Elle envoie une carte postale à son correspondant anglais, Tom, qui est lui-même aux Pays-Bas. Puis ils s’écrivent par SMS.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "fiche",
+          "modele": "carte-postale",
+          "titre": "La carte postale de Jade",
+          "source": "Carte imaginée pour l’exercice",
+          "entete": "Greetings from New York!",
+          "emoji": "🗽",
+          "teinte": "bleu",
+          "lignes": [
+            {
+              "texte": "Hi Tom!"
+            },
+            {
+              "texte": "We’re in the United States for two weeks, and New York is fantastic!"
+            },
+            {
+              "texte": "We have breakfast in a café every morning, and I speak English all day."
+            },
+            {
+              "texte": "Tomorrow: a bike ride in Central Park. And next summer: the United Kingdom!"
+            }
+          ],
+          "pied": "Love, Jade"
+        },
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Les messages de Jade et Tom",
+          "participants": [
+            {
+              "nom": "Jade",
+              "emoji": "👧",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Tom",
+              "emoji": "👦",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Tom",
+              "texte": "Hi Jade! How is New York? 🗽"
+            },
+            {
+              "qui": "Jade",
+              "texte": "Amazing! Our hotel is next to Central Park. And you?"
+            },
+            {
+              "qui": "Tom",
+              "texte": "I’m in the Netherlands with my dad. We’re in Amsterdam for a week 🚲"
+            },
+            {
+              "qui": "Jade",
+              "texte": "Cool! Do you speak Dutch? 😄"
+            },
+            {
+              "qui": "Tom",
+              "texte": "No! My cousins speak English with me. Tomorrow we play [[x|the]] tennis in the park 🎾"
+            },
+            {
+              "qui": "Jade",
+              "texte": "Have fun!"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sms",
+          "enonce": "Dans ses messages, Tom met **un** article de trop. Touche-le.",
+          "reponse": [
+            "x"
+          ],
+          "aide": "Relis la règle de l’article zéro : repas, sports, matières… Mais attention, certains pays prennent bien *the*.",
+          "explication": "On dit *play* **tennis**, sans article : c’est un sport. Le français dit « jouer **au** tennis », d’où la faute. En revanche, *the Netherlands* et *the park* sont justes."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces noms des deux documents : sont-ils précédés de *the*, ou d’aucun article ?",
+          "categories": [
+            "the",
+            "Pas d’article"
+          ],
+          "items": [
+            [
+              "United States",
+              0
+            ],
+            [
+              "Netherlands",
+              0
+            ],
+            [
+              "United Kingdom",
+              0
+            ],
+            [
+              "New York",
+              1
+            ],
+            [
+              "Amsterdam",
+              1
+            ],
+            [
+              "English",
+              1
+            ],
+            [
+              "breakfast",
+              1
+            ],
+            [
+              "tennis",
+              1
+            ]
+          ],
+          "aide": "Les villes, les langues, les repas et les sports n’ont pas d’article. Quels noms de pays font exception ?",
+          "explication": "**the** United States, **the** Netherlands, **the** United Kingdom : des pays au nom pluriel ou qui contient un nom commun. **Aucun article** devant les villes (*New York*, *Amsterdam*), les langues (*English*), les repas (*breakfast*) et les sports (*tennis*)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi Jade écrit-elle « **the** United States », alors qu’on écrit « France » sans article ?",
+          "options": [
+            "Parce que le nom contient un nom commun au pluriel : *states*, les « États »",
+            "Parce que les États-Unis sont plus grands que la France",
+            "Parce que tous les pays d’Amérique prennent *the*",
+            "Parce que Jade fait une faute d’anglais"
+          ],
+          "reponse": 0,
+          "aide": "Que veut dire le mot *states* ? Relis les exceptions du cours.",
+          "explication": "*The United States* = « les États-Unis » : le nom contient un nom commun (*states*) au pluriel, comme *the Netherlands*. *The United Kingdom* contient lui aussi un nom commun : *kingdom*, le royaume."
+        },
+        {
+          "type": "trous",
+          "enonce": "Jade envoie un dernier message. Complète-le avec *a* ou *an*.",
+          "texte": "New York is ___ amazing city! We’ve got ___ small room in ___ old hotel, and tonight we’ve got tickets for ___ musical on Broadway!",
+          "reponses": [
+            [
+              "an"
+            ],
+            [
+              "a"
+            ],
+            [
+              "an"
+            ],
+            [
+              "a"
+            ]
+          ],
+          "aide": "Regarde le mot qui suit **juste** le trou : c’est son premier son qui décide, même si c’est un adjectif.",
+          "explication": "**an** amazing city, **a** small room, **an** old hotel, **a** musical : on choisit *a* ou *an* d’après le son du mot qui suit immédiatement, nom ou adjectif."
+        }
+      ]
+    }
+  ]
+}

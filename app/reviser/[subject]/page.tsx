@@ -1,9 +1,12 @@
+import { toutLire } from '@/lib/postgrest-pages'
 import { notFound, redirect } from 'next/navigation'
 import SubjectTemplate from '@/components/reviser/SubjectTemplate'
 import CarnetDeLaMatiere from '@/components/carnet/CarnetDeLaMatiere'
 import SubjectMasteryCelebration from '@/components/SubjectMasteryCelebration'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
+import { isPremiumTier } from '@/lib/gems'
+import type { Tier } from '@/lib/subscription'
 import {
   getSubjectsCached,
   getProgrammeCached,
@@ -22,7 +25,6 @@ import {
   examBannerOnTop,
   modeFromParam,
   modesFor,
-  resumeCta,
   disciplinesOf,
   subjectProgress,
   type ChapterExamHint,
@@ -31,6 +33,11 @@ import {
   type SubjectTemplateData,
 } from '@/lib/subject-template'
 import { EXAM_PAPER_COLUMNS, parseExamPapers } from '@/lib/exam-papers'
+import {
+  DERNIERE_SESSION_LABEL,
+  derniereSession,
+  tracesDeLaMatiere,
+} from '@/lib/derniere-session'
 import { getReviewItems } from '@/lib/srs'
 import { parseGradeStandings } from '@/lib/percentile'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
@@ -96,9 +103,9 @@ export default async function SubjectPage({
     await Promise.all([
       supabase
         .from('profiles')
-        .select('grade_level')
+        .select('grade_level, subscription_tier')
         .eq('id', user.id)
-        .maybeSingle<{ grade_level: string | null }>(),
+        .maybeSingle<{ grade_level: string | null; subscription_tier: string | null }>(),
       getSubjectsCached(),
       supabase
         .from('profiles')
@@ -252,19 +259,39 @@ export default async function SubjectPage({
     quizIds.length
       ? supabase
           .from('test_sessions')
-          .select('quiz_id, score, total')
+          // `created_at` : la date de la dernière session, pour le drapeau
+          // posé sur la fiche où l'élève s'est arrêté (lib/derniere-session).
+          .select('quiz_id, score, total, created_at')
           .eq('user_id', user.id)
           .in('quiz_id', quizIds)
-          .returns<{ quiz_id: string | null; score: number; total: number }[]>()
+          .returns<
+            {
+              quiz_id: string | null
+              score: number
+              total: number
+              created_at: string | null
+            }[]
+          >()
       : Promise.resolve({
-          data: [] as { quiz_id: string | null; score: number; total: number }[],
+          data: [] as {
+            quiz_id: string | null
+            score: number
+            total: number
+            created_at: string | null
+          }[],
         }),
+    // Paginé : une matière de 1re dépasse les 1 000 questions, et PostgREST
+    // coupe à 1 000 sans le dire (lib/postgrest-pages).
     quizIds.length
-      ? supabase
-          .from('quiz_questions')
-          .select('id, quiz_id')
-          .in('quiz_id', quizIds)
-          .returns<{ id: string; quiz_id: string }[]>()
+      ? toutLire((from, to) =>
+          supabase
+            .from('quiz_questions')
+            .select('id, quiz_id')
+            .in('quiz_id', quizIds)
+            .order('id', { ascending: true })
+            .range(from, to)
+            .returns<{ id: string; quiz_id: string }[]>(),
+        )
       : Promise.resolve({ data: [] as { id: string; quiz_id: string }[] }),
     bossQuizIds.length
       ? supabase
@@ -481,12 +508,21 @@ export default async function SubjectPage({
 
   const data: SubjectTemplateData = {
     subject: { slug: subject.slug, name: subject.name, color: subject.color },
+    premium: isPremiumTier((profile?.subscription_tier ?? 'free') as Tier),
     grade,
     gradeLevel: standings.grade,
     standing: subjectStanding,
     progress,
     progressByDiscipline,
-    resume: resumeCta(chapters),
+    // LE DRAPEAU DE LA DERNIÈRE SESSION (Lucas, 17/09/2026) : la fiche du quiz
+    // joué ou du cours lu le plus récemment dans cette matière. Plus de
+    // « Reprendre / Commencer » deviné — un repère sur ce qui a été fait.
+    resume: (() => {
+      const chapterId = derniereSession(
+        tracesDeLaMatiere(catalog, sessions ?? [], completions ?? []),
+      )
+      return chapterId ? { chapterId, label: DERNIERE_SESSION_LABEL } : null
+    })(),
     examOnTop: examBannerOnTop(progress.pct, daysToExam),
     weakCount,
     chapters,

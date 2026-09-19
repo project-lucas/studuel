@@ -1,3 +1,4 @@
+import { toutLire } from '@/lib/postgrest-pages'
 import type { SupabaseClient } from '@supabase/supabase-js'
 import { getChapterMastery } from '@/lib/mastery-server'
 import {
@@ -131,12 +132,25 @@ export async function resolveCurrentChapter(
               .in('id', lessonIds)
               .returns<LessonRow[]>()
           : Promise.resolve({ data: [] as LessonRow[] }),
-        supabase.from('chapters').select('id, title').returns<ChapterRow[]>(),
-        supabase
-          .from('quiz_questions')
-          .select('quiz_id')
-          .in('quiz_id', allQuizIds)
-          .returns<{ quiz_id: string }[]>(),
+        // Paginés : 2 323 chapitres et ~5 000 questions par classe, PostgREST
+        // coupe à 1 000 sans le dire (lib/postgrest-pages).
+        toutLire((from, to) =>
+          supabase
+            .from('chapters')
+            .select('id, title')
+            .order('id', { ascending: true })
+            .range(from, to)
+            .returns<ChapterRow[]>(),
+        ),
+        toutLire((from, to) =>
+          supabase
+            .from('quiz_questions')
+            .select('quiz_id')
+            .in('quiz_id', allQuizIds)
+            .order('id', { ascending: true })
+            .range(from, to)
+            .returns<{ quiz_id: string }[]>(),
+        ),
       ])
     chapterByLesson = new Map(
       (lessons ?? []).map((l) => [String(l.id), String(l.chapter_id)]),

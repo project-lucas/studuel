@@ -48,7 +48,7 @@ describe('shouldShowSplash', () => {
 
   it('joue le rideau sur les sous-pages du jeu', () => {
     expect(shouldShowSplash('/defi/jouer', true)).toBe(true)
-    expect(shouldShowSplash('/reviser/cours/revoir', true)).toBe(true)
+    expect(shouldShowSplash('/carnet/cours/revoir', true)).toBe(true)
   })
 
   it('ne joue jamais pour un visiteur non connecté', () => {

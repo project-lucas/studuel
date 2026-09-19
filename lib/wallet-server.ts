@@ -171,14 +171,13 @@ export async function awardChapterCrowns(
  */
 export function gainsVerses(
   award: WalletAward | null,
-  extra: { xp?: number; gemmes?: number; ecus?: number; couronnes?: number } = {},
+  extra: { xp?: number; gemmes?: number; couronnes?: number } = {},
 ): Gain[] {
   const gains: Gain[] = [
     { unite: 'xp', montant: (award?.awarded ?? 0) + (extra.xp ?? 0) },
     // La gemme du palier de série sort de `wallet_touch` : elle se gagne en
     // étant là, pas en réussissant — mais elle se fête au même endroit.
     { unite: 'gemme', montant: (award?.gems_gained ?? 0) + (extra.gemmes ?? 0) },
-    { unite: 'ecu', montant: extra.ecus ?? 0 },
     { unite: 'couronne', montant: extra.couronnes ?? 0 },
   ]
   // Les montants nuls sont écartés à l'affichage (cf. lib/gains.agregerGains) :

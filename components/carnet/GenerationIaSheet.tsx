@@ -2,18 +2,18 @@
 
 import { useRef, useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import { Camera, Check, Sparkles, Trash2, Type } from 'lucide-react'
+import { Camera, Check, Sparkles, Trash2 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { TYPE_LABEL, isQuestionType } from '@/lib/carnet-cours'
+import type { OrigineQuestion } from '@/lib/carnet/origine'
 import {
   enregistrerQuestionsValidees,
   proposerQuestions,
+  transcrirePhoto,
   type QuestionProposee,
-} from '@/app/reviser/cours/ai-actions'
+} from '@/app/carnet/cours/ai-actions'
 import BottomSheet from '@/components/carnet/BottomSheet'
-
-type Source = 'texte' | 'photo'
 
 /** Taille au-delà de laquelle une photo est refusée (avant encodage base64). */
 const MAX_PHOTO_OCTETS = 2_800_000
@@ -26,7 +26,10 @@ const MAX_PHOTO_OCTETS = 2_800_000
  *   1. « COLLE TON COURS » — le champ acceptait 500 caractères. On n'y colle
  *      pas un cours, on y écrit un thème. Il accepte maintenant un chapitre
  *      entier, et surtout : une PHOTO, puisque le cours d'un élève est une
- *      photo dans son téléphone.
+ *      photo dans son téléphone. L'appareil photo est en haut à droite de la
+ *      feuille (Lucas, 10/09/2026) : la photo est TRANSCRITE et son texte
+ *      apparaît dans le champ, où l'élève le relit avant de générer — plus
+ *      d'onglet « Photo » qui envoyait l'image telle quelle.
  *
  *   2. « TU VALIDES » — les questions étaient écrites DIRECTEMENT en base.
  *      L'élève ne validait rien et découvrait dans son cours des questions
@@ -39,6 +42,8 @@ export default function GenerationIaSheet({
   chapterId,
   niveau,
   photoDisponible = false,
+  texteInitial,
+  origineInitiale = 'texte',
   open,
   onClose,
 }: {
@@ -46,16 +51,23 @@ export default function GenerationIaSheet({
   chapterId: string | null
   /** Classe de l'élève, pour caler le niveau des questions. */
   niveau?: string
+  /** Un texte déjà lu (le PDF d'un cours, `lirePdf`) : la feuille s'ouvre
+   *  dessus, source « texte », comme si l'élève l'avait collé. */
+  texteInitial?: string
+  /** L'origine à retenir pour les questions écrites (357) : `pdf` quand le
+   *  texte initial vient d'un PDF, `texte` sinon ; `photo` s'impose dès qu'une
+   *  photo a été transcrite. */
+  origineInitiale?: OrigineQuestion
   /** Un modèle qui lit les images est branché (`visionDisponible()`). Sans lui,
-   *  l'onglet Photo n'est pas proposé : il menait à un échec garanti. */
+   *  l'appareil photo reste visible mais explique qu'il n'est pas branché. */
   photoDisponible?: boolean
   open: boolean
   onClose: () => void
 }) {
   const router = useRouter()
-  const [source, setSource] = useState<Source>('texte')
   const [texte, setTexte] = useState('')
-  const [photo, setPhoto] = useState<string | null>(null)
+  const [origine, setOrigine] = useState<OrigineQuestion>(origineInitiale)
+  const [lecturePhoto, setLecturePhoto] = useState(false)
   const [count, setCount] = useState(8)
   const [style, setStyle] = useState<'qcm' | 'flashcard' | 'mixte'>('mixte')
   const [message, setMessage] = useState<string | null>(null)
@@ -65,22 +77,64 @@ export default function GenerationIaSheet({
   const [gardees, setGardees] = useState<Set<number>>(new Set())
   const fileRef = useRef<HTMLInputElement | null>(null)
 
-  const pretAGenerer =
-    source === 'texte' ? texte.trim().length > 0 : photo !== null
+  // Le texte initial change (un PDF vient d'être lu) : on le prend, en
+  // source « texte » — dérivation pendant le rendu, pas d'effet.
+  const [prevTexteInitial, setPrevTexteInitial] = useState(texteInitial)
+  if (texteInitial !== prevTexteInitial) {
+    setPrevTexteInitial(texteInitial)
+    if (typeof texteInitial === 'string') {
+      setTexte(texteInitial)
+      setOrigine(origineInitiale)
+      setMessage(null)
+    }
+  }
 
+  const pretAGenerer = texte.trim().length > 0 && !lecturePhoto
+
+  /** L'appareil photo : la photo est lue, son texte rejoint le champ. */
   const choisirPhoto = (file: File | undefined) => {
-    if (!file) return
+    if (fileRef.current) fileRef.current.value = ''
+    if (!file || lecturePhoto) return
     if (file.size > MAX_PHOTO_OCTETS) {
       setMessage('Cette photo est trop lourde. Reprends-la en plus petit.')
       return
     }
     const reader = new FileReader()
     reader.onload = () => {
-      setPhoto(typeof reader.result === 'string' ? reader.result : null)
+      const dataUrl = typeof reader.result === 'string' ? reader.result : null
+      if (!dataUrl) return
       setMessage(null)
+      setLecturePhoto(true)
+      startTransition(async () => {
+        const res = await transcrirePhoto(courseId, dataUrl)
+        setLecturePhoto(false)
+        if (res.ok && typeof res.texte === 'string' && res.texte.length > 0) {
+          // Le texte lu s'ajoute à ce qui est déjà là : deux pages, deux photos.
+          setTexte((t) => (t.trim().length > 0 ? `${t.trimEnd()}\n\n${res.texte}` : res.texte ?? ''))
+          setOrigine('photo')
+          sfx.complete()
+        } else if (res.ok) {
+          setMessage('Aucun texte lisible sur cette photo. Reprends-la de plus près.')
+        } else if (res.unavailable) {
+          setMessage('La lecture des photos n’est pas disponible pour l’instant.')
+        } else if (res.quota) {
+          setMessage('Tu as atteint ta limite de générations pour aujourd’hui.')
+        } else {
+          setMessage('Cette photo n’a pas pu être lue. Réessaie dans un instant.')
+        }
+      })
     }
     reader.onerror = () => setMessage('Cette photo n’a pas pu être lue.')
     reader.readAsDataURL(file)
+  }
+
+  const prendrePhoto = () => {
+    sfx.tap()
+    if (!photoDisponible) {
+      setMessage('La lecture des photos n’est pas branchée sur ce compte pour l’instant.')
+      return
+    }
+    fileRef.current?.click()
   }
 
   const generer = () => {
@@ -90,9 +144,7 @@ export default function GenerationIaSheet({
     startTransition(async () => {
       const res = await proposerQuestions(
         courseId,
-        source === 'photo' && photo
-          ? { kind: 'image', dataUrl: photo }
-          : { kind: 'texte', texte },
+        { kind: 'texte', texte },
         count,
         style,
         niveau,
@@ -123,6 +175,7 @@ export default function GenerationIaSheet({
         courseId,
         chapterId,
         choisies.map((q) => ({ type: q.type, content: q.content })),
+        origine,
       )
       if (res.ok) {
         sfx.complete()
@@ -138,7 +191,8 @@ export default function GenerationIaSheet({
     setProposees(null)
     setGardees(new Set())
     setTexte('')
-    setPhoto(null)
+    setOrigine(origineInitiale)
+    setLecturePhoto(false)
     setMessage(null)
     onClose()
   }
@@ -251,89 +305,56 @@ export default function GenerationIaSheet({
 
   // -------------------------------------------------------------- formulaire ---
   return (
-    <BottomSheet open={open} onClose={fermer} title="Ton cours → questions">
+    <BottomSheet
+      open={open}
+      onClose={fermer}
+      title="Ton cours → questions"
+      action={
+        <button
+          type="button"
+          disabled={pending || lecturePhoto}
+          onClick={prendrePhoto}
+          aria-label="Prendre mon cours en photo"
+          title="Prendre mon cours en photo"
+          className="flex size-9 shrink-0 cursor-pointer items-center justify-center rounded-full bg-primary/10 text-primary transition active:scale-90 disabled:opacity-60"
+        >
+          <Camera className="size-4" strokeWidth={2.4} aria-hidden="true" />
+        </button>
+      }
+    >
       <div className="flex flex-col gap-3">
-        {/* Le choix de la source n'a de sens qu'à deux : sans lecteur d'images,
-            le texte est la seule porte et une barre à un onglet ne dit rien. */}
-        {photoDisponible ? (
-          <div
-            role="tablist"
-            aria-label="Source du cours"
-            className="flex gap-1.5 rounded-2xl bg-muted/60 p-1"
-          >
-            {[
-              { id: 'texte' as Source, label: 'Texte', Icon: Type },
-              { id: 'photo' as Source, label: 'Photo du cours', Icon: Camera },
-            ].map((t) => (
-              <button
-                key={t.id}
-                type="button"
-                role="tab"
-                aria-selected={source === t.id}
-                onClick={() => {
-                  sfx.tap()
-                  setSource(t.id)
-                  setMessage(null)
-                }}
-                className={cn(
-                  'font-heading flex flex-1 cursor-pointer items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-xs font-extrabold transition',
-                  source === t.id
-                    ? 'bg-white text-foreground shadow-sm'
-                    : 'text-muted-foreground',
-                )}
-              >
-                <t.Icon className="size-3.5" aria-hidden="true" />
-                {t.label}
-              </button>
-            ))}
-          </div>
-        ) : null}
+        {/* La photo : un champ caché, ouvert par l'appareil photo du titre.
+            `capture` ouvre directement l'appareil sur téléphone. */}
+        <input
+          ref={fileRef}
+          type="file"
+          accept="image/png,image/jpeg,image/webp"
+          capture="environment"
+          onChange={(e) => choisirPhoto(e.target.files?.[0])}
+          className="hidden"
+          aria-hidden="true"
+          tabIndex={-1}
+        />
 
-        {source === 'texte' ? (
-          <label className="flex flex-col gap-1.5">
-            <span className="px-1 text-[11px] font-semibold text-muted-foreground">
-              Colle ton cours en entier, ou écris juste un thème.
-            </span>
-            <textarea
-              value={texte}
-              onChange={(e) => setTexte(e.target.value)}
-              rows={7}
-              placeholder="La Première Guerre mondiale : causes, déroulement, bilan…"
-              aria-label="Cours ou thème"
-              className="rounded-2xl border border-black/10 bg-white px-3 py-2.5 text-sm text-foreground outline-none placeholder:text-muted-foreground/50 focus:ring-2 focus:ring-primary/40"
-            />
-          </label>
-        ) : (
-          <div className="flex flex-col gap-2">
-            <input
-              ref={fileRef}
-              type="file"
-              accept="image/png,image/jpeg,image/webp"
-              capture="environment"
-              onChange={(e) => choisirPhoto(e.target.files?.[0])}
-              className="hidden"
-            />
-            {photo ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={photo}
-                alt="Aperçu de la photo du cours"
-                className="max-h-56 w-full rounded-2xl object-contain ring-1 ring-black/5"
-              />
-            ) : null}
-            <button
-              type="button"
-              onClick={() => {
-                sfx.tap()
-                fileRef.current?.click()
-              }}
-              className="flex cursor-pointer items-center justify-center gap-2 rounded-2xl bg-muted/60 px-4 py-4 text-sm font-extrabold text-foreground hover:bg-muted"
-            >
-              <Camera className="size-4" aria-hidden="true" />
-              {photo ? 'Changer de photo' : 'Prendre ou choisir une photo'}
-            </button>
-          </div>
-        )}
+        <label className="flex flex-col gap-1.5">
+          <span className="px-1 text-[11px] font-semibold text-muted-foreground">
+            {lecturePhoto
+              ? 'Lecture de la photo…'
+              : 'Colle ton cours en entier, écris un thème, ou prends-le en photo.'}
+          </span>
+          <textarea
+            value={texte}
+            onChange={(e) => setTexte(e.target.value)}
+            rows={7}
+            placeholder="La Première Guerre mondiale : causes, déroulement, bilan…"
+            aria-label="Cours ou thème"
+            aria-busy={lecturePhoto}
+            className={cn(
+              'rounded-2xl border border-black/10 bg-white px-3 py-2.5 text-sm text-foreground outline-none placeholder:text-muted-foreground/50 focus:ring-2 focus:ring-primary/40',
+              lecturePhoto && 'animate-pulse',
+            )}
+          />
+        </label>
 
         <label className="flex items-center gap-3 px-1">
           <span className="text-xs font-bold text-muted-foreground">

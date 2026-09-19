@@ -23,6 +23,19 @@ const zeroStats: BadgeStats = {
   hasPerfectQuiz: false,
 }
 
+describe('isBadgeEarned — capsules', () => {
+  const sommeil = { type: 'capsule_done', capsule: 'sommeil' } as const
+
+  it('accorde le badge d’une capsule terminée, et seulement celle-là', () => {
+    expect(isBadgeEarned(sommeil, { ...zeroStats, capsulesTerminees: ['sommeil'] })).toBe(true)
+    expect(isBadgeEarned(sommeil, { ...zeroStats, capsulesTerminees: ['stress'] })).toBe(false)
+  })
+
+  it('ne l’accorde pas quand les stats ne disent rien des capsules', () => {
+    expect(isBadgeEarned(sommeil, zeroStats)).toBe(false)
+  })
+})
+
 describe('isBadgeEarned', () => {
   it('accorde un badge de série au seuil exact', () => {
     expect(
@@ -122,6 +135,15 @@ describe('parseCondition', () => {
 
   it('parse perfect_quiz sans champ', () => {
     expect(parseCondition({ type: 'perfect_quiz' })).toEqual({ type: 'perfect_quiz' })
+  })
+
+  it('parse le badge d’une capsule terminée, et refuse une capsule sans id', () => {
+    expect(parseCondition({ type: 'capsule_done', capsule: 'sommeil' })).toEqual({
+      type: 'capsule_done',
+      capsule: 'sommeil',
+    })
+    expect(parseCondition({ type: 'capsule_done' })).toBeNull()
+    expect(parseCondition({ type: 'capsule_done', capsule: '  ' })).toBeNull()
   })
 
   it('renvoie null pour une condition malformée ou inconnue', () => {

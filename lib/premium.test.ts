@@ -5,7 +5,26 @@ import {
   pricePerMember,
   planForTier,
   isCurrentPlan,
+  tierDuPlan,
 } from '@/lib/premium'
+import { estPlanPayant } from '@/lib/abonnement'
+
+describe('tierDuPlan', () => {
+  it('traduit chaque offre payante en un palier que la demande accepte', () => {
+    expect(tierDuPlan('plus')).toBe('tier1')
+    expect(tierDuPlan('famille')).toBe('tier3')
+    for (const plan of PLANS) {
+      const tier = tierDuPlan(plan.id)
+      if (plan.priceMonthly > 0) expect(tier !== null && estPlanPayant(tier)).toBe(true)
+      else expect(tier).toBeNull()
+    }
+  })
+
+  it('retombe sur l’offre d’origine', () => {
+    expect(planForTier('tier1')).toBe('plus')
+    expect(planForTier('tier3')).toBe('famille')
+  })
+})
 
 describe('PLANS (intégrité du catalogue)', () => {
   it('propose exactement les trois offres attendues', () => {

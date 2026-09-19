@@ -62,7 +62,7 @@ export default function UnlockChapterCard({
           Débloque ce chapitre pour {gemsLabel(GEM_COST_CHAPTER)}
         </p>
         <p className="text-muted-foreground max-w-xs text-sm text-balance">
-          Tu gardes sa carte mentale et ses fiches de révision pour toujours.
+          Tu gardes sa fiche et ses fiches de révision pour toujours.
         </p>
 
         {canUnlock ? (
@@ -169,7 +169,7 @@ function ConfirmUnlockSheet({
         </div>
 
         <p className="text-sm text-muted-foreground">
-          Sa carte mentale et ses fiches de révision seront à toi pour
+          Sa fiche et ses fiches de révision seront à toi pour
           toujours — même si tu n&apos;as plus de gemmes plus tard.
         </p>
 

@@ -1,7 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { ULTIME } from './ultime'
 import {
-  COUNTDOWN_BUILDERS,
   ORDER_BUILDERS,
   POOL_BUILDERS,
   ZONE_BUILDERS,
@@ -22,10 +21,9 @@ const implementedIds = SALONS.flatMap((s) =>
 )
 
 // Trois formes de banque, trois registres : des QCM, des tableaux à remettre
-// dans l'ordre, des tirages de plaques.
+// dans l'ordre, des zones à désigner.
 const qcmIds = implementedIds.filter((id) => poolKind(id) === 'qcm')
 const orderIds = implementedIds.filter((id) => poolKind(id) === 'ordre')
-const countdownIds = implementedIds.filter((id) => poolKind(id) === 'compte')
 const zoneIds = implementedIds.filter((id) => poolKind(id) === 'zones')
 
 describe('cohérence catalogue ↔ banques de questions', () => {
@@ -44,11 +42,10 @@ describe('cohérence catalogue ↔ banques de questions', () => {
   it('range chaque jeu dans exactement un registre', () => {
     for (const id of qcmIds) expect(POOL_BUILDERS[id]).toBeDefined()
     for (const id of orderIds) expect(ORDER_BUILDERS[id]).toBeDefined()
-    for (const id of countdownIds) expect(COUNTDOWN_BUILDERS[id]).toBeDefined()
     for (const id of zoneIds) expect(ZONE_BUILDERS[id]).toBeDefined()
     // Chaque jeu jouable tombe dans une forme, et une seule.
     expect(
-      qcmIds.length + orderIds.length + countdownIds.length + zoneIds.length,
+      qcmIds.length + orderIds.length + zoneIds.length,
     ).toBe(implementedIds.length)
   })
 
@@ -56,7 +53,6 @@ describe('cohérence catalogue ↔ banques de questions', () => {
     const all = [
       ...Object.keys(POOL_BUILDERS),
       ...Object.keys(ORDER_BUILDERS),
-      ...Object.keys(COUNTDOWN_BUILDERS),
       ...Object.keys(ZONE_BUILDERS),
     ]
     expect(new Set(all).size).toBe(all.length)

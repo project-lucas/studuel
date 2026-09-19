@@ -1,17 +1,19 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { Hourglass, Check, X, RotateCcw, Trophy } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { Hourglass, Check, X, Trophy } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { gameSfx, sfx } from '@/lib/sounds'
-import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
 import type { Gain } from '@/lib/gains'
 import { recordChallenge } from '@/app/defi/actions'
+import { recordModeScore } from '@/app/defi/palmares-actions'
+import FinDePartie from '@/components/palmares/FinDePartie'
+import type { BilanPartie } from '@/lib/palmares/bilan'
 import { recordReviewAnswers } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
 import {
   CHRONO_START_SECONDS,
+  nowMs,
   CHRONO_GAIN_SECONDS,
   CHRONO_LOSS_SECONDS,
   CHRONO_MAX_SECONDS,
@@ -19,7 +21,9 @@ import {
   MODE_TIMBRE,
   chronoAfterAnswer,
   type ModeQuestion,
+  modeScene,
 } from '@/lib/defi-modes'
+import ModeHero from '@/components/defi/ModeHero'
 
 type Phase = 'intro' | 'playing' | 'done'
 
@@ -58,6 +62,12 @@ export default function ChronoMode({
   const [saved, setSaved] = useState<boolean | null>(null)
   // Ce que la partie a rapporté, tel que la base l'a écrit.
   const [gains, setGains] = useState<Gain[]>([])
+  // Le bilan du Palmarès (352) : dernière fois, record, échelle de la semaine.
+  const [bilan, setBilan] = useState<BilanPartie | null>(null)
+  const [enAttente, setEnAttente] = useState(false)
+  const [recordAvant, setRecordAvant] = useState(0)
+  // Instant du départ : la durée réelle de la partie part au serveur avec le score.
+  const startRef = useRef(0)
   const statsRef = useRef({ correct: 0, answered: 0 })
   const secondsRef = useRef(CHRONO_START_SECONDS)
   const finishedRef = useRef(false)
@@ -96,6 +106,9 @@ export default function ChronoMode({
     setLastDelta(null)
     setSaved(null)
     setIsRecord(false)
+    setBilan(null)
+    setEnAttente(false)
+    startRef.current = nowMs()
     setPhase('playing')
   }
 
@@ -109,6 +122,7 @@ export default function ChronoMode({
       sfx.complete()
       const { correct: c, answered: n } = statsRef.current
       const prevBest = readBest()
+      setRecordAvant(prevBest)
       if (c > prevBest) {
         setIsRecord(true)
         try {
@@ -125,6 +139,15 @@ export default function ChronoMode({
           setGains(r.gains)
         })
         .catch(() => setSaved(false))
+      // Le Palmarès : le score entre sur l'échelle de la semaine.
+      setEnAttente(true)
+      recordModeScore('chrono', c, Math.max(1, nowMs() - startRef.current))
+        .then((b) => {
+          setBilan(b)
+          if (b && b.best > c) setBest(b.best)
+        })
+        .catch(() => setBilan(null))
+        .finally(() => setEnAttente(false))
       // Reprogramme chaque question dans la file « À revoir ».
       recordReviewAnswers(reviewsRef.current).catch(() => {})
     }
@@ -177,8 +200,9 @@ export default function ChronoMode({
   if (phase === 'intro') {
     return (
       <div className="mx-auto flex max-w-xl flex-col items-center gap-6 pt-4 text-center">
+        {/* L'ambiance du mode : la scène de son billet, fondue dans sa robe. */}
+        <ModeHero scene={modeScene('chrono')} titre="Contre-la-montre" dansIntro />
         <div className="space-y-1">
-          <h1 className="font-heading text-3xl font-bold">Contre-la-montre</h1>
           <p className="text-sm text-muted-foreground">
             {CHRONO_START_SECONDS} secondes au départ. Bonne réponse : +
             {CHRONO_GAIN_SECONDS} s. Erreur : −{CHRONO_LOSS_SECONDS} s.
@@ -220,49 +244,18 @@ export default function ChronoMode({
   // -------------------------------------------------------------------- done
   if (phase === 'done') {
     return (
-      <div className="mx-auto flex max-w-xl flex-col items-center gap-5 pt-8 text-center">
-        <div className="animate-in zoom-in text-6xl duration-500">
-          {isRecord ? '🏆' : correct >= 8 ? '⏱️' : '🌱'}
-        </div>
-        <div>
-          <h1 className="font-heading text-3xl font-bold">
-            {isRecord ? 'Nouveau record !' : 'Temps écoulé !'}
-          </h1>
-          <p className="mt-2 font-mono text-4xl font-bold tabular-nums">
-            {correct}
-          </p>
-          <p className="mt-1 text-sm text-muted-foreground">
-            bonnes réponses sur {answeredCount} — le temps t&apos;a lâché.
-          </p>
-          {!isRecord && best > 0 ? (
-            <p className="mt-1 text-xs text-muted-foreground">
-              Record : <span className="font-mono tabular-nums">{best}</span>
-            </p>
-          ) : null}
-        </div>
-
-        {/* CE QUE LA PARTIE A RAPPORTÉ, et le geste de Clash Royale qui va
-            avec : les pastilles se posent, puis une poignée de jetons s'en
-            détache et file vers le bandeau du haut.
-
-            ⚠️ CE BLOC ÉTAIT UN « +XX XP » EN GROS CHIFFRES, ET IL MENTAIT :
-            la valeur venait de `XP_RULES`, un barème PUR calculé côté client,
-            alors que depuis la migration 348 jouer n'acquiert rien et que le
-            portefeuille ne verse plus un point pour une partie. */}
-        <PanneauRecompenses gains={gains} className="w-full max-w-sm" />
-
-        <p className="text-sm text-muted-foreground">
-          {saved === true
-            ? '✓ Journée validée — ta série continue 🔥'
-            : saved === false
-              ? 'Partie non enregistrée (connecte-toi pour garder ton XP).'
-              : ''}
-        </p>
-
-        <Button size="lg" onClick={start}>
-          <RotateCcw className="size-4" /> Rejouer
-        </Button>
-      </div>
+      <FinDePartie
+        mode="chrono"
+        score={correct}
+        titreAttente="Temps écoulé !"
+        detail={<>bonnes réponses sur {answeredCount} — le temps t&apos;a lâché.</>}
+        bilan={bilan}
+        enAttente={enAttente}
+        recordLocalAvant={isRecord ? recordAvant : best}
+        gains={gains}
+        saved={saved}
+        onRejouer={start}
+      />
     )
   }
 

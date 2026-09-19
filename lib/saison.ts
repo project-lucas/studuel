@@ -325,3 +325,16 @@ export function normalizeSeasonState(raw: unknown, today: string): SeasonState {
     claimed,
   }
 }
+
+/**
+ * Le compte à rebours COURT, pour la bande de saison de l'arène : « 26 j »,
+ * « 3 j », « Dernier jour ». La bande est étroite (elle partage la colonne de
+ * gauche avec la plaque d'identité) et « 26 jours restants » y écrasait la
+ * jauge à une dizaine de pixels. Le libellé long reste pour la feuille et
+ * l'étiquette lue à voix haute.
+ */
+export function countdownShort(today: string): string {
+  const left = daysLeftInSeason(today)
+  if (left <= 1) return 'Dernier jour'
+  return `${left} j`
+}

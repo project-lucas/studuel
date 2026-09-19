@@ -10,7 +10,7 @@ import {
   normalizeTolerance,
   type Tolerance,
 } from '@/lib/carnet/correction'
-import { updateCourseReglages } from '@/app/reviser/cours/actions'
+import { updateCourseReglages } from '@/app/carnet/cours/actions'
 
 /** Ce que la page du cours sait de ses réglages de révision. */
 export type CourseReglages = {

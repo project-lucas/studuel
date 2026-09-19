@@ -2,7 +2,6 @@ import { describe, it, expect } from 'vitest'
 import {
   UI_MAX_PEAK,
   openTones,
-  swipeTones,
   edgeBumpTones,
   battleTones,
   NOTICE_MAX_PEAK,
@@ -36,32 +35,6 @@ describe('openTones', () => {
   })
 })
 
-describe('swipeTones', () => {
-  it('produit des notes bien formées et bornées', () => {
-    expectWellFormed(swipeTones('up'))
-    expectWellFormed(swipeTones('down'))
-  })
-
-  it('monte vers le haut, descend vers le bas — un glissando lisible', () => {
-    const up = swipeTones('up')
-    const down = swipeTones('down')
-    expect(up[up.length - 1].freq).toBeGreaterThan(up[0].freq)
-    expect(down[down.length - 1].freq).toBeLessThan(down[0].freq)
-  })
-
-  it('les deux directions parcourent le même intervalle, en miroir', () => {
-    const up = swipeTones('up')
-    const down = swipeTones('down')
-    expect(up[0].freq).toBeCloseTo(down[down.length - 1].freq)
-    expect(up[up.length - 1].freq).toBeCloseTo(down[0].freq)
-  })
-
-  it('reste discret : un swish, pas une mélodie', () => {
-    for (const t of swipeTones('up')) {
-      expect(t.peak).toBeLessThanOrEqual(0.02)
-    }
-  })
-})
 
 describe('edgeBumpTones', () => {
   it('produit des notes bien formées et bornées', () => {

@@ -1,6 +1,8 @@
 // Onglets principaux — source unique pour la barre du bas (Navigation) et le
-// balayage horizontal (SwipeTabs). L'ordre du tableau = l'ordre à l'écran,
-// donc l'ordre du geste : balayer vers la gauche va vers l'onglet suivant.
+// préchargement (lib/precharge-onglets). L'ordre du tableau = l'ordre à
+// l'écran. On ne change d'onglet QU'EN TOUCHANT son icône : le balayage
+// horizontal entre onglets a été retiré le 18/09/2026 (Lucas : le contenu qui
+// suivait le doigt montrait la latence de la page suivante).
 /**
  * Clé d'icône. Volontairement du TEXTE et non un composant React ni un chemin
  * de fichier : `lib/` reste pur et testable, la correspondance clé → dessin vit
@@ -8,14 +10,14 @@
  *
  * Les cinq onglets portent des ILLUSTRATIONS (public/images/nav), pas des traits
  * — même famille que l'écu et le cristal du HUD. Chaque onglet se reconnaît à sa
- * SILHOUETTE, avant même la couleur : trophée, livre, épées croisées, avatar en
- * couronne, bourse. Le trait uniforme d'avant ne les distinguait que par leur
+ * SILHOUETTE, avant même la couleur : trophée, livre, épées croisées, blason
+ * de l'élève, bourse. Le trait uniforme d'avant ne les distinguait que par leur
  * nombre de silhouettes, ce qui obligeait à lire le libellé — donc à ne plus
  * rien gagner à l'illustration.
  *
  * `moi` est à part : le fichier n'est que le REPLI (un buste dessiné). L'onglet
- * affiche normalement le vrai avatar de l'élève, entouré de la couronne de
- * laurier `cadre-avatar.webp`.
+ * affiche normalement le blason choisi par l'élève, tel quel, sans cadre
+ * (cf. `components/NavAvatarLoader.tsx`).
  */
 export type NavIconName = 'amis' | 'reviser' | 'defi' | 'moi' | 'tresor'
 
@@ -87,18 +89,3 @@ export function tabIndexForPath(pathname: string): number {
   )
 }
 
-/**
- * Onglet voisin dans la direction du balayage.
- * `left` = le doigt part vers la gauche = on avance vers l'onglet de droite.
- * Renvoie null aux extrémités, ou hors des onglets principaux.
- */
-export function neighborTabPath(
-  pathname: string,
-  direction: 'left' | 'right',
-): string | null {
-  const index = tabIndexForPath(pathname)
-  if (index < 0) return null
-
-  const target = direction === 'left' ? index + 1 : index - 1
-  return NAV_TABS[target]?.path ?? null
-}

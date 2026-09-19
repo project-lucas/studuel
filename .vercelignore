@@ -1,0 +1,29 @@
+# Ce que le CLI Vercel n'envoie PAS dans l'archive de déploiement.
+#
+# Sans ce fichier, `vercel deploy` a embarqué `assets-sources/` (979 Mo de
+# sources 4K, dont un zip de 151 Mo) et s'est cassé sur la limite de 100 Mo
+# par fichier, le 15/09/2026. Dès qu'un `.vercelignore` existe, Vercel ne lit
+# PLUS `.gitignore` : tout ce qui doit rester dehors est listé ici.
+#
+# (.git, node_modules, .next et .vercel sont exclus d'office par le CLI.)
+
+# sources brutes, jamais servies (les versions servies vivent dans public/)
+assets-sources
+loading
+sound
+
+# outillage local
+graphify-out
+_ASSOCIE
+.claude
+.impeccable
+.github
+coverage
+out
+build
+
+# secrets et caches locaux
+.env*
+!.env.example
+*.tsbuildinfo
+npm-debug.log*

@@ -1,88 +1,122 @@
 // La feuille « Modes de jeu » de l'arène — catalogue et logique pure.
-// Refonte « roulette » : on ne rejoue PAS le compétitif ici (le Match classé et
-// le Duel en direct ont déjà leurs boutons sur l'écran d'arène). La feuille fait
-// deux choses, dans cet ordre : une ROULETTE de matières (on fait défiler, on
-// choisit) qui révèle les 2-3 JEUX de cette matière, puis les MODES FUN de
-// l'Arène (Blitz, Chrono, Survie, Duel fantôme, Boss), communs à toutes les
-// matières. Les composants ne font qu'afficher — tout le calcul est ici.
+//
+// REFONTE « CLASH ROYALE » (Lucas, 19/09/2026) : la feuille s'ouvre sur son
+// titre, le TOTAL DE TROPHÉES, puis la LISTE des modes — plus de roulette de
+// matières. Chaque matière a sa section, et dans chacune ses jeux en billets ;
+// la version gratuite en ouvre un par matière, Studuel+ ouvre les autres
+// (lib/jeux/acces). Puis les modes de l'Arène, communs à toutes les matières,
+// dont le MODE DU JOUR, mis en vedette en tête de feuille.
+//
+// Les billets reprennent le gabarit des cartes « Modes de jeu » de Clash
+// Royale (components/defi/ModeTicket) : UNE TEINTE PAR BILLET, comme là-bas —
+// la couleur y est une identité (la palette `data-teinte` des outils de
+// Marcel), jamais un bouton. Les composants ne font qu'afficher — tout le
+// calcul est ici.
 import {
-  GAME_MODES,
-  MODE_XP_BONUS,
-  FEATURED_XP_MULTIPLIER,
   BLITZ_BEST_STORAGE_KEY,
   CHRONO_BEST_STORAGE_KEY,
+  GAME_MODES,
   SURVIE_BEST_STORAGE_KEY,
   featuredModeId,
   modeImage,
   modeScene,
+  type GameModeId,
 } from '@/lib/defi-modes'
 import { SALONS } from '@/lib/jeux/catalog'
 import { formatTeaser, gameFormat } from '@/lib/jeux/formats'
 import { gameBestKey } from '@/lib/jeux/records'
+import { LIEN_STUDUEL_PLUS, jeuLibre, jeuOuvert } from '@/lib/jeux/acces'
+import { programmeSlug } from '@/lib/jeux/programme'
+import { subjectVignette } from '@/lib/subject-style'
 
-// La robe d'un billet : matière (violet), mode fun (bleu Arène), ou mode du
-// jour (or). Sert au composant à choisir le dégradé — pas de hex en dur ici.
-export type ModeTone = 'matiere' | 'fun' | 'featured'
+/**
+ * La teinte d'un billet : son IDENTITÉ (la palette `data-teinte` de
+ * globals.css, à clarté perçue égale). Pas de hex en dur ici.
+ */
+export type TeinteBillet =
+  | 'violet'
+  | 'rose'
+  | 'bleu'
+  | 'vert'
+  | 'ambre'
+  | 'indigo'
+  | 'corail'
+  | 'turquoise'
 
 export type ModeTicket = {
   id: string
-  tone: ModeTone
+  teinte: TeinteBillet
   name: string
   tagline: string
   emoji: string
   /**
-   * Visuel illustré du billet (chemin `/images/...`) qui remplace l'emoji dans
-   * la zone d'art. Optionnel : tant qu'il n'est pas fourni, on retombe sur
-   * l'emoji.
-   */
-  image?: string | null
-  /**
-   * Scène illustrée plein-fond (bannière 16:9) qui remplace la robe unie du
-   * corps du billet. Optionnel : sans scène, on garde le dégradé de la famille.
+   * La scène illustrée du CORPS du billet (bannière 16:9). Sans scène, le
+   * corps porte la vignette de la matière, ou sa robe seule.
    */
   scene?: string | null
+  /** L'objet détouré du TALON (à droite de la perforation). Repli : l'emoji. */
+  image?: string | null
+  /** Vignette du dossier de la matière (art de repli du corps). */
+  vignette?: string | null
   /** Destination du billet — null tant que le jeu n'est pas construit. */
   href: string | null
-  /** Jeton d'info (« +20 XP », « Jouer »…). */
+  /** La pastille du corps : la RÈGLE du jeu (« 8 escales », « 60 s chrono »). */
   chip?: string
-  /** Ruban en coin (« ×2 XP » du mode du jour, « Bientôt »). */
+  /** Ruban en coin (« Mode du jour », « Bientôt »). */
   badge?: string
   /**
    * Clé du RECORD personnel de ce défi dans le stockage local, quand il en
-   * garde un (tous les jeux de salon, et les trois modes de l'Arène qui se
-   * jouent au score). Absente pour ce qui n'a pas de record à battre — un
-   * duel fantôme ou un boss ne se mesurent pas à un compteur.
+   * garde un. Absente pour ce qui n'a pas de record à battre — un duel ou un
+   * boss ne se mesurent pas à un compteur.
    */
   recordKey?: string
+  /** Jeu de salon : ses étoiles de paliers s'affichent sur le billet. */
+  gameId?: string
+  /** Réservé à Studuel+ : le billet montre un cadenas et mène à la Boutique. */
+  verrou?: boolean
+  /** Le mode du jour : grand billet, halo, en tête de feuille. */
+  vedette?: boolean
 }
 
-// Un cran de la roulette : une matière, son emoji, et le nombre de jeux qu'elle
-// propose (le talon affiche « 3 jeux »).
-export type RouletteSubject = {
-  subject: string
-  emoji: string
-  count: number
+/** La teinte de chaque matière des salons — ses billets la portent tous. */
+export const TEINTE_MATIERE: Record<string, TeinteBillet> = {
+  'Histoire-Géo': 'ambre',
+  Français: 'rose',
+  Maths: 'bleu',
+  Anglais: 'indigo',
+  Espagnol: 'corail',
+  SVT: 'vert',
+  'Physique-Chimie': 'turquoise',
 }
 
-// Les crans de la roulette, dans l'ordre du catalogue de salons.
-export const ROULETTE_SUBJECTS: RouletteSubject[] = SALONS.map((s) => ({
-  subject: s.subject,
-  emoji: s.emoji,
-  count: s.games.length,
-}))
+/** La teinte de chaque mode de l'Arène. */
+const TEINTE_MODE: Record<GameModeId, TeinteBillet> = {
+  duel: 'indigo',
+  blitz: 'ambre',
+  chrono: 'turquoise',
+  survie: 'corail',
+  boss: 'violet',
+}
 
-// Emoji de chaque mode de l'Arène (la salle de jeu utilise des icônes Lucide,
-// mais le billet parle le langage visuel du catalogue : un emoji fort).
+/** La règle d'un mode de l'Arène, en une pastille. */
+const REGLE_MODE: Record<GameModeId, string> = {
+  duel: '2 manches gagnantes',
+  blitz: '60 s chrono',
+  chrono: 'Le temps s’allonge',
+  survie: 'Une seule vie',
+  boss: 'Ton chapitre faible',
+}
+
 // Les trois modes de l'Arène qui se jouent au SCORE gardent un record local
 // (même clé que leur écran de jeu). Le duel fantôme et le boss n'en ont pas :
 // on ne bat pas un compteur, on bat quelqu'un.
-const ARENA_RECORD_KEY: Record<string, string> = {
+const ARENA_RECORD_KEY: Partial<Record<GameModeId, string>> = {
   blitz: BLITZ_BEST_STORAGE_KEY,
   chrono: CHRONO_BEST_STORAGE_KEY,
   survie: SURVIE_BEST_STORAGE_KEY,
 }
 
-const ARENA_EMOJI: Record<string, string> = {
+const ARENA_EMOJI: Record<GameModeId, string> = {
   duel: '👻',
   blitz: '⏱️',
   chrono: '⏳',
@@ -92,14 +126,12 @@ const ARENA_EMOJI: Record<string, string> = {
 
 // Scènes plein-fond des billets de jeux (bannières 16:9 du batch 13 des
 // prompts). Ajouter l'id ici dès que la scène est déposée dans
-// public/images/defi/jeux/<id>-scene.webp — repli sur la robe unie sinon.
+// public/images/defi/jeux/<id>-scene.webp — repli sur la vignette sinon.
 const GAME_SCENE_IDS = [
   'conjugaison-eclair',
   'frise-folle',
-  'orthographe',
   'chasse-faute',
   'capitales',
-  'pointe-carte',
   'calcul-mental',
   'traduction-flash',
   'traduccion-flash',
@@ -111,36 +143,87 @@ export function gameScene(id: string): string | undefined {
     : undefined
 }
 
+/** La vignette du dossier d'une matière des salons (la même que dans Réviser). */
+export function vignetteMatiere(subject: string): string | null {
+  return subjectVignette(programmeSlug(subject)) ?? null
+}
+
 /**
  * Les jeux d'une matière, en billets. Un jeu construit mène à sa CARTE
- * (`/defi/jeux/{id}`) : l'échelle de ses cinq paliers de difficulté, où l'on
- * choisit son niveau avant de jouer (la partie vit sur `/{id}/{palier}`). Ce
- * détour a remplacé l'entrée directe dans la partie le jour où un même jeu a
- * cessé de servir la même feuille à un 6e et à un Terminale. Un jeu pas encore
- * construit n'a pas de lien (le billet affiche « Bientôt »). Matière inconnue → [].
+ * (`/defi/jeux/{id}`) : l'échelle de ses cinq paliers. Un jeu pas encore
+ * construit n'a pas de lien (ruban « Bientôt »). Un jeu réservé à Studuel+,
+ * pour un élève qui ne l'a pas, porte un cadenas et mène à la Boutique.
+ * Matière inconnue → [].
+ *
+ * `premium` : l'élève est abonné. Par défaut `true` — un appelant qui ne sait
+ * pas ne verrouille rien (le serveur garde de toute façon les routes).
  */
-export function subjectGameTickets(subject: string): ModeTicket[] {
+export function subjectGameTickets(
+  subject: string,
+  { premium = true }: { premium?: boolean } = {},
+): ModeTicket[] {
   const salon = SALONS.find((s) => s.subject === subject)
   if (!salon) return []
+  const teinte = TEINTE_MATIERE[subject] ?? 'violet'
+  const vignette = vignetteMatiere(subject)
   return salon.games.map((g) => {
-    // Le jeton annonce la RÈGLE du jeu (« 8 escales », « 2 vies · 10 pièges »),
-    // pas un « Jouer » interchangeable : c'est la première moitié de la promesse
-    // que la table de jeu doit ensuite tenir.
+    // La pastille annonce la RÈGLE du jeu (« 8 escales », « 2 vies · 10
+    // pièges »), pas un « Jouer » interchangeable.
     const format = g.implemented ? gameFormat(g.id) : null
+    const verrou = g.implemented && !jeuOuvert(g.id, premium)
     return {
       id: `${subject}:${g.id}`,
-      tone: 'matiere' as const,
+      teinte,
       name: g.name,
       tagline: g.tagline,
       emoji: g.emoji,
       scene: gameScene(g.id),
-      href: g.implemented ? `/defi/jeux/${g.id}` : null,
+      vignette,
+      href: !g.implemented ? null : verrou ? LIEN_STUDUEL_PLUS : `/defi/jeux/${g.id}`,
       chip: format ? formatTeaser(format) : g.implemented ? 'Jouer' : undefined,
       badge: g.implemented ? undefined : 'Bientôt',
       // Un jeu pas encore construit n'a évidemment pas de record.
       recordKey: g.implemented ? gameBestKey(g.id) : undefined,
+      gameId: g.implemented ? g.id : undefined,
+      verrou,
     }
   })
+}
+
+export type SectionMatiere = {
+  subject: string
+  emoji: string
+  vignette: string | null
+  tickets: ModeTicket[]
+}
+
+/**
+ * Les sections « matière » de la feuille : chaque salon, ses billets.
+ *
+ * `tout` (Lucas, 19/09/2026 : « sans avoir cliqué sur ce nouveau bouton, les
+ * users ne verront que 1 mode de jeu par matière ») : par défaut la feuille
+ * ne montre qu'UN jeu par matière — son jeu libre (lib/jeux/acces), ouvert à
+ * tous. Le bouton « tous les modes » déplie le reste : jeux Studuel+ (sous
+ * cadenas pour qui ne l'a pas) et jeux « Bientôt ».
+ */
+export function sectionsMatieres(premium: boolean, tout = true): SectionMatiere[] {
+  return SALONS.map((s) => {
+    const tickets = subjectGameTickets(s.subject, { premium })
+    const libre = tickets.find((t) => t.gameId !== undefined && jeuLibre(t.gameId))
+    return {
+      subject: s.subject,
+      emoji: s.emoji,
+      vignette: vignetteMatiere(s.subject),
+      tickets: tout ? tickets : tickets.filter((t) => t === (libre ?? tickets[0])),
+    }
+  })
+}
+
+/** Combien de billets de jeux la vue par défaut garde repliés. */
+export function modesReplies(premium: boolean): number {
+  const tous = sectionsMatieres(premium, true).reduce((n, s) => n + s.tickets.length, 0)
+  const visibles = sectionsMatieres(premium, false).reduce((n, s) => n + s.tickets.length, 0)
+  return tous - visibles
 }
 
 // Les matières du programme portent le même NOM que les matières du catalogue
@@ -172,35 +255,106 @@ export function salonSubjectFor(subject: {
 
 // Le billet « Boss » d'une matière a été SUPPRIMÉ d'ici (chantier La Traque,
 // lib/traque.ts) : un gardien ne se choisit plus dans un menu de modes, il se
-// débusque en révisant. Il vivait au milieu de Blitz, Chrono et Survie alors
-// qu'il n'a pas la même nature — et rien ne reliait le travail au combat. Sa
-// carte vit maintenant dans la feuille Boss du rail de l'arène
-// (components/defi/BossSheet), et le combat dans /defi/traque/[bossId].
+// débusque en révisant. Sa carte vit dans la feuille Boss du rail de l'arène.
 
 /**
- * Les modes fun de l'Arène (communs à toutes les matières), en billets.
- * `dayKey` (clé UTC du jour) sert au mode du jour : son billet porte le ruban
- * « ×2 XP », son jeton le bonus doublé, sa robe passe en or — même calcul que
- * la salle de jeu.
+ * Les modes de l'Arène (communs à toutes les matières), en billets. `dayKey`
+ * (clé UTC du jour) désigne le MODE DU JOUR : son billet passe en vedette
+ * (grand, halo, ruban) — même tirage que la salle de jeu.
+ *
+ * ⚠️ PLUS DE « +20 XP » SUR LES BILLETS. Jouer n'acquiert pas d'XP depuis la
+ * migration 348 : le jeton annonçait un bonus que le portefeuille ne versait
+ * pas, et le ruban « ×2 XP » du mode du jour doublait ce néant. Les billets
+ * annoncent désormais la RÈGLE du mode, qui, elle, est vraie.
  */
 export function funModeTickets(dayKey: string): ModeTicket[] {
   const featured = featuredModeId(dayKey)
   return GAME_MODES.map((m) => {
-    const isFeatured = m.id === featured
-    const bonus =
-      MODE_XP_BONUS[m.id] * (isFeatured ? FEATURED_XP_MULTIPLIER : 1)
+    const vedette = m.id === featured
     return {
       id: m.id,
-      tone: isFeatured ? ('featured' as const) : ('fun' as const),
+      teinte: TEINTE_MODE[m.id],
       name: m.name,
       tagline: m.tagline,
       emoji: ARENA_EMOJI[m.id] ?? '🎮',
       image: modeImage(m.id),
       scene: modeScene(m.id),
       href: `/defi/jouer?mode=${m.id}`,
-      chip: `+${bonus} XP`,
-      badge: isFeatured ? '×2 XP' : undefined,
+      chip: REGLE_MODE[m.id],
+      badge: vedette ? 'Mode du jour' : undefined,
       recordKey: ARENA_RECORD_KEY[m.id],
+      vedette,
     }
   })
+}
+
+/** Le billet « Mode Coop » : à deux, par un code d'invitation, on s'entraide. */
+export function coopTicket(): ModeTicket {
+  return {
+    id: 'coop',
+    teinte: 'vert',
+    name: 'Mode Coop',
+    tagline: 'À deux, par un code d’invitation : on s’entraide au lieu de s’affronter',
+    emoji: '🤝',
+    href: '/defi/jouer?mode=coop',
+    chip: 'À deux, en direct',
+  }
+}
+
+/**
+ * CE QUE MONTRE LA FEUILLE « MODES DE JEU » (Lucas, 19/09/2026 : « trop de
+ * modes de jeu » ; « on garde Survie, fantôme etc. mais eux vont dans le
+ * plus, l'icône qui les dévoile tous »).
+ *
+ *   · toujours : le MODE DU JOUR en grand billet, et UN jeu par matière —
+ *     son jeu libre ;
+ *   · derrière le bouton « tous les modes » (`tout`) : le second jeu de
+ *     chaque matière (Studuel+), puis les modes de l'Arène — les autres modes
+ *     du tirage, le Duel en direct et le Mode Coop pour l'élève connecté.
+ *
+ * `replies` : combien de billets le bouton dévoile (sa pastille « +N »).
+ */
+export function vueModes({
+  dayKey,
+  premium,
+  tout,
+  connecte,
+}: {
+  dayKey: string
+  premium: boolean
+  tout: boolean
+  connecte: boolean
+}): {
+  vedette: ModeTicket | null
+  sections: SectionMatiere[]
+  arene: ModeTicket[]
+  replies: number
+} {
+  const modes = funModeTickets(dayKey)
+  const vedette = modes.find((m) => m.vedette) ?? null
+  const areneComplete: ModeTicket[] = [
+    ...modes.filter((m) => !m.vedette),
+    ...(connecte ? [duelDirectTicket(), coopTicket()] : []),
+  ]
+  return {
+    vedette,
+    sections: sectionsMatieres(premium, tout),
+    arene: tout ? areneComplete : [],
+    replies: modesReplies(premium) + areneComplete.length,
+  }
+}
+
+/** Le billet « Duel en direct » : un ami, un QR, la même partie en même temps. */
+export function duelDirectTicket(): ModeTicket {
+  return {
+    id: 'duel-direct',
+    teinte: 'rose',
+    name: 'Duel en direct',
+    tagline: 'Invite un ami par QR : la même partie, en même temps',
+    emoji: '⚔️',
+    image: '/images/defi/modes/amidefi.webp',
+    scene: modeScene('duel'),
+    href: '/defi/duel-rapide',
+    chip: 'Avec un ami',
+  }
 }

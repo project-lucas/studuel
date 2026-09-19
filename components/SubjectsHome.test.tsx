@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { act, render, screen } from '@testing-library/react'
 import type { Subject } from '@/lib/types'
 
 // LE DOSSIER D'UNE MATIÈRE OÙ UN GARDIEN EST SORTI.
@@ -18,11 +18,22 @@ vi.mock('next/navigation', () => ({
 }))
 vi.mock('@/lib/sounds', () => ({ sfx: { tap: vi.fn() } }))
 vi.mock('@/lib/toast', () => ({ toast: vi.fn() }))
-vi.mock('@/app/reviser/actions', () => ({ saveSelectedSubjects: vi.fn() }))
+const saveMatieresPrioritaires = vi.fn<(slugs: string[]) => Promise<void>>(
+  async () => {},
+)
+vi.mock('@/app/reviser/actions', () => ({
+  saveSelectedSubjects: vi.fn(),
+  saveMatieresPrioritaires: (slugs: string[]) =>
+    saveMatieresPrioritaires(slugs),
+}))
 vi.mock('next/link', () => ({
-  default: ({ children, href }: { children: React.ReactNode; href: string }) => (
-    <a href={href}>{children}</a>
-  ),
+  default: ({
+    children,
+    href,
+  }: {
+    children: React.ReactNode
+    href: string
+  }) => <a href={href}>{children}</a>,
 }))
 
 import SubjectsHome from '@/components/SubjectsHome'
@@ -43,6 +54,7 @@ const rendre = (gardiens = {}) =>
     <SubjectsHome
       subjects={[ANGLAIS]}
       selected={['anglais']}
+      prioritaires={[]}
       grade="3e"
       progressBySlug={{ anglais: 40 }}
       gardiens={gardiens}
@@ -116,5 +128,98 @@ describe('le dossier d’un gardien sorti', () => {
     rendre({ anglais: { boss: 'Big Ben', endsAt: MAINTENANT + 38 * MINUTE } })
     const pastille = screen.getByText('Big Ben').closest('span')?.parentElement
     expect(pastille?.className).toContain('gardien-pouls')
+  })
+})
+
+// L'ÉTOILE SUR CHAQUE DOSSIER DE MATIÈRE (15/09/2026).
+//
+// Ce qui se garde ici : chaque carte porte une étoile, un tap la remplit et
+// fait passer la matière EN TÊTE, un filet la sépare des autres, et le choix
+// part en base. L'ordre (`separerPrioritaires`) est testé à part, pur.
+const MATHS: Subject = {
+  id: 's2',
+  name: 'Maths',
+  slug: 'maths',
+  color: 'purple',
+  levels: ['3e'],
+} as unknown as Subject
+
+describe('l’étoile des matières prioritaires', () => {
+  it('hors du mode « prioriser », les cartes sont des liens nus — pas de loupe, une étoile dans la barre', () => {
+    render(
+      <SubjectsHome
+        subjects={[ANGLAIS, MATHS]}
+        selected={['anglais', 'maths']}
+        prioritaires={[]}
+        grade="3e"
+        progressBySlug={{}}
+      />,
+    )
+    expect(
+      screen.getByRole('button', { name: 'Prioriser mes matières' }),
+    ).toBeInTheDocument()
+    expect(
+      screen.queryByRole('button', { name: 'Rechercher dans le programme' }),
+    ).toBeNull()
+    expect(screen.queryByRole('checkbox')).toBeNull()
+    expect(document.querySelector('hr')).toBeNull()
+  })
+
+  it('en mode « prioriser », un tap sur la carte l’étoile, la met en tête, pose le filet et enregistre', async () => {
+    const { container } = render(
+      <SubjectsHome
+        subjects={[ANGLAIS, MATHS]}
+        selected={['anglais', 'maths']}
+        prioritaires={[]}
+        grade="3e"
+        progressBySlug={{}}
+      />,
+    )
+    act(() => {
+      screen.getByRole('button', { name: 'Prioriser mes matières' }).click()
+    })
+    expect(
+      screen.getByRole('checkbox', { name: 'Maths : prioritaire' }),
+    ).toHaveAttribute('aria-checked', 'false')
+    act(() => {
+      screen.getByRole('checkbox', { name: 'Maths : prioritaire' }).click()
+    })
+    expect(
+      screen.getByRole('checkbox', { name: 'Maths : prioritaire' }),
+    ).toHaveAttribute('aria-checked', 'true')
+    // Maths passe DEVANT Anglais, et un filet les sépare.
+    const noms = [...container.querySelectorAll('.rev-card')].map((c) =>
+      c.textContent?.slice(0, 7),
+    )
+    expect(noms[0]).toContain('Maths')
+    expect(noms[1]).toContain('Anglais')
+    expect(container.querySelector('hr')).not.toBeNull()
+    await act(async () => {
+      await Promise.resolve()
+    })
+    expect(saveMatieresPrioritaires).toHaveBeenCalledWith(['maths'])
+    // « Terminé » referme le mode : les cartes redeviennent des liens.
+    act(() => {
+      screen.getByRole('button', { name: 'Terminé' }).click()
+    })
+    expect(screen.queryByRole('checkbox')).toBeNull()
+    expect(screen.getByRole('link', { name: /Maths/ })).toBeInTheDocument()
+  })
+
+  it('les matières déjà étoilées en base arrivent en tête', () => {
+    const { container } = render(
+      <SubjectsHome
+        subjects={[ANGLAIS, MATHS]}
+        selected={['anglais', 'maths']}
+        prioritaires={['maths']}
+        grade="3e"
+        progressBySlug={{}}
+      />,
+    )
+    const noms = [...container.querySelectorAll('.rev-card')].map(
+      (c) => c.textContent ?? '',
+    )
+    expect(noms[0]).toContain('Maths')
+    expect(container.querySelector('hr')).not.toBeNull()
   })
 })

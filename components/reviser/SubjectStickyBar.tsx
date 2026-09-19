@@ -69,7 +69,7 @@ export default function SubjectStickyBar({
           <BackButton
             fallback="/reviser"
             label="Retour aux matières"
-            className="size-8 bg-transparent shadow-none"
+            className="-ml-1 size-10 bg-transparent shadow-none"
           />
           <span className="font-heading min-w-0 flex-1 truncate font-bold">
             {name}

@@ -293,20 +293,29 @@ export function launchChapterId(view: PlanView, controle: Controle): string {
   return view.todaySession?.chapterId ?? controle.chapters[0]?.id ?? ''
 }
 
-// Le contrôle actif (plan non terminé) le plus proche, ou null. Les sans-date
-// passent en dernier — même tri que la liste des contrôles.
-export function nearestActiveControle(
+// TOUS les contrôles actifs (plan non terminé), du plus proche au plus
+// lointain ; les sans-date passent en dernier — même tri que la liste des
+// contrôles. C'est l'ordre des cartes de l'accueil : celle du haut est le
+// contrôle qui arrive le premier.
+export function activeControlesSorted(
   controles: readonly Controle[],
   today: string,
-): Controle | null {
+): Controle[] {
   const active = controles.filter((c) => !derivePlanView(c, today).isComplete)
-  if (active.length === 0) return null
   return [...active].sort((a, b) => {
     if (a.date === b.date) return 0
     if (a.date === null) return 1
     if (b.date === null) return -1
     return a.date < b.date ? -1 : 1
-  })[0]
+  })
+}
+
+// Le contrôle actif (plan non terminé) le plus proche, ou null.
+export function nearestActiveControle(
+  controles: readonly Controle[],
+  today: string,
+): Controle | null {
+  return activeControlesSorted(controles, today)[0] ?? null
 }
 
 // --- Mapping lignes Supabase → entités (pur, pas de couplage au client) -------

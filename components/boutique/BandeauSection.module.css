@@ -1,0 +1,98 @@
+/* LES TITRES DE CATÉGORIE DE LA BOUTIQUE (BandeauSection.tsx)
+   — UN STYLE PAR CATÉGORIE, comme au magasin de Clash Royale qui mêle plaque
+   dorée, parchemin et rubans (Lucas, 18/09/2026 : le même ruban partout était
+   « trop similaire »). Des IMAGES dessinées, sans texte (public/images/
+   boutique/banniere/, fabriquées par scripts/bannieres-boutique.mjs) :
+     Boost           → .plaque      plaque dorée à pointes
+     Capsules        → .parchemin   parchemin et ses rouleaux
+     Gemmes          → .ruban       ruban violet cerclé d'or, queues et plis
+     Pour ton profil → .rubanClair  ruban lavande, plus fin
+
+   Dans ce module et non dans globals.css : la feuille globale (7 500 lignes)
+   ne se recompilait plus en développement, et chaque retouche de ces titres
+   restait invisible jusqu'au redémarrage du serveur. Petit fichier, classes
+   propres au composant.
+
+   NEUF TRANCHES (`border-image`) : chaque bout de l'image garde ses
+   proportions, le centre uni s'allonge à la largeur de l'écran — l'image
+   s'allonge sans que ses pointes, ses rouleaux ou ses plis se déforment. Par
+   style : `--coupe` = largeur d'un bout dans l'image (en % de sa largeur,
+   mesurée pour englober pointes, losanges, rouleaux, plis et étoiles) ;
+   `--bout` = sa largeur affichée = coupe × (largeur/hauteur de l'image) ×
+   hauteur affichée. Les bordures latérales transparentes gardent aussi le
+   titre hors des bouts. L'image arrive par `--bandeau-image`, posée en ligne
+   par le composant (URL à empreinte). */
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--hauteur);
+  padding-bottom: var(--bas, 0px);
+  border-style: solid;
+  border-color: transparent;
+  border-width: 0 var(--bout);
+  border-image-source: var(--bandeau-image);
+  border-image-slice: 0 var(--coupe) fill;
+  border-image-width: 0 var(--bout);
+  border-image-repeat: stretch;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Boost — image 3,11:1, bouts de 14 % (chanfrein + losange). Texte brun
+   GRAVÉ : un reflet clair dessous, pas de contour. */
+.plaque {
+  --hauteur: 56px;
+  --coupe: 14%;
+  --bout: 24px;
+  --bas: 3px;
+  color: color-mix(in oklch, var(--highlight), black 64%);
+  text-shadow: 0 1.5px 0 color-mix(in oklch, var(--highlight), white 60%);
+}
+
+/* Capsules — le parchemin v2 (Lucas, 18/09/2026 : le premier, pâle et plat,
+   « n'était pas au niveau » du ruban). Image 1,71:1, 96 px de haut (« la
+   hauteur est bien »). ON N'ALLONGE QUE LE CŒUR DU PAPIER : coupe à 49 %,
+   la tranche centrale ne fait que 2 % de l'image — là où le reflet en arc
+   touche son fond plat et où les liserés sont droits (colonnes quasi
+   identiques, mesuré). Tout le reste garde ses proportions exactes : les
+   rouleaux, les flancs de l'arc, les éclats des liserés. Étiré en neuf
+   tranches classiques (coupe à 20 %), l'arc et la courbe du papier
+   s'aplatissaient : « on dirait que c'est étiré » ; posé à ses seules
+   proportions, il était trop étroit. Un peu en retrait des bords, comme l'a
+   tracé Lucas. Texte brun. */
+.parchemin {
+  --hauteur: 96px;
+  --coupe: 49%;
+  --bout: 80px;
+  margin-inline: 12px;
+  color: color-mix(in oklch, var(--highlight), black 62%);
+  text-shadow: 0 1.5px 0 rgb(255 255 255 / 0.6);
+}
+
+/* Gemmes — image 3,55:1, bouts de 23 % : la queue en V ET le pli doré qui
+   passe sous le corps. Le corps n'occupe que le haut de l'image (0 → 82 %),
+   les plis dépassent dessous : le titre remonte sur le corps (`--bas`).
+   Blanc cerné de violet sombre. */
+.ruban {
+  --hauteur: 64px;
+  --coupe: 23%;
+  --bout: 52px;
+  --bas: 12px;
+  color: white;
+  -webkit-text-stroke: 0.14em color-mix(in oklch, var(--primary), black 62%);
+  paint-order: stroke fill;
+  text-shadow: 0 2px 0 color-mix(in oklch, var(--primary), black 62%);
+}
+
+/* Pour ton profil — image 4,59:1, bouts de 16 % (pointe + étoiles et
+   cartes). Blanc cerné de violet. */
+.rubanClair {
+  --hauteur: 46px;
+  --coupe: 16%;
+  --bout: 34px;
+  color: white;
+  -webkit-text-stroke: 0.14em color-mix(in oklch, var(--primary), black 45%);
+  paint-order: stroke fill;
+  text-shadow: 0 2px 0 color-mix(in oklch, var(--primary), black 45%);
+}

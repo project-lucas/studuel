@@ -96,12 +96,12 @@ describe('le départ de la volée', () => {
   it('part une fois le panneau posé, pas au premier rendu', () => {
     // Des jetons qui partent d'une pastille encore en train d'apparaître volent
     // depuis un point qui a déjà bougé.
-    render(<PanneauRecompenses gains={[{ unite: 'ecu', montant: 12 }]} />)
+    render(<PanneauRecompenses gains={[{ unite: 'gemme', montant: 12 }]} />)
     expect(celebrer).not.toHaveBeenCalled()
 
     act(() => void vi.advanceTimersByTime(1000))
     expect(celebrer).toHaveBeenCalledTimes(1)
-    expect(celebrer.mock.calls[0][0]).toEqual([{ unite: 'ecu', montant: 12 }])
+    expect(celebrer.mock.calls[0][0]).toEqual([{ unite: 'gemme', montant: 12 }])
   })
 
   it('ne part QU’UNE FOIS, même si le parent se re-rend', () => {
@@ -116,7 +116,7 @@ describe('le départ de la volée', () => {
           <button type="button" onClick={() => setN(n + 1)}>
             re-rendre {n}
           </button>
-          <PanneauRecompenses gains={[{ unite: 'ecu', montant: 12 }]} />
+          <PanneauRecompenses gains={[{ unite: 'gemme', montant: 12 }]} />
         </>
       )
     }
@@ -141,7 +141,7 @@ describe('le départ de la volée', () => {
     // Un élève qui tape « Rejouer » dans la demi-seconde ne doit pas voir des
     // jetons partir d'un panneau qui n'est plus là.
     const { unmount } = render(
-      <PanneauRecompenses gains={[{ unite: 'ecu', montant: 12 }]} />,
+      <PanneauRecompenses gains={[{ unite: 'gemme', montant: 12 }]} />,
     )
     unmount()
     act(() => void vi.advanceTimersByTime(2000))

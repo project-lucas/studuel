@@ -53,13 +53,26 @@ export function nomsDesMigrations(): readonly string[] {
     .sort()
 }
 
-/** Le contenu d'UNE migration nommée (les seeds isolés, `008_reviser.sql`…). */
+/**
+ * Le contenu d'UNE migration nommée (les seeds isolés, `008_reviser.sql`…).
+ *
+ * Lit CE fichier seul, sauf si le corpus est déjà en cache : un garde qui ne
+ * vérifie qu'un seed (les packs de gemmes contre la 369) n'a pas à charger les
+ * 22 Mo du dossier — c'est ce qui le faisait dépasser 5 s sur une machine
+ * chargée.
+ */
 export function migrationSql(fichier: string): string {
-  const trouvee = migrationsDansLOrdre().find((m) => m.file === fichier)
-  if (trouvee === undefined) {
+  if (toutes !== null) {
+    const trouvee = toutes.find((m) => m.file === fichier)
+    if (trouvee === undefined) {
+      throw new Error(`migration introuvable dans supabase/ : ${fichier}`)
+    }
+    return trouvee.sql
+  }
+  if (!nomsDesMigrations().includes(fichier)) {
     throw new Error(`migration introuvable dans supabase/ : ${fichier}`)
   }
-  return trouvee.sql
+  return readFileSync(path.join(DOSSIER_MIGRATIONS, fichier), 'utf8')
 }
 
 /** Les migrations dont le NOM colle au motif (`/^3\d\d_contenu_/`…). */

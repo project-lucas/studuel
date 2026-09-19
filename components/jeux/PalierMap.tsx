@@ -1,9 +1,11 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { motion, useReducedMotion } from 'framer-motion'
 import {
+  Check,
   Infinity as InfinityIcon,
   Lock,
   Play,
@@ -12,6 +14,9 @@ import {
   Trophy,
 } from 'lucide-react'
 import ModeStage from '@/components/defi/ModeStage'
+import ModeHero from '@/components/defi/ModeHero'
+import { CristalIcon } from '@/components/ui/MonnaieIcon'
+import { reclamerGemmesPalier } from '@/app/defi/palier-actions'
 import PalierStars from '@/components/jeux/PalierStars'
 import { MECHANIC_ICON } from '@/components/jeux/icons'
 import { cn } from '@/lib/utils'
@@ -34,6 +39,14 @@ import {
   type PalierLevel,
   type PalierProgress,
 } from '@/lib/jeux/paliers'
+import {
+  GEMMES_PAR_JEU,
+  etoilesDeProgression,
+  gemmesDesEtoiles,
+  gemmesParEtoile,
+  resteAReclamer,
+  type EtoilesParPalier,
+} from '@/lib/jeux/palier-gemmes'
 import {
   speedLabelFor,
   type PalierStandings,
@@ -71,16 +84,26 @@ import {
 export default function PalierMap({
   format,
   name,
+  tagline,
   subject,
   subjectEmoji,
+  subjectVignette,
+  scene,
   floor,
   standings,
   ultime,
+  etoilesPayees,
 }: {
   format: GameFormat
   name: string
+  /** La promesse du jeu (catalogue des salons), sous le titre du bandeau. */
+  tagline: string
   subject: string
   subjectEmoji: string
+  /** La vignette du dossier de la matière (Réviser), ou null. */
+  subjectVignette: string | null
+  /** La scène du billet du jeu, ou null tant qu'il n'a pas la sienne. */
+  scene: string | null
   /** Paliers ouverts d'office par la classe de l'élève (lib/jeux/paliers). */
   floor: PalierLevel
   /**
@@ -94,6 +117,11 @@ export default function PalierMap({
    * jamais été jouée, ou quand la migration n'est pas passée.
    */
   ultime: UltimeStanding | null
+  /**
+   * Étoiles déjà PAYÉES en gemmes, palier par palier (migration 373). Null
+   * quand la migration n'est pas passée : on affiche le tarif, sans réclamer.
+   */
+  etoilesPayees: EtoilesParPalier | null
 }) {
   const router = useRouter()
   const reduce = useReducedMotion()
@@ -104,6 +132,47 @@ export default function PalierMap({
 
   const stars = totalStars(progress)
   const current = currentPalier(progress, floor)
+
+  // LES GEMMES DES ÉTOILES. Les étoiles vivent dans le navigateur, les gemmes
+  // au serveur : une étoile décrochée avant la 373 (ou dont la réclamation a
+  // échoué en fin de partie) n'a jamais été payée. La carte la réclame en
+  // arrivant, et dit ce que ça a rapporté.
+  const [payees, setPayees] = useState<EtoilesParPalier | null>(etoilesPayees)
+  const [rattrapage, setRattrapage] = useState<number | null>(null)
+  const locales = etoilesDeProgression(progress)
+  const cleLocales = locales.join(',')
+  const clePayees = payees === null ? null : payees.join(',')
+  useEffect(() => {
+    if (clePayees === null) return
+    const loc = cleLocales.split(',').map(Number)
+    const deja = clePayees.split(',').map(Number)
+    const [a, b, c, d, e] = loc
+    const [f, g, h, i, j] = deja
+    if (!resteAReclamer([a, b, c, d, e], [f, g, h, i, j])) return
+    let vivant = true
+    reclamerGemmesPalier(format.id, loc)
+      .then((r) => {
+        if (!vivant || !r) return
+        setPayees(r.etoiles)
+        if (r.gemmes > 0) {
+          setRattrapage(r.gemmes)
+          // Le bandeau du haut relit son solde de gemmes.
+          router.refresh()
+        }
+      })
+      .catch(() => {
+        // Réseau : on retentera à la prochaine visite.
+      })
+    return () => {
+      vivant = false
+    }
+  }, [format.id, cleLocales, clePayees, router])
+
+  // Ce que l'élève a déjà gagné : ses étoiles, locales ou payées (un stockage
+  // vidé n'efface pas ce que le serveur a versé).
+  const acquises = locales.map((n, index) => Math.max(n, payees?.[index] ?? 0))
+  const [a1, a2, a3, a4, a5] = acquises
+  const gemmesGagnees = gemmesDesEtoiles([a1, a2, a3, a4, a5])
 
   return (
     <ModeStage
@@ -117,7 +186,16 @@ export default function PalierMap({
         </span>
       }
     >
-      <div className="pt-1 pb-6">
+      {/* L'AMBIANCE DU JEU : sa scène (celle de son billet), sa robe, son
+          titre — l'écran continue le billet qu'on vient de toucher. */}
+      <ModeHero
+        scene={scene}
+        titre={name}
+        sousTitre={tagline}
+        matiere={{ nom: subject, vignette: subjectVignette }}
+      />
+
+      <div className="relative z-10 -mt-1 pb-6">
         {/* Le bandeau de progression : la moisson d'étoiles du jeu, en un coup
             d'œil. C'est le compteur qu'on cherche à remplir — il vaut mieux
             qu'un score, qui ne dit jamais s'il reste quelque chose à faire. */}
@@ -127,15 +205,26 @@ export default function PalierMap({
         >
           <div className="flex items-center justify-between gap-3">
             <h2 className="font-heading text-lg font-extrabold">
-              Ta collection d’étoiles
+              Ta collection
             </h2>
-            <span className="flex items-center gap-1.5 rounded-full bg-highlight/15 px-3 py-1 font-mono text-sm font-extrabold tabular-nums">
-              <Star
-                className="size-4 fill-highlight text-highlight"
-                aria-hidden="true"
-              />
-              {stars}
-              <span className="text-foreground/50">/{TOTAL_STARS}</span>
+            <span className="flex items-center gap-1.5">
+              <span className="flex items-center gap-1.5 rounded-full bg-highlight/15 px-3 py-1 font-mono text-sm font-extrabold tabular-nums">
+                <Star
+                  className="size-4 fill-highlight text-highlight"
+                  aria-hidden="true"
+                />
+                {stars}
+                <span className="text-foreground/50">/{TOTAL_STARS}</span>
+              </span>
+              {/* Les gemmes que ces étoiles ont rapportées, sur tout le jeu. */}
+              <span
+                className="flex items-center gap-1 rounded-full bg-primary/10 py-1 pr-3 pl-1.5 font-mono text-sm font-extrabold tabular-nums"
+                aria-label={`${gemmesGagnees} gemmes gagnées sur ${GEMMES_PAR_JEU}`}
+              >
+                <CristalIcon className="size-5" />
+                {gemmesGagnees}
+                <span className="text-foreground/50">/{GEMMES_PAR_JEU}</span>
+              </span>
             </span>
           </div>
           <div
@@ -151,10 +240,20 @@ export default function PalierMap({
               style={{ width: `${(stars / TOTAL_STARS) * 100}%` }}
             />
           </div>
+          {rattrapage ? (
+            <p
+              role="status"
+              className="mt-3 flex items-center gap-2 rounded-2xl bg-highlight/20 px-3 py-2 text-sm font-bold"
+            >
+              <CristalIcon className="size-6 shrink-0" />
+              Tes étoiles déjà décrochées t’ont rapporté {rattrapage} gemme
+              {rattrapage > 1 ? 's' : ''} !
+            </p>
+          ) : null}
           <p className="mt-2 text-sm text-muted-foreground">
             {stars >= TOTAL_STARS
               ? 'Toutes les étoiles décrochées. Il ne te reste qu’à battre tes propres records.'
-              : `Deux étoiles sur un palier ouvrent le suivant. Tu es à ${palierDef(current).name}.`}
+              : `Deux étoiles sur un palier ouvrent le suivant, et chaque étoile rapporte des gemmes. Tu es à ${palierDef(current).name}.`}
           </p>
         </section>
 
@@ -185,6 +284,7 @@ export default function PalierMap({
                 }
                 speed={speedLabelFor(standings[palier.level])}
                 missing={starsMissingFor(progress, floor, palier.level)}
+                acquises={acquises[index] ?? 0}
               />
             </motion.li>
           ))}
@@ -351,6 +451,7 @@ function PalierRow({
   timeMs,
   speed,
   missing,
+  acquises,
 }: {
   format: GameFormat
   level: PalierLevel
@@ -364,6 +465,8 @@ function PalierRow({
   speed: string | null
   /** Étoiles manquantes au palier d'en dessous pour ouvrir celui-ci. */
   missing: number
+  /** Étoiles décrochées sur ce palier (locales ou déjà payées), pour ses gains. */
+  acquises: number
 }) {
   const def = palierDef(level)
   const chips = palierChips(format, level)
@@ -420,6 +523,11 @@ function PalierRow({
             </span>
           ))}
         </span>
+
+        {/* LES GEMMES DU PALIER (migration 373) : une par étoile, au tarif
+            du palier — le cristal de nos gemmes, et une coche sur celles déjà
+            gagnées. Plus on monte, plus l'étoile vaut. */}
+        <GainsPalier level={level} acquises={acquises} unlocked={unlocked} />
 
         {/* La ligne des records : le score, le CHRONO de bouclage, et la place
             qu'il donne. Le chrono n'apparaît que là où il veut dire quelque
@@ -491,5 +599,67 @@ function PalierRow({
     >
       {body}
     </Link>
+  )
+}
+
+/**
+ * LES GAINS D'UN PALIER — trois jetons, un par étoile : le cristal de nos
+ * gemmes et ce qu'il vaut à ce palier (palier N → N gemmes). Une étoile déjà
+ * décrochée garde son jeton en jaune, coché : c'est gagné, pour toujours.
+ * Un palier fermé montre quand même ses gains, en retrait — on voit ce qui
+ * attend là-haut.
+ */
+function GainsPalier({
+  level,
+  acquises,
+  unlocked,
+}: {
+  level: PalierLevel
+  acquises: number
+  unlocked: boolean
+}) {
+  const parEtoile = gemmesParEtoile(level)
+  return (
+    <span
+      className="mt-2 flex flex-wrap items-center gap-1"
+      role="img"
+      aria-label={`Gains : ${parEtoile} gemme${parEtoile > 1 ? 's' : ''} par étoile, ${acquises} étoile${acquises > 1 ? 's' : ''} sur 3 déjà gagnée${acquises > 1 ? 's' : ''}`}
+    >
+      <span
+        aria-hidden="true"
+        className={cn(
+          'mr-0.5 text-[10px] font-extrabold tracking-wide uppercase',
+          unlocked ? 'text-foreground/55' : 'text-foreground/35',
+        )}
+      >
+        Gains
+      </span>
+      {([1, 2, 3] as const).map((rang) => {
+        const gagnee = acquises >= rang
+        return (
+          <span
+            key={rang}
+            aria-hidden="true"
+            className={cn(
+              'relative inline-flex items-center gap-0.5 rounded-full py-0.5 pr-1.5 pl-0.5 text-[11px] font-extrabold tabular-nums',
+              gagnee
+                ? 'bg-highlight/25 text-foreground ring-1 ring-highlight/70'
+                : unlocked
+                  ? 'bg-black/[0.05] text-foreground/75'
+                  : 'bg-muted text-foreground/40',
+            )}
+          >
+            <CristalIcon className={cn('size-4', !unlocked && 'opacity-60 grayscale')} />+{parEtoile}
+            {/* La coche d'une étoile décrochée : ce jeton-là est gagné. */}
+            {gagnee ? (
+              <Check
+                className="absolute -top-1 -right-1 size-3 rounded-full bg-success p-px text-white"
+                strokeWidth={4}
+              />
+            ) : null}
+          </span>
+        )
+      })}
+    </span>
   )
 }

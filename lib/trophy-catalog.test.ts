@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
-import { SALONS } from './jeux/catalog'
+import { JEUX_RETIRES, SALONS } from './jeux/catalog'
 import { PROGRAMME_GAME_ID, programmeSlug } from './jeux/programme'
 import { BAND_SPAN, SEASON_KEEP_FLOOR, TROPHY_BANDS } from './trophy-road'
 
@@ -53,7 +53,10 @@ describe('la liste blanche du serveur suit le catalogue du code', () => {
 
   it('n’ouvre aucun couple que le code ne connaît pas', () => {
     const expected = expectedPairs()
-    const extra = [...seededPairs()].filter((p) => !expected.has(p))
+    // Les jeux retirés le 19/09/2026 restent en base, sans effet (JEUX_RETIRES).
+    const extra = [...seededPairs()].filter(
+      (p) => !expected.has(p) && !JEUX_RETIRES.includes(p.split(':')[1]),
+    )
     expect(extra, `en trop dans la migration 238 : ${extra.join(', ')}`).toEqual([])
   })
 

@@ -3,6 +3,7 @@
 import { Gamepad2 } from 'lucide-react'
 import ModeTicket from '@/components/defi/ModeTicket'
 import { useRecords } from '@/lib/jeux/use-records'
+import { useEtoilesJeux } from '@/lib/jeux/use-etoiles-jeux'
 import { salonSubjectFor, subjectGameTickets } from '@/lib/defi/modes-catalog'
 
 /**
@@ -21,14 +22,18 @@ import { salonSubjectFor, subjectGameTickets } from '@/lib/defi/modes-catalog'
  */
 export default function SubjectGames({
   subject,
+  premium = false,
 }: {
   subject: { slug: string; name: string }
+  /** Abonné Studuel+ : tous les jeux de la matière s'ouvrent (lib/jeux/acces). */
+  premium?: boolean
 }) {
   const salon = salonSubjectFor(subject)
-  const tickets = salon ? subjectGameTickets(salon) : []
+  const tickets = salon ? subjectGameTickets(salon, { premium }) : []
   const records = useRecords(
     tickets.flatMap((t) => (t.recordKey ? [t.recordKey] : [])),
   )
+  const etoiles = useEtoilesJeux(tickets.flatMap((t) => (t.gameId ? [t.gameId] : [])))
 
   if (tickets.length === 0) return null
 
@@ -50,7 +55,9 @@ export default function SubjectGames({
           <ModeTicket
             key={t.id}
             ticket={t}
-            record={records && t.recordKey ? (records[t.recordKey] ?? 0) : null}
+            // Un jeu à paliers montre ses étoiles, comme dans « Modes de jeu ».
+            etoiles={t.gameId && etoiles && !t.verrou ? (etoiles[t.gameId] ?? 0) : null}
+            record={!t.gameId && records && t.recordKey ? (records[t.recordKey] ?? 0) : null}
           />
         ))}
       </div>

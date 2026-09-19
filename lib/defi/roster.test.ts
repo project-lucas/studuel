@@ -19,9 +19,12 @@ describe('buildRoster', () => {
     expect(roster.map((r) => r.subject)).toEqual(SALONS.map((s) => s.subject))
   })
 
-  it('donne au moins trois jeux à chaque matière (l’égalisation par le Programme)', () => {
+  it('donne à chaque matière au moins un jeu de salon, plus son Programme', () => {
+    // Depuis le tri du 19/09/2026, les Maths n'ont plus qu'un jeu (Calcul
+    // mental) : deux tuiles, Programme compris, contre trois ailleurs.
     for (const entry of buildRoster(EMPTY)) {
-      expect(entry.games.length, entry.subject).toBeGreaterThanOrEqual(3)
+      expect(entry.games.filter((g) => !g.isProgramme).length, entry.subject).toBeGreaterThanOrEqual(1)
+      expect(entry.games.length, entry.subject).toBeGreaterThanOrEqual(2)
     }
   })
 
@@ -60,36 +63,36 @@ describe('buildRoster', () => {
 })
 
 describe('les compteurs et le barème des tuiles', () => {
-  const maths = programmeSlug('Maths')
+  const francais = programmeSlug('Français')
   const trophies = trophyMap([
-    { subject: maths, gameId: 'calcul-mental', trophies: 890 },
-    { subject: maths, gameId: 'compte-est-bon', trophies: 350 },
+    { subject: francais, gameId: 'chasse-faute', trophies: 890 },
+    { subject: francais, gameId: 'conjugaison-eclair', trophies: 350 },
   ])
 
   it('reporte le compteur sur la bonne tuile', () => {
-    const entry = subjectBySlug(buildRoster(trophies), maths)
-    const calcul = entry?.games.find((g) => g.gameId === 'calcul-mental')
-    expect(calcul?.trophies).toBe(890)
+    const entry = subjectBySlug(buildRoster(trophies), francais)
+    const chasse = entry?.games.find((g) => g.gameId === 'chasse-faute')
+    expect(chasse?.trophies).toBe(890)
   })
 
   it('laisse à zéro un jeu jamais joué', () => {
-    const entry = subjectBySlug(buildRoster(trophies), maths)
-    const suite = entry?.games.find((g) => g.gameId === 'suite-logique')
-    expect(suite?.trophies).toBe(0)
+    const entry = subjectBySlug(buildRoster(trophies), francais)
+    const programme = entry?.games.find((g) => g.isProgramme)
+    expect(programme?.trophies).toBe(0)
   })
 
   it('attache à chaque tuile ce que vaut sa prochaine victoire', () => {
-    const entry = subjectBySlug(buildRoster(trophies), maths)
+    const entry = subjectBySlug(buildRoster(trophies), francais)
     // 890 trophées → dernière bande : +2 / −8.
-    expect(entry?.games.find((g) => g.gameId === 'calcul-mental')?.nextWin).toBe(2)
+    expect(entry?.games.find((g) => g.gameId === 'chasse-faute')?.nextWin).toBe(2)
     // Jamais joué → bande du débutant : +10, et rien à perdre.
-    const suite = entry?.games.find((g) => g.gameId === 'suite-logique')
-    expect(suite?.nextWin).toBe(10)
-    expect(suite?.nextLoss).toBe(0)
+    const programme = entry?.games.find((g) => g.isProgramme)
+    expect(programme?.nextWin).toBe(10)
+    expect(programme?.nextLoss).toBe(0)
   })
 
   it('somme les jeux pour le total de la matière', () => {
-    const entry = subjectBySlug(buildRoster(trophies), maths)
+    const entry = subjectBySlug(buildRoster(trophies), francais)
     expect(entry?.total).toBe(1240)
   })
 

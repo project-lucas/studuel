@@ -1,0 +1,621 @@
+{
+  "niveau": "6e",
+  "matiere": "histoire-geo",
+  "exercices": [
+    {
+      "chapitre": "6673b42e-c53c-5b4f-934a-5036903c6dc9",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le panneau du musée de la Préhistoire",
+      "competence": "analyser-document",
+      "situation": "En sortie scolaire au musée de la Préhistoire, Nolan a photographié le panneau de la première salle. Mais les lignes ne sont pas dans l’ordre du temps : aide-le à s’y retrouver.",
+      "documents": [
+        {
+          "id": "panneau",
+          "type": "fiche",
+          "modele": "panneau",
+          "titre": "Le panneau de la salle 1",
+          "entete": "Nos lointains ancêtres",
+          "sousTitre": "Musée de la Préhistoire · Salle 1",
+          "emoji": "🦴",
+          "teinte": "brun",
+          "lignes": [
+            { "id": "sapiens", "texte": "**Il y a ≈ 300 000 ans** — *Homo sapiens*, notre espèce, apparaît en Afrique." },
+            { "separateur": true },
+            {
+              "id": "habilis",
+              "texte": "**Il y a ≈ 2,5 millions d’années** — *Homo habilis* taille les premiers outils en pierre."
+            },
+            { "separateur": true },
+            {
+              "id": "neandertal",
+              "texte": "**Il y a ≈ 40 000 ans** — *Homo neanderthalensis*, l’homme de Néandertal, disparaît d’Europe."
+            },
+            { "separateur": true },
+            {
+              "id": "erectus",
+              "texte": "**Il y a ≈ 1,9 million d’années** — *Homo erectus* apparaît ; il sera le premier à sortir d’Afrique."
+            }
+          ],
+          "pied": "Toutes ces espèces vivaient de chasse et de cueillette."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "panneau",
+          "enonce": "Touche la ligne du panneau qui parle des **premiers outils** taillés.",
+          "reponse": ["habilis"],
+          "aide": "Cherche le mot « outils » dans les quatre lignes.",
+          "explication": "C’est **Homo habilis**, il y a environ 2,5 millions d’années : il taille les premiers outils en pierre."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces quatre événements du **plus ancien** au **plus récent**.",
+          "items": [
+            "Homo habilis taille les premiers outils",
+            "Homo erectus apparaît",
+            "Homo sapiens apparaît en Afrique",
+            "L’homme de Néandertal disparaît d’Europe"
+          ],
+          "aide": "Plus le nombre d’années est grand, plus c’est ancien : 2,5 millions d’années, c’est bien plus loin que 300 000 ans.",
+          "explication": "**2,5 millions d’années → 1,9 million → 300 000 ans → 40 000 ans.** Un million, c’est mille fois mille : les deux premières dates sont de très loin les plus anciennes."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent les premiers outils d’*Homo habilis* de l’apparition d’*Homo sapiens* ?",
+          "reponse": 2200000,
+          "unite": "ans",
+          "aide": "2,5 millions = 2 500 000. Fais la soustraction : 2 500 000 − 300 000.",
+          "explication": "2 500 000 − 300 000 = **2 200 000 ans**. Notre espèce est toute jeune à l’échelle de la Préhistoire !"
+        }
+      ]
+    },
+    {
+      "chapitre": "6673b42e-c53c-5b4f-934a-5036903c6dc9",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Trois couches de terre, trois époques",
+      "competence": "observer-schema",
+      "situation": "Sur le chantier de fouilles de l’abri du Vallon (un site imaginé pour l’exercice), Inès et son équipe d’archéologues ont dégagé trois couches de terre. Chacune garde les traces d’humains qui ont vécu là.",
+      "documents": [
+        {
+          "id": "coupe",
+          "type": "schema",
+          "titre": "La coupe du chantier de fouilles",
+          "source": "Schéma imaginé pour l’exercice.",
+          "largeur": 320,
+          "hauteur": 318,
+          "elements": [
+            { "forme": "rect", "x": 20, "y": 14, "l": 280, "h": 24, "teinte": "vert", "motif": "clair", "texte": "Sol actuel" },
+            {
+              "forme": "rect",
+              "id": "coucheA",
+              "zone": true,
+              "x": 20,
+              "y": 38,
+              "l": 280,
+              "h": 86,
+              "teinte": "sable",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "id": "coucheB",
+              "zone": true,
+              "x": 20,
+              "y": 124,
+              "l": 280,
+              "h": 86,
+              "teinte": "ambre",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "id": "coucheC",
+              "zone": true,
+              "x": 20,
+              "y": 210,
+              "l": 280,
+              "h": 86,
+              "teinte": "brun",
+              "motif": "clair"
+            },
+            { "forme": "texte", "x": 28, "y": 55, "texte": "Couche A", "taille": "petit", "gras": true, "ancre": "debut" },
+            { "forme": "texte", "x": 28, "y": 141, "texte": "Couche B", "taille": "petit", "gras": true, "ancre": "debut" },
+            { "forme": "texte", "x": 28, "y": 227, "texte": "Couche C", "taille": "petit", "gras": true, "ancre": "debut" },
+            { "forme": "emoji", "id": "lampe", "zone": true, "x": 70, "y": 86, "emoji": "🪔", "taille": 26 },
+            { "forme": "texte", "x": 70, "y": 115, "texte": "lampe à graisse" },
+            { "forme": "emoji", "id": "aiguille", "zone": true, "x": 166, "y": 86, "emoji": "🪡", "taille": 26 },
+            { "forme": "texte", "x": 166, "y": 115, "texte": "aiguille en os" },
+            { "forme": "emoji", "id": "osRenne", "zone": true, "x": 258, "y": 86, "emoji": "🦴", "taille": 26 },
+            { "forme": "texte", "x": 258, "y": 115, "texte": "os de renne" },
+            { "forme": "emoji", "id": "foyer", "zone": true, "x": 70, "y": 172, "emoji": "🔥", "taille": 26 },
+            { "forme": "texte", "x": 70, "y": 201, "texte": "charbons de bois" },
+            { "forme": "emoji", "id": "osCheval", "zone": true, "x": 166, "y": 172, "emoji": "🦴", "taille": 26 },
+            { "forme": "texte", "x": 166, "y": 201, "texte": "os de cheval" },
+            {
+              "forme": "chemin",
+              "id": "pointes",
+              "zone": true,
+              "d": "M245 186 L252 160 L259 186 Z M261 186 L268 162 L275 186 Z",
+              "ferme": true,
+              "teinte": "gris",
+              "motif": "plein"
+            },
+            { "forme": "texte", "x": 258, "y": 201, "texte": "pointes en silex" },
+            {
+              "forme": "chemin",
+              "id": "biface",
+              "zone": true,
+              "d": "M110 236 Q125 255 110 276 Q95 255 110 236 Z",
+              "ferme": true,
+              "teinte": "gris",
+              "motif": "plein"
+            },
+            { "forme": "texte", "x": 110, "y": 290, "texte": "biface en silex" },
+            { "forme": "emoji", "id": "osCerf", "zone": true, "x": 222, "y": 258, "emoji": "🦴", "taille": 26 },
+            { "forme": "texte", "x": 222, "y": 287, "texte": "os de cerf" },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 312,
+              "texte": "Couche A : datée au carbone 14 d’environ 18 000 ans.",
+              "taille": "petit",
+              "italique": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "coupe",
+          "enonce": "Touche la couche de terre **la plus ancienne**.",
+          "reponse": ["coucheC"],
+          "aide": "Les couches se déposent les unes sur les autres, comme des feuilles qu’on empile : la première posée finit tout en bas.",
+          "explication": "C’est la **couche C**, tout en bas : elle s’est déposée la première, puis les couches B et A l’ont recouverte. Plus on creuse, plus on remonte le temps."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range les traces trouvées dans le chantier.",
+          "categories": ["Un objet fabriqué par les humains", "Le reste d’un animal chassé"],
+          "items": [
+            ["Le biface en silex", 0],
+            ["Les pointes en silex", 0],
+            ["L’aiguille en os", 0],
+            ["La lampe à graisse", 0],
+            ["L’os de renne", 1],
+            ["L’os de cheval", 1],
+            ["L’os de cerf", 1]
+          ],
+          "aide": "Attention à l’aiguille : elle est en os, mais quelqu’un l’a taillée et percée.",
+          "explication": "Le **biface**, les **pointes**, l’**aiguille** et la **lampe** ont été fabriqués ; les **os** de renne, de cheval et de cerf sont des restes de repas, laissés après la chasse."
+        },
+        {
+          "type": "zone",
+          "document": "coupe",
+          "multiple": true,
+          "enonce": "Touche **les deux** traces qui montrent que ces humains savaient utiliser le **feu**.",
+          "reponse": ["foyer", "lampe"],
+          "aide": "Pense à tout ce qui a brûlé… ou qui servait à faire brûler quelque chose.",
+          "explication": "Les **charbons de bois** sont les restes d’un foyer, et la **lampe à graisse** servait à brûler de la graisse pour s’éclairer. Le feu protège, chauffe, éclaire et cuit."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que nous apprennent les os de renne, de cheval et de cerf sur ces humains ?",
+          "options": [
+            "Ils vivaient de la chasse.",
+            "Ils élevaient des troupeaux.",
+            "Ils cultivaient des champs.",
+            "Ils vivaient dans des villes."
+          ],
+          "reponse": 0,
+          "aide": "Ces humains vivent au Paléolithique : ils prélèvent ce que la nature offre, sans rien produire.",
+          "explication": "Ils vivaient de la **chasse** (et de la cueillette) : ce sont des chasseurs-cueilleurs nomades. L’élevage et l’agriculture n’apparaîtront que bien plus tard, au Néolithique."
+        }
+      ]
+    },
+    {
+      "chapitre": "6673b42e-c53c-5b4f-934a-5036903c6dc9",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Chauvet et Lascaux, deux grottes à 18 000 ans d’écart",
+      "competence": "raisonner",
+      "situation": "Les deux grottes ornées les plus célèbres de France ont été peintes par des *Homo sapiens*. Pourtant, des milliers de générations séparent leurs artistes. Enquête avec la carte et le tableau.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Deux grottes ornées du sud de la France",
+          "fond": "france",
+          "fleuves": ["rhone", "dordogne", "garonne", "loire", "seine"],
+          "lieux": [
+            { "id": "lascaux", "lieu": "lascaux", "symbole": "lettre", "lettre": "A", "teinte": "corail" },
+            { "id": "chauvet", "lieu": "chauvet", "symbole": "lettre", "lettre": "B", "teinte": "corail" },
+            { "id": "lyon", "lieu": "lyon", "nom": "Lyon", "taille": 1 },
+            { "id": "toulouse", "lieu": "toulouse", "nom": "Toulouse", "taille": 1 }
+          ],
+          "etiquettes": [
+            { "texte": "Rhône", "lon": 5.25, "lat": 44.95, "style": "mer" },
+            { "texte": "Dordogne", "lon": 0.2, "lat": 44.62, "style": "mer" }
+          ],
+          "cadrage": [-2.2, 42.6, 7.6, 47.4]
+        },
+        {
+          "id": "grottes",
+          "type": "tableau",
+          "titre": "Carte d’identité des deux grottes",
+          "source": "Âges obtenus en datant au carbone 14 le charbon de bois des dessins et des foyers.",
+          "colonnes": ["", "Lascaux", "Chauvet"],
+          "lignes": [
+            ["Où ?", "Montignac (Dordogne)", "Vallon-Pont-d’Arc (Ardèche)"],
+            ["Découverte", "1940, par quatre adolescents", "1994, par trois spéléologues"],
+            ["Âge des peintures", "≈ 18 000 ans", "≈ 36 000 ans"],
+            ["Animaux les plus peints", "chevaux, aurochs, cerfs", "lions, mammouths, rhinocéros"]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "La grotte Chauvet se trouve en Ardèche, à l’ouest du Rhône. Touche son repère sur la carte.",
+          "reponse": ["chauvet"],
+          "aide": "Repère le Rhône : il descend de Lyon vers la Méditerranée. La grotte est juste à sa gauche.",
+          "explication": "Chauvet est le repère **B**, près du Rhône. Le repère A, près de la Dordogne, est Lascaux."
+        },
+        {
+          "type": "zone",
+          "document": "grottes",
+          "enonce": "Dans le tableau, touche la case qui prouve que Chauvet est la grotte **la plus ancienne**.",
+          "reponse": ["r2c2"],
+          "aide": "Cherche la ligne qui donne l’âge des peintures.",
+          "explication": "La case **« ≈ 36 000 ans »** : les peintures de Chauvet sont deux fois plus vieilles que celles de Lascaux (≈ 18 000 ans)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent les peintures de Chauvet de celles de Lascaux ?",
+          "reponse": 18000,
+          "unite": "ans",
+          "aide": "Fais la différence entre les deux âges du tableau.",
+          "explication": "36 000 − 18 000 = **18 000 ans**. Les artistes de Lascaux vivaient aussi loin de ceux de Chauvet que nous vivons loin… de Lascaux !"
+        },
+        {
+          "type": "choix",
+          "enonce": "À Chauvet, on a peint des lions et des rhinocéros, qu’on ne voit plus en France. Qu’en déduis-tu ?",
+          "options": [
+            "Ces animaux vivaient alors en France : les paysages et le climat étaient différents.",
+            "Les artistes avaient voyagé jusqu’en Afrique pour les voir.",
+            "Ce sont des animaux imaginaires, inventés par les artistes.",
+            "Les artistes ont recopié des dessins venus d’une autre grotte."
+          ],
+          "reponse": 0,
+          "aide": "Les chasseurs-cueilleurs peignent le gibier et les bêtes qu’ils croisent autour d’eux.",
+          "explication": "**Ces animaux vivaient en France à l’époque** : lions des cavernes, rhinocéros laineux et mammouths peuplaient les steppes de l’Europe glaciaire. Les peintures sont aussi des traces de l’environnement."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la conclusion de l’enquête.",
+          "texte": "Ces peintures sont des ___ laissées par les humains du Paléolithique. Leur âge a été mesuré grâce au ___ 14. Représenter le monde sur une paroi prouve une pensée ___.",
+          "reponses": [["traces"], ["carbone"], ["symbolique"]],
+          "banque": ["traces", "ruines", "carbone", "fer", "symbolique", "agricole"],
+          "aide": "Relis la source sous le tableau pour le deuxième mot.",
+          "explication": "Ce sont des **traces**, datées au **carbone** 14. Peindre des animaux qui ne sont pas là, c’est penser avec des images : une pensée **symbolique**."
+        }
+      ]
+    },
+    {
+      "chapitre": "35dc3602-2b63-5b54-8133-cb1904a11de1",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le grand voyage d’Homo sapiens",
+      "competence": "lire-carte",
+      "situation": "Notre espèce est née en Afrique. Comment s’est-elle retrouvée sur tous les continents ? Suis ses routes sur la carte, puis lis les dates dans le tableau.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Les routes du peuplement de la planète",
+          "fond": "monde",
+          "cadrage": [-180, -50, 180, 78],
+          "lieux": [
+            { "id": "depart", "lon": 36, "lat": 0, "symbole": "etoile", "teinte": "corail", "taille": 3 },
+            { "id": "a", "lon": 44, "lat": 34, "symbole": "lettre", "lettre": "A", "teinte": "encre" },
+            { "id": "b", "lon": 134, "lat": -25, "symbole": "lettre", "lettre": "B", "teinte": "encre" },
+            { "id": "c", "lon": 8, "lat": 48, "symbole": "lettre", "lettre": "C", "teinte": "encre" },
+            { "id": "d", "lon": -100, "lat": 42, "symbole": "lettre", "lettre": "D", "teinte": "encre" }
+          ],
+          "traits": [
+            { "points": [[36, 3], [39, 29]], "style": "fleche", "teinte": "corail" },
+            { "points": [[48, 26], [66, 24], [84, 19], [101, 12], [114, -4], [127, -17]], "style": "fleche", "teinte": "corail" },
+            { "points": [[36, 38], [24, 43], [13, 47]], "style": "fleche", "teinte": "corail" },
+            { "points": [[75, 38], [105, 48], [140, 60], [179, 66]], "style": "ligne", "teinte": "corail" },
+            { "points": [[-179, 66], [-150, 63], [-125, 55], [-106, 46]], "style": "fleche", "teinte": "corail" },
+            { "points": [[-97, 33], [-82, 10], [-68, -18]], "style": "fleche", "teinte": "corail" }
+          ],
+          "legende": [
+            { "teinte": "corail", "symbole": "etoile", "texte": "Le point de départ" },
+            { "teinte": "corail", "texte": "Les routes d’Homo sapiens" }
+          ],
+          "muette": true,
+          "etiquettes": [
+            { "texte": "Afrique", "lon": 14, "lat": 6, "style": "pays" },
+            { "texte": "Europe", "lon": 22, "lat": 56, "style": "pays" },
+            { "texte": "Asie", "lon": 100, "lat": 32, "style": "pays" },
+            { "texte": "Amérique", "lon": -95, "lat": 62, "style": "pays" },
+            { "texte": "Océanie", "lon": 150, "lat": -40, "style": "pays" }
+          ]
+        },
+        {
+          "id": "dates",
+          "type": "tableau",
+          "titre": "Quand les humains arrivent-ils ?",
+          "colonnes": ["Région atteinte", "Il y a environ…"],
+          "lignes": [
+            ["L’Europe", "45 000 ans"],
+            ["Le Proche-Orient", "100 000 à 60 000 ans"],
+            ["L’Amérique", "20 000 à 15 000 ans"],
+            ["L’Australie", "50 000 ans"]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "texte",
+          "enonce": "D’après la carte, de quel continent partent toutes les routes ?",
+          "reponse": ["Afrique", "l’Afrique", "l'Afrique", "de l’Afrique", "de l'Afrique", "en Afrique"],
+          "placeholder": "un continent",
+          "aide": "Cherche l’étoile : c’est le point de départ. Lis le nom du continent où elle se trouve.",
+          "explication": "Toutes les routes partent d’**Afrique** : c’est là qu’est né *Homo sapiens*, il y a environ 300 000 ans."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "D’après le tableau, quelle région a été peuplée **en dernier** ? Touche son repère sur la carte.",
+          "reponse": ["d"],
+          "aide": "Dans le tableau, cherche le plus petit nombre d’années : c’est l’arrivée la plus récente.",
+          "explication": "C’est l’**Amérique** (repère D), il y a 20 000 à 15 000 ans seulement : c’est le dernier continent atteint."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range les régions dans l’ordre où les humains les ont atteintes.",
+          "items": ["Le Proche-Orient", "L’Australie", "L’Europe", "L’Amérique"],
+          "aide": "Plus le nombre d’années est grand, plus l’arrivée est ancienne.",
+          "explication": "**Proche-Orient** (100 000 à 60 000 ans) → **Australie** (50 000 ans) → **Europe** (45 000 ans) → **Amérique** (20 000 à 15 000 ans)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Regarde la carte : pour atteindre l’Australie depuis l’Asie, il faut franchir des bras de mer. Qu’en déduis-tu ?",
+          "options": [
+            "Ces humains savaient déjà naviguer.",
+            "Ces humains ont traversé à pied sur la glace.",
+            "L’Australie était collée à l’Afrique.",
+            "Ces humains ont traversé à la nage."
+          ],
+          "reponse": 0,
+          "aide": "Il n’y a pas de glace sous les tropiques, et un bras de mer ne se traverse pas à la nage avec toute sa famille.",
+          "explication": "Ils savaient **naviguer** : il y a 50 000 ans, des humains ont franchi la mer sur des radeaux ou des embarcations."
+        }
+      ]
+    },
+    {
+      "chapitre": "35dc3602-2b63-5b54-8133-cb1904a11de1",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Partir un peu plus loin, s’adapter partout",
+      "competence": "analyser-texte",
+      "situation": "Voici trois scènes de la vie des premiers *Homo sapiens*, racontées pour l’exercice. Elles se passent à des milliers de kilomètres les unes des autres, mais racontent la même histoire.",
+      "documents": [
+        {
+          "id": "recit",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Trois groupes, trois milieux",
+          "source": "Récit imaginé pour l’exercice, d’après ce que les archéologues ont découvert.",
+          "blocs": [
+            "Dans la steppe glacée d’Europe, le vent souffle sans arrêt. Le groupe d’Aska coud des [[froid|vêtements]] de peau avec de fines [[froid|aiguilles]] en os. Le soir, sous l’abri, des [[froid|lampes]] à graisse éclairent les parois.",
+            "Dans une forêt chaude d’Asie du Sud-Est, le groupe de Tani n’a pas besoin de gros abris : quelques branches et de grandes feuilles suffisent à bâtir des huttes légères, qu’on démonte en quelques heures.",
+            "Plus loin, au bord de l’océan, les pêcheurs de Mako taillent des hameçons dans des coquillages et tressent des filets. Le poisson est leur principale nourriture.",
+            "Un matin, le vieux Bako réunit le groupe d’Aska : « Les rennes ne passent plus par notre vallée. Les pluies ne viennent plus, et la source est à sec depuis deux étés. Et nous sommes devenus trop nombreux : il n’y a plus assez de place pour tous nos abris. Demain, nous irons nous installer au-delà de la colline. »"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "recit",
+          "multiple": true,
+          "portee": [0],
+          "enonce": "Touche les **trois objets** qui permettent au groupe d’Aska de vivre dans le froid.",
+          "reponse": ["froid"],
+          "aide": "Cherche ce que le groupe fabrique pour se couvrir… et pour s’éclairer pendant les longues nuits.",
+          "explication": "Les **vêtements** de peau, les **aiguilles** en os qui servent à les coudre et les **lampes** à graisse : des techniques inventées pour vivre dans le froid."
+        },
+        {
+          "type": "association",
+          "enonce": "Associe chaque milieu à la solution que les humains ont trouvée.",
+          "paires": [
+            ["Le froid de la steppe", "Des vêtements cousus et des lampes à graisse"],
+            ["La chaleur des tropiques", "Des huttes légères de branches et de feuilles"],
+            ["Le bord de l’océan", "Des hameçons et des filets pour pêcher"]
+          ],
+          "aide": "Relis les trois premiers paragraphes : un milieu par paragraphe.",
+          "explication": "**Froid → vêtements cousus et lampes**, **tropiques → huttes légères**, **côtes → pêche**. L’humain n’est pas fait pour un seul milieu : il fabrique de quoi vivre dans tous."
+        },
+        {
+          "type": "categories",
+          "enonce": "Dans le dernier paragraphe, Bako donne trois raisons de partir. Range chacune de ses phrases.",
+          "categories": ["Le gibier", "Le climat", "Un groupe trop nombreux"],
+          "items": [
+            ["Les rennes ne passent plus par notre vallée.", 0],
+            ["Les pluies ne viennent plus.", 1],
+            ["La source est à sec depuis deux étés.", 1],
+            ["Nous sommes devenus trop nombreux.", 2],
+            ["Il n’y a plus assez de place pour tous nos abris.", 2]
+          ],
+          "aide": "Les rennes sont des animaux chassés ; la pluie et la sécheresse, c’est le temps qu’il fait.",
+          "explication": "Le **gibier** s’en va, le **climat** change (plus de pluie, source à sec) et le **groupe grandit** : ce sont les trois grandes causes des migrations."
+        },
+        {
+          "type": "choix",
+          "enonce": "« Demain, nous irons nous installer au-delà de la colline. » Que montre cette phrase sur la façon dont les humains ont peuplé la planète ?",
+          "options": [
+            "Ils ont avancé peu à peu, un peu plus loin à chaque génération.",
+            "Ils ont traversé les continents en un seul grand voyage.",
+            "Ils savaient dès le départ qu’ils iraient jusqu’en Australie.",
+            "Ils fuyaient une guerre contre un autre groupe."
+          ],
+          "reponse": 0,
+          "aide": "Le groupe ne part pas à l’autre bout du monde : il va juste de l’autre côté de la colline.",
+          "explication": "Ils ont avancé **peu à peu** : chaque génération s’installait un peu plus loin. Ces déplacements se comptent en millénaires ; personne n’est « parti pour l’Australie »."
+        }
+      ]
+    },
+    {
+      "chapitre": "35dc3602-2b63-5b54-8133-cb1904a11de1",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Béring : passer en Amérique à pied sec",
+      "competence": "raisonner",
+      "situation": "Aujourd’hui, l’Asie et l’Amérique sont séparées par la mer, au détroit de Béring. Pourtant, les premiers Américains sont venus d’Asie… à pied. Croise le texte et la coupe pour comprendre comment.",
+      "documents": [
+        {
+          "id": "texte",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Ce que disent les scientifiques",
+          "source": "Texte écrit pour l’exercice, d’après les connaissances actuelles.",
+          "blocs": [
+            "Il y a environ 20 000 ans, la Terre traverse une glaciation. D’immenses glaciers couvrent le nord de l’Amérique et de l’Europe. L’eau qui forme ces glaces vient des océans : le niveau des mers baisse de 120 mètres.",
+            "Entre la Sibérie et l’Alaska, là où s’étend aujourd’hui le détroit de Béring, large d’environ 80 km, apparaît alors une immense plaine couverte d’herbe : la Béringie. Des mammouths, des bisons et des chevaux y broutent.",
+            "Des groupes de chasseurs venus de [[origine|Sibérie]] suivent ce gibier et gagnent l’Amérique, sans savoir qu’ils changent de continent. L’étude de l’ADN le confirme : les premiers Américains ont pour ancêtres des populations d’Asie."
+          ]
+        },
+        {
+          "id": "coupe",
+          "type": "schema",
+          "titre": "Le détroit de Béring vu en coupe",
+          "source": "Schéma simplifié ; hauteurs exagérées.",
+          "largeur": 320,
+          "hauteur": 272,
+          "elements": [
+            { "forme": "texte", "x": 20, "y": 22, "texte": "Aujourd’hui", "gras": true, "ancre": "debut" },
+            {
+              "forme": "polygone",
+              "points": [[20, 44], [104, 46], [124, 70], [124, 112], [20, 112]],
+              "teinte": "brun",
+              "motif": "clair"
+            },
+            {
+              "forme": "polygone",
+              "points": [[196, 70], [216, 46], [300, 44], [300, 112], [196, 112]],
+              "teinte": "brun",
+              "motif": "clair"
+            },
+            { "forme": "rect", "x": 124, "y": 70, "l": 72, "h": 20, "teinte": "bleu", "motif": "clair" },
+            { "forme": "rect", "x": 124, "y": 90, "l": 72, "h": 22, "teinte": "brun", "motif": "clair" },
+            { "forme": "texte", "x": 62, "y": 86, "texte": "ASIE", "gras": true },
+            { "forme": "texte", "x": 258, "y": 86, "texte": "AMÉRIQUE", "gras": true },
+            { "forme": "ligne", "de": [20, 70], "a": [300, 70], "style": "pointilles", "teinte": "bleu", "epaisseur": 1 },
+            { "forme": "texte", "x": 160, "y": 64, "texte": "niveau de la mer", "taille": "petit", "teinte": "bleu" },
+            { "forme": "ligne", "de": [160, 72], "a": [160, 89], "fleche": "deux", "teinte": "encre", "epaisseur": 1 },
+            { "forme": "texte", "x": 160, "y": 106, "texte": "50 m", "taille": "petit", "gras": true },
+            { "forme": "texte", "x": 20, "y": 146, "texte": "Il y a 20 000 ans", "gras": true, "ancre": "debut" },
+            {
+              "forme": "polygone",
+              "points": [
+                [20, 168],
+                [104, 170],
+                [124, 194],
+                [124, 214],
+                [196, 214],
+                [196, 194],
+                [216, 170],
+                [300, 168],
+                [300, 262],
+                [20, 262]
+              ],
+              "teinte": "brun",
+              "motif": "clair"
+            },
+            { "forme": "texte", "x": 62, "y": 210, "texte": "ASIE", "gras": true },
+            { "forme": "texte", "x": 258, "y": 210, "texte": "AMÉRIQUE", "gras": true },
+            { "forme": "emoji", "x": 146, "y": 202, "emoji": "🦣", "taille": 20 },
+            { "forme": "emoji", "x": 176, "y": 202, "emoji": "🚶", "taille": 20 },
+            { "forme": "emoji", "x": 44, "y": 158, "emoji": "❄️", "taille": 16 },
+            { "forme": "emoji", "x": 280, "y": 158, "emoji": "❄️", "taille": 16 },
+            { "forme": "ligne", "de": [20, 194], "a": [300, 194], "style": "pointilles", "teinte": "gris", "epaisseur": 1 },
+            { "forme": "texte", "x": 160, "y": 188, "texte": "niveau actuel", "taille": "petit", "teinte": "gris" },
+            { "forme": "ligne", "de": [20, 242], "a": [300, 242], "style": "pointilles", "teinte": "bleu", "epaisseur": 2 },
+            {
+              "forme": "texte",
+              "x": 160,
+              "y": 256,
+              "texte": "niveau de la mer il y a 20 000 ans : 120 m plus bas",
+              "taille": "petit",
+              "teinte": "bleu",
+              "gras": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "D’après la coupe, au plus profond, le fond du détroit est à 50 m sous la mer. Il y a 20 000 ans, la mer était 120 m plus bas. À combien de mètres **au-dessus** de la mer se trouvait alors ce fond ?",
+          "reponse": 70,
+          "unite": "m",
+          "aide": "D’après la coupe, le fond est à 50 m sous le niveau actuel, et la mer d’alors 120 m sous ce niveau : calcule l’écart entre les deux.",
+          "explication": "120 − 50 = **70 m** : même au plus profond, le fond du détroit était 70 m au-dessus de la mer. On pouvait passer à pied !"
+        },
+        {
+          "type": "choix",
+          "enonce": "D’après le texte, pourquoi le niveau des mers était-il si bas il y a 20 000 ans ?",
+          "options": [
+            "Une grande partie de l’eau était piégée dans les glaciers.",
+            "Il pleuvait beaucoup moins qu’aujourd’hui.",
+            "Les humains avaient creusé de grands canaux.",
+            "Le fond des océans s’était soulevé."
+          ],
+          "reponse": 0,
+          "aide": "Relis le premier paragraphe : d’où vient l’eau qui forme les glaces ?",
+          "explication": "Pendant la glaciation, une énorme quantité d’eau était **piégée dans les glaciers** : le niveau des mers avait baissé de 120 m."
+        },
+        {
+          "type": "zone",
+          "document": "texte",
+          "portee": [2],
+          "enonce": "Touche le nom de la région d’où venaient les chasseurs qui ont gagné l’Amérique.",
+          "reponse": ["origine"],
+          "aide": "Relis le début du dernier paragraphe : « des groupes de chasseurs venus de… »",
+          "explication": "Ils venaient de **Sibérie**, au nord-est de l’Asie. L’ADN des premiers Américains le confirme."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi ces chasseurs sont-ils passés d’Asie en Amérique ?",
+          "options": [
+            "Ils suivaient les troupeaux qu’ils chassaient.",
+            "Ils voulaient découvrir un nouveau continent.",
+            "Ils fuyaient la montée des eaux.",
+            "Ils cherchaient des terres à cultiver."
+          ],
+          "reponse": 0,
+          "aide": "Relis le texte : que font les mammouths, les bisons et les chevaux, et que font les chasseurs ?",
+          "explication": "Ils **suivaient le gibier** : ils ne savaient même pas qu’ils changeaient de continent. Et ils ne cultivaient rien : l’agriculture n’existait pas encore."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la conclusion de l’enquête.",
+          "texte": "Les premiers habitants de l’Amérique sont venus d’___. Ils sont passés ___, il y a environ 20 000 à 15 000 ans. Aujourd’hui, on ne peut plus passer : les glaces ont fondu et la mer est ___.",
+          "reponses": [["Asie"], ["à pied"], ["remontée"]],
+          "banque": ["Asie", "Europe", "à pied", "en bateau", "remontée", "descendue"],
+          "aide": "Relis le dernier paragraphe du texte, puis la coupe : que devient la mer quand les glaces fondent ?",
+          "explication": "Ils sont venus d’**Asie**, **à pied**, par la Béringie. Quand les glaces ont fondu, la mer est **remontée** et a recouvert le pont de terre : c’est le détroit de Béring d’aujourd’hui."
+        }
+      ]
+    }
+  ]
+}

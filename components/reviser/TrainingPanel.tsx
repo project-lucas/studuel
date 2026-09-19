@@ -50,9 +50,12 @@ export default function TrainingPanel({
   subject,
   bossPool,
   gardien,
+  premium = false,
 }: {
   subject: { slug: string; name: string }
   bossPool: ModeQuestion[]
+  /** Abonné Studuel+ : tous les jeux de la matière s'ouvrent. */
+  premium?: boolean
   /**
    * L'état du gardien (lib/reviser/gardien) — le MÊME que celui de l'écusson du
    * header. Deux lectures indépendantes de la jauge finiraient par se
@@ -158,7 +161,7 @@ export default function TrainingPanel({
         <NiveauOrthographeCarte onOpen={() => setTestNiveau(true)} />
       ) : null}
 
-      <SubjectGames subject={subject} />
+      <SubjectGames subject={subject} premium={premium} />
     </>
   )
 }

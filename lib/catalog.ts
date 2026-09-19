@@ -1,6 +1,7 @@
 import { unstable_cache } from 'next/cache'
 import { createClient } from '@supabase/supabase-js'
 import { contentLevelFor } from '@/lib/grades'
+import { toutLire } from '@/lib/postgrest-pages'
 import {
   CHAPTER_COLUMNS,
   LESSON_COLUMNS,
@@ -29,6 +30,14 @@ import {
 
 const CATALOG_TTL_SECONDS = 300
 
+// ⚠️ TOUTE LECTURE SANS FILTRE PASSE PAR `toutLire` (lib/postgrest-pages).
+// PostgREST rend AU PLUS 1 000 lignes par réponse et ne signale pas la coupe :
+// le 05/09/2026, avec 2 323 chapitres et 2 340 quiz en base, ces fonctions ne
+// voyaient que les 1 000 premières lignes — d'où des matières « Bientôt » alors
+// qu'elles étaient pleines, et une maîtrise calculée sur 43 % des quiz. Les
+// lectures filtrées par NIVEAU y passent aussi : la 1re compte déjà 676
+// chapitres, le seuil n'est pas loin.
+
 function anonClient() {
   return createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -54,13 +63,18 @@ export const getSubjectsCached = unstable_cache(
 // Chapitres d'un niveau, toutes matières (home Réviser).
 export const getGradeChaptersCached = unstable_cache(
   async (grade: string): Promise<Chapter[]> => {
-    const { data } = await anonClient()
-      .from('chapters')
-      .select('id, subject_id, level, title, position')
-      .eq('level', contentLevelFor(grade))
-      .order('position', { ascending: true })
-      .returns<Chapter[]>()
-    return data ?? []
+    const db = anonClient()
+    const { data } = await toutLire((from, to) =>
+      db
+        .from('chapters')
+        .select('id, subject_id, level, title, position')
+        .eq('level', contentLevelFor(grade))
+        .order('position', { ascending: true })
+        .order('id', { ascending: true })
+        .range(from, to)
+        .returns<Chapter[]>(),
+    )
+    return data
   },
   ['catalog-grade-chapters'],
   { revalidate: CATALOG_TTL_SECONDS, tags: ['catalog'] },
@@ -76,10 +90,15 @@ export const getGradeChaptersCached = unstable_cache(
 // cache de Next sérialise ce qu'il stocke.
 export const getSubjectLevelsCached = unstable_cache(
   async (): Promise<[string, string][]> => {
-    const { data } = await anonClient()
-      .from('chapters')
-      .select('subject_id, level')
-      .returns<{ subject_id: string; level: string }[]>()
+    const db = anonClient()
+    const { data } = await toutLire((from, to) =>
+      db
+        .from('chapters')
+        .select('subject_id, level')
+        .order('id', { ascending: true })
+        .range(from, to)
+        .returns<{ subject_id: string; level: string }[]>(),
+    )
     const seen = new Set<string>()
     const pairs: [string, string][] = []
     for (const row of data ?? []) {
@@ -105,11 +124,16 @@ export const getSubjectLevelsCached = unstable_cache(
 // Next sérialise ce qu'il stocke.
 export const getQuizLessonPairsCached = unstable_cache(
   async (): Promise<[string, string][]> => {
-    const { data } = await anonClient()
-      .from('quizzes')
-      .select('id, lesson_id')
-      .returns<{ id: string; lesson_id: string | null }[]>()
-    return (data ?? []).flatMap((q) => (q.lesson_id ? [[q.id, q.lesson_id]] : []))
+    const db = anonClient()
+    const { data } = await toutLire((from, to) =>
+      db
+        .from('quizzes')
+        .select('id, lesson_id')
+        .order('id', { ascending: true })
+        .range(from, to)
+        .returns<{ id: string; lesson_id: string | null }[]>(),
+    )
+    return data.flatMap((q) => (q.lesson_id ? [[q.id, q.lesson_id]] : []))
   },
   ['catalog-quiz-lesson'],
   { revalidate: CATALOG_TTL_SECONDS, tags: ['catalog'] },
@@ -117,13 +141,16 @@ export const getQuizLessonPairsCached = unstable_cache(
 
 export const getLessonChapterPairsCached = unstable_cache(
   async (): Promise<[string, string][]> => {
-    const { data } = await anonClient()
-      .from('lessons')
-      .select('id, chapter_id')
-      .returns<{ id: string; chapter_id: string | null }[]>()
-    return (data ?? []).flatMap((l) =>
-      l.chapter_id ? [[l.id, l.chapter_id]] : [],
+    const db = anonClient()
+    const { data } = await toutLire((from, to) =>
+      db
+        .from('lessons')
+        .select('id, chapter_id')
+        .order('id', { ascending: true })
+        .range(from, to)
+        .returns<{ id: string; chapter_id: string | null }[]>(),
     )
+    return data.flatMap((l) => (l.chapter_id ? [[l.id, l.chapter_id]] : []))
   },
   ['catalog-lesson-chapter'],
   { revalidate: CATALOG_TTL_SECONDS, tags: ['catalog'] },
@@ -136,24 +163,46 @@ export const getLessonChapterPairsCached = unstable_cache(
 // de `quiz_questions`.
 export const getChapterTitlesCached = unstable_cache(
   async (): Promise<[string, string][]> => {
-    const { data } = await anonClient()
-      .from('chapters')
-      .select('id, title')
-      .returns<{ id: string; title: string }[]>()
-    return (data ?? []).map((c) => [String(c.id), String(c.title)])
+    const db = anonClient()
+    const { data } = await toutLire((from, to) =>
+      db
+        .from('chapters')
+        .select('id, title')
+        .order('id', { ascending: true })
+        .range(from, to)
+        .returns<{ id: string; title: string }[]>(),
+    )
+    return data.map((c) => [String(c.id), String(c.title)])
   },
   ['catalog-chapter-titles'],
   { revalidate: CATALOG_TTL_SECONDS, tags: ['catalog'] },
 )
 
+//
+// 18 262 questions en base (05/09/2026) : les relire pour les compter, c'est
+// 19 pages de 1 000. La migration 354 apporte une RPC qui compte EN BASE
+// (`catalog_quiz_question_counts`, une ligne par quiz) ; tant qu'elle n'est pas
+// exécutée, on pagine — plus lent, mais JUSTE, là où l'ancienne lecture nue
+// s'arrêtait à 1 000 lignes et ne connaissait le compte que d'une centaine de
+// quiz.
 export const getQuizQuestionCountsCached = unstable_cache(
   async (): Promise<[string, number][]> => {
-    const { data } = await anonClient()
-      .from('quiz_questions')
-      .select('quiz_id')
-      .returns<{ quiz_id: string }[]>()
+    const db = anonClient()
+    const rpc = await db.rpc('catalog_quiz_question_counts')
+    const agreges = rpc.data as { quiz_id: string; n: number }[] | null
+    if (!rpc.error && Array.isArray(agreges)) {
+      return agreges.map((r) => [String(r.quiz_id), Number(r.n)])
+    }
+    const { data } = await toutLire((from, to) =>
+      db
+        .from('quiz_questions')
+        .select('quiz_id')
+        .order('id', { ascending: true })
+        .range(from, to)
+        .returns<{ quiz_id: string }[]>(),
+    )
     const counts = new Map<string, number>()
-    for (const row of data ?? []) {
+    for (const row of data) {
       const id = String(row.quiz_id)
       counts.set(id, (counts.get(id) ?? 0) + 1)
     }
@@ -170,12 +219,17 @@ export const getGradeQuizzesCached = unstable_cache(
     grade: string,
     horsNiveau: string,
   ): Promise<{ id: string; subject: string; lesson_id: string | null }[]> => {
-    const { data } = await anonClient()
-      .from('quizzes')
-      .select('id, subject, lesson_id')
-      .in('grade_level', [contentLevelFor(grade), horsNiveau])
-      .returns<{ id: string; subject: string; lesson_id: string | null }[]>()
-    return data ?? []
+    const db = anonClient()
+    const { data } = await toutLire((from, to) =>
+      db
+        .from('quizzes')
+        .select('id, subject, lesson_id')
+        .in('grade_level', [contentLevelFor(grade), horsNiveau])
+        .order('id', { ascending: true })
+        .range(from, to)
+        .returns<{ id: string; subject: string; lesson_id: string | null }[]>(),
+    )
+    return data
   },
   ['catalog-grade-quizzes'],
   { revalidate: CATALOG_TTL_SECONDS, tags: ['catalog'] },

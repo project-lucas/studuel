@@ -4,7 +4,7 @@ import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { validateRevisionToday, validateCommuteToday } from '@/lib/habits'
-import { toDayKey } from '@/lib/streak'
+import { normaliserPrioritaires } from '@/lib/matieres-prioritaires'
 import type { EtatBilan } from '@/lib/quiz-bilan'
 import {
   reviewAfterAnswer,
@@ -24,11 +24,9 @@ import { DAILY_GOAL_OPTIONS, type DailyGoalMinutes } from '@/lib/daily-goal'
 import type { Gain } from '@/lib/gains'
 import {
   awardChapterCrowns,
-  awardGems,
   gainsVerses,
   awardQuizProgression,
   awardXp,
-  walletTouch,
 } from '@/lib/wallet-server'
 import {
   creditTraque,
@@ -110,10 +108,12 @@ export async function markLessonActivity(
   const user = await getCurrentUser()
   if (!user) return { saved: false }
 
-  const { error } = await supabase.from('lesson_activities').upsert(
-    { user_id: user.id, lesson_id: lessonId, activity },
-    { onConflict: 'user_id,lesson_id,activity', ignoreDuplicates: true },
-  )
+  const { error } = await supabase
+    .from('lesson_activities')
+    .upsert(
+      { user_id: user.id, lesson_id: lessonId, activity },
+      { onConflict: 'user_id,lesson_id,activity', ignoreDuplicates: true },
+    )
 
   if (!error) revalidatePath('/reviser')
   return { saved: !error }
@@ -146,7 +146,10 @@ export async function recordReviewAnswers(
   // volume borné (une session ne dépasse jamais quelques dizaines d'items).
   const clean = sanitizeReviewAnswers(answers)
   if (clean.length === 0) {
-    return { saved: true, etats: await lireEtatsBilan(supabase, user.id, scopeIds) }
+    return {
+      saved: true,
+      etats: await lireEtatsBilan(supabase, user.id, scopeIds),
+    }
   }
 
   // État actuel des items touchés. Toutes les colonnes du moteur sont
@@ -158,9 +161,15 @@ export async function recordReviewAnswers(
     .from('review_items')
     .select(`item_kind, item_id, ${REVIEW_STATE_COLUMNS}`)
     .eq('user_id', user.id)
-    .in('item_id', clean.map((a) => a.id))
+    .in(
+      'item_id',
+      clean.map((a) => a.id),
+    )
   const prevByKey = new Map(
-    (existing ?? []).map((r) => [`${r.item_kind}:${r.item_id}`, r as ReviewState]),
+    (existing ?? []).map((r) => [
+      `${r.item_kind}:${r.item_id}`,
+      r as ReviewState,
+    ]),
   )
 
   const now = Date.now()
@@ -181,7 +190,10 @@ export async function recordReviewAnswers(
     .from('review_items')
     .upsert(rows, { onConflict: 'user_id,item_kind,item_id' })
   if (error) {
-    console.error('[srs] enregistrement des réponses impossible:', error.message)
+    console.error(
+      '[srs] enregistrement des réponses impossible:',
+      error.message,
+    )
     return { saved: false }
   }
 
@@ -226,9 +238,7 @@ async function lireEtatsBilan(
 // crédite l'XP (session de révision = test_sessions sans quiz), et si la
 // Revanche vient d'être vidée, verse le bonus en pièces (une fois par jour,
 // vérifié en SQL). Renvoie ce qui s'est réellement passé pour l'écran de fin.
-export async function finishReviewSession(
-  answers: ReviewAnswer[],
-): Promise<{
+export async function finishReviewSession(answers: ReviewAnswer[]): Promise<{
   saved: boolean
   revancheCleared: boolean
   coins: number
@@ -321,7 +331,9 @@ export async function finishExamBlanc(
       return [
         {
           chapterId:
-            typeof row.chapterId === 'string' ? row.chapterId.slice(0, 40) : null,
+            typeof row.chapterId === 'string'
+              ? row.chapterId.slice(0, 40)
+              : null,
           chapterTitle:
             typeof row.chapterTitle === 'string'
               ? row.chapterTitle.slice(0, 120)
@@ -367,36 +379,6 @@ export async function finishExamBlanc(
   return { saved: !examError && !xpError }
 }
 
-// Fin d'un défi de leçon (DefiSoloPlayer) : la série avance, et une victoire
-// paye la gemme du jour. Le défi ne persiste pas ses manches — gagné/perdu est
-// déclaré par le client — mais les montants ET la fréquence sont verrouillés en
-// base : la clé de `defi_win` est LE JOUR, fixée côté SQL, et celle qu'on
-// envoie ici est ignorée (migration 348). Un client qui mentirait sur sa
-// victoire ne gagnerait donc rien de plus qu'une fois par jour.
-//
-// Plus d'XP depuis la 348 : jouer n'acquiert rien. La série, elle, avance —
-// c'est `walletTouch`, et c'est elle qui peut faire tomber la gemme des 7 jours.
-export async function recordLessonDefi(
-  lessonId: string,
-  won: boolean,
-): Promise<{ saved: boolean; gains: Gain[] }> {
-  if (!UUID_RE.test(String(lessonId))) return { saved: false, gains: [] }
-
-  const supabase = await createClient()
-  const user = await getCurrentUser()
-  if (!user) return { saved: false, gains: [] }
-
-  const key = `${lessonId}:${toDayKey(new Date())}`
-  const [award, gems] = await Promise.all([
-    walletTouch(supabase),
-    won ? awardGems(supabase, 'defi_win', key) : Promise.resolve(0),
-  ])
-  await validateRevisionToday(supabase, user.id)
-
-  revalidatePath('/reviser')
-  return { saved: award !== null, gains: gainsVerses(award, { gemmes: gems }) }
-}
-
 // Persiste la sélection de matières de l'élève (bouton « Éditer »).
 // Lève sur échec : l'UI (SubjectsHome) enveloppe l'appel dans un try/catch et
 // affiche un toast d'erreur — sans remontée, une sélection perdue passerait
@@ -415,7 +397,38 @@ export async function saveSelectedSubjects(slugs: string[]): Promise<void> {
     .update({ selected_subjects: clean })
     .eq('id', user.id)
   if (error) {
-    console.error('[reviser] sélection de matières non enregistrée:', error.message)
+    console.error(
+      '[reviser] sélection de matières non enregistrée:',
+      error.message,
+    )
+    throw new Error(error.message)
+  }
+
+  revalidatePath('/reviser')
+}
+
+// Persiste les MATIÈRES PRIORITAIRES de l'élève (l'étoile sur chaque dossier
+// de matière de Réviser, colonne `profiles.matieres_prioritaires`, migration
+// 359). Même contrat que `saveSelectedSubjects` : lève sur échec, l'UI affiche
+// un toast et remet l'étoile comme elle était. Tant que la 359 n'est pas
+// passée, Postgres refuse la colonne (42703) : le toast le dit, la grille
+// garde son ordre, rien ne casse.
+export async function saveMatieresPrioritaires(slugs: string[]): Promise<void> {
+  const supabase = await createClient()
+  const user = await getCurrentUser()
+  if (!user) throw new Error('non authentifié')
+
+  const clean = normaliserPrioritaires(slugs)
+
+  const { error } = await supabase
+    .from('profiles')
+    .update({ matieres_prioritaires: clean })
+    .eq('id', user.id)
+  if (error) {
+    console.error(
+      '[reviser] matières prioritaires non enregistrées:',
+      error.message,
+    )
     throw new Error(error.message)
   }
 
@@ -512,8 +525,7 @@ export async function setOralTextStatusAction(
 export async function removeOralTextAction(id: string): Promise<OralResult> {
   const supabase = await createClient()
   if (!(await requireUserId())) return { ok: false, texts: [] }
-  if (typeof id !== 'string' || id.length === 0)
-    return { ok: false, texts: [] }
+  if (typeof id !== 'string' || id.length === 0) return { ok: false, texts: [] }
 
   const { data, error } = await supabase.rpc('remove_oral_text', { p_id: id })
   if (error) {

@@ -24,6 +24,9 @@ export type BadgeCondition =
   | { type: 'commute_quizzes'; count: number }
   | { type: 'study_minutes'; minutes: number }
   | { type: 'perfect_quiz' }
+  // Une capsule de la Boutique terminée (migration 366). Accordé par la RPC
+  // `terminer_capsule`, jamais par `award_earned_badges`.
+  | { type: 'capsule_done'; capsule: string }
 
 // L'instantané des stats de l'élève contre lequel on évalue les conditions.
 // Tous les compteurs sont des cumuls « au meilleur » (le record, pas la valeur
@@ -45,6 +48,8 @@ export type BadgeStats = {
   studyMinutes: number
   /** L'élève a déjà réussi au moins un quiz à 100 %. */
   hasPerfectQuiz: boolean
+  /** Les capsules terminées (ids). Absent = aucune. */
+  capsulesTerminees?: readonly string[]
 }
 
 // Un badge tel que lu en base (le catalogue), condition déjà typée.
@@ -86,6 +91,8 @@ export function isBadgeEarned(
       return stats.studyMinutes >= condition.minutes
     case 'perfect_quiz':
       return stats.hasPerfectQuiz
+    case 'capsule_done':
+      return stats.capsulesTerminees?.includes(condition.capsule) ?? false
     default:
       // Type inconnu (catalogue plus récent que le code) : jamais mérité,
       // plutôt que d'attribuer un badge par erreur.
@@ -133,6 +140,10 @@ export function parseCondition(raw: unknown): BadgeCondition | null {
     }
     case 'perfect_quiz':
       return { type: 'perfect_quiz' }
+    case 'capsule_done':
+      return typeof r.capsule === 'string' && r.capsule.trim()
+        ? { type: 'capsule_done', capsule: r.capsule.trim() }
+        : null
     default:
       return null
   }

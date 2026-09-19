@@ -68,6 +68,64 @@ export function parisHourMinute(date: Date): { hour: number; minute: number } {
   return { hour, minute }
 }
 
+// La date ET l'heure murales de Paris, champ par champ. `formatToParts` plutôt
+// qu'un `format` découpé : l'ordre et les séparateurs d'une locale ne sont pas
+// un contrat, les `type` des parties le sont.
+const PARIS_PARTS = new Intl.DateTimeFormat('fr-FR', {
+  timeZone: 'Europe/Paris',
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+  hourCycle: 'h23',
+})
+
+/** L'heure murale de Paris à cet instant, relue comme si c'était de l'UTC. */
+function parisWallClockMs(date: Date): number {
+  const parts = PARIS_PARTS.formatToParts(date)
+  const part = (type: Intl.DateTimeFormatPartTypes) =>
+    Number(parts.find((p) => p.type === type)?.value)
+  return Date.UTC(
+    part('year'),
+    part('month') - 1,
+    part('day'),
+    part('hour'),
+    part('minute'),
+    part('second'),
+  )
+}
+
+/** Décalage de Paris sur UTC à cet instant, en ms (+1 h l'hiver, +2 h l'été). */
+function parisOffsetMs(date: Date): number {
+  const aLaSeconde = Math.floor(date.getTime() / 1000) * 1000
+  return parisWallClockMs(new Date(aLaSeconde)) - aLaSeconde
+}
+
+/**
+ * Le jour de Paris ('YYYY-MM-DD') à cet instant. ≠ `toDayKey` (lib/streak), qui
+ * lit le jour UTC : entre 22 h et minuit l'été, Paris est déjà au lendemain.
+ */
+export function parisDayKey(date: Date): string {
+  return new Date(parisWallClockMs(date)).toISOString().slice(0, 10)
+}
+
+/**
+ * L'instant de minuit, heure de Paris, du jour `dayKey` ('YYYY-MM-DD').
+ * Le décalage est relu À L'INSTANT VISÉ : le samedi et le lundi d'un week-end
+ * de changement d'heure n'ont pas le même.
+ */
+export function minuitParis(dayKey: string): Date {
+  const utc = Date.parse(`${dayKey}T00:00:00Z`)
+  // Clé illisible : une date invalide, jamais une exception (`formatToParts`
+  // jette une RangeError sur un instant NaN).
+  if (Number.isNaN(utc)) return new Date(Number.NaN)
+  const premier = utc - parisOffsetMs(new Date(utc))
+  const decalage = parisOffsetMs(new Date(premier))
+  return new Date(utc - decalage)
+}
+
 // Format « heures » toujours en h : « 0 h », « 0 h 03 », « 2 h 05 », « 12 h ».
 export function formatHours(seconds: number): string {
   const total = Math.max(0, Math.round(seconds))

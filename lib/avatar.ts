@@ -36,11 +36,25 @@
 
 import { createAvatar } from '@dicebear/core'
 import { openPeeps } from '@dicebear/collection'
+import { PORTRAIT_KEYS, isPortraitKey, portraitSrc } from '@/lib/portraits'
+
+// -----------------------------------------------------------------------------
+// LE PORTRAIT (16/09/2026) — UNE COUCHE AU-DESSUS DE TOUT ÇA.
+//
+// Lucas a peint treize blasons de joueur (lib/portraits.ts). Quand l'élève en a
+// choisi un (`portrait` ≠ ''), c'est LUI qu'on affiche partout, et l'avatar
+// DiceBear composé ci-dessous n'est plus rendu. La config DiceBear reste
+// intacte dessous : remettre `portrait` à '' au vestiaire (« Avatar dessiné »)
+// la fait réapparaître telle qu'elle était, et les items possédés ne bougent
+// pas. C'est un champ LIBRE (pas de prix) : on ne fait pas payer un visage.
+// -----------------------------------------------------------------------------
 
 // La configuration retenue par l'élève. Chaque champ pointe une option d'une
 // liste fermée ci-dessous ; '' signifie « aucun » là où c'est permis (barbe,
-// lunettes, fond).
+// lunettes, fond, portrait).
 export type AvatarConfig = {
+  /** Blason peint (clé de lib/portraits) ; '' = l'avatar DiceBear composé. */
+  portrait: string
   skinColor: string
   /** Coiffure ou couvre-chef (une seule couche chez Open Peeps). */
   head: string
@@ -242,6 +256,7 @@ export const DEFAULT_BANNER: (typeof BANNER_KEYS)[number] = 'uni-lavande'
 
 // L'ordre des onglets de l'éditeur suit ce tableau.
 export const AVATAR_FIELDS: readonly AvatarField[] = [
+  { key: 'portrait', label: 'Portrait', kind: 'style', options: PORTRAIT_KEYS, allowNone: true },
   { key: 'skinColor', label: 'Peau', kind: 'color', options: SKIN_COLORS, allowNone: false },
   { key: 'head', label: 'Coiffure', kind: 'style', options: HEADS, allowNone: false },
   { key: 'face', label: 'Expression', kind: 'style', options: FACES, allowNone: false },
@@ -257,6 +272,7 @@ export const AVATAR_FIELDS: readonly AvatarField[] = [
 // Faire payer une expression reviendrait à faire payer le droit de se
 // ressembler.
 export const FREE_AVATAR_FIELD_KEYS = [
+  'portrait',
   'face',
   'accessories',
   'facialHair',
@@ -292,6 +308,7 @@ export function applyFreeAvatarField(
 // Avatar par défaut (proposé au premier passage) — neutre et souriant, haut
 // violet et fond violet clair de la marque.
 export const DEFAULT_AVATAR: AvatarConfig = {
+  portrait: '',
   skinColor: 'edb98a',
   head: 'short1',
   face: 'smile',
@@ -360,8 +377,16 @@ export function avatarSvg(cfg: AvatarConfig, size = 96): string {
   }).toString()
 }
 
+/** L'URL du blason choisi, ou null si l'élève garde son avatar composé. */
+export function avatarPortraitSrc(cfg: AvatarConfig): string | null {
+  return isPortraitKey(cfg.portrait) ? portraitSrc(cfg.portrait) : null
+}
+
 // Data-URI de l'avatar — à passer directement à <img src> (aucun HTML injecté,
 // donc pas de dangerouslySetInnerHTML). Disque arrondi par défaut.
+// ⚠️ Ne regarde PAS le portrait : c'est le rendu DiceBear seul. Pour « l'image
+// de l'élève, quelle qu'elle soit », passer par AvatarRender ou
+// avatarPortraitSrc d'abord.
 export function avatarDataUri(cfg: AvatarConfig, size = 96): string {
   return createAvatar(openPeeps, {
     ...toDicebearOptions(cfg),

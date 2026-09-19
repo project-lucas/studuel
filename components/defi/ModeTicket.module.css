@@ -1,0 +1,386 @@
+/* ==========================================================================
+   LE BILLET DE MODE (ModeTicket.tsx) — les cartes « Modes de jeu » de Clash
+   Royale, relevées AU PIXEL sur la capture de Lucas (19/09/2026 : « je veux
+   que ce soit identique à Clash Royale, aussi précis que les blocs de la
+   boutique »), comme les cartes du magasin (CarteMagasin.module.css).
+
+   Mesures du modèle : billet de 849 × 214 (compact) ou 849 × 324 (grand).
+   Tout est reporté en % de la LARGEUR du billet (cqw — le cadre est son
+   conteneur), si bien qu'il garde ses proportions à toute largeur :
+     · corps 0 → 574, perforation 574 → 579, talon 579 → 849 ;
+     · coins coupés à 45° de 26 (gauche) et 27 (droite) ;
+     · perforation pincée en V (7 × 8) en haut et en bas ;
+     · talon cranté de deux demi-lunes de rayon 18, à 35 % et 65 % ;
+     · épaisseur de 11 en bas, filet clair de 3 en haut, ombre pleine de 5 ;
+     · titre à 49 du bord, capitales de 30 ; compteur à 96 du haut ;
+       pastille de 270 × 48 à 137 du haut.
+
+   UNE TEINTE PAR BILLET, comme là-bas (bleu, lavande, violet, vert d'eau) :
+   `data-teinte` (la palette des outils de Marcel, globals.css). La couleur y
+   est une IDENTITÉ — la matière ou le mode —, jamais un bouton.
+
+   Module et non globals.css : la feuille globale ne se recompilait plus en
+   développement.
+   ========================================================================== */
+
+/* Le cadre : conteneur des cotes, et porteur de l'OMBRE (un `filter` sur le
+   parent suit la silhouette découpée par le mask de l'enfant). */
+.cadre {
+  --base: var(--outil, var(--primary));
+  --contour: color-mix(in oklch, var(--foreground), black 50%);
+  position: relative;
+  container-type: inline-size;
+  filter: drop-shadow(0 0.6cqw 0 rgb(0 0 0 / 0.35));
+}
+
+/* Le mode du jour : le liseré blanc et le halo du billet sélectionné du
+   modèle — posés par des ombres portées, qui épousent la découpe. */
+.cadre[data-vedette] {
+  filter: drop-shadow(0 0 0.22cqw white) drop-shadow(0 0 0.22cqw white)
+    drop-shadow(0 0 2.2cqw color-mix(in oklch, var(--base), white 35%))
+    drop-shadow(0 0.6cqw 0 rgb(0 0 0 / 0.35));
+}
+
+.lien {
+  display: block;
+  cursor: pointer;
+  border-radius: 3cqw;
+  transition: transform 90ms ease-out;
+}
+.lien:active {
+  transform: translateY(0.5cqw);
+}
+.lien:focus-visible {
+  outline: 3px solid var(--highlight);
+  outline-offset: 3px;
+}
+
+/* ─────────────────────────────── la silhouette */
+
+.billet {
+  position: relative;
+  display: block;
+  height: 25.2cqw;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 849 214' preserveAspectRatio='none'%3E%3Cpath d='M26 0H567L574 8V206L567 214H26L0 188V26Z M586 0H822L849 27V57A18 18 0 0 0 849 93V121A18 18 0 0 0 849 157V187L822 214H586L579 206V8Z'/%3E%3C/svg%3E")
+    0 0 / 100% 100% no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 849 214' preserveAspectRatio='none'%3E%3Cpath d='M26 0H567L574 8V206L567 214H26L0 188V26Z M586 0H822L849 27V57A18 18 0 0 0 849 93V121A18 18 0 0 0 849 157V187L822 214H586L579 206V8Z'/%3E%3C/svg%3E")
+    0 0 / 100% 100% no-repeat;
+}
+
+.billet[data-format='grand'] {
+  height: 38.2cqw;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 849 324' preserveAspectRatio='none'%3E%3Cpath d='M26 0H567L574 8V316L567 324H26L0 298V26Z M586 0H822L849 27V95A18 18 0 0 0 849 131V193A18 18 0 0 0 849 229V297L822 324H586L579 316V8Z'/%3E%3C/svg%3E")
+    0 0 / 100% 100% no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 849 324' preserveAspectRatio='none'%3E%3Cpath d='M26 0H567L574 8V316L567 324H26L0 298V26Z M586 0H822L849 27V95A18 18 0 0 0 849 131V193A18 18 0 0 0 849 229V297L822 324H586L579 316V8Z'/%3E%3C/svg%3E")
+    0 0 / 100% 100% no-repeat;
+}
+
+/* ─────────────────────────────── le corps et le talon */
+
+.corps,
+.talon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Le corps : la robe de la teinte, plus claire en haut, un filet clair au
+   sommet et l'ÉPAISSEUR en bas (deux tons, comme une tuile posée). */
+.corps {
+  left: 0;
+  width: 67.61%;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--base), white 16%) 0%,
+    var(--base) 55%,
+    color-mix(in oklch, var(--base), black 10%) 100%
+  );
+  box-shadow:
+    inset 0 0.35cqw 0 rgb(255 255 255 / 0.3),
+    inset 0 -1.3cqw 0 color-mix(in oklch, var(--base), black 34%),
+    inset 0 -1.7cqw 0 color-mix(in oklch, var(--base), white 18%);
+}
+
+/* Le talon : la même teinte, éclaircie — plus claire vers le bas à droite,
+   comme le talon lavande du modèle. */
+.talon {
+  left: 68.2%;
+  right: 0;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(
+    160deg,
+    color-mix(in oklch, var(--base), white 22%) 0%,
+    color-mix(in oklch, var(--base), white 34%) 100%
+  );
+  /* Plus clair mais aussi VIF que la robe (le talon cyan ou lavande du
+     modèle) : la couleur relative garde la saturation que le blanc ôte. Les
+     navigateurs qui ne la lisent pas gardent le mélange ci-dessus. */
+  background: linear-gradient(
+    160deg,
+    oklch(from var(--base) calc(l + 0.1) calc(c * 1.02) h) 0%,
+    oklch(from var(--base) calc(l + 0.17) calc(c * 0.92) h) 100%
+  );
+  box-shadow:
+    inset 0 0.35cqw 0 rgb(255 255 255 / 0.35),
+    inset 0 -1.3cqw 0 color-mix(in oklch, var(--base), black 26%),
+    inset 0 -1.7cqw 0 color-mix(in oklch, var(--base), white 52%);
+}
+
+/* La perforation : de petits traits clairs le long du bord du talon. */
+.talon::before {
+  content: '';
+  position: absolute;
+  top: 1.4cqw;
+  bottom: 2.2cqw;
+  left: 0;
+  width: 0.35cqw;
+  background: repeating-linear-gradient(
+    180deg,
+    rgb(255 255 255 / 0.55) 0 0.8cqw,
+    transparent 0.8cqw 1.9cqw
+  );
+}
+
+/* Le billet VERROUILLÉ (Studuel+) : le « Classé » du modèle — la robe
+   assombrie et quadrillée de losanges, texte centré, cadenas au talon. Il
+   garde la teinte de sa matière : une file de billets tous violets ne se
+   distinguait plus. */
+.billet[data-verrou] .corps {
+  background:
+    repeating-linear-gradient(45deg, rgb(0 0 0 / 0.2) 0 0.28cqw, transparent 0.28cqw 7.2cqw),
+    repeating-linear-gradient(-45deg, rgb(0 0 0 / 0.2) 0 0.28cqw, transparent 0.28cqw 7.2cqw),
+    linear-gradient(
+      180deg,
+      color-mix(in oklch, var(--base), black 22%),
+      color-mix(in oklch, var(--base), black 40%)
+    );
+}
+.billet[data-verrou] .talon {
+  background: linear-gradient(
+    160deg,
+    color-mix(in oklch, var(--base), black 2%),
+    color-mix(in oklch, var(--base), white 12%)
+  );
+}
+
+/* ─────────────────────────────── l'art du corps */
+
+/* La scène : elle occupe la droite du corps et se FOND dans la robe vers la
+   gauche, où le titre se lit sur la couleur pleine (le « Merge Tactics » du
+   modèle). */
+.scene {
+  position: absolute;
+  top: 0;
+  bottom: 1.3cqw;
+  left: 18%;
+  right: 0;
+  z-index: -1;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 42%);
+  mask-image: linear-gradient(90deg, transparent 0%, black 42%);
+}
+
+/* Sans scène : la vignette de la matière, posée à droite comme un
+   personnage de billet, sur la robe quadrillée. */
+.billet[data-repli] .corps {
+  background:
+    repeating-linear-gradient(45deg, rgb(255 255 255 / 0.08) 0 0.28cqw, transparent 0.28cqw 7.2cqw),
+    repeating-linear-gradient(-45deg, rgb(255 255 255 / 0.08) 0 0.28cqw, transparent 0.28cqw 7.2cqw),
+    linear-gradient(
+      180deg,
+      color-mix(in oklch, var(--base), white 16%) 0%,
+      var(--base) 55%,
+      color-mix(in oklch, var(--base), black 10%) 100%
+    );
+}
+.vignette {
+  position: absolute;
+  right: 2.5cqw;
+  bottom: 2.4cqw;
+  z-index: -1;
+  width: 19cqw;
+  aspect-ratio: 1;
+  transform: rotate(7deg);
+  filter: drop-shadow(0 0.6cqw 0.8cqw rgb(0 0 0 / 0.35));
+}
+.billet[data-format='grand'] .vignette {
+  width: 28cqw;
+}
+
+/* ─────────────────────────────── les textes */
+
+/* Le texte des billets : blanc cerné de noir, le trait SOUS le remplissage,
+   plus une ombre pleine vers le bas — la même encre que le magasin. */
+.encre {
+  color: white;
+  -webkit-text-stroke: var(--trait, 0.15em) var(--contour);
+  paint-order: stroke fill;
+  text-shadow: 0 0.08em 0 var(--contour);
+}
+
+.titre {
+  position: absolute;
+  top: 3.4cqw;
+  left: 5.8cqw;
+  max-width: 56cqw;
+  font-size: var(--taille, 5.3cqw);
+  line-height: 1.05;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Le trait déborde de la boîte : on lui laisse sa place. */
+  padding: 0.1em 0.1em 0.15em;
+  margin: -0.1em -0.1em -0.15em;
+}
+.billet[data-format='grand'] .titre {
+  top: 5cqw;
+  font-size: var(--taille, 5.8cqw);
+}
+
+/* Le compteur (étoiles d'un jeu, record d'un mode) : l'icône, puis le nombre
+   en jaune — le « 🏆 9286 » du modèle. */
+.stat {
+  position: absolute;
+  top: 10.4cqw;
+  left: 5.8cqw;
+  display: flex;
+  align-items: center;
+  gap: 1.6cqw;
+  font-size: 3.7cqw;
+  line-height: 1;
+}
+.billet[data-format='grand'] .stat {
+  top: 14.5cqw;
+  font-size: 4cqw;
+}
+.stat .nombre {
+  color: var(--highlight);
+}
+.stat .sur {
+  color: rgb(255 255 255 / 0.85);
+  font-size: 0.72em;
+}
+.icone {
+  width: 4.4cqw;
+  height: 4.4cqw;
+  object-fit: contain;
+  filter: drop-shadow(0 0.2cqw 0 var(--contour));
+}
+
+/* La pastille du bas (le « ⏱ Fin dans » du modèle) : la règle du jeu. */
+.pastille {
+  position: absolute;
+  top: 16.1cqw;
+  left: 6cqw;
+  display: flex;
+  align-items: center;
+  gap: 1.4cqw;
+  height: 5.65cqw;
+  padding: 0 2.6cqw 0 0;
+  border-radius: 999px;
+  background: rgb(18 10 48 / 0.42);
+  box-shadow: inset 0 0.25cqw 0.4cqw rgb(0 0 0 / 0.25);
+  font-size: 2.75cqw;
+  line-height: 1;
+  white-space: nowrap;
+}
+.billet[data-format='grand'] .pastille {
+  top: 28.6cqw;
+}
+.pastilleIcone {
+  display: grid;
+  place-items: center;
+  width: 5.65cqw;
+  height: 5.65cqw;
+  margin-left: -0.3cqw;
+  border-radius: 999px;
+  background: radial-gradient(circle at 40% 35%, white, color-mix(in oklch, var(--highlight), white 30%) 55%, color-mix(in oklch, var(--highlight), black 25%));
+  box-shadow: 0 0 0 0.3cqw var(--contour);
+  font-size: 3.1cqw;
+}
+
+/* Le billet verrouillé : son nom au centre du corps, en lavande, et la
+   condition dessous en or — le « Classé · Débloqué à 13000 trophées ». */
+.verrouTexte {
+  position: absolute;
+  inset: 0 0 1.3cqw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6cqw;
+  padding: 0 4cqw;
+  text-align: center;
+}
+.verrouNom {
+  color: color-mix(in oklch, var(--base), white 80%);
+  font-size: 5.2cqw;
+  line-height: 1.05;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0.1em;
+}
+.verrouCondition {
+  color: var(--highlight);
+  font-size: 3.2cqw;
+  line-height: 1.1;
+}
+
+/* ─────────────────────────────── le talon */
+
+.art {
+  position: relative;
+  width: 17.5cqw;
+  aspect-ratio: 1;
+  filter: drop-shadow(0 0.5cqw 0.5cqw rgb(0 0 0 / 0.3));
+}
+.billet[data-format='grand'] .art {
+  width: 22.5cqw;
+}
+.emoji {
+  font-size: 12.5cqw;
+  line-height: 1;
+  filter: drop-shadow(0 0.5cqw 0.5cqw rgb(0 0 0 / 0.3));
+}
+.billet[data-format='grand'] .emoji {
+  font-size: 16cqw;
+}
+
+/* ─────────────────────────────── le ruban */
+
+/* Le ruban du coin (« Nouv. » du modèle) : il déborde du billet, donc il vit
+   dans le cadre, hors du mask. */
+.ruban {
+  position: absolute;
+  top: -1.3cqw;
+  right: 1.6cqw;
+  z-index: 2;
+  padding: 0.7cqw 1.8cqw 0.8cqw;
+  border-radius: 0.8cqw 0.8cqw 0.8cqw 0;
+  background: var(--destructive);
+  box-shadow: 0 0.4cqw 0 color-mix(in oklch, var(--destructive), black 35%);
+  font-size: 2.7cqw;
+  line-height: 1;
+  white-space: nowrap;
+}
+.ruban[data-ton='or'] {
+  background: linear-gradient(180deg, color-mix(in oklch, var(--highlight), white 25%), var(--highlight));
+  box-shadow: 0 0.4cqw 0 color-mix(in oklch, var(--highlight), black 35%);
+}
+.ruban[data-ton='muet'] {
+  background: rgb(18 10 48 / 0.75);
+  box-shadow: none;
+}
+
+/* L'étoile du compteur : jaune de la récompense, cernée comme le texte. */
+.etoile {
+  width: 1.3em;
+  height: 1.3em;
+  fill: var(--highlight);
+  color: var(--contour);
+  filter: drop-shadow(0 0.08em 0 var(--contour));
+}

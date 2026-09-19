@@ -54,6 +54,7 @@ import {
   MODE_XP_BONUS,
   FEATURED_XP_MULTIPLIER,
   modeImage,
+  modeScene,
   modeStatus,
   ROUND_SIZE,
   type GameModeId,
@@ -183,7 +184,7 @@ export default function DefiHome({
   examFocus?: { titles: string[] } | null
   // Mode ouvert directement à l'arrivée (lien profond /defi/jouer?mode=…) :
   // un id de mode, ou null pour l'accueil de la salle de jeu.
-  initialMode?: GameModeId | null
+  initialMode?: GameModeId | 'coop' | null
 }) {
   const router = useRouter()
   const [phase, setPhase] = useState<Phase>(initialMode ?? 'landing')
@@ -387,7 +388,7 @@ export default function DefiHome({
   if (phase === 'boss') {
     return (
       <ModeStage title="Boss" Icon={Crown} theme="couronne" onExit={exitMode}>
-        <BossMode pool={pool} onExit={exitMode} />
+        <BossMode pool={pool} onExit={exitMode} scene={modeScene('boss')} />
       </ModeStage>
     )
   }

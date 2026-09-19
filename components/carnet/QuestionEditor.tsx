@@ -28,8 +28,8 @@ import {
   type TrousContent,
   type VraiFauxContent,
 } from '@/lib/carnet-cours'
-import { saveQuestion } from '@/app/reviser/cours/actions'
-import { generateQuestionFeedback } from '@/app/reviser/cours/ai-actions'
+import { saveQuestion } from '@/app/carnet/cours/actions'
+import { generateQuestionFeedback } from '@/app/carnet/cours/ai-actions'
 import QuestionPlayer from '@/components/carnet/QuestionPlayer'
 import { TYPE_ICON } from '@/components/carnet/style'
 
@@ -522,7 +522,7 @@ export default function QuestionEditor({
   return (
     <div className="mx-auto w-full max-w-md pb-24">
       <Link
-        href={`/reviser/cours/${courseId}`}
+        href={`/carnet/cours/${courseId}`}
         onClick={() => sfx.tap()}
         className="mb-3 inline-flex items-center gap-1.5 text-sm font-bold text-muted-foreground hover:text-foreground"
       >

@@ -144,8 +144,8 @@ describe('promesse du billet', () => {
   it('annonce la règle plutôt qu’un « Jouer » interchangeable', () => {
     expect(formatTeaser(GAME_FORMATS.capitales)).toBe('8 escales')
     expect(formatTeaser(GAME_FORMATS['traduction-flash'])).toBe('45 s chrono')
-    expect(formatTeaser(GAME_FORMATS['faux-amis'])).toBe('2 vies · 10 pièges')
-    expect(formatTeaser(GAME_FORMATS['suite-logique'])).toBe('10 étages')
+    expect(formatTeaser(GAME_FORMATS['falsos-amigos'])).toBe('3 vies · 12 mirages')
+    expect(formatTeaser(GAME_FORMATS['classe-moi-ca'])).toBe('8 branches')
     expect(formatTeaser(GAME_FORMATS['calcul-mental'])).toBe('4 régimes')
   })
 
@@ -171,15 +171,15 @@ describe('annonces et dimensionnement', () => {
   it('annonce un nombre d’étapes pour les formats à parcours', () => {
     expect(announcedSteps(GAME_FORMATS.capitales)).toBe(8)
     expect(announcedSteps(GAME_FORMATS['calcul-mental'])).toBe(4)
-    expect(announcedSteps(GAME_FORMATS['suite-logique'])).toBe(10)
+    expect(announcedSteps(GAME_FORMATS['classe-moi-ca'])).toBe(8)
     expect(announcedSteps(GAME_FORMATS['traduction-flash'])).toBeNull()
   })
 
   it('prépare assez de matière pour ne jamais se répéter en partie', () => {
     // L'unité dépend de la FORME de la banque : des QUESTIONS pour les QCM, des
-    // TABLEAUX pour la remise en ordre, des TIRAGES pour le compte est bon —
-    // un tableau ou un tirage valent chacun plusieurs interactions.
-    const FLOOR = { qcm: 12, ordre: 4, compte: 5, zones: 8 } as const
+    // TABLEAUX pour la remise en ordre, des ZONES pour l'anatomie — un tableau
+    // vaut plusieurs interactions.
+    const FLOOR = { qcm: 12, ordre: 4, zones: 8 } as const
     for (const f of formats) {
       const kind = poolKind(f.id)
       expect(kind, `${f.id} sans banque`).not.toBeNull()

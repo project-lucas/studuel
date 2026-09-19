@@ -2,6 +2,7 @@
 
 import { cn } from '@/lib/utils'
 import FriendAddButton from '@/components/FriendAddButton'
+import PortraitJoueur from '@/components/amis/PortraitJoueur'
 import { useDuelLaunch } from '@/components/amis/useDuelLaunch'
 import type { Friend } from '@/lib/social'
 
@@ -51,16 +52,15 @@ export default function FriendStories({
               className="flex w-16 shrink-0 cursor-pointer flex-col items-center gap-1 disabled:opacity-60"
             >
               <span className="relative">
-                <span
-                  aria-hidden="true"
+                <PortraitJoueur
+                  id={f.id}
+                  portrait={f.portrait}
                   className={cn(
-                    'flex size-13 items-center justify-center rounded-full bg-white text-2xl shadow-sm ring-1 ring-black/5',
+                    'size-13 shadow-sm ring-1 ring-black/5',
                     streak > 0 &&
                       'ring-[3px] ring-orange-400 shadow-[0_0_10px_-2px_rgba(255,140,0,0.55)]',
                   )}
-                >
-                  {f.emoji}
-                </span>
+                />
                 {online ? (
                   <span
                     role="img"

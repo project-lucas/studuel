@@ -1,11 +1,15 @@
 /**
  * Fabrique L'ICÔNE « MODES » du flanc gauche de la barre d'action :
- *   assets-sources/defi-icones-lot1/mode de jeu 2.png  (original 2000×2000, fond PEINT)
- *     → public/images/defi/icones/modes-v2.webp  (256×256, fond transparent)
+ *   assets-sources/defi-icones-lot2/mode de jeu 2.png  (original 2000×2000, déjà
+ *                                                       transparent)
+ *     → public/images/defi/icones/modes-v4.webp  (256×256, fond transparent)
  *
- * La « 2 » est la version RETENUE : la manette seule ne disait que « jouer »,
- * celle-ci ajoute l'éventail de cartes qui dit « plusieurs modes ». Le premier
- * original (`mode de jeu.png`) reste à côté, il ne sert plus.
+ * La « 2 » est la version RETENUE : LE DÉ (Lucas, 16/09/2026). Un dé dit
+ * « jeu » sans désigner un support, là où la manette seule ne disait que
+ * « jouer » et la manette à l'éventail de cartes trop de choses à 36 px. Les
+ * trois autres originaux du lot 2 (`mode de jeu 0`, `mode de jeu 1 - manette
+ * seule`, `mode de jeu 2 - manette et cartes`) restent à côté, ils ne servent
+ * pas.
  *
  *   node scripts/icone-modes.mjs
  *
@@ -32,7 +36,7 @@
 import sharp from 'sharp'
 import { detourerFondPeint } from './lib/fond-peint.mjs'
 
-const SRC = 'assets-sources/defi-icones-lot1/mode de jeu 2.png'
+const SRC = 'assets-sources/defi-icones-lot2/mode de jeu 2.png'
 /**
  * LE NOM PORTE SA VERSION, et ce n'est pas de la coquetterie.
  *
@@ -46,7 +50,7 @@ const SRC = 'assets-sources/defi-icones-lot1/mode de jeu 2.png'
  * à `-v3` et l'ancienne restera lisible dans le dossier — un historique plutôt
  * qu'un écrasement.
  */
-const DEST = 'public/images/defi/icones/modes-v2.webp'
+const DEST = 'public/images/defi/icones/modes-v4.webp'
 
 /** Côté de la toile finale — celui de toutes les icônes de ce dossier. */
 const SIZE = 256
@@ -57,7 +61,14 @@ const SIZE = 256
  */
 const MARGE = 0.04
 
-const dessin = await sharp(await detourerFondPeint(SRC))
+// Le lot 2 arrive déjà transparent : pas de fond à détourer (le détourage
+// cherche la palette du pourtour, et sur du vide il ne trouverait rien).
+const meta = await sharp(SRC).metadata()
+const coin = meta.hasAlpha
+  ? await sharp(SRC).extract({ left: 0, top: 0, width: 1, height: 1 }).ensureAlpha().raw().toBuffer()
+  : null
+const base = coin && coin[3] === 0 ? SRC : await detourerFondPeint(SRC)
+const dessin = await sharp(base)
   .trim({ threshold: 2 })
   .png()
   .toBuffer()

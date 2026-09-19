@@ -63,10 +63,7 @@ export default function ModeStage({
   const themed = !dark && !!theme
   const back = backLabel ?? 'Retour à l’Arène'
   return (
-    // data-no-swipe : une partie en cours ne doit jamais changer d'onglet sur un
-    // balayage (on quitte par la croix ou les boutons explicites du mode).
     <div
-      data-no-swipe
       className={cn(
         '-mx-4 -mt-16 -mb-24 flex min-h-dvh flex-col pt-12 md:-mx-8 md:-my-10 md:pt-0',
         dark

@@ -37,6 +37,7 @@ import {
 export default function MatchmakingOverlay({
   href,
   subject,
+  vignette = null,
   onCancel,
 }: {
   /** La route du duel — le PvP de la matière choisie. */
@@ -48,6 +49,13 @@ export default function MatchmakingOverlay({
    * de dire tout le reste.
    */
   subject: string
+  /**
+   * L'illustration de la matière — la vignette de son dossier dans Réviser.
+   * C'est ELLE que la recherche promène (Lucas, 19/09/2026 : « on voit
+   * l'illustration de base alors qu'on a l'illustration pour la SVT ») ; la
+   * loupe générique ne reste qu'en repli, pour une matière sans vignette.
+   */
+  vignette?: string | null
   onCancel: () => void
 }) {
   const router = useRouter()
@@ -117,7 +125,7 @@ export default function MatchmakingOverlay({
       // ce qui permet à la rangée du bas de retomber exactement sur la barre
       // d'action qu'elle recouvre — et donc au bouton « Annuler » de prendre la
       // place du bouton DUEL, sans qu'aucun des deux ne connaisse l'autre.
-      className="fixed inset-0 z-[200] flex h-dvh flex-col pt-14 pb-[calc(4.75rem+env(safe-area-inset-bottom))] text-white md:pt-4 md:pb-4"
+      className="fixed inset-0 z-[200] flex h-dvh flex-col pt-14 pb-[calc(5.75rem+env(safe-area-inset-bottom))] text-white md:pt-4 md:pb-4"
     >
       {/* La scène, repeinte par-dessus le HUD. `defi-arena-bg` sert de socle
           opaque le temps que l'illustration se décode — sans lui, le HUD
@@ -155,7 +163,7 @@ export default function MatchmakingOverlay({
               regard qui cherche. Le déplacement, lui, est le geste de quelqu'un
               qui promène sa loupe sur une page. */}
           <motion.img
-            src="/images/defi/loupe.webp"
+            src={vignette ?? '/images/defi/loupe.webp'}
             alt=""
             aria-hidden="true"
             draggable={false}

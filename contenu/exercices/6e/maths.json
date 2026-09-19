@@ -1,0 +1,219 @@
+{
+  "niveau": "6e",
+  "matiere": "maths",
+  "exercices": [
+    {
+      "chapitre": "972a14b2-f06b-557c-82f6-f68521a51e80",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les crêpes de la kermesse",
+      "competence": "calculer",
+      "situation": "Inès prépare des crêpes pour la kermesse du collège. Sa recette est prévue pour **4 personnes**, mais elle veut en faire pour **8 personnes**.",
+      "documents": [
+        {
+          "id": "recette",
+          "type": "fiche",
+          "modele": "recette",
+          "titre": "La recette de la grand-mère d’Inès",
+          "entete": "Crêpes",
+          "sousTitre": "Pour 4 personnes",
+          "emoji": "🥞",
+          "teinte": "ambre",
+          "lignes": [
+            { "texte": "Farine", "valeur": "250 g" },
+            { "texte": "Œufs", "valeur": "4" },
+            { "texte": "Lait", "valeur": "50 cL" },
+            { "texte": "Beurre fondu", "valeur": "50 g" },
+            { "texte": "Sel", "valeur": "1 pincée" }
+          ],
+          "pied": "Laisser reposer la pâte 1 heure."
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Pour **8 personnes**, combien faut-il d’œufs ?",
+          "reponse": 8,
+          "aide": "8 personnes, c’est deux fois plus que 4 personnes : on double chaque ingrédient.",
+          "explication": "On passe de 4 à 8 personnes : on multiplie tout par 2. 4 × 2 = **8 œufs**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Et combien de grammes de farine ?",
+          "reponse": 500,
+          "unite": "g",
+          "aide": "La recette demande 250 g pour 4 personnes. Double cette quantité.",
+          "explication": "250 × 2 = **500 g** de farine pour 8 personnes."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le lendemain, il ne reste que **2 œufs**. Pour combien de personnes Inès peut-elle faire la recette ?",
+          "options": ["1 personne", "2 personnes", "4 personnes", "6 personnes"],
+          "reponse": 1,
+          "ordreFixe": true,
+          "aide": "2 œufs, c’est la moitié de 4 œufs.",
+          "explication": "2 œufs, c’est la moitié de la recette : elle peut cuisiner pour la moitié de 4 personnes, soit **2 personnes**."
+        }
+      ]
+    },
+    {
+      "chapitre": "972a14b2-f06b-557c-82f6-f68521a51e80",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Deux tarifs pour la piscine",
+      "competence": "resoudre",
+      "situation": "La piscine municipale propose deux façons de payer. Léo compte y aller souvent cette année et se demande quel tarif choisir.",
+      "documents": [
+        {
+          "id": "affiche",
+          "type": "fiche",
+          "modele": "affiche",
+          "titre": "L’affiche à l’entrée de la piscine",
+          "entete": "Piscine des Tilleuls",
+          "sousTitre": "Tarifs de l’année",
+          "emoji": "🏊",
+          "teinte": "bleu",
+          "lignes": [
+            { "texte": "**Tarif A** — sans carte :", "valeur": "4 € l’entrée" },
+            { "separateur": true },
+            { "texte": "**Tarif B** — carte annuelle à 20 €,", "valeur": "puis 2 € l’entrée" }
+          ],
+          "pied": "La carte annuelle se paie une seule fois."
+        },
+        {
+          "id": "tableau",
+          "type": "tableau",
+          "titre": "Le prix à payer selon le nombre d’entrées",
+          "colonnes": ["Nombre d’entrées", "1", "5", "10", "15"],
+          "lignes": [
+            ["Tarif A (€)", 4, 20, "?", 60],
+            ["Tarif B (€)", 22, 30, 40, "?"]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Avec le **tarif A**, combien coûtent **10 entrées** ?",
+          "reponse": 40,
+          "unite": "€",
+          "aide": "Au tarif A, chaque entrée coûte 4 €.",
+          "explication": "10 × 4 = **40 €**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Lequel de ces deux tarifs est une situation de **proportionnalité** ?",
+          "options": ["Le tarif A", "Le tarif B", "Les deux", "Aucun des deux"],
+          "reponse": 0,
+          "ordreFixe": true,
+          "aide": "Dans une situation de proportionnalité, 0 entrée coûte 0 €, et deux fois plus d’entrées coûtent deux fois plus cher.",
+          "explication": "Au tarif A, on multiplie toujours le nombre d’entrées par 4 : c’est proportionnel. Le tarif B part de 20 € (la carte) : 5 entrées coûtent 30 €, mais 10 entrées ne coûtent pas 60 €. **Seul le tarif A** est proportionnel."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Avec le **tarif B**, combien coûtent **15 entrées** ?",
+          "reponse": 50,
+          "unite": "€",
+          "aide": "N’oublie pas la carte : 20 €, puis 2 € par entrée.",
+          "explication": "20 € pour la carte + 15 × 2 € = 20 + 30 = **50 €**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Léo pense aller **15 fois** à la piscine cette année. Quel tarif doit-il choisir ?",
+          "options": ["Le tarif A", "Le tarif B", "Les deux coûtent pareil"],
+          "reponse": 1,
+          "ordreFixe": true,
+          "aide": "Compare les deux prix dans la colonne « 15 » du tableau.",
+          "explication": "Pour 15 entrées : 60 € au tarif A, 50 € au tarif B. Le **tarif B** lui fait économiser 10 €."
+        }
+      ]
+    },
+    {
+      "chapitre": "972a14b2-f06b-557c-82f6-f68521a51e80",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le plan de la cabane",
+      "competence": "modeliser",
+      "situation": "Nora et sa grand-mère vont construire une cabane au fond du jardin. Elles en ont dessiné le plan à l’**échelle 1/50** : 1 cm sur le plan représente 50 cm en vrai.",
+      "documents": [
+        {
+          "id": "plan",
+          "type": "schema",
+          "titre": "Le plan de la cabane (échelle 1/50)",
+          "largeur": 320,
+          "hauteur": 210,
+          "elements": [
+            { "forme": "rect", "x": 60, "y": 40, "l": 200, "h": 125, "teinte": "sable", "motif": "clair" },
+            { "forme": "rect", "x": 130, "y": 158, "l": 40, "h": 14, "teinte": "brun", "motif": "plein" },
+            { "forme": "texte", "x": 150, "y": 190, "texte": "porte", "taille": "petit", "italique": true },
+            { "forme": "rect", "x": 252, "y": 80, "l": 14, "h": 45, "teinte": "ciel", "motif": "plein" },
+            { "forme": "texte", "x": 286, "y": 106, "texte": "fenêtre", "taille": "petit", "italique": true },
+            { "forme": "ligne", "de": [60, 24], "a": [260, 24], "fleche": "deux", "epaisseur": 1, "teinte": "bleu" },
+            { "forme": "texte", "x": 160, "y": 18, "texte": "4 cm", "gras": true, "teinte": "bleu" },
+            { "forme": "ligne", "de": [42, 40], "a": [42, 165], "fleche": "deux", "epaisseur": 1, "teinte": "bleu" },
+            { "forme": "texte", "x": 36, "y": 107, "texte": "2,5 cm", "gras": true, "teinte": "bleu", "ancre": "fin" },
+            { "forme": "emoji", "x": 160, "y": 100, "emoji": "🛖", "taille": 34 }
+          ]
+        },
+        {
+          "id": "prix",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Le prix des planches chez le marchand de bois",
+          "categories": ["0 m", "1 m", "2 m", "3 m", "4 m"],
+          "series": [{ "nom": "Prix", "valeurs": [0, 6, 12, 18, 24], "teinte": "corail" }],
+          "axeY": { "titre": "Prix", "unite": "€", "min": 0, "max": 25, "pas": 5 },
+          "axeX": { "titre": "Longueur de planche" }
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la **longueur réelle** de la cabane, en mètres ?",
+          "reponse": 2,
+          "unite": "m",
+          "aide": "Multiplie la longueur sur le plan par 50 pour l’avoir en centimètres, puis convertis en mètres (100 cm = 1 m).",
+          "explication": "4 × 50 = 200 cm, soit **2 m**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Et sa **largeur réelle**, en mètres ?",
+          "reponse": 1.25,
+          "unite": "m",
+          "aide": "2,5 × 50 donne des centimètres. Combien de mètres cela fait-il ?",
+          "explication": "2,5 × 50 = 125 cm, soit **1,25 m**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "En vrai, la porte mesure **80 cm** de large. Combien doit-elle mesurer **sur le plan**, en centimètres ?",
+          "reponse": 1.6,
+          "unite": "cm",
+          "aide": "Cette fois, on passe du vrai au plan : on divise par 50.",
+          "explication": "80 ÷ 50 = **1,6 cm** sur le plan."
+        },
+        {
+          "type": "choix",
+          "enonce": "D’après le Doc 2, le prix des planches est-il **proportionnel** à leur longueur ?",
+          "options": [
+            "Oui : les points sont alignés avec l’origine (0 m coûte 0 €)",
+            "Non : le prix augmente avec la longueur",
+            "Non : il faudrait que la ligne soit horizontale",
+            "On ne peut pas le savoir avec un graphique"
+          ],
+          "reponse": 0,
+          "aide": "Une situation de proportionnalité se voit sur un graphique : des points alignés sur une droite qui passe par l’origine.",
+          "explication": "Les points forment une droite qui passe par (0 ; 0) : chaque mètre coûte **6 €**. C’est une situation de proportionnalité."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pour faire le tour de la cabane, il faut une planche de la longueur de chaque côté. Combien coûtera le bois ?",
+          "reponse": 39,
+          "unite": "€",
+          "aide": "Calcule d’abord le périmètre réel : 2 × (longueur + largeur). Puis 1 m de planche coûte 6 €.",
+          "explication": "Périmètre : 2 × (2 + 1,25) = 6,5 m. Prix : 6,5 × 6 = **39 €**."
+        }
+      ]
+    }
+  ]
+}

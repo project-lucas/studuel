@@ -125,7 +125,7 @@ export default function SessionOptionsSheet({
     if (longueur !== null) p.set('long', String(longueur))
     if (mode !== 'apprentissage') p.set('mode', mode)
     const q = p.toString()
-    return `/reviser/cours/${courseId}/reviser${q ? `?${q}` : ''}`
+    return `/carnet/cours/${courseId}/reviser${q ? `?${q}` : ''}`
   }, [courseId, portee, sens, types, longueur, mode])
 
   const basculerType = (t: CourseQuestionType) => {

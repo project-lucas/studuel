@@ -6,6 +6,14 @@ const nextConfig: NextConfig = {
   // nature (jamais dans un build de prod) — on la coupe aussi en dev pour ne
   // pas polluer l'aperçu mobile. Les erreurs de compilation restent affichées.
   devIndicators: false,
+  // Le carnet a quitté Réviser le 15/09/2026 : ses cours vivent sous
+  // `/carnet/cours`. Les anciens liens (favoris, notifications, historique
+  // du navigateur) continuent de mener au bon écran.
+  async redirects() {
+    return [
+      { source: '/reviser/cours/:path*', destination: '/carnet/cours/:path*', permanent: true },
+    ]
+  },
   experimental: {
     // Cache client du router : un onglet revisité dans les 30 s se raffiche
     // instantanément sans repasser par le serveur (le défaut est 0 s depuis

@@ -1,0 +1,211 @@
+{
+  "niveau": "6e",
+  "matiere": "maths",
+  "exercices": [
+    {
+      "chapitre": "282d55b7-97ac-5962-b07a-de876ca38f11",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les soldes du Grenier du Sport",
+      "competence": "calculer",
+      "situation": "C’est la semaine des soldes au Grenier du Sport. Yanis lit l’affiche de l’entrée et fait ses calculs de tête, avec les **repères du cours** : 50 %, c’est la moitié ; 25 %, le quart ; 10 %, le dixième.",
+      "documents": [
+        {
+          "id": "affiche",
+          "type": "fiche",
+          "modele": "affiche",
+          "titre": "L’affiche à l’entrée du magasin",
+          "source": "Magasin et prix imaginés pour l’exercice.",
+          "entete": "Le Grenier du Sport",
+          "sousTitre": "Grandes soldes d’été",
+          "emoji": "🏷️",
+          "teinte": "corail",
+          "lignes": [
+            { "texte": "🏀 Ballon de basket (24 €) :", "valeur": "−50 %", "id": "ballon" },
+            { "texte": "🏓 Raquette de ping-pong (16 €) :", "valeur": "−25 %", "id": "raquette" },
+            { "texte": "🧢 Casquette (12 €) :", "valeur": "−10 %", "id": "casquette" },
+            { "texte": "🥤 Gourde isotherme (30 €) :", "valeur": "−10 %", "id": "gourde" }
+          ],
+          "pied": "Réduction calculée sur le prix entre parenthèses"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "De combien d’euros le prix du **ballon de basket** baisse-t-il ?",
+          "reponse": 12,
+          "unite": "€",
+          "aide": "Prendre 50 % d’un prix, c’est en prendre la moitié : on divise par 2.",
+          "explication": "50 % de 24 €, c’est la moitié de 24 € : 24 ÷ 2 = **12 €** de réduction. Le ballon ne coûte plus que 12 €."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le **nouveau prix** de la raquette de ping-pong ?",
+          "reponse": 12,
+          "unite": "€",
+          "aide": "Calcule d’abord 25 % de 16 € (on divise par 4), puis enlève cette réduction du prix de départ.",
+          "explication": "25 % de 16 €, c’est 16 ÷ 4 = 4 €. Nouveau prix : 16 − 4 = **12 €**."
+        },
+        {
+          "type": "zone",
+          "document": "affiche",
+          "enonce": "Sur l’affiche, touche l’article dont la réduction vaut exactement **1,20 €**.",
+          "reponse": ["casquette"],
+          "aide": "1,20 €, c’est une petite réduction : regarde les articles à −10 %. Prendre 10 %, c’est diviser par 10.",
+          "explication": "10 % de 12 € = 12 ÷ 10 = **1,20 €** : c’est la **casquette**. Pour la gourde, 10 % de 30 € font 3 €."
+        }
+      ]
+    },
+    {
+      "chapitre": "282d55b7-97ac-5962-b07a-de876ca38f11",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Ce qu’il y a dans mon bol de céréales",
+      "competence": "analyser-document",
+      "situation": "Au petit déjeuner, Clémence lit l’étiquette de sa boîte de céréales au chocolat. Elle veut savoir quelle **part** de son bol de 40 g est faite de sucres, de fibres ou de glucides.",
+      "documents": [
+        {
+          "id": "etiquette",
+          "type": "fiche",
+          "modele": "etiquette",
+          "titre": "L’étiquette de la boîte de céréales",
+          "source": "Étiquette imaginée pour l’exercice.",
+          "entete": "Valeurs nutritionnelles",
+          "sousTitre": "Pour un bol de 40 g · Boîte de 500 g",
+          "lignes": [
+            { "texte": "Énergie", "valeur": "158 kcal", "id": "energie" },
+            { "texte": "Matières grasses", "valeur": "2 g", "id": "mg" },
+            { "texte": "Glucides", "valeur": "28 g", "id": "glucides", "gras": true },
+            { "texte": "   dont sucres", "valeur": "12 g", "id": "sucres" },
+            { "texte": "Fibres", "valeur": "4 g", "id": "fibres" },
+            { "texte": "Protéines", "valeur": "5 g", "id": "proteines" },
+            { "texte": "Sel", "valeur": "0,2 g", "id": "sel" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel pourcentage du bol de 40 g représentent les **sucres** ?",
+          "reponse": 30,
+          "unite": "%",
+          "aide": "Comme dans le cours : divise la masse de sucres par la masse du bol, puis écris le résultat en pourcentage (0,5 = 50 %).",
+          "explication": "12 ÷ 40 = 0,3 = **30 %** : près d’un tiers du bol, c’est du sucre."
+        },
+        {
+          "type": "zone",
+          "document": "etiquette",
+          "enonce": "Touche la ligne de l’étiquette qui représente exactement **10 %** du bol.",
+          "reponse": ["fibres"],
+          "aide": "Calcule d’abord 10 % de 40 g : on divise par 10. Puis cherche cette masse sur l’étiquette.",
+          "explication": "10 % de 40 g = 40 ÷ 10 = 4 g : ce sont les **fibres**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La boîte entière contient **500 g** de céréales. Combien de grammes de sucres contient-elle ?",
+          "reponse": 150,
+          "unite": "g",
+          "aide": "Les sucres font 30 % des céréales (question 1). 30 %, c’est 3 fois 10 % : commence par calculer 10 % de 500 g.",
+          "explication": "10 % de 500 g = 50 g, donc 30 % = 3 × 50 = **150 g** de sucres dans la boîte."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle part du bol représentent les **glucides** ?",
+          "options": ["70 %", "28 %", "7 %", "0,7 %"],
+          "reponse": 0,
+          "aide": "Attention : 28 g, ce n’est pas 28 % ! Divise 28 par 40, puis écris le résultat en pourcentage.",
+          "explication": "28 ÷ 40 = 0,7 = **70 %** : les glucides font plus des deux tiers du bol."
+        }
+      ]
+    },
+    {
+      "chapitre": "282d55b7-97ac-5962-b07a-de876ca38f11",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Deux remises valent-elles une grosse remise ?",
+      "competence": "resoudre",
+      "situation": "Élise veut s’acheter des rollers à **120 €**. Dans son magasin, ils sont soldés. Son ami Nathan lui écrit : dans un autre magasin, les mêmes rollers ont aussi une remise… et même deux !",
+      "documents": [
+        {
+          "id": "affiche",
+          "type": "fiche",
+          "modele": "affiche",
+          "titre": "L’affiche du magasin d’Élise",
+          "source": "Magasins et prix imaginés pour l’exercice.",
+          "entete": "Planète Glisse",
+          "sousTitre": "Soldes d’hiver",
+          "emoji": "🛼",
+          "teinte": "violet",
+          "lignes": [
+            { "texte": "Rollers Freestyle :", "valeur": "120 €" },
+            { "texte": "Remise immédiate :", "valeur": "−30 %" }
+          ],
+          "pied": "Remise calculée sur le prix affiché"
+        },
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Les messages de Nathan",
+          "participants": [
+            { "nom": "Élise", "emoji": "👧", "cote": "gauche" },
+            { "nom": "Nathan", "emoji": "👦", "cote": "droite" }
+          ],
+          "repliques": [
+            { "qui": "Nathan", "texte": "Chez Roule-Toujours, les mêmes rollers sont aussi à 120 € !" },
+            { "qui": "Nathan", "texte": "Il y a −20 % sur l’étiquette, puis encore −10 % en caisse avec la carte du magasin 😎" },
+            { "qui": "Nathan", "texte": "−20 % et −10 %, ça fait −30 %… c’est pareil que chez toi !" },
+            { "qui": "Élise", "texte": "Pas sûre… je vais calculer 🤔" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Chez **Planète Glisse**, combien coûtent les rollers après la remise ?",
+          "reponse": 84,
+          "unite": "€",
+          "aide": "Une réduction de 30 %, c’est 3 fois 10 %. Ou bien : on garde 70 % du prix, donc on multiplie par 0,7.",
+          "explication": "10 % de 120 € = 12 €, donc 30 % = 36 €. Prix : 120 − 36 = **84 €** (ou 120 × 0,7 = 84)."
+        },
+        {
+          "type": "trous",
+          "enonce": "Chez **Roule-Toujours**, complète le calcul de la première remise.",
+          "texte": "Après −20 % sur l’étiquette, on garde ___ % du prix : les rollers coûtent alors ___ €.",
+          "reponses": [["80"], ["96"]],
+          "aide": "Enlever 20 %, c’est garder 100 − 20 = … % du prix. Multiplie ensuite 120 par 0,8.",
+          "explication": "On garde **80 %** du prix : 120 × 0,8 = **96 €**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "En caisse, la carte enlève encore **10 %** de ce nouveau prix. Combien Élise paierait-elle chez **Roule-Toujours** ?",
+          "reponse": 86.4,
+          "unite": "€",
+          "aide": "Les 10 % se calculent sur 96 €, pas sur 120 € : 10 % de 96 €, c’est 96 ÷ 10.",
+          "explication": "10 % de 96 € = 9,60 €. Prix final : 96 − 9,60 = **86,40 €**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Nathan écrit : « −20 % et −10 %, ça fait −30 %, c’est pareil ! » A-t-il raison ?",
+          "options": [
+            "Non : la 2e remise porte sur 96 €, pas sur 120 €, donc elle fait gagner moins",
+            "Oui : 20 % + 10 % = 30 %, donc les deux prix sont égaux",
+            "Non : deux remises à la suite font toujours gagner plus qu’une seule",
+            "Oui, mais seulement si on a la carte du magasin"
+          ],
+          "reponse": 0,
+          "aide": "Compare tes réponses aux questions 1 et 3 : les deux prix sont-ils égaux ?",
+          "explication": "**Nathan a tort** : 84 € d’un côté, 86,40 € de l’autre. Les pourcentages ne s’additionnent pas, car la 2e remise porte sur un prix déjà baissé (96 €)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Élise achète ses rollers dans le magasin le moins cher. Combien économise-t-elle par rapport à l’autre magasin ?",
+          "reponse": 2.4,
+          "unite": "€",
+          "aide": "Fais la différence entre les deux prix finaux (questions 1 et 3).",
+          "explication": "86,40 − 84 = **2,40 €** d’économie : Planète Glisse est le moins cher."
+        }
+      ]
+    }
+  ]
+}

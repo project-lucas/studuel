@@ -27,6 +27,7 @@ import { controlesToExams, mergeExamSources } from '@/lib/controle-exams'
 import { rowsToControles, type ControleRow } from '@/lib/prep-plan'
 import { computeXp } from '@/lib/xp'
 import { fetchDisplayLevel } from '@/lib/wallet-server'
+import { lireGelsSerie } from '@/lib/boutique/boosts-server'
 import { commuteStreak } from '@/lib/trajet'
 import { avatarEmojiFor, type FriendGhost } from '@/lib/social'
 import type { RankPlayer } from '@/lib/trophies'
@@ -64,12 +65,17 @@ export default async function DefiJouerPage({
   // COMBAT de l'arène (espace duel : matière puis jeu), et sa RPC est inerte
   // depuis la 238 : le laisser ouvrable par URL aurait servi un mode qui joue
   // normalement mais ne rapporte plus rien — le pire des deux mondes.
+  //
+  // 'coop' est accepté (19/09/2026) : le Mode Coop a son billet dans « Modes
+  // de jeu » (derrière le bouton « tous les modes ») au lieu d'un bouton perdu
+  // en bas de cette page.
   const { mode } = await searchParams
-  const initialMode: GameModeId | null = GAME_MODES.some(
-    (m) => m.id === mode && m.implemented,
-  )
-    ? (mode as GameModeId)
-    : null
+  const initialMode: GameModeId | 'coop' | null =
+    mode === 'coop'
+      ? 'coop'
+      : GAME_MODES.some((m) => m.id === mode && m.implemented)
+        ? (mode as GameModeId)
+        : null
 
   const supabase = await createClient()
   const user = await getCurrentUser()
@@ -227,7 +233,12 @@ export default async function DefiJouerPage({
   // Niveau du PORTEFEUILLE (source unique, migration 192) dès qu'il existe, sinon
   // repli sur l'XP dérivée : le même niveau que le bandeau du haut et le profil,
   // fini le « Niveau 4 » en haut vs « Niv. 1 » sur l'écran de duel.
-  const level = await fetchDisplayLevel(supabase, user.id, xpTotal)
+  // Les gels de série (boutique, 368) partent avec : même ligne de portefeuille,
+  // même aller-retour.
+  const [level, gelsSerie] = await Promise.all([
+    fetchDisplayLevel(supabase, user.id, xpTotal),
+    lireGelsSerie(supabase, user.id),
+  ])
 
   const activeDays = new Set(
     [
@@ -237,7 +248,7 @@ export default async function DefiJouerPage({
       ...(challenges ?? []),
     ].map((s) => String(s.created_at).slice(0, 10)),
   )
-  const streak = computeStreak(activeDays)
+  const streak = computeStreak(activeDays, new Date(), gelsSerie)
   const today = toDayKey(new Date())
   const doneToday = (challenges ?? []).some((c) =>
     String(c.created_at).startsWith(today),
@@ -427,10 +438,7 @@ export default async function DefiJouerPage({
     })
 
   return (
-    // data-no-swipe : la salle de jeu est une pièce immersive — un balayage
-    // pendant un duel/blitz/boss ne doit jamais changer d'onglet et perdre la
-    // partie en cours (la sortie passe par les boutons explicites).
-    <div data-no-swipe>
+    <div>
       <DefiHome
         items={shuffle(items)}
         pool={pool}

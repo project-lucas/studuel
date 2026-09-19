@@ -3,9 +3,14 @@
 // vivent dans lib/carnet-cours.ts).
 import {
   ArrowUpDown,
+  Atom,
   BookOpen,
+  Brain,
   Calculator,
+  Code,
+  Drama,
   Dumbbell,
+  Feather,
   FlaskConical,
   Folder,
   Globe,
@@ -13,11 +18,17 @@ import {
   Landmark,
   Languages,
   Layers,
+  Leaf,
+  Lightbulb,
   Link2,
   ListChecks,
+  Map,
+  Microscope,
   Music,
   Palette,
   PenLine,
+  Scroll,
+  Sigma,
   Sparkles,
   TextCursorInput,
   ToggleLeft,
@@ -28,6 +39,7 @@ import type {
   CourseIcon,
   CourseQuestionType,
 } from '@/lib/carnet-cours'
+import type { TeinteContenu } from '@/lib/carnet/origine'
 
 // Containers arrondis pastels (fond + encre), fidèles au monde crème & violet :
 // violet/jaune/corail sur les jetons sémantiques, menthe/ciel/sable en oklch
@@ -51,16 +63,28 @@ export const COURSE_DOT: Record<CourseColor, string> = {
   sable: 'bg-[oklch(0.82_0.1_80)]',
 }
 
+// Même ordre que `COURSE_ICONS` (lib/carnet-cours.ts) : c'est celui de la grille.
 export const COURSE_ICON: Record<CourseIcon, LucideIcon> = {
   'book-open': BookOpen,
   languages: Languages,
   calculator: Calculator,
+  sigma: Sigma,
   'flask-conical': FlaskConical,
+  atom: Atom,
+  leaf: Leaf,
+  microscope: Microscope,
   globe: Globe,
+  map: Map,
   landmark: Landmark,
+  scroll: Scroll,
+  brain: Brain,
+  feather: Feather,
+  code: Code,
   music: Music,
   palette: Palette,
+  drama: Drama,
   dumbbell: Dumbbell,
+  lightbulb: Lightbulb,
   sparkles: Sparkles,
 }
 
@@ -76,3 +100,12 @@ export const TYPE_ICON: Record<CourseQuestionType, LucideIcon> = {
 }
 
 export const CHAPTER_ICON = Folder
+
+// La teinte d'un dossier (et de ses questions) d'après son contenu
+// (lib/carnet/origine.ts) : rouge si un PDF y a été inséré, violet s'il
+// contient des flashcards, jaune sinon — trois pastilles, trois lectures.
+export const TEINTE_CONTENU: Record<TeinteContenu, string> = {
+  pdf: 'bg-destructive/10 text-destructive',
+  flashcard: 'bg-primary/10 text-primary',
+  neutre: 'bg-highlight/25 text-foreground',
+}

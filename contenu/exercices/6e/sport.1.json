@@ -1,0 +1,227 @@
+{
+  "niveau": "6e",
+  "matiere": "sport",
+  "exercices": [
+    {
+      "chapitre": "66d97fde-f6ce-5200-9dd5-c10705d91966",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Une année d’EPS en 6e B",
+      "competence": "lire-tableau",
+      "situation": "À la rentrée, M. Garnier distribue à la 6e B le programme d’EPS de l’année : cinq activités, cinq périodes. Mais quels problèmes la classe va-t-elle apprendre à résoudre ?",
+      "documents": [
+        {
+          "id": "programme",
+          "type": "tableau",
+          "titre": "Le programme d’EPS de la 6e B",
+          "source": "Programme imaginé pour l’exercice.",
+          "colonnes": ["Période", "Activité", "Lieu"],
+          "lignes": [
+            ["Sept. – oct.", "Demi-fond", "Stade"],
+            ["Nov. – déc.", "Handball", "Gymnase"],
+            ["Janv. – févr.", "Acrosport", "Gymnase"],
+            ["Mars – avr.", "Course d’orientation", "Parc de la ville"],
+            ["Mai – juin", "Natation de vitesse", "Piscine"]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "programme",
+          "enonce": "Touche l’activité où la 6e B devra **s’exprimer devant les autres** par une prestation artistique (champ 3).",
+          "reponse": ["r2c1"],
+          "aide": "Le champ 3 regroupe la danse, l’acrosport, les arts du cirque et la gymnastique. Cherche l’une d’elles dans la colonne « Activité ».",
+          "explication": "C’est l’**acrosport**, en janvier-février : on construit des figures à plusieurs et on les présente devant un public. C’est le champ 3, « s’exprimer par une prestation artistique »."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’activités de l’année relèvent du **champ 1**, celui où l’on produit une performance **mesurée** ?",
+          "reponse": 2,
+          "unite": "activités",
+          "aide": "Dans quelles activités du tableau mesure-t-on un temps, avec un chronomètre ?",
+          "explication": "**2 activités** : le demi-fond et la natation de vitesse. Dans les deux, un chronomètre mesure la performance… et donc le progrès."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque activité de l’année dans son champ d’apprentissage.",
+          "categories": ["1 · Performance mesurée", "2 · Adapter son déplacement", "3 · S’exprimer", "4 · Affrontement"],
+          "items": [
+            ["Demi-fond", 0],
+            ["Handball", 3],
+            ["Acrosport", 2],
+            ["Course d’orientation", 1],
+            ["Natation de vitesse", 0]
+          ],
+          "aide": "Pour chaque activité, demande-toi quel problème elle pose : se mesurer, gérer un milieu inconnu, s’exprimer devant un public ou affronter un adversaire ?",
+          "explication": "Demi-fond et natation de vitesse : **champ 1** (un chronomètre). Course d’orientation : **champ 2** (un milieu inconnu). Acrosport : **champ 3** (un public). Handball : **champ 4** (un adversaire). La 6e B rencontre bien les quatre champs cette année."
+        }
+      ]
+    },
+    {
+      "chapitre": "66d97fde-f6ce-5200-9dd5-c10705d91966",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Quatre élèves, quatre problèmes",
+      "competence": "analyser-document",
+      "situation": "En fin de trimestre, la professeure demande à quatre élèves de raconter le moment le plus difficile de leur cycle… sans dire le nom de l’activité. À toi de retrouver le problème que chacun a dû résoudre.",
+      "documents": [
+        {
+          "id": "recits",
+          "type": "dialogue",
+          "modele": "bulles",
+          "titre": "Ce qu’ils racontent",
+          "participants": [
+            { "nom": "Lina", "emoji": "👧", "cote": "gauche" },
+            { "nom": "Yanis", "emoji": "👦", "cote": "droite" },
+            { "nom": "Maëlle", "emoji": "👩", "cote": "gauche" },
+            { "nom": "Tom", "emoji": "🧒", "cote": "droite" }
+          ],
+          "repliques": [
+            { "qui": "Lina", "texte": "Arrivée tout en haut du mur, j’ai regardé en bas… Pour redescendre, il a fallu faire confiance à la corde et à mon assureur." },
+            { "qui": "Yanis", "texte": "Le défenseur a foncé sur moi. J’avais une [[d|seconde]] pour choisir : faire la passe à Inès ou tirer." },
+            { "qui": "Maëlle", "texte": "Le plus dur, c’était les regards de toute la classe sur notre enchaînement. On a répété nos figures jusqu’à ne plus avoir le trac." },
+            { "qui": "Tom", "texte": "En septembre, je courais le 1 000 m en 6 min 10 s. En décembre, en 5 min 50 s !" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Relie chaque élève au champ d’apprentissage qu’il décrit.",
+          "paires": [
+            ["Lina", "Adapter son déplacement (champ 2)"],
+            ["Yanis", "Conduire un affrontement (champ 4)"],
+            ["Maëlle", "S’exprimer devant les autres (champ 3)"],
+            ["Tom", "Produire une performance mesurée (champ 1)"]
+          ],
+          "aide": "Cherche l’indice de chaque bulle : un milieu qui fait peur, un adversaire, un public qui regarde, un chronomètre.",
+          "explication": "Lina grimpe en hauteur : **champ 2** (sa sécurité dans un milieu incertain). Yanis affronte un défenseur : **champ 4**. Maëlle présente un enchaînement : **champ 3**. Tom est chronométré : **champ 1**."
+        },
+        {
+          "type": "zone",
+          "document": "recits",
+          "enonce": "Dans le champ 4, il faut **décider vite**. Touche le mot de Yanis qui montre qu’il avait très peu de temps pour choisir.",
+          "reponse": ["d"],
+          "aide": "Relis la bulle de Yanis : combien de temps avait-il avant que le défenseur n’arrive ?",
+          "explication": "« J’avais une **seconde** pour choisir » : dans un affrontement, l’adversaire ne laisse pas le temps de réfléchir longtemps. Il faut décider vite."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de **secondes** Tom a-t-il amélioré son temps au 1 000 m entre septembre et décembre ?",
+          "reponse": 20,
+          "unite": "s",
+          "aide": "Attention : 1 minute = 60 secondes. De 6 min 10 s à 6 min, puis de 6 min à 5 min 50 s, combien de secondes en tout ?",
+          "explication": "6 min 10 s = 370 s et 5 min 50 s = 350 s. 370 − 350 = **20 secondes** gagnées en un trimestre."
+        },
+        {
+          "type": "choix",
+          "enonce": "En calculant ces 20 secondes, quel critère d’évaluation de l’EPS viens-tu de mesurer pour Tom ?",
+          "options": ["La progression", "La performance", "La méthode", "Le rôle tenu"],
+          "reponse": 0,
+          "aide": "Tu n’as pas regardé un seul temps, mais l’écart entre son temps d’arrivée et son point de départ.",
+          "explication": "C’est la **progression** : l’écart avec le point de départ. La performance, elle, serait son temps de décembre (5 min 50 s)."
+        }
+      ]
+    },
+    {
+      "chapitre": "66d97fde-f6ce-5200-9dd5-c10705d91966",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le champ qui manque à Sofiane",
+      "competence": "raisonner",
+      "situation": "Sofiane, en 6e C, a entendu dire qu’une année d’EPS couvre normalement les **quatre champs d’apprentissage**. Il compare le programme de sa classe à l’affiche de l’association sportive (AS) du collège.",
+      "documents": [
+        {
+          "id": "cycles",
+          "type": "tableau",
+          "titre": "Les cycles d’EPS de la 6e C",
+          "source": "Programme imaginé pour l’exercice.",
+          "colonnes": ["Période", "Activité"],
+          "lignes": [
+            ["Sept. – oct.", "Badminton"],
+            ["Nov. – déc.", "Acrosport"],
+            ["Janv. – févr.", "Basket-ball"],
+            ["Mars – avr.", "Demi-fond"],
+            ["Mai – juin", "Danse"]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "as",
+          "type": "fiche",
+          "modele": "affiche",
+          "titre": "L’affiche de l’AS",
+          "entete": "Association sportive",
+          "sousTitre": "Le mercredi après-midi, au collège",
+          "emoji": "🏅",
+          "teinte": "vert",
+          "lignes": [
+            { "texte": "**Escalade** · 13 h 30, mur du gymnase", "id": "escalade" },
+            { "texte": "**Tennis de table** · 13 h 30, salle B", "id": "tennis" },
+            { "texte": "**Course d’orientation** · 14 h, parc de la ville", "id": "co" },
+            { "texte": "**Gymnastique** · 15 h, gymnase", "id": "gym" },
+            { "texte": "**Futsal** · 15 h, plateau sportif", "id": "futsal" }
+          ],
+          "pied": "Ouverte à tous les élèves, débutants bienvenus !"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de cycles de la 6e C relèvent du champ 4, **conduire un affrontement** ?",
+          "reponse": 2,
+          "unite": "cycles",
+          "aide": "Le champ 4 regroupe les sports collectifs, les sports de raquette et les sports de combat.",
+          "explication": "**2 cycles** : le badminton (un sport de raquette) et le basket-ball (un sport collectif)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel champ d’apprentissage la 6e C ne rencontrera-t-elle **pas** cette année ?",
+          "options": [
+            "Champ 1 : produire une performance mesurée",
+            "Champ 2 : adapter son déplacement à des environnements variés",
+            "Champ 3 : s’exprimer par une prestation artistique",
+            "Champ 4 : conduire un affrontement"
+          ],
+          "reponse": 1,
+          "ordreFixe": true,
+          "aide": "Place chaque activité du Doc 1 dans son champ. Lequel reste vide ?",
+          "explication": "Demi-fond : champ 1. Acrosport et danse : champ 3. Badminton et basket : champ 4. **Le champ 2** reste vide : aucune activité dans un milieu qui change (hauteur, eau profonde, nature)."
+        },
+        {
+          "type": "zone",
+          "document": "as",
+          "enonce": "Sur l’affiche de l’AS, touche les **deux** activités qui feraient découvrir à Sofiane le champ qui manque à sa classe.",
+          "reponse": ["escalade", "co"],
+          "multiple": true,
+          "aide": "Le champ qui manque se joue dans un environnement incertain : la hauteur, l’eau profonde, la nature.",
+          "explication": "L’**escalade** (la hauteur) et la **course d’orientation** (un parc qu’on ne connaît pas) relèvent du champ 2 : on y gère sa sécurité dans un milieu incertain. Le tennis de table et le futsal sont du champ 4 ; la gymnastique, du champ 3."
+        },
+        {
+          "type": "choix",
+          "enonce": "Sofiane n’est pas le meilleur de sa classe en sport. Peut-il s’inscrire à l’AS ?",
+          "options": [
+            "Oui : l’AS est ouverte à tous, débutants compris",
+            "Non : l’AS est réservée aux meilleurs de chaque classe",
+            "Seulement s’il a de bonnes notes en EPS",
+            "Seulement dans une activité qu’il connaît déjà"
+          ],
+          "reponse": 0,
+          "aide": "Relis le bas de l’affiche.",
+          "explication": "**Oui** : l’AS est « ouverte à tous les élèves ». Elle prolonge l’EPS le mercredi et sert justement à découvrir des activités absentes des cours."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la conclusion de Sofiane.",
+          "texte": "Ma classe couvre trois champs sur quatre. Il lui manque celui où l’on gère sa ___ dans un milieu ___. Pour le découvrir, je peux m’inscrire à l’___ le mercredi.",
+          "reponses": [["sécurité"], ["incertain", "inconnu", "variable"], ["AS", "association sportive"]],
+          "banque": ["sécurité", "incertain", "AS", "vitesse", "artistique", "étude"],
+          "aide": "Relis le problème posé par le champ 2 dans ton cours, puis regarde le titre de l’affiche.",
+          "explication": "Il manque le champ où l’on gère sa **sécurité** dans un milieu **incertain**. L’**AS** du mercredi, avec l’escalade et la course d’orientation, comble ce manque."
+        }
+      ]
+    }
+  ]
+}

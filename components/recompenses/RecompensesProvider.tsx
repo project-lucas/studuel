@@ -12,7 +12,7 @@ import {
   type ReactNode,
 } from 'react'
 import { createPortal } from 'react-dom'
-import { CristalIcon, EcuIcon } from '@/components/ui/MonnaieIcon'
+import { CristalIcon } from '@/components/ui/MonnaieIcon'
 import {
   agregerGains,
   definition,
@@ -322,7 +322,7 @@ function JetonEnVol({
 }
 
 /**
- * Le dessin du jeton. Écus et cristaux reprennent EXACTEMENT l'illustration de
+ * Le dessin du jeton. Le cristal reprend EXACTEMENT l'illustration de
  * la pastille visée — c'est ce qui fait qu'on reconnaît l'objet qui arrive
  * comme celui qui est déjà là-haut.
  *
@@ -330,7 +330,6 @@ function JetonEnVol({
  * l'écusson de niveau, en miniature. Même raison, même effet.
  */
 function IconeJeton({ unite }: { unite: UniteGain }) {
-  if (unite === 'ecu') return <EcuIcon className="size-6 drop-shadow-md" />
   if (unite === 'gemme') return <CristalIcon className="size-6 drop-shadow-md" />
   return (
     <span className="block size-5 rounded-full bg-gradient-to-b from-primary to-[color-mix(in_oklch,var(--primary),black_24%)] ring-2 ring-highlight/80 shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_2px_6px_rgba(0,0,0,0.35)]" />

@@ -89,6 +89,8 @@ export default async function FlashcardsPage({
         <LessonFlashcards
           cards={cards}
           backHref={backHref}
+          // La matière étiquette les items de la file « À revoir ».
+          subject={subject.name}
           title={`${cards.length} carte${cards.length > 1 ? 's' : ''} · ${lesson.title}`}
         />
       ) : (

@@ -17,6 +17,7 @@ import {
   type Source,
 } from '@/lib/welcome'
 import { schoolLevelForGrade, SCHOOL_LEVEL_LABEL } from '@/lib/clan'
+import { PORTRAIT_KEYS, portraitSrc, type PortraitKey } from '@/lib/portraits'
 import PencilLogo from './PencilLogo'
 import {
   Bubble,
@@ -510,6 +511,124 @@ export function DailyGoalStep({
           })}
         </OptionGroup>
       </div>
+    </div>
+  )
+}
+
+// ---------------------------------------------------------------------------
+// Écran 10bis — Ton avatar (le blason de joueur), ajouté le 16/09/2026
+//
+// Treize blasons peints (lib/portraits.ts), un seul à choisir. L'écran vient
+// JUSTE APRÈS le mini-quiz et JUSTE AVANT le compte : l'élève vient de jouer,
+// il se donne un visage, puis il l'enregistre. Le choix voyage dans le brouillon
+// (`answers.avatar`) jusqu'au metadata d'inscription.
+//
+// Le blason retenu s'affiche en grand au-dessus de la grille — c'est lui qu'on
+// retrouvera sur la carte de l'onglet Moi, à la même taille. Pas de nom sous
+// les vignettes : un visage se reconnaît, il ne se lit pas.
+// ---------------------------------------------------------------------------
+function PortraitCell({
+  portrait,
+  index,
+  selected,
+  onPick,
+}: {
+  portrait: PortraitKey
+  index: number
+  selected: boolean
+  onPick: () => void
+}) {
+  const { pop, onPress, onAnimationEnd } = usePressFx()
+  return (
+    <button
+      type="button"
+      role="radio"
+      aria-checked={selected}
+      aria-label={`Blason ${index + 1}`}
+      onClick={() => {
+        onPress()
+        onPick()
+      }}
+      onAnimationEnd={onAnimationEnd}
+      className={cn(
+        'onb-card relative w-[calc(25%-9px)] p-1.5',
+        selected && 'onb-card-on',
+        pop && 'onb-pop',
+      )}
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={portraitSrc(portrait)}
+        alt=""
+        width={384}
+        height={384}
+        loading="lazy"
+        className="block aspect-square w-full object-contain"
+      />
+      {selected ? (
+        <span
+          aria-hidden="true"
+          className="absolute -top-1.5 -right-1.5 flex size-6 items-center justify-center rounded-full text-white"
+          style={{ background: 'var(--onb-pp)', boxShadow: '0 2px 0 var(--onb-ppd)' }}
+        >
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" strokeWidth="3.2">
+            <path d="M5 12.5l4.5 4.5L19 7.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </span>
+      ) : null}
+    </button>
+  )
+}
+
+export function AvatarStep({
+  answers,
+  onPick,
+}: {
+  answers: OnboardingAnswers
+  onPick: (portrait: PortraitKey) => void
+}) {
+  const chosen = answers.avatar
+  return (
+    <div className="flex flex-1 flex-col">
+      <StepHead
+        title="Choisis ton avatar"
+        subtitle="C’est lui qui te représentera face à tes rivaux. Tu pourras le changer au vestiaire."
+      />
+
+      {/* Le blason retenu, en grand — la place qu'il aura sur la carte Moi. */}
+      <div className="flex justify-center pt-5 pb-4" aria-live="polite">
+        {chosen ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            key={chosen}
+            src={portraitSrc(chosen)}
+            alt={`Blason ${PORTRAIT_KEYS.indexOf(chosen) + 1}, choisi`}
+            width={384}
+            height={384}
+            className="onb-pop size-[132px] object-contain drop-shadow-[0_10px_18px_rgba(60,30,120,0.28)]"
+          />
+        ) : (
+          <span
+            aria-hidden="true"
+            className="flex size-[132px] items-center justify-center rounded-[28px] border-2 border-dashed text-[44px] font-extrabold"
+            style={{ borderColor: 'var(--onb-line)', color: 'var(--onb-mut)' }}
+          >
+            ?
+          </span>
+        )}
+      </div>
+
+      <OptionGroup label="Ton avatar" className="flex flex-wrap justify-center gap-3">
+        {PORTRAIT_KEYS.map((p, i) => (
+          <PortraitCell
+            key={p}
+            portrait={p}
+            index={i}
+            selected={chosen === p}
+            onPick={() => onPick(p)}
+          />
+        ))}
+      </OptionGroup>
     </div>
   )
 }

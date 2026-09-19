@@ -1,475 +1,274 @@
 'use client'
 
-import { useState, useTransition } from 'react'
+import { useRef, useState, useSyncExternalStore, useTransition } from 'react'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 import {
   ArrowLeft,
-  BarChart3,
-  ChevronDown,
+  FileText,
   FolderPlus,
   Pencil,
   Play,
   Plus,
-  Rows3,
-  Search,
+  Settings2,
   Sparkles,
-  Trash2,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
+import { toast } from '@/lib/toast'
 import {
-  COURSE_COLORS,
-  COURSE_ICONS,
   normalizeCourseColor,
   normalizeCourseIcon,
   QUESTION_TYPES,
   TYPE_LABEL,
   type CourseChapter,
   type CourseQuestionType,
-  type CourseStats,
 } from '@/lib/carnet-cours'
+import { tronquerPourIa } from '@/lib/carnet/pdf-texte'
 import {
   createChapter,
   createQuestion,
-  deleteCourse,
   updateCourse,
-} from '@/app/reviser/cours/actions'
+} from '@/app/carnet/cours/actions'
 import BottomSheet from '@/components/carnet/BottomSheet'
-import CourseTree from '@/components/carnet/CourseTree'
-import SaisieRapide from '@/components/carnet/SaisieRapide'
+import CourseLook from '@/components/carnet/CourseLook'
+import DossiersDuCours from '@/components/carnet/DossiersDuCours'
 import GenerationIaSheet from '@/components/carnet/GenerationIaSheet'
+import { lireTextePdf } from '@/components/carnet/lirePdf'
+import PlanningCours from '@/components/carnet/PlanningCours'
 import ReglagesRevision, {
   type CourseReglages,
   type MatiereChoix,
 } from '@/components/carnet/ReglagesRevision'
+import type { Plan } from '@/lib/carnet/planning'
 import SessionOptionsSheet, {
   type EtiquetteChoix,
 } from '@/components/carnet/SessionOptionsSheet'
-import {
-  COURSE_DOT,
-  COURSE_ICON,
-  COURSE_TINT,
-  TYPE_ICON,
-} from '@/components/carnet/style'
+import { COURSE_ICON, COURSE_TINT, TYPE_ICON } from '@/components/carnet/style'
 import type { CourseHeader, CourseQuestionRow } from '@/components/carnet/types'
 
-type Tab = 'contenu' | 'resultats' | 'parametres'
+// -----------------------------------------------------------------------------
+// L'ÉCRAN D'UN DOSSIER DU CARNET — UN SEUL BLOC, COMME WOOFLASH.
+//
+// Repris de zéro le 10/09/2026 (Lucas : « tout doit être dans un bloc, pas de
+// séparation » ; « épure le tout, on repart de zéro ici » ; puis « comme
+// Wooflash »). Au-dessus, la flèche « Mon carnet » ; puis UNE carte blanche
+// posée sur le fond crème, et tout est dedans :
+//   1. le titre et l'icône, tous deux CUSTOM : on touche l'icône pour changer
+//      icône et couleur, on touche le titre pour le réécrire ; le ▶ n'apparaît
+//      que quand des cartes sont prêtes ;
+//   2. « CHAPITRES & QUESTIONS », le compte, et LE + À CÔTÉ, qui ouvre
+//      « Créer du contenu » : créer une question, générer des questions avec
+//      l'IA, créer un chapitre, insérer un PDF (lu dans le navigateur, son
+//      texte part à l'IA comme un cours collé — `components/carnet/lirePdf`) ;
+//   3. les chapitres, une ligne chacun, leurs questions dessous ; le + d'un
+//      chapitre ouvre la même feuille, ciblée sur lui.
+//
+// Ce qui a disparu de cet écran ce jour-là : la carte d'en-tête et sa ligne
+// d'introduction, les quatre onglets (Contenu / Résultats / Planning /
+// Paramètres), les deux gros boutons du dossier vide, l'icône statistiques,
+// la recherche, l'arbre à poignées et menus ⋮ (`CourseTree`), le + flottant,
+// la saisie « plusieurs cartes d'un coup » (`SaisieRapide`). Les statistiques
+// n'ont plus d'écran.
+//
+// STUDUEL, 15/09/2026 : les RÉGLAGES DE RÉVISION (plafonds, tolérance, date du
+// contrôle, matière — 315/316) et le PLANNING du dossier (353) ne sont pas
+// perdus pour autant : ils vivent dans UNE feuille du bas, « Réglages de
+// révision », ouverte par l'engrenage à côté du ▶ — ou d'emblée avec
+// `?reglages=1`, le lien que propose le ⋯ d'un dossier depuis le carnet.
+// -----------------------------------------------------------------------------
 
-const TABS: { id: Tab; label: string }[] = [
-  { id: 'contenu', label: 'Contenu' },
-  { id: 'resultats', label: 'Résultats' },
-  { id: 'parametres', label: 'Paramètres' },
-]
-
-// ------------------------------------------------------------ onglet stats ----
-
-function StatTile({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="rounded-2xl bg-muted/40 px-3 py-3 text-center">
-      <p className="font-heading text-2xl font-extrabold text-foreground tabular-nums">
-        {value}
-      </p>
-      <p className="mt-0.5 text-[11px] font-bold text-muted-foreground">
-        {label}
-      </p>
-    </div>
-  )
-}
-
-function ResultsPanel({ stats }: { stats: CourseStats }) {
-  const totalQuestions = stats.neverSeen + stats.struggling + stats.mastered
-  const bar = (n: number) =>
-    totalQuestions > 0 ? Math.round((n / totalQuestions) * 100) : 0
-
-  if (stats.totalAttempts === 0) {
-    return (
-      <p className="rounded-2xl bg-muted/40 px-3 py-4 text-center text-sm text-muted-foreground">
-        Pas encore de statistiques — lance ta première session avec le bouton «
-        Réviser » 🎯
-      </p>
-    )
-  }
-
-  const rows: { label: string; count: number; className: string }[] = [
-    { label: 'Maîtrisées', count: stats.mastered, className: 'bg-primary' },
-    {
-      label: 'À retravailler',
-      count: stats.struggling,
-      className: 'bg-destructive',
-    },
-    {
-      label: 'Jamais vues',
-      count: stats.neverSeen,
-      className: 'bg-muted-foreground/40',
-    },
-  ]
-
-  return (
-    <div className="flex flex-col gap-3">
-      <div className="grid grid-cols-2 gap-2">
-        <StatTile
-          label="Réussite"
-          value={stats.successPct !== null ? `${stats.successPct} %` : '—'}
-        />
-        <StatTile
-          label="Réponses données"
-          value={String(stats.totalAttempts)}
-        />
-      </div>
-      <div className="flex flex-col gap-2.5 rounded-2xl bg-muted/40 p-3">
-        {rows.map((r) => (
-          <div key={r.label}>
-            <div className="mb-1 flex items-center justify-between text-[11px] font-bold">
-              <span className="text-foreground">{r.label}</span>
-              <span className="text-muted-foreground tabular-nums">
-                {r.count}
-              </span>
-            </div>
-            <div className="h-2 overflow-hidden rounded-full bg-black/5">
-              <div
-                className={cn('h-full rounded-full', r.className)}
-                style={{ width: `${bar(r.count)}%` }}
-              />
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
-
-// ------------------------------------------------------- allure d'un cours ----
-
-/**
- * Les deux réglages d'ALLURE d'un cours : son icône et sa couleur. Extraits
- * pour vivre à deux endroits — dans l'onglet Paramètres (là où on range les
- * réglages) et dans la feuille « Personnaliser » qu'on ouvre en touchant
- * directement la pastille du cours. Sans ce raccourci, changer l'icône
- * demandait de savoir qu'elle se règle dans un troisième onglet : cinq cours
- * finissaient identiques, tous « Nouveau cours » avec le même livre violet.
- */
-function CourseLook({
-  course,
-  disabled,
-  onPatch,
-}: {
-  course: CourseHeader
-  disabled: boolean
-  onPatch: (p: Parameters<typeof updateCourse>[1]) => void
-}) {
-  return (
-    <div className="flex flex-col gap-4">
-      <div>
-        <p className="font-heading mb-1.5 text-sm font-extrabold text-foreground">
-          Icône
-        </p>
-        <div className="grid grid-cols-5 gap-2">
-          {COURSE_ICONS.map((iconId) => {
-            const Icon = COURSE_ICON[iconId]
-            const active = normalizeCourseIcon(course.icon) === iconId
-            return (
-              <button
-                key={iconId}
-                type="button"
-                disabled={disabled}
-                aria-pressed={active}
-                aria-label={`Icône ${iconId}`}
-                onClick={() => {
-                  sfx.tap()
-                  onPatch({ icon: iconId })
-                }}
-                className={cn(
-                  'flex aspect-square cursor-pointer items-center justify-center rounded-2xl transition disabled:opacity-60',
-                  active
-                    ? 'bg-primary text-primary-foreground ring-2 ring-primary'
-                    : 'bg-muted/60 text-foreground hover:bg-muted',
-                )}
-              >
-                <Icon className="size-5" strokeWidth={2.2} aria-hidden="true" />
-              </button>
-            )
-          })}
-        </div>
-      </div>
-
-      <div>
-        <p className="font-heading mb-1.5 text-sm font-extrabold text-foreground">
-          Couleur
-        </p>
-        <div className="flex gap-2.5">
-          {COURSE_COLORS.map((colorId) => {
-            const active = normalizeCourseColor(course.color) === colorId
-            return (
-              <button
-                key={colorId}
-                type="button"
-                disabled={disabled}
-                aria-pressed={active}
-                aria-label={`Couleur ${colorId}`}
-                onClick={() => {
-                  sfx.tap()
-                  onPatch({ color: colorId })
-                }}
-                className={cn(
-                  'size-9 cursor-pointer rounded-full transition disabled:opacity-60',
-                  COURSE_DOT[colorId],
-                  active && 'ring-2 ring-foreground/50 ring-offset-2',
-                )}
-              />
-            )
-          })}
-        </div>
-      </div>
-    </div>
-  )
-}
-
-// -------------------------------------------------------- onglet paramètres ----
-
-function SettingsPanel({ course }: { course: CourseHeader }) {
-  const router = useRouter()
-  const [description, setDescription] = useState(course.description ?? '')
-  const [pending, startTransition] = useTransition()
-  const [saved, setSaved] = useState(false)
-
-  const patch = (p: Parameters<typeof updateCourse>[1]) => {
-    if (pending) return
-    setSaved(false)
-    startTransition(async () => {
-      await updateCourse(course.id, p)
-      router.refresh()
-    })
-  }
-
-  const remove = () => {
-    if (pending) return
-    const ok = window.confirm(
-      `Supprimer le cours « ${course.title} » et tout son contenu ? Cette action est définitive.`,
-    )
-    if (!ok) return
-    startTransition(async () => {
-      const res = await deleteCourse(course.id)
-      if (res.ok) router.push('/reviser')
-    })
-  }
-
-  return (
-    <div className="flex flex-col gap-4" aria-busy={pending}>
-      {/* Introduction du cours. */}
-      <div>
-        <label
-          htmlFor="cours-intro"
-          className="font-heading mb-1.5 block text-sm font-extrabold text-foreground"
-        >
-          Introduction
-        </label>
-        <textarea
-          id="cours-intro"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          rows={3}
-          maxLength={500}
-          placeholder="De quoi parle ce cours ? (affiché sous le titre)"
-          className="w-full rounded-2xl border border-black/10 bg-white px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary/40 focus:outline-none"
-        />
-        <button
-          type="button"
-          disabled={pending}
-          onClick={() => {
-            sfx.tap()
-            startTransition(async () => {
-              await updateCourse(course.id, { description })
-              setSaved(true)
-              router.refresh()
-            })
-          }}
-          className="font-heading mt-1.5 rounded-full bg-primary px-4 py-2 text-xs font-extrabold text-primary-foreground shadow-sm transition active:translate-y-px disabled:opacity-60"
-        >
-          {pending ? 'Enregistrement…' : saved ? 'Enregistré ✓' : 'Enregistrer'}
-        </button>
-      </div>
-
-      {/* Icône et couleur (mêmes commandes que la feuille « Personnaliser »). */}
-      <CourseLook course={course} disabled={pending} onPatch={patch} />
-
-      {/* Zone dangereuse. */}
-      <div className="mt-2 border-t border-black/5 pt-4">
-        <button
-          type="button"
-          disabled={pending}
-          onClick={remove}
-          className="flex cursor-pointer items-center gap-2 rounded-full bg-destructive/10 px-4 py-2.5 text-sm font-bold text-destructive disabled:opacity-60"
-        >
-          <Trash2 className="size-4" aria-hidden="true" />
-          Supprimer ce cours
-        </button>
-      </div>
-    </div>
-  )
-}
-
-// -------------------------------------------------------------------- écran ----
-
-/**
- * L'écran d'un cours du carnet : header (icône, titre éditable, introduction,
- * bouton « Réviser » à menu), icône statistiques flottante en haut à droite,
- * onglets Contenu / Résultats / Paramètres, arbre des chapitres & questions,
- * bouton flottant « + » → feuille de création (question, IA, chapitre,
- * imports « Bientôt »).
- */
 export default function CourseScreen({
   course,
   chapters,
   questions,
-  stats,
   etiquettes = [],
-  reglages,
-  matieres = [],
   photoDisponible = false,
+  reglages,
+  matieres,
+  plans,
+  cartesParChapitre,
+  today,
 }: {
   course: CourseHeader
   chapters: CourseChapter[]
   questions: CourseQuestionRow[]
-  stats: CourseStats
   /** Les étiquettes de l'élève, proposées comme portée de session. */
   etiquettes?: EtiquetteChoix[]
-  /** Les réglages de révision du cours (migrations 315 / 316). */
-  reglages: CourseReglages
-  matieres?: MatiereChoix[]
   /** Un lecteur d'images est branché côté serveur (voir la page). */
   photoDisponible?: boolean
+  /** Les réglages de révision du cours (315/316) et les matières du catalogue. */
+  reglages: CourseReglages
+  matieres: MatiereChoix[]
+  /** Les rendez-vous du planning (353), et le poids de chaque chapitre. */
+  plans: Plan[]
+  cartesParChapitre: Record<string, number>
+  /** Clé de jour UTC d'aujourd'hui. */
+  today: string
 }) {
   const router = useRouter()
   const params = useSearchParams()
-  const [tab, setTab] = useState<Tab>('contenu')
-  const [editingTitle, setEditingTitle] = useState(false)
-  const [titleDraft, setTitleDraft] = useState(course.title)
-  const [reviseOpen, setReviseOpen] = useState(false)
-  const [createOpen, setCreateOpen] = useState(false)
-  const [lookOpen, setLookOpen] = useState(false)
-  // Conteneur cible de la création (racine par défaut, chapitre via son menu).
-  const [createTarget, setCreateTarget] = useState<string | null>(null)
-  const [typePickerOpen, setTypePickerOpen] = useState(false)
-  const [saisieOpen, setSaisieOpen] = useState(false)
-  const [recherche, setRecherche] = useState('')
-  // `?ia=1` : le cours vient d'être créé depuis « Cours généré par l'IA » du
-  // carnet — la feuille de génération s'ouvre d'emblée, sinon l'élève retombe
-  // sur un cours vide sans savoir par où on lui avait promis de commencer.
-  const [aiOpen, setAiOpen] = useState(params.get('ia') === '1')
   const [pending, startTransition] = useTransition()
 
-  const Icon = COURSE_ICON[normalizeCourseIcon(course.icon)]
-  const tint = COURSE_TINT[normalizeCourseColor(course.color)]
-  const readyCount = questions.filter((q) => q.ready).length
-  // La recherche porte sur le RÉSUMÉ déjà calculé côté serveur : pas besoin du
-  // contenu complet des questions pour retrouver « celle sur Verdun ».
-  const trouvees = (() => {
-    const q = recherche.trim().toLowerCase()
-    if (q.length === 0) return []
-    return questions.filter((x) => x.summary.toLowerCase().includes(q))
-  })()
+  // Le titre et l'allure.
+  const [titreEnSaisie, setTitreEnSaisie] = useState(false)
+  const [titreBrouillon, setTitreBrouillon] = useState(course.title)
+  const [allureOuverte, setAllureOuverte] = useState(false)
 
-  const commitTitle = () => {
-    setEditingTitle(false)
-    const title = titleDraft.trim()
-    if (title.length === 0 || title === course.title) {
-      setTitleDraft(course.title)
+  // Le chapitre qui vient d'être créé se nomme tout de suite.
+  const [renommerId, setRenommerId] = useState<string | null>(null)
+
+  // « Créer du contenu » : dans quel chapitre (null = le dossier), et par quelle porte.
+  const [ajoutDans, setAjoutDans] = useState<string | null>(null)
+  const [ajoutOuvert, setAjoutOuvert] = useState(false)
+  const [typeOuvert, setTypeOuvert] = useState(false)
+  // `?ia=1` : le dossier vient d'être créé depuis le carnet avec l'IA — la
+  // feuille de génération s'ouvre d'emblée, sur le dossier entier.
+  const [iaOuverte, setIaOuverte] = useState(params.get('ia') === '1')
+  // Le texte d'un PDF lu dans le navigateur, remis à la feuille IA.
+  const [textePdf, setTextePdf] = useState<string | undefined>(undefined)
+  const [lecturePdf, setLecturePdf] = useState(false)
+  const pdfRef = useRef<HTMLInputElement | null>(null)
+
+  const [reviserOuvert, setReviserOuvert] = useState(false)
+  // `?reglages=1` : on arrive du ⋯ d'un dossier — la feuille des réglages
+  // s'ouvre d'emblée.
+  const [reglagesOuverts, setReglagesOuverts] = useState(
+    params.get('reglages') === '1',
+  )
+  // Les feuilles demandées par l'URL (`?ia=1`, `?reglages=1`) ne s'ouvrent
+  // qu'APRÈS l'hydratation : une feuille montante ne rend rien côté serveur
+  // (pas de `document`), et l'ouvrir dès le premier rendu client faisait
+  // diverger le HTML — React rejouait toute la page. Le magasin externe rend
+  // `false` au serveur et pendant l'hydratation, `true` ensuite.
+  const hydrate = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  )
+
+  const Icone = COURSE_ICON[normalizeCourseIcon(course.icon)]
+  const teinte = COURSE_TINT[normalizeCourseColor(course.color)]
+  const cartesPretes = questions.filter((q) => q.ready).length
+
+  const validerTitre = () => {
+    setTitreEnSaisie(false)
+    const titre = titreBrouillon.trim()
+    if (titre.length === 0 || titre === course.title) {
+      setTitreBrouillon(course.title)
       return
     }
     startTransition(async () => {
-      await updateCourse(course.id, { title })
+      const r = await updateCourse(course.id, { title: titre })
+      if (!r.ok) toast('Le titre n’a pas pu être enregistré.', 'error')
       router.refresh()
     })
   }
 
-  const addChapter = (parentId: string | null) => {
+  const creerChapitre = () => {
     if (pending) return
-    setCreateOpen(false)
+    setAjoutOuvert(false)
     startTransition(async () => {
-      await createChapter(course.id, parentId)
-      router.refresh()
-    })
-  }
-
-  const addQuestion = (type: CourseQuestionType) => {
-    if (pending) return
-    setTypePickerOpen(false)
-    setCreateOpen(false)
-    startTransition(async () => {
-      const res = await createQuestion(course.id, createTarget, type)
-      if (res.ok && res.id) {
-        router.push(`/reviser/cours/${course.id}/question/${res.id}`)
+      const r = await createChapter(course.id, null)
+      if (!r.ok || !r.id) {
+        toast('Le chapitre n’a pas pu être créé.', 'error')
+        return
       }
+      setRenommerId(r.id)
+      router.refresh()
     })
   }
+
+  const ouvrirAjout = (chapterId: string) => {
+    sfx.tap()
+    setAjoutDans(chapterId)
+    setAjoutOuvert(true)
+  }
+
+  const creerQuestion = (type: CourseQuestionType) => {
+    if (pending) return
+    setTypeOuvert(false)
+    startTransition(async () => {
+      const r = await createQuestion(course.id, ajoutDans, type)
+      if (!r.ok || !r.id) {
+        toast('La question n’a pas pu être créée.', 'error')
+        return
+      }
+      router.push(`/carnet/cours/${course.id}/question/${r.id}`)
+    })
+  }
+
+  const ouvrirIa = (texte?: string) => {
+    setAjoutOuvert(false)
+    setTextePdf(texte)
+    setIaOuverte(true)
+  }
+  /** Le + d'un dossier : « Créer du contenu » ciblé sur lui. */
+
+  /** « Insérer un PDF » : le fichier est lu ici, seul son texte part à l'IA. */
+  const insererPdf = async (file: File | undefined) => {
+    if (!file || lecturePdf) return
+    setLecturePdf(true)
+    try {
+      const brut = await lireTextePdf(file)
+      if (brut.trim().length === 0) {
+        toast(
+          'Ce PDF ne contient pas de texte lisible. Prends la page en photo.',
+          'error',
+        )
+        return
+      }
+      const { texte, tronque } = tronquerPourIa(brut)
+      if (tronque) toast('Le PDF est long : seul le début sera lu.')
+      ouvrirIa(texte)
+    } catch (e) {
+      toast(
+        e instanceof Error && e.message === 'pdf-trop-lourd'
+          ? 'Ce PDF est trop lourd.'
+          : 'Ce PDF n’a pas pu être lu.',
+        'error',
+      )
+    } finally {
+      setLecturePdf(false)
+      if (pdfRef.current) pdfRef.current.value = ''
+    }
+  }
+
+  const cibleAjout = chapters.find((c) => c.id === ajoutDans)?.title ?? null
 
   return (
-    <div className="relative mx-auto w-full max-w-md pb-28">
-      {/* Icône statistiques flottante, en haut à droite. */}
-      <button
-        type="button"
-        onClick={() => {
-          sfx.tap()
-          setTab('resultats')
-        }}
-        aria-label="Voir les statistiques du cours"
-        className="absolute top-0 right-0 z-30 flex size-10 cursor-pointer items-center justify-center rounded-2xl bg-highlight/25 text-foreground shadow-sm ring-1 ring-black/5 transition active:scale-95"
+    <div className="relative mx-auto w-full max-w-md pb-24">
+      {/* LE BLOC : tout le dossier, posé sur le fond crème. */}
+      <section
+        aria-busy={pending || lecturePdf}
+        className="rounded-[1.75rem] bg-white p-4 shadow-sm ring-1 ring-black/5"
       >
-        <BarChart3 className="size-5" strokeWidth={2.2} aria-hidden="true" />
-      </button>
+        {/* 0. La flèche retour, dans l'angle haut gauche du bloc. */}
+        <Link
+          href="/carnet"
+          onClick={() => sfx.tap()}
+          aria-label="Retour à mon carnet"
+          className="mb-3 flex size-9 items-center justify-center rounded-full bg-primary/10 text-primary transition active:scale-90"
+        >
+          <ArrowLeft className="size-4" strokeWidth={2.6} aria-hidden="true" />
+        </Link>
 
-      {/* Retour au carnet. */}
-      <Link
-        href="/reviser"
-        onClick={() => sfx.tap()}
-        className="mb-3 inline-flex items-center gap-1.5 text-sm font-bold text-muted-foreground hover:text-foreground"
-      >
-        <ArrowLeft className="size-4" aria-hidden="true" />
-        Mon carnet
-      </Link>
-
-      {/* Header : icône + titre éditable + introduction + Réviser. */}
-      <header className="rev-card rounded-3xl bg-white p-4 pr-12 shadow-sm ring-1 ring-black/5">
-        <div className="flex items-start gap-3">
-          {/* La pastille EST la commande de personnalisation : on touche
-              l'icône du cours pour la changer, là où on la regarde. */}
-          {/* EN PREMIER, parce que c'est le geste qui décide si un cours se
-              remplit ou reste vide : plusieurs cartes d'affilée, ou une liste
-              collée, sans jamais changer de page. */}
+        {/* 1. Le titre et l'icône. */}
+        <div className="flex items-center gap-3">
           <button
             type="button"
             onClick={() => {
               sfx.tap()
-              setCreateOpen(false)
-              setSaisieOpen(true)
-            }}
-            className="flex cursor-pointer items-center gap-3 rounded-2xl bg-primary px-4 py-3 text-left text-sm font-bold text-primary-foreground shadow-sm hover:brightness-105"
-          >
-            <span className="flex size-8 shrink-0 items-center justify-center rounded-xl bg-white/20">
-              <Rows3 className="size-4" aria-hidden="true" />
-            </span>
-            <span className="min-w-0">
-              <span className="block">Plusieurs cartes d’un coup</span>
-              <span className="block text-[11px] font-semibold opacity-80">
-                À la suite, ou en collant ta liste
-              </span>
-            </span>
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              sfx.tap()
-              setLookOpen(true)
+              setAllureOuverte(true)
             }}
             aria-haspopup="dialog"
-            aria-label="Personnaliser l’icône et la couleur du cours"
+            aria-label="Changer l’icône et la couleur"
             className={cn(
-              'relative flex size-12 shrink-0 cursor-pointer items-center justify-center rounded-2xl transition active:scale-95',
-              tint,
+              'relative flex size-14 shrink-0 cursor-pointer items-center justify-center rounded-2xl transition active:scale-95',
+              teinte,
             )}
           >
-            <Icon className="size-6" strokeWidth={2.2} aria-hidden="true" />
+            <Icone className="size-7" strokeWidth={2.2} aria-hidden="true" />
             <span
               aria-hidden="true"
               className="absolute -right-1 -bottom-1 flex size-5 items-center justify-center rounded-full bg-white text-primary shadow-sm ring-1 ring-black/5"
@@ -477,21 +276,23 @@ export default function CourseScreen({
               <Pencil className="size-3" strokeWidth={2.6} />
             </span>
           </button>
+
           <div className="min-w-0 flex-1">
-            {editingTitle ? (
+            {titreEnSaisie ? (
               <form
                 onSubmit={(e) => {
                   e.preventDefault()
-                  commitTitle()
+                  validerTitre()
                 }}
               >
                 <input
                   autoFocus
-                  value={titleDraft}
-                  onChange={(e) => setTitleDraft(e.target.value)}
-                  onBlur={commitTitle}
+                  value={titreBrouillon}
+                  onChange={(e) => setTitreBrouillon(e.target.value)}
+                  onFocus={(e) => e.currentTarget.select()}
+                  onBlur={validerTitre}
                   maxLength={120}
-                  aria-label="Titre du cours"
+                  aria-label="Titre du dossier"
                   className="font-heading w-full rounded-xl border border-primary/40 bg-white px-2 py-1 text-lg font-extrabold text-foreground focus:ring-2 focus:ring-primary/40 focus:outline-none"
                 />
               </form>
@@ -500,209 +301,127 @@ export default function CourseScreen({
                 type="button"
                 onClick={() => {
                   sfx.tap()
-                  setTitleDraft(course.title)
-                  setEditingTitle(true)
+                  setTitreBrouillon(course.title)
+                  setTitreEnSaisie(true)
                 }}
-                className="group flex w-full cursor-pointer items-start gap-1.5 text-left"
+                aria-label={`Renommer ${course.title}`}
+                className="group flex w-full cursor-pointer items-center gap-1.5 text-left"
               >
-                <h1 className="font-heading line-clamp-2 min-w-0 text-lg leading-snug font-extrabold text-foreground">
+                <h1 className="font-heading line-clamp-2 min-w-0 text-xl leading-snug font-extrabold text-foreground">
                   {course.title}
                 </h1>
                 <Pencil
-                  className="mt-1 size-3.5 shrink-0 text-muted-foreground/60 group-hover:text-primary"
+                  className="size-3.5 shrink-0 text-muted-foreground/60 group-hover:text-primary"
                   aria-hidden="true"
                 />
               </button>
             )}
+            <p className="mt-0.5 text-xs font-semibold text-muted-foreground">
+              {cartesPretes === 0
+                ? 'Aucune carte prête'
+                : `${cartesPretes} carte${cartesPretes > 1 ? 's' : ''} prête${cartesPretes > 1 ? 's' : ''}`}
+            </p>
+          </div>
+
+          {/* L'engrenage : les réglages de révision et le planning, en feuille. */}
+          <button
+            type="button"
+            onClick={() => {
+              sfx.tap()
+              setReglagesOuverts(true)
+            }}
+            aria-haspopup="dialog"
+            aria-label="Réglages de révision"
+            title="Réglages de révision"
+            className="flex size-9 shrink-0 cursor-pointer items-center justify-center rounded-full bg-muted/60 text-muted-foreground transition hover:bg-muted active:scale-90"
+          >
+            <Settings2
+              className="size-4"
+              strokeWidth={2.4}
+              aria-hidden="true"
+            />
+          </button>
+
+          {cartesPretes > 0 ? (
             <button
               type="button"
               onClick={() => {
                 sfx.tap()
-                setTab('parametres')
+                setReviserOuvert(true)
               }}
-              className="mt-0.5 block w-full cursor-pointer truncate text-left text-xs font-semibold text-muted-foreground"
+              aria-haspopup="dialog"
+              aria-label="Réviser ce dossier"
+              className="flex size-12 shrink-0 cursor-pointer items-center justify-center rounded-full bg-primary text-primary-foreground shadow-sm transition active:scale-90"
             >
-              {course.description ?? 'Ajouter une introduction'}
+              <Play
+                className="size-5 fill-current"
+                strokeWidth={2.6}
+                aria-hidden="true"
+              />
             </button>
-          </div>
+          ) : null}
         </div>
 
-        <button
-          type="button"
-          disabled={readyCount === 0}
-          onClick={() => {
-            sfx.tap()
-            setReviseOpen(true)
-          }}
-          aria-haspopup="dialog"
-          className="font-heading mt-3 flex w-full cursor-pointer items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 text-sm font-extrabold text-primary-foreground shadow-sm transition active:translate-y-px disabled:opacity-50"
-        >
-          <Play className="size-4" strokeWidth={2.6} aria-hidden="true" />
-          Réviser
-          <ChevronDown className="size-4" aria-hidden="true" />
-        </button>
-        {readyCount === 0 ? (
-          <p className="mt-1.5 text-center text-[11px] font-semibold text-muted-foreground">
-            Ajoute au moins une question complète pour lancer une session.
-          </p>
-        ) : null}
-      </header>
-
-      {/* Onglets. */}
-      <div
-        role="tablist"
-        aria-label="Sections du cours"
-        className="mt-3 flex gap-2"
-      >
-        {TABS.map((t) => (
+        {/* 2. « Chapitres & Questions », le compte, et « Ajouter un dossier ».
+            Le + de CHAQUE dossier, lui, crée du contenu dedans. */}
+        <div className="mt-5 mb-1 flex items-center gap-2">
+          <h2 className="font-heading min-w-0 text-base font-extrabold text-foreground">
+            Chapitres &amp; Questions
+          </h2>
+          <span className="rounded-full bg-primary/10 px-2.5 py-1 text-[11px] font-extrabold text-primary tabular-nums">
+            {questions.length}
+          </span>
+          {/* L'icône seule, collée au titre : le dossier avec un + dedans. */}
           <button
-            key={t.id}
             type="button"
-            role="tab"
-            aria-selected={tab === t.id}
+            disabled={pending || lecturePdf}
             onClick={() => {
               sfx.tap()
-              setTab(t.id)
+              creerChapitre()
             }}
-            className={cn(
-              'font-heading flex-1 cursor-pointer rounded-full px-3 py-2 text-xs font-extrabold whitespace-nowrap transition-colors',
-              tab === t.id
-                ? 'bg-primary text-primary-foreground shadow-sm'
-                : 'bg-white text-muted-foreground ring-1 ring-black/5 hover:text-foreground',
-            )}
+            aria-label="Ajouter un dossier"
+            title="Ajouter un dossier"
+            className="flex size-8 shrink-0 cursor-pointer items-center justify-center rounded-full bg-primary text-primary-foreground shadow-sm transition active:scale-90 disabled:opacity-60"
           >
-            {t.label}
+            <FolderPlus
+              className="size-4"
+              strokeWidth={2.4}
+              aria-hidden="true"
+            />
           </button>
-        ))}
-      </div>
+        </div>
 
-      {/* Panneau actif. */}
-      <section className="rev-card mt-3 rounded-3xl bg-white p-4 shadow-sm ring-1 ring-black/5">
-        {tab === 'contenu' ? (
-          <>
-            <div className="mb-2 flex items-center gap-2">
-              <h2 className="font-heading min-w-0 flex-1 text-base font-extrabold text-foreground">
-                Chapitres &amp; Questions
-              </h2>
-              <span className="rounded-full bg-primary/10 px-2.5 py-1 text-[11px] font-extrabold text-primary tabular-nums">
-                {questions.length}
-              </span>
-            </div>
-            {/* La recherche : au-delà d'une vingtaine de questions, retrouver
-                « celle sur Verdun » demandait de déplier tout l'arbre et de
-                lire à l'œil. Tant qu'elle est vide, l'arbre est intact. */}
-            {questions.length > 8 ? (
-              <div className="relative mb-2">
-                <Search
-                  className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground"
-                  aria-hidden="true"
-                />
-                <input
-                  type="search"
-                  value={recherche}
-                  onChange={(e) => setRecherche(e.target.value)}
-                  placeholder="Chercher dans ce cours…"
-                  aria-label="Chercher une question dans ce cours"
-                  className="min-h-11 w-full rounded-2xl border border-black/10 bg-white pr-3 pl-9 text-sm font-semibold text-foreground outline-none placeholder:text-muted-foreground/60 focus:ring-2 focus:ring-primary/40"
-                />
-              </div>
-            ) : null}
-
-            {recherche.trim().length > 0 ? (
-              trouvees.length === 0 ? (
-                <p className="rounded-2xl bg-muted/40 px-3 py-4 text-center text-sm text-muted-foreground">
-                  Aucune question ne contient «&nbsp;{recherche.trim()}&nbsp;».
-                </p>
-              ) : (
-                <ul className="flex flex-col gap-1.5">
-                  {trouvees.map((q) => {
-                    const TypeIcon = TYPE_ICON[q.type]
-                    return (
-                      <li key={q.id}>
-                        <button
-                          type="button"
-                          onClick={() => {
-                            sfx.tap()
-                            router.push(
-                              `/reviser/cours/${course.id}/question/${q.id}`,
-                            )
-                          }}
-                          className="flex w-full cursor-pointer items-center gap-3 rounded-2xl bg-muted/40 px-3 py-2.5 text-left transition hover:bg-muted/70"
-                        >
-                          <span className="flex size-8 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                            <TypeIcon
-                              className="size-4"
-                              strokeWidth={2.2}
-                              aria-hidden="true"
-                            />
-                          </span>
-                          <span className="min-w-0 flex-1">
-                            <span className="line-clamp-2 text-xs leading-snug font-semibold text-foreground">
-                              {q.summary}
-                            </span>
-                            <span className="text-[10px] font-bold text-muted-foreground">
-                              {TYPE_LABEL[q.type]}
-                              {q.ready ? '' : ' · brouillon'}
-                            </span>
-                          </span>
-                        </button>
-                      </li>
-                    )
-                  })}
-                </ul>
-              )
-            ) : (
-              <CourseTree
-                courseId={course.id}
-                chapters={chapters}
-                questions={questions}
-                onAddQuestion={(chapterId) => {
-                  setCreateTarget(chapterId)
-                  setTypePickerOpen(true)
-                }}
-                onAddChapter={addChapter}
-                onEditQuestion={(id) =>
-                  router.push(`/reviser/cours/${course.id}/question/${id}`)
-                }
-              />
-            )}
-          </>
-        ) : tab === 'resultats' ? (
-          <ResultsPanel stats={stats} />
-        ) : (
-          <div className="flex flex-col gap-6">
-            <ReglagesRevision reglages={reglages} matieres={matieres} />
-            <SettingsPanel course={course} />
-          </div>
-        )}
+        {/* 3. Les chapitres et leurs questions. */}
+        <DossiersDuCours
+          courseId={course.id}
+          chapters={chapters}
+          questions={questions}
+          renommerId={renommerId}
+          onRenommerFin={() => setRenommerId(null)}
+          onAjouter={ouvrirAjout}
+        />
       </section>
 
-      {/* Bouton flottant « + » (onglet Contenu). */}
-      {tab === 'contenu' ? (
-        <button
-          type="button"
-          onClick={() => {
-            sfx.tap()
-            setCreateTarget(null)
-            setCreateOpen(true)
-          }}
-          aria-haspopup="dialog"
-          aria-label="Ajouter au cours"
-          className="press-3d-deep fixed right-4 bottom-20 z-40 flex size-14 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-lg transition-transform md:bottom-8"
-        >
-          <Plus className="size-7" strokeWidth={2.6} aria-hidden="true" />
-        </button>
-      ) : null}
+      {/* Le PDF : un champ caché, déclenché depuis « Créer du contenu ». */}
+      <input
+        ref={pdfRef}
+        type="file"
+        accept="application/pdf,.pdf"
+        onChange={(e) => void insererPdf(e.target.files?.[0])}
+        className="hidden"
+        aria-hidden="true"
+        tabIndex={-1}
+      />
 
-      {/* Feuille « Personnaliser » : icône + couleur, ouverte depuis la
-          pastille de l'en-tête. Les mêmes commandes restent dans Paramètres. */}
+      {/* Icône et couleur. */}
       <BottomSheet
-        open={lookOpen}
-        onClose={() => setLookOpen(false)}
-        title="Personnaliser ce cours"
+        open={allureOuverte}
+        onClose={() => setAllureOuverte(false)}
+        title="Icône et couleur"
       >
         <CourseLook
-          course={course}
+          icon={course.icon}
+          color={course.color}
           disabled={pending}
           onPatch={(p) => {
             if (pending) return
@@ -714,33 +433,50 @@ export default function CourseScreen({
         />
       </BottomSheet>
 
-      {/* Feuille « Réviser » : tout le cours ou un chapitre. */}
-      {/* « Comment tu veux réviser ? » — remplace un menu à DEUX entrées
-          (tout le cours / un chapitre), seule « personnalisation » qu'offrait
-          le carnet. */}
+      {/* Réglages de révision (315/316) et planning (353), dans une seule feuille. */}
+      <BottomSheet
+        open={reglagesOuverts && hydrate}
+        onClose={() => setReglagesOuverts(false)}
+        title="Réglages de révision"
+      >
+        <div className="flex flex-col gap-5">
+          <ReglagesRevision reglages={reglages} matieres={matieres} />
+          <div className="border-t border-black/5" aria-hidden="true" />
+          <PlanningCours
+            courseId={course.id}
+            chapters={chapters}
+            plans={plans}
+            examOn={reglages.examOn}
+            cartesParChapitre={cartesParChapitre}
+            today={today}
+          />
+        </div>
+      </BottomSheet>
+
+      {/* Réviser : tout le dossier, un chapitre, une étiquette. */}
       <SessionOptionsSheet
         courseId={course.id}
         chapters={chapters}
         etiquettes={etiquettes}
-        open={reviseOpen}
-        onClose={() => setReviseOpen(false)}
+        open={reviserOuvert}
+        onClose={() => setReviserOuvert(false)}
       />
 
-      {/* Feuille de création (bouton « + »). */}
+      {/* « Créer du contenu » — la feuille du +, comme Wooflash. */}
       <BottomSheet
-        open={createOpen}
-        onClose={() => setCreateOpen(false)}
-        title="Ajouter au cours"
+        open={ajoutOuvert}
+        onClose={() => setAjoutOuvert(false)}
+        title={cibleAjout ? `Créer dans « ${cibleAjout} »` : 'Créer du contenu'}
       >
         <div className="flex flex-col gap-2">
           <button
             type="button"
             onClick={() => {
               sfx.tap()
-              setCreateOpen(false)
-              setTypePickerOpen(true)
+              setAjoutOuvert(false)
+              setTypeOuvert(true)
             }}
-            className="font-heading flex cursor-pointer items-center gap-3 rounded-2xl bg-primary px-4 py-3.5 text-sm font-extrabold text-primary-foreground shadow-sm"
+            className="font-heading flex cursor-pointer items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3.5 text-sm font-extrabold text-primary-foreground shadow-sm"
           >
             <Plus className="size-5" strokeWidth={2.6} aria-hidden="true" />
             Créer une question
@@ -749,50 +485,38 @@ export default function CourseScreen({
             type="button"
             onClick={() => {
               sfx.tap()
-              setCreateOpen(false)
-              setAiOpen(true)
+              ouvrirIa(undefined)
             }}
-            className="flex cursor-pointer items-center gap-3 rounded-2xl bg-muted/60 px-4 py-3 text-sm font-bold text-foreground hover:bg-muted"
+            className="font-heading flex cursor-pointer items-center justify-center gap-2 rounded-2xl bg-highlight/25 px-4 py-3.5 text-sm font-extrabold text-foreground ring-1 ring-highlight/50"
           >
-            <span className="flex size-8 items-center justify-center rounded-xl bg-highlight/30 text-foreground">
-              <Sparkles className="size-4" aria-hidden="true" />
-            </span>
+            <Sparkles className="size-4" strokeWidth={2.4} aria-hidden="true" />
             Générer des questions avec l’IA
           </button>
           <button
             type="button"
-            onClick={() => addChapter(createTarget)}
-            className="flex cursor-pointer items-center gap-3 rounded-2xl bg-muted/60 px-4 py-3 text-sm font-bold text-foreground hover:bg-muted"
+            disabled={lecturePdf}
+            onClick={() => {
+              sfx.tap()
+              setAjoutOuvert(false)
+              pdfRef.current?.click()
+            }}
+            className="font-heading flex cursor-pointer items-center justify-center gap-2 rounded-2xl bg-muted/60 px-4 py-3.5 text-sm font-extrabold text-foreground hover:bg-muted disabled:opacity-60"
           >
-            <span className="flex size-8 items-center justify-center rounded-xl bg-primary/10 text-primary">
-              <FolderPlus className="size-4" aria-hidden="true" />
-            </span>
-            Créer un chapitre
+            <FileText className="size-4" strokeWidth={2.4} aria-hidden="true" />
+            {lecturePdf ? 'Lecture du PDF…' : 'Insérer un PDF'}
           </button>
-          {/* « Importer des questions » et « Insérer un fichier » vivaient ici,
-              grisés, avec un ruban « Bientôt ». Retirés le 01/08/2026 : un menu
-              ne doit pas montrer des portes qui ne s'ouvrent pas. Le jour où
-              l'import existe, il reprend sa place — en marchant. */}
         </div>
       </BottomSheet>
 
-      {/* Saisie en rafale / import collé. */}
-      <SaisieRapide
-        courseId={course.id}
-        chapterId={createTarget}
-        open={saisieOpen}
-        onClose={() => setSaisieOpen(false)}
-      />
-
-      {/* Feuille du choix de type de question. */}
+      {/* Le type de la question. */}
       <BottomSheet
-        open={typePickerOpen}
-        onClose={() => setTypePickerOpen(false)}
+        open={typeOuvert}
+        onClose={() => setTypeOuvert(false)}
         title="Quel type de question ?"
       >
         <ul className="flex flex-col gap-1.5">
           {QUESTION_TYPES.map((type) => {
-            const TypeIcon = TYPE_ICON[type]
+            const IconeType = TYPE_ICON[type]
             return (
               <li key={type}>
                 <button
@@ -800,12 +524,12 @@ export default function CourseScreen({
                   disabled={pending}
                   onClick={() => {
                     sfx.tap()
-                    addQuestion(type)
+                    creerQuestion(type)
                   }}
                   className="flex w-full cursor-pointer items-center gap-3 rounded-2xl bg-muted/60 px-4 py-3 text-left text-sm font-bold text-foreground hover:bg-muted disabled:opacity-60"
                 >
                   <span className="flex size-8 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                    <TypeIcon
+                    <IconeType
                       className="size-4"
                       strokeWidth={2.2}
                       aria-hidden="true"
@@ -819,15 +543,19 @@ export default function CourseScreen({
         </ul>
       </BottomSheet>
 
-      {/* Génération IA — formulaire ET écran de validation, dans son propre
-          composant : les questions ne sont plus écrites en base tant que
-          l'élève ne les a pas relues. */}
+      {/* Génération IA — formulaire ET écran de validation. Le texte d'un PDF
+          y arrive prérempli, comme un cours collé. */}
       <GenerationIaSheet
         courseId={course.id}
-        chapterId={createTarget}
+        chapterId={ajoutDans}
         photoDisponible={photoDisponible}
-        open={aiOpen}
-        onClose={() => setAiOpen(false)}
+        texteInitial={textePdf}
+        origineInitiale={textePdf !== undefined ? 'pdf' : 'texte'}
+        open={iaOuverte && hydrate}
+        onClose={() => {
+          setIaOuverte(false)
+          setTextePdf(undefined)
+        }}
       />
     </div>
   )

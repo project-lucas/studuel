@@ -1,0 +1,141 @@
+/* ==========================================================================
+   LA CARTE DU MAGASIN (CarteMagasin.tsx) — celle des packs de gemmes ET des
+   boosts du Marché, sur le modèle du magasin de Clash Royale (Lucas,
+   18/09/2026). Elle reprend AU PIXEL les cartes du magasin : cerne sombre,
+   panneau clair en haut, épaisseur en deux tons en bas, écrin cerclé de blanc,
+   textes blancs cernés de noir.
+
+   UNE TEINTE PAR ARTICLE : la couleur de la carte est l'identité de ce qu'elle
+   vend (`data-teinte`, la palette des outils de Marcel dans globals.css, à
+   clarté perçue égale) — violet pour les gemmes, ambre pour le boost XP, bleu
+   pour le boost trophées, rose pour la fiche de révision (Lucas : « les
+   cadres, les couleurs propres à chaque boost »). Tout se décline de la seule
+   `--base` par color-mix : fond, panneau, épaisseur, étiquette de l'écrin.
+
+   Dans ce module et non dans globals.css : la feuille globale (7 500 lignes)
+   ne se recompilait plus en développement.
+   ========================================================================== */
+
+.carte,
+.ecrin {
+  --base: var(--outil, var(--primary));
+  /* Le cerne de tout : cartes, écrins et textes (le quasi-noir du modèle). */
+  --contour: color-mix(in oklch, var(--foreground), black 50%);
+}
+
+/* La carte : 111 × 216 au modèle. Cerne de 1,5 px, coins de 7 px ; le bas est
+   son ÉPAISSEUR, 9 px en deux tons (4 px moyen, 5 px sombre), comme une tuile
+   posée ; un liseré clair en haut et un point de brillance à droite. Les cotes
+   en cqw se lisent sur la largeur de la carte (son conteneur). */
+.carte {
+  --fond: color-mix(in oklch, var(--base), white 62%);
+  --panneau: color-mix(in oklch, var(--base), white 71%);
+  --levre: color-mix(in oklch, var(--base), white 38%);
+  --levre-fond: color-mix(in oklch, color-mix(in oklch, var(--base), var(--foreground) 45%), white 18%);
+  border: 1.5px solid var(--contour);
+  border-radius: 7px;
+  background: var(--fond);
+  box-shadow:
+    inset 0 2px 0 rgb(255 255 255 / 0.45),
+    inset 0 -4.5cqw 0 var(--levre-fond),
+    inset 0 -8.1cqw 0 var(--levre);
+}
+.carte:focus-visible {
+  outline: 3px solid var(--highlight);
+  outline-offset: 2px;
+}
+/* Le panneau plus clair du haut, derrière le nom : il descend jusqu'au tiers
+   de l'écrin (4 → 90 px au modèle, 9 px du bord). */
+.carte::before {
+  content: '';
+  position: absolute;
+  top: 3.6cqw;
+  left: 8.1cqw;
+  right: 8.1cqw;
+  height: 77.5cqw;
+  border-radius: 5px;
+  background: var(--panneau);
+}
+/* Le point de brillance, en haut à droite. */
+.carte::after {
+  content: '';
+  position: absolute;
+  top: 6.3cqw;
+  right: 10.8cqw;
+  width: 3.6cqw;
+  height: 3.6cqw;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, white 40%, transparent);
+}
+
+/* Le texte des cartes : blanc cerné de noir, le trait SOUS le remplissage
+   (paint-order), plus une ombre pleine vers le bas. Épaisseur du trait par
+   texte (`--trait`, en em : la moitié déborde autour de la lettre). */
+.encre {
+  color: white;
+  -webkit-text-stroke: var(--trait, 0.14em) var(--contour);
+  paint-order: stroke fill;
+  text-shadow: 0 0.07em 0 var(--contour);
+}
+
+/* L'écrin : un BLOC SIMPLE ET SOBRE, plus blanc que le modèle (Lucas,
+   18/09/2026, après l'ardoise « ennuyante » puis des rayons dorés de trop). Un
+   studio clair : gris bleuté en haut — l'étiquette se lit dessus —, qui
+   s'éclaircit jusqu'à un sol presque blanc où l'objet projette son ombre. Il
+   ne prend PAS la teinte de la carte : seul l'objet porte la couleur. Cerne
+   sombre de 2 px, doublé d'un filet blanc, plus franc en haut. */
+.ecrin {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--foreground), white 44%) 0%,
+    color-mix(in oklch, var(--foreground), white 70%) 38%,
+    color-mix(in oklch, var(--background), white 72%) 100%
+  );
+  border: 2px solid var(--contour);
+  border-radius: 5px;
+  box-shadow:
+    inset 0 2.5px 0 rgb(255 255 255 / 0.85),
+    inset 0 0 0 1.5px rgb(255 255 255 / 0.4);
+}
+
+/* L'étiquette de l'écrin (la quantité d'un pack, « ×2 · 2 h » d'un boost),
+   dans la teinte de l'article, cernée comme les autres textes. */
+.etiquette {
+  color: color-mix(in oklch, var(--base), white 42%);
+}
+
+/* L'OMBRE LIÉE À L'OBJET, comme au magasin de Clash Royale : la silhouette de
+   l'objet (la même image), passée au noir et floutée, aplatie à 42 % de sa
+   hauteur puis couchée à 60° vers l'arrière-gauche depuis sa base — la lumière
+   vient de devant à droite. Peinte avant l'objet, elle ne se voit que là où
+   elle dépasse de lui. Flou en cqw : il suit la taille de l'écrin. Filtre sur
+   une image IMMOBILE : peint une fois, jamais recalculé au défilement. */
+.ombrePortee {
+  filter: brightness(0) blur(1.4cqw);
+  opacity: 0.42;
+  transform-origin: 50% 100%;
+  transform: skewX(60deg) scaleY(0.42);
+}
+
+/* Le contact au sol, juste sous l'objet : une ellipse sombre et serrée qui le
+   pose sur le sol clair. Sans `filter`. */
+.ombre {
+  border-radius: 50%;
+  background: radial-gradient(
+    closest-side,
+    color-mix(in oklch, var(--foreground), transparent 35%),
+    color-mix(in oklch, var(--foreground), transparent 80%) 60%,
+    transparent
+  );
+}
+
+/* La pastille « en cours » d'un boost actif, à la place du prix. */
+.enCours {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+  padding: 0.3em 0.6em;
+  border: 1.5px solid var(--contour);
+  border-radius: 999px;
+  background: var(--success);
+}

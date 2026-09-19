@@ -4,26 +4,27 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { LogIn } from 'lucide-react'
+import BadgeBoostXp from '@/components/BadgeBoostXp'
+import FlammeAnimee from '@/components/FlammeAnimee'
 import { useEffect, useRef, useState, type ReactNode } from 'react'
-import { CristalIcon, EcuIcon } from '@/components/ui/MonnaieIcon'
+import { CristalIcon } from '@/components/ui/MonnaieIcon'
 import type { UniteGain } from '@/lib/gains'
 import { GEM_COST_CHAPTER } from '@/lib/gems'
 import { ecouterGains } from '@/lib/hud-gains'
 import {
   isHudAccountHidden,
   isHudHidden,
-  isHudLevelHidden,
   isHudOverDarkScene,
 } from '@/lib/top-hud-routes'
 import { cn } from '@/lib/utils'
 
 /** Quelle bulle de monnaie est ouverte, s'il y en a une. */
-type OpenPurse = 'ecu' | 'cristal' | null
+type OpenPurse = 'cristal' | null
 
 /**
  * Le bandeau du haut, façon Clash Royale : les infos de jeu que l'élève garde
- * sous les yeux partout — son niveau, ses DEUX monnaies (pièces et gemmes,
- * chacune avec son « + » vers l'endroit où elle se gagne) et l'accès au profil —
+ * sous les yeux partout — son niveau, sa monnaie (les gemmes ; plus de pièces
+ * depuis le 16/09/2026) et l'accès au profil —
  * FLOTTENT au-dessus du fond d'écran de chaque interface. Plus de barre pleine
  * largeur opaque : chaque info est une pastille translucide (backdrop-blur +
  * ombre) posée sur le décor, si bien qu'on voit le fond de l'arène / de l'onglet
@@ -32,16 +33,14 @@ type OpenPurse = 'ecu' | 'cristal' | null
  * fait que l'affichage + le masquage sur le parcours d'accueil plein écran.
  */
 export default function TopHud({
-  coins,
   gems,
   streak,
   level,
   levelTitle,
   progress,
   userLabel,
+  boostXpJusqua = null,
 }: {
-  /** Solde de pièces, ou null pour un visiteur non connecté. */
-  coins: number | null
   /** Solde de gemmes, ou null pour un visiteur non connecté. */
   gems: number | null
   /**
@@ -57,6 +56,12 @@ export default function TopHud({
   /** Progression vers le niveau suivant (0..1). */
   progress: number
   userLabel: string | null
+  /**
+   * Fin du Boost XP du Marché qui court (ISO), ou null. Tant qu'il court,
+   * l'écusson porte « ×2 XP » (Lucas, 19/09/2026 : « le x2 exp doit apparaître
+   * ici une fois acheté »).
+   */
+  boostXpJusqua?: string | null
 }) {
   const pathname = usePathname()
   // La bulle d'explication d'une monnaie (façon Brawl Stars). Une seule ouverte
@@ -113,11 +118,8 @@ export default function TopHud({
 
   const accountHref = userLabel ? '/compte' : '/login'
   const accountActive = pathname === '/compte' || pathname.startsWith('/login')
-  const connected = coins !== null && level !== null
+  const connected = level !== null
   const pct = Math.round(progress * 100)
-  // Sur l'arène, le niveau est porté par le ProfileChip du HUD : la pastille
-  // du bandeau se replie pour ne pas afficher le niveau en double.
-  const levelHidden = isHudLevelHidden(pathname)
   // Scène sombre (arène) : les pastilles prennent le verre de nuit du HUD de
   // jeu au lieu du crème des onglets clairs. Un seul matériau par écran.
   const dark = isHudOverDarkScene(pathname)
@@ -130,7 +132,15 @@ export default function TopHud({
   // ailleurs. Écrit une fois, appliqué aux trois pastilles du bandeau.
   const pillSurface = dark
     ? 'olympe-glass'
-    : 'bg-card/85 ring-1 ring-black/5 shadow-lg backdrop-blur-md'
+    : // Plein, sans flou (18/09/2026) : le flou se recalculait sous la
+      // pastille à chaque image du défilement — des saccades sur les longues
+      // pages. Sur le crème, le blanc plein se lit pareil.
+      'bg-card ring-1 ring-black/5 shadow-lg'
+  // UN SEUL ÉCUSSON (Lucas, 17/09/2026 : « le bloc gemme doit aller à côté de
+  // la flamme série »). Niveau, série et cristaux tiennent dans la même
+  // pastille, séparés par des filets ; le bord droit de la bande est libre —
+  // Réviser y pose sa puce de classe. Sur l'arène, le bandeau entier se
+  // masque (la carte du joueur porte tout), donc plus de bande « fusionnée ».
 
   // Le bandeau ne capte plus les taps : seules les pastilles sont cliquables,
   // le reste de la bande laisse passer vers le décor derrière.
@@ -142,14 +152,16 @@ export default function TopHud({
               reflet haut + liseré or, façon médaillon d'arène en miniature),
               libellé violet marqué, et ruban doré de progression surmonté du
               pourcentage pour rendre l'avancée lisible d'un coup d'œil.
-              Replié sur /defi (le ProfileChip de l'arène est LA source). */}
-          {levelHidden ? null : (
+              `relative` : la bulle des cristaux s'ancre sur l'écusson entier,
+              pour tenir dans l'écran depuis le bord gauche. */}
+          {
             <div
               ref={refXp}
               // La cible du vol des récompenses (cf. lib/gains, UNITES).
               data-hud-cible="xp"
               className={cn(
-                'pointer-events-auto flex min-w-0 items-center gap-2.5 rounded-full py-1 pr-3 pl-1',
+                'pointer-events-auto relative flex min-w-0 items-center gap-2.5 rounded-full py-1 pl-1',
+                gems === null ? 'pr-3' : 'pr-0',
                 pillSurface,
               )}
               title={levelTitle ?? undefined}
@@ -163,11 +175,14 @@ export default function TopHud({
               <div className="min-w-0">
                 <p
                   className={cn(
-                    'font-heading text-[10px] leading-none font-extrabold tracking-wide uppercase',
+                    'font-heading flex items-center gap-1 text-[10px] leading-none font-extrabold tracking-wide uppercase',
                     dark ? 'text-[#faf6ef]' : 'text-primary',
                   )}
                 >
                   Niveau {level}
+                  {/* LE BOOST XP QUI COURT : collé au niveau, parce que c'est
+                      l'XP qu'il double. */}
+                  <BadgeBoostXp jusqua={boostXpJusqua} />
                 </p>
                 <div className="mt-1 flex items-center gap-1.5">
                   <div
@@ -219,18 +234,7 @@ export default function TopHud({
                     dark ? 'border-white/15' : 'border-black/[0.07]',
                   )}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/images/serie/flamme.webp"
-                    alt=""
-                    aria-hidden="true"
-                    width={128}
-                    height={128}
-                    className={cn(
-                      'size-7 shrink-0 object-contain',
-                      streak > 0 ? 'flame-breathe' : 'opacity-40 grayscale',
-                    )}
-                  />
+                  <FlammeAnimee className="size-7" eteinte={streak === 0} />
                   <span
                     aria-hidden="true"
                     className={cn(
@@ -252,152 +256,44 @@ export default function TopHud({
                   </span>
                 </span>
               )}
-            </div>
-          )}
 
-          {/* LE GROUPE DE DROITE : la série, puis les deux monnaies. Tout ce
-              qui se COMPTE tient ensemble, poussé contre le bord ; la gauche du
-              bandeau reste au niveau (et, sur l'arène où le niveau se replie,
-              à la carte joueur du décor).
-
-              La série y était d'abord posée à gauche, juste après le niveau —
-              elle se superposait à la carte joueur de l'arène, qui occupe cet
-              angle et que le bandeau ne connaît pas. Un bandeau flottant ne
-              doit rien déposer là où le décor de la page a déjà quelque chose. */}
-          <div className="ml-auto flex shrink-0 items-center gap-1.5">
-            {/* LA SÉRIE, partout. C'est le geste de Duolingo : la flamme est en
-                haut de CHAQUE écran, pas rangée dans l'onglet qui la calcule.
-                Une série qu'on ne voit qu'en allant la chercher ne retient
-                personne — il faut qu'elle croise le regard sur l'arène, dans la
-                boutique, chez les amis. Série à zéro = flamme éteinte
-                (désaturée) et non absente : la place reste, à rallumer.
-
-                ELLE N'A PLUS SA PASTILLE QUE SUR L'ARÈNE. Ailleurs, elle est
-                passée DANS l'écusson de niveau (plus haut) : deux comptes du
-                même élève, un seul objet. Ici, sur /defi, l'écusson se replie au
-                profit de la carte joueur du décor — la série y retrouve donc sa
-                pastille, sans quoi elle quitterait l'écran. Une seule flamme à
-                l'écran dans les deux cas. */}
-            {!levelHidden || streak === null ? null : (
-              <div
-                className={cn(
-                  'pointer-events-auto flex h-11 shrink-0 items-center gap-1 rounded-full pr-3 pl-1.5',
-                  pillSurface,
-                )}
-                aria-label={`Série : ${streak} jour${streak > 1 ? 's' : ''}`}
-                title={`${streak} jour${streak > 1 ? 's' : ''} de série`}
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/images/serie/flamme.webp"
-                  alt=""
-                  aria-hidden="true"
-                  width={128}
-                  height={128}
+              {/* LES CRISTAUX, DANS LE MÊME ÉCUSSON, juste après la flamme. Ils
+              avaient leur pastille contre le bord droit : trois comptes du
+              même élève dans deux objets, et un bord droit occupé. La bourse
+              garde SA boîte (`pursesRef`) : c'est elle que surveille la
+              fermeture au tap extérieur. */}
+              {gems !== null ? (
+                <div
+                  ref={pursesRef}
                   className={cn(
-                    'size-8 shrink-0 object-contain',
-                    streak > 0 ? 'flame-breathe' : 'opacity-40 grayscale',
-                  )}
-                />
-                <span
-                  aria-hidden="true"
-                  className={cn(
-                    'font-mono text-sm font-extrabold tabular-nums',
-                    streak > 0
-                      ? dark
-                        ? 'text-highlight'
-                        : 'text-foreground'
-                      : 'text-muted-foreground',
+                    'flex shrink-0 items-center self-stretch border-l',
+                    dark ? 'border-white/15' : 'border-black/[0.07]',
                   )}
                 >
-                  {streak}
-                </span>
-              </div>
-            )}
-
-            {/* LA BANDE DE RESSOURCES, façon Clash Royale : les soldes ne sont
-              pas rangés dans une boutique qu'on pense à ouvrir, ils sont sous
-              les yeux en permanence. Chaque pastille porte DEUX gestes, comme
-              chez Supercell :
-                • le solde (à gauche) OUVRE une bulle qui explique la monnaie —
-                  un chiffre seul ne dit jamais à quoi il sert ;
-                • le « + » (à droite) MÈNE À LA BOUTIQUE, pour les deux monnaies.
-
-              Sur crème, l'écu illustré est doré et ressort du fond clair ; sur
-              la scène sombre, la pastille prend le verre de nuit et c'est le
-              CHIFFRE qui devient or — l'or dit la valeur, pas le contenant. */}
-            {/* La bande des monnaies garde SA propre boîte : c'est elle que
-              surveille la fermeture au tap extérieur (`pursesRef`). La flamme
-              n'en fait pas partie — elle n'ouvre aucune bulle. */}
-            <div ref={pursesRef} className="flex shrink-0 items-center gap-1.5">
-              <ResourcePill
-                unite="ecu"
-                name="Écu"
-                nameClassName={
-                  dark
-                    ? 'text-highlight'
-                    : // Sur crème, le jaune solaire pur passerait sous le seuil de
-                      // contraste : on le fonce pour le TEXTE seulement — c'est le
-                      // même or, lisible.
-                      'text-[color-mix(in_oklch,var(--highlight),black_42%)]'
-                }
-                description={
-                  <>
-                    La monnaie du style. Tu la gagnes en révisant et en jouant,
-                    et tu la dépenses dans la Boutique : tenues, décors et
-                    objets pour ton avatar.
-                  </>
-                }
-                open={openPurse === 'ecu'}
-                onToggle={() => togglePurse('ecu')}
-                label={(n) => `${n} écus — à quoi sert cette monnaie`}
-                plusLabel="Obtenir des écus"
-                value={coins}
-                icon={<EcuIcon className="size-5" />}
-                dark={dark}
-                className={
-                  dark
-                    ? 'olympe-glass olympe-glass--sculpte text-highlight'
-                    : 'bg-card/90 text-foreground shadow-lg ring-1 ring-black/10 backdrop-blur-md'
-                }
-              />
-              {/* LA MONNAIE QUI CÈDE. Le bandeau ne peut pas tenir, sur un
-                téléphone, l'écusson de niveau + la série + DEUX monnaies + les
-                réglages : à 390 px on demande environ 100 px de trop. Il faut
-                donc que quelque chose s'efface, et c'est le cristal — c'est la
-                monnaie secondaire, et elle reste à un tap de là (le « + » de
-                l'écu et l'onglet Boutique mènent au même endroit). Le seuil
-                (430 px) couvre les téléphones courants ; au-delà, les deux
-                monnaies reviennent. */}
-              {gems !== null ? (
-                <ResourcePill
-                  unite="gemme"
-                  name="Cristal"
-                  nameClassName={dark ? 'text-[#c9b4ff]' : 'text-primary'}
-                  description={
-                    <>
-                      La monnaie du contenu. {GEM_COST_CHAPTER} cristaux ouvrent
-                      un chapitre entier — sa carte mentale et ses fiches — pour
-                      toujours. Ils se gagnent surtout en invitant tes amis.
-                    </>
-                  }
-                  open={openPurse === 'cristal'}
-                  onToggle={() => togglePurse('cristal')}
-                  label={(n) => `${n} cristaux — à quoi sert cette monnaie`}
-                  plusLabel="Obtenir des cristaux"
-                  value={gems}
-                  icon={<CristalIcon className="size-5" />}
-                  dark={dark}
-                  className={cn(
-                    'max-[429px]:hidden',
-                    dark
-                      ? 'olympe-glass text-[#d8c9ff]'
-                      : 'bg-card/85 text-primary shadow-lg ring-1 ring-black/5 backdrop-blur-md',
-                  )}
-                />
+                  <ResourcePill
+                    unite="gemme"
+                    name="Cristal"
+                    nameClassName={dark ? 'text-[#c9b4ff]' : 'text-primary'}
+                    description={
+                      <>
+                        La monnaie du contenu. {GEM_COST_CHAPTER} cristaux ouvrent
+                        un chapitre entier — sa fiche et ses fiches de révision — pour
+                        toujours. Ils se gagnent surtout en invitant tes amis.
+                      </>
+                    }
+                    open={openPurse === 'cristal'}
+                    onToggle={() => togglePurse('cristal')}
+                    label={(n) => `${n} cristaux — à quoi sert cette monnaie`}
+                    plusLabel="Obtenir des cristaux"
+                    value={gems}
+                    icon={<CristalIcon className="size-5" />}
+                    dark={dark}
+                    className={dark ? 'text-[#d8c9ff]' : 'text-primary'}
+                  />
+                </div>
               ) : null}
             </div>
-          </div>
+          }
         </>
       ) : (
         <Link
@@ -462,7 +358,7 @@ export default function TopHud({
         >
           {userLabel ? (
             <Image
-              src="/images/defi/icones/reglages-v2.webp"
+              src="/images/defi/icones/reglages-v3.webp"
               alt=""
               aria-hidden="true"
               // 80 = deux fois la case servie (size-10 = 40 px), de quoi rester
@@ -592,7 +488,7 @@ function ResourcePill({
   const affiche = value + delta
 
   return (
-    <div className="pointer-events-auto relative shrink-0">
+    <div className="pointer-events-auto shrink-0">
       <div
         ref={ref}
         // La cible du vol des récompenses (cf. lib/gains, UNITES).
@@ -615,13 +511,15 @@ function ResourcePill({
         </button>
       </div>
 
-      {/* La bulle : ancrée sous la pastille, avec sa pointe. Elle sort du flux
-          (absolute) pour ne jamais pousser la bande de ressources. */}
+      {/* La bulle : ancrée sous l'ÉCUSSON (l'ancêtre positionné), calée à
+          son bord gauche pour rester dans l'écran, la pointe sous la bourse
+          qui vit au bord droit de l'écusson. Elle sort du flux (absolute)
+          pour ne jamais pousser la bande. */}
       {open ? (
         <div
           id={panelId}
           className={cn(
-            'absolute top-full right-0 z-10 mt-2 w-60 rounded-2xl p-3 text-left font-sans text-xs leading-relaxed shadow-xl',
+            'absolute top-full left-0 z-10 mt-2 w-60 rounded-2xl p-3 text-left font-sans text-xs leading-relaxed shadow-xl',
             dark
               ? 'olympe-glass olympe-glass--sculpte text-[#ece5f7]'
               : 'bg-card text-foreground/80 ring-1 ring-black/10 backdrop-blur-md',
@@ -654,7 +552,7 @@ function ResourcePill({
               un compteur. Un tap de plus, pour une action qui n'est pas
               quotidienne. */}
           <Link
-            href="/tresor?volet=boutique"
+            href="/tresor#gemmes"
             className={cn(
               'font-heading mt-2 inline-flex min-h-11 items-center gap-1 text-xs font-extrabold',
               nameClassName,

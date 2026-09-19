@@ -1,7 +1,12 @@
 /**
  * Fabrique LES ICÔNES FLOTTANTES de l'arène :
- *   assets-sources/defi-icones-lot1/<source>.png  (originaux 2000×2000, fond PEINT)
- *     → public/images/defi/icones/<cible>-v2.webp  (256×256, fond transparent)
+ *   assets-sources/defi-icones-lot2/<source>.png  (originaux 2000×2000, fond PEINT
+ *                                                  ou déjà transparent)
+ *     → public/images/defi/icones/<cible>-v3.webp  (256×256, fond transparent)
+ *
+ * LOT 2 (16/09/2026) : Lucas a redessiné les dix icônes (dossier « icones v2 »
+ * déposé dans public/, déplacé ici). Même trame, même marge, nouveau suffixe
+ * `-v3` — voir plus bas pourquoi le nom porte sa version.
  *
  *   node scripts/defi-icones.mjs
  *
@@ -33,8 +38,10 @@ import { detourerFondPeint } from './lib/fond-peint.mjs'
 
 // Les SOURCES 4K vivent hors de `public/` (elles n'ont rien à y faire : Next
 // sert ce dossier tel quel). Seuls les webp générés y sont écrits.
-const SOURCES = 'assets-sources/defi-icones-lot1'
+const SOURCES = 'assets-sources/defi-icones-lot2'
 const DOSSIER = 'public/images/defi/icones'
+/** Le suffixe de version des fichiers servis : à incrémenter à CHAQUE lot. */
+const VERSION = 'v3'
 
 /**
  * Source → nom servi. La table est explicite parce que les deux vocabulaires
@@ -52,6 +59,26 @@ const LOT = {
   parametre: 'reglages',
   boss: 'boss',
   's+': 'premium',
+  // L'historique rejoint le lot (il était servi sans version, déposé à la main).
+  historique: 'historique',
+  // La coupe d'or : elle était l'onglet Amis de la barre de navigation avant
+  // que les deux silhouettes ne le prennent (16/09/2026). Elle sert désormais
+  // à la plaque « Route des trophées » de l'arène.
+  trophee: 'trophees',
+}
+
+/**
+ * Un original livré DÉJÀ transparent n'a pas de fond à détourer : le détourage
+ * cherche la palette du pourtour, et sur du transparent il ne trouverait que
+ * du vide. On le reconnaît à son canal alpha ET à un coin transparent.
+ */
+async function original(chemin) {
+  const meta = await sharp(chemin).metadata()
+  if (meta.hasAlpha) {
+    const coin = await sharp(chemin).extract({ left: 0, top: 0, width: 1, height: 1 }).ensureAlpha().raw().toBuffer()
+    if (coin[3] === 0) return chemin
+  }
+  return detourerFondPeint(chemin)
 }
 
 /** Côté de la toile finale : 256 px pour un dessin servi autour de 40. */
@@ -73,12 +100,12 @@ for (const [source, cible] of Object.entries(LOT)) {
     continue
   }
 
-  const dessin = await sharp(await detourerFondPeint(path.join(SOURCES, src)))
+  const dessin = await sharp(await original(path.join(SOURCES, src)))
     .trim({ threshold: 2 })
     .png()
     .toBuffer()
 
-  const dest = path.join(DOSSIER, `${cible}-v2.webp`)
+  const dest = path.join(DOSSIER, `${cible}-${VERSION}.webp`)
   const sortie = await sharp({
     create: {
       width: SIZE,
@@ -97,6 +124,6 @@ for (const [source, cible] of Object.entries(LOT)) {
     .toFile(dest)
 
   console.log(
-    `  ${source.padEnd(11)} → ${cible}-v2.webp  ${Math.round(sortie.size / 1024)} ko`,
+    `  ${source.padEnd(11)} → ${cible}-${VERSION}.webp  ${Math.round(sortie.size / 1024)} ko`,
   )
 }

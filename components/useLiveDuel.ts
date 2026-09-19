@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import type { RealtimeChannel } from '@supabase/supabase-js'
 import { createClient } from '@/lib/supabase/client'
 import { channelName, liveWinner, type RoundRecord } from '@/lib/duel-live'
+import { botJoinDelayMs, botRound } from '@/lib/duel-live-bot'
 import { ROUND_SIZE, ROUNDS_TO_WIN, type RoundWinner } from '@/lib/defi-modes'
 
 // Nombre max de questions à partager (BO3 : jusqu'à 3 manches).
@@ -27,6 +28,12 @@ export type LiveDuelState = {
   myRounds: RoundRecord[]
   theirRounds: RoundRecord[]
   winner: RoundWinner | null
+  /**
+   * Le ROBOT qui tient la place du rival (lib/duel-live-bot), ou null quand
+   * un vrai joueur est attendu. Son niveau de référence est celui de l'élève :
+   * c'est lui qui règle sa précision.
+   */
+  bot: { id: string; myLevel: number } | null
 }
 
 const initialState: LiveDuelState = {
@@ -39,6 +46,7 @@ const initialState: LiveDuelState = {
   myRounds: [],
   theirRounds: [],
   winner: null,
+  bot: null,
 }
 
 // Hook de transport pour un duel temps réel. Gère le canal Realtime (présence
@@ -49,14 +57,25 @@ export function useLiveDuel(userId: string) {
   const [state, setState] = useState<LiveDuelState>(initialState)
   const channelRef = useRef<RealtimeChannel | null>(null)
   const supabaseRef = useRef(createClient())
+  // La minuterie du robot (arrivée, puis une par manche) : gardée pour être
+  // annulée quand on quitte, sinon une manche tomberait dans un duel fini.
+  const botTimerRef = useRef<{ round: number; id: number } | null>(null)
+
+  const clearBotTimer = useCallback(() => {
+    if (botTimerRef.current) {
+      window.clearTimeout(botTimerRef.current.id)
+      botTimerRef.current = null
+    }
+  }, [])
 
   const teardown = useCallback(() => {
+    clearBotTimer()
     const ch = channelRef.current
     if (ch) {
       supabaseRef.current.removeChannel(ch)
       channelRef.current = null
     }
-  }, [])
+  }, [clearBotTimer])
 
   useEffect(() => teardown, [teardown])
 
@@ -201,10 +220,65 @@ export function useLiveDuel(userId: string) {
     })
   }, [])
 
+  // ------------------------------------------------------------- LE ROBOT
+  // Personne ne scanne le QR ? Un robot du banc prend la place du rival. Le
+  // canal Realtime est coupé : à partir d'ici, la partie se joue en local, par
+  // les mêmes états et les mêmes fonctions que face à un vrai joueur — c'est
+  // ce qui la rend utile pour TESTER le duel en direct sans second appareil.
+  // Il « rejoint » après un court délai, comme quelqu'un qui scanne.
+  const challengeBot = useCallback(
+    (botId: string, myLevel = 1) => {
+      teardown()
+      setState((s) => ({
+        ...s,
+        bot: { id: botId, myLevel },
+        opponentPresent: false,
+        theirRounds: [],
+        winner: null,
+      }))
+      const id = window.setTimeout(() => {
+        botTimerRef.current = null
+        setState((s) =>
+          s.bot?.id === botId
+            ? { ...s, phase: 'active', opponentPresent: true }
+            : s,
+        )
+      }, botJoinDelayMs(state.seed || botId))
+      botTimerRef.current = { round: -1, id }
+    },
+    [teardown, state.seed],
+  )
+
+  // Le robot déclare la manche N quand elle a COMMENCÉ pour les deux camps
+  // (chacun a fini la N-1), après le temps qu'il met à la jouer. Une seule
+  // minuterie par manche : l'effet se relance à chaque changement d'état, mais
+  // ne remet jamais le chronomètre d'une manche déjà lancée à zéro — sinon
+  // l'élève qui finit la sienne repousserait celle du rival.
+  useEffect(() => {
+    const { bot, phase, myRounds, theirRounds, winner, seed } = state
+    if (!bot || phase !== 'active' || winner) return
+    const round = theirRounds.length
+    if (myRounds.length < round) return
+    if (botTimerRef.current?.round === round) return
+    const record = botRound(bot.id, seed || bot.id, round, bot.myLevel)
+    if (!record) return
+    clearBotTimer()
+    const id = window.setTimeout(() => {
+      botTimerRef.current = null
+      setState((s) => {
+        if (s.bot?.id !== bot.id || s.winner) return s
+        if (s.theirRounds.some((x) => x.round === record.round)) return s
+        const next = [...s.theirRounds, record]
+        return { ...s, theirRounds: next, winner: liveWinner(s.myRounds, next) }
+      })
+    }, record.timeMs)
+    botTimerRef.current = { round, id }
+  }, [state, clearBotTimer])
+
   const leave = useCallback(() => {
     teardown()
     setState(initialState)
   }, [teardown])
 
-  return { state, create, join, sendRound, persist, leave }
+  return { state, create, join, sendRound, persist, challengeBot, leave }
 }

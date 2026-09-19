@@ -14,9 +14,15 @@ import {
   MODE_XP_BONUS,
   bossAfterAnswer,
   bossOutcome,
+  nowMs,
   type BossState,
   type ModeQuestion,
 } from '@/lib/defi-modes'
+import ModeHero from '@/components/defi/ModeHero'
+import { recordModeScore } from '@/app/defi/palmares-actions'
+import FinDePartie from '@/components/palmares/FinDePartie'
+import type { BilanPartie } from '@/lib/palmares/bilan'
+import { bossScore } from '@/lib/palmares/epreuves'
 import {
   bossForSubject,
   dominantSubject,
@@ -26,7 +32,6 @@ import {
   weeklyBossBeaten,
   recordWeeklyBossWin,
   WEEKLY_BOSS_STATS,
-  WEEKLY_TROPHY_COINS,
   RANK_STATS,
   RANK_LABELS,
   MAX_BOSS_RANK,
@@ -70,6 +75,7 @@ export default function BossMode({
   onOutcome,
   rewardSlot,
   canRetry = false,
+  scene = null,
 }: {
   pool: ModeQuestion[]
   onExit: () => void
@@ -97,6 +103,12 @@ export default function BossMode({
    * traque. Ignoré hors variante `traque` (les autres ont toujours « Rejouer »).
    */
   canRetry?: boolean
+  /**
+   * La scène du billet « Boss de la semaine » : l'accueil du combat s'ouvre
+   * dessus quand on vient de la feuille « Modes de jeu » (l'ambiance du mode).
+   * Absente ailleurs (Traque, onglet d'une matière), qui ont leur propre décor.
+   */
+  scene?: string | null
 }) {
   // Le Boss sonne CUIVRE : fanfare courte et franche, dents de scie. Un combat
   // de boss doit s'annoncer à l'oreille comme un événement, pas comme un quiz.
@@ -139,6 +151,11 @@ export default function BossMode({
   const [saved, setSaved] = useState<boolean | null>(null)
   // Ce que le combat a rapporté, tel que la base l'a écrit.
   const [gains, setGains] = useState<Gain[]>([])
+  // Le Palmarès (352) : le score de combat, son bilan, et l'instant du départ.
+  const [scoreCombat, setScoreCombat] = useState(0)
+  const [bilan, setBilan] = useState<BilanPartie | null>(null)
+  const [enAttente, setEnAttente] = useState(false)
+  const startRef = useRef(0)
 
   const question = pool.length > 0 ? pool[qIndex % pool.length] : null
   const answered = selected !== null
@@ -189,7 +206,10 @@ export default function BossMode({
     setRankedUp(false)
     setTrophy(null)
     setSaved(null)
+    setBilan(null)
+    setEnAttente(false)
     reviewsRef.current = []
+    startRef.current = nowMs()
     setPhase('playing')
   }
 
@@ -197,6 +217,7 @@ export default function BossMode({
     result: 'won' | 'lost',
     finalCorrect: number,
     finalAnswered: number,
+    livesLeft: number,
   ) => {
     // La Traque : la victoire, le rang et les gemmes sont l'affaire du SERVEUR
     // (RPC traque_victoire, qui revérifie que la fenêtre d'une heure court
@@ -239,6 +260,17 @@ export default function BossMode({
         setGains(r.gains)
       })
       .catch(() => setSaved(false))
+    // Le Palmarès : le combat vaut un SCORE (coups, prime, cœurs restants) qui
+    // entre sur l'échelle de la semaine. Pas pour la Traque, qui a son serveur.
+    if (variant !== 'traque') {
+      const sc = bossScore({ correct: finalCorrect, won: result === 'won', livesLeft })
+      setScoreCombat(sc)
+      setEnAttente(true)
+      recordModeScore('boss', sc, Math.max(1, nowMs() - startRef.current))
+        .then(setBilan)
+        .catch(() => setBilan(null))
+        .finally(() => setEnAttente(false))
+    }
     // Reprogramme chaque question dans la file « À revoir ».
     recordReviewAnswers(reviewsRef.current).catch(() => {})
   }
@@ -269,7 +301,7 @@ export default function BossMode({
     const result = bossOutcome(newBoss)
     advanceTimerRef.current = window.setTimeout(() => {
       if (result) {
-        finish(result, newCorrect, newAnswered)
+        finish(result, newCorrect, newAnswered, newBoss.lives)
       } else {
         setQIndex((n) => n + 1)
         setSelected(null)
@@ -323,6 +355,7 @@ export default function BossMode({
           onDark && 'text-white',
         )}
       >
+        {scene ? <ModeHero scene={scene} titre="Boss de la semaine" dansIntro /> : null}
         <div className="flex flex-col items-center gap-2">
           <span
             className={cn(
@@ -411,7 +444,7 @@ export default function BossMode({
           <p className="mt-2 text-xs text-muted-foreground">
             {weeklyDone
               ? `Vaincu cette semaine — trophée en poche. Il change lundi !`
-              : `Bats-le avant lundi : Trophée ${weekly.name} (carte exclusive) + ${WEEKLY_TROPHY_COINS} pièces.`}
+              : `Bats-le avant lundi : Trophée ${weekly.name} (carte exclusive).`}
           </p>
           <Button
             className="mt-3 w-full rounded-full"
@@ -437,6 +470,83 @@ export default function BossMode({
   }
 
   // -------------------------------------------------------------------- done
+  if (phase === 'done' && variant !== 'traque') {
+    const portrait = (
+      <div className="animate-in zoom-in text-6xl duration-500">
+        {outcome === 'won' ? (
+          '👑'
+        ) : character.image ? (
+          <Image
+            src={character.image}
+            alt=""
+            width={112}
+            height={112}
+            aria-hidden="true"
+            className="mx-auto"
+          />
+        ) : (
+          character.emoji
+        )}
+      </div>
+    )
+    const bandeau =
+      outcome === 'won' && eventFight ? (
+        <p className="animate-in slide-in-from-bottom-2 flex items-center gap-2 rounded-full bg-highlight px-4 py-1.5 text-sm font-bold text-foreground duration-500">
+          <span aria-hidden="true">🏆</span>
+          {trophy === false
+            ? 'Trophée déjà en poche cette semaine.'
+            : `Trophée ${character.name} débloqué !`}
+        </p>
+      ) : outcome === 'won' && (rankedUp || rank === MAX_BOSS_RANK) ? (
+        <p className="animate-in slide-in-from-bottom-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-bold text-primary duration-500">
+          {rankedUp
+            ? `${character.name} passe au ${RANK_LABELS[rank].toLowerCase()} — ${RANK_STATS[rank].hp} PV. Il reviendra plus fort.`
+            : `Rang max — tu domines ${character.name}. 👑`}
+        </p>
+      ) : null
+    return (
+      <FinDePartie
+        mode="boss"
+        score={scoreCombat}
+        titreAttente={
+          outcome === 'won' ? `${character.name} est vaincu !` : `${character.name} t’a eu…`
+        }
+        detail={
+          <>
+            <span className="font-heading italic">
+              « {outcome === 'won' ? character.defeat : character.victory} »
+            </span>
+            <br />
+            {outcome === 'won'
+              ? `${correct} coups portés en ${answeredCount} questions.`
+              : `Il lui restait ${boss.hp} PV. Reviens plus fort — il t'attend.`}
+          </>
+        }
+        bilan={bilan}
+        enAttente={enAttente}
+        recordLocalAvant={0}
+        gains={gains}
+        saved={saved}
+        onRejouer={() => start(eventFight && outcome !== 'won')}
+        libelleRejouer={outcome === 'won' ? 'Rejouer' : 'Revanche'}
+        avant={portrait}
+        apres={
+          <>
+            {bandeau}
+            {rewardSlot}
+          </>
+        }
+        boutons={
+          variant === 'arena' ? null : (
+            <Button variant="outline" size="lg" onClick={onExit} className="w-full">
+              Retour
+            </Button>
+          )
+        }
+      />
+    )
+  }
+
   if (phase === 'done') {
     return (
       <div
@@ -484,7 +594,7 @@ export default function BossMode({
             <span aria-hidden="true">🏆</span>
             {trophy === false
               ? 'Trophée déjà en poche cette semaine.'
-              : `Trophée ${character.name} débloqué + ${WEEKLY_TROPHY_COINS} pièces !`}
+              : `Trophée ${character.name} débloqué !`}
           </p>
         ) : outcome === 'won' ? (
           <p

@@ -1,11 +1,9 @@
 import { redirect } from 'next/navigation'
 import GameTable from '@/components/jeux/GameTable'
 import OrderTable from '@/components/jeux/OrderTable'
-import CountdownTable from '@/components/jeux/CountdownTable'
 import AnatomyTable from '@/components/jeux/AnatomyTable'
 import { playableSalonGame } from '@/lib/jeux/catalog'
 import {
-  buildCountdownPool,
   buildOrderPool,
   buildSalonPool,
   buildZonePool,
@@ -21,6 +19,7 @@ import {
 } from '@/lib/jeux/paliers'
 import { readRowTolerant } from '@/lib/profile-read'
 import { getCurrentUser } from '@/lib/supabase/user'
+import { exigerAccesJeu } from '@/lib/jeux/acces-server'
 import { createClient } from '@/lib/supabase/server'
 import { fetchGameGhost } from '@/lib/jeux/ghost-server'
 import { programmeSlug } from '@/lib/jeux/programme'
@@ -77,6 +76,8 @@ export default async function SalonPalierPage({
 
   const user = await getCurrentUser()
   if (!user) redirect('/defi')
+  // Un jeu réservé à Studuel+ (un seul jeu libre par matière, lib/jeux/acces).
+  await exigerAccesJeu(user.id, jeu)
 
   const supabase = await createClient()
   const profile = await readRowTolerant<{ grade_level: string | null }>(
@@ -110,8 +111,8 @@ export default async function SalonPalierPage({
   const size = poolSizeFor(format)
 
   // La table à monter dépend de la FORME de la banque, pas de la mécanique :
-  // « Capitales du monde » et « Le compte est bon » sont deux expéditions, mais
-  // l'une sert des QCM et l'autre des tirages de plaques.
+  // « Capitales du monde » et « Anatomie express » sont deux expéditions, mais
+  // l'une sert des QCM et l'autre des zones à désigner.
   const kind = poolKind(jeu)
 
   if (kind === 'zones') {
@@ -122,22 +123,6 @@ export default async function SalonPalierPage({
         format={format}
         palier={paliers}
         rounds={zoneRounds}
-        name={found.game.name}
-        subject={found.salon.subject}
-        subjectEmoji={found.salon.emoji}
-        ghost={ghost}
-      />
-    )
-  }
-
-  if (kind === 'compte') {
-    const puzzles = buildCountdownPool(jeu, seed, size)
-    if (!puzzles || puzzles.length === 0) redirect('/defi')
-    return (
-      <CountdownTable
-        format={format}
-        palier={paliers}
-        puzzles={puzzles}
         name={found.game.name}
         subject={found.salon.subject}
         subjectEmoji={found.salon.emoji}

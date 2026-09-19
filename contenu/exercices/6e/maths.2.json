@@ -1,0 +1,458 @@
+{
+  "niveau": "6e",
+  "matiere": "maths",
+  "exercices": [
+    {
+      "chapitre": "59a20ff1-b14d-5cb2-a8fc-7d4a02e3294f",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le compteur du vélo d’Ilyès",
+      "competence": "observer-schema",
+      "situation": "Ilyès rentre d’une grande balade à vélo. Il regarde le compteur à rouleaux de son vélo : il affiche la distance totale parcourue depuis l’achat, en kilomètres.",
+      "documents": [
+        {
+          "id": "compteur",
+          "type": "schema",
+          "titre": "Le compteur du vélo d’Ilyès",
+          "largeur": 180,
+          "hauteur": 104,
+          "elements": [
+            { "forme": "rect", "x": 6, "y": 6, "l": 168, "h": 92, "arrondi": 12, "teinte": "gris", "motif": "clair" },
+            { "forme": "texte", "x": 90, "y": 25, "texte": "DISTANCE TOTALE", "taille": "petit", "gras": true },
+            { "forme": "rect", "id": "centaines", "zone": true, "x": 14, "y": 36, "l": 18, "h": 28, "arrondi": 3, "teinte": "blanc", "motif": "plein", "texte": "1" },
+            { "forme": "rect", "id": "dizaines", "zone": true, "x": 34, "y": 36, "l": 18, "h": 28, "arrondi": 3, "teinte": "blanc", "motif": "plein", "texte": "2" },
+            { "forme": "rect", "id": "unites", "zone": true, "x": 54, "y": 36, "l": 18, "h": 28, "arrondi": 3, "teinte": "blanc", "motif": "plein", "texte": "4" },
+            { "forme": "texte", "x": 77, "y": 62, "texte": ",", "taille": "grand", "gras": true },
+            { "forme": "rect", "id": "dixiemes", "zone": true, "x": 82, "y": 36, "l": 18, "h": 28, "arrondi": 3, "teinte": "corail", "motif": "clair", "texte": "0" },
+            { "forme": "rect", "id": "centiemes", "zone": true, "x": 102, "y": 36, "l": 18, "h": 28, "arrondi": 3, "teinte": "corail", "motif": "clair", "texte": "8" },
+            { "forme": "rect", "id": "milliemes", "zone": true, "x": 122, "y": 36, "l": 18, "h": 28, "arrondi": 3, "teinte": "corail", "motif": "clair", "texte": "6" },
+            { "forme": "texte", "x": 158, "y": 55, "texte": "km", "gras": true },
+            { "forme": "emoji", "x": 90, "y": 84, "emoji": "🚲", "taille": 18 }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "compteur",
+          "enonce": "Touche, sur le compteur, le chiffre des **centièmes**.",
+          "reponse": ["centiemes"],
+          "aide": "Après la virgule, on trouve dans l’ordre : les dixièmes, puis les centièmes, puis les millièmes.",
+          "explication": "C’est le **8**, le deuxième chiffre après la virgule. Le 0 est le chiffre des dixièmes et le 6 celui des millièmes."
+        },
+        {
+          "type": "choix",
+          "enonce": "Dans 124,086, que vaut le chiffre **6** ?",
+          "options": ["6 unités", "6 dixièmes", "6 centièmes", "6 millièmes"],
+          "reponse": 3,
+          "ordreFixe": true,
+          "aide": "Compte sa place après la virgule : est-il le 1er, le 2e ou le 3e ?",
+          "explication": "Le 6 est le troisième chiffre après la virgule : il vaut **6 millièmes** de kilomètre, soit 0,006 km… c’est-à-dire 6 mètres !"
+        },
+        {
+          "type": "trous",
+          "enonce": "Encadre la distance entre deux nombres entiers qui se suivent.",
+          "texte": "La distance est comprise entre ___ km et ___ km.",
+          "reponses": [["124"], ["125"]],
+          "aide": "L’entier juste avant, c’est la partie entière du nombre. L’entier juste après, c’est le suivant.",
+          "explication": "**124 < 124,086 < 125** : la partie entière est 124, et l’entier suivant est 125."
+        }
+      ]
+    },
+    {
+      "chapitre": "59a20ff1-b14d-5cb2-a8fc-7d4a02e3294f",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La toise de l’infirmerie",
+      "competence": "se-reperer-espace",
+      "situation": "À la visite médicale, l’infirmière mesure les élèves de 6e C et note leur taille sur la graduation de la toise, en mètres : M pour Malo, J pour Jade, S pour Soraya. Timéo attend son tour.",
+      "documents": [
+        {
+          "id": "toise",
+          "type": "droite",
+          "titre": "La graduation de la toise (en mètres)",
+          "min": 1.4,
+          "max": 1.6,
+          "pas": 0.1,
+          "division": 10,
+          "points": [
+            { "id": "m", "valeur": 1.47, "nom": "M" },
+            { "id": "j", "valeur": 1.52, "nom": "J" },
+            { "id": "s", "valeur": 1.58, "nom": "S" }
+          ],
+          "graduationsCliquables": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la taille de **Malo** (point M), en mètres ?",
+          "reponse": 1.47,
+          "unite": "m",
+          "aide": "Pars de 1,4 et compte les petits traits jusqu’au point M : chaque petit trait vaut 0,01 m.",
+          "explication": "M est 7 petits traits après 1,4 : Malo mesure **1,47 m**."
+        },
+        {
+          "type": "zone",
+          "document": "toise",
+          "enonce": "Timéo mesure **1,55 m**. Touche la graduation où l’infirmière doit le placer.",
+          "reponse": ["v1.55"],
+          "aide": "1,55 se trouve entre 1,5 et 1,6. Compte les petits traits à partir de 1,5.",
+          "explication": "**1,55** est 5 petits traits après 1,5 : pile au milieu entre 1,5 et 1,6."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range les quatre enfants du **plus grand** au **plus petit** (ordre décroissant).",
+          "items": ["Soraya", "Timéo", "Jade", "Malo"],
+          "aide": "Sur une droite graduée, plus un point est à droite, plus le nombre est grand. N’oublie pas Timéo : 1,55 m.",
+          "explication": "1,58 > 1,55 > 1,52 > 1,47 : **Soraya, Timéo, Jade, Malo**. On a lu la droite de la droite vers la gauche."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Sur la fiche de santé, on arrondit les tailles **au dixième**. Quelle taille arrondie écrit-on pour **Soraya** ?",
+          "reponse": 1.6,
+          "unite": "m",
+          "aide": "Lis d’abord la taille de Soraya, puis regarde son chiffre des centièmes : s’il vaut 5 ou plus, on arrondit au dixième supérieur.",
+          "explication": "Soraya mesure 1,58 m. Son chiffre des centièmes est 8 : on arrondit au supérieur, **1,6 m**. Sur la droite, S est d’ailleurs plus près de 1,6 que de 1,5."
+        }
+      ]
+    },
+    {
+      "chapitre": "59a20ff1-b14d-5cb2-a8fc-7d4a02e3294f",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Qualifiés pour la finale ?",
+      "competence": "raisonner",
+      "situation": "Au meeting de natation du club des Dauphins, six benjamins ont nagé le 50 m nage libre lors des séries. Le chronomètre mesure les temps au centième de seconde. Qui ira en finale ?",
+      "documents": [
+        {
+          "id": "reglement",
+          "type": "fiche",
+          "modele": "affiche",
+          "titre": "Le règlement affiché au bord du bassin",
+          "entete": "50 m nage libre",
+          "sousTitre": "Meeting des Dauphins — Benjamins",
+          "emoji": "🏊",
+          "teinte": "bleu",
+          "lignes": [
+            { "texte": "Le **meilleur temps** est le **plus petit** temps." },
+            { "texte": "Qualifiés pour la finale : les temps de **moins de 36,5 s**." },
+            { "separateur": true },
+            { "texte": "Record du club :", "valeur": "34,87 s" }
+          ],
+          "pied": "Le panneau lumineux affiche les temps arrondis au dixième."
+        },
+        {
+          "id": "series",
+          "type": "tableau",
+          "titre": "Les temps des séries",
+          "colonnes": ["Nageur", "Temps (en s)"],
+          "lignes": [
+            ["Anaïs", "36,48"],
+            ["Bastien", "36,6"],
+            ["Chaïma", "35,9"],
+            ["Diego", "36,09"],
+            ["Elio", "37,02"],
+            ["Fanta", "34,9"]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "categories",
+          "enonce": "D’après le règlement, range chaque nageur : qualifié pour la finale ou non ?",
+          "categories": ["Qualifié", "Non qualifié"],
+          "items": [
+            ["Anaïs", 0],
+            ["Bastien", 1],
+            ["Chaïma", 0],
+            ["Diego", 0],
+            ["Elio", 1],
+            ["Fanta", 0]
+          ],
+          "aide": "Compare chaque temps à 36,5 : d’abord les parties entières, puis les dixièmes. Tu peux écrire 36,5 = 36,50.",
+          "explication": "**Qualifiés : Anaïs (36,48), Chaïma (35,9), Diego (36,09) et Fanta (34,9)**, tous sous 36,50 s. Bastien (36,6) et Elio (37,02) dépassent 36,5 s."
+        },
+        {
+          "type": "zone",
+          "document": "series",
+          "enonce": "Touche, dans le tableau, le temps de la nageuse ou du nageur qui a **gagné** les séries.",
+          "reponse": ["r5c1"],
+          "aide": "Relis la première ligne du règlement : ici, le meilleur temps est le plus petit nombre.",
+          "explication": "Le plus petit temps est **34,9 s**, celui de Fanta : sa partie entière, 34, est la plus petite de toutes."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range les quatre qualifiés dans l’ordre d’arrivée, du **1er** au **4e**.",
+          "items": ["Fanta", "Chaïma", "Diego", "Anaïs"],
+          "aide": "Du plus petit temps au plus grand. Diego et Anaïs ont la même partie entière : compare leurs dixièmes.",
+          "explication": "34,9 < 35,9 < 36,09 < 36,48 : **Fanta, Chaïma, Diego, Anaïs**. Diego passe devant Anaïs car 0 dixième, c’est moins que 4 dixièmes."
+        },
+        {
+          "type": "choix",
+          "enonce": "Fanta a-t-elle battu le **record du club** ?",
+          "options": [
+            "Oui, car 34,9 a moins de chiffres que 34,87",
+            "Non : 34,9 = 34,90, qui est plus grand que 34,87",
+            "Oui, car 9 est plus petit que 87",
+            "Non, car 34,9 est égal à 34,87"
+          ],
+          "reponse": 1,
+          "aide": "Complète 34,9 avec un zéro pour avoir autant de chiffres après la virgule que 34,87, puis compare.",
+          "explication": "34,9 = 34,90, et 90 centièmes, c’est plus que 87 centièmes : **34,90 > 34,87**. Fanta a nagé un peu plus lentement que le record : elle le rate de 3 centièmes !"
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le panneau lumineux arrondit les temps **au dixième**. Quel temps affiche-t-il pour **Anaïs** ?",
+          "reponse": 36.5,
+          "unite": "s",
+          "aide": "Regarde le chiffre des centièmes du temps d’Anaïs : 5 ou plus, on arrondit au supérieur.",
+          "explication": "Dans 36,48, le chiffre des centièmes est 8 : on arrondit au supérieur, **36,5 s**. Ce n’est qu’un arrondi : son vrai temps, 36,48 s, reste bien sous 36,5 s, elle est qualifiée !"
+        }
+      ]
+    },
+    {
+      "chapitre": "ca4fdd67-bd21-5d3b-bccf-85dc817c718a",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les fournitures de la rentrée",
+      "competence": "calculer",
+      "situation": "Pour son entrée en 6e, Zélie passe à la papeterie avec sa mère. En rentrant, une goutte d’eau a effacé trois montants du ticket de caisse. Aide Zélie à les retrouver.",
+      "documents": [
+        {
+          "id": "ticket",
+          "type": "fiche",
+          "modele": "ticket",
+          "titre": "Le ticket de la papeterie",
+          "entete": "Papeterie des Arcades",
+          "sousTitre": "Samedi 29/08 — 16:05",
+          "emoji": "✏️",
+          "lignes": [
+            { "texte": "Cahier grand format", "valeur": "2,35 €" },
+            { "texte": "Stylos bleus : 3 × 0,90 €", "valeur": "? €" },
+            { "texte": "Compas", "valeur": "4,50 €" },
+            { "texte": "Rouleau de plastique", "valeur": "1,25 €" },
+            { "separateur": true },
+            { "texte": "TOTAL", "valeur": "? €", "gras": true },
+            { "texte": "Espèces", "valeur": "20,00 €" },
+            { "texte": "Rendu", "valeur": "? €" }
+          ],
+          "pied": "Merci et bonne rentrée !"
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien coûtent les **3 stylos** ?",
+          "reponse": 2.7,
+          "unite": "€",
+          "aide": "Calcule 3 × 0,90 : fais d’abord 3 × 90, puis place la virgule.",
+          "explication": "3 × 90 = 270, et 0,90 a deux décimales : 3 × 0,90 = **2,70 €**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Avant de poser l’addition, Zélie estime le **total**. Il est proche de…",
+          "options": ["1 €", "11 €", "20 €", "110 €"],
+          "reponse": 1,
+          "ordreFixe": true,
+          "aide": "Arrondis chaque prix à l’euro le plus proche, puis additionne.",
+          "explication": "2 + 3 + 5 + 1 = 11 : le total est proche de **11 €**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le **TOTAL** exact du ticket ?",
+          "reponse": 10.8,
+          "unite": "€",
+          "aide": "Additionne les quatre prix en alignant les virgules : 2,35 + 2,70 + 4,50 + 1,25.",
+          "explication": "2,35 + 2,70 + 4,50 + 1,25 = **10,80 €**, tout près de l’estimation de 11 €."
+        },
+        {
+          "type": "nombre",
+          "enonce": "La mère de Zélie a payé avec un billet de 20 €. Combien la caissière lui a-t-elle **rendu** ?",
+          "reponse": 9.2,
+          "unite": "€",
+          "aide": "Calcule la différence entre 20,00 € et le total.",
+          "explication": "20,00 − 10,80 = **9,20 €**. Vérification : 10,80 + 9,20 = 20,00."
+        }
+      ]
+    },
+    {
+      "chapitre": "ca4fdd67-bd21-5d3b-bccf-85dc817c718a",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La caisse du stand de gaufres",
+      "competence": "raisonner",
+      "situation": "À la fête de l’école, Maxime tient la caisse du stand des CM2 avec sa sœur Salomé. Leur vieille caisse enregistreuse fait parfois des siennes…",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "fiche",
+          "modele": "menu",
+          "titre": "La carte du stand",
+          "entete": "Le Coin Gourmand",
+          "sousTitre": "Fête de l’école",
+          "emoji": "🧇",
+          "teinte": "ambre",
+          "lignes": [
+            { "texte": "Crêpe au sucre", "valeur": "1,50 €" },
+            { "texte": "Gaufre", "valeur": "2,20 €" },
+            { "texte": "Jus de pomme", "valeur": "0,80 €" },
+            { "texte": "Barbe à papa", "valeur": "2,50 €" }
+          ],
+          "pied": "Les bénéfices financent la classe verte."
+        },
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Les messages de Maxime et Salomé",
+          "participants": [
+            { "nom": "Maxime", "emoji": "👦", "cote": "droite" },
+            { "nom": "Salomé", "emoji": "👧", "cote": "gauche" }
+          ],
+          "repliques": [
+            { "qui": "Maxime", "texte": "Une famille vient de prendre 3 gaufres et 2 jus de pomme." },
+            { "qui": "Maxime", "texte": "La caisse affiche 82,00 € 😱" },
+            { "qui": "Salomé", "texte": "Ça me paraît énorme… Vérifie avec un ordre de grandeur !" },
+            { "qui": "Salomé", "texte": "Et après, un groupe veut 4 formules « crêpe au sucre + jus de pomme »." }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Avec un **ordre de grandeur**, que peut-on dire des 82,00 € affichés pour 3 gaufres et 2 jus ?",
+          "options": [
+            "C’est juste : on trouve environ 80 €",
+            "C’est faux : on devrait trouver environ 8 €",
+            "C’est faux : on devrait trouver environ 800 €",
+            "On ne peut pas le savoir sans calculatrice"
+          ],
+          "reponse": 1,
+          "aide": "Arrondis : une gaufre coûte environ 2 €, un jus environ 1 €.",
+          "explication": "3 × 2 + 2 × 1 = 8 : on attend **environ 8 €**. La caisse affiche 82 € : une virgule s’est déplacée !"
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le prix **exact** de cette commande ?",
+          "reponse": 8.2,
+          "unite": "€",
+          "aide": "Les multiplications passent avant l’addition : calcule 3 × 2,20 et 2 × 0,80, puis additionne.",
+          "explication": "3 × 2,20 + 2 × 0,80 = 6,60 + 1,60 = **8,20 €**, bien proche de l’ordre de grandeur de 8 €."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pour les **4 formules** « crêpe au sucre + jus de pomme », Maxime tape sur sa calculatrice : **4 × 1,50 + 0,80**. Qu’en penses-tu ?",
+          "options": [
+            "C’est juste : la calculatrice calcule dans l’ordre où c’est écrit",
+            "C’est faux : la multiplication passe d’abord, il ne compte qu’un seul jus",
+            "C’est faux : il compte 4 crêpes de trop",
+            "C’est juste : l’addition passe avant la multiplication"
+          ],
+          "reponse": 1,
+          "aide": "La calculatrice respecte les priorités opératoires : que calcule-t-elle en premier ?",
+          "explication": "La multiplication passe avant : 4 × 1,50 + 0,80 = 6,00 + 0,80, soit 4 crêpes et **un seul jus**. Il faut des parenthèses : 4 × (1,50 + 0,80)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le bon prix des 4 formules : 4 × (1,50 + 0,80).",
+          "reponse": 9.2,
+          "unite": "€",
+          "aide": "Les parenthèses d’abord : 1,50 + 0,80. Puis multiplie par 4.",
+          "explication": "4 × (1,50 + 0,80) = 4 × 2,30 = **9,20 €**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À la fin de la fête, Salomé compte **100** barbes à papa vendues. Combien ont-elles rapporté ?",
+          "reponse": 250,
+          "unite": "€",
+          "aide": "Multiplier par 100, c’est déplacer la virgule de deux rangs vers la droite.",
+          "explication": "2,50 × 100 = **250 €** : la virgule avance de deux rangs (2,50 → 250)."
+        }
+      ]
+    },
+    {
+      "chapitre": "ca4fdd67-bd21-5d3b-bccf-85dc817c718a",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La clôture du poulailler",
+      "competence": "resoudre",
+      "situation": "Mamie Odile veut entourer l’enclos de ses poules avec du grillage. Le portillon est déjà posé : pas besoin de grillage à sa place. Il lui faut aussi **8 poteaux**, et elle a **120 €** de budget.",
+      "documents": [
+        {
+          "id": "plan",
+          "type": "schema",
+          "titre": "Le plan de l’enclos, vu de dessus",
+          "largeur": 320,
+          "hauteur": 205,
+          "elements": [
+            { "forme": "rect", "x": 70, "y": 40, "l": 220, "h": 127, "teinte": "vert", "motif": "clair" },
+            { "forme": "rect", "x": 200, "y": 161, "l": 41, "h": 12, "teinte": "brun", "motif": "plein" },
+            { "forme": "texte", "x": 220, "y": 192, "texte": "portillon : 1,2 m", "italique": true, "teinte": "brun" },
+            { "forme": "ligne", "de": [70, 24], "a": [290, 24], "fleche": "deux", "epaisseur": 1, "teinte": "bleu" },
+            { "forme": "texte", "x": 180, "y": 18, "texte": "6,5 m", "gras": true, "teinte": "bleu" },
+            { "forme": "ligne", "de": [52, 40], "a": [52, 167], "fleche": "deux", "epaisseur": 1, "teinte": "bleu" },
+            { "forme": "texte", "x": 46, "y": 107, "texte": "3,75 m", "gras": true, "teinte": "bleu", "ancre": "fin" },
+            { "forme": "emoji", "x": 140, "y": 100, "emoji": "🐔", "taille": 34 },
+            { "forme": "emoji", "x": 220, "y": 90, "emoji": "🐓", "taille": 26 }
+          ]
+        },
+        {
+          "id": "prix",
+          "type": "tableau",
+          "titre": "Les prix du magasin de bricolage",
+          "colonnes": ["Article", "Prix"],
+          "lignes": [
+            ["Grillage (le mètre)", "4,90 €"],
+            ["Poteau (l’unité)", "3,15 €"]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel est le **périmètre** de l’enclos rectangulaire, en mètres ?",
+          "reponse": 20.5,
+          "unite": "m",
+          "aide": "Périmètre d’un rectangle : 2 × (longueur + largeur). Aligne bien les virgules pour 6,5 + 3,75.",
+          "explication": "6,50 + 3,75 = 10,25, puis 2 × 10,25 = **20,5 m**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle longueur de **grillage** Mamie Odile doit-elle acheter ?",
+          "reponse": 19.3,
+          "unite": "m",
+          "aide": "Pas de grillage à la place du portillon : retire sa largeur du périmètre.",
+          "explication": "20,5 − 1,2 = **19,3 m** de grillage."
+        },
+        {
+          "type": "choix",
+          "enonce": "Avant de calculer le prix du grillage, Mamie Odile fait une estimation. Quel est le bon **ordre de grandeur** ?",
+          "options": ["Environ 10 €", "Environ 25 €", "Environ 100 €", "Environ 1 000 €"],
+          "reponse": 2,
+          "ordreFixe": true,
+          "aide": "Arrondis la longueur de grillage à 20 m et le prix du mètre à 5 €, puis multiplie.",
+          "explication": "19,3 × 4,90 ≈ 20 × 5 = **100 €**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le prix **exact** du grillage.",
+          "reponse": 94.57,
+          "unite": "€",
+          "aide": "Calcule 193 × 49 sans les virgules, puis compte les décimales des deux facteurs.",
+          "explication": "193 × 49 = 9 457. 19,3 a une décimale et 4,9 en a une : le produit en a deux. **94,57 €**, proche de l’estimation de 100 €."
+        },
+        {
+          "type": "trous",
+          "enonce": "Termine le calcul de Mamie Odile, en euros.",
+          "texte": "Avec les 8 poteaux, la facture totale est de ___ €. Sur ses 120 €, il lui reste donc ___ €.",
+          "reponses": [["119,77"], ["0,23"]],
+          "aide": "8 poteaux à 3,15 € : calcule 8 × 3,15. Ajoute le prix du grillage, puis retire le tout de 120 €.",
+          "explication": "8 × 3,15 = 25,20 € ; 94,57 + 25,20 = **119,77 €**. Le budget suffit tout juste : il reste **0,23 €**."
+        }
+      ]
+    }
+  ]
+}

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { createPortal } from 'react-dom'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { Lock, Trophy, X } from 'lucide-react'
@@ -67,10 +68,10 @@ export default function TrophyRoadSheet() {
 
   return (
     <>
-      {/* Le déclencheur : jeton rond de verre de nuit, sous la pastille
-          Studuel+ — la robe des COMMANDES du HUD. Rien d'or ici : sur cet écran
-          l'or appartient au bouton COMBAT, et un second objet doré aurait
-          banalisé la dérogation. */}
+      {/* Le déclencheur : un cran du rail de l'angle haut-droit (ArenaHud),
+          qui porte le verre pour lui — le jeton est nu. Rien d'or ici : sur
+          cet écran l'or appartient au bouton COMBAT et à l'appel Studuel+, et
+          un troisième objet doré aurait banalisé la dérogation. */}
       <button
         type="button"
         onClick={() => {
@@ -80,12 +81,21 @@ export default function TrophyRoadSheet() {
         aria-haspopup="dialog"
         aria-label={`Route des trophées — ${total} trophées, ton rang et le barème matière par matière`}
         title="Route des trophées"
-        className="olympe-glass defi2-press relative grid size-11 cursor-pointer place-items-center rounded-full focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
+        // La plaque sculptée de la colonne, avec LA COUPE illustrée — celle de
+        // l'onglet Amis dans la barre de navigation (Lucas, 16/09/2026), pas
+        // la petite coupe animée des compteurs : le même objet dit « trophées »
+        // en bas de l'écran et ici, et un dessin de 58 px mérite la grande.
+        // Un pictogramme de trait de 20 px sur un fond nu ne pesait rien à
+        // côté des objets peints du bord.
+        className="arena-plaque defi2-press relative grid size-[68px] cursor-pointer place-items-center focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
       >
-        <Trophy
-          className="size-5 text-highlight"
-          strokeWidth={2.6}
+        <Image
+          src="/images/defi/icones/trophees-v3.webp"
+          alt=""
           aria-hidden="true"
+          width={116}
+          height={116}
+          className="size-[58px] object-contain drop-shadow-[0_3px_4px_rgba(23,16,48,0.55)]"
         />
       </button>
 
@@ -95,7 +105,6 @@ export default function TrophyRoadSheet() {
               {open ? (
                 <motion.div
                   ref={panel}
-                  data-no-swipe
                   className="defi-modes-screen fixed inset-0 z-[70] flex flex-col outline-none"
                   role="dialog"
                   aria-modal="true"

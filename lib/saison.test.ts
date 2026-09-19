@@ -8,6 +8,7 @@ import {
   cappedCrowns,
   claimableCount,
   countdownLabel,
+  countdownShort,
   crownsFor,
   crownsForTier,
   crownsToNextTier,
@@ -275,5 +276,13 @@ describe('normalizeSeasonState', () => {
     )
     expect(s.crowns).toBe(0)
     expect(s.claimed.size).toBe(0)
+  })
+})
+
+describe('countdownShort', () => {
+  it('tient en trois caractères sauf le dernier jour', () => {
+    expect(countdownShort('2026-07-31')).toBe('Dernier jour')
+    expect(countdownShort('2026-07-29')).toBe('3 j')
+    expect(countdownShort('2026-07-01')).toBe('31 j')
   })
 })

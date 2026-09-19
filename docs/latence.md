@@ -100,6 +100,36 @@ Changé :
   onglets servis (`DELAI_PREMIER_DOSSIER_MS`). Et le doigt qui se pose sur un
   dossier relance celui-là (`onPointerDown`).
 
+### Troisième lot (05/09) — framer-motion quitte quatre onglets
+
+`components/carnet/BottomSheet.tsx` (la feuille montante des volets de
+Réviser, Moi et Marcel) et les deux modales d'Amis (`FriendAddButton`,
+`FriendQrButton`) jouaient leur entrée et leur sortie avec framer-motion —
+~45 Ko gz embarqués sur chaque onglet pour un voile qui apparaît et un panneau
+qui monte. Réécrits en CSS (`@keyframes feuille-*` et `modale-*`,
+globals.css) ; la sortie garde le panneau monté jusqu'à `animationend`
+(`components/useSortieAnimee.ts`), avec un filet de 400 ms.
+
+JavaScript client par onglet (build local, chunks non différés du manifeste
+RSC, gzip) :
+
+| Onglet   | avant  | après  |
+|----------|--------|--------|
+| /reviser | 126 Ko | 81 Ko  |
+| /moi     | 215 Ko | 170 Ko |
+| /marcel  | 120 Ko | 75 Ko  |
+| /amis    | 119 Ko | 74 Ko  |
+| /defi    | 255 Ko | 255 Ko (framer-motion y reste nécessaire au premier rendu) |
+
+Mesure : `node <scratch>/poids.mjs` lit `.next/server/app/<route>/page_client-reference-manifest.js`
+et somme les chunks `async: false`. Next 16 n'imprime plus les tailles par
+route au build.
+
+Même jour, un défaut qui n'est pas de latence mais de JUSTESSE et qui touchait
+tous les onglets : PostgREST plafonne chaque réponse à 1 000 lignes et le
+catalogue l'avait dépassé (2 323 chapitres). Voir la règle dans CLAUDE.md et
+`lib/postgrest-pages.ts`.
+
 ## Comment vérifier sur le téléphone (après déploiement)
 
 1. Ouvrir l'app, attendre le hub (rideau levé), **ne rien toucher 3 s**.
@@ -121,11 +151,12 @@ pas réglé par ce chantier (voir ci-dessous).
 - **Démarrage à froid** : un ping externe toutes les 5 min sur `/login`
   (cron-job.org, UptimeRobot) garde la fonction chaude — décision de Lucas, hors
   dépôt. Alternative payante : Fluid Compute / instances réservées Vercel.
-- **framer-motion** (43 + 24 Ko gz) arrive sur Réviser, Moi et Marcel par
-  `components/carnet/BottomSheet.tsx`, et sur Amis par les boutons d'ajout d'ami
-  — des feuilles et modales qui ne servent qu'au tap. Les charger à la demande
-  (`next/dynamic`) rendrait ~60 Ko à chaque onglet. Sur l'arène, il est
-  nécessaire au premier rendu (HUD, bandeau de saison).
+- ~~**framer-motion** (43 + 24 Ko gz) sur Réviser, Moi, Marcel et Amis~~ —
+  RÉGLÉ. `BottomSheet` et les boutons d'ajout d'ami animent en CSS
+  (`useSortieAnimee`) ; le dernier usage d'entrée sur Amis, le balancement du
+  blason courant de `RailDivisions`, est passé en CSS le 18/09/2026
+  (`float-y`, `motion-safe:`). La librairie ne reste que là où elle sert au
+  premier rendu (arène : HUD, bandeau de saison) et dans les sessions de quiz.
 - **/moi** pointe à 1,5 s par moments : à profiler sur `pg_stat_statements`
   (voir `supabase/_mesurer-perf.sql`) avant d'y toucher.
 - **Niveau 3** (jamais fait) : `cacheComponents` + `<Suspense>` sur les données

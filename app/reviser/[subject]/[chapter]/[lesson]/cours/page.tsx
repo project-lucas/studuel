@@ -98,10 +98,10 @@ export default async function CoursPage({
             />
 
             {/* La suite, sur place. Le cours ne se terminait que par « Tester
-                mes connaissances » : pour les flashcards, la carte ou le défi
-                du MÊME chapitre, il fallait remonter à la page matière et
-                changer d'onglet. Les quatre supports sont ici, calés sur la
-                leçon qu'on vient de lire. */}
+                mes connaissances » : pour les flashcards, la fiche ou
+                l'exercice du MÊME chapitre, il fallait remonter à la page
+                matière et changer d'onglet. Les supports sont ici, rangés sous
+                leurs trois verbes et calés sur la leçon qu'on vient de lire. */}
             {supports.length > 0 ? (
               <section className="mt-8" aria-labelledby="suite-du-chapitre">
                 <h2

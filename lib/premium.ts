@@ -6,6 +6,7 @@
 // (aucune tarification n'était figée dans le code ni le PRD).
 
 import type { Tier } from '@/lib/subscription'
+import type { PlanPayant } from '@/lib/abonnement'
 
 export type PlanId = 'gratuit' | 'plus' | 'famille'
 
@@ -64,9 +65,10 @@ export const PLANS: readonly Plan[] = [
     members: 1,
     recommended: true,
     features: [
-      'Toutes les cartes mentales, sans gemme',
+      'Toutes les fiches de chapitre, sans gemme',
       'Toutes les fiches de révision',
       'Tous les quiz & flashcards premium',
+      'Les exercices de chapitre, corrigés et notés par l’IA',
       'Tous les paquets de cartes du Studio',
     ],
     cta: 'Passer à Studuel+',
@@ -110,6 +112,25 @@ export function planForTier(tier: Tier): PlanId {
       return 'plus'
     default:
       return 'gratuit' // anonymous | free
+  }
+}
+
+/**
+ * Le palier (`subscription_interest.plan_id`, `profiles.subscription_tier`)
+ * qu'une offre de la vitrine demande. `null` pour le gratuit : rien à demander.
+ *
+ * Sans cette traduction, la demande d'abonnement ne partait jamais : la vitrine
+ * passait « plus » ou « famille » à un formulaire qui n'acceptait que tier1…3,
+ * et le formulaire se rendait vide (corrigé le 18/09/2026).
+ */
+export function tierDuPlan(planId: PlanId): PlanPayant | null {
+  switch (planId) {
+    case 'plus':
+      return 'tier1'
+    case 'famille':
+      return 'tier3'
+    default:
+      return null
   }
 }
 

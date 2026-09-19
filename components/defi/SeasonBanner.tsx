@@ -9,29 +9,27 @@ import SheetShell from './SheetShell'
 import { NotificationBadge } from './SculptedPlate'
 
 /**
- * Le bandeau de saison, LA BANDE DU HAUT de l'arène (centrée entre la pastille
- * de niveau et les pièces, façon Pass Royale) : couronne, numéro de saison,
- * barre du palier en cours et compte à rebours — et LA porte du Pass de saison.
+ * La bande de saison — le second cran de la colonne d'identité, JUSTE SOUS la
+ * plaque du joueur : couronne, numéro de saison, jauge du palier en cours et
+ * compte à rebours — et LA porte du Pass de saison.
  *
- * Il était collé au bloc CTA, en bas : le rendez-vous du mois se lisait sous le
- * personnage, écrasé entre les jauges de traque et le bouton Duel, alors que
- * c'est l'information de CADRE de l'écran (« où en est la saison »). Monté en
- * haut, il prend le matériau du HUD (verre de nuit) et la place que le départ
- * de l'engrenage a libérée.
+ * Elle prend exactement la LARGEUR de la plaque au-dessus (`w-[12.5rem]`) et
+ * son rayon : les deux objets font une colonne aux bords alignés. Avant, une
+ * pilule plus large que la plaque, arrondie autrement, avec « 26 jours
+ * restants » en toutes lettres qui laissait dix pixels à la jauge — elle se
+ * lisait comme un troisième objet posé là, pas comme la suite de la carte.
+ * Le compte à rebours passe en forme courte (« 26 j ») ; le long vit dans
+ * l'étiquette lue à voix haute et dans la feuille.
  *
- * Avant, la saison était présente DEUX fois sur le même écran : une tuile
- * dorée « Pass » à couronne dans la grappe de droite, et ce bandeau à couronne
- * en bas. Deux couronnes, deux entrées, un seul concept — et le bandeau, lui,
- * n'était même pas cliquable (il affichait une progression sans dire où aller
- * la chercher). La tuile a donc été supprimée : la grappe de droite ne garde
- * que des OBJETS illustrés (coupe, coffre), et la saison vit là où on lit déjà
- * son avancement. Une info, une place.
+ * Une info, une place : la saison n'existe qu'ici sur l'arène (la tuile dorée
+ * « Pass » de la grappe de droite a été supprimée en juillet).
  */
 export default function SeasonBanner({
   number,
   name,
   progress,
   countdown,
+  countdownShort,
   isLastDay,
   claimable,
   children,
@@ -42,8 +40,10 @@ export default function SeasonBanner({
   name: string
   /** Avancement dans le palier en cours (0..1). */
   progress: number
-  /** Compte à rebours de fin de saison (« Plus que 3 jours »). */
+  /** Compte à rebours en toutes lettres (« 26 jours restants »), lu à voix haute. */
   countdown: string
+  /** Compte à rebours court (« 26 j »), affiché. */
+  countdownShort: string
   /** Dernier jour : le compte à rebours passe en corail. */
   isLastDay: boolean
   /** Nombre de récompenses de palier à réclamer (0 = aucune pastille). */
@@ -68,9 +68,9 @@ export default function SeasonBanner({
             ? ` ${claimable} récompense${claimable > 1 ? 's' : ''} à réclamer.`
             : ''
         } Ouvrir le Pass de saison`}
-        className="olympe-glass olympe-glass--sculpte olympe-press relative mx-auto flex w-full max-w-80 cursor-pointer items-center gap-2.5 rounded-full px-3 py-1.5 text-[0.68rem] font-extrabold focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
+        className="olympe-glass olympe-glass--sculpte olympe-press relative flex w-[12.5rem] cursor-pointer items-center gap-2 rounded-[14px] px-2.5 py-1.5 text-[0.66rem] font-extrabold focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
       >
-        <span className="flex shrink-0 items-center gap-1.5">
+        <span className="flex shrink-0 items-center gap-1 whitespace-nowrap">
           <Crown
             className="size-3.5 shrink-0 text-highlight"
             strokeWidth={2.4}
@@ -88,11 +88,11 @@ export default function SeasonBanner({
           />
         </span>
         <span
-          className={`shrink-0 ${
+          className={`shrink-0 whitespace-nowrap tabular-nums ${
             isLastDay ? 'font-extrabold text-destructive' : 'text-[#ffe9b3]'
           }`}
         >
-          {countdown}
+          {countdownShort}
         </span>
         {/* Le dû se voit sans ouvrir : même pastille corail que les tuiles des
             rails — un seul style de compteur pour tout l'écran. */}

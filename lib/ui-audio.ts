@@ -32,29 +32,6 @@ export function openTones(): ToneSpec[] {
   ]
 }
 
-// ------------------------------------------------------------------- balayage
-const SWIPE_STEPS = 7
-const SWIPE_LO = 380
-const SWIPE_HI = 900
-
-/**
- * Balayage entre onglets : un souffle court et directionnel. Il MONTE quand on
- * va vers l'onglet suivant, DESCEND quand on revient — l'oreille entend le sens
- * du geste sans qu'on ait à l'écrire. Dessiné en escalier de notes douces qui se
- * recouvrent (glissando) et à très bas volume : un swish, pas une mélodie.
- */
-export function swipeTones(direction: 'up' | 'down'): ToneSpec[] {
-  const tones: ToneSpec[] = []
-  for (let i = 0; i < SWIPE_STEPS; i++) {
-    const t = i / (SWIPE_STEPS - 1) // 0 → 1
-    const freq =
-      direction === 'up'
-        ? SWIPE_LO + (SWIPE_HI - SWIPE_LO) * t
-        : SWIPE_HI - (SWIPE_HI - SWIPE_LO) * t
-    tones.push({ freq, at: i * 0.016, dur: 0.05, wave: 'sine', peak: 0.014 })
-  }
-  return tones
-}
 
 /**
  * Rebond d'extrémité (rubber-band) : le petit « bwomp » grave quand on tire une

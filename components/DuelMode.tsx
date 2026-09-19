@@ -10,6 +10,10 @@ import DefiTimer from '@/components/DefiTimer'
 import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
 import type { Gain } from '@/lib/gains'
 import { recordChallenge, recordDuelResult, saveDuelRecording } from '@/app/defi/actions'
+import { recordModeScore } from '@/app/defi/palmares-actions'
+import FinDePartie from '@/components/palmares/FinDePartie'
+import type { BilanPartie } from '@/lib/palmares/bilan'
+import { duelFantomeScore } from '@/lib/palmares/epreuves'
 import { recordReviewAnswers } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
 import {
@@ -32,7 +36,9 @@ import {
   type ModeQuestion,
   type RecordedRound,
   type RoundResult,
+  modeScene,
 } from '@/lib/defi-modes'
+import ModeHero from '@/components/defi/ModeHero'
 
 type Phase = 'pick' | 'vs' | 'playing' | 'reveal' | 'done'
 
@@ -104,6 +110,10 @@ export default function DuelMode({
   // victoire de `recordDuelResult`. Ils atterrissent chacun de leur côté, d'où
   // la concaténation — `agregerGains` fusionnera ce qui doit l'être.
   const [gains, setGains] = useState<Gain[]>([])
+  // Le Palmarès (352) : le score du duel et son bilan (programme seulement).
+  const [scoreDuel, setScoreDuel] = useState(0)
+  const [bilan, setBilan] = useState<BilanPartie | null>(null)
+  const [enAttente, setEnAttente] = useState(false)
   // Réponses du duel pour la répétition espacée (SRS + Revanche).
   const reviewsRef = useRef<ReviewAnswer[]>([])
 
@@ -251,22 +261,31 @@ export default function DuelMode({
     // L'XP est recalculée côté serveur ; on envoie score/total réels.
     const answeredCount = newRounds.length * ROUND_SIZE
     const correctCount = newRounds.reduce((s, r) => s + r.me, 0)
+    // Le Palmarès : le duel vaut un SCORE (réponses, prime, 2-0) qui entre sur
+    // l'échelle de la semaine. Réservé aux duels du PROGRAMME (srs), comme le
+    // fantôme : un jeu de salon ne se classe pas parmi les duels de révision.
+    if (srs) {
+      const roundsLost = newRounds.filter((r) => roundWinner(r) === 'them').length
+      const sc = duelFantomeScore({ correct: correctCount, won: w === 'me', roundsLost })
+      const ms = newRounds.reduce((s, r) => s + r.myTimeMs, 0)
+      setScoreDuel(sc)
+      setBilan(null)
+      setEnAttente(true)
+      recordModeScore('duel', sc, Math.max(1, ms))
+        .then(setBilan)
+        .catch(() => setBilan(null))
+        .finally(() => setEnAttente(false))
+    }
     recordChallenge(correctCount, answeredCount, 'duel')
       .then((r) => {
         setSaved(r.saved)
         setGains((prec) => [...prec, ...r.gains])
       })
       .catch(() => setSaved(false))
-    // Bilan Victoires/Défaites + LES ÉCUS DE VICTOIRE. Le montant était versé
-    // en base et jeté ici (`.catch(() => {})` sur une promesse dont personne ne
-    // lisait le résultat) : l'élève gagnait des écus qu'aucun écran ne lui
-    // annonçait, et son solde changeait sans qu'il sache pourquoi.
-    recordDuelResult(w === 'me')
-      .then((r) => {
-        if (!r) return
-        setGains((prec) => [...prec, { unite: 'ecu', montant: r.coinsAwarded }])
-      })
-      .catch(() => {})
+    // Bilan Victoires/Défaites. PLUS D'ÉCUS annoncés (Lucas, 16/09/2026 : la
+    // pièce n'existe plus pour le joueur) : ce que la RPC verse encore en base
+    // ne s'affiche nulle part, seul le bilan compte.
+    recordDuelResult(w === 'me').catch(() => {})
     // Reprogramme chaque question dans la file « À revoir » — sauf pour les
     // jeux de salon, dont les questions ne vivent pas dans quiz_questions.
     if (srs) recordReviewAnswers(reviewsRef.current).catch(() => {})
@@ -284,8 +303,9 @@ export default function DuelMode({
   if (phase === 'pick') {
     return (
       <div className="mx-auto flex max-w-xl flex-col gap-4">
+        {/* L'ambiance du mode : la scène de son billet, fondue dans sa robe. */}
+        <ModeHero scene={modeScene('duel')} titre="Duel fantôme" sousTitre="Choisis ton rival" />
         <div className="space-y-1 text-center">
-          <h1 className="font-heading text-3xl font-bold">Choisis ton rival</h1>
           <p className="text-sm text-muted-foreground">
             Premier à 2 manches gagnées · {ROUND_SIZE} questions par manche
           </p>
@@ -581,6 +601,7 @@ export default function DuelMode({
             gains={gains}
             onRematch={() => startDuel(opponent)}
             onExit={onExit}
+            palmares={srs ? { score: scoreDuel, bilan, enAttente, correct: rounds.reduce((s, r) => s + r.me, 0) } : null}
           />
         ) : (
           <>
@@ -631,6 +652,7 @@ function DuelDone({
   gains,
   onRematch,
   onExit,
+  palmares,
 }: {
   opponent: Friend
   score: { me: number; them: number }
@@ -640,11 +662,89 @@ function DuelDone({
   gains: Gain[]
   onRematch: () => void
   onExit: () => void
+  /**
+   * Le Palmarès du duel (score, bilan serveur) — null pour un jeu de salon,
+   * qui ne se classe pas parmi les duels de révision et garde l'écran simple.
+   */
+  palmares: { score: number; bilan: BilanPartie | null; enAttente: boolean; correct: number } | null
 }) {
   // Le retour au calme sonore/visuel : focus sur la carte de résultat.
   useEffect(() => {
     document.getElementById('duel-result')?.focus()
   }, [])
+
+  const carte = (
+    <div
+      id="duel-result"
+      tabIndex={-1}
+      className={cn(
+        'animate-in zoom-in relative w-full overflow-hidden rounded-2xl p-6 text-center text-white shadow-lg outline-none duration-500',
+        iWon && 'ring-2 ring-highlight',
+      )}
+    >
+      <ArenaBackdrop />
+      <div className="relative">
+        <p className="text-[11px] font-bold tracking-widest text-white/75 uppercase">
+          Duel terminé · vs {opponent.name}
+        </p>
+        {iWon ? (
+          <Image
+            src="/images/mascotte/flamme-celebration.webp"
+            alt=""
+            aria-hidden="true"
+            width={96}
+            height={96}
+            className="pop-in mx-auto mt-2 object-contain"
+          />
+        ) : null}
+        <p className="font-heading mt-2 text-4xl font-bold italic">
+          {iWon ? 'VICTOIRE !' : 'DÉFAITE'}
+        </p>
+        <div className="mt-4 flex items-center justify-center gap-6">
+          <div>
+            <p className="font-mono text-3xl font-bold tabular-nums">{score.me}</p>
+            <p className="text-xs text-white/75">Toi</p>
+          </div>
+          <span className="text-2xl font-bold text-white/60">—</span>
+          <div>
+            <p className="font-mono text-3xl font-bold tabular-nums">{score.them}</p>
+            <p className="text-xs text-white/75">
+              {opponent.emoji} {opponent.name}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+
+  if (palmares) {
+    return (
+      <FinDePartie
+        mode="duel"
+        score={palmares.score}
+        titreAttente={iWon ? 'Victoire !' : 'Défaite'}
+        detail={
+          <>
+            {palmares.correct} bonnes réponses · manches {score.me}–{score.them}
+            {iWon && score.them === 0 ? ' · victoire sèche' : ''}
+          </>
+        }
+        bilan={palmares.bilan}
+        enAttente={palmares.enAttente}
+        recordLocalAvant={0}
+        gains={gains}
+        saved={saved}
+        onRejouer={onRematch}
+        libelleRejouer="Revanche"
+        avant={carte}
+        boutons={
+          <Button variant="outline" size="lg" onClick={onExit} className="w-full">
+            Continuer
+          </Button>
+        }
+      />
+    )
+  }
 
   return (
     <div className="flex w-full max-w-sm flex-col items-center gap-4">
@@ -690,16 +790,10 @@ function DuelDone({
         </div>
       </div>
 
-      {/* LES ÉCUS DE LA VICTOIRE, et le geste de Clash Royale qui va avec :
-          ils jaillissent de cette pastille et filent vers la bourse du bandeau,
-          qui monte à mesure qu'ils y tombent.
-
-          ⚠️ CE BLOC ÉTAIT UN « +48 XP » QUI NE CORRESPONDAIT À RIEN. La valeur
-          venait de `XP_RULES`, un barème pur côté client ; depuis la migration
-          348, jouer n'acquiert rien et le portefeuille ne versait pas cette XP.
-          Pendant ce temps, les écus RÉELLEMENT versés par `record_duel_result`
-          n'étaient annoncés nulle part. On affichait donc la monnaie qu'on ne
-          gagnait pas, et on taisait celle qu'on gagnait. */}
+      {/* LES GAINS DE LA PARTIE, et le geste de Clash Royale qui va avec :
+          ils jaillissent de cette pastille et filent vers le bandeau, qui
+          monte à mesure qu'ils y tombent. Seuls les montants RÉELLEMENT
+          versés par le serveur s'affichent — jamais un barème client. */}
       <PanneauRecompenses gains={gains} className="w-full" />
 
       {iWon ? (

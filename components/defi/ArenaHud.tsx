@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { createPortal } from 'react-dom'
@@ -9,6 +9,7 @@ import { Menu, X } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
 import { menuAlertCount } from '@/lib/arene-hud'
+import { useDialogFocus } from '@/lib/use-dialog'
 import SheetShell from './SheetShell'
 import { NotificationBadge } from './SculptedPlate'
 
@@ -28,13 +29,6 @@ export interface OrbItem {
    * tournoi, le coffre d'équipe… Prioritaire sur `icon`.
    */
   image?: string
-  /**
-   * L'illustration EST déjà une tuile (squircle coloré, liseré, ombre) et se
-   * suffit : le jeton d'icône lui retire son fond et son cadre. Sans ce
-   * drapeau, on empile une tuile dans une tuile — deux liserés, deux ombres,
-   * et un objet qui rétrécit au centre d'un carré qui ne lui sert à rien.
-   */
-  imageIsTile?: boolean
   /** Pastille de la plaque (compteur, « ! »…). */
   badge?: string
   /**
@@ -55,20 +49,20 @@ export interface OrbItem {
   sheetContent?: ReactNode
 }
 
-/** Famille de couleur d'une tuile de rail — une famille = une fonction. */
-export type TileFamily =
-  | 'violet'
-  | 'gold'
-  | 'green'
-  | 'magenta'
-  | 'wood'
-  | 'amber'
+/**
+ * Robe d'une plaque de bord : `violet` (la plaque sculptée de l'arène, défaut)
+ * ou `amber` (l'urgence : un gardien sorti de sa tanière). Les autres familles
+ * de couleur d'avant (or, vert, magenta, bois) sont parties avec les tuiles de
+ * verre : une seule matière pour tout le bord, c'est ce qui fait la famille.
+ */
+export type TileFamily = 'violet' | 'amber'
 
 /**
- * Une tuile du rail GAUCHE : un objet illustré dans un cadre commun (squircle,
- * liseré blanc), la couleur dite par sa famille. Aucun libellé visible —
- * l'illustration, le badge et le minuteur suffisent (l'aria-label porte le
- * nom). Comme les entrées du menu : `href` OU `sheetContent`.
+ * Une plaque de bord : un objet illustré sur la PLAQUE SCULPTÉE (opaque,
+ * biseau or, socle — `.arena-plaque`), 68 px, l'illustration à 58 px. Aucun
+ * libellé visible — l'illustration, la pastille et la légende sous la plaque
+ * suffisent (l'aria-label porte le nom). Comme les entrées du menu : `href`
+ * OU `sheetContent`.
  */
 export interface RailTile {
   id: string
@@ -76,18 +70,13 @@ export interface RailTile {
   label: string
   /** Illustration détourée (webp) qui remplit la tuile. */
   image?: string
-  /**
-   * L'illustration EST déjà une tuile : le cadre commun (squircle coloré,
-   * liseré, socle) s'efface devant elle. Sinon on empile deux tuiles.
-   */
-  imageIsTile?: boolean
   /** À défaut d'illustration : picto SVG centré. */
   icon?: ReactNode
-  /** Robe de la tuile (défaut : violet, la marque). */
+  /** Robe de la plaque (défaut : violet, la marque). */
   family?: TileFamily
   badge?: string
   badgeTone?: 'alert' | 'neutral'
-  /** Minuteur marine sous la tuile (« 3j ») — l'urgence qui réclame. */
+  /** Légende SOUS la plaque (« 3j », « 96 % ») — crème à contour marine. */
   timer?: string
   href?: string
   sheetTitle?: string
@@ -98,37 +87,30 @@ interface ArenaHudProps {
   /** Rail gauche, tuiles flottantes libres : le duo missions (Quêtes, Boss). */
   leftTiles?: RailTile[]
   /**
-   * Les COMPAGNONS DU BURGER — jetons ronds posés à sa GAUCHE, dans la même
-   * rangée de l'angle haut-droit (la barrette de boutons de Clash Royale, juste
-   * sous la bande des monnaies). Réservé aux portes qu'on ouvre d'un tap sans
-   * passer par le menu (Amis).
-   */
-  cornerTiles?: RailTile[]
-  /**
    * Entrées du menu burger — TOUT le second rang : historique, classements,
    * ligue, tournoi, coffre d'équipe, réglages.
    */
   menuItems: OrbItem[]
   /**
    * L'appel Studuel+ (PremiumPill), posé JUSTE SOUS le burger, dans la même
-   * colonne de l'angle. Il quitte l'écran quand le menu s'ouvre : la cascade
-   * des plaques prend alors la colonne, et deux objets dorés superposés ne
-   * feraient qu'un empilement illisible.
+   * colonne de l'angle.
    */
   premiumSlot?: ReactNode
   /**
    * La Route des trophées, SOUS Studuel+ — le troisième cran de la colonne de
    * l'angle. C'est un écran de LECTURE (où j'en suis, ce que vaut la prochaine
    * partie, pourquoi) : il rejoint les commandes du HUD au lieu d'occuper la
-   * rangée de combat, rendue à l'action. Comme Studuel+, il s'efface quand le
-   * menu s'ouvre — la colonne appartient alors à la cascade des plaques.
+   * rangée de combat, rendue à l'action.
    */
   roadSlot?: ReactNode
-  /** Pastille niveau + XP, calée dans l'ANGLE haut-gauche (façon Clash Royale). */
+  /**
+   * LA CARTE DU JOUEUR, calée dans l'ANGLE haut-gauche (façon Clash Royale) :
+   * avatar, nom, série et cristaux, puis la barre de niveau et la barre de
+   * trophées. Depuis le 17/09/2026 elle porte SEULE tout le haut-gauche — le
+   * bandeau du haut (TopHud) se masque sur l'arène et la bande de saison a
+   * été retirée.
+   */
   profileSlot?: ReactNode
-  /** Cartouche de rang, JUSTE SOUS la pastille de niveau (même colonne). */
-  /** Bandeau de saison — la bande du haut, centrée entre niveau et pièces. */
-  seasonSlot?: ReactNode
   /** Le centre de la scène (la scène du héros, calée en bas). */
   children?: ReactNode
 }
@@ -138,15 +120,11 @@ interface ArenaHudProps {
  * laissé au personnage (children, ancré en bas au-dessus de la zone CTA), et
  * les systèmes réclament leur visite depuis le HUD.
  *
- * Rangement façon Clash Royale (cette passe) : QUATRE rangées, exactement
- * comme la home de Clash Royale.
- *   1. la bande des monnaies (TopHud) à droite, la pastille de niveau dans
- *      l'angle gauche ;
- *   2. juste DESSOUS : la cartouche de rang à gauche, et dans l'angle DROIT la
- *      barrette de boutons — les compagnons (Amis) puis le burger, tout au
- *      bord ;
- *   3. le bandeau de SAISON, pleine largeur (le « Pass Royale ») ;
- *   4. le rail des missions, à gauche, qui descend le long de la scène.
+ * Rangement façon Clash Royale : la CARTE DU JOUEUR tient l'angle gauche
+ * (avatar, nom, série, cristaux, barre de niveau, barre de trophées — un seul
+ * objet depuis le 17/09/2026), la colonne des commandes tient l'angle droit
+ * (burger, Studuel+, Route des trophées), et le rail des missions descend
+ * sous la carte, le long de la scène.
  *
  * Le burger était posé au troisième cran, sous le bandeau de saison : il ne
  * tenait plus l'angle, et la colonne droite n'avait qu'un seul objet. Remonté
@@ -157,23 +135,21 @@ interface ArenaHudProps {
  */
 export default function ArenaHud({
   leftTiles = [],
-  cornerTiles = [],
   menuItems,
   premiumSlot,
   roadSlot,
   profileSlot,
-  seasonSlot,
   children,
 }: ArenaHudProps) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [openId, setOpenId] = useState<string | null>(null)
   const reduce = useReducedMotion()
+  // Le panneau du menu : le focus y entre à l'ouverture et revient au burger
+  // à la fermeture.
+  const menuRef = useRef<HTMLDivElement>(null)
+  useDialogFocus(menuRef, menuOpen)
 
-  const sheetItems: (OrbItem | RailTile)[] = [
-    ...leftTiles,
-    ...cornerTiles,
-    ...menuItems,
-  ]
+  const sheetItems: (OrbItem | RailTile)[] = [...leftTiles, ...menuItems]
   const open = sheetItems.find((o) => o.id === openId && o.sheetContent) ?? null
   // Menu fermé, le burger doit quand même DIRE qu'il y a un dû derrière lui :
   // sinon un coffre prêt disparaîtrait de l'écran (il était visible en tuile).
@@ -198,19 +174,6 @@ export default function ArenaHud({
     setOpenId(id)
   }
 
-  // Cascade : les plaques se déroulent depuis le burger vers le BAS — la
-  // première de la liste (la plus proche du bouton) apparaît en premier, donc
-  // stagger dans l'ordre naturel.
-  const listVariants = {
-    open: { transition: { staggerChildren: 0.04 } },
-    closed: { transition: { staggerChildren: 0.02, staggerDirection: -1 } },
-  }
-  const rowVariants = reduce
-    ? { open: { opacity: 1 }, closed: { opacity: 0 } }
-    : {
-        open: { opacity: 1, y: 0, scale: 1 },
-        closed: { opacity: 0, y: -14, scale: 0.9 },
-      }
 
   return (
     <div className="relative min-h-0 flex-1">
@@ -220,141 +183,136 @@ export default function ArenaHud({
         {children}
       </div>
 
-      {/* Voile de fermeture, façon Clash Royale : assombrit TOUTE l'interface
-          (portail plein viewport, au-dessus de la barre d'onglets), pour ne
-          laisser rayonner que le menu. Un tap le referme. */}
+      {/* LE MENU, UNE PAGE POSÉE SUR L'ANGLE (Lucas, 18/09/2026). Le panneau
+          s'ouvrait SOUS le burger, dans la même colonne : la colonne prenait
+          la largeur du panneau, le burger devenu croix glissait au centre,
+          puis repartait à droite à la fermeture. Désormais le burger ne bouge
+          JAMAIS : le panneau se pose PAR-DESSUS lui, calé dans le même angle,
+          avec sa propre croix dans son coin haut-droit. Fermé, le burger est
+          là où il a toujours été. Fond crème : les entrées, en plaques
+          blanches, s'y détachent — le violet profond les noyait.
+          Portail plein viewport, au-dessus de la barre d'onglets ; le voile
+          assombrit tout le reste, et un tap dessus referme. */}
       {typeof document !== 'undefined'
         ? createPortal(
             <AnimatePresence>
               {menuOpen ? (
-                <motion.button
-                  type="button"
-                  aria-label="Fermer le menu"
-                  className="fixed inset-0 z-[55] cursor-default bg-black/65 backdrop-blur-[2px]"
+                <motion.div
+                  key="menu"
+                  className="fixed inset-0 z-[55]"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                  onClick={() => setMenuOpen(false)}
-                />
+                  transition={{ duration: 0.18 }}
+                >
+                  <button
+                    type="button"
+                    aria-label="Fermer le menu"
+                    tabIndex={-1}
+                    className="absolute inset-0 cursor-default bg-black/60 backdrop-blur-[2px]"
+                    onClick={() => setMenuOpen(false)}
+                  />
+                  <motion.div
+                    ref={menuRef}
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="arena-menu-titre"
+                    className="arena-menu absolute top-2 right-3 flex max-h-[calc(100dvh-1rem)] w-[min(20rem,calc(100vw-1.5rem))] flex-col outline-none md:top-4"
+                    style={{ transformOrigin: 'top right' }}
+                    initial={reduce ? false : { scale: 0.96, y: -6 }}
+                    animate={{ scale: 1, y: 0 }}
+                    exit={reduce ? undefined : { scale: 0.96, y: -6 }}
+                    transition={{ duration: 0.18, ease: 'easeOut' }}
+                  >
+                    <div className="flex items-center justify-between gap-2 pb-2 pl-2">
+                      <h2
+                        id="arena-menu-titre"
+                        className="font-heading text-lg font-extrabold text-foreground"
+                      >
+                        Menu
+                      </h2>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          sfx.tap()
+                          setMenuOpen(false)
+                        }}
+                        aria-label="Fermer le menu"
+                        className="arena-menu-fermer defi2-press grid size-11 shrink-0 cursor-pointer place-items-center rounded-full focus-visible:ring-4 focus-visible:ring-primary/40 focus-visible:outline-none"
+                      >
+                        <X className="size-6" strokeWidth={2.6} aria-hidden="true" />
+                      </button>
+                    </div>
+                    <ul className="-mx-1 flex min-h-0 flex-col gap-1.5 overflow-y-auto overscroll-contain px-1 pb-1">
+                      {menuItems.map((item) => (
+                        <li key={item.id}>
+                          {item.dividerBefore ? (
+                            <span className="arena-menu-sep block" aria-hidden="true" />
+                          ) : null}
+                          <MenuRow item={item} onOpen={openSheet} />
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                </motion.div>
               ) : null}
             </AnimatePresence>,
             document.body,
           )
         : null}
 
-      {/* La pastille de niveau REMONTE dans l'angle : elle occupe la ligne du
-          bandeau (laissée libre à gauche, les pièces étant à droite et
-          l'engrenage parti dans le burger). `fixed` pour tenir l'angle quel que
-          soit le format ; sur desktop, après la barre latérale (md:left-56). */}
+      {/* La carte du joueur tient l'angle haut-gauche. `fixed` pour tenir
+          l'angle quel que soit le format ; sur desktop, après la barre
+          latérale (md:left-56). */}
       <div className="fixed top-2 left-3 z-40 md:top-4 md:left-56">
         {profileSlot}
       </div>
 
-      {/* LA SAISON REJOINT LA COLONNE DE GAUCHE, sous le rang.
-          Elle traversait l'écran en pleine largeur, à mi-hauteur : le SEUL
-          objet posé au-dessus du podium, là où le regard doit trouver la
-          mascotte. Et le plus plat de tous — une barrette fine et une jauge,
-          par-dessus une illustration peinte.
-          Chez Clash Royale, le Pass tient le bloc du coin ; rien ne flotte
-          au-dessus de l'arène. Elle prend donc le troisième cran de la colonne
-          d'identité (niveau, rang, saison) et la scène redevient libre. */}
-      {seasonSlot ? (
-        <div className="fixed top-[4.25rem] left-3 z-40 w-[14.5rem] md:top-[5.25rem] md:left-56 md:w-64">
-          {seasonSlot}
-        </div>
-      ) : null}
-
-      {/* RANGÉE 4 : le rail des missions, qui descend le long de la scène. */}
+      {/* Le rail des missions, SOUS la carte du joueur, le long de la scène —
+          une COLONNE régulière : même plaque, même écart. */}
       {leftTiles.length > 0 ? (
-        <div className="fixed top-[9rem] left-3.5 z-40 flex flex-col gap-4 md:top-[10rem] md:left-[14.125rem]">
+        <div className="fixed top-[9rem] left-3 z-40 flex flex-col items-center gap-3 md:top-[10rem] md:left-[14.125rem]">
           {leftTiles.map((tile) => (
             <RailTileFace key={tile.id} tile={tile} onOpen={openSheet} />
           ))}
         </div>
       ) : null}
 
-      {/* ANGLE HAUT-DROIT : la barrette de boutons, au ras de la bande des
-          monnaies — les compagnons à GAUCHE, le burger tout au BORD (c'est lui
-          qui tient l'angle). Z-index conditionnel : menu OUVERT → z-[60] >
-          voile (55) pour rester en pleine lumière ; menu FERMÉ → z-40, SOUS
-          les feuilles modales (z-50). */}
-      <div
-        className={`fixed top-16 right-3 flex flex-col items-end gap-2 md:top-[4.5rem] ${
-          menuOpen ? 'z-[60]' : 'z-40'
-        }`}
-      >
+      {/* ANGLE HAUT-DROIT : la COLONNE d'objets, au ras de la bande des
+          monnaies — le burger tient l'angle, puis dessous, sur la même plaque
+          sculptée et au même écart : Studuel+ (en or) et la Route des
+          trophées. (Amis a rejoint le menu le 16/09/2026.) z-40 : SOUS les
+          feuilles modales (z-50) et sous le menu ouvert, qui la recouvre. */}
+      <div className="fixed top-2 right-3 z-40 flex flex-col items-center gap-3 md:top-4">
         <div className="flex items-center gap-2">
-          {cornerTiles.map((tile) => (
-            <RailTileFace
-              key={tile.id}
-              tile={tile}
-              onOpen={openSheet}
-              variant="corner"
-            />
-          ))}
-          {/* Le burger. Il était NU (trois barres à même le décor) tant qu'il
-              était seul sur son bord : le fond aurait fait un objet de plus.
-              Maintenant qu'Amis l'accompagne, deux boutons côte à côte dont un
-              seul porte un matériau se lisent comme un oubli, pas comme une
-              hiérarchie — chez Clash Royale la barrette est une SÉRIE de
-              boutons identiques. Il prend donc le jeton de verre de nuit, le
-              matériau commun du HUD, qui règle au passage sa lisibilité sur
-              les arènes claires (aube, midi). */}
+          {/* Le burger, sur la plaque sculptée comme le reste de la colonne :
+              chez Clash Royale la colonne est une SÉRIE d'objets de la même
+              matière. Rond, pour dire « commande » et non « porte ». */}
           <button
             type="button"
             onClick={() => {
               sfx.tap()
               setMenuOpen((v) => !v)
             }}
-            aria-haspopup="menu"
+            aria-haspopup="dialog"
             aria-expanded={menuOpen}
-            aria-label={
-              menuOpen
-                ? 'Fermer le menu de l’arène'
-                : `Menu de l’arène — classements, tournoi, coffre, réglages…${
-                    alerts > 0 ? ` ${alerts} à voir` : ''
-                  }`
-            }
+            aria-label={`Menu de l’arène — classements, tournoi, coffre, réglages…${
+              alerts > 0 ? ` ${alerts} à voir` : ''
+            }`}
             title="Menu de l'arène"
-            className="olympe-glass olympe-glass--sculpte defi2-press relative grid size-11 cursor-pointer place-items-center rounded-full focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
+            className="arena-plaque arena-plaque--ronde defi2-press relative grid size-12 cursor-pointer place-items-center focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
           >
-            <motion.span
-              className="col-start-1 row-start-1 grid place-items-center"
-              initial={false}
-              animate={
-                reduce
-                  ? { opacity: menuOpen ? 0 : 1 }
-                  : { opacity: menuOpen ? 0 : 1, scale: menuOpen ? 0.6 : 1 }
-              }
-              transition={{ type: 'spring', stiffness: 380, damping: 26 }}
-            >
-              <Menu
-                className="size-6 text-[#faf6ef]"
-                strokeWidth={2.6}
-                aria-hidden="true"
-              />
-            </motion.span>
-            <motion.span
-              className="pointer-events-none col-start-1 row-start-1 grid place-items-center"
-              initial={false}
-              animate={
-                reduce
-                  ? { opacity: menuOpen ? 1 : 0 }
-                  : { opacity: menuOpen ? 1 : 0, scale: menuOpen ? 1 : 0.6 }
-              }
-              transition={{ type: 'spring', stiffness: 380, damping: 26 }}
-            >
-              <X
-                className="size-6 text-[#faf6ef]"
-                strokeWidth={2.6}
-                aria-hidden="true"
-              />
-            </motion.span>
-            {alerts > 0 && !menuOpen ? (
+            {/* Toujours un burger : c'est le panneau ouvert, posé par-dessus,
+                qui porte la croix. Le bouton ne se transforme plus. */}
+            <Menu
+              className="size-6 text-[#faf6ef]"
+              strokeWidth={2.6}
+              aria-hidden="true"
+            />
+            {alerts > 0 ? (
               <NotificationBadge
                 tone="alert"
-                className="absolute -top-1.5 -right-1.5"
+                className="arena-pastille absolute -top-1.5 -right-1.5"
               >
                 {alerts}
               </NotificationBadge>
@@ -362,38 +320,13 @@ export default function ArenaHud({
           </button>
         </div>
 
-        {/* L'appel Studuel+, sous le burger : le seul objet doré du HUD. Il
-            s'efface quand le menu s'ouvre — la colonne appartient alors à la
-            cascade des plaques. */}
-        {premiumSlot && !menuOpen ? premiumSlot : null}
+        {/* L'appel Studuel+, au cran suivant : le seul objet doré du HUD. Il
+            reste en place quand le menu s'ouvre — le panneau et le voile le
+            recouvrent, rien ne bouge dans la colonne. */}
+        {premiumSlot ?? null}
 
         {/* La Route des trophées, au cran suivant de la même colonne. */}
-        {roadSlot && !menuOpen ? roadSlot : null}
-
-        {/* Le panneau, SOUS la barrette : la pile des plaques, façon carte
-            Clash Royale. Borné en hauteur (petits écrans) plutôt que de
-            déborder sous la barre d'onglets. */}
-        <AnimatePresence>
-          {menuOpen ? (
-            <motion.ul
-              key="menu"
-              className="olympe-glass olympe-glass--sculpte arena-menu max-h-[calc(100dvh-12rem)] w-[15.5rem] overflow-y-auto"
-              variants={listVariants}
-              initial="closed"
-              animate="open"
-              exit="closed"
-            >
-              {menuItems.map((item) => (
-                <motion.li key={item.id} variants={rowVariants}>
-                  {item.dividerBefore ? (
-                    <span className="arena-menu-sep block" aria-hidden="true" />
-                  ) : null}
-                  <MenuRow item={item} onOpen={openSheet} />
-                </motion.li>
-              ))}
-            </motion.ul>
-          ) : null}
-        </AnimatePresence>
+        {roadSlot ?? null}
       </div>
 
       {/* Feuille de détail d'une entrée (tuile ou plaque) — portail pour
@@ -443,56 +376,34 @@ export default function ArenaHud({
 }
 
 /**
- * Une tuile de rail. Deux robes, une seule mécanique :
- * - `rail` (défaut, rail gauche) : le cadre commun des OBJETS — squircle,
- *   liseré blanc, socle 3D peint par la famille de couleur ;
- * - `corner` (barrette de l'angle haut-droit) : un jeton ROND de verre de nuit,
- *   la robe des COMMANDES du HUD — celle du burger qu'il accompagne, et celle
- *   de la pastille de niveau et de la cartouche de rang en face.
- * Dans les deux cas : l'illustration ou le picto, la pastille et le minuteur.
+ * Une plaque de bord — la même des deux côtés de la scène : la plaque sculptée
+ * (opaque, biseau or, socle), 68 px, l'illustration à 58 px avec son ombre, la
+ * pastille à cheval sur l'angle, et la légende SOUS la plaque. Avant, le rail
+ * gauche portait des squircles colorés et l'angle droit des jetons de verre :
+ * deux robes pour un même geste (ouvrir quelque chose), et des dessins de 36 px
+ * qui perdaient leur cerne. Une seule matière, un seul format.
  */
 function RailTileFace({
   tile,
   onOpen,
-  variant = 'rail',
 }: {
   tile: RailTile
   onOpen: (id: string) => void
-  variant?: 'rail' | 'corner'
 }) {
-  const family = tile.family ?? 'violet'
-  const corner = variant === 'corner'
-
-  // Une illustration qui EST déjà une tuile porte son propre cadre : le nôtre
-  // s'efface (plus de fond, plus de liseré, plus de socle) et elle occupe TOUTE
-  // la place, au lieu de rétrécir à 88 % au centre d'un carré redondant.
-  const nue = Boolean(tile.image && tile.imageIsTile)
-
   const face = (
     <span
-      className={
-        nue
-          ? cn(
-              'hud-face relative grid place-items-center',
-              corner ? 'size-11' : 'size-[52px]',
-            )
-          : corner
-            ? 'hud-face olympe-glass olympe-glass--sculpte relative grid size-11 place-items-center rounded-full text-[#faf6ef]'
-            : `hud-face rail-tile rail-tile-${family} size-[52px]`
-      }
+      className={cn(
+        'hud-face arena-plaque relative grid size-[68px] place-items-center text-[#faf6ef]',
+        tile.family === 'amber' && 'arena-plaque--ambre',
+      )}
     >
       {tile.image ? (
         <Image
           src={tile.image}
           alt=""
-          width={56}
-          height={56}
-          className={cn(
-            'object-contain',
-            nue
-              ? 'size-full drop-shadow-[0_3px_5px_rgba(23,16,48,0.5)]'
-              : 'size-[88%] drop-shadow-[0_2px_3px_rgba(23,16,48,0.4)]',
-          )}
+          width={116}
+          height={116}
+          className="size-[58px] object-contain drop-shadow-[0_3px_4px_rgba(23,16,48,0.55)]"
           aria-hidden
         />
       ) : (
@@ -501,17 +412,27 @@ function RailTileFace({
       {tile.badge ? (
         <NotificationBadge
           tone={tile.badgeTone ?? 'alert'}
-          className="absolute -top-1.5 -right-1.5"
+          className="arena-pastille absolute -top-2 -right-2"
         >
           {tile.badge}
         </NotificationBadge>
       ) : null}
-      {tile.timer ? <span className="rail-timer">{tile.timer}</span> : null}
     </span>
   )
 
+  const contenu = (
+    <>
+      {face}
+      {tile.timer ? (
+        <span className="arena-legende font-heading text-[11px] leading-none font-extrabold">
+          {tile.timer}
+        </span>
+      ) : null}
+    </>
+  )
+
   const className =
-    'defi2-press block cursor-pointer focus-visible:outline-none focus-visible:[&_.hud-face]:ring-4 focus-visible:[&_.hud-face]:ring-highlight/60'
+    'defi2-press flex cursor-pointer flex-col items-center gap-1 focus-visible:outline-none focus-visible:[&_.hud-face]:ring-4 focus-visible:[&_.hud-face]:ring-highlight/60'
 
   if (tile.href) {
     return (
@@ -521,7 +442,7 @@ function RailTileFace({
         className={className}
         aria-label={tile.label}
       >
-        {face}
+        {contenu}
       </Link>
     )
   }
@@ -537,7 +458,7 @@ function RailTileFace({
       aria-label={tile.label}
       aria-haspopup="dialog"
     >
-      {face}
+      {contenu}
     </button>
   )
 }
@@ -555,43 +476,37 @@ function MenuRow({
   onOpen: (id: string) => void
 }) {
   const face = (
-    <span className="arena-menu-row flex w-full items-center gap-2.5 rounded-xl py-1.5 pr-2.5 pl-1.5">
-      {/* Le jeton d'icône : même carré, même taille, pour TOUTES les entrées —
-          c'est lui qui aligne la colonne de gauche au pixel. Son FOND, lui,
-          s'efface devant une illustration qui porte déjà le sien (`imageIsTile`),
-          sinon on lit deux carrés emboîtés. */}
-      <span
-        className={cn(
-          'arena-menu-ico',
-          item.image && item.imageIsTile && 'arena-menu-ico-nue',
-        )}
-        aria-hidden
-      >
+    <span className="arena-menu-row flex w-full items-center gap-3 rounded-2xl py-1.5 pr-3 pl-1.5">
+      {/* Le puits de l'icône : même carré creusé, même taille, pour TOUTES les
+          entrées — c'est lui qui aligne la colonne de gauche au pixel et donne
+          un fond commun aux objets peints comme au picto du coffre. Les
+          illustrations y sont posées à 36 px, avec leur ombre. */}
+      <span className="arena-menu-ico" aria-hidden>
         {item.image ? (
           <Image
             src={item.image}
             alt=""
-            width={32}
-            height={32}
-            className={cn(
-              'object-contain',
-              item.imageIsTile ? 'size-full' : 'size-7',
-            )}
+            width={72}
+            height={72}
+            className="size-9 object-contain drop-shadow-[0_2px_2px_rgba(23,16,48,0.28)]"
           />
         ) : (
           item.icon
         )}
       </span>
-      <span className="font-heading min-w-0 flex-1 truncate text-left text-[0.82rem] font-extrabold text-[#faf6ef]">
+      <span className="font-heading min-w-0 flex-1 truncate text-left text-[15px] font-extrabold text-foreground">
         {item.label}
       </span>
       {item.sub ? (
-        <span className="font-heading shrink-0 rounded-full bg-white/12 px-1.5 py-0.5 text-[0.6rem] font-extrabold text-[#faf6ef]/85">
+        <span className="font-heading shrink-0 rounded-full bg-secondary px-2 py-0.5 text-[11px] font-extrabold text-secondary-foreground">
           {item.sub}
         </span>
       ) : null}
       {item.badge ? (
-        <NotificationBadge tone={item.badgeTone ?? 'alert'} className="shrink-0">
+        <NotificationBadge
+          tone={item.badgeTone ?? 'alert'}
+          className="arena-pastille shrink-0"
+        >
           {item.badge}
         </NotificationBadge>
       ) : null}
@@ -599,7 +514,7 @@ function MenuRow({
   )
 
   const className =
-    'defi2-press block w-full cursor-pointer focus-visible:outline-none focus-visible:[&_.arena-menu-row]:ring-4 focus-visible:[&_.arena-menu-row]:ring-highlight/60'
+    'defi2-press block w-full cursor-pointer focus-visible:outline-none focus-visible:[&_.arena-menu-row]:ring-4 focus-visible:[&_.arena-menu-row]:ring-primary/40'
 
   if (item.href) {
     return (

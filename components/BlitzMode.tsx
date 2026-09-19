@@ -1,14 +1,16 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { Timer, Check, X, RotateCcw, Trophy } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { Timer, Check, X, Trophy } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { gameSfx, sfx } from '@/lib/sounds'
-import { MODE_TIMBRE } from '@/lib/defi-modes'
-import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
+import { MODE_TIMBRE, modeScene } from '@/lib/defi-modes'
+import ModeHero from '@/components/defi/ModeHero'
 import type { Gain } from '@/lib/gains'
 import { recordChallenge } from '@/app/defi/actions'
+import { recordModeScore } from '@/app/defi/palmares-actions'
+import FinDePartie from '@/components/palmares/FinDePartie'
+import type { BilanPartie } from '@/lib/palmares/bilan'
 import { recordReviewAnswers } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
 import {
@@ -56,6 +58,10 @@ export default function BlitzMode({
   const [saved, setSaved] = useState<boolean | null>(null)
   // Ce que la partie a rapporté, tel que la base l'a écrit.
   const [gains, setGains] = useState<Gain[]>([])
+  // Le bilan du Palmarès (352) : dernière fois, record, échelle de la semaine.
+  const [bilan, setBilan] = useState<BilanPartie | null>(null)
+  const [enAttente, setEnAttente] = useState(false)
+  const [recordAvant, setRecordAvant] = useState(0)
   // Miroirs des compteurs pour la fin de partie, déclenchée par le chrono
   // (le callback d'intervalle ne voit pas les states frais).
   const statsRef = useRef({ score: 0, correct: 0, answered: 0 })
@@ -100,6 +106,8 @@ export default function BlitzMode({
     setAnsweredCount(0)
     setSaved(null)
     setIsRecord(false)
+    setBilan(null)
+    setEnAttente(false)
     setPhase('playing')
   }
 
@@ -114,6 +122,7 @@ export default function BlitzMode({
       sfx.complete()
       const { score: s, correct: c, answered: n } = statsRef.current
       const prevBest = readBest()
+      setRecordAvant(prevBest)
       if (s > prevBest) {
         setIsRecord(true)
         try {
@@ -131,6 +140,16 @@ export default function BlitzMode({
           setGains(r.gains)
         })
         .catch(() => setSaved(false))
+      // Le Palmarès : le score entre sur l'échelle de la semaine, et le bilan
+      // (vs dernière fois, record, prochaine marche) revient en un seul tour.
+      setEnAttente(true)
+      recordModeScore('blitz', s, BLITZ_SECONDS * 1000)
+        .then((b) => {
+          setBilan(b)
+          if (b && b.best > s) setBest(b.best)
+        })
+        .catch(() => setBilan(null))
+        .finally(() => setEnAttente(false))
       // Reprogramme chaque question dans la file « À revoir ».
       recordReviewAnswers(reviewsRef.current).catch(() => {})
     }
@@ -186,8 +205,9 @@ export default function BlitzMode({
   if (phase === 'intro') {
     return (
       <div className="mx-auto flex max-w-xl flex-col items-center gap-6 pt-4 text-center">
+        {/* L'ambiance du mode : la scène de son billet, fondue dans sa robe. */}
+        <ModeHero scene={modeScene('blitz')} titre="Blitz 60s" dansIntro />
         <div className="space-y-1">
-          <h1 className="font-heading text-3xl font-bold">Blitz 60s</h1>
           <p className="text-sm text-muted-foreground">
             Réponds à un max de questions en {BLITZ_SECONDS} secondes.
             <br />
@@ -229,48 +249,23 @@ export default function BlitzMode({
   // -------------------------------------------------------------------- done
   if (phase === 'done') {
     return (
-      <div className="mx-auto flex max-w-xl flex-col items-center gap-5 pt-8 text-center">
-        <div className="animate-in zoom-in text-6xl duration-500">
-          {isRecord ? '🏆' : correct >= 5 ? '⚡' : '🌱'}
-        </div>
-        <div>
-          <h1 className="font-heading text-3xl font-bold">
-            {isRecord ? 'Nouveau record !' : 'Temps écoulé !'}
-          </h1>
-          <p className="mt-2 font-mono text-4xl font-bold tabular-nums">{score}</p>
-          <p className="mt-1 text-sm text-muted-foreground">
+      <FinDePartie
+        mode="blitz"
+        score={score}
+        titreAttente="Temps écoulé !"
+        detail={
+          <>
             {correct}/{answeredCount} bonnes réponses · meilleur combo ×
             {blitzMultiplier(Math.max(0, bestCombo - 1))} ({bestCombo} d&apos;affilée)
-          </p>
-          {!isRecord && best > 0 ? (
-            <p className="mt-1 text-xs text-muted-foreground">
-              Record : <span className="font-mono tabular-nums">{best}</span>
-            </p>
-          ) : null}
-        </div>
-
-        {/* CE QUE LA PARTIE A RAPPORTÉ, et le geste de Clash Royale qui va
-            avec : les pastilles se posent, puis une poignée de jetons s'en
-            détache et file vers le bandeau du haut.
-
-            ⚠️ CE BLOC ÉTAIT UN « +XX XP » EN GROS CHIFFRES, ET IL MENTAIT :
-            la valeur venait de `XP_RULES`, un barème PUR calculé côté client,
-            alors que depuis la migration 348 jouer n'acquiert rien et que le
-            portefeuille ne verse plus un point pour une partie. */}
-        <PanneauRecompenses gains={gains} className="w-full max-w-sm" />
-
-        <p className="text-sm text-muted-foreground">
-          {saved === true
-            ? '✓ Journée validée — ta série continue 🔥'
-            : saved === false
-              ? 'Partie non enregistrée (connecte-toi pour garder ton XP).'
-              : ''}
-        </p>
-
-        <Button size="lg" onClick={start}>
-          <RotateCcw className="size-4" /> Rejouer
-        </Button>
-      </div>
+          </>
+        }
+        bilan={bilan}
+        enAttente={enAttente}
+        recordLocalAvant={isRecord ? recordAvant : best}
+        gains={gains}
+        saved={saved}
+        onRejouer={start}
+      />
     )
   }
 

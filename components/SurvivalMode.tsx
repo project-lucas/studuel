@@ -1,20 +1,24 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { Skull, Zap, Check, X, RotateCcw, Trophy } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { Skull, Check, X, Trophy } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { gameSfx, sfx } from '@/lib/sounds'
-import { XP_RULES } from '@/lib/xp'
+import type { Gain } from '@/lib/gains'
 import { recordChallenge } from '@/app/defi/actions'
+import { recordModeScore } from '@/app/defi/palmares-actions'
+import FinDePartie from '@/components/palmares/FinDePartie'
+import type { BilanPartie } from '@/lib/palmares/bilan'
 import { recordReviewAnswers } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
 import {
   SURVIE_BEST_STORAGE_KEY,
   MODE_TIMBRE,
-  MODE_XP_BONUS,
+  nowMs,
   type ModeQuestion,
+  modeScene,
 } from '@/lib/defi-modes'
+import ModeHero from '@/components/defi/ModeHero'
 
 type Phase = 'intro' | 'playing' | 'done'
 
@@ -45,6 +49,13 @@ export default function SurvivalMode({
   const [best, setBest] = useState(0)
   const [isRecord, setIsRecord] = useState(false)
   const [saved, setSaved] = useState<boolean | null>(null)
+  // Ce que la partie a rapporté, tel que la base l'a écrit (rien avant 348).
+  const [gains, setGains] = useState<Gain[]>([])
+  // Le bilan du Palmarès (352) : dernière fois, record, échelle de la semaine.
+  const [bilan, setBilan] = useState<BilanPartie | null>(null)
+  const [enAttente, setEnAttente] = useState(false)
+  const [recordAvant, setRecordAvant] = useState(0)
+  const startRef = useRef(0)
   // Réponses de la partie pour la répétition espacée (SRS + Revanche).
   const reviewsRef = useRef<ReviewAnswer[]>([])
   // Verrou synchrone anti-double-tap : sans lui, deux taps rapprochés (avant que
@@ -72,7 +83,11 @@ export default function SurvivalMode({
     setStreak(0)
     setSaved(null)
     setIsRecord(false)
+    setGains([])
+    setBilan(null)
+    setEnAttente(false)
     reviewsRef.current = []
+    startRef.current = nowMs()
     setPhase('playing')
   }
 
@@ -82,6 +97,7 @@ export default function SurvivalMode({
     if (finalStreak >= 5) sfx.complete()
     else audio.lose()
     const prevBest = readBest()
+    setRecordAvant(prevBest)
     if (finalStreak > prevBest) {
       setIsRecord(true)
       try {
@@ -97,8 +113,20 @@ export default function SurvivalMode({
     setPhase('done')
     // La série + la question fatale = le total de questions répondues.
     recordChallenge(finalStreak, finalStreak + 1, 'survie')
-      .then((r) => setSaved(r.saved))
+      .then((r) => {
+        setSaved(r.saved)
+        setGains(r.gains)
+      })
       .catch(() => setSaved(false))
+    // Le Palmarès : la série entre sur l'échelle de la semaine.
+    setEnAttente(true)
+    recordModeScore('survie', finalStreak, Math.max(1, nowMs() - startRef.current))
+      .then((b) => {
+        setBilan(b)
+        if (b && b.best > finalStreak) setBest(b.best)
+      })
+      .catch(() => setBilan(null))
+      .finally(() => setEnAttente(false))
     // Reprogramme chaque question dans la file « À revoir ».
     recordReviewAnswers(reviewsRef.current).catch(() => {})
   }
@@ -135,8 +163,9 @@ export default function SurvivalMode({
   if (phase === 'intro') {
     return (
       <div className="mx-auto flex max-w-xl flex-col items-center gap-6 pt-4 text-center">
+        {/* L'ambiance du mode : la scène de son billet, fondue dans sa robe. */}
+        <ModeHero scene={modeScene('survie')} titre="Survie" dansIntro />
         <div className="space-y-1">
-          <h1 className="font-heading text-3xl font-bold">Survie</h1>
           <p className="text-sm text-muted-foreground">
             Les questions s&apos;enchaînent sans fin.
             <br />
@@ -176,49 +205,24 @@ export default function SurvivalMode({
 
   // -------------------------------------------------------------------- done
   if (phase === 'done') {
-    const xp =
-      streak * XP_RULES.challengePerCorrect +
-      XP_RULES.challengeBonus +
-      MODE_XP_BONUS.survie
     return (
-      <div className="mx-auto flex max-w-xl flex-col items-center gap-5 pt-8 text-center">
-        <div className="animate-in zoom-in text-6xl duration-500">
-          {isRecord ? '🏆' : streak >= 8 ? '💀' : '🌱'}
-        </div>
-        <div>
-          <h1 className="font-heading text-3xl font-bold">
-            {isRecord ? 'Nouveau record !' : 'Éliminé !'}
-          </h1>
-          <p className="mt-2 font-mono text-4xl font-bold tabular-nums">
-            {streak}
-          </p>
-          <p className="mt-1 text-sm text-muted-foreground">
-            bonne{streak > 1 ? 's' : ''} réponse{streak > 1 ? 's' : ''}{' '}
-            d&apos;affilée avant la chute.
-          </p>
-          {!isRecord && best > 0 ? (
-            <p className="mt-1 text-xs text-muted-foreground">
-              Record : <span className="font-mono tabular-nums">{best}</span>
-            </p>
-          ) : null}
-        </div>
-
-        <div className="animate-in slide-in-from-bottom-2 flex items-center gap-2 rounded-full bg-highlight px-6 py-3 font-mono text-2xl font-bold text-foreground shadow-lg duration-700 tabular-nums">
-          <Zap className="size-6" /> +{xp} XP
-        </div>
-
-        <p className="text-sm text-muted-foreground">
-          {saved === true
-            ? '✓ Journée validée — ta série continue 🔥'
-            : saved === false
-              ? 'Partie non enregistrée (connecte-toi pour garder ton XP).'
-              : ''}
-        </p>
-
-        <Button size="lg" onClick={start}>
-          <RotateCcw className="size-4" /> Rejouer
-        </Button>
-      </div>
+      <FinDePartie
+        mode="survie"
+        score={streak}
+        titreAttente="Éliminé !"
+        detail={
+          <>
+            bonne{streak > 1 ? 's' : ''} réponse{streak > 1 ? 's' : ''} d&apos;affilée
+            avant la chute.
+          </>
+        }
+        bilan={bilan}
+        enAttente={enAttente}
+        recordLocalAvant={isRecord ? recordAvant : best}
+        gains={gains}
+        saved={saved}
+        onRejouer={start}
+      />
     )
   }
 

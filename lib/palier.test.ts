@@ -45,11 +45,11 @@ describe('leaguePalier', () => {
   it('fête une promotion d’un palier', () => {
     const palier = leaguePalier(1, 2)
     expect(palier?.id).toBe('ligue:2')
-    expect(palier?.name).toBe('Ligue Or')
+    expect(palier?.name).toBe('Division Or')
     expect(palier?.title).toBe('Promotion !')
   })
 
-  it('adapte le message au sommet (Ligue Maître)', () => {
+  it('adapte le message au sommet (Division Diamant)', () => {
     const palier = leaguePalier(MAX_TIER - 1, MAX_TIER)
     expect(palier?.name).toBe(LEAGUE_TIERS[MAX_TIER].name)
     expect(palier?.subtitle).toContain('sommet')

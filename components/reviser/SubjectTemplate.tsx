@@ -9,7 +9,6 @@ import ModeTabs from '@/components/reviser/ModeTabs'
 import ChapterList from '@/components/reviser/ChapterList'
 import TrainingPanel from '@/components/reviser/TrainingPanel'
 import CarteDictee from '@/components/francais/dictee/CarteDictee'
-import ReviewBanner from '@/components/reviser/ReviewBanner'
 import ExamBanner from '@/components/reviser/ExamBanner'
 import AnnalesPanel from '@/components/reviser/AnnalesPanel'
 import MarcelFab from '@/components/reviser/MarcelFab'
@@ -18,7 +17,6 @@ import {
   disciplineLabel,
   disciplinesOf,
   modesFor,
-  resumeCta,
   tabId,
   type SubjectTemplateData,
 } from '@/lib/subject-template'
@@ -59,7 +57,12 @@ export default function SubjectTemplate({
   const progress = active.discipline
     ? (data.progressByDiscipline[active.discipline] ?? data.progress)
     : data.progress
-  const resume = active.discipline ? resumeCta(chapters) : data.resume
+  // Le drapeau de la dernière session ne se montre que si sa fiche est dans
+  // l'onglet ouvert (une discipline n'affiche que ses chapitres).
+  const resume =
+    data.resume && chapters.some((c) => c.id === data.resume?.chapterId)
+      ? data.resume
+      : null
   // Une matière rangée sous les chapitres du programme compte ses lignes en
   // FICHES : le mot « chapitre » y désigne les en-têtes de la liste.
   const unit = chapterUnit(chapters)
@@ -138,7 +141,10 @@ export default function SubjectTemplate({
         >
           {mode === 'programme' ? (
             <>
-              <ReviewBanner count={data.weakCount} />
+              {/* PLUS DE BANDEAU « n notions à revoir » NI DE CARTE « On commence
+                  par ça » (Lucas, 17/09/2026 : « supprime ces blocs ») : la
+                  liste s'ouvre directement, et la fiche de la dernière session
+                  porte un drapeau (ChapterItem). */}
               {/* L'examen blanc n'apparaît ici que si l'onglet Annales n'existe
                   pas (année sans examen) — sinon c'est là-bas qu'il vit, et le
                   répéter ferait deux portes pour la même épreuve. Sans Annales,
@@ -185,6 +191,7 @@ export default function SubjectTemplate({
                 subject={data.subject}
                 bossPool={data.bossPool}
                 gardien={gardien}
+                premium={data.premium ?? false}
               />
             </div>
           )}

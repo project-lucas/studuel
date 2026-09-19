@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest'
-import { render, screen, act } from '@testing-library/react'
+import { render, screen, act, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import type { QuizQuestion } from '@/lib/types'
 import { AUTO_ADVANCE_MS } from '@/lib/juice'
@@ -39,8 +39,18 @@ vi.mock('next/navigation', () => ({
   usePathname: () => '/reviser',
 }))
 vi.mock('next/link', () => ({
-  default: ({ children, href }: { children: React.ReactNode; href: string }) => (
-    <a href={href}>{children}</a>
+  // Les classes, le clic et l'aria-label passent : depuis l'écran de fin en
+  // XP, « Continuer » et « Quiz suivant » sont des LIENS habillés par Button
+  // (asChild) — un mock qui les jetterait ferait passer une plaque pleine
+  // pour un lien nu.
+  default: ({
+    children,
+    href,
+    ...rest
+  }: React.ComponentProps<'a'> & { href: string }) => (
+    <a href={href} {...rest}>
+      {children}
+    </a>
   ),
 }))
 vi.mock('@/components/QuitGuardButton', () => ({ default: () => null }))
@@ -114,14 +124,17 @@ describe('QuizPlayer — l’écran de fin ne ment pas', () => {
     expect(
       screen.getByLabelText('1 bonne réponse sur 2'),
     ).toBeInTheDocument()
-    // Le chiffre brut « 1 / 2 » a quitté l'écran : la case RÉUSSITE porte
-    // désormais le résultat, en pourcentage, avec sa jauge. On lit la JAUGE
-    // plutôt que le texte — c'est elle qui porte la valeur de façon
-    // accessible, et le nombre est coupé en deux nœuds par son signe « % ».
-    expect(screen.getByText('Réussite')).toBeInTheDocument()
+    // Le chiffre brut « 1 / 2 » a quitté l'écran : la PILULE de réussite
+    // porte le pourcentage, et la carte « Questions maîtrisées » compte les
+    // bonnes réponses de la manche (sans mémoire à lire : `maitrise` absente).
+    expect(screen.getByText('50 %')).toBeInTheDocument()
     expect(
-      screen.getByRole('progressbar', { name: 'Réussite' }),
-    ).toHaveAttribute('aria-valuenow', '50')
+      screen.getByRole('progressbar', { name: 'Questions maîtrisées' }),
+    ).toHaveAttribute('aria-valuenow', '1')
+    // Le compte vit dans la carte (le volet de correction le répète en bas).
+    expect(
+      within(screen.getByRole('region', { name: 'Questions maîtrisées' })).getByText('1/2'),
+    ).toBeInTheDocument()
   })
 
   it('affiche 2/2 quand les deux réponses sont bonnes', async () => {
@@ -645,7 +658,9 @@ describe('QuizPlayer — les reprises de l’écran de fin', () => {
     await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
     return {
       revoir: screen.getByRole('button', { name: /Revoir mes/ }),
-      refaire: screen.getByRole('button', { name: /Continuer/ }),
+      // « Continuer » est un LIEN (il ramène d'où l'on vient) depuis que le
+      // rejeu est passé en lien texte « Rejouer ce quiz ».
+      refaire: screen.getByRole('link', { name: /Continuer/ }),
     }
   }
 
@@ -832,5 +847,198 @@ describe('QuizPlayer — les reprises de l’écran de fin', () => {
       expect(bouton.className).toContain('--pilule-bas')
       expect(bouton.className).toContain('--pilule-bord')
     }
+  })
+})
+
+describe('QuizPlayer — l’écran de fin en XP', () => {
+  const jouerToutJuste = async (user: ReturnType<typeof userEvent.setup>) => {
+    await repondre(user, 'Paris')
+    await user.click(screen.getByRole('button', { name: 'Continuer' }))
+    await repondre(user, '4')
+    await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
+  }
+
+  it('TENTE le quiz suivant, avec l’XP promise dans sa pastille', async () => {
+    // La mécanique de Wilgo : l'écran de fin n'est jamais une fin. Le bouton
+    // principal mène au quiz d'après et annonce ce qu'il paye ; « Pas
+    // maintenant » ramène d'où l'on vient.
+    const user = userEvent.setup()
+    render(
+      <QuizPlayer
+        quizId="quiz-test"
+        title="Test"
+        questions={QUESTIONS}
+        record={false}
+        backHref="/reviser/svt"
+        quizSuivant={{ href: '/test/q-suite', titre: 'La suite', xp: 30 }}
+      />,
+    )
+    await jouerToutJuste(user)
+
+    const suivant = screen.getByRole('link', { name: /Quiz suivant/ })
+    expect(suivant).toHaveAttribute('href', '/test/q-suite')
+    expect(suivant.textContent).toContain('+30 XP')
+    // Même plaque pleine largeur que les autres boutons de fin.
+    expect(suivant.className).toContain('w-full')
+    expect(suivant.className).toContain('quiz-pilule')
+    expect(suivant.className).toContain('var(--primary)')
+
+    expect(screen.getByRole('link', { name: 'Pas maintenant' })).toHaveAttribute(
+      'href',
+      '/reviser/svt',
+    )
+    // Plus de « Continuer » quand il y a une suite : une seule évidence.
+    expect(screen.queryByRole('link', { name: /Continuer/ })).toBeNull()
+    // Le rejeu reste possible, en retrait.
+    expect(
+      screen.getByRole('button', { name: 'Rejouer ce quiz' }),
+    ).toBeInTheDocument()
+  })
+
+  it('ne promet pas d’XP quand le chapitre n’en verse plus', async () => {
+    const user = userEvent.setup()
+    render(
+      <QuizPlayer
+        quizId="quiz-test"
+        title="Test"
+        questions={QUESTIONS}
+        record={false}
+        quizSuivant={{ href: '/test/q-suite', titre: 'La suite', xp: 0 }}
+      />,
+    )
+    await jouerToutJuste(user)
+    expect(
+      screen.getByRole('link', { name: /Quiz suivant/ }).textContent,
+    ).not.toContain('XP')
+  })
+
+  it('compte les acquises DÉJÀ en base plus celles de la manche, sans doublon', async () => {
+    // q1 était déjà acquise ; la manche réussit q1 et q2 → 2 sur 4, pas 3.
+    const user = userEvent.setup()
+    render(
+      <QuizPlayer
+        quizId="quiz-test"
+        title="Test"
+        questions={QUESTIONS}
+        record={false}
+        maitrise={{ acquisesIds: ['q1'], total: 4 }}
+      />,
+    )
+    await jouerToutJuste(user)
+    expect(
+      within(screen.getByRole('region', { name: 'Questions maîtrisées' })).getByText('2/4'),
+    ).toBeInTheDocument()
+    const jauge = screen.getByRole('progressbar', { name: 'Questions maîtrisées' })
+    expect(jauge).toHaveAttribute('aria-valuenow', '2')
+    expect(jauge).toHaveAttribute('aria-valuemax', '4')
+    expect(
+      screen.getByText(/Réponds correctement à toutes les questions/),
+    ).toBeInTheDocument()
+  })
+
+  it('déclare le quiz VALIDÉ quand toutes les questions sont maîtrisées', async () => {
+    const user = userEvent.setup()
+    render(
+      <QuizPlayer
+        quizId="quiz-test"
+        title="Test"
+        questions={QUESTIONS}
+        record={false}
+        maitrise={{ acquisesIds: [], total: 2 }}
+      />,
+    )
+    await jouerToutJuste(user)
+    const carte = screen.getByRole('region', { name: 'Questions maîtrisées' })
+    expect(within(carte).getByText('2/2')).toBeInTheDocument()
+    expect(within(carte).getByText(/Quiz validé/)).toBeInTheDocument()
+  })
+
+  it('« Rejouer ce quiz » repart de la première question', async () => {
+    const user = userEvent.setup()
+    render(
+      <QuizPlayer quizId="quiz-test" title="Test" questions={QUESTIONS} record={false} />,
+    )
+    await jouerToutJuste(user)
+    await user.click(screen.getByRole('button', { name: 'Rejouer ce quiz' }))
+    expect(screen.getByText('Capitale de la France ?')).toBeInTheDocument()
+  })
+})
+
+/**
+ * LE CHRONO DE LA MANCHE (lib/quiz-chrono, 16/09/2026). Le quiz se joue comme
+ * le duel : un budget pour tout le paquet, et à zéro la manche est abandonnée
+ * SANS RIEN ÉCRIRE. C'est le câblage qu'aucun test de lib/ ne voit : que le
+ * cadran affiche bien le budget, qu'une bonne réponse le fasse monter, et
+ * surtout qu'à zéro les Server Actions ne soient jamais appelées.
+ */
+describe('QuizPlayer — le chrono de la manche', () => {
+  it('affiche le budget du paquet au départ (deux questions : le plancher, 0:30)', () => {
+    render(
+      <QuizPlayer quizId="quiz-test" title="Test" questions={QUESTIONS} record={false} />,
+    )
+    expect(screen.getByRole('timer')).toHaveTextContent('0:30')
+  })
+
+  it('une bonne réponse rend trois secondes', async () => {
+    const user = userEvent.setup()
+    render(
+      <QuizPlayer quizId="quiz-test" title="Test" questions={QUESTIONS} record={false} />,
+    )
+    await repondre(user, 'Paris')
+    expect(screen.getByRole('timer')).toHaveTextContent('0:33')
+  })
+
+  it('à zéro : « Temps écoulé », et RIEN n’est enregistré', async () => {
+    const { recordTestSession } = await import('@/app/test/actions')
+    const { recordReviewAnswers } = await import('@/app/reviser/actions')
+    vi.mocked(recordTestSession).mockClear()
+    vi.mocked(recordReviewAnswers).mockClear()
+    vi.useFakeTimers()
+    try {
+      render(<QuizPlayer quizId="quiz-test" title="Test" questions={QUESTIONS} />)
+      await act(async () => {
+        vi.advanceTimersByTime(31_000)
+      })
+      expect(screen.getByText('Temps écoulé !')).toBeInTheDocument()
+      expect(recordTestSession).not.toHaveBeenCalled()
+      expect(recordReviewAnswers).not.toHaveBeenCalled()
+      // Et l'écran de fin n'existe pas : pas de score à afficher.
+      expect(screen.queryByText('Voir la correction')).not.toBeInTheDocument()
+    } finally {
+      vi.useRealTimers()
+    }
+  })
+
+  it('« Réessayer » repart avec le budget plein', async () => {
+    // Les faux minuteurs ne servent qu'à ATTEINDRE zéro ; le clic se joue en
+    // temps réel (userEvent et les faux minuteurs s'attendent mutuellement).
+    vi.useFakeTimers()
+    render(
+      <QuizPlayer quizId="quiz-test" title="Test" questions={QUESTIONS} record={false} />,
+    )
+    await act(async () => {
+      vi.advanceTimersByTime(31_000)
+    })
+    vi.useRealTimers()
+    expect(screen.getByText('Temps écoulé !')).toBeInTheDocument()
+
+    const user = userEvent.setup()
+    await user.click(screen.getByRole('button', { name: 'Réessayer' }))
+    expect(screen.getByRole('timer')).toHaveTextContent('0:30')
+    expect(screen.getByText('Capitale de la France ?')).toBeInTheDocument()
+  })
+
+  it('chrono={false} garde le compteur de révision, sans cadran de manche', () => {
+    render(
+      <QuizPlayer
+        quizId="quiz-test"
+        title="Test"
+        questions={QUESTIONS}
+        record={false}
+        chrono={false}
+      />,
+    )
+    expect(screen.queryByRole('timer')).not.toBeInTheDocument()
+    expect(screen.getByTitle('Ton temps de révision total')).toBeInTheDocument()
   })
 })

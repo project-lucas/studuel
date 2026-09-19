@@ -1,5 +1,5 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
-import { creerCartesEnLot } from '@/app/reviser/cours/actions'
+import { creerCartesEnLot } from '@/app/carnet/cours/actions'
 import { COURS_MARCEL, carteDepuis } from './vers-carnet'
 
 // LE PONT MARCEL → CARNET. Un échange devient une carte, dans un cours qui

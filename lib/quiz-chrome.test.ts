@@ -45,7 +45,7 @@ describe('estPleinEcran', () => {
 
   it('ignore la chaîne de requête', () => {
     expect(estPleinEcran('/test/abc-123?rejeu=1')).toBe(true)
-    expect(estPleinEcran('/reviser?espace=carnet')).toBe(false)
+    expect(estPleinEcran('/carnet')).toBe(false)
   })
 
   it('garde le chrome quand le chemin est absent ou illisible', () => {

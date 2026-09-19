@@ -41,6 +41,8 @@ export type RankPlayer = {
   id: string
   name: string
   emoji: string
+  // Blason choisi (lib/portraits) ; absent = blason fixe déduit de l'id.
+  portrait?: string
   trophies: number
   isMe?: boolean
 }

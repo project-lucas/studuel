@@ -1,123 +1,86 @@
-import TabHeader from '@/components/TabHeader'
 import WorldBackdrop from '@/components/WorldBackdrop'
-import TresorSpaces from '@/components/TresorSpaces'
-import PremiumHome from '@/components/PremiumHome'
-import TresorHome from '@/components/TresorHome'
-import CapsulesShelf from '@/components/CapsulesShelf'
+import CarteStudueLPlus from '@/components/boutique/CarteStudueLPlus'
+import Marche from '@/components/boutique/Marche'
+import RayonsCapsules from '@/components/boutique/RayonsCapsules'
+import PourTonProfil from '@/components/boutique/PourTonProfil'
+import RayonGemmes from '@/components/boutique/RayonGemmes'
+import MarqueurBoutiqueVue from '@/components/boutique/MarqueurBoutiqueVue'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { getUserTier } from '@/lib/subscription'
-import { toDayKey } from '@/lib/streak'
 import { fetchGems } from '@/lib/gems-access'
-import { STARTING_GEMS } from '@/lib/gems'
-import {
-  getMockShop,
-  getMockCollection,
-  shopWithOwnership,
-  collectionWithUnlocks,
-  MOCK_COINS,
-} from '@/lib/tresor'
+import { lireCatalogueCapsules, lireMesAchats } from '@/lib/capsules-server'
+import { lireBoosts, lireObjetsProfil } from '@/lib/boutique/boosts-server'
+import { AUCUN_BOOST, OFFRES } from '@/lib/boutique/offres'
+import { isPremiumTier } from '@/lib/gems'
+import { cleSemaineVitrine } from '@/lib/boutique/vue'
+import { PACKS_GEMMES } from '@/lib/boutique/packs-gemmes'
 
 export const metadata = { title: 'Boutique — Studuel' }
 export const dynamic = 'force-dynamic'
 
-// L'onglet Boutique fusionne les deux économies, chacune dans son volet :
-// « Objets » = les PIÈCES uniquement (coffre du jour en tête, rayons de
-// boosts, compagnons & collection, fonds & skins), « Studuel+ » = les EUROS
-// (capsules vidéo du coach en tête, puis les abonnements). Connecté : données
-// réelles (018_tresor.sql). Visiteur — ou migration pas encore passée — : démo.
-export default async function TresorPage() {
-  const supabase = await createClient()
-  const user = await getCurrentUser()
+/**
+ * LA BOUTIQUE, UNE SEULE PAGE (refonte du 18/09/2026, Lucas). Dans l'ordre :
+ *   1. Studuel+ en tête — une grande carte, ses avantages, le bouton ;
+ *   2. le MARCHÉ (ex-« Boost », ex-« offres du moment ») — des consommables
+ *      utiles et pas chers, toujours en vente : boost XP et trophées ×2 (2 h),
+ *      et un bloc « Fiche de révision » qui envoie choisir sa matière ;
+ *   3. les CAPSULES, au centre et sur plus de la moitié de la page — des
+ *      mini-formations rangées par thème, débloquées en gemmes (ou par carte
+ *      pour les plus chères), lues ensuite dans le carnet ;
+ *   4. les GEMMES — trois packs sur une rangée, au gabarit des cartes du
+ *      magasin de Clash Royale, demandés par un parent (migration 369) ;
+ *   5. pour ton profil — une seule rangée de six objets.
+ *
+ * Chaque catégorie s'ouvre sur SON titre, à la manière du magasin de Clash
+ * Royale : plaque dorée, parchemin, rubans (components/boutique/BandeauSection).
+ *
+ * UN LONG CATALOGUE QUI DÉFILE SANS LATENCE : tout est rendu d'un coup (pas de
+ * `content-visibility`, qui laisse des blancs au défilement rapide), les
+ * images sont chargées d'emblée, et rien de fixe à l'écran ne floute ce qui
+ * passe dessous — la barre d'onglets reste affichée, immobile.
+ *
+ * Tout se paie en GEMMES, sauf Studuel+ et les gemmes elles-mêmes (en euros,
+ * par un parent). Les écus, le coffre du jour, les compagnons et la
+ * collection ont quitté la Boutique. Chaque lecture est tolérante : tant
+ * qu'une migration dort (366 capsules, 368 boosts et objets, 369 packs, 370
+ * boost trophées), sa
+ * section se tait ou répond « bientôt » au lieu de casser la page.
+ */
+export default async function BoutiquePage() {
+  const [supabase, user] = await Promise.all([createClient(), getCurrentUser()])
+  const maintenant = new Date()
 
-  let live = false
-  let coins = MOCK_COINS
-  let gems = STARTING_GEMS
-  let shop = getMockShop()
-  let collection = getMockCollection()
-  let chestOpened = false
-
-  // L'abonnement se résout en parallèle des données boutique (attendu en bas).
-  const tierPromise = getUserTier()
-
-  if (user) {
-    const [
-      { data: profile, error },
-      { data: purchases },
-      { data: unlocks },
-      { data: chest },
-      gemsBalance,
-    ] = await Promise.all([
-      supabase.from('profiles').select('coins').eq('id', user.id).maybeSingle(),
-      supabase.from('shop_purchases').select('item_id').eq('user_id', user.id),
-      supabase
-        .from('collection_unlocks')
-        .select('item_id')
-        .eq('user_id', user.id),
-      supabase
-        .from('chest_opens')
-        .select('date')
-        .eq('user_id', user.id)
-        .eq('date', toDayKey(new Date()))
-        .maybeSingle(),
-      // Gemmes (migration 183) : le helper a son propre repli.
-      fetchGems(supabase, user.id),
-    ])
-
-    gems = gemsBalance
-
-    if (error) {
-      // Migration 018 pas encore exécutée : la page reste visitable en démo.
-      console.error('[tresor] données indisponibles (migration 018 ?):', error.message)
-    } else {
-      live = true
-      const n = Number(profile?.coins)
-      coins = Number.isFinite(n) ? n : 0
-      shop = shopWithOwnership(
-        new Set((purchases ?? []).map((p) => String(p.item_id))),
-      )
-      collection = collectionWithUnlocks(
-        new Set((unlocks ?? []).map((u) => String(u.item_id))),
-      )
-      chestOpened = Boolean(chest)
-    }
-  }
-
-  const tier = await tierPromise
+  const [tier, gemmes, catalogue, achats, boosts, objets] = await Promise.all([
+    getUserTier(),
+    user ? fetchGems(supabase, user.id) : Promise.resolve(0),
+    lireCatalogueCapsules(supabase),
+    user ? lireMesAchats(supabase, user.id) : Promise.resolve([]),
+    user ? lireBoosts(supabase, user.id) : Promise.resolve(AUCUN_BOOST),
+    user ? lireObjetsProfil(supabase, user.id) : Promise.resolve([]),
+  ])
 
   return (
-    <div>
-      {/* Le fond de l'onglet. Porté sur <body> par WorldBackdrop (et pas posé
-          ici en `fixed`) : le conteneur de balayage applique un transform
-          pendant le geste, ce qui recadrerait un fond fixé dans la page. */}
+    <div className="flex flex-col gap-9 pb-10">
       <WorldBackdrop className="tab-bg" />
+      {user ? <MarqueurBoutiqueVue semaine={cleSemaineVitrine(maintenant)} /> : null}
 
-      <TabHeader
-        title="Boutique"
-        subtitle="Ton coffre du jour, tes pièces, et tout ce qu’elles ouvrent."
+      <CarteStudueLPlus tier={tier} />
+
+      <Marche
+        offres={OFFRES}
+        boosts={boosts}
+        gemmes={gemmes}
+        maintenantIso={maintenant.toISOString()}
+        connecte={user !== null}
+        premium={isPremiumTier(tier)}
       />
-      <TresorSpaces
-        boutique={
-          <TresorHome
-            live={live}
-            initialCoins={coins}
-            gems={gems}
-            shop={shop}
-            collection={collection}
-            chestOpened={chestOpened}
-          />
-        }
-        premium={
-          <div className="flex flex-col gap-8">
-            {/* Les capsules du coach passent DEVANT les cartes d'abonnement :
-                on montre ce qu'on achète avant de montrer ce que ça coûte.
-                Une page qui s'ouvre sur trois tarifs demande de décider ; une
-                page qui s'ouvre sur le contenu donne d'abord envie. */}
-            <CapsulesShelf />
-            <PremiumHome currentTier={tier} />
-          </div>
-        }
-      />
+
+      <RayonsCapsules capsules={catalogue} achats={achats} gemmes={gemmes} connecte={user !== null} />
+
+      <RayonGemmes packs={PACKS_GEMMES} connecte={user !== null} />
+
+      <PourTonProfil objets={objets} gemmes={gemmes} connecte={user !== null} />
     </div>
   )
 }

@@ -39,7 +39,9 @@ export interface LeaguePlayer {
 }
 
 export interface League {
-  /** Nom de la ligue, ex. « Ligue Bronze ». */
+  /** Indice de la division (0 = Bronze … 5 = Diamant), cf. lib/league. */
+  tier: number
+  /** Nom de la division, ex. « Division Bronze ». */
   name: string
   /** Emoji de palier. */
   tierIcon: string

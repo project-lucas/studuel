@@ -1,10 +1,12 @@
 'use client'
 
+import Image from 'next/image'
 import { motion, useReducedMotion } from 'framer-motion'
-import { Trophy } from 'lucide-react'
 import AvatarRender from '@/components/avatar/AvatarRender'
+import TropheeAnime from '@/components/amis/TropheeAnime'
 import type { AvatarConfig } from '@/lib/avatar'
 import { cn } from '@/lib/utils'
+import styles from './Course.module.css'
 
 export type VsCamp = {
   name: string
@@ -32,6 +34,7 @@ export default function VsScreen({
   rival,
   subject,
   subjectEmoji,
+  vignette = null,
   count,
   counting,
 }: {
@@ -39,6 +42,8 @@ export default function VsScreen({
   rival: VsCamp
   subject: string
   subjectEmoji: string
+  /** L'illustration de la matière (son dossier dans Réviser), ou null. */
+  vignette?: string | null
   /** Le chiffre du décompte (3, 2, 1, 0 = GO). */
   count: number
   /** Vrai pendant le décompte, faux pendant la rencontre. */
@@ -58,8 +63,15 @@ export default function VsScreen({
     <div className="course-vs" role="status" aria-live="polite">
       {!reduce && !counting ? <span className="course-vs-flash" aria-hidden="true" /> : null}
 
-      <p className="course-vs-matiere">
-        <span aria-hidden="true">{subjectEmoji}</span> {subject} · Duel classé
+      <p className="course-vs-matiere flex items-center justify-center gap-2">
+        {vignette ? (
+          <span className={cn(styles.pastille, 'size-11 p-1.5')} aria-hidden="true">
+            <Image src={vignette} alt="" width={96} height={96} className="size-full object-contain" />
+          </span>
+        ) : (
+          <span aria-hidden="true">{subjectEmoji}</span>
+        )}
+        <span>{subject} · Duel classé</span>
       </p>
 
       <div className="course-vs-rangee">
@@ -112,7 +124,7 @@ function Fiche({ camp, tone, label }: { camp: VsCamp; tone: 'moi' | 'rival'; lab
       </div>
       <p className="course-vs-nom">{label}</p>
       <p className="course-vs-trophees">
-        <Trophy className="size-3.5" aria-hidden="true" /> {camp.trophies}
+        <TropheeAnime className="size-4" /> {camp.trophies}
       </p>
       <p className="course-vs-legende">{camp.caption}</p>
     </div>

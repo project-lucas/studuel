@@ -5,8 +5,10 @@ import {
   chapterValue,
   countWords,
   crowns,
-  defiMeta,
-  defiTitle,
+  exerciceBadge,
+  exerciceMeta,
+  groupSupports,
+  type SupportChip,
   estimateMinutes,
   examBannerOnTop,
   flashcardsBadge,
@@ -562,17 +564,47 @@ describe('flashcardsBadge', () => {
   })
 })
 
-describe('defiTitle', () => {
-  test('nomme l’item « Défi · N questions », pluriel compris', () => {
-    expect(defiTitle(1)).toBe('Défi · 1 question')
-    expect(defiTitle(10)).toBe('Défi · 10 questions')
+describe('exerciceMeta / exerciceBadge — la note du faux contrôle', () => {
+  test('dit la meilleure note, ou que rien n’a été rendu', () => {
+    expect(exerciceMeta(null)).toBe('Jamais tenté')
+    expect(exerciceMeta({ note: 14, sur: 20 })).toBe('14/20')
+  })
+
+  test('le barème se lit avant de cliquer', () => {
+    expect(exerciceBadge(null)).toBe('--/20')
+    expect(exerciceBadge({ note: 7, sur: 20 })).toBe('7/20')
   })
 })
 
-describe('defiMeta', () => {
-  test('dit si le défi a déjà été relevé', () => {
-    expect(defiMeta(false)).toBe('Jamais tenté')
-    expect(defiMeta(true)).toBe('Relevé')
+describe('groupSupports — trois verbes, trois groupes', () => {
+  const chip = (kind: SupportChip['kind']): SupportChip => ({
+    kind,
+    label: kind,
+    meta: '',
+    badge: null,
+    href: '/x',
+    done: false,
+  })
+
+  test('range chaque tuile sous son verbe, dans l’ordre apprendre → mémoriser → se tester', () => {
+    const groupes = groupSupports([
+      chip('quiz'),
+      chip('cours'),
+      chip('ia'),
+      chip('flashcards'),
+      chip('carte'),
+      chip('exercice'),
+      chip('erreurs'),
+    ])
+    expect(groupes.map((g) => g.label)).toEqual(['Apprendre', 'Mémoriser', 'Se tester'])
+    expect(groupes[0].chips.map((c) => c.kind)).toEqual(['cours', 'carte'])
+    expect(groupes[1].chips.map((c) => c.kind)).toEqual(['flashcards', 'erreurs'])
+    expect(groupes[2].chips.map((c) => c.kind)).toEqual(['quiz', 'ia', 'exercice'])
+  })
+
+  test('un groupe vide n’apparaît pas', () => {
+    const groupes = groupSupports([chip('cours')])
+    expect(groupes.map((g) => g.groupe)).toEqual(['apprendre'])
   })
 })
 
@@ -690,7 +722,7 @@ describe('les mots de l’écran', () => {
     expect(STATUS_LABELS.complete).toBe('Terminé')
   })
 
-  test('le support de la carte mentale porte le nom de sa page', () => {
-    expect(SUPPORT_LABELS.carte).toBe('Carte mentale')
+  test('le support de la carte mentale s’appelle « Fiche » (fiche de révision)', () => {
+    expect(SUPPORT_LABELS.carte).toBe('Fiche')
   })
 })

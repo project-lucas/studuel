@@ -64,9 +64,15 @@ const ORIGINAUX = {
   quiz: 'quizz',
   flashcards: 'flashcard',
   carte: 'fiches',
-  defi: 'defi',
+  // `ia` (« Moi vs IA ») porte le bouclier qui était celui du Défi solo de
+  // leçon, retiré le 16/09/2026 : même dessin, même original, nouvelle clé.
+  ia: 'defi',
   erreurs: 'erreur',
 }
+// `exercice` n'est PAS produit ici : c'est le parchemin à coches de l'arène
+// (public/images/defi/icones/quetes-v2.webp), repris tel quel dans
+// public/images/supports/exercice.webp — même atelier, même palette. Le jour
+// où un original dédié existe, l'ajouter à ORIGINAUX suffit.
 
 /** L'original d'un support : même nom, quelle que soit son extension. */
 async function source(nom) {

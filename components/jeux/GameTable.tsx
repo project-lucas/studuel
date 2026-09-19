@@ -19,6 +19,7 @@ import type { ModeQuestion } from '@/lib/defi-modes'
 import type { GameFormat } from '@/lib/jeux/formats'
 import { readGameBest, writeGameBest } from '@/lib/jeux/records'
 import { usePalierRun } from '@/lib/jeux/use-palier-run'
+import { avecGemmesPalier } from '@/lib/jeux/palier-gemmes'
 import type { PalierRun } from '@/lib/jeux/paliers'
 import { hasTimeRecord } from '@/lib/jeux/palier-format'
 import { useUltimeRun } from '@/lib/jeux/use-ultime-run'
@@ -103,6 +104,7 @@ export default function GameTable({
     standing: palierStanding,
     record: recordPalier,
     reset: resetPalier,
+    gemmes: palierGemmes,
   } = usePalierRun(format.id, palier)
   // L'épreuve ultime : sa place se calcule côté serveur (une cote n'a de sens
   // que comparée aux autres). Inerte quand la table ne joue pas l'épreuve.
@@ -112,7 +114,7 @@ export default function GameTable({
     record: recordUltime,
     reset: resetUltime,
   } = useUltimeRun(format.id, isUltime)
-  const { saved, gains, trophies, report, reset } = useGameReport(
+  const { saved, gains, trophies, bilan, report, reset } = useGameReport(
     subject,
     format.id,
   )
@@ -211,9 +213,11 @@ export default function GameTable({
 
       // Pas de file de révision ici — un jeu de salon pioche dans sa propre
       // banque (capitales, faux amis…), pas dans le programme de l'élève.
-      report(final)
+      // L'épreuve ultime ne se classe pas au Palmarès (sans plafond, elle a
+      // sa cote) : `classe: false` la retient.
+      report(final, { classe: !isUltime, elapsedMs: elapsed })
     },
-    [audio, format, recordPalier, recordUltime, report],
+    [audio, format, isUltime, recordPalier, recordUltime, report],
   )
 
   // Applique une transition du moteur et enchaîne (ou termine).
@@ -390,8 +394,9 @@ export default function GameTable({
             best={best}
             isRecord={isRecord}
             saved={saved}
-            gains={gains}
+            gains={avecGemmesPalier(gains, palierGemmes)}
             trophies={trophies}
+            bilan={bilan}
             ghost={ghost}
             onReplay={startCountdown}
             onExit={exit}

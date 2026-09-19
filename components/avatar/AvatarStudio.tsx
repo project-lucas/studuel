@@ -40,7 +40,6 @@ import { cn } from '@/lib/utils'
 //
 // L'équipement est OPTIMISTE (application instantanée, revert si le serveur
 // refuse) ; l'achat passe par la modale puis la RPC au prix autoritatif.
-// `data-no-swipe` : le geste d'onglets globaux (SwipeTabs) n'a rien à faire ici.
 // -----------------------------------------------------------------------------
 
 // Durée de la pluie de confettis après un achat (décorative, courte).
@@ -158,7 +157,6 @@ export default function AvatarStudio({
 
   return (
     <div
-      data-no-swipe
       // `role="region"` : un `aria-label` posé sur un `div` nu est simplement
       // ignoré par les lecteurs d'écran — l'écran plein n'avait donc aucun nom.
       role="region"

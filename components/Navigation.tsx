@@ -15,10 +15,10 @@ import reviserIcone from '@/public/images/nav/reviser.webp'
 import defiIcone from '@/public/images/nav/defi.webp'
 import moiIcone from '@/public/images/nav/moi.webp'
 import tresorIcone from '@/public/images/nav/tresor.webp'
-import cadreAvatar from '@/public/images/nav/cadre-avatar.webp'
 
-// Ordre des onglets = ordre de la barre mobile (Défi au centre) et ordre du
-// balayage horizontal : les deux lisent NAV_TABS.
+// Ordre des onglets = ordre de la barre mobile (Défi au centre), lu dans
+// NAV_TABS. Ces liens sont la SEULE façon de changer d'onglet : le balayage
+// horizontal a été retiré le 18/09/2026.
 const links = NAV_TABS
 
 /**
@@ -62,26 +62,25 @@ const ICONES: Record<NavIconName, StaticImageData> = {
 /** L'onglet dont le dessin est remplacé par le vrai avatar de l'élève. */
 const AVATAR_ICON: NavIconName = 'moi'
 
-/**
- * La couronne de laurier qui entoure l'avatar. Elle n'est pas un décor gratuit :
- * c'est le seul onglet dont le contenu change d'un élève à l'autre, et sans elle
- * un visage nu posé au milieu de quatre objets peints ne fait pas partie de la
- * même famille. Le cadre lui rend le contour marine épais et l'or que les autres
- * portent déjà.
- *
- * Il est fabriqué par `scripts/nav-icones.mjs`, qui l'ÉVIDE (son disque
- * intérieur arrive peint en blanc opaque) et le recentre sur son trou — la
- * couronne pèse plus lourd en bas, son trou n'est donc pas au centre du dessin.
- * Grâce à ce recentrage, le CSS n'a qu'un disque à poser dessous, sans décalage.
+/*
+ * PLUS DE COURONNE DE LAURIER AUTOUR DE L'AVATAR (16/09/2026). Le cadre existait
+ * pour qu'un visage DiceBear nu, sans contour, ne dépare pas au milieu de quatre
+ * objets peints. Depuis que l'élève choisit un BLASON (lib/portraits), son
+ * illustration porte déjà son propre écu, son cerne et son or : la couronne
+ * par-dessus faisait deux cadres l'un dans l'autre, et le disque qui rognait
+ * l'écu au visage ne montrait plus l'illustration choisie. Lucas a tranché : on
+ * laisse le personnage, tel que l'élève l'a choisi, remplir la case comme les
+ * autres icônes. Le fichier `cadre-avatar.webp` et sa fabrication dans
+ * `scripts/nav-icones.mjs` restent là, inutilisés, si un jour on y revient.
  */
-const CADRE_AVATAR = cadreAvatar
 
 export default function Navigation({
   userLabel,
-  // Pastille d'appel du Coffre (façon Clash Royale), rendue côté SERVEUR par le
-  // layout sous <Suspense> : la barre s'affiche tout de suite, la pastille se
-  // pose quand la réponse arrive. `null` quand il n'y a rien à récupérer.
-  chestBadge = null,
+  // Pastille d'appel de la Boutique (façon Clash Royale), rendue côté SERVEUR
+  // par le layout sous <Suspense> : la barre s'affiche tout de suite, la
+  // pastille se pose quand la réponse arrive. `null` quand la vitrine de la
+  // semaine a déjà été vue.
+  boutiqueBadge = null,
   // Avatar de l'élève pour l'onglet Moi, streamé par le layout selon la même
   // discipline. `null` (déconnecté, panne, ou réponse pas encore arrivée) :
   // on retombe sur le buste dessiné, qui est de la même famille que les cinq
@@ -89,7 +88,7 @@ export default function Navigation({
   avatarSlot = null,
 }: {
   userLabel: string | null
-  chestBadge?: ReactNode
+  boutiqueBadge?: ReactNode
   avatarSlot?: ReactNode
 }) {
   const pathname = usePathname()
@@ -119,12 +118,21 @@ export default function Navigation({
 
       {/* Barre d'onglets fixée en bas — modèle Clash Royale : tous les onglets
           sont de simples icônes sur le socle crème, SEUL l'onglet sélectionné
-          porte une plaque violette et affiche son mot. Plus d'orbe central : le
-          Défi est un onglet comme les autres, c'est la sélection qui parle. */}
-      <nav className="tab-bar fixed inset-x-0 bottom-0 z-50 border-t pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden">
-        {/* `overflow-hidden` = garde-fou : la plaque ne peut pas déborder
-            au-dessus du liseré doré de la barre. */}
-        <ul className="relative flex h-14 items-stretch overflow-hidden">
+          porte une plaque violette, s'agrandit et affiche son mot dessous.
+          Plus d'orbe central : le Défi est un onglet comme les autres, c'est
+          la sélection qui parle. */}
+      {/* OPAQUE, SANS FLOU (18/09/2026). Le `backdrop-blur` refloutait tout ce
+          qui défile dessous, à CHAQUE image du défilement : sur un téléphone
+          modeste, c'est ce qui faisait saccader les longues pages (la
+          Boutique) et parfois clignoter la barre. Le socle crème est plein,
+          et la barre vit sur sa propre couche (`.tab-bar`, globals.css). */}
+      <nav className="tab-bar fixed inset-x-0 bottom-0 z-50 border-t pb-[env(safe-area-inset-bottom)] md:hidden">
+        {/* PAS d'`overflow-hidden` : l'icône active DÉBORDE au-dessus du
+            liseré or, comme les haches de « Combattre » chez Clash Royale —
+            c'est le geste qui fait sortir l'onglet du socle. La plaque, elle,
+            reste dans la barre (`inset-block: 0`). 64 px de haut : le dessin
+            agrandi, lifté de 10 px, et le mot (13 px, noir) en bas de case. */}
+        <ul className="relative flex h-16 items-stretch">
           {/* Plaque violette qui suit l'onglet actif — elle GLISSE d'un onglet
               à l'autre (une seule plaque animée, pas cinq fondus). Elle occupe la
               cellule entière ; le retrait visuel est dessiné par ::before. */}
@@ -148,7 +156,7 @@ export default function Navigation({
             const slot = icon === AVATAR_ICON ? avatarSlot : null
 
             return (
-              <li key={path} className="relative z-10 flex-1">
+              <li key={path} className="tab-cell relative z-10 flex-1">
                 <Link
                   href={path}
                   // PAS DE PRÉCHARGEMENT PAR LE LIEN. Chaque onglet est une
@@ -176,65 +184,49 @@ export default function Navigation({
                   <span className="relative flex">
                     <span
                       className={cn(
-                        // `relative` : cette case est le repère de la couronne
-                        // de laurier, qui se pose PAR-DESSUS l'avatar.
                         'relative',
-                        // Centrage par le conteneur, et pas par une marge sur
-                        // l'enfant : l'avatar n'occupe que 58 % de sa case (le
-                        // diamètre du trou de la couronne) et un `margin: auto`
-                        // ne centre pas verticalement un bloc — il restait
-                        // collé en haut.
-                        // 40 px : la place rendue par le libellé est partie
-                        // ici. C'est la taille maximale qui tienne dans la
-                        // barre une fois l'onglet actif agrandi — 40 × 1,2 = 48
-                        // dans 56 px de haut, soit 4 px d'air de chaque côté.
-                        // Au-delà, `overflow-hidden` raboterait le dessin.
-                        'flex size-10 items-center justify-center transition-transform duration-200',
+                        // 44 px au repos, 57 une fois actif (× 1,3) et lifté
+                        // de 10 px : le dessin sort du socle par le haut, le
+                        // mot (13 px) reste en bas de la case.
+                        'flex items-center justify-center transition-transform duration-200',
+                        // Le BLASON DE L'ÉLÈVE est un peu plus grand que les
+                        // quatre objets (48 px au lieu de 44, Lucas, 16/09/2026) :
+                        // c'est un écu avec un visage dedans, et à 44 px le
+                        // visage ne se voyait pas assez. Seulement lui — les
+                        // autres dessins remplissent déjà leur case.
+                        icon === AVATAR_ICON ? 'size-12' : 'size-11',
                         active
-                          ? // L'agrandissement, c'est LE signal de sélection :
-                            // l'icône enfle d'un cinquième sur sa plaque. Elle
-                            // est aussi la seule à porter ses pleines couleurs.
-                            // Le facteur a baissé (1,25 → 1,2) en même temps
-                            // que la taille de repos montait : c'est l'écart
-                            // ABSOLU entre les deux états qui se voit, et il
-                            // est resté le même.
-                            'scale-[1.2]'
+                          ? // L'agrandissement ET le débordement, c'est LE
+                            // signal de sélection : l'icône enfle d'un tiers
+                            // et monte au-dessus du liseré or. Elle est aussi
+                            // la seule à porter ses pleines couleurs.
+                            'scale-[1.3] -translate-y-2.5 drop-shadow-[0_3px_3px_rgba(40,20,80,0.25)]'
                           : // Les illustrations portent leurs propres couleurs :
                             // pour que l'onglet actif ressorte, ce sont les
                             // AUTRES qui reculent — désaturées et atténuées,
-                            // façon Clash Royale. Le contour marine épais des
-                            // dessins tient largement le 3:1 même à 70 %.
-                            'opacity-70 saturate-[0.55]',
+                            // façon Clash Royale (Lucas, 16/09/2026 : plus
+                            // ternes qu'avant, 60 % / saturation 40 %). Le
+                            // contour marine épais des dessins tient le 3:1.
+                            'opacity-60 saturate-[0.4]',
                       )}
                     >
                       {icon === AVATAR_ICON ? (
-                        <>
-                          {/* Le visage — l'avatar streamé par le layout, ou le
-                              buste dessiné en repli — rogné en disque à la
-                              taille du trou de la couronne. */}
-                          <span className="nav-cadre-disque">
-                            {slot ?? (
-                              <Image
-                                src={ICONES[icon]}
-                                alt=""
-                                aria-hidden="true"
-                                width={80}
-                                height={80}
-                                priority
-                                className="size-full object-contain"
-                              />
-                            )}
-                          </span>
+                        // Le personnage choisi par l'élève — streamé par le
+                        // layout, ou le buste dessiné en repli — occupe TOUTE la
+                        // case, sans cadre ni disque : c'est `NavAvatarLoader`
+                        // qui décide de sa forme (écu entier, ou rond pour un
+                        // avatar DiceBear).
+                        (slot ?? (
                           <Image
-                            src={CADRE_AVATAR}
+                            src={ICONES[icon]}
                             alt=""
                             aria-hidden="true"
                             width={80}
                             height={80}
                             priority
-                            className="nav-cadre-bague"
+                            className="size-full object-contain"
                           />
-                        </>
+                        ))
                       ) : (
                         <Image
                           src={ICONES[icon]}
@@ -251,19 +243,24 @@ export default function Navigation({
                         />
                       )}
                     </span>
-                    {icon === 'tresor' ? chestBadge : null}
+                    {icon === 'tresor' ? boutiqueBadge : null}
                   </span>
-                  {/* PAS de mot sous l'icône. Le dessin doit se suffire — c'est
-                      tout l'intérêt d'être passé du trait à l'illustration, et
-                      la place rendue par le libellé part dans la taille du
-                      dessin. La sélection reste dite par la plaque violette et
-                      par l'agrandissement, deux signaux qui ne sont pas du
-                      texte.
-
-                      L'accessibilité ne perd rien : l'`aria-label` du lien
-                      porte le nom de l'onglet et `aria-current` sa sélection.
-                      Un lecteur d'écran annonce donc exactement ce qu'il
-                      annonçait avec le mot affiché. */}
+                  {/* LE MOT SOUS L'ONGLET ACTIF, et lui seul — le geste de
+                      Clash Royale (Lucas, 16/09/2026). Les quatre autres
+                      restent des dessins muets ; celui qu'on a choisi
+                      s'agrandit ET se nomme. Ce mot remplace le titre que
+                      chaque onglet portait en haut de page : on sait où l'on
+                      est en regardant la barre, la page peut commencer tout de
+                      suite par son contenu. Les onglets inactifs gardent leur
+                      `aria-label` : un lecteur d'écran les nomme tous. */}
+                  {active ? (
+                    <span
+                      aria-hidden="true"
+                      className="font-heading mt-1 text-[13px] leading-none font-extrabold text-foreground"
+                    >
+                      {name}
+                    </span>
+                  ) : null}
                 </Link>
               </li>
             )

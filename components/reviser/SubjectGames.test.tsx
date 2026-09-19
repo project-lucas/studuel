@@ -1,11 +1,12 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { render, screen } from '@testing-library/react'
-import { gameBestKey } from '@/lib/jeux/records'
+import { palierStorageKey } from '@/lib/jeux/paliers'
 
 // Les jeux de l'arène, servis dans l'onglet Défis d'une matière. Ce qui se
 // joue ici : la matière doit retrouver SES jeux (et seulement eux), une
-// matière sans salon ne doit RIEN promettre, et le record personnel doit être
-// affiché tel qu'il est stocké — c'est le chiffre qu'on vient battre.
+// matière sans salon ne doit RIEN promettre, les étoiles décrochées doivent
+// s'afficher telles qu'elles sont stockées — c'est la collection qu'on vient
+// compléter —, et un jeu réservé à Studuel+ doit porter son cadenas.
 
 vi.mock('@/lib/sounds', () => ({ sfx: { tap: vi.fn() } }))
 vi.mock('next/link', () => ({
@@ -39,18 +40,18 @@ describe('SubjectGames', () => {
   it('sert les jeux de la matière, avec un lien vers chaque table', () => {
     render(<SubjectGames subject={{ slug: 'francais', name: 'Français' }} />)
 
-    expect(screen.getByText('Duel d’orthographe')).toBeInTheDocument()
     expect(screen.getByText('Chasse à la faute')).toBeInTheDocument()
+    expect(screen.getByText('Conjugaison éclair')).toBeInTheDocument()
     expect(
-      screen.getByRole('link', { name: /Duel d’orthographe/ }),
-    ).toHaveAttribute('href', '/defi/jeux/orthographe')
+      screen.getByRole('link', { name: /Chasse à la faute/ }),
+    ).toHaveAttribute('href', '/defi/jeux/chasse-faute')
   })
 
   it('ne sert pas les jeux d’une autre matière', () => {
     render(<SubjectGames subject={{ slug: 'maths', name: 'Maths' }} />)
 
     expect(screen.getByText('Calcul mental éclair')).toBeInTheDocument()
-    expect(screen.queryByText('Duel d’orthographe')).not.toBeInTheDocument()
+    expect(screen.queryByText('Chasse à la faute')).not.toBeInTheDocument()
   })
 
   it('ne promet rien pour une matière sans jeux', () => {
@@ -61,12 +62,29 @@ describe('SubjectGames', () => {
     expect(container).toBeEmptyDOMElement()
   })
 
-  it('affiche le record personnel du jeu, et invite à en poser un sinon', () => {
-    window.localStorage.setItem(gameBestKey('orthographe'), '1250')
+  it('affiche les étoiles décrochées sur le jeu, sur 15', () => {
+    window.localStorage.setItem(
+      palierStorageKey('chasse-faute'),
+      JSON.stringify({ 1: { stars: 3, best: 12 }, 2: { stars: 2, best: 9 } }),
+    )
+    render(<SubjectGames subject={{ slug: 'francais', name: 'Français' }} premium />)
+
+    expect(
+      screen.getByRole('link', { name: /Chasse à la faute — .* 5 étoiles sur 15/ }),
+    ).toBeInTheDocument()
+    // L'autre jeu de la matière n'a pas encore d'étoile.
+    expect(screen.getAllByRole('link', { name: /0 étoiles sur 15/ })).toHaveLength(1)
+  })
+
+  it('sans Studuel+ : un jeu ouvert, les autres sous cadenas vers la Boutique', () => {
     render(<SubjectGames subject={{ slug: 'francais', name: 'Français' }} />)
 
-    expect(screen.getByText(/Record\s+1.250/)).toBeInTheDocument()
-    // Les deux autres jeux de la matière n'ont jamais été joués.
-    expect(screen.getAllByText('Aucun record')).toHaveLength(2)
+    expect(screen.getByRole('link', { name: /Chasse à la faute/ })).toHaveAttribute(
+      'href',
+      '/defi/jeux/chasse-faute',
+    )
+    const verrous = screen.getAllByRole('link', { name: /réservé à Studuel\+/ })
+    expect(verrous).toHaveLength(1)
+    for (const v of verrous) expect(v).toHaveAttribute('href', '/tresor')
   })
 })

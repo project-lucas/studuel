@@ -61,7 +61,7 @@ export default function CartesProposees({ cartes }: { cartes: CarteIa[] }) {
           {range.nombre} cartes rangées dans ton carnet
         </p>
         <Link
-          href={`/reviser/cours/${range.courseId}`}
+          href={`/carnet/cours/${range.courseId}`}
           className="text-primary mt-1 inline-flex min-h-9 items-center text-xs font-extrabold underline-offset-4 hover:underline"
         >
           Les voir dans « Avec Marcel »

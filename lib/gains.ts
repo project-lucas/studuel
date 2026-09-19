@@ -19,7 +19,11 @@
 // de vérifier une animation serait de la regarder.
 
 /** Les unités qu'une fin de partie peut rapporter. */
-export type UniteGain = 'xp' | 'ecu' | 'gemme' | 'couronne' | 'trophee'
+// PLUS D'ÉCU (Lucas, 16/09/2026 : « supprime cette monnaie — le joueur gagne
+// de l'XP en faisant des quiz, monte des niveaux et parfois gagne des gemmes,
+// et voilà »). La pièce a quitté le bandeau, la carte de profil et les écrans
+// de fin ; il ne reste que l'XP et la gemme comme unités qui volent.
+export type UniteGain = 'xp' | 'gemme' | 'couronne' | 'trophee'
 
 /** Un gain : une unité, un montant positif. */
 export type Gain = {
@@ -53,7 +57,6 @@ export const UNITES: readonly DefinitionUnite[] = [
   { unite: 'xp', un: 'XP', plusieurs: 'XP', cible: 'xp' },
   { unite: 'couronne', un: 'couronne', plusieurs: 'couronnes', cible: null },
   { unite: 'trophee', un: 'trophée', plusieurs: 'trophées', cible: null },
-  { unite: 'ecu', un: 'écu', plusieurs: 'écus', cible: 'ecu' },
   { unite: 'gemme', un: 'cristal', plusieurs: 'cristaux', cible: 'gemme' },
 ] as const
 

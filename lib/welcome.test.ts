@@ -50,6 +50,7 @@ const FILLED: OnboardingAnswers = {
   notificationsEnabled: true,
   schoolName: 'Collège Jean Moulin',
   schoolCity: 'Lyon',
+  avatar: '7',
 }
 
 describe('subjectsForGrade', () => {
@@ -187,8 +188,10 @@ describe('parseAnswers / serializeAnswers', () => {
         subjects: ['maths', 42, ''],
         dailyGoalMinutes: 7,
         placement: { correct: 'x', total: 5 },
+        avatar: '99',
       }),
     )
+    expect(parsed.avatar).toBeNull()
     expect(parsed.profileType).toBeNull()
     expect(parsed.source).toBe('tiktok')
     expect(parsed.goal).toBeNull()
@@ -248,6 +251,29 @@ describe('chemin par défaut', () => {
   it('termine par le plan', () => {
     expect(FAST_PATH[FAST_PATH.length - 1]).toBe('plan')
   })
+
+  it('fait choisir le blason juste après le jeu et juste avant le compte', () => {
+    // Avant le compte, pas après : le choix doit partir dans le metadata
+    // d'inscription — le chemin « confirme ton e-mail » n'a aucune session
+    // pour l'écrire plus tard. Et après le jeu : pas un péage de plus avant
+    // la démonstration.
+    const quiz = FAST_PATH.indexOf('placementQuiz')
+    expect(FAST_PATH[quiz + 1]).toBe('avatar')
+    expect(FAST_PATH[quiz + 2]).toBe('signup')
+    expect(STEPS_BEFORE_PLAY).not.toContain('avatar')
+  })
+})
+
+describe('écran « Ton avatar »', () => {
+  it('bloque « Continuer » tant qu’aucun blason n’est choisi', () => {
+    expect(canAdvance('avatar', answers({ avatar: null }))).toBe(false)
+    expect(canAdvance('avatar', answers({ avatar: '3' }))).toBe(true)
+  })
+
+  it('un parent ne le voit jamais', () => {
+    const a = answers({ profileType: 'parent' })
+    expect(nextStep('profil', a)).toBe('signup')
+  })
 })
 
 describe('nextStep', () => {
@@ -256,7 +282,8 @@ describe('nextStep', () => {
     expect(nextStep('intro', a)).toBe('profil')
     expect(nextStep('profil', a)).toBe('grade')
     expect(nextStep('grade', a)).toBe('placementIntro')
-    expect(nextStep('placementQuiz', a)).toBe('signup')
+    expect(nextStep('placementQuiz', a)).toBe('avatar')
+    expect(nextStep('avatar', a)).toBe('signup')
   })
 
   it('court-circuite tout l’élève pour un parent', () => {

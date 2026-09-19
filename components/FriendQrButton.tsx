@@ -2,11 +2,11 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { QRCodeSVG } from 'qrcode.react'
 import { QrCode, Share2, UserPlus, X } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
 import { useDialogFocus } from '@/lib/use-dialog'
+import { useSortieAnimee } from '@/components/useSortieAnimee'
 
 interface FriendQrButtonProps {
   /** Code ami de l'élève (profiles.friend_code) — encodé dans le QR vert. */
@@ -23,7 +23,8 @@ export default function FriendQrButton({ friendCode }: FriendQrButtonProps) {
   const panel = useRef<HTMLDivElement>(null)
   useDialogFocus(panel, open)
   const [copied, setCopied] = useState(false)
-  const reduce = useReducedMotion()
+  // Reste montée le temps de l'animation de sortie (CSS, sans framer-motion).
+  const { monte, etat, onAnimationEnd } = useSortieAnimee(open)
 
   // URL absolue encodée dans le QR. Sans danger au rendu : la modale (seul
   // endroit où elle s'affiche) ne s'ouvre qu'après un tap, donc côté client.
@@ -81,26 +82,20 @@ export default function FriendQrButton({ friendCode }: FriendQrButtonProps) {
 
       {typeof document !== 'undefined'
         ? createPortal(
-            <AnimatePresence>
-              {open ? (
-                <motion.div
-                  className="fixed inset-0 z-50 flex items-center justify-center bg-black/55 p-4"
+            monte ? (
+                <div
+                  data-etat={etat}
+                  className="modale-voile fixed inset-0 z-50 flex items-center justify-center bg-black/55 p-4"
                   role="dialog"
                   aria-modal="true"
                   aria-label="Ajouter un ami par QR code"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.18 }}
                   onClick={() => setOpen(false)}
                 >
-                  <motion.div
+                  <div
                     ref={panel}
-                    className="flex w-full max-w-sm flex-col items-center gap-4 rounded-3xl border border-[oklch(0.75_0.12_150)]/60 bg-gradient-to-b from-[oklch(0.6_0.15_150)] to-[oklch(0.48_0.14_152)] p-6 text-center shadow-[0_24px_60px_-20px_rgba(0,0,0,0.7)] outline-none"
-                    initial={reduce ? { opacity: 0 } : { scale: 0.9, opacity: 0 }}
-                    animate={reduce ? { opacity: 1 } : { scale: 1, opacity: 1 }}
-                    exit={reduce ? { opacity: 0 } : { scale: 0.9, opacity: 0 }}
-                    transition={{ type: 'tween', duration: 0.2, ease: 'easeOut' }}
+                    data-etat={etat}
+                    onAnimationEnd={onAnimationEnd}
+                    className="modale-panneau flex w-full max-w-sm flex-col items-center gap-4 rounded-3xl border border-[oklch(0.75_0.12_150)]/60 bg-gradient-to-b from-[oklch(0.6_0.15_150)] to-[oklch(0.48_0.14_152)] p-6 text-center shadow-[0_24px_60px_-20px_rgba(0,0,0,0.7)] outline-none"
                     onClick={(e) => e.stopPropagation()}
                   >
                     <div className="flex w-full items-center gap-3">
@@ -155,10 +150,9 @@ export default function FriendQrButton({ friendCode }: FriendQrButtonProps) {
                         Lien copié !
                       </span>
                     ) : null}
-                  </motion.div>
-                </motion.div>
-              ) : null}
-            </AnimatePresence>,
+                  </div>
+                </div>
+              ) : null,
             document.body,
           )
         : null}

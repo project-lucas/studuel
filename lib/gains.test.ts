@@ -24,16 +24,16 @@ describe('le catalogue', () => {
   })
 
   it('ne donne de cible QU’aux unités qui ont un compteur dans le bandeau', () => {
-    // Le bandeau porte le niveau, les écus et les cristaux — rien d'autre.
+    // Le bandeau porte le niveau et les cristaux — rien d'autre.
     // Couronnes et trophées vivent dans leurs écrans : leur faire traverser
     // l'écran vers un coin vide promettrait un compteur qui n'existe pas.
     const avecCible = UNITES.filter((d) => d.cible).map((d) => d.unite)
-    expect(avecCible.sort()).toEqual(['ecu', 'gemme', 'xp'])
+    expect(avecCible.sort()).toEqual(['gemme', 'xp'])
   })
 
   it('accorde le libellé en nombre', () => {
-    expect(libelleGain({ unite: 'ecu', montant: 1 })).toBe('1 écu')
-    expect(libelleGain({ unite: 'ecu', montant: 12 })).toBe('12 écus')
+    expect(libelleGain({ unite: 'gemme', montant: 1 })).toBe('1 cristal')
+    expect(libelleGain({ unite: 'gemme', montant: 12 })).toBe('12 cristaux')
     // L'XP est invariable — le pluriel naïf « 5 XPs » se lit mal.
     expect(libelleGain({ unite: 'xp', montant: 5 })).toBe('5 XP')
   })
@@ -57,7 +57,7 @@ describe('agréger les gains', () => {
   it('jette les montants nuls, négatifs et absurdes', () => {
     const gains: Gain[] = [
       { unite: 'xp', montant: 0 },
-      { unite: 'ecu', montant: -5 },
+      { unite: 'trophee', montant: -5 },
       { unite: 'gemme', montant: Number.NaN },
       { unite: 'couronne', montant: 3 },
     ]
@@ -68,11 +68,11 @@ describe('agréger les gains', () => {
     const gains: Gain[] = [
       { unite: 'gemme', montant: 30 },
       { unite: 'xp', montant: 5 },
-      { unite: 'ecu', montant: 12 },
+      { unite: 'couronne', montant: 12 },
     ]
     expect(agregerGains(gains).map((g) => g.unite)).toEqual([
       'xp',
-      'ecu',
+      'couronne',
       'gemme',
     ])
   })

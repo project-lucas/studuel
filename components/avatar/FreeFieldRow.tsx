@@ -4,6 +4,7 @@ import { useMemo } from 'react'
 import { Check, Ban } from 'lucide-react'
 import {
   avatarDataUri,
+  avatarPortraitSrc,
   freeAvatarField,
   type AvatarConfig,
   type FreeAvatarFieldKey,
@@ -46,13 +47,23 @@ function Vignette({
 }) {
   const spec = freeAvatarField(field)
   const isColor = spec?.kind === 'color'
+  // Le portrait n'est pas un réglage de l'avatar composé : sa vignette est le
+  // blason lui-même (une image servie), pas un rendu DiceBear. Et « Avatar
+  // dessiné » (la valeur '') montre l'avatar composé tel qu'il est, sans
+  // portrait — pas le pictogramme « aucun » : c'est un vrai choix, pas un vide.
+  const isPortrait = field === 'portrait'
 
   // Mémoïsé sur (champ, valeur, config) : la grille se re-rend à chaque
   // équipement, on ne recompose pas 18 SVG pour autant.
   const thumb = useMemo(() => {
     if (isColor) return null
+    if (isPortrait) {
+      return value === ''
+        ? avatarDataUri({ ...config, portrait: '', equipment: '' }, 96)
+        : avatarPortraitSrc({ ...config, portrait: value })
+    }
     return avatarDataUri({ ...config, [field]: value, equipment: '' }, 96)
-  }, [isColor, config, field, value])
+  }, [isColor, isPortrait, config, field, value])
 
   const noneLabel = FREE_FIELD_NONE_LABELS[field] ?? 'Aucun'
   const label = value === '' ? noneLabel : freeOptionLabel(field, value)
@@ -71,7 +82,7 @@ function Vignette({
             : 'border-transparent hover:border-primary/30',
         )}
       >
-        {value === '' ? (
+        {value === '' && !isPortrait ? (
           <Ban className="size-7 text-muted-foreground" aria-hidden="true" />
         ) : isColor ? (
           <span

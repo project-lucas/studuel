@@ -9,6 +9,8 @@ export type Friend = {
   id: string
   name: string
   emoji: string // avatar léger (emoji), en attendant les photos
+  // Blason choisi (clé de lib/portraits, '' si aucun) — onglet Amis.
+  portrait?: string
   level: number
   // true = fantôme réel (manches enregistrées d'un vrai ami, duel_recordings)
   real?: boolean
@@ -69,13 +71,18 @@ export const DUEL_XP_BONUS = 50
 export const DUEL_DAY_STORAGE_KEY = 'scolaria-duel-day'
 
 // ----------------------------------------------------------------- L'école
-// Les heures travaillées par chaque élève s'accumulent au bénéfice de son
-// école ; le classement interne départage les élèves au temps de travail.
+// LE CLASSEMENT DE L'ÉCOLE SE FAIT AUX TROPHÉES (Lucas, 16/09/2026), plus au
+// temps de travail. Les heures mesuraient l'assiduité ; les trophées mesurent
+// ce que l'élève a GAGNÉ (duels classés, cf. lib/trophies) — c'est la même
+// monnaie que le classement entre amis et le rang de saison (lib/rank), donc
+// un seul vocabulaire sur tout l'onglet : « Bronze IV », « 480 trophées ».
 export type SchoolMate = {
   id: string
   name: string
   emoji: string
-  seconds: number // temps de travail cumulé (cf. profiles.work_seconds)
+  // Blason choisi (migration 363) ; absent = blason fixe déduit de l'id.
+  portrait?: string
+  trophies: number // trophées de saison (cf. profiles.trophies, lib/trophies)
   isMe?: boolean
 }
 
@@ -93,19 +100,13 @@ export function schoolNoun(level: SchoolLevel): string {
 }
 
 export function sortSchool(mates: SchoolMate[]): SchoolMate[] {
-  return [...mates].sort((a, b) => b.seconds - a.seconds)
+  return [...mates].sort((a, b) => b.trophies - a.trophies)
 }
 
-// La RPC clan_mates (160) ne renvoie que les 50 élèves les plus actifs :
-// au-delà, la cagnotte et le rang affichés ne couvrent que ce top — l'UI
-// doit le dire au lieu de présenter la somme comme le total de l'école.
+// La RPC clan_mates (362) ne renvoie que les 50 élèves les mieux classés :
+// au-delà, le rang affiché ne couvre que ce top — l'UI doit le dire au lieu
+// de présenter la liste comme toute l'école.
 export const SCHOOL_BOARD_LIMIT = 50
-
-// Total des heures des élèves listés (tout l'établissement tant que la liste
-// n'atteint pas SCHOOL_BOARD_LIMIT ; sinon, celles du top 50).
-export function schoolTotalSeconds(mates: SchoolMate[]): number {
-  return mates.reduce((sum, m) => sum + Math.max(0, m.seconds), 0)
-}
 
 // --- Backend réel (migration 160) : « en direct » + « mon école » ------------
 
@@ -143,7 +144,9 @@ export function buildLiveSessions(rows: unknown): LiveSession[] {
 }
 
 // Construit le tableau « mon école » à partir du JSONB de la RPC clan_mates
-// ({ school_name, mates:[{ id, name, seconds }] }). Marque l'élève courant.
+// ({ school_name, mates:[{ id, name, trophies }] }). Marque l'élève courant.
+// Les trophées arrivent avec la migration 362 ; une RPC plus ancienne (160/242)
+// ne les renvoie pas : ils valent alors 0, et la liste se lit quand même.
 export function buildSchoolBoard(
   raw: unknown,
   myId: string,
@@ -160,7 +163,8 @@ export function buildSchoolBoard(
         id,
         name: id === myId ? 'Toi' : String(mo.name ?? 'Élève'),
         emoji: avatarEmojiFor(id),
-        seconds: Math.max(0, Number(mo.seconds) || 0),
+        portrait: typeof mo.portrait === 'string' ? mo.portrait : '',
+        trophies: Math.max(0, Math.floor(Number(mo.trophies) || 0)),
         isMe: id === myId,
       },
     ]
@@ -247,6 +251,7 @@ export type PendingRequest = {
   id: string
   name: string
   emoji: string
+  portrait?: string
 }
 
 // Prénom d'affichage : premier mot du nom complet, repli « Ami ».
@@ -363,11 +368,11 @@ export function duelView(row: DuelRow, myId: string, opponent: Friend): Duel {
   }
 }
 
-// L'école de l'élève (aperçu, signalé comme tel dans l'UI) — `mySeconds` vient
-// du vrai profil quand il est connecté, pour que sa place bouge avec son
-// travail réel. Le nom suit le cycle pour ne pas contredire le titre.
+// L'école de l'élève (aperçu, signalé comme tel dans l'UI) — `myTrophies` vient
+// du vrai profil quand il est connecté, pour que sa place bouge avec ses
+// vrais duels. Le nom suit le cycle pour ne pas contredire le titre.
 export function getMockSchool(
-  mySeconds: number,
+  myTrophies: number,
   level: SchoolLevel = 'college',
 ): SchoolBoard {
   return {
@@ -375,14 +380,14 @@ export function getMockSchool(
     emoji: '🏫',
     level,
     mates: sortSchool([
-      { id: 'me', name: 'Toi', emoji: '🚀', seconds: mySeconds, isMe: true },
-      { id: 'naila', name: 'Naïla', emoji: '🦉', seconds: 41 * 3600 },
-      { id: 'rayan', name: 'Rayan', emoji: '🦁', seconds: 33 * 3600 },
-      { id: 'lea', name: 'Léa', emoji: '🦊', seconds: 27 * 3600 + 1800 },
-      { id: 'ines', name: 'Inès', emoji: '🐝', seconds: 19 * 3600 },
-      { id: 'tom', name: 'Tom', emoji: '🐼', seconds: 12 * 3600 + 2400 },
-      { id: 'hugo', name: 'Hugo', emoji: '🐺', seconds: 7 * 3600 },
-      { id: 'chloe', name: 'Chloé', emoji: '🐰', seconds: 4 * 3600 + 900 },
+      { id: 'me', name: 'Toi', emoji: '🚀', trophies: myTrophies, isMe: true },
+      { id: 'naila', name: 'Naïla', emoji: '🦉', trophies: 1240 },
+      { id: 'rayan', name: 'Rayan', emoji: '🦁', trophies: 980 },
+      { id: 'lea', name: 'Léa', emoji: '🦊', trophies: 760 },
+      { id: 'ines', name: 'Inès', emoji: '🐝', trophies: 540 },
+      { id: 'tom', name: 'Tom', emoji: '🐼', trophies: 310 },
+      { id: 'hugo', name: 'Hugo', emoji: '🐺', trophies: 180 },
+      { id: 'chloe', name: 'Chloé', emoji: '🐰', trophies: 60 },
     ]),
   }
 }
@@ -444,9 +449,9 @@ export function geoScopePossessive(scope: GeoScope, level: SchoolLevel): string 
 }
 
 // Meneurs d'exemple par échelon (hors établissement) : plus le vivier est large,
-// plus les meneurs cumulent d'heures. « Toi » y est inséré avec ton vrai temps,
-// puis tout est trié — au national tu apparais donc plus bas, ce qui dit la
-// vérité du jeu : on grimpe en travaillant.
+// plus les meneurs cumulent de trophées. « Toi » y es inséré avec tes vrais
+// trophées, puis tout est trié — au national tu apparais donc plus bas, ce qui
+// dit la vérité du jeu : on grimpe en gagnant des duels.
 const GEO_DEMO_LEADERS: Record<
   Exclude<GeoScope, 'school'>,
   { name: string; emoji: string; leaders: Omit<SchoolMate, 'isMe'>[] }
@@ -455,36 +460,36 @@ const GEO_DEMO_LEADERS: Record<
     name: 'Seine-et-Marne',
     emoji: '🏙️',
     leaders: [
-      { id: 'd1', name: 'Yasmine', emoji: '🦅', seconds: 92 * 3600 },
-      { id: 'd2', name: 'Théo', emoji: '🐯', seconds: 78 * 3600 },
-      { id: 'd3', name: 'Camille', emoji: '🦊', seconds: 64 * 3600 + 1800 },
-      { id: 'd4', name: 'Adam', emoji: '🐺', seconds: 51 * 3600 },
-      { id: 'd5', name: 'Sofia', emoji: '🦉', seconds: 43 * 3600 },
-      { id: 'd6', name: 'Nael', emoji: '🐼', seconds: 38 * 3600 + 2400 },
+      { id: 'd1', name: 'Yasmine', emoji: '🦅', trophies: 2760 },
+      { id: 'd2', name: 'Théo', emoji: '🐯', trophies: 2340 },
+      { id: 'd3', name: 'Camille', emoji: '🦊', trophies: 1930 },
+      { id: 'd4', name: 'Adam', emoji: '🐺', trophies: 1530 },
+      { id: 'd5', name: 'Sofia', emoji: '🦉', trophies: 1290 },
+      { id: 'd6', name: 'Nael', emoji: '🐼', trophies: 1150 },
     ],
   },
   region: {
     name: 'Île-de-France',
     emoji: '🗺️',
     leaders: [
-      { id: 'r1', name: 'Jade', emoji: '🦄', seconds: 214 * 3600 },
-      { id: 'r2', name: 'Gabriel', emoji: '🐉', seconds: 187 * 3600 },
-      { id: 'r3', name: 'Louna', emoji: '🦅', seconds: 156 * 3600 + 1800 },
-      { id: 'r4', name: 'Ibrahim', emoji: '🦁', seconds: 133 * 3600 },
-      { id: 'r5', name: 'Manon', emoji: '🦊', seconds: 118 * 3600 },
-      { id: 'r6', name: 'Ethan', emoji: '🐯', seconds: 101 * 3600 + 1200 },
+      { id: 'r1', name: 'Jade', emoji: '🦄', trophies: 6420 },
+      { id: 'r2', name: 'Gabriel', emoji: '🐉', trophies: 5610 },
+      { id: 'r3', name: 'Louna', emoji: '🦅', trophies: 4690 },
+      { id: 'r4', name: 'Ibrahim', emoji: '🦁', trophies: 3990 },
+      { id: 'r5', name: 'Manon', emoji: '🦊', trophies: 3540 },
+      { id: 'r6', name: 'Ethan', emoji: '🐯', trophies: 3040 },
     ],
   },
   national: {
     name: 'France',
     emoji: '🇫🇷',
     leaders: [
-      { id: 'n1', name: 'Alia', emoji: '👑', seconds: 512 * 3600 },
-      { id: 'n2', name: 'Noah', emoji: '🚀', seconds: 468 * 3600 },
-      { id: 'n3', name: 'Lina', emoji: '🦄', seconds: 421 * 3600 + 1800 },
-      { id: 'n4', name: 'Raphaël', emoji: '🐉', seconds: 389 * 3600 },
-      { id: 'n5', name: 'Emma', emoji: '🦅', seconds: 352 * 3600 },
-      { id: 'n6', name: 'Aymen', emoji: '🦁', seconds: 318 * 3600 + 600 },
+      { id: 'n1', name: 'Alia', emoji: '👑', trophies: 15360 },
+      { id: 'n2', name: 'Noah', emoji: '🚀', trophies: 14040 },
+      { id: 'n3', name: 'Lina', emoji: '🦄', trophies: 12650 },
+      { id: 'n4', name: 'Raphaël', emoji: '🐉', trophies: 11670 },
+      { id: 'n5', name: 'Emma', emoji: '🦅', trophies: 10560 },
+      { id: 'n6', name: 'Aymen', emoji: '🦁', trophies: 9550 },
     ],
   },
 }
@@ -494,10 +499,10 @@ const GEO_DEMO_LEADERS: Record<
 // l'établissement, on réutilise l'aperçu d'école existant.
 export function getMockGeoBoard(
   scope: GeoScope,
-  mySeconds: number,
+  myTrophies: number,
   level: SchoolLevel = 'college',
 ): SchoolBoard {
-  if (scope === 'school') return getMockSchool(mySeconds, level)
+  if (scope === 'school') return getMockSchool(myTrophies, level)
 
   const preset = GEO_DEMO_LEADERS[scope]
   return {
@@ -505,7 +510,7 @@ export function getMockGeoBoard(
     emoji: preset.emoji,
     level,
     mates: sortSchool([
-      { id: 'me', name: 'Toi', emoji: '🚀', seconds: mySeconds, isMe: true },
+      { id: 'me', name: 'Toi', emoji: '🚀', trophies: myTrophies, isMe: true },
       ...preset.leaders.map((l) => ({ ...l })),
     ]),
   }

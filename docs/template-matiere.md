@@ -64,13 +64,18 @@ terminé, et pendant une recherche.
 | `Quiz` | la commande du chapitre, **sur l'en-tête, replié ou non**, dès qu'il a ≥ 2 fiches | plaque violette 3D (`ListChecks`), or sur une carte finie |
 | Chevron | la carte se déplie | pivote de 180° à l'ouverture |
 
-**La robe de la carte dit l'effort** (`ChapitreEntete`, `ROBES`, `data-etat`) :
-carte crème tant que rien n'est commencé (`vierge`), la même cernée de
-**jaune solaire** dès le premier quiz (`entame`), **violet plein à texte
-blanc et socle sombre** quand toutes les fiches sont terminées (`termine`) —
-la plaque des boutons d'action, un trophée sur l'étagère. Le header porte le
-même signal en grand : un **anneau de 64 px** (`AnneauProgression`) avec le
-pourcentage de la matière, qui se remplit en jaune.
+**La carte est la plaque violette, pour tous** (`ChapitreEntete`, `ROBES`,
+`data-etat`) : **violet plein à texte blanc, socle sombre, quadrillage en
+filigrane** — la plaque des boutons d'action — quel que soit l'état du
+chapitre (décision de Lucas, 16/09/2026). Elle a dit l'effort par la couleur
+(crème vierge, cernée de jaune entamée, violette finie) ; l'état se lit
+maintenant sur le **médaillon** (anneau blanc du pourcentage, disque d'or à
+la couronne une fois fini), les **pastilles** (blanches à 25 % éteintes,
+jaunes en marche, or pleines terminées), le compte (« 2/2 fiches · Terminé »)
+et le bouton `Quiz`, toujours **en or** (sur du violet, le violet ne ressort
+pas). `data-etat` reste posé sur la carte pour les tests et le CSS. Le header
+porte le même signal en grand : un **anneau de 64 px** (`AnneauProgression`)
+avec le pourcentage de la matière, qui se remplit en jaune.
 
 Il n'y a **plus de surtitre « CHAPITRE N »** (retiré le 28/08/2026) : le
 numéro promettait un ordre que personne ne suit — chaque professeur traite le
@@ -107,7 +112,7 @@ durée estimée, ses couronnes gagnées (à partir de la première) et son état
 (« En cours », « Terminé »). Pas de préfixe « Chapitre N · » : le mot
 « chapitre » appartient à l'en-tête, seul endroit où il est vrai. Taper la
 ligne la **déplie sur place** et découvre ses supports en rangée : Cours ·
-Quiz · Flashcards · **Carte mentale** · Défi (· Mes erreurs, les jours où il y
+**Fiche** · Flashcards · Quiz · Exercice (· Mes erreurs, les jours où il y
 en a). Le support s'appelle comme la page qu'il ouvre — il s'est appelé
 « Fiches », mais le header compte déjà des fiches. La fiche à reprendre porte
 son « + » en jaune.

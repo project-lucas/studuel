@@ -1,6 +1,6 @@
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
-import { avatarDataUri, normalizeAvatarConfig } from '@/lib/avatar'
+import { avatarDataUri, avatarPortraitSrc, normalizeAvatarConfig } from '@/lib/avatar'
 import NavMoiBust from './NavMoiBust'
 
 /**
@@ -36,13 +36,29 @@ export default async function NavAvatarLoader() {
   // Panne ou colonne absente : le buste dessiné plutôt qu'un trou dans la barre.
   if (error) return <NavMoiBust />
 
-  // 64 px de rendu pour ~26 px servis : net sur les écrans à densité doublée.
-  const uri = avatarDataUri(normalizeAvatarConfig(data?.avatar), 64)
+  const config = normalizeAvatarConfig(data?.avatar)
 
-  // Rien que le visage : le disque qui le rogne et la couronne de laurier qui
-  // l'entoure sont posés par la barre elle-même (`.nav-cadre-*`). Ce composant
-  // ne connaît pas sa taille finale, et c'est voulu — la géométrie de l'onglet
-  // ne doit pas être répartie entre deux fichiers qui ne se voient pas.
-  // eslint-disable-next-line @next/next/no-img-element
-  return <img src={uri} alt="" aria-hidden="true" className="size-full" />
+  // Un blason choisi (lib/portraits) : l'ÉCU ENTIER, tel que l'élève l'a
+  // choisi, sans cadre ni disque de rognage (16/09/2026). Le blason est déjà un
+  // objet détouré — écu, cerne, couronne d'or — de la même famille graphique
+  // que les quatre autres icônes de la barre ; il se pose comme elles, en
+  // `object-contain` dans toute la case.
+  const portrait = avatarPortraitSrc(config)
+  if (portrait) {
+    // eslint-disable-next-line @next/next/no-img-element
+    return <img src={portrait} alt="" aria-hidden="true" className="size-full object-contain" />
+  }
+
+  // 96 px de rendu pour 40 px servis : net sur les écrans à densité doublée.
+  const uri = avatarDataUri(config, 96)
+
+  // L'avatar DiceBear, lui, est un carré plein (fond compris) : sans cadre, il
+  // garde au moins un rond pour ne pas poser un pavé au milieu des dessins
+  // détourés. Un rond nu, sans couronne ni liseré.
+  return (
+    <span className="block size-full overflow-hidden rounded-full" aria-hidden="true">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={uri} alt="" className="size-full" />
+    </span>
+  )
 }

@@ -2252,6 +2252,217 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     decision:
       'LES POINTS NE SONT PAS STOCKÉS, LES PAS LE SONT. Une trace ne garde que (instant, juste/faux, temps de réflexion) : le client comme le serveur RECALCULENT le score avec le barème et la question dorée du duel courant (lib/duel/rival.timelineFromSteps). Un score stocké aurait figé un barème, et un client aurait pu l’inventer. Même périmètre que subject_ranked_ghosts (238) : même niveau de classe, prénom seul, avatar dessiné, aucune donnée de contact. Une trace par (élève, matière), la dernière — on court contre la version actuelle de quelqu’un, pas contre son record d’il y a six mois.',
   },
+  {
+    id: '352',
+    fichier: '352_palmares_modes.sql',
+    feature:
+      'LE PALMARÈS DES MODES DE JEU : chaque partie de Blitz, Contre-la-montre, Survie, Boss et Duel fantôme laisse son score en base (mode_runs), avec le record de toujours (mode_bests) et le record de LA SEMAINE (mode_weeks). La RPC `record_mode_score` rend en un aller-retour le bilan de l’écran de fin : dernière fois, record d’avant et d’après, place sur l’échelle de la semaine avant et après, et la PROCHAINE MARCHE (le joueur juste au-dessus, prénom + avatar + score à dépasser). `mode_ladder` rend l’échelle (dix premiers de ma classe + moi), `my_mode_palmares` alimente le bloc « Ton palmarès » de /moi.',
+    siAbsente:
+      'Les cinq modes se jouent et l’écran de fin s’affiche, avec le score et le record LOCAL (localStorage, perdu au changement d’appareil) ; mais ni « vs dernière fois », ni échelle de la semaine, ni prochaine marche — la ligne dit « Connecte-toi pour garder tes records ». Le bloc « Ton palmarès » de /moi montre cinq cases vides « À poser ». L’appel est toléré (app/defi/palmares-actions.ts). Rien ne casse, aucun chiffre n’est inventé.',
+    sonde: { type: 'table', table: 'mode_bests' },
+    decision:
+      'LA COHORTE EST LA CLASSE, LA SEMAINE REPART LE LUNDI. Le rang de la semaine se calcule parmi les élèves de mon grade_level (même périmètre que le percentile de /moi et les rivaux de la 351), et l’échelle de la semaine se vide chaque lundi UTC (clan_week_key, 204) : c’est ce qui garantit qu’il y a toujours une place à prendre. CE QU’ON MONTRE D’UN AUTRE ÉLÈVE : prénom seul, avatar dessiné, score — le périmètre exact de duel_replay_opponents. LES SCORES SONT BORNÉS PAR MODE (mode_catalog, miroir de lib/palmares/epreuves.ts, vérifié par test) et une durée plausible est exigée (min_ms_per_point) : proportionné à l’enjeu, une échelle de jeu. Les records existants en localStorage ne sont PAS migrés : le premier score joué après la migration devient le record serveur (le record local plus haut reste affiché tel quel jusqu’à être dépassé).',
+  },
+  {
+    id: '353',
+    fichier: '353_carnet_planning.sql',
+    feature:
+      'LE PLANNING DU CARNET : table `carnet_plans` — un rendez-vous par DOSSIER (le cours entier ou un chapitre), des jours de la semaine (0 = lundi), une heure facultative, la longueur et le mode de la session. Le bloc « Ma semaine » du volet Mon carnet (sept jours, tenus ✓ / à faire ▶), l’onglet « Planning » d’un cours, et la proposition de planning À REBOURS depuis la date du contrôle (audit du carnet, point 16).',
+    siAbsente:
+      'Le carnet fonctionne comme avant. « Ma semaine » affiche une semaine vide avec l’invitation, l’onglet Planning d’un cours est vide, et « Poser le rendez-vous » répond « Le planning n’est pas encore disponible ». Rien ne casse.',
+    sonde: { type: 'table', table: 'carnet_plans' },
+    decision:
+      'LE FAIT / PAS FAIT N’EST PAS STOCKÉ : il se déduit des sessions jouées (carnet_review_sessions : même cours, même dossier — ou le cours entier —, même jour UTC). Une session COMMENCÉE compte. UN PLAN PAR DOSSIER (index unique sur owner, cours, chapitre COALESCE) : modifier, pas dupliquer. Les jours suivent la convention de `habits.target` (0 = lundi … 6 = dimanche), l’heure est en heure de l’élève, texte HH:MM.',
+  },
+  {
+    id: '354',
+    fichier: '354_catalogue_comptes_questions.sql',
+    feature:
+      'Le catalogue compte ses questions EN BASE : `catalog_quiz_question_counts()` rend une ligne par quiz. Compagnon du correctif « 1 000 lignes » (lib/postgrest-pages) : PostgREST tronque toute réponse à 1 000 lignes sans le dire, et le catalogue (2 323 chapitres, 2 340 quiz, 18 262 questions) avait franchi le seuil — matières « Bientôt » à tort, maîtrise sur 43 % des quiz.',
+    siAbsente:
+      'Rien ne se voit : `getQuizQuestionCountsCached` pagine les 18 262 questions en 19 lectures de 1 000 (toutes les 5 min, par instance serveur) au lieu d’un appel. Juste, mais plus lent au premier affichage après expiration du cache.',
+    sonde: { type: 'rpc', fn: 'catalog_quiz_question_counts', args: {} },
+    decision:
+      'SECURITY INVOKER : la fonction lit quiz_questions à travers la RLS anonyme du catalogue (026), elle n’expose que des identifiants de quiz et des entiers. Le comptage vit en base parce que Postgres sait compter et que PostgREST n’a pas les agrégats activés (PGRST123).',
+  },
+  {
+    id: '355',
+    fichier: '355_palmares_jeux_salon.sql',
+    feature:
+      'LE PALMARÈS S’ÉTEND AUX JEUX DE SALON : chaque jeu jouable (calcul mental, orthographe, capitales… un salon par matière) est inscrit à `mode_catalog`, et ses parties laissent leur score dans les tables de la 352 — record de toujours, record de la semaine, place dans la classe. L’écran de fin d’un jeu affiche sa ligne de palmarès, et /moi montre « Jeux par matière » sous les cinq épreuves.',
+    siAbsente:
+      'Les jeux se jouent comme avant, avec leurs étoiles et leur record local ; `record_mode_score` rend NULL pour un jeu hors catalogue, donc ni ligne de palmarès à l’écran de fin ni place dans /moi (cases « À poser »). Rien ne casse, aucun chiffre n’est inventé.',
+    sonde: { type: 'ligne', table: 'mode_catalog', colonne: 'mode_id', valeur: 'calcul-mental' },
+    decision:
+      'MÊME BARÈME, MÊME PLAFOND POUR TOUS LES JEUX (30 000 pts, 1 ms par point) : le moteur lib/jeux/run donne 100 pts par bonne réponse à tous les jeux, les scores sont comparables entre eux. La cohorte reste la classe, la semaine repart le lundi (352). L’épreuve ultime n’est pas classée ici — sans plafond, elle a sa cote (314). Un jeu se classe TOUS PALIERS CONFONDUS : dans une même classe, le plancher de palier est le même pour tous (lib/jeux/paliers), la comparaison reste juste.',
+  },
+  {
+    id: '356',
+    fichier: '356_carnet_personnalisation.sql',
+    feature:
+      'LE CARNET PERSONNALISABLE (page /carnet, 15/09/2026) : les FAVORIS (`carnet_courses.epingle`, l’étoile qui met un dossier en tête), les ARCHIVES (`archive`, rangé sans être supprimé), l’OBJECTIF d’un dossier (`objectif`, 120 caractères — « Partiel du 14 juin ») et les préférences du carnet (`profiles.carnet_prefs`, JSONB : ordre des dossiers, session par défaut, objectif de cartes du jour).',
+    siAbsente:
+      'La page /carnet s’affiche (relecture réduite sans les trois colonnes), mais l’étoile, « Archiver » et « Mon objectif » répondent « Cette personnalisation arrive bientôt sur ton compte — mise à jour en cours. » et le geste est annulé à l’écran. Les préférences retombent sur leurs défauts (Récents, apprentissage recto → verso).',
+    sonde: { type: 'colonne', table: 'carnet_courses', colonne: 'objectif' },
+  },
+  {
+    id: '357',
+    fichier: '357_carnet_question_source.sql',
+    feature:
+      'L’ORIGINE d’une question du carnet (`carnet_questions.source` : manuel · texte · pdf · photo). C’est elle qui teinte les chapitres et les questions d’un dossier : ROUGE dès qu’un PDF y a été inséré, violet pour les flashcards, jaune sinon.',
+    siAbsente:
+      'Les questions se créent et se génèrent comme avant (l’insertion est retentée sans la colonne), mais l’origine vaut NULL : un chapitre rempli depuis un PDF garde la teinte de ses types. Rien ne casse.',
+    sonde: { type: 'colonne', table: 'carnet_questions', colonne: 'source' },
+  },
+  {
+    id: '358',
+    fichier: '358_serie_carnet.sql',
+    feature:
+      'LA SÉRIE COMPTE LE CARNET : `jours_actifs()` (323) lit aussi `carnet_review_sessions.started_at`, comme `current_streak` le fait depuis la 317. Une session de carnet commencée rend le jour actif pour la flamme (Réviser, Moi, Marcel).',
+    siAbsente:
+      'Un élève qui ne travaille que ses cartes voit sa flamme s’éteindre le soir même — sauf quand la RPC manque tout à fait, où le repli TypeScript (lib/jours-actifs.ts) lit déjà les sessions de carnet. Les amis, eux, voient la bonne série (317).',
+    sonde: null,
+  },
+  {
+    id: '359',
+    fichier: '359_matieres_prioritaires.sql',
+    feature:
+      'LES MATIÈRES PRIORITAIRES de l’élève (`profiles.matieres_prioritaires`, tableau de slugs) : l’étoile sur chaque dossier de matière de Réviser. Les matières étoilées passent en tête de la grille, un filet les sépare des autres.',
+    siAbsente:
+      'Les étoiles s’affichent creuses, un tap répond « Priorités non enregistrées — réessaie. » et la grille garde son ordre. Rien ne casse.',
+    sonde: { type: 'colonne', table: 'profiles', colonne: 'matieres_prioritaires' },
+  },
+  {
+    id: '360',
+    fichier: '360_exercice_chapitre.sql',
+    feature:
+      'L’EXERCICE DE CHAPITRE (tuile « Se tester » de l’écran de chapitre) : un faux contrôle rédigé par l’IA depuis le cours et corrigé par elle, noté sur 20. Table `chapter_exercices` (l’épreuve, partagée), `chapter_exercice_reponses` (la copie et sa note, par élève), et le quota IA apprend le type `exercice` (12 par jour).',
+    siAbsente:
+      'La tuile « Exercice » s’affiche « --/20 » pour tout le monde et la page répond « Le professeur n’a pas réussi à écrire ce sujet » : l’insertion échoue sur une table absente. Rien d’autre ne casse.',
+    sonde: { type: 'table', table: 'chapter_exercices' },
+  },
+  {
+    id: '361',
+    fichier: '361_avatar_portrait_inscription.sql',
+    feature:
+      'LE BLASON DE JOUEUR choisi à l’onboarding (écran « Ton avatar », lib/portraits) : le trigger handle_new_user recopie la clé `avatar` du metadata d’inscription dans `profiles.avatar`, même sans session (confirmation d’e-mail).',
+    siAbsente:
+      'Un élève inscrit par e-mail avec confirmation perd son blason : il retrouve l’avatar composé par défaut et doit rechoisir au vestiaire. Les inscriptions OAuth et les sessions immédiates ne sont pas touchées (applyOnboarding écrit la colonne). Rien ne casse.',
+    // Une fonction trigger ne se sonde pas depuis la clé anon (pas de RPC).
+    sonde: null,
+  },
+  {
+    id: '362',
+    fichier: '362_clan_mates_trophees.sql',
+    feature:
+      'LE CLASSEMENT DE L’ÉCOLE AUX TROPHÉES (onglet Amis) : `clan_mates` renvoie `trophies` et garde les 50 élèves les mieux classés.',
+    siAbsente:
+      'Le classement de l’école montre tout le monde à 0 trophée (la RPC renvoie encore le temps de travail). Rien ne casse.',
+    // La RPC existe depuis 160 : sa présence ne dit rien de cette version.
+    sonde: null,
+  },
+  {
+    id: '363',
+    fichier: '363_portraits_amis.sql',
+    feature:
+      'LES BLASONS DANS L’ONGLET AMIS : `clan_mates` renvoie le `portrait` de chaque camarade, et la nouvelle RPC `friends_portraits` celui des amis et des demandes reçues.',
+    siAbsente:
+      'Chaque élève garde un blason fixe déduit de son identifiant au lieu de celui qu’il a choisi. Rien ne casse.',
+    sonde: { type: 'rpc', fn: 'friends_portraits', args: {} },
+  },
+  {
+    id: '364',
+    fichier: '364_exercices_difficulte.sql',
+    feature:
+      'LES EXERCICES DE CHAPITRE PAR NIVEAU : `chapter_exercices` gagne `difficulte` (1 facile · 2 moyen · 3 difficile) et `origine` (catalogue ou ia) ; l’écran Exercice propose les trois niveaux.',
+    siAbsente:
+      'Le choix du niveau ne change rien : l’écran ressert le dernier sujet du chapitre, et les sujets rédigés par l’IA sont rangés sans niveau. Rien ne casse.',
+    sonde: { type: 'colonne', table: 'chapter_exercices', colonne: 'difficulte' },
+  },
+  {
+    id: '365',
+    fichier: '365_exercices_6e.sql',
+    feature:
+      'LE CATALOGUE D’EXERCICES DE 6e : trois sujets écrits d’avance (facile, moyen, difficile) pour chaque fiche de 6e, toutes matières, avec barème et corrigé type.',
+    siAbsente:
+      'Chaque premier sujet d’une fiche de 6e est rédigé par l’IA à la demande (un appel du quota), sans corrigé de référence. Rien ne casse.',
+    // Des lignes de contenu : la clé anon ne lit pas chapter_exercices.
+    sonde: null,
+  },
+  {
+    id: '366',
+    fichier: '366_capsules.sql',
+    feature:
+      'LES CAPSULES DE LA BOUTIQUE : trois tables (catalogue, contenu, achats), l’achat en gemmes, la demande de paiement par carte (accordée par l’admin avec accorder_capsule), l’ouverture qui éteint la pastille du carnet, et le quiz réussi qui accorde un badge par capsule.',
+    siAbsente:
+      'La Boutique annonce « Les premières capsules arrivent très bientôt », le carnet n’a pas d’étagère « Mes capsules » et le bouton « Mon carnet » n’a jamais de pastille. Rien ne casse.',
+    // Le catalogue est une vitrine : la clé anon le lit.
+    sonde: { type: 'table', table: 'capsules' },
+  },
+  {
+    id: '367',
+    fichier: '367_capsules_contenu.sql',
+    feature:
+      'LES SIX CAPSULES DE LANCEMENT : sommeil, nutrition, stress, méthode, argent de poche, orientation — chacune avec son cours, sa fiche récap, son quiz de huit questions et son outil (calculateur, liste à cocher ou planning). Prix provisoires, réglables dans la table capsules.',
+    siAbsente: 'Le rayon des capsules reste vide dans la Boutique. À exécuter APRÈS la 366.',
+    sonde: { type: 'ligne', table: 'capsules', colonne: 'id', valeur: 'sommeil' },
+  },
+  {
+    id: '368',
+    fichier: '368_boutique_gemmes.sql',
+    feature:
+      'LA BOUTIQUE EN GEMMES : les « Offres du moment » (double XP, gel de série, gemmes ×2 le week-end) ont un EFFET réel. État des boosts dans `user_wallet`, catalogue `boutique_offres`, journal `boutique_achats`, RPC `acheter_offre` et `acheter_objet_profil`, six objets de profil à `avatar_items.prix_gemmes`. Le double XP, les gemmes ×2 et le gel passent par `wallet_touch`, `wallet_award_xp`, `wallet_grant_xp` et `wallet_award_gems` ; `current_streak` compte les jours gelés. Ferme aussi `wallet_grant_xp` aux rôles de l’API.',
+    siAbsente:
+      'La vitrine s’affiche sans boost actif et chaque achat répond « La boutique en gemmes ouvre très bientôt. » ; la flamme compte comme avant. Et `wallet_grant_xp` reste appelable par n’importe quel élève connecté (XP et gemmes de passage de niveau à volonté).',
+    sonde: { type: 'ligne', table: 'boutique_offres', colonne: 'id', valeur: 'gel-serie' },
+  },
+  {
+    id: '369',
+    fichier: '369_packs_gemmes.sql',
+    feature:
+      'LES PACKS DE GEMMES : la section « Gemmes » de la Boutique (trois packs : quelques gemmes, un sac, un baril), la demande d’achat avec le contact d’un parent, et `accorder_pack_gemmes` pour créditer les gemmes une fois le paiement confirmé. Prix provisoires.',
+    siAbsente:
+      'La section Gemmes s’affiche, mais chaque demande répond « La boutique des gemmes ouvre très bientôt. » Rien ne casse.',
+    sonde: { type: 'ligne', table: 'packs_gemmes', colonne: 'id', valeur: 'sac' },
+  },
+  {
+    id: '370',
+    fichier: '370_boutique_marche.sql',
+    feature:
+      'LE MARCHÉ DE LA BOUTIQUE : deux boosts courts et pas chers, toujours en vente — Boost XP · 2 h (20 gemmes) et Trophées ×2 · 2 h (25 gemmes). Le boost trophées est appliqué par `apply_game_trophies`, côté serveur : une victoire rapporte le double de trophées, une défaite coûte le barème normal. Colonne `user_wallet.trophees_x2_jusqua`, `acheter_offre` complétée. Prix provisoires.',
+    siAbsente:
+      'Le Marché s’affiche, mais acheter un boost répond « Cette offre n’existe pas. » ; les trophées se comptent comme avant. À exécuter APRÈS la 368.',
+    sonde: { type: 'ligne', table: 'boutique_offres', colonne: 'id', valeur: 'trophees-x2-2h' },
+  },
+  {
+    id: '371',
+    fichier: '371_bouclier_trophees.sql',
+    feature:
+      'LE BOUCLIER DE TROPHÉES remplace le boost « Trophées ×2 » au Marché (25 gemmes, prix provisoire) : un bouclier en réserve (un seul à la fois, `user_wallet.boucliers_trophees`) annule la perte de trophées de la PROCHAINE défaite, en duel classé comme au salon. Consommé par `apply_game_trophies` côté serveur, jamais gaspillé sur une défaite qui ne coûtait rien.',
+    siAbsente:
+      'Le Marché affiche le bouclier, mais l’acheter répond « Cette offre n’existe pas. » ; les défaites coûtent leurs trophées comme avant. À exécuter APRÈS la 370 (et ne pas rejouer la 370 ensuite).',
+    sonde: { type: 'ligne', table: 'boutique_offres', colonne: 'id', valeur: 'bouclier-trophees' },
+  },
+  {
+    id: '372',
+    fichier: '372_cahier_exercices.sql',
+    feature:
+      'LE CAHIER D’EXERCICES (tuile « Exercice » de l’écran de chapitre) : trois exercices par chapitre faits comme une page de manuel (documents, questions dessous), notés ★ à ★★★, débloqués l’un après l’autre. Tables `exercices` (contenu public), `exercices_cles` (réponses, AUCUNE policy), `exercice_passages`, `exercice_resultats` ; RPC `exercice_commencer`, `exercice_verifier` (deux essais par question, correction une fois la question finie), `exercice_terminer` (réussi à la moitié des points : gemmes 5/10/15 et XP, une seule fois). Ajoute la source `exercice` à gem_events et xp_events.',
+    siAbsente:
+      'La tuile « Exercice » reste sur le contrôle blanc de la 360 (une copie notée sur 20 par l’IA) pour tous les chapitres. Rien ne casse. À exécuter AVANT les migrations de contenu du cahier (374 et suivantes).',
+    // La table existe : la clé anon la voit vide (la policy ne sert que les
+    // élèves connectés), ou reçoit 42501 — les deux disent « déployée ».
+    sonde: { type: 'table', table: 'exercices' },
+  },
+  {
+    id: '373',
+    fichier: '373_boost_jour_gemmes_paliers.sql',
+    feature:
+      'UN BOOST XP PAR JOUR et LES GEMMES DES PALIERS. `acheter_offre` refuse un second Boost XP le même jour UTC (`deja_aujourdhui`). Chaque étoile décrochée sur un palier d’un jeu de salon rapporte des gemmes UNE fois (palier N → N gemmes par étoile, 45 par jeu) : table `palier_gemmes`, RPC `palier_gemmes_reclamer`, source `palier` dans gem_events.',
+    siAbsente:
+      'Le Boost XP se rachète dès qu’il finit, sans limite par jour. Les paliers affichent leurs gemmes, mais aucune n’est versée (la réclamation répond « pas encore ouvert »). Rien ne casse. À exécuter APRÈS la 371.',
+    sonde: { type: 'table', table: 'palier_gemmes' },
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

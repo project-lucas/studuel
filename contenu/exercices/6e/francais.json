@@ -1,0 +1,226 @@
+{
+  "niveau": "6e",
+  "matiere": "francais",
+  "exercices": [
+    {
+      "chapitre": "90d6b904-720c-518a-ba2f-3826e18909db",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Une dispute qui commence mal",
+      "competence": "analyser-texte",
+      "situation": "Le rideau se lève. Deux personnages entrent en scène… et ils ne sont pas d’accord du tout. Lis le début de la pièce de Molière.",
+      "documents": [
+        {
+          "id": "scene",
+          "type": "texte",
+          "genre": "theatre",
+          "titre": "Acte I, scène 1",
+          "auteur": "D’après Molière, Le Médecin malgré lui (1666)",
+          "blocs": [
+            { "didascalie": "Sganarelle et Martine paraissent sur le théâtre en se querellant." },
+            { "personnage": "Sganarelle", "replique": "Non, je te dis que je n’en veux rien faire, et que c’est à moi de parler et d’être le maître." },
+            { "personnage": "Martine", "replique": "Et je te dis, moi, que je veux que tu vives à ma fantaisie, et que je ne me suis point mariée avec toi pour souffrir tes fredaines." },
+            { "personnage": "Sganarelle", "replique": "Ô la grande fatigue que d’avoir une femme ! Et qu’Aristote a bien raison, quand il dit qu’une femme est pire qu’un démon !" },
+            { "personnage": "Martine", "replique": "Voyez un peu l’habile homme, avec son benêt d’Aristote !" },
+            { "personnage": "Sganarelle", "replique": "Oui, habile homme : trouve-moi un [[m|faiseur]] [[m|de]] [[m|fagots]] qui sache, comme moi, raisonner des choses, qui ait servi six ans un fameux médecin." }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Comment appelle-t-on la phrase en italique, au début de la scène, qui dit comment les acteurs entrent en scène ?",
+          "options": ["Une réplique", "Une didascalie", "Un aparté", "Une tirade"],
+          "reponse": 1,
+          "aide": "Ce mot désigne les indications de mise en scène, souvent écrites en italique.",
+          "explication": "C’est une **didascalie** : elle n’est pas dite par les acteurs, elle leur indique comment jouer."
+        },
+        {
+          "type": "zone",
+          "document": "scene",
+          "enonce": "Quel est le vrai métier de Sganarelle ? Touche **les trois mots** qui le disent dans sa dernière réplique.",
+          "reponse": ["m"],
+          "aide": "Un fagot est un paquet de petites branches. Sganarelle coupe du bois.",
+          "explication": "Sganarelle est un **faiseur de fagots**, un bûcheron. Il se vante pourtant d’avoir « servi un fameux médecin » : c’est ce qui va lancer toute l’histoire."
+        },
+        {
+          "type": "choix",
+          "enonce": "Martine répond : « Voyez un peu l’habile homme ! » Que veut-elle dire ?",
+          "options": [
+            "Elle se moque de lui : elle pense le contraire",
+            "Elle l’admire sincèrement",
+            "Elle a peur de lui",
+            "Elle veut qu’il devienne médecin"
+          ],
+          "reponse": 0,
+          "aide": "Elle ajoute juste après : « avec son benêt d’Aristote ». Un benêt, c’est un sot.",
+          "explication": "Martine est **ironique** : elle dit « habile homme » (homme intelligent) pour se moquer de lui."
+        }
+      ]
+    },
+    {
+      "chapitre": "90d6b904-720c-518a-ba2f-3826e18909db",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le faux latin du faux médecin",
+      "competence": "analyser-texte",
+      "situation": "Sganarelle se fait passer pour un grand médecin. Géronte lui demande pourquoi sa fille Lucinde ne parle plus. Sganarelle se lance dans une explication très… savante.",
+      "documents": [
+        {
+          "id": "consultation",
+          "type": "texte",
+          "genre": "theatre",
+          "titre": "Acte II, scène 4 (extrait)",
+          "auteur": "D’après Molière, Le Médecin malgré lui (1666)",
+          "blocs": [
+            { "personnage": "Sganarelle", "replique": "Or ces vapeurs, venant à passer du côté gauche, où est le foie, au côté droit, où est le cœur, il se trouve que le poumon, que nous appelons en latin [[x|armyan]], ayant communication avec le cerveau, que nous nommons en grec [[x|nasmus]], par le moyen de la veine cave, que nous appelons en hébreu [[x|cubile]]… Et voilà justement ce qui fait que votre fille est muette." },
+            { "personnage": "Géronte", "replique": "On ne peut pas mieux raisonner, sans doute. Il n’y a qu’une seule chose qui m’a choqué : c’est l’endroit du foie et du cœur. Il me semble que le cœur est du côté gauche, et le foie du côté droit." },
+            { "personnage": "Sganarelle", "replique": "Oui, cela était autrefois ainsi ; mais nous avons changé tout cela, et nous faisons maintenant la médecine d’une méthode toute nouvelle." }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "consultation",
+          "enonce": "Sganarelle invente de faux mots savants. Touche **les trois mots inventés** qu’il fait passer pour du latin, du grec et de l’hébreu.",
+          "reponse": ["x"],
+          "aide": "Cherche ce qui suit « en latin », « en grec » et « en hébreu ».",
+          "explication": "**Armyan**, **nasmus** et **cubile** ne veulent rien dire : c’est du « latin de cuisine ». Géronte ne comprend rien, mais il est impressionné."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle erreur Géronte remarque-t-il ?",
+          "options": [
+            "Sganarelle a inversé la place du cœur et celle du foie",
+            "Sganarelle s’est trompé sur le nom de sa fille",
+            "Sganarelle parle trop vite",
+            "Sganarelle a oublié de parler du cerveau"
+          ],
+          "reponse": 0,
+          "aide": "Relis la réplique de Géronte : il parle de « l’endroit du foie et du cœur ».",
+          "explication": "Sganarelle a mis le foie à gauche et le cœur à droite : c’est **l’inverse** de la réalité."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment Sganarelle se tire-t-il d’affaire ?",
+          "options": [
+            "Il prétend que la médecine a changé et que tout a été déplacé",
+            "Il avoue qu’il n’est pas médecin",
+            "Il donne un coup de bâton à Géronte",
+            "Il s’enfuit"
+          ],
+          "reponse": 0,
+          "aide": "Relis sa dernière réplique : « nous avons changé tout cela ».",
+          "explication": "Avec un aplomb incroyable, il répond que la médecine a une « méthode toute nouvelle » : **on a changé tout cela**. C’est le cœur du comique : le mensonge énorme, dit avec assurance."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque moment de la pièce dans la bonne forme de comique.",
+          "categories": ["Comique de gestes", "Comique de mots", "Comique de situation"],
+          "items": [
+            ["Sganarelle reçoit des coups de bâton", 0],
+            ["Sganarelle parle un latin inventé", 1],
+            ["Géronte croit parler à un vrai médecin", 2],
+            ["Sganarelle fait des grimaces et des courbettes", 0],
+            ["« Et voilà justement ce qui fait que votre fille est muette »", 1]
+          ],
+          "aide": "Les gestes se voient, les mots s’entendent, la situation vient d’un malentendu.",
+          "explication": "Coups et grimaces : **comique de gestes**. Faux latin et formules savantes : **comique de mots**. Géronte trompé par un faux médecin : **comique de situation** (un quiproquo)."
+        }
+      ]
+    },
+    {
+      "chapitre": "90d6b904-720c-518a-ba2f-3826e18909db",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une soirée au théâtre",
+      "competence": "analyser-document",
+      "situation": "La compagnie du collège monte *Le Médecin malgré lui* pour la fête de fin d’année. Aide la troupe à préparer le programme du spectacle.",
+      "documents": [
+        {
+          "id": "affiche",
+          "type": "fiche",
+          "modele": "affiche",
+          "titre": "L’affiche du spectacle",
+          "entete": "Le Médecin malgré lui",
+          "sousTitre": "Une comédie de Molière, créée en 1666",
+          "emoji": "🎭",
+          "teinte": "rose",
+          "lignes": [
+            { "texte": "Comédie en **trois actes**" },
+            { "texte": "Par la troupe des 6e du collège" },
+            { "texte": "Vendredi 20 juin à 18 h, salle polyvalente" },
+            { "texte": "Durée :", "valeur": "1 h 15" }
+          ],
+          "pied": "Entrée libre · Rires garantis"
+        },
+        {
+          "id": "plan",
+          "type": "texte",
+          "genre": "theatre",
+          "titre": "Martine révèle son plan (acte I, scène 4)",
+          "auteur": "D’après Molière, Le Médecin malgré lui (1666)",
+          "blocs": [
+            { "didascalie": "Deux domestiques, Valère et Lucas, cherchent un médecin pour la fille de leur maître. Martine a une idée pour se venger de son mari." },
+            { "personnage": "Martine", "replique": "C’est un homme extraordinaire, qui se plaît à cacher son savoir. Il ne dira jamais qu’il est médecin, à moins que vous ne preniez chacun un [[b|bâton]] et ne le réduisiez, à force de coups, à vous avouer à la fin ce qu’il vous cachera d’abord." },
+            { "personnage": "Valère", "replique": "Voilà une étrange folie !" },
+            { "personnage": "Martine", "replique": "Il est vrai ; mais, après cela, vous verrez qu’il fait des merveilles." }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "D’après l’affiche, combien d’années se sont écoulées entre la création de la pièce et l’année **2026** ?",
+          "reponse": 360,
+          "unite": "ans",
+          "aide": "Fais la soustraction : 2026 − 1666.",
+          "explication": "2026 − 1666 = **360 ans** : la pièce fait encore rire, plus de trois siècles et demi après sa création."
+        },
+        {
+          "type": "zone",
+          "document": "plan",
+          "enonce": "Selon Martine, avec quoi faut-il frapper Sganarelle pour qu’il « avoue » être médecin ? Touche le mot dans le Doc 2.",
+          "reponse": ["b"],
+          "aide": "C’est un morceau de bois qu’on tient à la main.",
+          "explication": "Un **bâton** : les coups de bâton sont un grand classique de la farce. Martine se venge ainsi des coups que son mari lui a donnés."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Pour le programme, remets dans l’ordre ce qui arrive à Sganarelle.",
+          "items": [
+            "Il bat sa femme Martine.",
+            "Martine le fait passer pour un médecin.",
+            "On le frappe jusqu’à ce qu’il « avoue ».",
+            "Il se prend au jeu du faux médecin."
+          ],
+          "aide": "Tout part d’une dispute de couple, et le Doc 2 montre la vengeance qui se prépare.",
+          "explication": "La dispute → la vengeance de Martine → les coups de bâton → Sganarelle devient médecin. Tout part d’une **vengeance**."
+        },
+        {
+          "type": "association",
+          "enonce": "Le programme contient un petit lexique du théâtre. Relie chaque mot à sa définition.",
+          "paires": [
+            ["Une réplique", "Ce que dit un personnage"],
+            ["Une tirade", "Une longue réplique"],
+            ["Un monologue", "Un personnage seul en scène qui parle"],
+            ["Un aparté", "Une phrase que les autres personnages n’entendent pas"],
+            ["Une didascalie", "Une indication de mise en scène"]
+          ],
+          "aide": "Commence par ceux que tu es sûr de connaître : il en restera moins à relier.",
+          "explication": "Réplique, tirade, monologue, aparté, didascalie : ce sont les cinq mots du **vocabulaire du théâtre** à connaître."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la présentation de la pièce pour le programme.",
+          "texte": "Derrière le rire, Molière se moque des ___ de son temps, de leur jargon et de leur assurance, mais aussi de la ___ de ceux qui croient tout ce qu’on leur dit.",
+          "reponses": [["médecins"], ["crédulité"]],
+          "banque": ["médecins", "crédulité", "avocats", "colère", "rois", "politesse"],
+          "aide": "Le premier mot est dans le titre de la pièce ; le second désigne le fait de tout croire.",
+          "explication": "Molière dénonce les **médecins** qui cachent leur ignorance derrière des mots savants, et la **crédulité** de leurs patients."
+        }
+      ]
+    }
+  ]
+}

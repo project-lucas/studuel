@@ -8,9 +8,10 @@ import CompteurVerre, { type CompteurCarte } from '@/components/moi/CompteurVerr
 import ProfileEditor from '@/components/defi/ProfileEditor'
 import BadgeGallery from '@/components/defi/BadgeGallery'
 import type { BadgeRank } from '@/components/defi/RankBadge'
+import { CristalIcon } from '@/components/ui/MonnaieIcon'
 import { setEquippedBadges } from '@/app/defi/profile-actions'
 import { MAX_EQUIPPED, type BadgeState } from '@/lib/badges'
-import type { AvatarConfig } from '@/lib/avatar'
+import { avatarPortraitSrc, type AvatarConfig } from '@/lib/avatar'
 import { sfx } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
 
@@ -26,8 +27,6 @@ import { cn } from '@/lib/utils'
 //   • LE VIOLET EST RADIAL : une source de lumière en haut à gauche, un halo
 //     doré en haut à droite, le fond qui s'assombrit vers le bas. C'est ce qui
 //     fait lire un objet et non un fond (`.moi-carte`).
-//   • L'AVATAR PORTE UN ANNEAU D'OR, et son niveau dans l'angle — celui du
-//     bandeau du haut, même nombre, même échelle.
 //   • QUATRE PASTILLES EN VERRE SUR UNE RANGÉE (série · travail · trophées ·
 //     notes), puis LE CLASSEMENT en verre. Ils ont été trois pastilles ici ET
 //     trois tuiles blanches dessous qui répétaient deux d'entre elles (« des
@@ -38,6 +37,30 @@ import { cn } from '@/lib/utils'
 //   • LE REFLET HOLOGRAPHIQUE balaie la carte UNE fois à l'ouverture, façon
 //     carte à collectionner, et rejoue quand on la touche. C'est le seul effet
 //     de l'écran — un seul objet le mérite, et il perd tout s'il est partagé.
+//
+// LE HAUT DE LA CARTE A CHANGÉ LE 16/09/2026 (Lucas : « l'avatar est petit,
+// dans l'angle, comme s'il était caché ; descendre ce bloc pour laisser la
+// place aux monnaies du jeu, en haut à droite »). Deux choses :
+//
+//   • UNE RANGÉE DE RESSOURCES d'abord — gemmes, engrenage — alignée à
+//     droite, là où le bandeau les met sur les autres onglets. (Les pièces ont
+//     disparu le 16/09/2026 : la monnaie n'existe plus pour le joueur.) Cet onglet n'a
+//     pas de bandeau (lib/top-hud-routes), la carte reprend donc ce rôle : les
+//     monnaies restent au même endroit d'un écran à l'autre.
+//   • L'IDENTITÉ DESSOUS, avec L'AVATAR EN GRAND : le blason peint choisi à
+//     l'onboarding (lib/portraits) fait 124 px, entier — c'est un écu, il a
+//     déjà son cadre, on ne le remet pas dans un anneau. L'élève qui garde son
+//     avatar composé (DiceBear) conserve l'anneau d'or, lui aussi agrandi. Le
+//     niveau est posé au bas de l'avatar, centré, pour les deux.
+//   • LE CRAYON de personnalisation quitte l'angle pour se coller au nom : il
+//     règle le pseudo, la bannière et les badges — l'identité, pas le compte.
+//
+// LA CARTE A MAIGRI LE 17/09/2026 (Lucas : « on s'y perd »). Le classement
+// en verre, sa foule et ses deux jauges la faisaient courir sur tout le
+// premier écran : il est parti dans l'onglet Progrès, sous la carte
+// (components/moi/OngletsMoi). Il reste ici QUI JE SUIS et MES QUATRE
+// CHIFFRES ; l'avatar passe de 124 à 96 px pour que la barre des onglets
+// apparaisse sans défiler.
 //
 // CE QUI N'A PAS BOUGÉ : le crayon déplie le panneau de personnalisation SOUS
 // la carte (pseudo · bannière · badges), l'engrenage mène au compte, l'avatar
@@ -59,7 +82,12 @@ export type CarteProfilData = {
   equippedBadgeIds: string[]
 }
 
-/** Les 3 badges mis en avant, en pied de carte. */
+/** La monnaie affichée en haut à droite de la carte. */
+export type MonnaiesCarte = {
+  gemmes: number
+}
+
+/** Les 3 badges mis en avant, dans l'identité. */
 function BadgesEnAvant({ badges }: { badges: BadgeState[] }) {
   if (badges.length === 0) return null
   return (
@@ -78,23 +106,61 @@ function BadgesEnAvant({ badges }: { badges: BadgeState[] }) {
   )
 }
 
+/**
+ * Une monnaie en verre : l'illustration (le cristal) et le solde. Le même
+ * matériau que les compteurs dessous, en pastille horizontale. Elle mène au
+ * Trésor, où la monnaie se gagne et se dépense — comme la bande du bandeau.
+ */
+function MonnaieVerre({
+  icone,
+  valeur,
+  legende,
+}: {
+  icone: ReactNode
+  valeur: number
+  legende: string
+}) {
+  return (
+    <Link
+      href="/tresor"
+      onClick={(e) => {
+        e.stopPropagation()
+        sfx.tap()
+      }}
+      aria-label={`${valeur.toLocaleString('fr-FR')} ${legende} — ouvrir le Trésor`}
+      className="flex h-9 items-center gap-1.5 rounded-full border border-white/16 bg-white/12 pr-3 pl-1.5 backdrop-blur-[4px] transition active:scale-95"
+    >
+      {icone}
+      <span className="font-heading text-[15px] leading-none font-extrabold tabular-nums">
+        {valeur.toLocaleString('fr-FR')}
+      </span>
+    </Link>
+  )
+}
+
 export default function CarteProfil({
   data,
   workTitle,
   compteurs,
+  monnaies = null,
   tuileNotes = null,
-  classement = null,
   suite = null,
+  soudee = false,
 }: {
   data: CarteProfilData
   /** Le titre d'assiduité (« Assidu »), sans numéro. */
   workTitle: string
   /** Les pastilles en verre : série, travail, trophées. */
   compteurs: CompteurCarte[]
+  /** Les gemmes, en haut à droite. Null : la rangée ne porte que l'engrenage. */
+  monnaies?: MonnaiesCarte | null
   /** La pastille des notes (cliente : elle ouvre la saisie), la quatrième. */
   tuileNotes?: ReactNode
-  /** Le bloc du classement, rendu en verre sous les pastilles. */
-  classement?: ReactNode
+  /**
+   * Coins du bas carrés : la barre des onglets de Moi se soude dessous et
+   * termine l'objet (components/moi/OngletsMoi).
+   */
+  soudee?: boolean
   /** Rendu sous la carte, dans la même section (l'écran continue). */
   suite?: ReactNode
 }) {
@@ -102,6 +168,7 @@ export default function CarteProfil({
   const [banner, setBanner] = useState(data.profileBanner)
   const [equipped, setEquipped] = useState<string[]>(data.equippedBadgeIds)
   const [, startTransition] = useTransition()
+
   // Le reflet : joué au montage, rejoué au toucher. Le compteur force une
   // nouvelle animation à chaque toucher (la classe seule ne rejouerait pas).
   const [reflet, setReflet] = useState(0)
@@ -114,6 +181,7 @@ export default function CarteProfil({
   const enAvant = equipped
     .map((id) => data.badges.find((b) => b.id === id))
     .filter((b): b is BadgeState => b !== undefined)
+  const aPortrait = avatarPortraitSrc(data.avatar) !== null
 
   const toggleEquip = (id: string) => {
     if (!earnedIds.has(id)) return
@@ -139,35 +207,25 @@ export default function CarteProfil({
           Elle reste un objet posé sur la table, avec ses bords, pas une
           bannière qui file jusqu'au bord de l'écran. */}
       <div
-        className="moi-carte relative overflow-hidden rounded-3xl text-white"
+        className={cn(
+          'moi-carte relative overflow-hidden text-white',
+          soudee ? 'rounded-t-3xl' : 'rounded-3xl',
+        )}
         onClick={() => setReflet((n) => n + 1)}
       >
         {/* Le reflet holographique. `key` relance l'animation à chaque toucher. */}
         {reflet > 0 ? <span key={reflet} className="moi-foil" aria-hidden="true" /> : null}
 
-        <div className="relative px-4 pt-4 pb-4">
-          {/* Réglages et personnalisation, dans l'angle. */}
-          <div className="absolute top-3 right-3 flex items-center gap-1.5">
-            <button
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation()
-                sfx.tap()
-                setEditing((v) => !v)
-              }}
-              aria-expanded={editing}
-              aria-controls="moi-profil-edition"
-              className="flex size-9 items-center justify-center rounded-full bg-white/14 text-white ring-1 ring-white/20 transition active:scale-90"
-            >
-              {editing ? (
-                <Check className="size-[18px]" strokeWidth={2.6} aria-hidden="true" />
-              ) : (
-                <Pencil className="size-4" strokeWidth={2.6} aria-hidden="true" />
-              )}
-              <span className="sr-only">
-                {editing ? 'Terminer la personnalisation' : 'Personnaliser mon profil'}
-              </span>
-            </button>
+        <div className="relative px-4 pt-3 pb-4">
+          {/* --- La rangée de ressources : monnaies à droite, engrenage au bout. */}
+          <div className="flex items-center justify-end gap-1.5">
+            {monnaies ? (
+              <MonnaieVerre
+                icone={<CristalIcon className="size-6" />}
+                valeur={monnaies.gemmes}
+                legende="gemmes"
+              />
+            ) : null}
             <Link
               href="/compte"
               onClick={(e) => {
@@ -181,8 +239,8 @@ export default function CarteProfil({
             </Link>
           </div>
 
-          {/* --- L'identité --------------------------------------------------- */}
-          <div className="flex items-center gap-3.5 pr-20">
+          {/* --- L'identité, sous la rangée : l'avatar en grand ------------- */}
+          <div className="mt-1 flex items-center gap-4">
             <Link
               href="/moi/avatar"
               onClick={(e) => {
@@ -190,26 +248,64 @@ export default function CarteProfil({
                 sfx.tap()
               }}
               aria-label="Changer mon avatar"
-              className="relative block size-[72px] shrink-0 transition-transform active:scale-[0.96]"
+              className={cn(
+                'relative block shrink-0 transition-transform active:scale-[0.96]',
+                aPortrait ? 'w-[96px]' : 'size-[84px]',
+              )}
             >
-              {/* L'anneau d'or : le seul or de la carte, avec le niveau. */}
-              <span
-                aria-hidden="true"
-                className="absolute inset-0 rounded-full bg-highlight shadow-[0_6px_16px_-6px_rgba(0,0,0,.5)]"
-              />
-              <span className="absolute inset-[3px] overflow-hidden rounded-full bg-white">
-                <AvatarRender config={data.avatar} className="size-full" />
-              </span>
-              <span className="font-heading absolute -right-1 -bottom-1 rounded-full bg-highlight px-2 py-0.5 text-[12px] leading-tight font-extrabold text-[#6b4a00] shadow-md tabular-nums">
+              {aPortrait ? (
+                // Le blason, entier : c'est un écu, il porte déjà son cadre.
+                <AvatarRender
+                  config={data.avatar}
+                  forme="blason"
+                  className="w-full drop-shadow-[0_10px_16px_rgba(0,0,0,.45)]"
+                />
+              ) : (
+                <>
+                  {/* L'anneau d'or : le seul or de la carte, avec le niveau. */}
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-0 rounded-full bg-highlight shadow-[0_6px_16px_-6px_rgba(0,0,0,.5)]"
+                  />
+                  <span className="absolute inset-[3px] overflow-hidden rounded-full bg-white">
+                    <AvatarRender config={data.avatar} className="size-full" />
+                  </span>
+                </>
+              )}
+              <span className="font-heading absolute -bottom-1.5 left-1/2 -translate-x-1/2 rounded-full bg-highlight px-2.5 py-0.5 text-[12.5px] leading-tight font-extrabold whitespace-nowrap text-[#6b4a00] shadow-md tabular-nums">
                 Niv. {data.level}
                 <span className="sr-only"> — niveau</span>
               </span>
             </Link>
 
             <div className="min-w-0 flex-1">
-              <h1 className="font-heading truncate text-[24px] leading-[1.1] font-extrabold tracking-[0.2px]">
-                {data.displayName}
-              </h1>
+              <div className="flex items-start gap-2">
+                <h1 className="font-heading min-w-0 flex-1 truncate text-[22px] leading-[1.1] font-extrabold tracking-[0.2px]">
+                  {data.displayName}
+                </h1>
+                {/* Le crayon, collé au nom : il règle l'identité (pseudo,
+                    bannière, badges), pas le compte. */}
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    sfx.tap()
+                    setEditing((v) => !v)
+                  }}
+                  aria-expanded={editing}
+                  aria-controls="moi-profil-edition"
+                  className="flex size-8 shrink-0 items-center justify-center rounded-full bg-white/14 text-white ring-1 ring-white/20 transition active:scale-90"
+                >
+                  {editing ? (
+                    <Check className="size-4" strokeWidth={2.8} aria-hidden="true" />
+                  ) : (
+                    <Pencil className="size-[14px]" strokeWidth={2.6} aria-hidden="true" />
+                  )}
+                  <span className="sr-only">
+                    {editing ? 'Terminer la personnalisation' : 'Personnaliser mon profil'}
+                  </span>
+                </button>
+              </div>
               <p className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[12px] font-bold text-white/85">
                 {data.gradeLabel ? (
                   <span className="flex items-center gap-1">
@@ -253,13 +349,6 @@ export default function CarteProfil({
               </div>
             ) : null}
           </div>
-
-          {/* --- Le classement, en verre ------------------------------------- */}
-          {classement ? (
-            <div className="mt-3" onClick={(e) => e.stopPropagation()}>
-              {classement}
-            </div>
-          ) : null}
         </div>
 
         {/* --- Le panneau de personnalisation, déplié sous la carte ---------- */}

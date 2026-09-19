@@ -4,9 +4,7 @@
  * sa fenêtre) vit ici ; le composant client `components/ArenaBackdrop.tsx`
  * gère le timer, le fondu et le préchargement.
  *
- * ⚠️ Les six plages pointent aujourd'hui vers la MÊME image — voir ARENA_SRC
- * plus bas. Le découpage est conservé pour que les variantes horaires puissent
- * revenir sans retoucher une ligne de composant.
+ * Six images, une par plage (`public/images/arene/arena-<plage>.webp`).
  */
 
 export type ArenaPeriod =
@@ -25,19 +23,13 @@ export interface ArenaSlot {
 }
 
 /**
- * LE DÉCOR DU MOMENT. Depuis le 02/08/2026, les six plages montrent la MÊME
- * illustration : l'arène à la mascotte, dessinée par Lucas. Elle remplace les
- * six académies flottantes (`arena-dawn` … `arena-night`, toujours dans
- * `public/images/arene/`, plus servies).
- *
- * La mécanique horaire n'est PAS démontée pour autant — le timer, le fondu, le
- * préchargement et le découpage des plages restent en place. Le jour où les
- * variantes horaires de cette nouvelle arène seront dessinées, il n'y aura
- * qu'à remettre un `src` par ligne ci-dessous : rien d'autre ne bouge. En
- * attendant, le fondu enchaîné entre deux plages identiques ne se voit pas et
- * ne coûte rien (même URL, donc même image en cache).
+ * LES SIX ACADÉMIES FLOTTANTES, une par plage horaire (Lucas, 17/09/2026 :
+ * « on va reprendre ce qu'on avait mis avant, avec les fonds qui changent
+ * en fonction de l'heure »). Du 02/08 au 17/09 les six plages montraient la
+ * MÊME illustration (`arena-mascotte.webp`, toujours dans
+ * `public/images/arene/`, plus servie) ; les variantes horaires reviennent.
+ * Seul le décor change — le HUD, les plaques et les icônes restent en place.
  */
-const ARENA_SRC = '/images/arene/arena-mascotte.webp'
 
 /**
  * Les plages horaires, triées par heure de début — SEULE structure à modifier
@@ -45,12 +37,12 @@ const ARENA_SRC = '/images/arene/arena-mascotte.webp'
  * les heures avant le premier début (0h-4h59) retombent sur la dernière plage.
  */
 export const ARENA_SCHEDULE: readonly ArenaSlot[] = [
-  { start: 5, period: 'dawn', src: ARENA_SRC },
-  { start: 8, period: 'morning', src: ARENA_SRC },
-  { start: 12, period: 'noon', src: ARENA_SRC },
-  { start: 15, period: 'afternoon', src: ARENA_SRC },
-  { start: 18, period: 'evening', src: ARENA_SRC },
-  { start: 21, period: 'night', src: ARENA_SRC },
+  { start: 5, period: 'dawn', src: '/images/arene/arena-dawn.webp' },
+  { start: 8, period: 'morning', src: '/images/arene/arena-morning.webp' },
+  { start: 12, period: 'noon', src: '/images/arene/arena-noon.webp' },
+  { start: 15, period: 'afternoon', src: '/images/arene/arena-afternoon.webp' },
+  { start: 18, period: 'evening', src: '/images/arene/arena-evening.webp' },
+  { start: 21, period: 'night', src: '/images/arene/arena-night.webp' },
 ]
 
 /** La plage active pour une heure donnée (0-23). */

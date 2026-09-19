@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { ArrowLeft } from 'lucide-react'
 import WorldBackdrop from '@/components/WorldBackdrop'
@@ -14,6 +15,9 @@ import { courseClock } from '@/lib/duel/course'
 import { opponentCaption, type Opponent } from '@/lib/duel/opponent'
 import { sfx } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
+import { subjectVignette } from '@/lib/subject-style'
+import { TEINTE_MATIERE } from '@/lib/defi/modes-catalog'
+import styles from './Course.module.css'
 
 export type DuelCourseProps = {
   pool: ModeQuestion[]
@@ -29,10 +33,12 @@ export type DuelCourseProps = {
 /**
  * LA COURSE — l'écran du duel classé, du VS au verdict.
  *
- * Plein cadre, sur le voile violet de la salle de duel (le même que le Duel
- * 90 s) : l'arène reste visible en transparence, mais tout ce qui se lit a un
- * fond stable. Quatre écrans se succèdent au même endroit, sans navigation :
- * la rencontre, le décompte, la course, le résultat.
+ * Plein cadre, sur SON fond, opaque (Course.module.css) : le violet de
+ * l'arène éclairé dans la teinte de la matière, et la vignette de la matière
+ * — celle de son dossier dans Réviser — en filigrane. L'arène ne transparaît
+ * plus (Lucas, 19/09/2026 : « on voit le fond d'écran »). Quatre écrans se
+ * succèdent au même endroit, sans navigation : la rencontre, le décompte, la
+ * course, le résultat.
  *
  * Toute la logique vit dans `useCourse` ; ce composant ne fait que disposer.
  */
@@ -54,6 +60,9 @@ export default function DuelCourse({
   const urgent = view.msLeft <= LAST_SECONDS * 1000
   const enCourse = view.phase === 'playing' || view.phase === 'finish'
   const won = view.outcome !== null && view.outcome !== 'loss'
+  // L'illustration de la matière (son dossier dans Réviser) et sa teinte.
+  const vignette = subjectVignette(subjectSlug) ?? null
+  const teinte = TEINTE_MATIERE[subject] ?? 'violet'
 
   const quitter = () => {
     sfx.back()
@@ -61,8 +70,12 @@ export default function DuelCourse({
   }
 
   return (
-    <div data-no-swipe className="course-scene robe-purple">
-      <WorldBackdrop className="duel-scrim" />
+    <div className="course-scene robe-purple" data-teinte={teinte}>
+      <WorldBackdrop className={styles.fond} teinte={teinte}>
+        {vignette ? (
+          <Image src={vignette} alt="" width={320} height={320} className={styles.filigrane} priority />
+        ) : null}
+      </WorldBackdrop>
 
       {/* La vignette du sprint : les bords de l'écran battent en corail. */}
       <div
@@ -80,8 +93,15 @@ export default function DuelCourse({
         >
           <ArrowLeft className="size-5" strokeWidth={2.4} aria-hidden="true" />
         </button>
-        <span className="course-matiere">
-          <span aria-hidden="true">{subjectEmoji}</span> {subject}
+        <span className="course-matiere flex items-center gap-2">
+          {vignette ? (
+            <span className={cn(styles.pastille, 'size-8 p-1')} aria-hidden="true">
+              <Image src={vignette} alt="" width={64} height={64} className="size-full object-contain" />
+            </span>
+          ) : (
+            <span aria-hidden="true">{subjectEmoji}</span>
+          )}
+          <span className="min-w-0 truncate">{subject}</span>
         </span>
         {enCourse ? (
           <span
@@ -114,6 +134,7 @@ export default function DuelCourse({
           }}
           subject={subject}
           subjectEmoji={subjectEmoji}
+          vignette={vignette}
           count={view.count}
           counting={view.phase === 'countdown'}
         />
@@ -134,6 +155,7 @@ export default function DuelCourse({
           correct={view.me.correct}
           answered={view.me.answered}
           hrefs={hrefs}
+          vignette={vignette}
         />
       ) : (
         <div className="course-corps">

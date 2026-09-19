@@ -182,4 +182,37 @@ describe('pickMission', () => {
     const plan = pickMission(input({ controles: [c], goalMinutes: 15 }))
     expect(plan.mission?.minutes).toBe(15)
   })
+
+  it('empile les autres contrôles actifs sous la mission, du plus proche au plus lointain', () => {
+    const loin = controle({
+      id: 'c-loin',
+      date: '2026-08-10',
+      chapters: [{ id: 'ch-loin', title: 'Le futur' }],
+      sessions: [session({ id: 's-loin', controleId: 'c-loin', chapterId: 'ch-loin' })],
+    })
+    const sansDate = controle({
+      id: 'c-sans',
+      date: null,
+      subject: 'svt',
+      chapters: [{ id: 'ch-svt', title: 'La cellule' }],
+      sessions: [session({ id: 's-svt', controleId: 'c-sans', chapterId: 'ch-svt' })],
+    })
+    const proche = controle()
+    const plan = pickMission(
+      input({ controles: [sansDate, loin, proche], chapters: [chapter()] }),
+    )
+    expect(plan.mission?.controleId).toBe('c-1')
+    expect(plan.autresControles.map((m) => m.controleId)).toEqual([
+      'c-loin',
+      'c-sans',
+    ])
+    expect(plan.autresControles.every((m) => m.kind === 'controle')).toBe(true)
+    // Les reprises restent en « Ensuite » : un contrôle ne les évince pas.
+    expect(plan.ensuite.map((m) => m.chapterId)).toEqual(['ch-1'])
+  })
+
+  it('n’a pas d’autres contrôles quand il n’y en a qu’un', () => {
+    const plan = pickMission(input({ controles: [controle()] }))
+    expect(plan.autresControles).toEqual([])
+  })
 })

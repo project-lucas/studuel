@@ -33,7 +33,6 @@ import {
   noticeKoTones,
   noticeOkTones,
   openTones,
-  swipeTones,
 } from '@/lib/ui-audio'
 
 const STORAGE_KEY = 'scolaria-sound'
@@ -165,11 +164,7 @@ export const sfx = {
     playTones(openTones())
     uiVibrate(9)
   },
-  // Balayage horizontal entre onglets : souffle directionnel (cf. SwipeTabs).
-  // `up` = vers l'onglet suivant, `down` = retour vers le précédent.
-  swipe(direction: 'up' | 'down') {
-    playTones(swipeTones(direction))
-  },
+
   // Rebond d'extrémité (rubber-band) au bout d'une liste (cf. ScrollEdgeSound).
   edgeBump() {
     playTones(edgeBumpTones())

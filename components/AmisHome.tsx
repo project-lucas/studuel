@@ -1,11 +1,10 @@
 'use client'
 
-import { useState, useTransition } from 'react'
+import { useEffect, useRef, useState, useTransition } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import {
   Swords,
-  Trophy,
   Crown,
   Zap,
   Check,
@@ -13,24 +12,31 @@ import {
   UserPlus,
   Users,
   School,
-  Hourglass,
   Flame,
   X,
   Pencil,
-  Lock,
+  Medal,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import FriendAddButton from '@/components/FriendAddButton'
-import ParrainageCard from '@/components/ParrainageCard'
 import SquadSection from '@/components/SquadSection'
 import FriendStories from '@/components/amis/FriendStories'
 import RivalCard from '@/components/amis/RivalCard'
 import TeamChestCard from '@/components/amis/TeamChestCard'
+import TropheeAnime from '@/components/amis/TropheeAnime'
+import RailDivisions from '@/components/amis/RailDivisions'
+import {
+  ligneDivision,
+  lignesEcole,
+  monRang,
+  sousTitreEcole,
+  titreEcole,
+} from '@/lib/amis/classement-ecole'
 import type { ReferralSummary } from '@/lib/gems'
 import type { ClanWeekBoard } from '@/lib/clan-week'
 import { cn } from '@/lib/utils'
+import PortraitJoueur from '@/components/amis/PortraitJoueur'
 import { sfx } from '@/lib/sounds'
-import { formatHours } from '@/lib/time'
 import {
   type Friend,
   type SchoolBoard,
@@ -42,7 +48,6 @@ import {
   geoScopePossessive,
   getMockGeoBoard,
   schoolNoun,
-  schoolTotalSeconds,
   SCHOOL_BOARD_LIMIT,
   DUEL_XP_BONUS,
   ACTIVE_DUEL_KEY,
@@ -91,16 +96,20 @@ function DemoBadge() {
   )
 }
 
-function Avatar({ emoji, size = 'md' }: { emoji: string; size?: 'md' | 'lg' }) {
+// Le blason de l'élève (plus d'emoji d'animal, Lucas 17/09/2026).
+function Avatar({ id, portrait }: { id: string; portrait?: string }) {
+  return <PortraitJoueur id={id} portrait={portrait} className="size-9" />
+}
+
+// LE COMPTE DE TROPHÉES, écrit d'une seule façon sur tout l'onglet : la coupe
+// animée devant, le nombre derrière, dans une pastille. C'est ce que lisent
+// les lignes des deux classements ET le résumé « ta place » — un même nombre
+// ne doit pas s'écrire de deux manières à dix pixels d'écart.
+function CompteTrophees({ n }: { n: number }) {
   return (
-    <span
-      aria-hidden="true"
-      className={cn(
-        'flex shrink-0 items-center justify-center rounded-full bg-muted',
-        size === 'lg' ? 'size-11 text-2xl' : 'size-9 text-xl',
-      )}
-    >
-      {emoji}
+    <span className="flex shrink-0 items-center gap-1 rounded-full bg-foreground/5 py-1 pr-2.5 pl-1.5 font-mono text-sm font-bold tabular-nums">
+      <TropheeAnime />
+      {n}
     </span>
   )
 }
@@ -194,12 +203,11 @@ function RankingBoard({
             {/* Avatar carré encadré, comme la fiche d'un membre de clan.
                 Point vert = ami en session en ce moment (RPC friends_live). */}
             <span className="relative shrink-0">
-              <span
-                aria-hidden="true"
-                className="flex size-11 items-center justify-center rounded-xl bg-muted text-2xl ring-1 ring-foreground/10"
-              >
-                {e.emoji}
-              </span>
+              <PortraitJoueur
+                id={e.id}
+                portrait={e.portrait}
+                className="size-11 ring-1 ring-foreground/10"
+              />
               {online ? (
                 <span
                   role="img"
@@ -225,14 +233,23 @@ function RankingBoard({
                   />
                 ) : null}
               </span>
-              <span className="block truncate text-xs font-semibold text-primary">
-                {rank.tier.emoji} {rank.label}
+              {/* LA DIVISION EN BLASON, un peu plus grand (Lucas, 19/09/2026 :
+                  « agrandis légèrement la place que prennent les illustrations
+                  de divisions ») : le dessin du palier plutôt que son emoji de
+                  repli, qui tenait dans la hauteur d'une lettre. */}
+              <span className="mt-0.5 flex min-w-0 items-center gap-1 text-xs font-semibold text-primary">
+                <Image
+                  src={rank.tier.image}
+                  alt=""
+                  aria-hidden="true"
+                  width={48}
+                  height={48}
+                  className="size-[22px] shrink-0 select-none object-contain"
+                />
+                <span className="truncate">{rank.label}</span>
               </span>
             </span>
-            <span className="flex shrink-0 items-center gap-1.5 rounded-full bg-foreground/5 px-2.5 py-1 font-mono text-sm font-bold tabular-nums">
-              <Trophy className="size-4 text-highlight" aria-hidden="true" />
-              {e.trophies}
-            </span>
+            <CompteTrophees n={e.trophies} />
             {e.isMe ? null : (
               <ChallengeButton
                 friendId={e.id}
@@ -251,14 +268,22 @@ function RankingBoard({
 // classement (celui qui a le plus grimpé) peut le renommer d'un tap ; les
 // autres le voient en lecture seule, avec l'invitation à devenir n°1. Le nom est
 // optimiste : il se fige dès l'action réussie, sans recharger la page.
-const DEFAULT_SQUAD_NAME = 'Mon équipe'
+//
+// « MES AMIS », plus « Mon équipe » (Lucas, 16/09/2026) : le bloc est le
+// classement de mes amis aux trophées, et « équipe » laissait croire à un
+// groupe constitué — celui-là, c'est le coffre d'équipe du clan, plus haut.
+const DEFAULT_SQUAD_NAME = 'Mes amis'
 
 function SquadHeader({
   squadName,
   canRename,
+  myFriendCode,
+  referral,
 }: {
   squadName: string | null
   canRename: boolean
+  myFriendCode: string
+  referral: ReferralSummary
 }) {
   const [name, setName] = useState(squadName)
   const [editing, setEditing] = useState(false)
@@ -288,7 +313,7 @@ function SquadHeader({
           maxLength={40}
           autoFocus
           aria-label="Nom du groupe"
-          placeholder="Nom de ton équipe…"
+          placeholder="Nom de ton groupe d’amis…"
           onKeyDown={(e) => {
             if (e.key === 'Enter') submit()
             if (e.key === 'Escape') setEditing(false)
@@ -324,39 +349,44 @@ function SquadHeader({
     <div className="mb-3 flex items-center gap-2">
       <span
         aria-hidden="true"
-        className="flex size-10 shrink-0 items-center justify-center rounded-2xl bg-highlight/25 text-xl"
+        className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-highlight/25 text-2xl"
       >
         🛡️
       </span>
       <div className="min-w-0 flex-1">
         <p className="text-[10px] font-bold tracking-wide text-muted-foreground uppercase">
-          Ton équipe
+          Classement des amis
         </p>
-        <h2 className="font-heading truncate text-lg font-extrabold text-foreground">
-          {display}
-        </h2>
+        <div className="flex min-w-0 items-center gap-1">
+          <h2 className="font-heading truncate text-lg font-extrabold text-foreground">
+            {display}
+          </h2>
+          {/* Le crayon suit le nom (le n°1 seulement) : l'angle est à
+              l'invitation. La pastille « N°1 seulement » est partie — elle
+              occupait l'angle pour dire ce qu'on ne pouvait pas faire. */}
+          {canRename ? (
+            <button
+              type="button"
+              onClick={() => {
+                sfx.tap()
+                setDraft(name ?? '')
+                setEditing(true)
+              }}
+              aria-label="Renommer le groupe"
+              className="flex size-8 shrink-0 items-center justify-center rounded-full text-primary transition-colors hover:bg-primary/10 active:scale-90"
+            >
+              <Pencil className="size-3.5" strokeWidth={2.4} aria-hidden="true" />
+            </button>
+          ) : null}
+        </div>
       </div>
-      {canRename ? (
-        <button
-          type="button"
-          onClick={() => {
-            sfx.tap()
-            setDraft(name ?? '')
-            setEditing(true)
-          }}
-          aria-label="Renommer le groupe"
-          className="flex size-10 shrink-0 items-center justify-center rounded-full text-primary transition-colors hover:bg-primary/10 active:scale-90"
-        >
-          <Pencil className="size-4.5" strokeWidth={2.4} aria-hidden="true" />
-        </button>
-      ) : (
-        <span
-          className="flex shrink-0 items-center gap-1 rounded-full bg-muted px-2.5 py-1 text-[10px] font-semibold text-muted-foreground"
-          title="Le n°1 du groupe peut le renommer"
-        >
-          <Lock className="size-3" aria-hidden="true" /> N°1 seulement
-        </span>
-      )}
+      {/* L'ANGLE : inviter un ami (Lucas, 17/09/2026). La carte de parrainage
+          qui vivait sous ce bloc s'ouvre d'ici. */}
+      <FriendAddButton
+        variant="coin"
+        myFriendCode={myFriendCode}
+        referral={referral}
+      />
     </div>
   )
 }
@@ -371,12 +401,14 @@ function ClassementArena({
   myFriendCode,
   squadName,
   canRenameSquad,
+  referral,
 }: {
   ranking: RankPlayer[]
   onlineFriendIds: string[]
   myFriendCode: string
   squadName: string | null
   canRenameSquad: boolean
+  referral: ReferralSummary
 }) {
   // Défi refusé (1/jour déjà lancé, ou plus ami) : message sous la liste.
   const [duelNotice, setDuelNotice] = useState(false)
@@ -399,7 +431,12 @@ function ClassementArena({
     >
       {/* Le titre du groupe (renommable par le n°1) — remplace l'arène comme
           identité du cercle d'amis. */}
-      <SquadHeader squadName={squadName} canRename={canRenameSquad} />
+      <SquadHeader
+        squadName={squadName}
+        canRename={canRenameSquad}
+        myFriendCode={myFriendCode}
+        referral={referral}
+      />
 
       {/* Compteur discret : amis en ligne / nombre de joueurs. */}
       {onlineCount > 0 ? (
@@ -417,7 +454,8 @@ function ClassementArena({
       {ranking.length === 0 ? (
         /* Visiteur : pas de classement à montrer — état vide explicite. */
         <p className="rounded-2xl bg-muted/50 p-3 text-sm text-foreground/80">
-          Connecte-toi et ajoute des amis pour vous comparer aux trophées 🏆
+          Invite tes amis avec le bouton violet, en haut : vous vous comparez
+          aux trophées 🏆
         </p>
       ) : (
         <>
@@ -436,9 +474,9 @@ function ClassementArena({
                 src={myRankTier.tier.image}
                 alt=""
                 aria-hidden="true"
-                width={96}
-                height={96}
-                className="size-12 shrink-0 select-none object-contain"
+                width={128}
+                height={128}
+                className="size-14 shrink-0 select-none object-contain"
               />
             ) : (
               <Image
@@ -462,14 +500,15 @@ function ClassementArena({
                 {ahead
                   ? `${ahead.trophies - myTrophies} trophées pour doubler ${ahead.name}`
                   : friendCount > 0
-                    ? `${myRankTier.label} · ${myTrophies} 🏆`
+                    ? myRankTier.label
                     : 'Ajoute des amis pour vous comparer'}
               </p>
             </div>
-            <span className="flex shrink-0 items-center gap-1 font-mono font-bold text-foreground tabular-nums">
-              {myTrophies}
-              <Trophy className="size-4 text-highlight" aria-hidden="true" />
-            </span>
+            {/* LE MÊME COMPTE QUE SUR LES LIGNES, écrit de la même façon
+                (Lucas, 16/09/2026 : « ce n'est pas propre ») : il y avait ici
+                « 20 🏆 » et sur ma ligne « 🏆 20 », deux ordres pour un seul
+                nombre. Une seule pastille, la coupe devant, partout. */}
+            <CompteTrophees n={myTrophies} />
           </div>
           <RankingBoard
             players={ranking}
@@ -488,15 +527,13 @@ function ClassementArena({
         </>
       )}
 
-      {/* L'action du bas, comme sous la liste de clan. */}
-      <div className="mt-3">
-        <FriendAddButton variant="cta" myFriendCode={myFriendCode} />
-      </div>
-      <p className="mt-2 px-1 pb-1 text-[11px] text-muted-foreground">
-        {friendCount > 0
-          ? `Tape l’épée d’un ami pour le défier sur le Défi du jour (+${DUEL_XP_BONUS} XP) — le point vert signale un ami en session.`
-          : 'Ajoute des amis pour vous comparer — chaque match classé gagné rapporte des trophées.'}
-      </p>
+      {/* Plus de gros bouton « Ajouter un ami » en pied de bloc : l'invitation
+          est dans l'angle, avec le parrainage. */}
+      {friendCount > 0 ? (
+        <p className="mt-2 px-1 pb-1 text-[11px] text-muted-foreground">
+          {`Tape l’épée d’un ami pour le défier sur le Défi du jour (+${DUEL_XP_BONUS} XP) — le point vert signale un ami en session.`}
+        </p>
+      ) : null}
     </section>
   )
 }
@@ -509,105 +546,25 @@ function ClassementArena({
 // les vraies données quand elles existent ; les échelons plus larges sont un
 // aperçu tant que le back-end géo (code postal + RPC) n'est pas branché.
 
-// La cagnotte + le classement d'un échelon donné. Extrait pour être réutilisé à
-// l'identique par chaque onglet du sélecteur.
-function ScopeBoard({
-  board,
-  scope,
-  demo,
-}: {
-  board: SchoolBoard
-  scope: GeoScope
-  demo: boolean
-}) {
-  const total = schoolTotalSeconds(board.mates)
-  const myRank = board.mates.findIndex((m) => m.isMe) + 1
-  const noun = schoolNoun(board.level)
-  const possessive = geoScopePossessive(scope, board.level)
-  // Établissement réel : la RPC plafonne à 50 élèves — on le dit. Les aperçus
-  // d'échelons larges ne sont jamais plafonnés (données de démonstration).
-  const capped =
-    scope === 'school' && !demo && board.mates.length >= SCHOOL_BOARD_LIMIT
-
-  return (
-    <>
-      {/* Cagnotte d'heures : l'effort de chacun compte pour tout l'échelon. */}
-      <div className="rounded-t-2xl bg-primary p-4 text-primary-foreground">
-        <div className="flex items-center gap-3">
-          <span aria-hidden="true" className="text-3xl">
-            {board.emoji}
-          </span>
-          <div className="min-w-0 flex-1">
-            <p className="font-heading truncate text-lg font-bold">
-              {board.name}
-            </p>
-            <p className="text-sm text-primary-foreground/75">
-              {myRank > 0 ? `Tu es ${myRank === 1 ? '1er' : `${myRank}e`} · ` : ''}
-              {capped
-                ? `les heures des ${SCHOOL_BOARD_LIMIT} plus actifs de ton ${noun}`
-                : `chaque minute que tu travailles compte pour ${possessive}`}
-            </p>
-          </div>
-          <span className="flex shrink-0 items-center gap-1.5 font-mono text-lg font-bold tabular-nums">
-            <Hourglass className="size-4 text-highlight" />
-            {formatHours(total)}
-          </span>
-        </div>
-      </div>
-
-      {/* Classement inter-élèves, au temps de travail. */}
-      <ol className="overflow-hidden rounded-b-2xl bg-card ring-1 ring-foreground/10">
-        {board.mates.map((m, i) => {
-          const rank = i + 1
-          return (
-            <li
-              key={m.id}
-              className={cn(
-                'flex items-center gap-3 border-b px-3 py-2.5 last:border-b-0',
-                m.isMe && 'bg-accent/40',
-              )}
-            >
-              <span
-                className={cn(
-                  'flex size-6 shrink-0 items-center justify-center rounded-full font-mono text-xs font-bold tabular-nums',
-                  rank === 1 && 'bg-highlight text-foreground',
-                  rank === 2 && 'bg-muted-foreground/25',
-                  rank === 3 && 'bg-accent text-accent-foreground',
-                  rank > 3 && 'text-muted-foreground',
-                )}
-              >
-                {rank}
-              </span>
-              <Avatar emoji={m.emoji} />
-              <span
-                className={cn(
-                  'min-w-0 flex-1 truncate text-sm',
-                  m.isMe ? 'font-bold' : 'font-medium',
-                )}
-              >
-                {m.name}
-                {rank === 1 ? (
-                  <Crown className="ml-1 inline size-3.5 -translate-y-0.5 text-highlight" />
-                ) : null}
-              </span>
-              <span className="font-mono text-sm font-semibold tabular-nums">
-                {formatHours(m.seconds)}
-              </span>
-            </li>
-          )
-        })}
-      </ol>
-      <p className="mt-2 px-1 text-[11px] text-muted-foreground">
-        {scope === 'school'
-          ? demo
-            ? `Exemple de classement — choisis ton ${noun} dans ton profil pour voir le vrai.`
-            : 'Le temps est mesuré par le chrono de tes sessions — celui qui travaille le plus grimpe.'
-          : `Aperçu — ton classement au niveau ${geoScopeLabel(scope, board.level).toLowerCase()} arrivera avec ton code postal.`}
-      </p>
-    </>
-  )
-}
-
+// L'ÉCRAN DE LIGUE DE DUOLINGO (Lucas, 16/09/2026 : « je veux cela comme
+// Duolingo », puis « le classement se fera via les trophées et non plus le
+// nombre d'heures travaillées »). Il se lit de haut en bas :
+//
+//   1. LE RAIL DES DIVISIONS — les six blasons de rang (les mêmes que
+//      l'arène, public/images/defi/ranks) : le mien au centre en grand, ceux
+//      d'avant en couleur, ceux d'après GRIS ET CADENASSÉS tant que je n'y
+//      suis pas (components/amis/RailDivisions).
+//   2. LA PHRASE qui dit ma place (« Tu es n°3 du classement de ton collège »),
+//      et dessous ce qu'il me reste à faire (« 40 trophées pour doubler Rayan »).
+//   3. LA LISTE — rang, avatar, nom, trophées — coupée par un bandeau. Chez
+//      Duolingo c'est la zone de promotion ; ici il n'y a ni semaine ni
+//      relégation, la seule zone qui existe est LE PODIUM : le bandeau se pose
+//      sous la 3e place. Ma ligne est surlignée, et elle est TOUJOURS visible
+//      même repliée (les dix premiers, une ellipse, moi) : c'est elle qu'on
+//      vient vérifier.
+//
+// Tout ce qui se décide (ordre, pli, bandeau, phrases, état des blasons) vit
+// dans lib/amis/classement-ecole.ts, testé ; ici on ne fait que dessiner.
 function GeoRankingSection({
   school,
   schoolDemo,
@@ -616,28 +573,42 @@ function GeoRankingSection({
   schoolDemo: boolean
 }) {
   const [scope, setScope] = useState<GeoScope>('school')
-  // Replié par défaut : le podium + ta ligne suffisent au quotidien — la liste
-  // complète (et sa cagnotte) se déplie à la demande.
-  const [expanded, setExpanded] = useState(false)
-  // Mon temps réel, lu depuis l'établissement : il replace « Toi » au bon rang
-  // dans les aperçus d'échelons plus larges.
-  const mySeconds = school.mates.find((m) => m.isMe)?.seconds ?? 0
+  // LA BOÎTE DU CLASSEMENT (Lucas, 17/09/2026 : « faire un carré pour le
+  // scrolling du classement »). Toute la liste vit dans une boîte de hauteur
+  // fixe qui défile seule : la page reste courte, et plus besoin de plier.
+  const boite = useRef<HTMLOListElement>(null)
+  // Mes vrais trophées, lus depuis l'établissement : ils replacent « Toi » au
+  // bon rang dans les aperçus d'échelons plus larges, et décident de ma
+  // division sur le rail.
+  const myTrophies = school.mates.find((m) => m.isMe)?.trophies ?? 0
 
   // Établissement : vraies données si dispo. Échelons plus larges : aperçu
   // (« Aperçu ») tant que le back-end géo n'est pas branché.
   const board =
     scope === 'school'
       ? school
-      : getMockGeoBoard(scope, mySeconds, school.level)
+      : getMockGeoBoard(scope, myTrophies, school.level)
   const demo = scope === 'school' ? schoolDemo : true
+  const noun = schoolNoun(board.level)
+  const complement = geoScopePossessive(scope, board.level)
+  // Établissement réel : la RPC plafonne à 50 élèves — on le dit. Les aperçus
+  // d'échelons larges ne sont jamais plafonnés (données de démonstration).
+  const capped =
+    scope === 'school' && !demo && board.mates.length >= SCHOOL_BOARD_LIMIT
 
-  // Le podium (1er au centre, 2e à gauche, 3e à droite) + ma ligne.
-  const podium = board.mates.slice(0, 3)
-  const ordered = [podium[1], podium[0], podium[2]].filter(
-    (m): m is NonNullable<typeof m> => Boolean(m),
-  )
-  const myIndex = board.mates.findIndex((m) => m.isMe)
-  const me = myIndex >= 0 ? board.mates[myIndex] : null
+  const lignes = lignesEcole(board.mates, true)
+  const rang = monRang(board.mates)
+
+  // Ma ligne au milieu de la boîte à l'ouverture (et au changement
+  // d'échelle). On déplace la BOÎTE (scrollTop) : `scrollIntoView` ferait
+  // aussi défiler la page.
+  useEffect(() => {
+    const conteneur = boite.current
+    const moi = conteneur?.querySelector<HTMLElement>('[aria-current="true"]')
+    if (!conteneur || !moi) return
+    conteneur.scrollTop =
+      moi.offsetTop - (conteneur.clientHeight - moi.offsetHeight) / 2
+  }, [scope])
 
   return (
     <section>
@@ -675,89 +646,117 @@ function GeoRankingSection({
         {board.name.length > 0 ? board.name : geoScopeTitle(scope, school.level)}
       </SectionTitle>
 
-      {expanded ? (
-        <ScopeBoard board={board} scope={scope} demo={demo} />
-      ) : (
-        <div className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
-          {/* Le podium : trois marches, le 1er au centre et plus grand.
+      <div className="overflow-hidden rounded-3xl bg-card shadow-sm ring-1 ring-black/5">
+        {/* --- 1 : le rail des divisions ------------------------------------ */}
+        <RailDivisions trophies={myTrophies} />
 
-              LES MARCHES SONT DESSINÉES, LES TÊTES VIENNENT DES DONNÉES. Le
-              bandeau est un DÉCOR VIDE (or au centre, argent à gauche, bronze
-              à droite) : les trois premiers sont de vrais élèves, et une
-              illustration qui les contiendrait mentirait — différemment chaque
-              semaine. Le dessin se pose donc SOUS la rangée, dans le même
-              ordre que `ordered` ([2e, 1er, 3e]), si bien que chacun surplombe
-              sa marche sans qu'aucun calage au pixel soit nécessaire. */}
-          <div className="flex items-end justify-center gap-5">
-            {ordered.map((m) => {
-              const rank = board.mates.indexOf(m) + 1
-              const first = rank === 1
-              return (
-                <div key={m.id} className="flex flex-col items-center gap-1">
-                  <span
-                    aria-hidden="true"
-                    className={cn(first ? 'text-4xl' : 'text-2xl')}
-                  >
-                    {m.emoji}
-                  </span>
-                  <span
-                    className={cn(
-                      'flex items-center gap-1 rounded-full px-2.5 py-0.5 text-[11px] font-bold tabular-nums',
-                      first
-                        ? 'bg-highlight/40 text-foreground'
-                        : 'bg-muted text-muted-foreground',
-                    )}
-                  >
-                    {rank === 1 ? '1ᵉʳ' : `${rank}ᵉ`} · {formatHours(m.seconds)}
-                  </span>
-                  <span className="max-w-20 truncate text-[11px] font-semibold text-muted-foreground">
-                    {m.name}
-                  </span>
-                </div>
-              )
-            })}
-          </div>
-
-          <Image
-            src="/images/amis/podium.webp"
-            alt=""
-            aria-hidden="true"
-            width={1536}
-            height={512}
-            // `-mt-1` colle la rangée aux marches : sans ce chevauchement léger,
-            // le podium se lisait comme une image POSÉE SOUS la liste plutôt
-            // que comme le sol sur lequel les trois se tiennent.
-            className="pointer-events-none -mt-1 w-full select-none"
-          />
-
-          {/* Ma ligne, toujours visible — c'est elle qu'on vient vérifier. */}
-          {me ? (
-            <div className="mt-3 flex items-center gap-3 rounded-2xl bg-accent/40 px-3 py-2.5">
-              <span className="w-6 shrink-0 text-center font-mono text-xs font-bold text-muted-foreground tabular-nums">
-                {myIndex + 1}
-              </span>
-              <Avatar emoji={me.emoji} />
-              <span className="min-w-0 flex-1 truncate text-sm font-bold">
-                Toi
-              </span>
-              <span className="font-mono text-sm font-semibold tabular-nums">
-                {formatHours(me.seconds)}
-              </span>
-            </div>
-          ) : null}
-
-          <button
-            type="button"
-            onClick={() => {
-              sfx.tap()
-              setExpanded(true)
-            }}
-            className="mt-2 w-full cursor-pointer rounded-full py-1.5 text-center text-xs font-bold text-primary transition-colors hover:bg-primary/5"
-          >
-            Voir tout le classement
-          </button>
+        {/* --- 2 : ma place ------------------------------------------------- */}
+        <div className="flex flex-col items-center px-4 pb-3 text-center">
+          <h3 className="font-heading text-lg leading-tight font-extrabold text-balance">
+            {titreEcole(rang, complement)}
+          </h3>
+          <p className="mt-1 text-[13px] font-semibold text-muted-foreground text-balance">
+            {sousTitreEcole(board.mates, complement)}
+          </p>
+          {/* Ma division, et le prochain blason à débloquer. */}
+          <p className="mt-1 inline-flex items-center gap-1 text-[0.68rem] font-bold text-muted-foreground/80">
+            <TropheeAnime className="size-3.5" />
+            {ligneDivision(myTrophies)}
+            {capped ? ` · les ${SCHOOL_BOARD_LIMIT} mieux classés` : ''}
+          </p>
         </div>
-      )}
+
+        {/* --- 3 : la liste, coupée par le bandeau du podium -----------------
+            LA BOÎTE DE DUOLINGO (Lucas, 17/09/2026 : « si le user veut voir
+            plus bas il va avoir du mal à trouver un endroit pour scroller »).
+            La liste occupait toute la largeur et la moitié de l'écran : où
+            qu'on pose le pouce, c'est elle qui défilait, jamais la page.
+            Elle est maintenant une boîte ENCADRÉE, en retrait des bords, et
+            d'environ cinq lignes : autour d'elle il reste de la carte pour
+            faire défiler l'écran. Pas d'`overscroll-contain` : arrivé au bout
+            de la liste, le même geste continue sur la page. */}
+        <ol
+          ref={boite}
+          aria-label="Classement"
+          // `relative` : les `offsetTop` des lignes se mesurent depuis la boîte.
+          className="relative mx-3 mb-3 max-h-[min(16.5rem,36svh)] overflow-y-auto rounded-2xl border-2 border-border [scrollbar-width:thin]"
+        >
+          {lignes.map((ligne) => {
+            if (ligne.kind === 'separateur') {
+              return (
+                <li
+                  key="podium"
+                  className="font-heading flex items-center justify-center gap-2 py-1.5 text-xs font-extrabold tracking-wider text-primary uppercase"
+                >
+                  <Medal className="size-4" strokeWidth={2.6} aria-hidden="true" />
+                  Podium
+                  <Medal className="size-4" strokeWidth={2.6} aria-hidden="true" />
+                </li>
+              )
+            }
+            if (ligne.kind === 'ellipse') {
+              return (
+                <li
+                  key="ellipse"
+                  className="py-2 text-center text-xs font-semibold text-muted-foreground"
+                >
+                  … {ligne.caches} {ligne.caches > 1 ? 'élèves' : 'élève'}
+                </li>
+              )
+            }
+            const { mate: m, rank, podium } = ligne
+            return (
+              <li
+                key={m.id}
+                aria-current={m.isMe ? 'true' : undefined}
+                className={cn(
+                  'flex items-center gap-3 px-3 py-2',
+                  // Ma ligne : or si je suis sur le podium (la récompense),
+                  // violet sinon — la zone d'abord, l'identité ensuite.
+                  m.isMe && (podium ? 'bg-highlight/25' : 'bg-primary/10'),
+                )}
+              >
+                <span
+                  className={cn(
+                    'font-heading flex size-7 shrink-0 items-center justify-center rounded-full text-base font-extrabold tabular-nums',
+                    rank === 1 && 'bg-highlight text-foreground',
+                    rank === 2 && 'bg-muted-foreground/25 text-foreground',
+                    rank === 3 && 'bg-accent text-accent-foreground',
+                    rank > 3 && 'text-muted-foreground',
+                  )}
+                >
+                  {rank}
+                </span>
+                <Avatar id={m.id} portrait={m.portrait} />
+                <span
+                  className={cn(
+                    'min-w-0 flex-1 truncate text-sm',
+                    m.isMe ? 'font-bold' : 'font-semibold',
+                  )}
+                >
+                  {m.name}
+                  {rank === 1 ? (
+                    <Crown
+                      className="ml-1 inline size-3.5 -translate-y-0.5 text-highlight"
+                      aria-hidden="true"
+                    />
+                  ) : null}
+                </span>
+                <CompteTrophees n={m.trophies} />
+              </li>
+            )
+          })}
+        </ol>
+
+      </div>
+
+      <p className="mt-2 px-1 text-[11px] text-muted-foreground">
+        {scope === 'school'
+          ? demo
+            ? `Exemple de classement — choisis ton ${noun} dans ton profil pour voir le vrai.`
+            : 'Chaque duel classé gagné rapporte des trophées — celui qui en gagne le plus grimpe.'
+          : `Aperçu — ton classement au niveau ${geoScopeLabel(scope, board.level).toLowerCase()} arrivera avec ton code postal.`}
+      </p>
     </section>
   )
 }
@@ -774,7 +773,7 @@ function PendingRow({ request }: { request: PendingRequest }) {
   if (done === 'accepted') {
     return (
       <li className="flex items-center gap-3 rounded-2xl bg-card p-3 ring-1 ring-foreground/10">
-        <Avatar emoji={request.emoji} />
+        <Avatar id={request.id} portrait={request.portrait} />
         <span className="min-w-0 flex-1 truncate text-sm font-semibold">
           {request.name}
         </span>
@@ -787,7 +786,7 @@ function PendingRow({ request }: { request: PendingRequest }) {
 
   return (
     <li className="flex items-center gap-3 rounded-2xl bg-card p-3 ring-1 ring-foreground/10">
-      <Avatar emoji={request.emoji} />
+      <Avatar id={request.id} portrait={request.portrait} />
       <span className="min-w-0 flex-1 truncate text-sm font-semibold">
         {request.name}
         <span className="block text-xs font-normal text-muted-foreground">
@@ -838,7 +837,6 @@ export default function AmisHome({
   myFriendCode,
   squadName,
   canRenameSquad,
-  gems,
   referral,
   squadIds,
   clanBoard,
@@ -858,8 +856,7 @@ export default function AmisHome({
   // Nom du groupe d'amis (« squad », migration 176) et droit de le renommer.
   squadName: string | null
   canRenameSquad: boolean
-  // Économie des gemmes (migration 183) : solde et avancement du parrainage.
-  gems: number
+  // Parrainage (migration 183) : où en sont mes invitations.
   referral: ReferralSummary
   // Composition du groupe privé (migration 183), sous-ensemble des relations.
   squadIds: string[]
@@ -921,13 +918,24 @@ export default function AmisHome({
           reste. Le plein d'abord, l'invitation ensuite. */}
       <GeoRankingSection school={school} schoolDemo={schoolDemo} />
 
-      {/* 5. Parrainage — compacté en une ligne (on le fait une fois, il n'a
-          plus le droit d'écraser le quotidien). */}
-      <ParrainageCard
+      {/* 5. MES AMIS — le classement aux trophées, façon liste de clan.
+          Remonté AU-DESSUS du parrainage (Lucas, 16/09/2026) : c'est le bloc
+          qu'on vient regarder après l'école, et l'invitation à parrainer se
+          lisait comme un mur entre les deux classements. Il reste sous
+          l'établissement : voir d'abord où l'on se situe dans son lycée donne
+          une raison de se constituer un cercle d'amis, l'inverse demandait
+          d'en avoir déjà un. */}
+      <ClassementArena
+        ranking={ranking}
+        onlineFriendIds={onlineFriendIds}
         myFriendCode={myFriendCode}
-        gems={gems}
-        summary={referral}
+        squadName={squadName}
+        canRenameSquad={canRenameSquad}
+        referral={referral}
       />
+
+      {/* 6. Le parrainage n'a plus de bloc : il s'ouvre depuis l'angle du
+          classement des amis (Lucas, 17/09/2026 : « trop bas »). */}
 
       {/* Demandes reçues — à accepter ou refuser. Masqué s'il n'y en a pas. */}
       {pendingRequests.length > 0 ? (
@@ -955,18 +963,6 @@ export default function AmisHome({
         friends={friends}
         squadIds={squadIds}
         squadName={squadName}
-      />
-
-      {/* 6. Mon équipe — le classement aux trophées, façon liste de clan.
-          Descendu sous le classement de l'établissement : voir d'abord où l'on
-          se situe dans son lycée donne une raison de se constituer une équipe,
-          l'inverse demandait d'en avoir déjà une. */}
-      <ClassementArena
-        ranking={ranking}
-        onlineFriendIds={onlineFriendIds}
-        myFriendCode={myFriendCode}
-        squadName={squadName}
-        canRenameSquad={canRenameSquad}
       />
     </div>
   )

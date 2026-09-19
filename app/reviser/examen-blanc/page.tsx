@@ -1,3 +1,4 @@
+import { toutLire } from '@/lib/postgrest-pages'
 import Link from 'next/link'
 import { contentLevelFor } from '@/lib/grades'
 import { CircleUser, GraduationCap } from 'lucide-react'
@@ -172,14 +173,20 @@ export default async function ExamenBlancPage({
   // elle part en parallèle de la chaîne leçons → chapitres au lieu d'attendre
   // derrière elle (2 allers-retours sortis du chemin critique).
   const questionsPromise =
+    // Paginé : la matière entière d'un niveau dépasse 1 000 questions en 1re,
+    // et PostgREST coupe à 1 000 sans le dire (lib/postgrest-pages).
     quizList.length > 0
-      ? supabase
-          .from('quiz_questions')
-          .select(
-            'id, quiz_id, question, kind, options, correct_index, explanation, position',
-          )
-          .in('quiz_id', quizList.map((q) => q.id))
-          .returns<QuizQuestion[]>()
+      ? toutLire((from, to) =>
+          supabase
+            .from('quiz_questions')
+            .select(
+              'id, quiz_id, question, kind, options, correct_index, explanation, position',
+            )
+            .in('quiz_id', quizList.map((q) => q.id))
+            .order('id', { ascending: true })
+            .range(from, to)
+            .returns<QuizQuestion[]>(),
+        )
       : Promise.resolve({ data: [] as QuizQuestion[] })
 
   const chapterByLesson = new Map<string, string>()
@@ -280,9 +287,7 @@ export default async function ExamenBlancPage({
   const examQuestions = composeExam(bySubject)
 
   return (
-    // data-no-swipe : pas de changement d'onglet au balayage pendant l'examen
-    // — le bilan en cours serait perdu (voir SwipeTabs).
-    <div data-no-swipe className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4">
       {/* Un examen blanc est l'exercice le plus long de l'app : ne pas le
           compter dans le temps de travail était le plus gros trou du compteur. */}
       <WorkTimer />

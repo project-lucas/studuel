@@ -95,9 +95,12 @@ function BranchCard({
               side === 'left' && 'justify-end',
             )}
           >
-            {branch.enfants.map((enfant) => (
+            {branch.enfants.map((enfant, i) => (
               <li
-                key={enfant}
+                // Indice + libellé : les libellés MASQUÉS (« •••••••• », carte
+                // verrouillée) sont tous identiques, la clé ne peut pas être
+                // le texte seul.
+                key={`${i}-${enfant}`}
                 className={cn(
                   'rounded-full px-2.5 py-1 text-xs font-medium',
                   style.chip,
@@ -134,9 +137,9 @@ export default function MindMap({
       <div className="flex min-w-max items-stretch justify-center gap-0 px-1 py-2">
         {/* Colonne gauche : branches alignées vers le tronc. */}
         <ul className="flex flex-col justify-center gap-3">
-          {left.map((branch) => (
+          {left.map((branch, i) => (
             <BranchCard
-              key={branch.titre}
+              key={`${i}-${branch.titre}`}
               branch={branch}
               index={rankOf(branch)}
               side="left"
@@ -160,9 +163,9 @@ export default function MindMap({
 
         {/* Colonne droite. */}
         <ul className="flex flex-col justify-center gap-3">
-          {right.map((branch) => (
+          {right.map((branch, i) => (
             <BranchCard
-              key={branch.titre}
+              key={`${i}-${branch.titre}`}
               branch={branch}
               index={rankOf(branch)}
               side="right"

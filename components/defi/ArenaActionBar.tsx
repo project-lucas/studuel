@@ -35,8 +35,10 @@ export const FLANK_CLASS = 'arena-plate-flank shrink-0'
  * désaligné les plaques de tout le HUD au-dessus.
  *
  * PAS DE SECOND `env(safe-area-inset-bottom)` : la coquille de la page réserve
- * déjà `4.75rem + env(safe-area-inset-bottom)` sous ce bloc (la barre d'onglets
- * et l'encoche basse). Le redemander ici aurait creusé un vide sous la barre.
+ * déjà `5.75rem + env(safe-area-inset-bottom)` sous ce bloc : la barre d'onglets
+ * et l'encoche basse, plus 16 px pour que la flèche basse de la plaque de
+ * matière rebondisse AU-DESSUS de la barre d'onglets au lieu de passer
+ * dessous. Le redemander ici aurait creusé un vide sous la barre.
  */
 export default function ArenaActionBar({
   left,

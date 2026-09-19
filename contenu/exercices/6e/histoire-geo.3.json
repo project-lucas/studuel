@@ -1,0 +1,242 @@
+{
+  "niveau": "6e",
+  "matiere": "histoire-geo",
+  "exercices": [
+    {
+      "chapitre": "912f051f-db72-5bf8-8656-492869f99abb",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Qui décide à Athènes ?",
+      "competence": "observer-schema",
+      "situation": "Au Ve siècle av. J.-C., Athènes n’a pas de roi. Ce sont les **citoyens** eux-mêmes qui gouvernent la cité. Observe le schéma de leurs institutions.",
+      "documents": [
+        {
+          "id": "institutions",
+          "type": "schema",
+          "titre": "Les institutions de la démocratie athénienne (Ve siècle av. J.-C.)",
+          "largeur": 340,
+          "hauteur": 262,
+          "elements": [
+            { "forme": "rect", "x": 14, "y": 14, "l": 152, "h": 32, "arrondi": 8, "teinte": "violet", "motif": "clair", "texte": "Ecclésia", "id": "ecclesia", "zone": true },
+            { "forme": "texte", "x": 90, "y": 64, "texte": "l’assemblée des citoyens" },
+            { "forme": "texte", "x": 90, "y": 78, "texte": "vote les lois, la guerre" },
+            { "forme": "texte", "x": 90, "y": 92, "texte": "et la paix" },
+
+            { "forme": "rect", "x": 174, "y": 14, "l": 152, "h": 32, "arrondi": 8, "teinte": "turquoise", "motif": "clair", "texte": "Boulè", "id": "boule", "zone": true },
+            { "forme": "texte", "x": 250, "y": 64, "texte": "500 membres" },
+            { "forme": "texte", "x": 250, "y": 78, "texte": "tirés au sort" },
+            { "forme": "texte", "x": 250, "y": 92, "texte": "préparent les lois" },
+
+            { "forme": "rect", "x": 14, "y": 110, "l": 152, "h": 32, "arrondi": 8, "teinte": "turquoise", "motif": "clair", "texte": "Héliée", "id": "heliee", "zone": true },
+            { "forme": "texte", "x": 90, "y": 160, "texte": "6 000 jurés" },
+            { "forme": "texte", "x": 90, "y": 174, "texte": "tirés au sort" },
+            { "forme": "texte", "x": 90, "y": 188, "texte": "rendent la justice" },
+
+            { "forme": "rect", "x": 174, "y": 110, "l": 152, "h": 32, "arrondi": 8, "teinte": "corail", "motif": "clair", "texte": "Stratèges", "id": "strateges", "zone": true },
+            { "forme": "texte", "x": 250, "y": 160, "texte": "10 magistrats" },
+            { "forme": "texte", "x": 250, "y": 174, "texte": "élus" },
+            { "forme": "texte", "x": 250, "y": 188, "texte": "commandent l’armée" },
+
+            { "forme": "rect", "x": 14, "y": 212, "l": 312, "h": 34, "arrondi": 17, "teinte": "sable", "motif": "clair", "texte": "Les citoyens : environ 40 000 hommes" }
+          ],
+          "legende": [
+            { "teinte": "violet", "motif": "clair", "texte": "Ouverte à tous les citoyens" },
+            { "teinte": "turquoise", "motif": "clair", "texte": "Membres tirés au sort" },
+            { "teinte": "corail", "motif": "clair", "texte": "Membres élus" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "institutions",
+          "enonce": "Touche l’institution qui **vote les lois**.",
+          "reponse": ["ecclesia"],
+          "aide": "Lis les lignes écrites sous chaque case.",
+          "explication": "C’est l’**Ecclésia**, l’assemblée de tous les citoyens. Elle se réunit environ 40 fois par an sur la colline de la Pnyx."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de citoyens siègent à la **Boulè** ?",
+          "reponse": 500,
+          "unite": "citoyens",
+          "aide": "Cherche la case de la Boulè, puis lis le nombre écrit dessous.",
+          "explication": "La Boulè compte **500** citoyens tirés au sort. Elle prépare les lois que l’Ecclésia votera."
+        },
+        {
+          "type": "categories",
+          "enonce": "Élus ou tirés au sort ? Range chaque groupe.",
+          "categories": ["Tirés au sort", "Élus"],
+          "items": [
+            ["Les membres de la Boulè", 0],
+            ["Les jurés de l’Héliée", 0],
+            ["Les stratèges", 1]
+          ],
+          "aide": "Aide-toi de la légende : chaque couleur dit comment on désigne les membres.",
+          "explication": "Boulè et Héliée sont **tirées au sort** : pour les Athéniens, c’est le moyen le plus égalitaire. Seuls les **stratèges**, qui commandent l’armée, sont **élus** : il faut des chefs compétents."
+        }
+      ]
+    },
+    {
+      "chapitre": "912f051f-db72-5bf8-8656-492869f99abb",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le tesson d’Aristide",
+      "competence": "analyser-document",
+      "situation": "Une fois par an, les Athéniens peuvent chasser de la cité un citoyen jugé dangereux, en écrivant son nom sur un morceau de poterie : c’est l’**ostracisme**. Plutarque raconte comment on votait.",
+      "documents": [
+        {
+          "id": "plutarque",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Comment se déroule un ostracisme",
+          "auteur": "D’après Plutarque, Vie d’Aristide, 7 (vers 100 apr. J.-C.)",
+          "blocs": [
+            "Chaque citoyen prend un tesson de poterie, un *ostrakon*, et y écrit le nom de celui qu’il veut voir quitter la cité. Il le porte sur l’agora, dans un enclos fermé par des barrières.",
+            "Les magistrats comptent d’abord tous les tessons : s’il y en a moins de six mille, le vote ne compte pas. Sinon, celui dont le nom revient le plus souvent est banni de la cité pour dix ans. Il garde cependant ses biens.",
+            "On raconte que, le jour où l’on vota contre Aristide, surnommé « le Juste », un paysan qui ne savait pas écrire tendit son tesson à Aristide lui-même, sans le reconnaître, et lui demanda d’y écrire « Aristide ». Surpris, celui-ci lui demanda quel tort Aristide lui avait fait. « Aucun, répondit l’homme, je ne le connais même pas ; mais je suis [[a|agacé]] de l’entendre partout appeler le Juste. » Aristide écrivit son nom sans rien dire et rendit le tesson."
+          ]
+        },
+        {
+          "id": "depouillement",
+          "type": "tableau",
+          "titre": "Le dépouillement d’un ostracisme",
+          "source": "Noms et chiffres imaginés pour l’exercice.",
+          "colonnes": ["Nom écrit sur le tesson", "Nombre de tessons"],
+          "lignes": [
+            ["Criton", "1 150"],
+            ["Philon", "2 870"],
+            ["Lycon", "2 380"],
+            ["Timon", "300"]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "D’après le Doc 1, pendant combien d’années un citoyen ostracisé doit-il quitter Athènes ?",
+          "reponse": 10,
+          "unite": "ans",
+          "aide": "Relis le paragraphe 2 : il donne la durée du bannissement.",
+          "explication": "Le banni doit quitter la cité pendant **10 ans**. Il garde ses biens : ce n’est pas la punition d’un crime, mais une mise à l’écart."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de tessons les magistrats ont-ils comptés **en tout** lors du vote du Doc 2 ?",
+          "reponse": 6700,
+          "unite": "tessons",
+          "aide": "Additionne les quatre nombres de la colonne de droite.",
+          "explication": "1 150 + 2 870 + 2 380 + 300 = **6 700 tessons**. C’est plus de six mille : d’après Plutarque, le vote compte."
+        },
+        {
+          "type": "zone",
+          "document": "depouillement",
+          "enonce": "Le vote est donc valable. Touche, dans le Doc 2, le **nom** du citoyen qui doit partir en exil.",
+          "reponse": ["r1c0"],
+          "aide": "Cherche le nom écrit sur le plus grand nombre de tessons.",
+          "explication": "C’est **Philon** : son nom revient 2 870 fois, plus que tous les autres. Il est banni pour dix ans."
+        },
+        {
+          "type": "zone",
+          "document": "plutarque",
+          "enonce": "Dans le paragraphe 3, touche le mot qui dit ce que le paysan ressent envers Aristide.",
+          "reponse": ["a"],
+          "aide": "Le paysan explique pourquoi il vote contre Aristide. Cherche dans sa réponse, entre guillemets.",
+          "explication": "Le paysan est **agacé** d’entendre Aristide appelé « le Juste ». Il vote contre lui par simple agacement, sans même le connaître."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre l’histoire d’Aristide et du paysan ?",
+          "options": [
+            "On pouvait être banni sans avoir commis aucun crime",
+            "Seuls les citoyens qui savaient écrire pouvaient voter",
+            "Aristide a triché pour ne pas être banni",
+            "Le paysan voulait punir Aristide pour un vol"
+          ],
+          "reponse": 0,
+          "aide": "Aristide avait-il fait du tort au paysan ? Relis la réponse de l’homme.",
+          "explication": "**On pouvait être banni sans avoir commis de crime** : l’ostracisme écartait un homme jugé trop puissant… ou simplement trop admiré. Athènes invente la démocratie et, en même temps, le moyen de s’en protéger."
+        }
+      ]
+    },
+    {
+      "chapitre": "912f051f-db72-5bf8-8656-492869f99abb",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le pouvoir au plus grand nombre ?",
+      "competence": "argumenter",
+      "situation": "En 431 av. J.-C., Périclès fait devant les Athéniens l’éloge de leur démocratie. Confronte son discours à ce que les historiens savent des habitants d’Athènes.",
+      "documents": [
+        {
+          "id": "pericles",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Périclès parle de la démocratie",
+          "auteur": "D’après Thucydide, La Guerre du Péloponnèse, II, 37 (discours de Périclès, 431 av. J.-C.)",
+          "blocs": [
+            "Notre constitution n’imite pas les lois de nos voisins : c’est plutôt nous qui servons de modèle aux autres. Parce que le pouvoir y est entre les mains non d’une minorité, mais du [[n|plus]] [[n|grand]] [[n|nombre]], on lui a donné le nom de démocratie.",
+            "Pour les affaires privées, tous sont égaux devant la loi. Pour les charges publiques, on ne regarde pas la famille ou la fortune, mais le mérite ; et la pauvreté n’empêche personne de servir la cité, s’il en est capable."
+          ]
+        },
+        {
+          "id": "population",
+          "type": "graphique",
+          "forme": "secteurs",
+          "titre": "Les habitants de l’Athènes de Périclès (environ 300 000 personnes)",
+          "source": "Estimations arrondies : les historiens discutent encore ces chiffres.",
+          "categories": ["Citoyens", "Femmes et enfants des familles de citoyens", "Métèques et leurs familles", "Esclaves"],
+          "series": [{ "nom": "Part des habitants", "valeurs": [13, 30, 10, 47] }]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "pericles",
+          "enonce": "Selon Périclès, entre les mains de qui est le pouvoir à Athènes ? Touche les **trois mots** qui le disent.",
+          "reponse": ["n"],
+          "aide": "Périclès oppose deux groupes : « une minorité »… et qui d’autre ?",
+          "explication": "Pour Périclès, le pouvoir appartient au **plus grand nombre** : c’est le sens même du mot démocratie, le pouvoir (*kratos*) du peuple (*dêmos*)."
+        },
+        {
+          "type": "zone",
+          "document": "population",
+          "enonce": "Dans le Doc 2, touche la part des habitants qui ont le droit de voter à l’Ecclésia.",
+          "reponse": ["k0"],
+          "aide": "À l’Ecclésia, seuls votent les hommes de plus de 18 ans nés de parents athéniens.",
+          "explication": "Seuls les **citoyens** votent : environ 13 % des habitants."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel pourcentage des habitants d’Athènes n’a **pas** le droit de voter ?",
+          "reponse": 87,
+          "unite": "%",
+          "aide": "Tous les habitants réunis font 100 %. Enlève la part des citoyens.",
+          "explication": "100 − 13 = **87 %** : près de neuf habitants sur dix n’ont pas le droit de vote — femmes, enfants, métèques et esclaves."
+        },
+        {
+          "type": "choix",
+          "enonce": "Périclès parle du « plus grand nombre ». Comment expliquer l’écart entre son discours et le Doc 2 ?",
+          "options": [
+            "Pour Périclès, le peuple, ce sont les citoyens : femmes, métèques et esclaves n’en font pas partie",
+            "Périclès ne savait pas combien Athènes comptait d’habitants",
+            "À l’époque de Périclès, tous les habitants votaient à l’Ecclésia",
+            "Les esclaves votaient à la place de leurs maîtres"
+          ],
+          "reponse": 0,
+          "aide": "Le « plus grand nombre »… de qui ? De tous les habitants, ou seulement des citoyens ?",
+          "explication": "Périclès ne parle que **des citoyens** : parmi eux, c’est bien la majorité qui décide. Mais les citoyens ne sont qu’une petite partie des habitants."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la conclusion de l’enquête.",
+          "texte": "La démocratie athénienne est ___ : les citoyens votent eux-mêmes les lois, sans élire de représentants. Mais elle est ___ : environ 87 % des habitants n’ont pas le droit de voter.",
+          "reponses": [["directe"], ["restreinte", "réservée"]],
+          "banque": ["directe", "restreinte", "universelle", "représentative"],
+          "aide": "Le premier mot dit COMMENT on vote ; le second dit QUI peut voter.",
+          "explication": "Une démocratie **directe** (chaque citoyen vote lui-même les lois) mais **restreinte** : elle exclut les femmes, les métèques et les esclaves. La nôtre est représentative et universelle."
+        }
+      ]
+    }
+  ]
+}

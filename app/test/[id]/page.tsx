@@ -15,14 +15,28 @@ import QuizPlayer from '@/components/QuizPlayer'
 import { createClient } from '@/lib/supabase/server'
 import { getUserTier, canAccessPremiumTests } from '@/lib/subscription'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
-import { getCurrentUser } from '@/lib/supabase/user'
+import { getCurrentUser, type CurrentUser } from '@/lib/supabase/user'
 import { drawQuizSession } from '@/lib/questions/server-draw'
 import { loadQuestionStates } from '@/lib/questions/server'
+import type { QuestionState } from '@/lib/questions/engine'
+import { getChapterMastery } from '@/lib/mastery-server'
+import { toutLire } from '@/lib/postgrest-pages'
 import {
   ENTRAINEMENT_MINIMUM,
   ENTRAINEMENT_TAILLE,
   veutEntrainement,
 } from '@/lib/quiz-session'
+import {
+  chapitreSuivant,
+  premierQuiz,
+  questionsAcquises,
+  quizDeLaLeconSuivante,
+  xpPromise,
+  type ChapitreRef,
+  type LeconRef,
+  type QuizCible,
+  type QuizSuivant,
+} from '@/lib/quiz-suivant'
 import type { SupabaseClient } from '@supabase/supabase-js'
 import type { Quiz, QuizQuestion } from '@/lib/types'
 
@@ -37,28 +51,33 @@ export default async function QuizPage({
   const supabase = await createClient()
 
   // Leçon → chapitre → matière embarqués dans la même requête (zéro cascade) :
-  // le bouton « quitter » ramène au hub de la leçon d'origine.
+  // le bouton « quitter » ramène au hub de la leçon d'origine, et le chapitre
+  // (matière, niveau, position) sert à désigner le QUIZ SUIVANT sans relire.
   type QuizRow = Quiz & {
     lesson:
       | {
           id: string
           chapter: {
             id: string
+            subject_id: string
+            level: string
+            position: number
             subject: { slug: string; color: string } | null
           } | null
         }
       | null
   }
   // Le tier (gating premium) ne dépend pas du quiz : les deux partent ensemble.
-  const [{ data: quiz }, tier] = await Promise.all([
+  const [{ data: quiz }, tier, user] = await Promise.all([
     supabase
       .from('quizzes')
       .select(
-        'id, title, subject, grade_level, chapter, is_free, lesson:lessons(id, chapter:chapters(id, subject:subjects(slug, color)))',
+        'id, title, subject, grade_level, chapter, is_free, lesson:lessons(id, chapter:chapters(id, subject_id, level, position, subject:subjects(slug, color)))',
       )
       .eq('id', id)
       .single<QuizRow>(),
     getUserTier(),
+    getCurrentUser(),
   ])
 
   if (!quiz) notFound()
@@ -115,6 +134,15 @@ export default async function QuizPage({
     return { ...q, options: p.options, correct_index: p.correctIndex }
   })
 
+  // L'ÉTAT DE L'ÉLÈVE sur les questions du quiz, lu UNE fois : il sert à la
+  // séance d'entraînement (ci-dessous) ET à la carte « Questions maîtrisées »
+  // de l'écran de fin. Vide sans utilisateur, ou tant que la migration 239
+  // n'est pas passée (`loadQuestionStates` avale ses erreurs).
+  const questionIds = shuffledQuestions.map((q) => q.id)
+  const etats: Map<string, QuestionState> = user
+    ? await loadQuestionStates(supabase, user.id, questionIds)
+    : new Map()
+
   // LA SÉANCE D'ENTRAÎNEMENT, au deuxième passage et au-delà.
   //
   // Le quiz alimentait la répétition espacée sans jamais la consulter : on
@@ -125,14 +153,34 @@ export default async function QuizPage({
   // Tout ce bloc est FACULTATIF : sans utilisateur, sans état en base (la
   // migration 239 pas encore passée) ou sur un tirage trop maigre, `deck` reste
   // nul et la page se comporte exactement comme avant.
-  const deck = await composerSeance({
-    supabase,
-    quizId: quiz.id,
-    chapterId: quiz.lesson?.chapter?.id ?? null,
-    subjectSlug: quiz.lesson?.chapter?.subject?.slug ?? null,
-    level: quiz.grade_level ?? null,
-    questions: shuffledQuestions,
-  })
+  //
+  // LE QUIZ SUIVANT est cherché dans le même souffle : il ne dépend que du
+  // catalogue et de l'avancement du chapitre, pas de la séance.
+  const [deck, quizSuivant] = await Promise.all([
+    composerSeance({
+      supabase,
+      user,
+      etats,
+      quizId: quiz.id,
+      chapterId: quiz.lesson?.chapter?.id ?? null,
+      subjectSlug: quiz.lesson?.chapter?.subject?.slug ?? null,
+      level: quiz.grade_level ?? null,
+      questions: shuffledQuestions,
+    }),
+    trouverQuizSuivant({
+      supabase,
+      user,
+      quizId: quiz.id,
+      chapitre: quiz.lesson?.chapter ?? null,
+    }),
+  ])
+
+  // Ce que le chapitre a DÉJÀ acquis parmi ces questions : l'écran de fin y
+  // ajoute les réussites de la manche. Nul sans utilisateur — la carte compte
+  // alors les bonnes réponses de la manche, faute de mémoire à consulter.
+  const maitrise = user
+    ? { acquisesIds: questionsAcquises(questionIds, etats), total: questionIds.length }
+    : null
 
   // Le temps de révision total, pour le compteur du haut. Lecture ISOLÉE :
   // s'il manque, le compteur repart de la seule session en cours plutôt que de
@@ -173,6 +221,9 @@ export default async function QuizPage({
           tempsTotalSecondes={tempsTotal}
           gradeLevel={quiz.grade_level}
           backHref={backHref}
+          // L'écran de fin en XP : ce qui est acquis, et la tentation d'après.
+          maitrise={maitrise}
+          quizSuivant={quizSuivant}
         />
       </>
     )
@@ -215,6 +266,8 @@ export default async function QuizPage({
  */
 async function composerSeance({
   supabase,
+  user,
+  etats,
   quizId,
   chapterId,
   subjectSlug,
@@ -222,13 +275,15 @@ async function composerSeance({
   questions,
 }: {
   supabase: SupabaseClient
+  user: CurrentUser | null
+  /** Les états déjà lus par la page (une seule lecture pour tout l'écran). */
+  etats: ReadonlyMap<string, QuestionState>
   quizId: string
   chapterId: string | null
   subjectSlug: string | null
   level: string | null
   questions: QuizQuestion[]
 }): Promise<QuizQuestion[] | null> {
-  const user = await getCurrentUser()
   if (!user) return null
 
   // Une session enregistrée = l'évaluation est passée. `head: true` : on ne
@@ -253,13 +308,7 @@ async function composerSeance({
   //
   // Or un élève qui a déjà bouclé ce quiz a forcément laissé des états
   // derrière lui. Aucun état = le moteur est aveugle : on ressert le quiz
-  // entier, qui reste la meilleure réponse. C'est une lecture de plus, sur un
-  // chemin rare, contre une dégradation silencieuse.
-  const etats = await loadQuestionStates(
-    supabase,
-    user.id,
-    questions.map((q) => q.id),
-  )
+  // entier, qui reste la meilleure réponse.
   if (etats.size === 0) return null
 
   const drawn = await drawQuizSession({
@@ -289,4 +338,128 @@ async function composerSeance({
     return q ? [q] : []
   })
   return seance.length >= ENTRAINEMENT_MINIMUM ? seance : null
+}
+
+// --- Le quiz suivant ---------------------------------------------------------
+
+type ChapitreDuQuiz = {
+  id: string
+  subject_id: string
+  level: string
+  position: number
+}
+
+/**
+ * Les leçons d'un chapitre avec leur quiz (le premier par id, s'il y en a
+ * plusieurs). Colonnes PUBLIQUES seulement : `lessons` porte du contenu payant
+ * révoqué (cf. LESSON_COLUMNS), un `*` casserait la lecture.
+ */
+async function leconsAvecQuiz(
+  supabase: SupabaseClient,
+  chapterId: string,
+): Promise<LeconRef[]> {
+  const { data: lessons, error } = await supabase
+    .from('lessons')
+    .select('id, position')
+    .eq('chapter_id', chapterId)
+    .order('position', { ascending: true })
+    .order('id', { ascending: true })
+    .returns<{ id: string; position: number }[]>()
+  if (error || !lessons || lessons.length === 0) return []
+
+  const { data: quizzes } = await supabase
+    .from('quizzes')
+    .select('id, title, lesson_id')
+    .in(
+      'lesson_id',
+      lessons.map((l) => l.id),
+    )
+    .order('id', { ascending: true })
+    .returns<{ id: string; title: string; lesson_id: string }[]>()
+
+  const quizParLecon = new Map<string, { id: string; title: string }>()
+  for (const q of quizzes ?? []) {
+    if (!quizParLecon.has(q.lesson_id)) {
+      quizParLecon.set(q.lesson_id, { id: q.id, title: q.title })
+    }
+  }
+  return lessons.map((l) => {
+    const q = quizParLecon.get(l.id)
+    return {
+      id: l.id,
+      position: l.position,
+      quizId: q?.id ?? null,
+      quizTitre: q?.title ?? null,
+    }
+  })
+}
+
+/**
+ * LE QUIZ SUIVANT — la tentation de l'écran de fin (« Quiz suivant · +30 XP »).
+ *
+ * Celui de la leçon d'après dans le même chapitre ; à la fin du chapitre, le
+ * premier quiz du chapitre suivant de la matière, au même niveau ; au bout du
+ * programme, rien. L'XP annoncée est celle que le chapitre visé peut encore
+ * rapporter (sa prochaine couronne, cf. `xpPromise`).
+ *
+ * FACULTATIF de bout en bout : la moindre erreur rend `null`, et l'écran de
+ * fin retombe sur « Continuer ». Un quiz doit rester jouable même quand la
+ * suite ne se laisse pas deviner.
+ */
+async function trouverQuizSuivant({
+  supabase,
+  user,
+  quizId,
+  chapitre,
+}: {
+  supabase: SupabaseClient
+  user: CurrentUser | null
+  quizId: string
+  chapitre: ChapitreDuQuiz | null
+}): Promise<QuizSuivant | null> {
+  if (!chapitre) return null
+  try {
+    let cible: QuizCible | null = quizDeLaLeconSuivante(
+      await leconsAvecQuiz(supabase, chapitre.id),
+      quizId,
+    )
+    let chapitreCible = chapitre.id
+
+    if (!cible) {
+      // Les chapitres de la matière à ce niveau : une lecture filtrée par
+      // matière, donc paginée (règle du projet : PostgREST rend au plus
+      // 1 000 lignes sans le dire).
+      const { data: chapitres } = await toutLire<ChapitreRef>((from, to) =>
+        supabase
+          .from('chapters')
+          .select('id, position')
+          .eq('subject_id', chapitre.subject_id)
+          .eq('level', chapitre.level)
+          .order('id', { ascending: true })
+          .range(from, to)
+          .returns<ChapitreRef[]>(),
+      )
+      const suivant = chapitreSuivant(chapitres, chapitre.id)
+      if (!suivant) return null
+      cible = premierQuiz(await leconsAvecQuiz(supabase, suivant.id))
+      if (!cible) return null
+      chapitreCible = suivant.id
+    }
+
+    // L'XP promise : la prochaine couronne du chapitre visé. Sans utilisateur,
+    // le chapitre est vierge par définition — première couronne.
+    let valeur = 0
+    if (user) {
+      const mastery = await getChapterMastery(supabase, user.id)
+      valeur = mastery.get(chapitreCible)?.value ?? 0
+    }
+
+    return { href: `/test/${cible.quizId}`, titre: cible.titre, xp: xpPromise(valeur) }
+  } catch (e) {
+    console.error(
+      '[test] quiz suivant introuvable:',
+      e instanceof Error ? e.message : e,
+    )
+    return null
+  }
 }

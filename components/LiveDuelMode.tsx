@@ -15,6 +15,7 @@ import {
   type ModeQuestion,
 } from '@/lib/defi-modes'
 import { mergeRounds } from '@/lib/duel-live'
+import { botById, pickBot } from '@/lib/duel/bots'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
 
 // Démarrage automatique (partie rapide par QR code) : 'create' crée la
@@ -54,7 +55,8 @@ export default function LiveDuelMode({
   auto,
   onExit,
 }: Props) {
-  const { state, create, join, sendRound, persist, leave } = useLiveDuel(userId)
+  const { state, create, join, sendRound, persist, challengeBot, leave } =
+    useLiveDuel(userId)
   const [joinCode, setJoinCode] = useState('')
   // Repli solo : on affronte un bot (duel BO3 contre un rival simulé). Rendu par
   // DuelMode, qui porte déjà l'écran VS, les sons, l'XP et la file « À revoir ».
@@ -133,16 +135,25 @@ export default function LiveDuelMode({
   // duel en direct gagné rapportait 0 XP (le serveur recalcule sur score/total
   // réels). Garde one-shot : le `winner` ne bascule qu'une fois, mais l'effet
   // pouvait rejouer si `myRounds`/`persist` changeaient d'identité.
+  //
+  // Face au ROBOT, rien n'est déposé en base : la session n'a jamais eu de
+  // second joueur, `submit_live_rounds` n'aurait rien à clore. L'activité, elle,
+  // compte (série, quêtes) : le duel a bel et bien été joué.
   const recordedRef = useRef(false)
   useEffect(() => {
     if (!state.winner || !state.duelId) return
-    persist(state.duelId, state.myRounds)
+    if (!state.bot) persist(state.duelId, state.myRounds)
     if (recordedRef.current) return
     recordedRef.current = true
     const answered = state.myRounds.length * ROUND_SIZE
     const correct = state.myRounds.reduce((s, r) => s + r.correct, 0)
     recordChallenge(correct, answered, 'duel').catch(() => {})
-  }, [state.winner, state.duelId, state.myRounds, persist])
+  }, [state.winner, state.duelId, state.myRounds, state.bot, persist])
+
+  // Le rival tel qu'on le nomme à l'écran : le robot du banc, ou l'anonyme du
+  // direct (un vrai joueur n'annonce pas son prénom par le canal).
+  const rival = state.bot ? botById(state.bot.id) : null
+  const rivalLabel = rival ? `${rival.name} · IA` : 'Rival'
 
   // --- Repli solo : duel contre un bot ---------------------------------------
   if (botMode) {
@@ -220,6 +231,16 @@ export default function LiveDuelMode({
   // --- Attente du rival : le QR code façon « Partie rapide » ------------------
   // Scanner le QR (appareil photo du téléphone) ouvre l'app directement sur
   // /defi/duel-rapide?rejoindre=<id> → le match démarre instantanément.
+  if (state.phase === 'waiting' && state.bot) {
+    // Le robot « scanne » : une seconde ou deux, comme un vrai joueur.
+    return (
+      <Centered live>
+        <Loader2 className="text-primary mb-2 size-6 animate-spin" aria-hidden="true" />
+        {rival ? `${rival.name} rejoint la partie…` : 'Ton rival rejoint la partie…'}
+      </Centered>
+    )
+  }
+
   if (state.phase === 'waiting') {
     const joinUrl =
       state.duelId && typeof window !== 'undefined'
@@ -257,6 +278,23 @@ export default function LiveDuelMode({
           </p>
           <p className="text-xs font-medium text-white/70">
             Le code est valable tant que cette fenêtre est ouverte.
+          </p>
+
+          {/* Personne sous la main ? Un ROBOT du banc prend la place du rival
+              et joue le match exactement comme un joueur en direct — manches,
+              attente, verdict BO3. Marqué IA, comme dans la course : on ne
+              raconte pas à un élève qu'un camarade a scanné son code. */}
+          <Button
+            variant="secondary"
+            onClick={() =>
+              challengeBot(pickBot(state.seed || state.duelId || userId).id, myLevel)
+            }
+            className="w-full"
+          >
+            <Bot className="size-4" aria-hidden="true" /> Affronter un robot
+          </Button>
+          <p className="-mt-2 text-xs font-medium text-white/70">
+            Un rival d’entraînement (IA) joue à la place du joueur.
           </p>
 
           <button
@@ -308,6 +346,15 @@ export default function LiveDuelMode({
         <p className="text-muted-foreground text-sm">
           Manches gagnées : {score.me} — {score.them}
         </p>
+        {rival ? (
+          <p className="text-muted-foreground flex items-center gap-1 text-xs">
+            <Bot className="size-3.5" aria-hidden="true" />
+            Contre {rival.name}, rival d’entraînement (IA)
+          </p>
+        ) : null}
+        <Button variant="ghost" onClick={handleExit}>
+          Retour à l’arène
+        </Button>
       </div>
     )
   }
@@ -319,6 +366,7 @@ export default function LiveDuelMode({
       questions={questions}
       currentRound={state.myRounds.length}
       opponentPresent={state.opponentPresent}
+      rivalLabel={rivalLabel}
       waitingForOpponent={state.myRounds.length > state.theirRounds.length}
       onRoundDone={(correct, timeMs) =>
         sendRound({ round: state.myRounds.length, correct, timeMs })
@@ -333,6 +381,7 @@ function LiveMatch({
   questions,
   currentRound,
   opponentPresent,
+  rivalLabel,
   waitingForOpponent,
   onRoundDone,
   onExit,
@@ -340,6 +389,8 @@ function LiveMatch({
   questions: ModeQuestion[]
   currentRound: number
   opponentPresent: boolean
+  /** « Rival », ou le prénom du robot suivi de « · IA ». */
+  rivalLabel: string
   waitingForOpponent: boolean
   onRoundDone: (correct: number, timeMs: number) => void
   onExit: () => void
@@ -437,7 +488,7 @@ function LiveMatch({
           ) : (
             <WifiOff className="text-destructive size-3" aria-hidden="true" />
           )}
-          {opponentPresent ? 'Rival connecté' : 'Rival déconnecté'}
+          {opponentPresent ? `${rivalLabel} connecté` : `${rivalLabel} déconnecté`}
         </span>
       </div>
 

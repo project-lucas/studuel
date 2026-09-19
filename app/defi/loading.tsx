@@ -3,7 +3,7 @@ import { Skeleton } from '@/components/ui/skeleton'
 // Squelette du Défi : l'écran d'arène (orbes sur les bords, centre, coffres, CTA).
 export default function DefiLoading() {
   return (
-    <div className="-mx-4 -mt-16 -mb-24 flex h-dvh flex-col overflow-hidden px-3 pt-14 pb-[calc(4.75rem+env(safe-area-inset-bottom))] md:mx-0 md:-my-10 md:pt-4 md:pb-4">
+    <div className="-mx-4 -mt-16 -mb-24 flex h-dvh flex-col overflow-hidden px-3 pt-14 pb-[calc(5.75rem+env(safe-area-inset-bottom))] md:mx-0 md:-my-10 md:pt-4 md:pb-4">
       <div className="mx-auto flex h-full w-full max-w-md flex-col gap-3">
         <Skeleton className="mx-auto h-8 w-56 rounded-full bg-white/10" />
 

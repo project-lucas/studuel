@@ -6,6 +6,11 @@ import { palierFloor } from '@/lib/jeux/paliers'
 import { fetchPalierStandings } from '@/lib/jeux/palier-standing-server'
 import { fetchUltimeStanding } from '@/lib/jeux/ultime-server'
 import { hasUltime } from '@/lib/jeux/ultime'
+import { lireEtoilesPayees } from '@/lib/jeux/palier-gemmes-server'
+import { exigerAccesJeu } from '@/lib/jeux/acces-server'
+import { programmeSlug } from '@/lib/jeux/programme'
+import { gameScene } from '@/lib/defi/modes-catalog'
+import { subjectVignette } from '@/lib/subject-style'
 import { readRowTolerant } from '@/lib/profile-read'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { createClient } from '@/lib/supabase/server'
@@ -51,25 +56,34 @@ export default async function SalonJeuPage({
 
   const user = await getCurrentUser()
   if (!user) redirect('/defi')
+  // Un jeu réservé à Studuel+ (un seul jeu libre par matière, lib/jeux/acces).
+  await exigerAccesJeu(user.id, jeu)
 
   const supabase = await createClient()
-  const profile = await readRowTolerant<{ grade_level: string | null }>(
-    supabase,
-    'profiles',
-    'id',
-    user.id,
-    ['grade_level'],
-  )
+  // Une seule vague : le profil, les places, l'ultime et les étoiles déjà
+  // payées en gemmes (373) ne dépendent pas les uns des autres.
+  const [profile, standings, ultime, etoilesPayees] = await Promise.all([
+    readRowTolerant<{ grade_level: string | null }>(supabase, 'profiles', 'id', user.id, [
+      'grade_level',
+    ]),
+    fetchPalierStandings(supabase, jeu),
+    hasUltime(jeu) ? fetchUltimeStanding(supabase, jeu) : Promise.resolve(null),
+    lireEtoilesPayees(supabase, jeu),
+  ])
 
   return (
     <PalierMap
       format={format}
       name={found.game.name}
+      tagline={found.game.tagline}
       subject={found.salon.subject}
       subjectEmoji={found.salon.emoji}
+      subjectVignette={subjectVignette(programmeSlug(found.salon.subject)) ?? null}
+      scene={gameScene(found.game.id) ?? null}
       floor={palierFloor((profile.grade_level ?? null) as GradeLevel | null)}
-      standings={await fetchPalierStandings(supabase, jeu)}
-      ultime={hasUltime(jeu) ? await fetchUltimeStanding(supabase, jeu) : null}
+      standings={standings}
+      ultime={ultime}
+      etoilesPayees={etoilesPayees}
     />
   )
 }

@@ -1,3 +1,4 @@
+import { toutLire } from '@/lib/postgrest-pages'
 import Link from 'next/link'
 import { contentLevelFor } from '@/lib/grades'
 import { redirect } from 'next/navigation'
@@ -11,20 +12,15 @@ import {
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
-import TabHeader from '@/components/TabHeader'
 import TourGuide from '@/components/TourGuide'
 import SubjectsHome from '@/components/SubjectsHome'
-import ReviserSpaces from '@/components/ReviserSpaces'
 import ResumeSessions, { type ResumeItem } from '@/components/ResumeSessions'
-import CoursesShelf, {
-  type CourseShelfItem,
-} from '@/components/carnet/CoursesShelf'
-import CarnetFab from '@/components/carnet/CarnetFab'
-import CarnetAiCard from '@/components/carnet/CarnetAiCard'
-import RevoirBand from '@/components/carnet/RevoirBand'
 import CarnetButton from '@/components/carnet/CarnetButton'
+import ClasseChip from '@/components/reviser/ClasseChip'
+import { isGradeLevel } from '@/lib/grades'
 import SerieBar from '@/components/reviser/SerieBar'
 import MarcelFab from '@/components/reviser/MarcelFab'
+import PortailFixe from '@/components/PortailFixe'
 import SubjectMasteryCelebration from '@/components/SubjectMasteryCelebration'
 import { fetchGauges, gardiensSortis } from '@/lib/traque-server'
 import { createClient } from '@/lib/supabase/server'
@@ -38,14 +34,13 @@ import { subjectsWithContentAt } from '@/lib/subject-visibility'
 import { readRowTolerant } from '@/lib/profile-read'
 import { chapterState } from '@/lib/mastery'
 import { getChapterMastery } from '@/lib/mastery-server'
+import { compterCapsulesNonOuvertes } from '@/lib/capsules-server'
 import { fetchJoursActifs } from '@/lib/jours-actifs'
+import { lireGelsSerie } from '@/lib/boutique/boosts-server'
+import { normaliserPrioritaires } from '@/lib/matieres-prioritaires'
 import { getChapitresVus } from '@/lib/chapitres-vus'
 import { progressionMatiere, type ChapitreProgression } from '@/lib/progression'
-import {
-  toDayKey,
-  computeStreak,
-  weekProgress,
-} from '@/lib/streak'
+import { toDayKey, computeStreak, weekProgress } from '@/lib/streak'
 import {
   rowsToControles,
   derivePlanView,
@@ -63,14 +58,6 @@ import {
   isQuestionType,
   normalizeQuestionContent,
 } from '@/lib/carnet-cours'
-import {
-  bilanCours,
-  couronnes,
-  estDue,
-  etatInitial,
-  type CardState,
-} from '@/lib/carnet/planification'
-import { rowToState } from '@/lib/carnet/etats-server'
 import { examHeroUrgency, type SubjectExamHint } from '@/lib/next-exam'
 import type { Subject } from '@/lib/types'
 
@@ -88,6 +75,8 @@ type ProfileRow = {
   profile_type: string | null
   daily_goal_minutes: number | null
   tutorial_completed?: boolean | null
+  /** Les matières étoilées (359) ; absente tant que la migration dort. */
+  matieres_prioritaires?: unknown
 }
 
 export default async function ReviserPage() {
@@ -143,7 +132,6 @@ export default async function ReviserPage() {
     activityDays,
     { data: courseRows },
     { data: courseQuestionRows },
-    { data: carnetStateRows },
     { data: controleRows },
     { data: sessionRows },
     cachedSubjects,
@@ -154,6 +142,14 @@ export default async function ReviserPage() {
     // l'identique — rien ne justifierait une vague de plus pour colorer des
     // dossiers.
     jauges,
+    // Les capsules achetées et jamais ouvertes (366) : la pastille du bouton
+    // « Mon carnet ». Un compte en tête de requête, zéro tant que la
+    // migration dort.
+    capsulesNonOuvertes,
+    // Les gels de série achetés en boutique (368) : les jours qu'ils ont
+    // pontés comptent dans la flamme. Une ligne par clé primaire, neutre tant
+    // que la migration dort.
+    gelsSerie,
   ] = await Promise.all([
     readRowTolerant<ProfileRow>(supabase, 'profiles', 'id', user.id, [
       'full_name',
@@ -162,36 +158,30 @@ export default async function ReviserPage() {
       'profile_type',
       'daily_goal_minutes',
       'tutorial_completed',
+      'matieres_prioritaires',
     ]),
     getChapterMastery(supabase, user.id),
     fetchJoursActifs(supabase, user.id),
-    // Cours de Mon carnet (carnet_courses, migration 186) : l'étagère des
-    // cours façon Wooflash — échec isolé (migration pas passée) → bloc vide.
+    // Cours de Mon carnet (carnet_courses, migration 186) : depuis le
+    // 15/09/2026 le carnet a sa propre page (`/carnet`) ; ici on ne compte que
+    // les cours et leurs questions jouables pour le résumé du bouton
+    // « Mon carnet » — échec isolé (migration pas passée) → zéro.
     supabase
       .from('carnet_courses')
-      .select('id, title, description, icon, color')
+      .select('id')
       .eq('owner_id', user.id)
-      .order('updated_at', { ascending: false })
-      .limit(60),
+      .limit(200),
     // Questions des cours du carnet (type + contenu : il faut distinguer les
-    // brouillons des questions jouables pour le moteur « à revoir ») — borné
-    // comme les autres listes de la page, la RLS limite aux cours de l'élève.
-    supabase
-      .from('carnet_questions')
-      .select('id, course_id, type, content')
-      .limit(2_000),
-    // ÉTAT de chaque carte (migration 315) : il nourrit le héros « À revoir
-    // aujourd'hui », les badges par cours et les couronnes de maîtrise.
-    // Avant, cette page relisait les 4 000 DERNIÈRES TENTATIVES et rejouait la
-    // règle d'échéance sur chacune, à chaque affichage — un coût qui grandissait
-    // indéfiniment avec l'usage. L'échéance se LIT maintenant.
-    supabase
-      .from('carnet_question_states')
-      .select(
-        'question_id, phase, step, interval_days, ease, streak, reps, lapses, is_leech, due_at, last_seen_at',
-      )
-      .eq('user_id', user.id)
-      .limit(2_000),
+    // brouillons des questions jouables), page par page — PostgREST plafonne
+    // à 1 000 lignes sans le dire, la RLS limite aux cours de l'élève.
+    toutLire<{ id: string; type: string; content: unknown }>((from, to) =>
+      supabase
+        .from('carnet_questions')
+        .select('id, type, content')
+        .order('id', { ascending: true })
+        .range(from, to)
+        .returns<{ id: string; type: string; content: unknown }[]>(),
+    ),
     // Contrôles + plans de préparation (migration 203) : les deux tables sont
     // lues en isolation — si 203 n'est pas passée, `error` non nul et data null,
     // sans casser le reste de la page (le client Supabase ne lève pas).
@@ -217,6 +207,8 @@ export default async function ReviserPage() {
     getChapitresVus(supabase, user.id),
     // Les jauges de La Traque — voir `gardiens`, plus bas.
     fetchGauges(supabase, user.id),
+    compterCapsulesNonOuvertes(supabase, user.id),
+    lireGelsSerie(supabase, user.id),
   ])
 
   const grade = profile.grade_level ?? null
@@ -226,7 +218,10 @@ export default async function ReviserPage() {
   // Le test vit ICI plutôt qu'à la racine parce que le profil y est DÉJÀ
   // chargé : le faire en amont coûtait une requête de plus à chaque lancement
   // de l'app, pour tous les élèves, afin de router une poignée de parents.
-  if ((profile as { profile_type?: string | null } | null)?.profile_type === 'parent') {
+  if (
+    (profile as { profile_type?: string | null } | null)?.profile_type ===
+    'parent'
+  ) {
     redirect('/parents')
   }
 
@@ -277,18 +272,25 @@ export default async function ReviserPage() {
   }
   let levelChapters = cachedChapters
   if (levelChapters.length === 0) {
-    const { data } = await supabase
-      .from('chapters')
-      .select('id, subject_id, level, title, position')
-      .eq('level', contentLevelFor(grade))
-      .order('position', { ascending: true })
-      .returns<typeof cachedChapters>()
-    levelChapters = data ?? []
+    const { data } = await toutLire((from, to) =>
+      supabase
+        .from('chapters')
+        .select('id, subject_id, level, title, position')
+        .eq('level', contentLevelFor(grade))
+        .order('position', { ascending: true })
+        .order('id', { ascending: true })
+        .range(from, to)
+        .returns<typeof cachedChapters>(),
+    )
+    levelChapters = data
   }
 
   if (error) {
     // Détail technique en console pour le dev, message rassurant pour l'élève.
-    console.error('[reviser] chargement des matières impossible:', error.message)
+    console.error(
+      '[reviser] chargement des matières impossible:',
+      error.message,
+    )
     return (
       <div>
         <PageHeader title="Réviser" />
@@ -310,7 +312,7 @@ export default async function ReviserPage() {
   }
 
   // Série vivante pour la flamme du header.
-  const streak = computeStreak(activityDays)
+  const streak = computeStreak(activityDays, new Date(), gelsSerie)
   const week = weekProgress(activityDays)
 
   // L'objectif quotidien ne s'AFFICHE plus sur cet écran (l'anneau de minutes
@@ -353,7 +355,8 @@ export default async function ReviserPage() {
     ofLevel.map((s) => s.slug).filter((slug) => !withContent.has(slug)),
   )
   const followed = ofLevel.filter(
-    (s) => selected === null || selected.length === 0 || selected.includes(s.slug),
+    (s) =>
+      selected === null || selected.length === 0 || selected.includes(s.slug),
   )
   const followedIds = new Set(followed.map((s) => s.id))
   const subjectById = new Map(followed.map((s) => [s.id, s]))
@@ -448,7 +451,7 @@ export default async function ReviserPage() {
   //     (contrôle actif > reprise du plus avancé > fragile > découverte).
   //     La carte de mission a disparu ; son classement, lui, reste le bon — il
   //     nourrit maintenant la rangée des deux dernières sessions.
-  const { mission, ensuite } = pickMission({
+  const { mission, ensuite, autresControles } = pickMission({
     today,
     controles,
     subjectNameBySlug: Object.fromEntries(
@@ -470,8 +473,12 @@ export default async function ReviserPage() {
   // Le contrôle porté par la mission : c'est sa DATE qui donne l'échéance
   // affichée sur la carte de tête.
   const controleById = new Map(controles.map((c) => [c.id, c]))
+  // TOUS les contrôles actifs suivent la mission, dans l'ordre des dates :
+  // plusieurs contrôles = plusieurs cartes empilées, celle du haut est le
+  // plus proche. Les reprises viennent après.
   const resumeItems: ResumeItem[] = [
     ...(mission ? [mission] : []),
+    ...autresControles,
     ...ensuite,
   ].flatMap((m) => {
     const subject = subjectBySlug.get(m.subjectSlug)
@@ -490,7 +497,16 @@ export default async function ReviserPage() {
         kind: m.kind,
         progress: m.progress,
         minutes: m.minutes,
+        // L'identifiant du contrôle : c'est lui que la croix de l'angle
+        // retire quand l'élève s'est trompé en l'annonçant.
+        controleId: controle?.id ?? null,
         urgency: controle ? examHeroUrgency(controle.date, today) : null,
+        // Les jours qui restent avant le contrôle daté : le compte à rebours
+        // posé à droite de la carte (« J-5 »). Nul sans date.
+        daysLeft:
+          controle && controle.date !== null
+            ? Math.max(0, daysBetween(today, controle.date))
+            : null,
         // Les séances du plan de préparation, comptées : ce sont les bâtons
         // verts de la carte. Le « 1/3 » existait déjà (derivePlanView) mais ne
         // vivait que dans l'écran de préparation — la révision espacée ne se
@@ -498,7 +514,11 @@ export default async function ReviserPage() {
         prep: controle
           ? (() => {
               const view = derivePlanView(controle, today)
-              return { done: view.done, total: view.total, missed: view.missed }
+              return {
+                done: view.done,
+                total: view.total,
+                missed: view.missed,
+              }
             })()
           : null,
       },
@@ -535,62 +555,14 @@ export default async function ReviserPage() {
     controles.flatMap((c) => c.chapters.map((ch) => ch.id)),
   )
 
-  // --- Mes cours (Mon carnet) : étagère calculée côté serveur -----------------
-  // Questions JOUABLES par cours (brouillons exclus) : c'est la matière des
-  // badges « à revoir » et des couronnes de chaque cours.
-  const playableByCourse = new Map<string, string[]>()
-  const playableQuestions: { id: string; courseId: string }[] = []
+  // --- Mon carnet : le résumé du bouton (n cours · n questions jouables) ------
+  const carnetCoursesCount = (courseRows ?? []).length
+  let carnetQuestionsCount = 0
   for (const row of courseQuestionRows ?? []) {
     if (!isQuestionType(row.type)) continue
     const content = normalizeQuestionContent(row.type, row.content)
-    if (!isQuestionReady(row.type, content)) continue
-    const courseId = String(row.course_id)
-    const id = String(row.id)
-    playableQuestions.push({ id, courseId })
-    const list = playableByCourse.get(courseId)
-    if (list) list.push(id)
-    else playableByCourse.set(courseId, [id])
+    if (isQuestionReady(row.type, content)) carnetQuestionsCount += 1
   }
-
-  const nowIso = new Date().toISOString()
-  // Les états lus, indexés par question. Une carte sans ligne n'a jamais été
-  // vue : état neuf, donc due.
-  const etatsCarnet = new Map<string, CardState>()
-  for (const row of carnetStateRows ?? []) {
-    etatsCarnet.set(
-      String(row.question_id),
-      rowToState(row as Parameters<typeof rowToState>[0], nowIso),
-    )
-  }
-  const etatDe = (qid: string): CardState =>
-    etatsCarnet.get(qid) ?? etatInitial(nowIso)
-
-  // Le total dû, tous cours confondus : c'est le chiffre du héros « À revoir ».
-  const dueTotal = playableQuestions.filter((q) =>
-    estDue(etatDe(q.id), nowIso),
-  ).length
-
-  const courseItems: CourseShelfItem[] = (courseRows ?? []).map((r) => {
-    const id = String(r.id)
-    const playable = playableByCourse.get(id) ?? []
-    const bilan = bilanCours(
-      playable.map((qid) => ({ id: qid, state: etatDe(qid) })),
-      nowIso,
-    )
-    return {
-      id,
-      title: String(r.title ?? 'Sans titre'),
-      description: r.description ? String(r.description) : null,
-      icon: r.icon ? String(r.icon) : null,
-      color: r.color ? String(r.color) : null,
-      questionCount: playable.length,
-      dueCount: bilan.dues,
-      // Les couronnes se comptent désormais sur les cartes ACQUISES (intervalle
-      // ≥ 21 jours), et non sur « dernier essai juste » : une carte devinée une
-      // fois ne vaut pas une carte sue depuis deux mois.
-      crowns: couronnes(bilan),
-    }
-  })
 
   // Tour guidé. La base fait autorité dès qu'elle répond ; si la colonne 188
   // n'existe pas encore, on passe la main au composant, qui lira la mémoire
@@ -598,24 +570,32 @@ export default async function ReviserPage() {
   // être vrai sans la migration : une fonctionnalité entière, écrite et
   // testée, ne s'était jamais déclenchée chez un seul élève.
 
+  // `pt-3` sur mobile (Lucas, 17/09/2026 : « un peu plus de place entre la
+  // barre du haut et le bloc des jours ») : la coquille laisse 8 px sous le
+  // bandeau, la carte de série en gagne 12 de plus, et respire. Sur desktop la
+  // ligne de la classe tient déjà cet écart.
   return (
-    <div className="flex flex-col gap-3">
-      <TabHeader
-        title="Réviser"
-        action={
-          /* LA porte du carnet, sur la ligne du titre : la seule commande de
-             l'accueil visible sans défiler, juste au-dessus du « + Contrôle »
-             de la carte de série. Elle était un bouton-icône muet perdu entre
-             le crayon et la loupe, à mi-hauteur de page. */
-          <CarnetButton
-            coursesCount={courseItems.length}
-            questionsCount={courseItems.reduce(
-              (sum, c) => sum + c.questionCount,
-              0,
-            )}
-          />
-        }
-      />
+    <div className="flex flex-col gap-3 pt-3 md:pt-0">
+      {/* Plus de titre « Réviser » (Lucas, 16/09/2026) : le mot vit sous
+          l'icône active de la barre. LA CLASSE tient l'ANGLE HAUT-DROIT
+          (Lucas, 17/09/2026) : sur mobile, elle se pose dans la bande du
+          bandeau du haut, au bord droit que les cristaux ont libéré en
+          rejoignant l'écusson de niveau — même hauteur (h-14), même ligne. Un
+          tap pour en changer : on s'aperçoit ici, devant le programme, qu'on
+          est dans la mauvaise année, pas dans le profil. Sur desktop, pas de
+          bandeau : elle reprend sa ligne, alignée à droite. La porte du carnet
+          est descendue dans la carte de série. */}
+      {/* Mobile : la puce vit dans <body> (PortailFixe) pour rester collée au
+          bandeau pendant le défilement. Desktop :
+          elle garde sa ligne, dans le flux. */}
+      <PortailFixe>
+        <div className="fixed top-0 right-3 z-50 flex h-14 items-center md:hidden">
+          <ClasseChip current={isGradeLevel(grade) ? grade : null} />
+        </div>
+      </PortailFixe>
+      <div className="hidden justify-end md:flex">
+        <ClasseChip current={isGradeLevel(grade) ? grade : null} />
+      </div>
       {/* Tour guidé post-onboarding (spotlights sur la nav + bulles). */}
       <TourGuide etatEnBase={profile.tutorial_completed} />
       {/* Fête (une seule fois) les matières arrivées à 90 % ou 100 %. */}
@@ -626,81 +606,63 @@ export default async function ReviserPage() {
           pct: progressBySlug[s.slug] ?? 0,
         }))}
       />
-      {/* Deux espaces : « Mes matières » (la série, ce qu'on reprend, le
-          programme) et « Mon carnet » (les cours que l'élève écrit lui-même —
-          rien d'autre). */}
-      <ReviserSpaces
-        reviser={
-          <div className="flex flex-col gap-4">
-            {/* La tête de Marcel, flottante en bas à droite : depuis qu'il n'a
-                plus d'onglet, c'est LA porte du coach. Elle ne vit que dans ce
-                volet — le carnet a son propre « + » au même endroit, et le volet
-                inactif est `hidden`, donc retiré du rendu. */}
-            <MarcelFab />
-            {/* TROIS blocs, dans cet ordre : où j'en suis (la série), ce que je
+      {/* UN SEUL espace : le programme officiel. Le carnet, qui partageait cet
+          écran derrière un volet (`?espace=carnet`), a sa propre page depuis
+          le 15/09/2026 (`app/carnet`) — le bouton « Mon carnet » du titre y
+          mène. */}
+      <div className="flex flex-col gap-4">
+        {/* La tête de Marcel, flottante en bas à droite : depuis qu'il n'a
+                plus d'onglet, c'est LA porte du coach. */}
+        <MarcelFab />
+        {/* TROIS blocs, dans cet ordre : où j'en suis (la série), ce que je
                 reprends (deux sessions), où je vais (mes dossiers). */}
-            <SubjectsHome
-              subjects={ofLevel}
-              selected={selected}
-              grade={grade}
-              progressBySlug={progressBySlug}
-              examBySubject={examBySubject}
-              emptySlugs={emptySlugs}
-              gardiens={gardiens}
-              topSlot={
-                /* DEUX blocs avant les matières, plus cinq. L'accueil empilait
+        <SubjectsHome
+          subjects={ofLevel}
+          selected={selected}
+          prioritaires={normaliserPrioritaires(profile?.matieres_prioritaires)}
+          grade={grade}
+          progressBySlug={progressBySlug}
+          examBySubject={examBySubject}
+          emptySlugs={emptySlugs}
+          gardiens={gardiens}
+          topSlot={
+            /* DEUX blocs avant les matières, plus cinq. L'accueil empilait
                    la mission du jour, la ligne des contrôles, la boucle
                    post-contrôle, le rail des sessions et le bandeau trajet :
                    autant de propositions à trancher avant d'apercevoir la
                    première matière, sur l'écran que l'élève ouvre le plus
                    souvent. */
-                <>
-                  {/* 1. La série : la semaine, l'historique de l'année, et le
+            <>
+              {/* 1. La série : la semaine, l'historique de l'année, et le
                       seul geste d'organisation gardé ici (annoncer un
                       contrôle). */}
-                  <SerieBar
-                    streak={streak}
-                    week={week}
-                    today={today}
-                    activeDays={[...activityDays]}
-                    controles={controles}
-                    subjectMeta={subjectMeta}
-                    subjects={examSubjects}
-                    chaptersBySubject={chaptersBySubject}
-                    existingExamChapters={[...existingExamChapters]}
-                    goalMinutes={goalMinutes}
+              <SerieBar
+                streak={streak}
+                week={week}
+                today={today}
+                activeDays={[...activityDays]}
+                controles={controles}
+                subjectMeta={subjectMeta}
+                subjects={examSubjects}
+                chaptersBySubject={chaptersBySubject}
+                existingExamChapters={[...existingExamChapters]}
+                goalMinutes={goalMinutes}
+                carnetSlot={
+                  <CarnetButton
+                    coursesCount={carnetCoursesCount}
+                    questionsCount={carnetQuestionsCount}
+                    capsulesNouvelles={capsulesNonOuvertes}
+                    pleineLargeur
                   />
-                  {/* 2. « On s'y remet ? » — deux sessions à reprendre, pas une
+                }
+              />
+              {/* 2. « On s'y remet ? » — deux sessions à reprendre, pas une
                       réserve qui défile. */}
-                  <ResumeSessions items={resumeItems} />
-                </>
-              }
-            />
-          </div>
-        }
-        carnet={
-          <div className="flex flex-col gap-4">
-            {/* LE CARNET NE FAIT PLUS QU'UNE CHOSE : créer et tenir ses propres
-                dossiers de cours. Tout ce qui s'y était accumulé (héros « à
-                revoir », objectif examen, sessions en réserve, cartes de
-                préparation de contrôle, bandeau trajet) est parti : un volet
-                nommé « Mon carnet » qui ouvre sur cinq blocs dont aucun n'est un
-                cours, c'est un tiroir à fourre-tout, pas un carnet. */}
-            {/* Créer, de partout dans la liste : le « + » flottant (il ne vit
-                que dans ce volet, le panneau inactif étant `hidden`). */}
-            <CarnetFab />
-            {/* Ce que la journée réclame, en une bande — et le seul lien de
-                l'app vers la session transverse, restée orpheline. */}
-            <RevoirBand dues={dueTotal} />
-            {/* « Mes cours » — LE bloc du carnet, en tableau de bord :
-                couronnes, badges « à revoir », ▶ direct, brouillons repliés. */}
-            <CoursesShelf items={courseItems} />
-            {/* L'argument massue, enfin visible : l'IA rédige les questions
-                depuis le cours de l'élève (même feuille que le +). */}
-            <CarnetAiCard />
-          </div>
-        }
-      />
+              <ResumeSessions items={resumeItems} />
+            </>
+          }
+        />
+      </div>
     </div>
   )
 }

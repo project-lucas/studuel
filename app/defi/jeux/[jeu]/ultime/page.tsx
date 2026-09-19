@@ -5,6 +5,7 @@ import { gameFormat } from '@/lib/jeux/formats'
 import { buildUltimePool } from '@/lib/jeux/pools'
 import { hasUltime, ultimeFormat } from '@/lib/jeux/ultime'
 import { getCurrentUser } from '@/lib/supabase/user'
+import { exigerAccesJeu } from '@/lib/jeux/acces-server'
 import { nowMs } from '@/lib/defi-modes'
 
 export const dynamic = 'force-dynamic'
@@ -51,6 +52,8 @@ export default async function UltimePage({
 
   const user = await getCurrentUser()
   if (!user) redirect('/defi')
+  // Un jeu réservé à Studuel+ (un seul jeu libre par matière, lib/jeux/acces).
+  await exigerAccesJeu(user.id, jeu)
 
   // Le déblocage (trois étoiles au dernier palier) vit dans le stockage local :
   // le serveur ne peut pas le vérifier ici. Un lien profond joue donc l'épreuve

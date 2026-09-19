@@ -3,6 +3,8 @@ import {
   formatDuration,
   formatDurationFromSeconds,
   formatHours,
+  minuitParis,
+  parisDayKey,
 } from '@/lib/time'
 
 describe('formatDuration (minutes)', () => {
@@ -46,5 +48,36 @@ describe('formatHours', () => {
   it('minutes sur deux chiffres, omises si rondes', () => {
     expect(formatHours(2 * 3600 + 5 * 60)).toBe('2 h 05')
     expect(formatHours(12 * 3600)).toBe('12 h')
+  })
+})
+
+describe('parisDayKey', () => {
+  it('lit le jour de Paris, pas le jour UTC', () => {
+    // 23 h UTC en été = 1 h du matin le lendemain à Paris.
+    expect(parisDayKey(new Date('2026-09-18T23:00:00Z'))).toBe('2026-09-19')
+    expect(parisDayKey(new Date('2026-09-18T21:59:00Z'))).toBe('2026-09-18')
+    // L'hiver, une heure d'écart seulement.
+    expect(parisDayKey(new Date('2026-12-04T23:30:00Z'))).toBe('2026-12-05')
+  })
+})
+
+describe('minuitParis', () => {
+  it('minuit à Paris = 22 h UTC la veille en été, 23 h en hiver', () => {
+    expect(minuitParis('2026-09-19').toISOString()).toBe('2026-09-18T22:00:00.000Z')
+    expect(minuitParis('2026-12-05').toISOString()).toBe('2026-12-04T23:00:00.000Z')
+  })
+
+  it('suit le changement d’heure au jour près', () => {
+    // Dernier dimanche d'octobre 2026 : le 25. Samedi en heure d'été, lundi
+    // en heure d'hiver.
+    expect(minuitParis('2026-10-24').toISOString()).toBe('2026-10-23T22:00:00.000Z')
+    expect(minuitParis('2026-10-26').toISOString()).toBe('2026-10-25T23:00:00.000Z')
+    // Dernier dimanche de mars 2026 : le 29.
+    expect(minuitParis('2026-03-28').toISOString()).toBe('2026-03-27T23:00:00.000Z')
+    expect(minuitParis('2026-03-30').toISOString()).toBe('2026-03-29T22:00:00.000Z')
+  })
+
+  it('rend une date invalide sur une clé illisible, sans jeter', () => {
+    expect(Number.isNaN(minuitParis('pas-une-date').getTime())).toBe(true)
   })
 })

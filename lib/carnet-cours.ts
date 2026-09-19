@@ -147,17 +147,34 @@ export function normalizeCourseColor(raw: unknown): CourseColor {
     : 'violet'
 }
 
-// Petit vocabulaire d'icônes lucide proposé pour un cours.
+// Le vocabulaire d'icônes lucide proposé pour un cours : VINGT ET UNE, trois
+// rangées de sept dans le sélecteur (`components/carnet/CourseLook`, 10/09/2026,
+// dix icônes sur deux rangées ne couvraient pas le lycée : ni la physique, ni
+// la SVT, ni la philo, ni le code). L'ordre est celui de la grille — une
+// matière par icône, du général au particulier. Ajouter une icône = l'ajouter
+// ici ET dans `COURSE_ICON` (components/carnet/style.ts) ; TypeScript refuse
+// l'oubli.
 export const COURSE_ICONS = [
   'book-open',
   'languages',
   'calculator',
+  'sigma',
   'flask-conical',
+  'atom',
+  'leaf',
+  'microscope',
   'globe',
+  'map',
   'landmark',
+  'scroll',
+  'brain',
+  'feather',
+  'code',
   'music',
   'palette',
+  'drama',
   'dumbbell',
+  'lightbulb',
   'sparkles',
 ] as const
 export type CourseIcon = (typeof COURSE_ICONS)[number]

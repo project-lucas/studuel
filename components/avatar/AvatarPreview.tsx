@@ -30,7 +30,8 @@ export default function AvatarPreview({
       </div>
 
       <div key={popKey} className="avatar-pop relative w-36 sm:w-44">
-        <AvatarRender config={config} className="drop-shadow-lg" />
+        {/* Cadre carré : le blason s'affiche entier, pas rogné en visage. */}
+        <AvatarRender config={config} forme="blason" className="drop-shadow-lg" />
       </div>
 
       <div className="relative mt-2 text-center text-white drop-shadow-sm">

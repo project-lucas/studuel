@@ -1,0 +1,875 @@
+/* ---------------------------------------------------------------------------
+   LE CAHIER D'EXERCICES — la page de manuel.
+
+   Un module CSS plutôt que globals.css (qui ne se recompile plus en dev, cf.
+   la Boutique) : tout ce qui fait « manuel » vit ici — la palette des
+   DOCUMENTS, le cadre « Doc 1 », la carte, le texte aux mots touchables, les
+   blocs Scratch.
+
+   LA PALETTE DES DOCUMENTS EST UNE DÉROGATION ASSUMÉE, comme les teintes des
+   outils de Marcel : dans un document, la couleur porte une INFORMATION (une
+   légende, une série, la mer), jamais une action. L'eau est bleue, la forêt
+   verte, le désert sable — la convention des manuels et des atlas. Les boutons
+   restent violets, la récompense jaune, l'erreur corail. Teintes en oklch à la
+   clarté des `.outil-*`, pour que deux séries voisines pèsent pareil.
+   ------------------------------------------------------------------------ */
+
+.manuel {
+  --t-encre: var(--foreground);
+  --t-violet: var(--primary);
+  --t-jaune: oklch(0.8 0.15 80);
+  --t-corail: oklch(0.66 0.18 18);
+  --t-vert: oklch(0.6 0.14 150);
+  --t-bleu: oklch(0.56 0.16 250);
+  --t-ciel: oklch(0.8 0.08 230);
+  --t-turquoise: oklch(0.62 0.11 195);
+  --t-rose: oklch(0.66 0.17 355);
+  --t-ambre: oklch(0.72 0.15 62);
+  --t-brun: oklch(0.52 0.08 55);
+  --t-sable: oklch(0.86 0.07 85);
+  --t-gris: oklch(0.7 0.01 90);
+  --t-blanc: #fff;
+
+  /* La carte : mer, terres, côtes, fleuves, reliefs. */
+  --carte-mer: oklch(0.9 0.035 232);
+  --carte-terre: oklch(0.95 0.015 85);
+  --carte-voisin: oklch(0.925 0.018 85);
+  --carte-cote: oklch(0.7 0.03 80);
+  --carte-frontiere: oklch(0.78 0.02 80);
+  --carte-fleuve: oklch(0.6 0.12 245);
+  --carte-relief: oklch(0.6 0.08 55);
+  --carte-desert: oklch(0.82 0.1 85);
+  --carte-texte-mer: oklch(0.5 0.08 240);
+
+  /* Le papier des documents. */
+  --papier: #fffdf8;
+  --papier-trait: oklch(0.88 0.02 85);
+  --encre-douce: color-mix(in oklch, var(--foreground), transparent 32%);
+
+  /* Les états d'une zone touchée. */
+  --zone-choisie: var(--primary);
+  --zone-juste: var(--success);
+  --zone-fausse: var(--destructive);
+}
+
+/* ------------------------------------------------------------ l'exercice */
+
+.numero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.25rem;
+  height: 2.25rem;
+  padding: 0 0.5rem;
+  border-radius: 0.8rem 0.8rem 0.8rem 0.25rem;
+  background: var(--foreground);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.15rem;
+  line-height: 1;
+  box-shadow: 0 3px 0 color-mix(in oklch, var(--foreground), black 30%);
+}
+
+.etoile {
+  color: var(--highlight);
+  filter: drop-shadow(0 1px 0 color-mix(in oklch, var(--highlight), black 30%));
+}
+
+.etoileVide {
+  color: color-mix(in oklch, var(--foreground), transparent 82%);
+}
+
+.situation {
+  position: relative;
+  border-radius: 1.1rem;
+  background: color-mix(in oklch, var(--highlight), white 84%);
+  border: 1.5px dashed color-mix(in oklch, var(--highlight), black 12%);
+  padding: 0.85rem 1rem 0.85rem 1rem;
+}
+
+/* ------------------------------------------------------------ un document */
+
+.doc {
+  position: relative;
+  border-radius: 1.1rem;
+  background: var(--papier);
+  box-shadow:
+    0 0 0 1.5px var(--papier-trait),
+    0 10px 22px -18px rgba(36, 48, 79, 0.8);
+  overflow: hidden;
+}
+
+.docTete {
+  display: flex;
+  align-items: stretch;
+  gap: 0.6rem;
+  border-bottom: 1.5px solid var(--papier-trait);
+  background: color-mix(in oklch, var(--papier-trait), white 55%);
+}
+
+.docOnglet {
+  display: flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  background: var(--foreground);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.docTitre {
+  display: flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem 0.35rem 0;
+  font-weight: 800;
+  font-size: 0.86rem;
+  line-height: 1.25;
+}
+
+.docCorps {
+  padding: 0.85rem;
+}
+
+.docSource {
+  padding: 0 0.95rem 0.75rem;
+  font-size: 0.72rem;
+  font-style: italic;
+  color: var(--encre-douce);
+}
+
+/* ------------------------------------------------------------ le texte */
+
+.texte {
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.paragraphe {
+  display: grid;
+  grid-template-columns: 1.4rem 1fr;
+  gap: 0.35rem;
+  margin: 0 0 0.55rem;
+}
+
+.paragraphe:last-child {
+  margin-bottom: 0;
+}
+
+.repere {
+  padding-top: 0.2rem;
+  text-align: right;
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: color-mix(in oklch, var(--foreground), transparent 55%);
+  font-variant-numeric: tabular-nums;
+  user-select: none;
+}
+
+.poeme {
+  font-style: normal;
+}
+
+.vers {
+  display: grid;
+  grid-template-columns: 1.4rem 1fr;
+  gap: 0.35rem;
+}
+
+.strophe {
+  height: 0.7rem;
+}
+
+.personnage {
+  font-weight: 800;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+  color: var(--t-bleu);
+}
+
+.didascalie {
+  font-style: italic;
+  color: var(--encre-douce);
+}
+
+.mot {
+  border-radius: 0.35rem;
+  transition:
+    background-color 120ms,
+    box-shadow 120ms;
+}
+
+/* Un mot qu'on peut toucher : un soulignement pointillé, discret, pour que le
+   texte reste un texte et pas une grille de boutons. */
+.motTouchable {
+  cursor: pointer;
+  padding: 0.05rem 0.08rem;
+  margin: 0 -0.08rem;
+  text-decoration: underline dotted color-mix(in oklch, var(--primary), transparent 55%);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.22em;
+}
+
+.motTouchable:hover {
+  background: color-mix(in oklch, var(--primary), transparent 88%);
+}
+
+.motTouchable:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
+.motChoisi {
+  background: color-mix(in oklch, var(--zone-choisie), transparent 78%);
+  box-shadow: inset 0 -2px 0 var(--zone-choisie);
+}
+
+.motJuste {
+  background: color-mix(in oklch, var(--zone-juste), transparent 78%);
+  box-shadow: inset 0 -2px 0 var(--zone-juste);
+}
+
+.motFaux {
+  background: color-mix(in oklch, var(--zone-fausse), transparent 80%);
+  box-shadow: inset 0 -2px 0 var(--zone-fausse);
+  text-decoration: line-through;
+  text-decoration-color: color-mix(in oklch, var(--zone-fausse), transparent 30%);
+}
+
+.fraction {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  margin: 0 0.12em;
+  font-size: 0.82em;
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+}
+
+.fraction > span:first-child {
+  border-bottom: 1.5px solid currentColor;
+  padding: 0 0.15em;
+}
+
+/* ------------------------------------------------------------ le tableau */
+
+.tableau {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.86rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.tableau th,
+.tableau td {
+  border-right: 1.5px solid var(--papier-trait);
+  border-bottom: 1.5px solid var(--papier-trait);
+  padding: 0.45rem 0.55rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tableau tr > :first-child {
+  border-left: 1.5px solid var(--papier-trait);
+}
+
+.tableau thead th {
+  border-top: 1.5px solid var(--papier-trait);
+  background: color-mix(in oklch, var(--t-bleu), white 86%);
+  font-weight: 800;
+}
+
+.tableau thead th:first-child {
+  border-top-left-radius: 0.6rem;
+}
+
+.tableau thead th:last-child {
+  border-top-right-radius: 0.6rem;
+}
+
+.tableau tbody tr:last-child > :first-child {
+  border-bottom-left-radius: 0.6rem;
+}
+
+.tableau tbody tr:last-child > :last-child {
+  border-bottom-right-radius: 0.6rem;
+}
+
+.tableau tbody th {
+  background: color-mix(in oklch, var(--papier-trait), white 45%);
+  font-weight: 800;
+  text-align: left;
+}
+
+.caseTouchable {
+  cursor: pointer;
+}
+
+.caseTouchable:hover {
+  background: color-mix(in oklch, var(--primary), transparent 90%);
+}
+
+.caseChoisie {
+  background: color-mix(in oklch, var(--zone-choisie), transparent 80%) !important;
+  box-shadow: inset 0 0 0 2px var(--zone-choisie);
+}
+
+.caseJuste {
+  background: color-mix(in oklch, var(--zone-juste), transparent 80%) !important;
+  box-shadow: inset 0 0 0 2px var(--zone-juste);
+}
+
+.caseFausse {
+  background: color-mix(in oklch, var(--zone-fausse), transparent 82%) !important;
+  box-shadow: inset 0 0 0 2px var(--zone-fausse);
+}
+
+/* ------------------------------------------------------------ SVG communs */
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  font-family: var(--font-sans);
+  user-select: none;
+}
+
+.cible {
+  cursor: pointer;
+}
+
+.cible:focus-visible {
+  outline: none;
+}
+
+.cible:focus-visible > * {
+  stroke: var(--primary);
+  stroke-width: 3;
+}
+
+/* ------------------------------------------------------------ la légende */
+
+.legende {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.9rem;
+  margin-top: 0.7rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.legendeItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.pastille {
+  display: inline-block;
+  width: 0.95rem;
+  height: 0.75rem;
+  border-radius: 0.2rem;
+  box-shadow: inset 0 0 0 1px rgba(36, 48, 79, 0.25);
+}
+
+/* ------------------------------------------------------------ Scratch */
+
+.scratch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.pile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.bloc {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  min-height: 2.1rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 0.35rem;
+  background: var(--bloc);
+  box-shadow: inset 0 -2px 0 color-mix(in oklch, var(--bloc), black 18%);
+  margin-bottom: -1px;
+}
+
+.bloc::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0.9rem;
+  width: 1.1rem;
+  height: 0.3rem;
+  border-radius: 0 0 0.3rem 0.3rem;
+  background: var(--papier);
+}
+
+.bloc::after {
+  content: '';
+  position: absolute;
+  bottom: -0.28rem;
+  left: 0.9rem;
+  width: 1.1rem;
+  height: 0.3rem;
+  border-radius: 0 0 0.3rem 0.3rem;
+  background: var(--bloc);
+  z-index: 1;
+}
+
+.chapeau {
+  border-radius: 1.4rem 1.4rem 0.35rem 0.35rem;
+  padding-top: 0.75rem;
+}
+
+.chapeau::before {
+  display: none;
+}
+
+.bouche {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--bloc);
+  border-radius: 0.35rem;
+  padding-bottom: 0.9rem;
+  margin-bottom: -1px;
+  position: relative;
+}
+
+.bouche > .blocTete {
+  border-radius: 0.35rem 0.35rem 0 0;
+}
+
+.boucheCorps {
+  margin-left: 1rem;
+  padding: 0.25rem 0;
+  min-width: 6rem;
+  background: var(--papier);
+  border-radius: 0 0.35rem 0.35rem 0;
+}
+
+.entree {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.6rem;
+  padding: 0.05rem 0.45rem;
+  border-radius: 999px;
+  background: #fff;
+  color: #575e75;
+  font-weight: 600;
+}
+
+.blocTouchable {
+  cursor: pointer;
+}
+
+.blocChoisi {
+  outline: 3px solid var(--zone-choisie);
+  outline-offset: 1px;
+}
+
+.blocJuste {
+  outline: 3px solid var(--zone-juste);
+  outline-offset: 1px;
+}
+
+.blocFaux {
+  outline: 3px solid var(--zone-fausse);
+  outline-offset: 1px;
+}
+
+/* ------------------------------------------------------------ les fiches */
+
+.ticket {
+  margin: 0 auto;
+  max-width: 17rem;
+  padding: 1.1rem 1rem 1.3rem;
+  background: #fff;
+  font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+  color: #2b2f3a;
+  --dent: 7px;
+  mask:
+    conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / calc(2 * var(--dent)) 100%,
+    none;
+  box-shadow: 0 6px 16px -12px rgba(0, 0, 0, 0.6);
+}
+
+.menu {
+  margin: 0 auto;
+  max-width: 20rem;
+  padding: 1.1rem 1.2rem;
+  border-radius: 0.8rem;
+  background: #fffaf0;
+  box-shadow:
+    inset 0 0 0 2px color-mix(in oklch, var(--t-brun), white 55%),
+    inset 0 0 0 6px #fffaf0,
+    inset 0 0 0 7px color-mix(in oklch, var(--t-brun), white 70%);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.pointilles {
+  flex: 1;
+  border-bottom: 1.5px dotted color-mix(in oklch, var(--foreground), transparent 60%);
+  margin: 0 0.4rem 0.3rem;
+}
+
+.etiquetteNutri {
+  margin: 0 auto;
+  max-width: 17rem;
+  padding: 0.6rem 0.75rem;
+  background: #fff;
+  border: 2px solid #1d1d1d;
+  color: #1d1d1d;
+  font-size: 0.8rem;
+}
+
+/* Le tableau d'affichage d'une gare : fond nuit, lettres jaunes. */
+.horaires {
+  background: oklch(0.29 0.05 262);
+  color: oklch(0.87 0.13 90);
+}
+
+/* Le papier crème d'une carte postale. */
+.cartePostale {
+  background: #fffaf0;
+}
+
+.affiche {
+  margin: 0 auto;
+  max-width: 20rem;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 22px -16px rgba(0, 0, 0, 0.7);
+}
+
+.ligneTouchable {
+  cursor: pointer;
+  border-radius: 0.35rem;
+}
+
+.ligneTouchable:hover {
+  background: color-mix(in oklch, var(--primary), transparent 90%);
+}
+
+.ligneChoisie {
+  background: color-mix(in oklch, var(--zone-choisie), transparent 80%);
+  box-shadow: inset 0 0 0 2px var(--zone-choisie);
+}
+
+.ligneJuste {
+  background: color-mix(in oklch, var(--zone-juste), transparent 80%);
+  box-shadow: inset 0 0 0 2px var(--zone-juste);
+}
+
+.ligneFausse {
+  background: color-mix(in oklch, var(--zone-fausse), transparent 82%);
+  box-shadow: inset 0 0 0 2px var(--zone-fausse);
+}
+
+/* ------------------------------------------------------------ dialogue */
+
+.bulle {
+  max-width: 82%;
+  padding: 0.5rem 0.8rem;
+  border-radius: 1.1rem;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.bulleGauche {
+  align-self: flex-start;
+  border-bottom-left-radius: 0.3rem;
+  background: color-mix(in oklch, var(--papier-trait), white 30%);
+}
+
+.bulleDroite {
+  align-self: flex-end;
+  border-bottom-right-radius: 0.3rem;
+  background: color-mix(in oklch, var(--t-bleu), white 80%);
+}
+
+/* ------------------------------------------------------------ chaîne */
+
+.noeud {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  min-width: 4.6rem;
+  max-width: 9rem;
+  padding: 0.5rem 0.65rem;
+  border-radius: 0.9rem;
+  background: #fff;
+  box-shadow:
+    inset 0 0 0 2px var(--teinte, var(--papier-trait)),
+    0 3px 0 color-mix(in oklch, var(--teinte, var(--papier-trait)), black 12%);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.noeudTouchable {
+  cursor: pointer;
+}
+
+.noeudTouchable:hover {
+  background: color-mix(in oklch, var(--primary), white 92%);
+}
+
+.noeudChoisi {
+  box-shadow:
+    inset 0 0 0 3px var(--zone-choisie),
+    0 3px 0 color-mix(in oklch, var(--zone-choisie), black 20%);
+}
+
+.noeudJuste {
+  box-shadow:
+    inset 0 0 0 3px var(--zone-juste),
+    0 3px 0 color-mix(in oklch, var(--zone-juste), black 20%);
+}
+
+.noeudFaux {
+  box-shadow:
+    inset 0 0 0 3px var(--zone-fausse),
+    0 3px 0 color-mix(in oklch, var(--zone-fausse), black 20%);
+}
+
+/* ------------------------------------------------------------ les questions */
+
+.question {
+  border-radius: 1.3rem;
+  background: var(--card);
+  box-shadow:
+    0 0 0 1.5px var(--border),
+    0 12px 24px -22px rgba(36, 48, 79, 0.9);
+  padding: 1rem;
+  scroll-margin-top: 5rem;
+}
+
+.questionActive {
+  box-shadow:
+    0 0 0 2px color-mix(in oklch, var(--primary), transparent 55%),
+    0 14px 28px -20px color-mix(in oklch, var(--primary), transparent 30%);
+}
+
+.pastilleNumero {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 999px;
+  background: color-mix(in oklch, var(--primary), white 86%);
+  color: var(--primary);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.pastilleJuste {
+  background: var(--success);
+  color: #fff;
+}
+
+.pastilleFausse {
+  background: color-mix(in oklch, var(--destructive), white 20%);
+  color: #fff;
+}
+
+.coupDePouce {
+  border-radius: 0.9rem;
+  background: color-mix(in oklch, var(--highlight), white 80%);
+  padding: 0.6rem 0.8rem;
+  font-size: 0.86rem;
+}
+
+.explication {
+  border-radius: 0.9rem;
+  background: color-mix(in oklch, var(--success), white 88%);
+  padding: 0.6rem 0.8rem;
+  font-size: 0.86rem;
+}
+
+.explicationRatee {
+  background: color-mix(in oklch, var(--foreground), white 92%);
+}
+
+.puce {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 2.6rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 0.9rem;
+  background: #fff;
+  box-shadow:
+    inset 0 0 0 2px var(--border),
+    0 3px 0 var(--border);
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1.25;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 90ms,
+    box-shadow 90ms;
+}
+
+.puce:active {
+  transform: translateY(2px);
+  box-shadow:
+    inset 0 0 0 2px var(--border),
+    0 1px 0 var(--border);
+}
+
+.puce:disabled {
+  cursor: default;
+}
+
+.puceChoisie {
+  background: color-mix(in oklch, var(--primary), white 90%);
+  box-shadow:
+    inset 0 0 0 2px var(--primary),
+    0 3px 0 color-mix(in oklch, var(--primary), black 20%);
+  color: color-mix(in oklch, var(--primary), black 25%);
+}
+
+.puceJuste {
+  background: color-mix(in oklch, var(--success), white 88%);
+  box-shadow:
+    inset 0 0 0 2px var(--success),
+    0 3px 0 color-mix(in oklch, var(--success), black 20%);
+}
+
+.puceFausse {
+  background: color-mix(in oklch, var(--destructive), white 88%);
+  box-shadow:
+    inset 0 0 0 2px var(--destructive),
+    0 3px 0 color-mix(in oklch, var(--destructive), black 20%);
+}
+
+.trou {
+  display: inline-flex;
+  align-items: center;
+  min-width: 4.5rem;
+  min-height: 1.9rem;
+  margin: 0 0.15rem;
+  padding: 0 0.5rem;
+  border-radius: 0.55rem;
+  border: 2px dashed color-mix(in oklch, var(--primary), transparent 50%);
+  background: color-mix(in oklch, var(--primary), white 95%);
+  vertical-align: middle;
+  font-weight: 700;
+}
+
+.trouRempli {
+  border-style: solid;
+}
+
+.champ {
+  width: 100%;
+  min-height: 2.9rem;
+  border-radius: 0.9rem;
+  border: 2px solid var(--border);
+  background: #fff;
+  padding: 0 0.9rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.champ:focus-visible {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px color-mix(in oklch, var(--primary), transparent 80%);
+}
+
+/* ------------------------------------------------------------ le cahier */
+
+.chemin {
+  position: absolute;
+  top: 2.5rem;
+  bottom: 2.5rem;
+  left: 2.05rem;
+  width: 0;
+  border-left: 3px dotted color-mix(in oklch, var(--foreground), transparent 75%);
+}
+
+.carteExo {
+  position: relative;
+  border-radius: 1.4rem;
+  background: var(--card);
+  box-shadow:
+    0 0 0 1.5px var(--border),
+    0 14px 26px -22px rgba(36, 48, 79, 0.9);
+}
+
+.carteExoVerrouillee {
+  background: color-mix(in oklch, var(--card), var(--muted) 45%);
+  box-shadow: 0 0 0 1.5px var(--border);
+}
+
+.sceau {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.recompense {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.55rem 0.2rem 0.35rem;
+  border-radius: 999px;
+  background: color-mix(in oklch, var(--highlight), white 78%);
+  color: color-mix(in oklch, var(--highlight), black 55%);
+  font-weight: 800;
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .apparition {
+    animation: apparition 320ms cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+  }
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

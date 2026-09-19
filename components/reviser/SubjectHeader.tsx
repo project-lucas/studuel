@@ -1,6 +1,5 @@
 import BackButton from '@/components/BackButton'
 import SubjectIcon from '@/components/SubjectIcon'
-import AnneauProgression from '@/components/reviser/AnneauProgression'
 import { cn } from '@/lib/utils'
 import {
   subjectTheme,
@@ -84,7 +83,7 @@ export default function SubjectHeader({
         />
       )}
       <div className="relative mx-auto w-full max-w-4xl">
-        <div className="mb-4 flex items-start justify-between gap-3">
+        <div className="mb-4 flex items-center gap-3">
           <BackButton fallback="/reviser" label="Retour aux matières" />
 
           {/* ⚠️ NI GEMMES NI SÉRIE ICI — c'était un DOUBLON du bandeau du haut.
@@ -96,9 +95,8 @@ export default function SubjectHeader({
               donnait à croire à deux compteurs distincts. Un solde ne se dit
               qu'à un seul endroit.
 
-              L'écusson du GARDIEN reste : lui n'est nulle part ailleurs, et sa
-              jauge se remplit avec le travail de CETTE page. */}
-          <div className="flex items-center gap-2">{gardien}</div>
+              L'écusson du GARDIEN, lui, est descendu sur la ligne du titre
+              (voir plus bas). */}
         </div>
         <div className="flex items-center gap-4">
           {/* LE MÉDAILLON DE LA MATIÈRE : son illustration, la même que sur sa
@@ -153,9 +151,12 @@ export default function SubjectHeader({
                 Deux informations différentes, d'où deux lignes. */}
             {standing}
           </div>
-          {/* LE POURCENTAGE, EN GRAND. Il finissait la ligne grise en « · 1% » :
-              des heures de travail ne changeaient rien de visible ici. */}
-          <AnneauProgression pct={progress.pct} />
+          {/* L'ÉCUSSON DU GARDIEN, au bout de la ligne du titre (Lucas,
+              17/09/2026 : « l'icône boss doit aller là »). Il remplace l'anneau
+              du pourcentage : la barre en dessous le montre, et « · 1 % » au bout
+              de la ligne grise la faisait passer à deux lignes sur 390 px. Le gardien n'est nulle part ailleurs, et sa jauge se
+              remplit avec le travail de CETTE page. */}
+          {gardien ? <div className="shrink-0">{gardien}</div> : null}
         </div>
 
         {/* Barre de progression globale de la matière */}

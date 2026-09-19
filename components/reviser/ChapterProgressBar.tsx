@@ -38,6 +38,7 @@ export default function ChapterProgressBar({
   total,
   pct,
   unit,
+  sombre = false,
   className,
 }: {
   done: number
@@ -52,6 +53,12 @@ export default function ChapterProgressBar({
   pct?: number
   /** « fiche » ou « chapitre » — le mot que compte ce bloc. */
   unit: string
+  /**
+   * Posée sur une PLAQUE VIOLETTE (la carte d'un chapitre du programme) : le
+   * rail passe en blanc à 20 %, le compte en blanc, et la barre pleine en or
+   * — le violet d'un chapitre fini ne se verrait pas sur du violet.
+   */
+  sombre?: boolean
   className?: string
 }) {
   if (total <= 0) return null
@@ -71,11 +78,16 @@ export default function ChapterProgressBar({
     >
       {/* Le rail se voit MÊME VIDE : c'est ce qui fait qu'un chapitre pas
           commencé reste une ligne à comparer, et non un trou. */}
-      <span className="h-1.5 min-w-0 flex-1 overflow-hidden rounded-full bg-black/10">
+      <span
+        className={cn(
+          'h-1.5 min-w-0 flex-1 overflow-hidden rounded-full',
+          sombre ? 'bg-white/20' : 'bg-black/10',
+        )}
+      >
         <span
           className={cn(
             'block h-full rounded-full transition-[width] duration-700 ease-out',
-            complete ? 'bg-primary' : 'bg-highlight',
+            complete && !sombre ? 'bg-primary' : 'bg-highlight',
           )}
           style={{ width: `${Math.round(ratio * 100)}%` }}
         />
@@ -83,7 +95,11 @@ export default function ChapterProgressBar({
       <span
         className={cn(
           'flex shrink-0 items-center gap-1 text-xs font-semibold tabular-nums',
-          complete ? 'text-primary' : 'text-muted-foreground',
+          sombre
+            ? 'text-white/85'
+            : complete
+              ? 'text-primary'
+              : 'text-muted-foreground',
         )}
       >
         {complete ? <Check className="size-3.5" strokeWidth={3} /> : null}

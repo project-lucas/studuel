@@ -1,0 +1,469 @@
+{
+  "niveau": "demo",
+  "matiere": "vitrine",
+  "exercices": [
+    {
+      "chapitre": "00000000-0000-4000-8000-000000000001",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Vitrine : frise, carte antique, dialogue",
+      "competence": "se-reperer-temps",
+      "situation": "Un exercice de démonstration qui montre la frise, la carte de la Méditerranée et un dialogue en SMS.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "Rome, de la fondation à la chute",
+          "debut": -800,
+          "fin": 500,
+          "pas": 100,
+          "periodes": [
+            { "id": "royaute", "debut": -753, "fin": -509, "nom": "Royauté", "teinte": "ambre" },
+            { "id": "republique", "debut": -509, "fin": -27, "nom": "République", "teinte": "turquoise" },
+            { "id": "empire", "debut": -27, "fin": 476, "nom": "Empire", "teinte": "rose" }
+          ],
+          "evenements": [
+            { "id": "fondation", "date": -753, "nom": "Fondation de Rome" },
+            { "id": "cesar", "date": -44, "nom": "Mort de César" },
+            { "id": "chute", "date": 476, "nom": "Fin de l’Empire" }
+          ]
+        },
+        {
+          "id": "med",
+          "type": "carte",
+          "titre": "L’Empire romain vers 117",
+          "fond": "mediterranee",
+          "fleuves": ["nil", "danube", "rhin", "tibre", "euphrate", "tigre"],
+          "aires": [
+            {
+              "id": "empire",
+              "contour": [[-9, 43], [-2, 51], [7, 53.5], [9, 48], [15, 48], [22, 45], [30, 45.5], [40, 42], [44, 38], [47, 33], [40, 30], [35, 29], [33, 24], [30, 24], [25, 31], [15, 31], [10, 33], [0, 35], [-8, 34], [-10, 37]],
+              "teinte": "rose",
+              "motif": "plein",
+              "surTerre": true,
+              "etiquette": "Empire romain",
+              "etiquetteA": [2, 45]
+            }
+          ],
+          "lieux": [
+            { "id": "rome", "lieu": "rome", "nom": "Rome", "symbole": "etoile", "teinte": "corail" },
+            { "id": "alexandrie", "lieu": "alexandrie", "nom": "Alexandrie" },
+            { "id": "carthage", "lieu": "carthage", "nom": "Carthage" },
+            { "id": "athenes", "lieu": "athenes", "nom": "Athènes" },
+            { "id": "jerusalem", "lieu": "jerusalem", "nom": "Jérusalem" }
+          ],
+          "legende": [
+            { "teinte": "rose", "motif": "clair", "texte": "L’Empire romain à son apogée" },
+            { "teinte": "corail", "symbole": "etoile", "texte": "La capitale" }
+          ]
+        },
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "La conversation de Léa et Tom",
+          "participants": [
+            { "nom": "Léa", "emoji": "👧", "cote": "gauche" },
+            { "nom": "Tom", "emoji": "👦", "cote": "droite" }
+          ],
+          "repliques": [
+            { "qui": "Léa", "texte": "Tu as révisé la frise sur Rome ?" },
+            { "qui": "Tom", "texte": "Oui ! La République commence en 509 av. J.-C." },
+            { "qui": "Léa", "texte": "Et l’Empire en 27 av. J.-C., avec [[a|Auguste]] 👑" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche la période qui a duré le plus longtemps.",
+          "reponse": ["empire"],
+          "aide": "Compare la longueur des bandes colorées.",
+          "explication": "L’**Empire** dure de 27 av. J.-C. à 476 : plus de 500 ans."
+        },
+        {
+          "type": "zone",
+          "document": "med",
+          "enonce": "Touche la capitale de l’Empire.",
+          "reponse": ["rome"],
+          "aide": "Elle est marquée d’une étoile.",
+          "explication": "**Rome**, en Italie, est la capitale."
+        },
+        {
+          "type": "zone",
+          "document": "sms",
+          "enonce": "Touche le nom du premier empereur dans la conversation.",
+          "reponse": ["a"],
+          "aide": "Il est cité dans le dernier message.",
+          "explication": "**Auguste** devient le premier empereur en 27 av. J.-C."
+        }
+      ]
+    },
+    {
+      "chapitre": "00000000-0000-4000-8000-000000000002",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Vitrine : figure, droite graduée, solide, horloge",
+      "competence": "geometrie",
+      "situation": "Démonstration des documents de mathématiques.",
+      "documents": [
+        {
+          "id": "fig",
+          "type": "figure",
+          "titre": "Un triangle rectangle et son symétrique",
+          "cadre": { "xmin": 0, "xmax": 12, "ymin": 0, "ymax": 7 },
+          "quadrillage": true,
+          "points": [
+            { "id": "A", "x": 1, "y": 1, "position": "so" },
+            { "id": "B", "x": 5, "y": 1, "position": "se" },
+            { "id": "C", "x": 1, "y": 5, "position": "no" },
+            { "id": "P", "x": 6, "y": 0 },
+            { "id": "Q", "x": 6, "y": 7, "cache": true },
+            { "id": "A2", "nom": "A’", "x": 11, "y": 1, "position": "se" },
+            { "id": "B2", "nom": "B’", "x": 7, "y": 1, "position": "so" },
+            { "id": "C2", "nom": "C’", "x": 11, "y": 5, "position": "ne" }
+          ],
+          "polygones": [
+            { "id": "t1", "sommets": ["A", "B", "C"], "teinte": "violet", "motif": "clair" },
+            { "id": "t2", "sommets": ["A2", "B2", "C2"], "teinte": "turquoise", "motif": "clair" }
+          ],
+          "segments": [
+            { "de": "A", "a": "B", "codage": 2, "longueur": "4 cm" },
+            { "de": "A", "a": "C", "codage": 2 }
+          ],
+          "angles": [{ "sommet": "A", "de": "B", "a": "C", "droit": true }],
+          "droites": [{ "par": ["P", "Q"], "nom": "(d)", "style": "axe" }]
+        },
+        {
+          "id": "dg",
+          "type": "droite",
+          "titre": "Une droite graduée en dixièmes",
+          "min": 2,
+          "max": 4,
+          "pas": 1,
+          "division": 10,
+          "points": [{ "id": "m", "valeur": 2.6, "nom": "M" }],
+          "graduationsCliquables": true
+        },
+        {
+          "id": "pave",
+          "type": "solide",
+          "titre": "Un pavé droit en cubes",
+          "longueur": 4,
+          "largeur": 3,
+          "hauteur": 2,
+          "cubes": true,
+          "cotes": true,
+          "unite": "cm"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "fig",
+          "enonce": "Touche le symétrique du triangle ABC par rapport à la droite (d).",
+          "reponse": ["t2"],
+          "aide": "Il est de l’autre côté de l’axe.",
+          "explication": "C’est le triangle **A’B’C’**."
+        },
+        {
+          "type": "zone",
+          "document": "dg",
+          "enonce": "Place le nombre **3,4** sur la droite graduée.",
+          "reponse": ["v3.4"],
+          "aide": "Entre 3 et 4, chaque petit trait vaut un dixième.",
+          "explication": "3,4 est quatre petits traits après 3."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de cubes forment ce pavé ?",
+          "reponse": 24,
+          "unite": "cubes",
+          "aide": "4 × 3 cubes par étage, et 2 étages.",
+          "explication": "4 × 3 × 2 = **24** cubes."
+        }
+      ]
+    },
+    {
+      "chapitre": "00000000-0000-4000-8000-000000000003",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Vitrine : climat, secteurs, chaîne, Scratch",
+      "competence": "lire-graphique",
+      "situation": "Démonstration des graphiques et des schémas logiques.",
+      "documents": [
+        {
+          "id": "climat",
+          "type": "graphique",
+          "forme": "climat",
+          "titre": "Le climat de Tombouctou (Mali)",
+          "categories": ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"],
+          "series": [
+            { "nom": "Températures", "valeurs": [22, 24, 28, 31, 34, 34, 32, 30, 31, 30, 26, 22] },
+            { "nom": "Précipitations", "valeurs": [0, 0, 0, 1, 4, 18, 55, 75, 30, 4, 0, 0] }
+          ]
+        },
+        {
+          "id": "chaine",
+          "type": "chaine",
+          "titre": "Une chaîne d’énergie",
+          "disposition": "ligne",
+          "noeuds": [
+            { "id": "pile", "texte": "Pile", "emoji": "🔋", "teinte": "ambre" },
+            { "id": "moteur", "texte": "Moteur", "emoji": "⚙️", "teinte": "bleu" },
+            { "id": "roue", "texte": "?", "emoji": "🛞" }
+          ],
+          "liens": [
+            { "de": "pile", "a": "moteur", "texte": "énergie électrique" },
+            { "de": "moteur", "a": "roue", "texte": "énergie mécanique" }
+          ]
+        },
+        {
+          "id": "prog",
+          "type": "scratch",
+          "titre": "Le programme du lutin",
+          "scripts": [
+            [
+              { "categorie": "evenement", "texte": "quand le drapeau vert est cliqué" },
+              { "categorie": "stylo", "texte": "stylo en position d’écriture" },
+              {
+                "categorie": "controle",
+                "texte": "répéter (4) fois",
+                "interieur": [
+                  { "categorie": "mouvement", "texte": "avancer de (50) pas", "id": "avancer" },
+                  { "categorie": "mouvement", "texte": "tourner ↻ de (90) degrés", "id": "tourner" }
+                ]
+              },
+              { "categorie": "apparence", "texte": "dire [J’ai fini !] pendant (2) secondes", "id": "dire" }
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "climat",
+          "enonce": "Touche le mois le plus pluvieux.",
+          "reponse": ["k7"],
+          "aide": "Cherche la plus haute barre bleue.",
+          "explication": "C’est **août** : 75 mm."
+        },
+        {
+          "type": "zone",
+          "document": "prog",
+          "enonce": "Touche le bloc qui fait tourner le lutin.",
+          "reponse": ["tourner"],
+          "aide": "Il est dans la boucle.",
+          "explication": "Le bloc « **tourner de 90 degrés** »."
+        },
+        {
+          "type": "texte",
+          "enonce": "Que met en mouvement le moteur, à la fin de la chaîne ?",
+          "reponse": ["la roue", "roue", "une roue", "les roues"],
+          "aide": "Regarde l’émoji.",
+          "explication": "La **roue** reçoit l’énergie mécanique."
+        }
+      ]
+    },
+    {
+      "chapitre": "00000000-0000-4000-8000-000000000004",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Vitrine : poème, carte du monde, barres horizontales",
+      "competence": "analyser-texte",
+      "situation": "Démonstration du poème, du planisphère et des barres horizontales.",
+      "documents": [
+        {
+          "id": "poeme",
+          "type": "texte",
+          "genre": "poeme",
+          "titre": "Demain, dès l’aube…",
+          "auteur": "Victor Hugo, Les Contemplations (1856)",
+          "blocs": [
+            "Demain, dès l’aube, à l’heure où blanchit la [[r|campagne]],",
+            "Je partirai. Vois-tu, je sais que tu m’attends.",
+            "J’irai par la forêt, j’irai par la [[r|montagne]].",
+            "Je ne puis demeurer loin de toi plus longtemps."
+          ]
+        },
+        {
+          "id": "monde",
+          "type": "carte",
+          "titre": "Les foyers de peuplement",
+          "fond": "monde",
+          "reperes": true,
+          "regions": [
+            { "code": "CHN", "teinte": "corail" },
+            { "code": "IND", "teinte": "corail" },
+            { "code": "BGD", "teinte": "corail" },
+            { "code": "IDN", "teinte": "ambre" },
+            { "code": "JPN", "teinte": "ambre" }
+          ],
+          "regionsCliquables": true,
+          "legende": [
+            { "teinte": "corail", "texte": "Plus d’un milliard d’habitants (ou très dense)" },
+            { "teinte": "ambre", "texte": "Pays très peuplés" }
+          ]
+        },
+        {
+          "id": "villes",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Les plus grandes agglomérations",
+          "categories": ["Tokyo", "Delhi", "Shanghai", "São Paulo", "Le Caire"],
+          "series": [{ "nom": "Habitants", "valeurs": [37, 33, 29, 22, 22], "teinte": "violet" }],
+          "axeY": { "titre": "Habitants", "unite": "millions" },
+          "valeurs": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "poeme",
+          "enonce": "Touche les deux mots qui riment en « -agne ».",
+          "reponse": ["r"],
+          "aide": "Regarde la fin des vers 1 et 3.",
+          "explication": "**Campagne** et **montagne** riment."
+        },
+        {
+          "type": "zone",
+          "document": "monde",
+          "enonce": "Touche l’Inde sur la carte.",
+          "reponse": ["IND"],
+          "aide": "Au sud de l’Himalaya.",
+          "explication": "L’**Inde** est le pays le plus peuplé du monde."
+        },
+        {
+          "type": "zone",
+          "document": "villes",
+          "enonce": "Touche l’agglomération la plus peuplée.",
+          "reponse": ["k0"],
+          "aide": "La plus longue barre.",
+          "explication": "**Tokyo**."
+        }
+      ]
+    },
+    {
+      "chapitre": "00000000-0000-4000-8000-000000000006",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Vitrine : circuits en série et en dérivation",
+      "competence": "observer-schema",
+      "situation": "Démonstration des schémas électriques normalisés.",
+      "documents": [
+        {
+          "id": "serie",
+          "type": "circuit",
+          "titre": "Un circuit en série",
+          "branches": [
+            { "de": [0, 3], "a": [0, 0], "composant": "pile", "id": "pile" },
+            { "de": [0, 0], "a": [6, 0], "composant": "lampe", "nom": "L1", "id": "lampe", "allume": true },
+            { "de": [6, 0], "a": [6, 3], "composant": "interrupteur-ferme", "id": "inter" },
+            { "de": [6, 3], "a": [0, 3], "composant": "moteur", "id": "moteur" }
+          ]
+        },
+        {
+          "id": "derivation",
+          "type": "circuit",
+          "titre": "Deux lampes en dérivation",
+          "branches": [
+            { "de": [0, 4], "a": [0, 0], "composant": "pile" },
+            { "de": [0, 0], "a": [4, 0] },
+            { "de": [4, 0], "a": [8, 0] },
+            { "de": [0, 4], "a": [4, 4] },
+            { "de": [4, 4], "a": [8, 4] },
+            { "de": [4, 0], "a": [4, 4], "composant": "lampe", "nom": "L1", "allume": true, "id": "l1" },
+            { "de": [8, 0], "a": [8, 4], "composant": "del", "nom": "D", "allume": true, "id": "del" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "serie",
+          "enonce": "Touche le moteur.",
+          "reponse": ["moteur"],
+          "aide": "Son symbole est un cercle avec la lettre M.",
+          "explication": "Le **moteur** : un cercle marqué M."
+        },
+        {
+          "type": "zone",
+          "document": "derivation",
+          "enonce": "Touche la diode électroluminescente.",
+          "reponse": ["del"],
+          "aide": "Un triangle, une barre et deux petites flèches.",
+          "explication": "La **DEL** émet de la lumière : d’où les flèches."
+        }
+      ]
+    },
+    {
+      "chapitre": "00000000-0000-4000-8000-000000000005",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Vitrine : secteurs, horloge, ticket",
+      "competence": "calculer",
+      "situation": "Démonstration du diagramme circulaire, de l’horloge et du ticket de caisse.",
+      "documents": [
+        {
+          "id": "mix",
+          "type": "graphique",
+          "forme": "secteurs",
+          "titre": "L’électricité produite en France",
+          "categories": ["Nucléaire", "Hydraulique", "Éolien", "Solaire", "Autres"],
+          "series": [{ "nom": "Part", "valeurs": [65, 12, 10, 5, 8] }]
+        },
+        {
+          "id": "heure",
+          "type": "horloge",
+          "titre": "L’heure du départ",
+          "heures": 14,
+          "minutes": 35,
+          "numerique": false
+        },
+        {
+          "id": "ticket",
+          "type": "fiche",
+          "modele": "ticket",
+          "titre": "Le ticket de la boulangerie",
+          "entete": "Boulangerie du Port",
+          "sousTitre": "Mercredi 10:42",
+          "emoji": "🥖",
+          "lignes": [
+            { "texte": "2 baguettes", "valeur": "2,40 €" },
+            { "texte": "3 croissants", "valeur": "3,60 €", "id": "croissants" },
+            { "texte": "1 tarte aux pommes", "valeur": "2,75 €" },
+            { "separateur": true },
+            { "texte": "TOTAL", "valeur": "8,75 €", "gras": true, "id": "total" }
+          ],
+          "pied": "Merci et à bientôt !"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "mix",
+          "enonce": "Touche la source qui produit le plus d’électricité.",
+          "reponse": ["k0"],
+          "aide": "La plus grande part du disque.",
+          "explication": "Le **nucléaire** : 65 %."
+        },
+        {
+          "type": "texte",
+          "enonce": "Quelle heure indique l’horloge ? (écris-la comme 14h35)",
+          "reponse": ["14h35", "14 h 35", "2h35", "14:35"],
+          "aide": "La petite aiguille indique l’heure, la grande les minutes.",
+          "explication": "Il est **14 h 35**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien coûte un croissant ?",
+          "reponse": 1.2,
+          "unite": "€",
+          "aide": "3 croissants coûtent 3,60 €.",
+          "explication": "3,60 ÷ 3 = **1,20 €**."
+        }
+      ]
+    }
+  ]
+}

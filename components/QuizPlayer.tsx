@@ -13,11 +13,21 @@ import { verdictFor, verdictSrc } from '@/lib/verdict'
 import ComboBadge from '@/components/ComboBadge'
 import { formatDureeGain, formatDureeTotale } from '@/lib/quiz-bilan'
 import {
+  budgetChrono,
+  chronoApresReponse,
+  chronoEnAlerte,
+  chronoRatio,
+  chronoTick,
+  formatChrono,
+  tempsEcoule,
+} from '@/lib/quiz-chrono'
+import { motion, useReducedMotion } from 'framer-motion'
+import { compteAcquises, type QuizSuivant } from '@/lib/quiz-suivant'
+import {
   preparerCelebration,
   type Celebration,
 } from '@/lib/serie-celebration'
 import SerieCelebration from '@/components/quiz/SerieCelebration'
-import CarteBilan from '@/components/quiz/CarteBilan'
 import EnonceATrou from '@/components/quiz/EnonceATrou'
 import { estTexteATrou } from '@/lib/quiz-trous'
 import IconeUnite from '@/components/recompenses/IconeUnite'
@@ -42,9 +52,12 @@ import {
   CircleX,
   Clock,
   Flame,
+  Hourglass,
+  Play,
   RotateCcw,
-  Sparkles,
-  Trophy,
+  Target,
+  TimerOff,
+  Zap,
   ArrowLeft,
   X,
 } from 'lucide-react'
@@ -108,6 +121,21 @@ const ROBE_CONTINUER = cn(
   '[--pilule-bord:color-mix(in_oklab,var(--primary),black_18%)]',
 )
 
+/**
+ * « Quiz suivant » : le VIOLET plein de l'action, en plaque 3D — c'est LE
+ * bouton de l'écran de fin, celui qui empêche la fin d'en être une.
+ */
+const ROBE_SUIVANT = cn(
+  'text-primary-foreground',
+  '[--pilule-haut:color-mix(in_oklab,var(--primary),white_12%)]',
+  '[--pilule-bas:color-mix(in_oklab,var(--primary),black_6%)]',
+  '[--pilule-bord:color-mix(in_oklab,var(--primary),black_38%)]',
+)
+
+/** Une pilule de bilan : pastille d'icône à gauche, le chiffre en Baloo. */
+const PILULE_BILAN =
+  'flex min-w-0 items-center gap-2.5 rounded-full bg-card py-2 pr-5 pl-2.5 text-foreground ring-1 ring-black/5'
+
 // Session de quiz (template « structure des cours ») : à chaque réponse, l'élève
 // voit tout de suite si c'est juste ou faux, la bonne réponse et l'explication,
 // puis passe à la suivante d'un tap. Le score + le récap complet restent à la
@@ -126,6 +154,9 @@ export default function QuizPlayer({
   backHref = '/reviser',
   record = true,
   gradeLevel = null,
+  maitrise = null,
+  quizSuivant = null,
+  chrono = true,
 }: {
   quizId: string
   title: string
@@ -165,6 +196,22 @@ export default function QuizPlayer({
   // Classe du quiz : règle le TON du bilan (« Aïeee… » convient à un 6e, pas à
   // un Terminale qui prépare le bac). Absente pour un quiz personnel.
   gradeLevel?: string | null
+  /**
+   * Ce que le chapitre a DÉJÀ acquis parmi les questions du quiz entier, lu en
+   * base avant la manche (cf. lib/quiz-suivant) : la carte « Questions
+   * maîtrisées » y ajoute les réussites du jour. Nul sans mémoire à lire.
+   */
+  maitrise?: { acquisesIds: string[]; total: number } | null
+  /** Le quiz d'après, et l'XP qu'il promet — la tentation de l'écran de fin. */
+  quizSuivant?: QuizSuivant | null
+  /**
+   * LE CHRONO DE LA MANCHE (lib/quiz-chrono) — allumé par défaut. Un budget
+   * pour tout le paquet, une bonne réponse rend du temps, et à zéro la manche
+   * est ABANDONNÉE : rien n'est écrit. C'est le quiz « à la manière du duel »
+   * demandé le 16/09/2026 : on s'entraîne à répondre vite ET bien, sur le
+   * rythme de la course. `false` pour un écran qui n'en veut pas.
+   */
+  chrono?: boolean
 }) {
   // LA ROBE DE LA SESSION : la couleur de la matière, posée en variables
   // `--jeu-*` (globals.css). Les mêmes que celles des jeux de salon — c'est ce
@@ -239,10 +286,23 @@ export default function QuizPlayer({
   // La correction est REPLIÉE à l'arrivée : elle se consulte, elle ne s'impose
   // pas (cf. l'écran de fin, plus bas).
   const [correctionOuverte, setCorrectionOuverte] = useState(false)
+  // LE CHRONO DE LA MANCHE. Le temps qui reste, en secondes, et son miroir en
+  // ref pour que l'intervalle et `valider` lisent la même valeur sans attendre
+  // un rendu. Le budget est celui du PAQUET SERVI (un rejeu des erreurs, plus
+  // court, a un budget plus court).
+  const [secondesRestantes, setSecondesRestantes] = useState(() =>
+    budgetChrono(questions.length),
+  )
+  const secondesRef = useRef(secondesRestantes)
+  const [budget, setBudget] = useState(secondesRestantes)
+  // Le chrono est tombé à zéro : la manche est abandonnée, rien n'est écrit.
+  const [horsDelai, setHorsDelai] = useState(false)
   // La case « Gagné » du bilan sert de point de DÉPART aux jetons : c'est d'elle
   // qu'ils jaillissent pour rejoindre le bandeau du haut.
   const caseGainRef = useRef<HTMLLIElement>(null)
   const { celebrer } = useRecompenses()
+  // Le bouton « Quiz suivant » respire en boucle — sauf en mouvement réduit.
+  const reduce = useReducedMotion()
   // Le vol ne se joue qu'une fois. Ces écrans reçoivent une seconde réponse
   // serveur en retard (le bilan des cartes) : sans ce verrou, chaque re-rendu
   // relancerait la volée et le compteur monterait deux fois.
@@ -280,6 +340,26 @@ export default function QuizPlayer({
     )
     return () => clearTimeout(t)
   }, [finished, apparition, gains, celebrer])
+  // LE DÉCOMPTE. Il ne court que PENDANT qu'une question attend sa réponse :
+  // suspendu pendant la lecture de la correction (`valide`), sinon lire
+  // l'explication coûterait des secondes et l'élève apprendrait à ne pas la
+  // lire — l'inverse du but. Suspendu aussi quand l'onglet est caché, comme
+  // le Contre-la-montre du salon. À zéro : `horsDelai`, et l'écran d'abandon.
+  useEffect(() => {
+    if (!chrono || finished || valide || horsDelai) return
+    const id = setInterval(() => {
+      if (typeof document !== 'undefined' && document.visibilityState !== 'visible')
+        return
+      secondesRef.current = chronoTick(secondesRef.current)
+      setSecondesRestantes(secondesRef.current)
+      if (tempsEcoule(secondesRef.current)) {
+        sfx.wrong()
+        setHorsDelai(true)
+      }
+    }, 1000)
+    return () => clearInterval(id)
+  }, [chrono, finished, valide, horsDelai])
+
   // Verrou synchrone anti double-tap sur une option : `selected` (state) ne se
   // met à jour qu'au prochain rendu ; sans ce ref, deux taps rapprochés
   // pousseraient une réponse en double dans reviewsRef. Relâché à la suivante.
@@ -368,6 +448,12 @@ export default function QuizPlayer({
     if (good) sfx.correctCombo(nextStreak)
     else sfx.wrong()
     buzz(good, nextStreak)
+    // Une bonne réponse rend du temps ; une erreur n'en retire pas (elle a
+    // déjà coûté le point). Cf. lib/quiz-chrono.
+    if (chrono) {
+      secondesRef.current = chronoApresReponse(secondesRef.current, good)
+      setSecondesRestantes(secondesRef.current)
+    }
     reviewsRef.current.push({
       kind: 'question',
       id: question.id,
@@ -434,9 +520,64 @@ export default function QuizPlayer({
     lockedRef.current = false
     // Le chiffre se rafraîchira au prochain bilan, en repartant du total.
     setSecondesAffichees(null)
+    // Le chrono repart, au budget du paquet qu'on va jouer.
+    const nouveauBudget = budgetChrono(deck.length)
+    secondesRef.current = nouveauBudget
+    setSecondesRestantes(nouveauBudget)
+    setBudget(nouveauBudget)
+    setHorsDelai(false)
   }
 
   const restart = () => replay(allQuestions)
+
+  // ---------------------------------------------------------------------------
+  // Temps écoulé : la manche est ABANDONNÉE. Rien n'a été écrit — ni session,
+  // ni note, ni répétition espacée — et rien ne le sera : `finish()` n'a pas
+  // été appelé, `reviewsRef` part à la poubelle au rejeu. C'est la règle du
+  // duel (« pas de fausse session en route »), et c'est ce qui fait qu'un
+  // quiz laissé à moitié ne gonfle jamais la maîtrise du chapitre.
+  // ---------------------------------------------------------------------------
+  if (horsDelai) {
+    return (
+      <div
+        key="quiz-hors-delai"
+        className={cn(
+          robe,
+          'jeu-table quiz-fond relative flex min-h-svh flex-col items-center justify-center px-4 py-10 text-center text-foreground md:px-8',
+        )}
+      >
+        <span
+          aria-hidden="true"
+          className="grid size-20 place-items-center rounded-3xl bg-destructive text-white shadow-[0_6px_0_0] shadow-black/15"
+        >
+          <TimerOff className="size-10" strokeWidth={2.4} />
+        </span>
+        <h2 className="font-heading mt-5 text-3xl font-extrabold">Temps écoulé !</h2>
+        <p className="mt-2 max-w-sm text-sm font-medium text-foreground/70">
+          La manche s’arrête là, et rien n’est enregistré : {index} question
+          {index > 1 ? 's' : ''} sur {questions.length}. En duel non plus, le chrono
+          n’attend pas — reprends, plus vite.
+        </p>
+        <div className="mt-8 flex w-full max-w-xs flex-col gap-3">
+          <Button
+            type="button"
+            onClick={() => {
+              sfx.tap()
+              replay(questions)
+            }}
+            className="min-h-12 w-full rounded-full"
+          >
+            <RotateCcw className="size-4" aria-hidden="true" /> Réessayer
+          </Button>
+          <Button variant="outline" asChild className="min-h-11 w-full rounded-full">
+            <Link href={backHref} onClick={() => sfx.tap()}>
+              <ArrowLeft className="size-4" /> Quitter
+            </Link>
+          </Button>
+        </div>
+      </div>
+    )
+  }
 
   // ---------------------------------------------------------------------------
   // Écran final : score + correction complète, scrollable (template).
@@ -456,6 +597,20 @@ export default function QuizPlayer({
     // espéré. Vide sur un rejeu : l'XP d'un chapitre déjà maîtrisé ne se repaye
     // pas, et la case « Gagné » disparaît alors au lieu d'annoncer « +0 ».
     const gagne = agregerGains(gains)
+    const xpGagnee = gagne.find((g) => g.unite === 'xp')?.montant ?? 0
+    const autresGains = gagne.filter((g) => g.unite !== 'xp')
+    // LA MAÎTRISE DU CHAPITRE : les acquises en base + les réussites de cette
+    // manche, sans doublon. Sans mémoire (visiteur), la manche seule.
+    const reussiesIds = questions
+      .filter((q, i) => choices[i] === q.correct_index)
+      .map((q) => q.id)
+    const totalMaitrise = maitrise ? maitrise.total : questions.length
+    const acquises = maitrise
+      ? compteAcquises(maitrise.acquisesIds, reussiesIds, maitrise.total)
+      : score
+    const pctMaitrise =
+      totalMaitrise > 0 ? Math.round((acquises / totalMaitrise) * 100) : 0
+    const quizValide = totalMaitrise > 0 && acquises >= totalMaitrise
 
     // LA FÊTE DE SÉRIE PASSE DEVANT LE BILAN. Elle est montée par-dessus tout
     // (position fixe) tant que l'élève ne l'a pas refermée : le score l'attend
@@ -543,90 +698,158 @@ export default function QuizPlayer({
             {v.message}
           </p>
 
-          {/* LES TROIS LECTURES, EN TÊTE D'ÉCRAN.
-              Elles étaient trois boîtes à bandeau de couleur (façon Duolingo),
-              et le bloc « Réussite / Avancement / Ancrage » vivait plus bas,
-              dans le volet de la correction. C'est la CARTE DU BAS qui a gagné,
-              et elle est montée : elle porte une pastille d'icône, un « i » qui
-              explique la mesure et une jauge sous le nombre — trois choses que
-              le bandeau n'avait pas, et qui servent toutes les trois.
+          {/* LA CARTE « QUESTIONS MAÎTRISÉES » — le geste de Wilgo (16/09,
+              demande de Lucas). Les trois cases de bilan (gagné · temps ·
+              justesse) disaient comment la MANCHE s'était passée ; cette carte
+              dit où en est le CHAPITRE : combien de ses questions sont
+              acquises, et ce qu'il faut pour le valider. C'est la lecture qui
+              donne envie de rejouer — un 7/10 ne promet rien, un 10/28 dit ce
+              qu'il reste.
 
-              ⚠️ AVANCEMENT ET ANCRAGE SONT SUPPRIMÉS (01/09, à la demande). Ils
-              répondaient à « ai-je fait le tour du chapitre ? » et « est-ce que
-              ça tient dans le temps ? » — deux questions justes, mais posées au
-              moment où l'élève veut savoir comment il vient de s'en sortir. Ce
-              qu'on perd : la seule vue de la MÉMORISATION dans l'app, celle qui
-              distinguait « j'ai eu 8/10 » de « je le retiendrai ».
+              Le compte = ce que la base savait déjà + les réussites de cette
+              manche (les états s'écrivent après l'écran). Sans mémoire à lire
+              (visiteur), on compte les bonnes réponses de la manche. */}
+          <section
+            aria-label="Questions maîtrisées"
+            className="mt-5 w-full rounded-3xl bg-card p-4 ring-1 ring-black/5"
+          >
+            <div className="flex items-center justify-between gap-3">
+              <h2 className="font-heading text-base font-extrabold text-foreground">
+                Questions maîtrisées
+              </h2>
+              <span className="font-heading shrink-0 rounded-full bg-primary/10 px-3 py-1 text-sm font-extrabold text-primary tabular-nums">
+                {acquises}/{totalMaitrise}
+              </span>
+            </div>
+            <div
+              role="progressbar"
+              aria-label="Questions maîtrisées"
+              aria-valuemin={0}
+              aria-valuemax={totalMaitrise}
+              aria-valuenow={acquises}
+              className="mt-3 h-3 overflow-hidden rounded-full bg-primary/12"
+            >
+              <div
+                className="h-full rounded-full bg-primary transition-all duration-700 ease-out"
+                style={{ width: `${pctMaitrise}%` }}
+              />
+            </div>
+            <p className="mt-3 text-sm font-semibold text-pretty text-muted-foreground">
+              {quizValide
+                ? 'Quiz validé ! Toutes les questions sont maîtrisées.'
+                : 'Réponds correctement à toutes les questions de ce quiz pour le valider !'}
+            </p>
+          </section>
 
-              La case « Gagné » ne paraît que s'il y a quelque chose à annoncer :
-              un quiz rejoué ne verse plus d'XP, et une case « +0 » ferait de
-              chaque révision un constat d'échec. */}
+          {/* LES PILULES : la justesse de la manche, et ce qu'elle a rapporté
+              en XP — tel que la base l'a ÉCRIT, jamais le barème espéré. Un
+              rejeu ne verse rien (l'XP d'un chapitre déjà acquis ne se repaye
+              pas) : la pilule le dit en grisé plutôt que de disparaître, sinon
+              l'élève croit à une panne. Les autres unités (écus, cristaux)
+              prennent une pilule de plus quand il y en a.
+
+              La pilule XP est le point de DÉPART du vol des jetons vers le
+              bandeau (`caseGainRef`). */}
           <ul
-            className="mt-5 flex w-full items-stretch gap-2"
+            className="mt-4 flex w-full flex-wrap items-stretch justify-center gap-2.5"
             aria-label={`${score} bonne${score > 1 ? 's' : ''} réponse${score > 1 ? 's' : ''} sur ${questions.length}`}
           >
-            {gagne.length > 0 ? (
-              <CarteBilan
-                ton="gain"
-                titre="Gagné"
-                aide="Ce que cette session vient de te rapporter, versé sur ton compte."
-                icone={<Sparkles className="size-3" strokeWidth={2.6} aria-hidden="true" />}
-                ref={caseGainRef}
-              >
-                {gagne.map((g) => (
-                  <span key={g.unite} className="flex items-baseline gap-0.5">
-                    +{g.montant}
-                    <IconeUnite unite={g.unite} className="size-4 self-center" />
-                  </span>
-                ))}
-              </CarteBilan>
-            ) : null}
-
-            {/* LA CASE DU MILIEU CHANGE SELON CE QU'IL Y A À DIRE — c'est le
-                geste de Duolingo, dont la troisième boîte passe de « RAPIDE » à
-                « COMBO » selon la partie. Une belle série d'affilée est la
-                nouvelle du jour : elle passe devant le temps, qui se lit déjà
-                en haut de l'écran pendant toute la session.
-
-                ⚠️ LE SEUIL EST CELUI DU FEU (4), PAS CELUI DU BADGE (2). Le
-                badge de session s'allume tôt exprès, pour que l'escalade
-                commence vite — mais ici la case ÉVINCE le temps, et « ×2 »
-                n'est pas une nouvelle qui vaut qu'on cache autre chose. Sur un
-                quiz de deux questions, tout sans-faute aurait sinon affiché une
-                série au lieu du temps.
-
-                Ni l'une ni l'autre ne porte de JAUGE : une durée et une série
-                n'ont pas de plein auquel se comparer. */}
-            {best >= COMBO_FIRE ? (
-              <CarteBilan
-                ton="effort"
-                titre="Série"
-                aide="Ta plus longue suite de bonnes réponses d’affilée dans cette session."
-                icone={<Flame className="size-3" strokeWidth={2.6} aria-hidden="true" />}
-              >
-                ×{best}
-              </CarteBilan>
-            ) : record ? (
-              <CarteBilan
-                ton="effort"
-                titre="Temps"
-                aide="Le temps de révision de cette session, ajouté à ton total."
-                icone={<Clock className="size-3" strokeWidth={2.6} aria-hidden="true" />}
-              >
-                {formatDureeGain(secondesAffichees ?? 0)}
-              </CarteBilan>
-            ) : null}
-
-            <CarteBilan
-              ton="reussite"
-              titre="Réussite"
-              aide="Le pourcentage de bonnes réponses de cette session."
-              icone={<Trophy className="size-3" strokeWidth={2.6} aria-hidden="true" />}
-              jauge={Math.round(ratio * 100)}
+            <li
+              aria-label={`Réussite : ${Math.round(ratio * 100)} %`}
+              className={PILULE_BILAN}
             >
-              {Math.round(ratio * 100)}
-              <span className="text-base">&nbsp;%</span>
-            </CarteBilan>
+              <span
+                className="grid size-9 shrink-0 place-items-center rounded-full bg-success/15 text-success"
+                aria-hidden="true"
+              >
+                <Target className="size-4.5" strokeWidth={2.6} />
+              </span>
+              <span className="font-heading text-2xl leading-none font-extrabold tabular-nums">
+                {`${Math.round(ratio * 100)} %`}
+              </span>
+            </li>
+
+            {record && !isPartial ? (
+              <li
+                ref={caseGainRef}
+                aria-label={
+                  saved === null && xpGagnee === 0
+                    ? 'XP en cours de calcul'
+                    : xpGagnee > 0
+                      ? `${xpGagnee} XP gagnés`
+                      : 'Aucun XP : chapitre déjà acquis'
+                }
+                className={cn(
+                  PILULE_BILAN,
+                  saved !== null && xpGagnee === 0 && 'opacity-70',
+                )}
+              >
+                <span
+                  className="grid size-9 shrink-0 place-items-center rounded-full bg-highlight/25 text-[color-mix(in_oklch,var(--highlight),black_25%)]"
+                  aria-hidden="true"
+                >
+                  <Zap className="size-4.5 fill-current" strokeWidth={2.4} />
+                </span>
+                <span className="flex flex-col items-start leading-none">
+                  <span className="font-heading text-2xl leading-none font-extrabold tabular-nums">
+                    {saved === null && xpGagnee === 0
+                      ? '…'
+                      : xpGagnee > 0
+                        ? `+${xpGagnee}`
+                        : '0'}
+                    <span className="ml-1 text-base">XP</span>
+                  </span>
+                  {saved !== null && xpGagnee === 0 ? (
+                    <span className="mt-1 text-[10px] font-bold text-muted-foreground">
+                      déjà acquis
+                    </span>
+                  ) : null}
+                </span>
+              </li>
+            ) : null}
+
+            {autresGains.map((g) => (
+              <li
+                key={g.unite}
+                aria-label={libelleGain(g)}
+                className={PILULE_BILAN}
+              >
+                <IconeUnite unite={g.unite} className="size-7 shrink-0" />
+                <span className="font-heading text-2xl leading-none font-extrabold tabular-nums">
+                  +{g.montant}
+                </span>
+              </li>
+            ))}
+
+            {/* La série ÉVINCE le temps quand elle vaut le feu (COMBO_FIRE) :
+                c'est la nouvelle du jour. Sinon, le temps de la manche, figé
+                au bilan, cumulé sur les rejeux (cf. `secondesAffichees`). */}
+            {best >= COMBO_FIRE ? (
+              <li aria-label={`Série de ${best} bonnes réponses`} className={PILULE_BILAN}>
+                <span
+                  className="grid size-9 shrink-0 place-items-center rounded-full bg-primary/12 text-primary"
+                  aria-hidden="true"
+                >
+                  <Flame className="size-4.5" strokeWidth={2.6} />
+                </span>
+                <span className="font-heading text-2xl leading-none font-extrabold tabular-nums">
+                  ×{best}
+                </span>
+              </li>
+            ) : record ? (
+              <li className={PILULE_BILAN}>
+                <span
+                  className="grid size-9 shrink-0 place-items-center rounded-full bg-primary/12 text-primary"
+                  aria-hidden="true"
+                >
+                  <Clock className="size-4.5" strokeWidth={2.6} />
+                </span>
+                <span className="font-heading text-xl leading-none font-extrabold tabular-nums">
+                  <span className="sr-only">Temps </span>
+                  {formatDureeGain(secondesAffichees ?? 0)}
+                </span>
+              </li>
+            ) : null}
           </ul>
 
           {/* La récompense, dite en une phrase : « +30 » à côté d'un dessin ne
@@ -658,13 +881,19 @@ export default function QuizPlayer({
             </p>
           ) : null}
 
-          {/* LES REPRISES — pleine largeur, empilées, comme le CONTINUER de
-              Duolingo. Elles étaient côte à côte et à moitié larges : deux
-              cibles étroites pour un pouce, au lieu d'une évidence.
+          {/* LES BOUTONS — pleine largeur, empilés, comme le CONTINUER de
+              Duolingo.
 
-              « À revoir » passe DEVANT et garde son vert : c'est le geste qu'on
-              veut voir cliqué, les questions ratées étant le seul contenu utile
-              qui reste après un quiz. */}
+              « Revoir mes erreurs » passe DEVANT et garde son vert : c'est le
+              geste qu'on veut voir cliqué, les questions ratées étant le seul
+              contenu utile qui reste après un quiz.
+
+              Puis LA TENTATION : « Quiz suivant » avec, dans sa pastille, l'XP
+              qu'il promet — la mécanique de Wilgo et de Duolingo, où l'écran
+              de fin n'est jamais une fin. Il respire (framer-motion, 1,8 s)
+              pour être le seul objet qui bouge ; immobile en mouvement réduit.
+              Sans quiz suivant (fin du programme, quiz détaché), « Continuer »
+              ramène d'où l'on vient. */}
           <div className="mt-6 flex w-full flex-col gap-2.5">
             {peutRevoir ? (
               <Button
@@ -680,17 +909,74 @@ export default function QuizPlayer({
               </Button>
             ) : null}
 
-            <Button
-              onClick={restart}
-              className={cn(
-                PILULE_REPRISE,
-                ROBE_CONTINUER,
-                'h-14 w-full text-base',
-              )}
-            >
-              Continuer
-            </Button>
+            {quizSuivant ? (
+              <motion.div
+                className="w-full"
+                animate={reduce ? undefined : { scale: [1, 1.03, 1] }}
+                transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
+              >
+                <Button
+                  asChild
+                  className={cn(
+                    PILULE_REPRISE,
+                    ROBE_SUIVANT,
+                    'h-14 w-full text-base',
+                  )}
+                >
+                  <Link
+                    href={quizSuivant.href}
+                    onClick={() => sfx.tap()}
+                    aria-label={`Quiz suivant : ${quizSuivant.titre}${quizSuivant.xp > 0 ? `, +${quizSuivant.xp} XP` : ''}`}
+                  >
+                    <Play className="size-4 fill-current" aria-hidden="true" />
+                    Quiz suivant
+                    {quizSuivant.xp > 0 ? (
+                      <span
+                        aria-hidden="true"
+                        className="ml-1 rounded-full bg-white/20 px-2.5 py-1 text-sm font-extrabold tabular-nums"
+                      >
+                        +{quizSuivant.xp} XP
+                      </span>
+                    ) : null}
+                  </Link>
+                </Button>
+              </motion.div>
+            ) : (
+              <Button
+                asChild
+                className={cn(
+                  PILULE_REPRISE,
+                  ROBE_CONTINUER,
+                  'h-14 w-full text-base',
+                )}
+              >
+                <Link href={backHref} onClick={() => sfx.tap()}>
+                  Continuer
+                </Link>
+              </Button>
+            )}
           </div>
+
+          {quizSuivant ? (
+            <Link
+              href={backHref}
+              onClick={() => sfx.tap()}
+              className="font-heading mt-3 flex min-h-11 items-center justify-center px-4 text-base font-extrabold text-foreground transition active:translate-y-px"
+            >
+              Pas maintenant
+            </Link>
+          ) : null}
+
+          <button
+            type="button"
+            onClick={() => {
+              sfx.tap()
+              restart()
+            }}
+            className="mt-1 min-h-9 cursor-pointer text-xs font-bold text-muted-foreground underline underline-offset-4 transition hover:text-foreground"
+          >
+            Rejouer ce quiz
+          </button>
 
           {/* LE VOLET, REPLIÉ PAR DÉFAUT. La correction s'ouvrait toute seule,
               dépliée, sous le score : autant de cartes que de questions, qu'il
@@ -841,12 +1127,8 @@ export default function QuizPlayer({
   // `lib/quiz-layout` pour la disposition des réponses.
   const trou = estTexteATrou(question.question)
   return (
-    // data-no-swipe : pendant une question, le balayage d'onglet (SwipeTabs)
-    // est neutralisé — sinon un glissé du pouce quitte le quiz sans passer par
-    // la garde de sortie et la session est perdue.
     <div
       key="quiz-session"
-      data-no-swipe
       className={cn(
         robe,
         // `quiz-fond` par-dessus `jeu-table` : le lavis de la matière, assez
@@ -975,22 +1257,83 @@ export default function QuizPlayer({
               ⚠️ Le bouton de coupure du son quitte donc cet écran. Comme le
               bandeau du haut est masqué pendant la session, il n'y a plus de
               moyen de couper le son SANS sortir du quiz. Arbitrage assumé. */}
-          <span
-            className="quiz-plaque quiz-plaque--ronde quiz-plaque--compteur h-9 shrink-0 gap-1.5 pr-3 pl-1 [--plaque-bas:color-mix(in_oklab,var(--card),black_5%)] [--plaque-bord:color-mix(in_oklab,var(--jeu-accent),black_26%)] [--plaque-haut:var(--card)]"
-            title="Ton temps de révision total"
-          >
+          {/* LE CHRONO DE LA MANCHE (16/09/2026) prend la place du total de
+              révision, qui ne se lit plus qu'au bilan. Deux chiffres qui
+              bougent dans le même coin, l'un qui monte et l'autre qui descend,
+              ne se lisaient pas ; et celui qui compte pendant la question,
+              c'est celui qui DESCEND. Sous 10 s, il passe en corail et le
+              jeton avec lui : la manche se tend, comme la fin d'une course. */}
+          {chrono ? (
             <span
-              aria-hidden="true"
-              className="flex size-7 items-center justify-center rounded-full bg-[color:var(--jeu-accent)] text-white shadow-[inset_0_-2px_0_rgba(0,0,0,0.18)]"
+              role="timer"
+              aria-live="off"
+              aria-label={`${secondesRestantes} secondes restantes`}
+              className={cn(
+                'quiz-plaque quiz-plaque--ronde quiz-plaque--compteur h-9 shrink-0 gap-1.5 pr-3 pl-1 [--plaque-bas:color-mix(in_oklab,var(--card),black_5%)] [--plaque-haut:var(--card)]',
+                chronoEnAlerte(secondesRestantes)
+                  ? '[--plaque-bord:color-mix(in_oklab,var(--destructive),black_20%)]'
+                  : '[--plaque-bord:color-mix(in_oklab,var(--jeu-accent),black_26%)]',
+              )}
+              title="Temps restant pour la manche"
             >
-              <Clock className="size-4" strokeWidth={2.6} />
+              <span
+                aria-hidden="true"
+                className={cn(
+                  'flex size-7 items-center justify-center rounded-full text-white shadow-[inset_0_-2px_0_rgba(0,0,0,0.18)]',
+                  chronoEnAlerte(secondesRestantes)
+                    ? 'bg-destructive'
+                    : 'bg-[color:var(--jeu-accent)]',
+                )}
+              >
+                <Hourglass className="size-4" strokeWidth={2.6} />
+              </span>
+              <span
+                className={cn(
+                  'font-heading text-sm font-extrabold tabular-nums',
+                  chronoEnAlerte(secondesRestantes)
+                    ? 'text-destructive'
+                    : 'text-foreground',
+                )}
+              >
+                {formatChrono(secondesRestantes)}
+              </span>
             </span>
-            <span className="font-heading text-sm font-extrabold text-foreground tabular-nums">
-              {formatDureeTotale(tempsTotalSecondes + secondesTravail)}
+          ) : (
+            <span
+              className="quiz-plaque quiz-plaque--ronde quiz-plaque--compteur h-9 shrink-0 gap-1.5 pr-3 pl-1 [--plaque-bas:color-mix(in_oklab,var(--card),black_5%)] [--plaque-bord:color-mix(in_oklab,var(--jeu-accent),black_26%)] [--plaque-haut:var(--card)]"
+              title="Ton temps de révision total"
+            >
+              <span
+                aria-hidden="true"
+                className="flex size-7 items-center justify-center rounded-full bg-[color:var(--jeu-accent)] text-white shadow-[inset_0_-2px_0_rgba(0,0,0,0.18)]"
+              >
+                <Clock className="size-4" strokeWidth={2.6} />
+              </span>
+              <span className="font-heading text-sm font-extrabold text-foreground tabular-nums">
+                {formatDureeTotale(tempsTotalSecondes + secondesTravail)}
+              </span>
+              <span className="sr-only">de révision au total</span>
             </span>
-            <span className="sr-only">de révision au total</span>
-          </span>
+          )}
         </div>
+
+        {/* LA JAUGE DU TEMPS, sous la rangée : elle fond en continu, à la
+            couleur de la récompense (or) puis en corail sous 10 s. C'est la
+            barre du duel, en plus fin — on la voit sans la regarder. */}
+        {chrono ? (
+          <div
+            aria-hidden="true"
+            className="mt-1.5 h-1 w-full overflow-hidden rounded-full bg-black/10"
+          >
+            <div
+              className={cn(
+                'h-full rounded-full transition-[width] duration-1000 ease-linear',
+                chronoEnAlerte(secondesRestantes) ? 'bg-destructive' : 'bg-highlight',
+              )}
+              style={{ width: `${chronoRatio(secondesRestantes, budget) * 100}%` }}
+            />
+          </div>
+        ) : null}
 
         {/* Badge de SÉRIE : n'apparaît qu'à partir de 2 bonnes réponses
             d'affilée, grossit avec le palier, et disparaît net à la première

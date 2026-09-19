@@ -147,17 +147,13 @@ export type MechanicParams =
 
 export type GameTheme =
   | 'anatomie'
-  | 'plaques'
   | 'frise'
   | 'grammaire'
   | 'atlas'
-  | 'plume'
   | 'loupe'
   | 'foudre'
   | 'circuit'
-  | 'oracle'
   | 'union'
-  | 'masque'
   | 'fiesta'
   | 'mirage'
   | 'jungle'
@@ -285,30 +281,6 @@ export const GAME_FORMATS: Record<SalonGameId, GameFormat> = {
   },
 
   // --- Français -------------------------------------------------------------
-  // Duel d'orthographe : le mot juste contre son sosie fautif, ou l'homophone
-  // qui manque dans la phrase. Aucun temps mort. Le format le plus INSTINCTIF du
-  // catalogue — on ne réfléchit pas, on reconnaît. D'où le sprint le plus court
-  // et le seuil de vitesse le plus serré : ici, hésiter c'est déjà avoir perdu
-  // du temps. (Le plus souvent deux propositions, trois quand l'homophone
-  // l'exige : ses/ces/s'est, quel/quelle/qu'elle.)
-  orthographe: {
-    id: 'orthographe',
-    theme: 'plume',
-    timbre: 'cristal',
-    layout: 'duo',
-    rule: '40 secondes en tout, aucun chrono par question. Reconnais la bonne orthographe — ne la déduis pas.',
-    emoji: '🖋️',
-    lexicon: {
-      verb: 'Laquelle s’écrit comme ça ?',
-      step: 'passe',
-      steps: 'passes',
-      hit: 'graphie juste',
-      win: 'Duel remporté !',
-      lose: 'Fin de la passe d’armes',
-    },
-    params: { mechanic: 'sprint', sprint: { seconds: 40, fastMs: 1800 } },
-  },
-
   // La chasse : on traque l'intrus. Pas de chrono — on OBSERVE. Mais 3 vies :
   // se tromper de proie coûte cher.
   'chasse-faute': {
@@ -379,56 +351,6 @@ export const GAME_FORMATS: Record<SalonGameId, GameFormat> = {
     },
   },
 
-  // Le seul jeu du catalogue où l'on FABRIQUE la réponse au lieu de la choisir.
-  // Il tourne en expédition (5 tirages, aucune élimination) avec un chrono par
-  // tirage très large : ici, la difficulté est le calcul, pas la panique. C'est
-  // aussi le format le plus LENT du catalogue, ce qui le rend inconfondable
-  // avec le calcul mental de la même matière.
-  'compte-est-bon': {
-    id: 'compte-est-bon',
-    theme: 'plaques',
-    timbre: 'metal',
-    layout: 'grille',
-    rule: '5 tirages. Six plaques, un nombre à fabriquer, 75 secondes chacun — et le droit de tout annuler.',
-    emoji: '🎯',
-    lexicon: {
-      verb: 'Fabrique le compte',
-      step: 'tirage',
-      steps: 'tirages',
-      hit: 'compte trouvé',
-      win: 'Le compte est bon !',
-      lose: 'Le compte n’y est pas',
-    },
-    params: { mechanic: 'expedition', expedition: { stops: 5, questionSeconds: 75 } },
-  },
-
-  // L'oracle : aucune pression temporelle, mais une échelle. Chaque bonne
-  // réponse monte d'un étage, chaque erreur en fait redescendre deux. C'est le
-  // seul jeu où l'on peut jouer longtemps SANS jamais finir — la tension vient
-  // de la chute, pas du chrono.
-  'suite-logique': {
-    id: 'suite-logique',
-    theme: 'oracle',
-    timbre: 'velours',
-    layout: 'grille',
-    rule: 'Monte 10 étages. Une bonne réponse : +1. Une erreur : −2. Aucun chrono — réfléchis.',
-    emoji: '🔮',
-    lexicon: {
-      verb: 'Quel terme vient ensuite ?',
-      step: 'étage',
-      steps: 'étages',
-      hit: 'palier franchi',
-      win: 'Sommet atteint !',
-      lose: 'Redescendu au rez-de-chaussée',
-    },
-    params: {
-      mechanic: 'ascension',
-      // 30 essais pour 10 étages : large pour qui progresse (10 suffisent en
-      // sans-faute), fini pour qui yo-yote.
-      ascension: { floors: 10, fall: 2, questionSeconds: null, attempts: 30 },
-    },
-  },
-
   // --- Anglais --------------------------------------------------------------
   // Sprint pur : 45 secondes, combo, bonus de vitesse. Le jeu le plus NERVEUX.
   'traduction-flash': {
@@ -447,30 +369,6 @@ export const GAME_FORMATS: Record<SalonGameId, GameFormat> = {
       lose: 'Temps écoulé',
     },
     params: { mechanic: 'sprint', sprint: { seconds: 45, fastMs: 2500 } },
-  },
-
-  // Champ de mines : les faux amis SONT des pièges, donc le format punit — 2
-  // vies seulement, et un chrono court qui empêche de trop réfléchir (c'est en
-  // réfléchissant trop qu'on tombe dans le piège).
-  'faux-amis': {
-    id: 'faux-amis',
-    theme: 'masque',
-    timbre: 'bois',
-    layout: 'liste',
-    rule: '10 pièges à déjouer. 2 erreurs et c’est fini — 6 secondes pour trancher.',
-    emoji: '🎭',
-    lexicon: {
-      verb: 'Ne tombe pas dans le piège',
-      step: 'piège',
-      steps: 'pièges',
-      hit: 'piège évité',
-      win: 'Aucun piège ne t’a eu !',
-      lose: 'Le piège s’est refermé',
-    },
-    params: {
-      mechanic: 'vies',
-      vies: { lives: 2, questionSeconds: 6, target: 10 },
-    },
   },
 
   // Même geste que la Frise folle, jeu opposé : ici on court. Pas de vies, un

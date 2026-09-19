@@ -13,8 +13,8 @@ import moiIcone from '@/public/images/nav/moi.webp'
  * échec). La case de l'onglet ne doit JAMAIS rester vide — un trou au milieu de
  * la barre se lit comme une app cassée.
  *
- * Il se glisse dans le même disque que l'avatar, sous la même couronne de
- * laurier : le repli change le VISAGE, jamais la forme de l'onglet.
+ * Il occupe la même case que le blason de l'élève, en `object-contain`, sans
+ * cadre : le repli change le VISAGE, jamais la forme de l'onglet.
  */
 export default function NavMoiBust() {
   return (

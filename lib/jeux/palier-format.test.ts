@@ -108,7 +108,7 @@ describe('la règle affichée', () => {
   })
 
   it('annonce les chiffres RÉELS du format re-réglé', () => {
-    const scaled = scaleFormat(GAME_FORMATS['faux-amis'], 5)
+    const scaled = scaleFormat(GAME_FORMATS['falsos-amigos'], 5)
     if (scaled.params.mechanic !== 'vies') throw new Error('mécanique inattendue')
     expect(scaled.rule).toContain(String(scaled.params.vies.target))
     expect(scaled.rule).toContain(String(scaled.params.vies.lives))

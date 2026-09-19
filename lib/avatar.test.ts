@@ -1,3 +1,5 @@
+import { existsSync } from 'node:fs'
+import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import {
   AVATAR_FIELDS,
@@ -5,10 +7,12 @@ import {
   FREE_AVATAR_FIELD_KEYS,
   applyFreeAvatarField,
   avatarDataUri,
+  avatarPortraitSrc,
   avatarSvg,
   freeAvatarField,
   normalizeAvatarConfig,
 } from './avatar'
+import { PORTRAIT_KEYS } from './portraits'
 
 describe('AVATAR_FIELDS / DEFAULT_AVATAR', () => {
   it("le défaut respecte chaque liste d'options", () => {
@@ -149,5 +153,49 @@ describe('rendu DiceBear', () => {
       normalizeAvatarConfig({ ...DEFAULT_AVATAR, accessories: '', facialHair: '' }),
     )
     expect(uri.startsWith('data:image/svg+xml')).toBe(true)
+  })
+})
+
+// --- Le portrait (blason peint, lib/portraits) — 16/09/2026 -------------------
+describe('portrait', () => {
+  it('est un champ libre, optionnel, dont les options sont les clés de lib/portraits', () => {
+    const field = freeAvatarField('portrait')
+    expect(field).not.toBeNull()
+    expect(field?.allowNone).toBe(true)
+    expect(field?.options).toEqual(PORTRAIT_KEYS)
+    expect(DEFAULT_AVATAR.portrait).toBe('')
+  })
+
+  it('normalise une config qui ne porte que le portrait (le JSON du metadata d’inscription)', () => {
+    const cfg = normalizeAvatarConfig({ portrait: '7' })
+    expect(cfg.portrait).toBe('7')
+    // Le reste part du défaut : l'avatar composé reste valide dessous.
+    expect(cfg.head).toBe(DEFAULT_AVATAR.head)
+    expect(cfg.banner).toBe(DEFAULT_AVATAR.banner)
+  })
+
+  it('rejette un portrait hors liste, et une vieille config sans portrait reste sans portrait', () => {
+    expect(normalizeAvatarConfig({ portrait: '99' }).portrait).toBe('')
+    expect(normalizeAvatarConfig({ portrait: 7 }).portrait).toBe('')
+    expect(normalizeAvatarConfig({ head: 'afro' }).portrait).toBe('')
+  })
+
+  it('avatarPortraitSrc rend l’URL du blason, ou null pour l’avatar composé', () => {
+    expect(avatarPortraitSrc({ ...DEFAULT_AVATAR, portrait: '2' })).toBe('/images/profil/2.webp')
+    expect(avatarPortraitSrc(DEFAULT_AVATAR)).toBeNull()
+  })
+
+  it('se choisit et se retire librement, sans passer par la caisse', () => {
+    const avec = applyFreeAvatarField(DEFAULT_AVATAR, 'portrait', '14')
+    expect(avec.portrait).toBe('14')
+    expect(applyFreeAvatarField(avec, 'portrait', '').portrait).toBe('')
+    // Hors liste : config inchangée (même référence), rien à écrire.
+    expect(applyFreeAvatarField(DEFAULT_AVATAR, 'portrait', 'nawak')).toBe(DEFAULT_AVATAR)
+  })
+
+  it('chaque blason déclaré existe dans public/images/profil', () => {
+    for (const key of PORTRAIT_KEYS) {
+      expect(existsSync(join(process.cwd(), 'public', 'images', 'profil', `${key}.webp`))).toBe(true)
+    }
   })
 })

@@ -1,0 +1,426 @@
+{
+  "niveau": "6e",
+  "matiere": "anglais",
+  "exercices": [
+    {
+      "chapitre": "22657918-814e-598d-bbb8-af157046296e",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le grand frère d’Emily",
+      "competence": "comprendre-langue",
+      "situation": "Léo, en 6e à Lyon, a une nouvelle correspondante anglaise : Emily, qui habite à Brighton. Elle lui parle de sa famille par SMS.",
+      "documents": [
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Les messages d’Emily et de Léo",
+          "participants": [
+            { "nom": "Emily", "emoji": "👧", "cote": "gauche" },
+            { "nom": "Léo", "emoji": "👦", "cote": "droite" }
+          ],
+          "repliques": [
+            { "qui": "Léo", "texte": "Hi Emily! Have you got any brothers or sisters?" },
+            { "qui": "Emily", "texte": "Yes, one big brother. His name is Jack and he’s 15 😎" },
+            { "qui": "Emily", "texte": "He [[s|plays]] the drums in a band 🥁 and he [[s|watches]] horror films every Friday night 🙈" },
+            { "qui": "Léo", "texte": "Cool! Do you watch them with him?" },
+            { "qui": "Emily", "texte": "No way! I hate horror films 😱 I read in my room." }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sms",
+          "enonce": "Touche les **deux verbes** qui disent ce que Jack fait de son temps libre.",
+          "reponse": ["s"],
+          "aide": "Cherche le message où Emily parle de la batterie (*the drums*). Avec *he*, le verbe au présent simple porte une marque à la fin.",
+          "explication": "**plays** et **watches** : avec *he* (Jack), le verbe du présent simple prend un **-s**, et même **-es** après -ch."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que fait Emily le vendredi soir, pendant que Jack regarde ses films ?",
+          "options": ["Elle lit dans sa chambre", "Elle regarde les films avec lui", "Elle joue de la batterie", "Elle joue du piano"],
+          "reponse": 0,
+          "aide": "Relis le dernier message d’Emily : que fait-elle *in my room* ?",
+          "explication": "Elle **lit dans sa chambre** : *I read in my room*. Elle déteste les films d’horreur (*I hate horror films*) !"
+        },
+        {
+          "type": "trous",
+          "enonce": "À son tour, Léo parle de sa grande sœur, Chloé. Complète son message avec la bonne forme du verbe.",
+          "texte": "My sister Chloé is 16. She ___ the guitar and she ___ TV series every evening.",
+          "reponses": [["plays"], ["watches"]],
+          "banque": ["plays", "play", "watches", "watch", "watchs"],
+          "aide": "Le sujet est *she* : le verbe prend un -s. Et un verbe terminé par -ch prend… -es !",
+          "explication": "She **plays** the guitar and she **watches** TV series : avec *she*, on ajoute **-s**, et **-es** après -ch (*watch → watches*)."
+        }
+      ]
+    },
+    {
+      "chapitre": "22657918-814e-598d-bbb8-af157046296e",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "L’enquête de la classe de Leeds",
+      "competence": "lire-tableau",
+      "situation": "Dans un collège de Leeds, les élèves de *Year 7* (l’équivalent de la 6e) ont répondu à une enquête sur leur semaine. Voici les réponses de trois d’entre eux : ✓ = oui, ✗ = non.",
+      "documents": [
+        {
+          "id": "enquete",
+          "type": "tableau",
+          "titre": "Class survey: our week",
+          "source": "Enquête imaginée pour l’exercice.",
+          "colonnes": ["Every week, I…", "Amy", "Ben", "Zoe"],
+          "lignes": [
+            ["walk to school", "✓", "✗", "✓"],
+            ["study Spanish", "✓", "✗", "✗"],
+            ["wash the dishes", "✓", "✓", "✗"],
+            ["go to the cinema", "✓", "✗", "✓"],
+            ["play the guitar", "✗", "✗", "✓"]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "trous",
+          "enonce": "Le professeur résume les réponses d’**Amy**. Complète avec la bonne forme du verbe au présent simple.",
+          "texte": "Every week, Amy ___ Spanish, she ___ the dishes and she ___ to the cinema.",
+          "reponses": [["studies"], ["washes"], ["goes"]],
+          "banque": ["studies", "studys", "study", "washes", "washs", "goes", "gos", "go"],
+          "aide": "Consonne + y devient -ies ; après -sh et après -o, on ajoute -es.",
+          "explication": "Amy **studies** (consonne + y → -ies), she **washes** (-sh → -es) and she **goes** (-o → -es)."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle phrase sur **Ben** est juste, d’après le tableau ?",
+          "options": ["Ben doesn’t walk to school.", "Ben don’t walk to school.", "Ben doesn’t walks to school.", "Ben walks to school."],
+          "reponse": 0,
+          "aide": "Regarde la case de Ben sur la ligne *walk to school*. Puis rappelle-toi : le -s de la 3e personne ne se met qu’une fois.",
+          "explication": "Ben a une croix : il ne va pas au collège à pied. **Ben doesn’t walk to school** : *doesn’t* avec *he*, et le verbe perd son -s."
+        },
+        {
+          "type": "texte",
+          "enonce": "Zoe parle d’elle-même : « I ___ Spanish: I study German. » Écris les mots qui manquent.",
+          "reponse": ["don’t study", "do not study", "dont study"],
+          "placeholder": "I … Spanish",
+          "aide": "Zoe a une croix pour *study Spanish*. Avec *I*, la négation se fait avec l’auxiliaire *do*.",
+          "explication": "« I **don’t study** Spanish » : avec *I*, on emploie **don’t** (*do not*) + la base verbale."
+        },
+        {
+          "type": "zone",
+          "document": "enquete",
+          "enonce": "Ben affirme : « I don’t play the guitar. » Touche la case du tableau qui le prouve.",
+          "reponse": ["r4c2"],
+          "aide": "Trouve la ligne *play the guitar*, puis la colonne de Ben.",
+          "explication": "La **croix de Ben** sur la ligne *play the guitar* le prouve : il ne joue pas de la guitare (*he doesn’t play the guitar*)."
+        }
+      ]
+    },
+    {
+      "chapitre": "22657918-814e-598d-bbb8-af157046296e",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Kirsty, la bergère de l’île de Skye",
+      "competence": "analyser-texte",
+      "situation": "Kirsty, 11 ans, vit dans une ferme de l’île de Skye, en Écosse. Elle raconte sa journée sur le blog de son école. Un journaliste du journal local veut écrire un article sur elle.",
+      "documents": [
+        {
+          "id": "blog",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Kirsty’s blog: my school day",
+          "source": "Texte imaginé pour l’exercice.",
+          "blocs": [
+            "My name is Kirsty and I live on a sheep farm on the Isle of Skye. I get up at half past six every morning. First, I feed the sheep with my dad. Then I have breakfast: I [[f|always]] eat porridge!",
+            "I catch the school bus at quarter to eight. The journey is long, so I [[f|usually]] read a book. I am [[f|never]] late for school.",
+            "After school, I do my homework and I play with our dog, Bramble. At the weekend, I [[f|sometimes]] help my mum at the market."
+          ]
+        },
+        {
+          "id": "horloge",
+          "type": "horloge",
+          "titre": "Un matin d’école, chez Kirsty",
+          "heures": 7,
+          "minutes": 45,
+          "numerique": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Regarde l’horloge (Doc 2). Que fait Kirsty à cette heure-là ?",
+          "options": ["She catches the school bus.", "She feeds the sheep.", "She gets up.", "She does her homework."],
+          "reponse": 0,
+          "aide": "La petite aiguille est presque sur le 8, la grande sur le 9 : il est 8 h moins le quart. Comment le dit-on en anglais ? Cherche-le dans le blog.",
+          "explication": "Il est **8 h moins le quart** (*quarter to eight*) : **she catches the school bus**."
+        },
+        {
+          "type": "zone",
+          "document": "blog",
+          "enonce": "Dans le blog, touche les **quatre** mots qui disent **à quelle fréquence** Kirsty fait les choses.",
+          "reponse": ["f"],
+          "aide": "Ce sont de petits mots placés juste avant le verbe… ou juste après *am*.",
+          "explication": "**always** (toujours), **usually** (d’habitude), **never** (jamais), **sometimes** (parfois) : ils se placent **avant** le verbe, mais **après** *be* (*I am never late*)."
+        },
+        {
+          "type": "trous",
+          "enonce": "Le journaliste écrit son article à la 3e personne. Complète-le en conjuguant les verbes au présent simple.",
+          "texte": "Kirsty ___ (get) up at half past six. She ___ (feed) the sheep with her dad and she ___ (catch) the school bus at quarter to eight.",
+          "reponses": [["gets"], ["feeds"], ["catches"]],
+          "aide": "Avec *Kirsty* ou *she*, le verbe prend un -s… et -es après -ch.",
+          "explication": "Kirsty **gets** up, she **feeds** the sheep and she **catches** the bus : **-s** à la 3e personne du singulier, **-es** après -ch."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le journaliste demande : « Does Kirsty walk to school? » Choisis la bonne réponse courte.",
+          "options": ["No, she doesn’t.", "No, she don’t.", "No, she doesn’t walks.", "Yes, she does."],
+          "reponse": 0,
+          "aide": "Comment Kirsty va-t-elle à l’école ? Relis le paragraphe 2. La réponse courte reprend l’auxiliaire de la question.",
+          "explication": "Kirsty prend le bus, elle ne marche pas : **No, she doesn’t.** La réponse courte reprend l’auxiliaire *does*, à la forme négative."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets les mots dans l’ordre pour écrire une phrase juste de l’article.",
+          "items": ["Kirsty", "is", "never", "late for school."],
+          "aide": "Avec le verbe *be*, le mot de fréquence se place **après** le verbe.",
+          "explication": "**Kirsty is never late for school.** Avec *be*, *never* se met **après** le verbe ; avec les autres verbes, il se met **avant** (*she never eats…*)."
+        }
+      ]
+    },
+    {
+      "chapitre": "4f9b2dff-94d8-5018-88d3-15218116883f",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Un samedi à Hyde Park",
+      "competence": "observer-schema",
+      "situation": "Samedi après-midi, à Hyde Park, le grand parc du centre de Londres. Assis sur un banc, Harry dessine ce qu’il voit pour sa correspondante française.",
+      "documents": [
+        {
+          "id": "parc",
+          "type": "schema",
+          "titre": "Le dessin de Harry",
+          "largeur": 320,
+          "hauteur": 250,
+          "elements": [
+            { "forme": "rect", "x": 10, "y": 10, "l": 300, "h": 230, "arrondi": 14, "teinte": "vert", "motif": "clair" },
+            { "forme": "ellipse", "cx": 235, "cy": 58, "rx": 66, "ry": 34, "teinte": "bleu", "motif": "clair" },
+            { "forme": "texte", "x": 235, "y": 106, "texte": "The Serpentine", "taille": "petit", "italique": true, "teinte": "bleu" },
+            { "forme": "polygone", "points": [[10, 150], [310, 126], [310, 150], [10, 174]], "teinte": "sable", "motif": "plein" },
+            { "forme": "emoji", "x": 38, "y": 42, "emoji": "🌳", "taille": 30 },
+            { "forme": "emoji", "x": 88, "y": 34, "emoji": "🌳", "taille": 26 },
+            { "forme": "emoji", "x": 138, "y": 50, "emoji": "🌳", "taille": 28 },
+            { "forme": "emoji", "id": "canard", "zone": true, "x": 222, "y": 58, "emoji": "🦆", "taille": 24 },
+            { "forme": "emoji", "id": "velo", "zone": true, "x": 90, "y": 146, "emoji": "🚴", "taille": 32 },
+            { "forme": "texte", "x": 90, "y": 190, "texte": "Sam", "taille": "petit", "gras": true },
+            { "forme": "emoji", "id": "coureur", "zone": true, "x": 200, "y": 132, "emoji": "🏃", "taille": 30 },
+            { "forme": "emoji", "id": "chien", "zone": true, "x": 240, "y": 138, "emoji": "🐕", "taille": 24 },
+            { "forme": "texte", "x": 200, "y": 170, "texte": "Leo", "taille": "petit", "gras": true },
+            { "forme": "emoji", "id": "danse", "zone": true, "x": 55, "y": 206, "emoji": "💃", "taille": 30 },
+            { "forme": "texte", "x": 55, "y": 234, "texte": "Ella", "taille": "petit", "gras": true },
+            { "forme": "emoji", "id": "jongle", "zone": true, "x": 160, "y": 206, "emoji": "🤹", "taille": 30 },
+            { "forme": "texte", "x": 160, "y": 234, "texte": "Max", "taille": "petit", "gras": true },
+            { "forme": "emoji", "id": "selfie", "zone": true, "x": 265, "y": 206, "emoji": "🤳", "taille": 30 },
+            { "forme": "texte", "x": 265, "y": 234, "texte": "Mia", "taille": "petit", "gras": true }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "parc",
+          "enonce": "Touche la personne qui *is riding a bike*.",
+          "reponse": ["velo"],
+          "aide": "*a bike*, c’est un vélo. Cherche sur le chemin.",
+          "explication": "C’est **Sam** : *Sam is riding a bike*, il est en train de faire du vélo."
+        },
+        {
+          "type": "zone",
+          "document": "parc",
+          "enonce": "Touche l’animal qui *is swimming*.",
+          "reponse": ["canard"],
+          "aide": "Il y a deux animaux dans le parc. Lequel est dans l’eau ?",
+          "explication": "C’est **le canard** : *the duck is swimming* sur le lac. Le chien, lui, *is running* avec Leo."
+        },
+        {
+          "type": "trous",
+          "enonce": "Harry décrit la scène. Complète avec la bonne forme de BE : *am*, *is* ou *are*.",
+          "texte": "Look! Leo and his dog ___ running and Max ___ juggling. And me? I ___ sitting on a bench!",
+          "reponses": [["are"], ["is"], ["am"]],
+          "banque": ["am", "is", "are", "be"],
+          "aide": "Leo et son chien, c’est *they* ; Max, c’est *he* ; et avec *I*, BE devient… ?",
+          "explication": "Leo and his dog **are** running (*they*), Max **is** juggling (*he*), I **am** sitting : BE s’accorde avec le sujet, puis vient le verbe en -ing."
+        },
+        {
+          "type": "choix",
+          "enonce": "What is **Mia** doing?",
+          "options": ["She is taking a photo.", "She is dancing.", "She is juggling.", "She is swimming."],
+          "reponse": 0,
+          "aide": "Trouve le prénom Mia sous un personnage : que tient-elle à la main ?",
+          "explication": "Mia tient son téléphone : **she is taking a photo** (elle prend une photo). C’est Ella qui danse et Max qui jongle."
+        }
+      ]
+    },
+    {
+      "chapitre": "4f9b2dff-94d8-5018-88d3-15218116883f",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Personne n’est libre dimanche !",
+      "competence": "manier-langue",
+      "situation": "Dimanche, 11 heures. Maddie veut aller au cinéma. Elle écrit sur le groupe de sa famille… mais tout le monde est occupé !",
+      "documents": [
+        {
+          "id": "groupe",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Le groupe « The Browns »",
+          "participants": [
+            { "nom": "Maddie", "emoji": "👧", "cote": "droite" },
+            { "nom": "Mum", "emoji": "👩", "cote": "gauche" },
+            { "nom": "Dad", "emoji": "👨", "cote": "gauche" },
+            { "nom": "Ollie", "emoji": "👦", "cote": "gauche" }
+          ],
+          "repliques": [
+            { "qui": "Maddie", "texte": "Hi everyone! Who wants to come to the cinema with me? 🍿" },
+            { "qui": "Mum", "texte": "Sorry, darling, I’m [[e|making]] a cake for Granny 🎂" },
+            { "qui": "Dad", "texte": "I’m in the garden. I’m [[c|cutting]] the grass 🌱" },
+            { "qui": "Ollie", "texte": "Can’t! We’re [[c|swimming]] at the leisure centre with the team 🏊" },
+            { "qui": "Maddie", "texte": "OK… I [[s|understand]] 😒 I’m [[e|writing]] to Zoe, then!" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "groupe",
+          "enonce": "Touche les **deux** verbes en -ING qui ont **perdu leur e** final.",
+          "reponse": ["e"],
+          "aide": "Pense à la base verbale de chaque verbe en -ING : lesquelles se terminent par un -e muet ?",
+          "explication": "**making** (*make*) et **writing** (*write*) : le **e muet** tombe devant -ing."
+        },
+        {
+          "type": "zone",
+          "document": "groupe",
+          "enonce": "Touche maintenant les **deux** verbes en -ING dont la consonne finale a été **doublée**.",
+          "reponse": ["c"],
+          "aide": "Ce sont des verbes courts qui se terminent par consonne + voyelle + consonne.",
+          "explication": "**cutting** (*cut*) et **swimming** (*swim*) : verbes courts en consonne-voyelle-consonne, on **double** la dernière consonne."
+        },
+        {
+          "type": "choix",
+          "enonce": "Maddie écrit « I **understand** », et pas « I am understanding ». Pourquoi ?",
+          "options": [
+            "Parce que *understand* est un verbe d’état : il refuse la forme en -ING",
+            "Parce qu’elle parle d’une habitude de tous les jours",
+            "Parce que *understand* est un verbe irrégulier",
+            "Parce que sa phrase est à la forme négative"
+          ],
+          "reponse": 0,
+          "aide": "*understand* dit ce qu’on pense, pas ce qu’on fait. Que dit le cours de ces verbes-là ?",
+          "explication": "*understand* est un **verbe d’état**, comme *know*, *like* ou *want* : on ne le met **pas** à la forme en -ING, même quand on parle de maintenant."
+        },
+        {
+          "type": "trous",
+          "enonce": "Zoe répond à Maddie. Conjugue les verbes au présent en BE + -ING.",
+          "texte": "Sorry, Maddie! I ___ (sit) in the car with my parents. We ___ (drive) to Wales!",
+          "reponses": [["am sitting", "’m sitting", "m sitting"], ["are driving", "’re driving", "re driving"]],
+          "aide": "D’abord la forme de BE qui va avec *I*, puis avec *we*. Ensuite, applique les règles d’orthographe du -ing à *sit* et à *drive*.",
+          "explication": "I **am sitting** (*sit* : on double le t) · We **are driving** (*drive* : le e muet tombe). Les contractions *I’m sitting* et *we’re driving* sont justes aussi."
+        }
+      ]
+    },
+    {
+      "chapitre": "4f9b2dff-94d8-5018-88d3-15218116883f",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une semaine pas comme les autres",
+      "competence": "comprendre-langue",
+      "situation": "Sophie, 12 ans, habite à Manchester. Pendant les vacances, elle passe une semaine chez sa tante Rose, au bord de la mer, en Cornouailles. Elle écrit à son amie Lina, puis sa mère lui envoie des messages.",
+      "documents": [
+        {
+          "id": "email",
+          "type": "texte",
+          "genre": "lettre",
+          "titre": "Sophie’s email to Lina",
+          "source": "Texte imaginé pour l’exercice.",
+          "blocs": [
+            "Hi Lina! Guess where I am? In Cornwall! I’m staying with my Aunt Rose for the holidays.",
+            "At home, I get up at seven every day. Here, I’m getting up at nine! Aunt Rose has got a little café near the beach. She makes the best scones in England 😋 At the moment, we’re painting the café: it’s blue and yellow now!",
+            "I [[g|love]] Cornwall. Write soon! Sophie xx"
+          ]
+        },
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Les messages de maman",
+          "participants": [
+            { "nom": "Mum", "emoji": "👩", "cote": "gauche" },
+            { "nom": "Sophie", "emoji": "👧", "cote": "droite" }
+          ],
+          "repliques": [
+            { "qui": "Mum", "texte": "Hello sweetie! What are you doing?" },
+            { "qui": "Sophie", "texte": "I’m walking on the beach with Aunt Rose’s dog 🐕" },
+            { "qui": "Mum", "texte": "Lovely! Is it raining?" },
+            { "qui": "Sophie", "texte": "No, it isn’t. The sun is shining ☀️" },
+            { "qui": "Mum", "texte": "Do you want to come home on Saturday?" },
+            { "qui": "Sophie", "texte": "No! I want to stay here 😄" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Pourquoi Sophie écrit-elle « I **get up** at seven » mais « I**’m getting up** at nine » ?",
+          "options": [
+            "7 h, c’est son habitude à la maison ; 9 h, c’est temporaire, juste pendant les vacances",
+            "7 h, c’est le passé ; 9 h, c’est le futur",
+            "Les deux phrases veulent dire exactement la même chose",
+            "Elle se lève à 9 h tous les jours de l’année"
+          ],
+          "reponse": 0,
+          "aide": "Relis le paragraphe 2 : où Sophie se lève-t-elle à 7 h ? Et où se lève-t-elle à 9 h ?",
+          "explication": "**At home**, d’habitude → présent simple : *I get up*. **Here**, pendant les vacances seulement → action **temporaire** : *I’m getting up*."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces phrases des deux documents selon ce qu’elles expriment.",
+          "categories": ["Habitude, goût ou vérité : présent simple", "En ce moment ou temporaire : BE + -ING"],
+          "items": [
+            ["She makes the best scones in England.", 0],
+            ["I love Cornwall.", 0],
+            ["At home, I get up at seven every day.", 0],
+            ["I’m staying with my Aunt Rose.", 1],
+            ["We’re painting the café.", 1],
+            ["The sun is shining.", 1]
+          ],
+          "aide": "Pour chaque phrase, demande-toi : est-ce vrai tout le temps, ou seulement maintenant, cette semaine ?",
+          "explication": "Présent simple : les scones (**toujours** délicieux), *I love* (un **goût**), *every day* (une **habitude**). BE + -ING : le séjour chez Rose, la peinture et le soleil, **en ce moment**."
+        },
+        {
+          "type": "zone",
+          "document": "email",
+          "enonce": "Dans l’e-mail, touche le verbe qui exprime un **goût** : il refuse la forme en -ING.",
+          "reponse": ["g"],
+          "aide": "C’est un verbe qui dit ce que Sophie ressent pour les Cornouailles.",
+          "explication": "**love** est un verbe d’état : on écrit *I love Cornwall*, jamais « I am loving Cornwall »."
+        },
+        {
+          "type": "texte",
+          "enonce": "Maman écrit ensuite : « ___ Aunt Rose working in the café today? » Quel mot manque ?",
+          "reponse": ["Is"],
+          "placeholder": "… Aunt Rose working?",
+          "aide": "Au présent en BE + -ING, la question se fait sans DO : c’est BE qui passe devant le sujet.",
+          "explication": "**Is** Aunt Rose working…? C’est **BE** (*is*, car Aunt Rose = *she*) qui passe devant le sujet, pas *do*."
+        },
+        {
+          "type": "trous",
+          "enonce": "Sophie envoie une photo à Lina. Complète sa légende en conjuguant les verbes au présent en BE + -ING.",
+          "texte": "Look! The dog ___ (run) after a seagull and Aunt Rose ___ (dance) on the sand!",
+          "reponses": [["is running", "’s running", "s running"], ["is dancing", "’s dancing", "s dancing"]],
+          "aide": "*is* + verbe en -ing. *run* est un verbe court en consonne-voyelle-consonne ; *dance* se termine par un e muet.",
+          "explication": "The dog **is running** (on double le n) and Aunt Rose **is dancing** (le e muet tombe)."
+        }
+      ]
+    }
+  ]
+}

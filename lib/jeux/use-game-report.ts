@@ -8,13 +8,16 @@ import {
 } from '@/app/defi/actions'
 import { programmeSlug } from '@/lib/jeux/programme'
 import type { Gain } from '@/lib/gains'
+import { recordModeScore } from '@/app/defi/palmares-actions'
+import { isJeuId } from '@/lib/palmares/epreuves'
+import type { BilanPartie } from '@/lib/palmares/bilan'
 
 // Le COMPTE RENDU d'une partie de salon : ce que le serveur en a RÉELLEMENT
 // retiré (les gains versés) et ce qu'elle rapporte sur la Route des trophées
 // (le compteur du couple matière × jeu).
 //
-// Pourquoi un hook. Les quatre tables de jeu (GameTable, OrderTable,
-// CountdownTable, AnatomyTable) portaient le MÊME bloc recopié : deux états,
+// Pourquoi un hook. Les trois tables de jeu (GameTable, OrderTable,
+// AnatomyTable) portaient le MÊME bloc recopié : deux états,
 // un compteur de partie, l'appel à `recordChallenge` et sa garde anti-réponse-
 // périmée. Y ajouter les trophées aurait fait quatre copies d'un quatrième
 // état et d'un second aller-retour. Le bloc vit donc ici, une fois.
@@ -40,13 +43,23 @@ export type GameReport = {
   gains: Gain[]
   /** Mouvement de trophées, ou null (visiteur, refus serveur, ou en attente). */
   trophies: GameTrophyOutcome
-  /** À appeler à la fin d'une partie. */
-  report: (run: {
-    correct: number
-    answered: number
-    score: number
-    status: string
-  }) => void
+  /**
+   * LE BILAN DU PALMARÈS (migration 355) : dernière fois, record, place de
+   * la semaine dans ma classe, prochaine marche. Null tant que le serveur n'a
+   * pas répondu — ou quand il n'a rien à dire (jeu hors catalogue, migration
+   * pas passée, épreuve ultime qui a son propre classement).
+   */
+  bilan: BilanPartie | null
+  /**
+   * À appeler à la fin d'une partie. `elapsedMs` est la durée de la partie
+   * (la table la tient depuis le GO) : sans elle, pas de score au Palmarès,
+   * qui exige une durée plausible. `classe: false` retient le score (l'épreuve
+   * ultime : sans plafond, elle a sa cote, cf. 314).
+   */
+  report: (
+    run: { correct: number; answered: number; score: number; status: string },
+    options?: { classe?: boolean; elapsedMs?: number | null },
+  ) => void
   /** À appeler au relancement, avant de rejouer. */
   reset: () => void
 }
@@ -60,12 +73,31 @@ export function useGameReport(subject: string, gameId: string): GameReport {
   const [saved, setSaved] = useState<boolean | null>(null)
   const [gains, setGains] = useState<Gain[]>([])
   const [trophies, setTrophies] = useState<GameTrophyOutcome>(null)
+  const [bilan, setBilan] = useState<BilanPartie | null>(null)
   const partieRef = useRef(0)
 
   const report = useCallback(
-    (run: { correct: number; answered: number; score: number; status: string }) => {
+    (
+      run: { correct: number; answered: number; score: number; status: string },
+      options?: { classe?: boolean; elapsedMs?: number | null },
+    ) => {
       const partie = partieRef.current
       const fresh = () => partie === partieRef.current
+
+      // LE PALMARÈS : le score de la partie rejoint l'échelle de la semaine
+      // (record, place dans la classe, prochaine marche — migration 355).
+      // Un aller-retour à part : le serveur peut n'avoir rien à dire sans
+      // que la partie cesse de compter pour la série et les trophées.
+      const elapsed = options?.elapsedMs ?? null
+      if ((options?.classe ?? true) && elapsed !== null && elapsed > 0 && isJeuId(gameId)) {
+        recordModeScore(gameId, run.score, elapsed)
+          .then((b) => {
+            if (fresh()) setBilan(b)
+          })
+          .catch(() => {
+            // Pas de bilan : l'écran de fin n'affiche pas la ligne.
+          })
+      }
 
       // Pas de mode passé : les bonus de mode appartiennent à l'Arène, pas aux
       // salons.
@@ -103,8 +135,9 @@ export function useGameReport(subject: string, gameId: string): GameReport {
     setSaved(null)
     setGains([])
     setTrophies(null)
+    setBilan(null)
     partieRef.current += 1
   }, [])
 
-  return { saved, gains, trophies, report, reset }
+  return { saved, gains, trophies, bilan, report, reset }
 }

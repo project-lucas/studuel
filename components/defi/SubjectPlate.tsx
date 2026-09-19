@@ -11,6 +11,7 @@ import { plaqueClaire } from '@/lib/defi/plaque-claire'
 import Image from 'next/image'
 import SubjectIcon from '@/components/SubjectIcon'
 import { sfx } from '@/lib/sounds'
+import styles from './SubjectPlate.module.css'
 
 /**
  * LE FLANC DROIT DE LA BARRE — la matière du combat, et la feuille qui la change.
@@ -63,7 +64,7 @@ import { sfx } from '@/lib/sounds'
  * c'est le contraste qui les rend visibles, pas leur taille.
  *
  * LA CIBLE EST PLUS GRANDE QUE LE DESSIN, et c'est délibéré. Le triangle fait
- * 18 px de large — bien en dessous des 44 px recommandés au doigt. Sa boîte
+ * 26 px de large — bien en dessous des 44 px recommandés au doigt. Sa boîte
  * tapable couvre toute la largeur du flanc (92 px) sur 26 px de haut. En
  * contrepartie, les deux bandes du haut et du bas cessent d'ouvrir la feuille :
  * c'est le prix de deux commandes sur une plaque de 92 px, et il est payé là où
@@ -96,29 +97,38 @@ function Fleche({
       // La bande fait 34 px de haut sur les 92 px de large du flanc : c'est la
       // cible du doigt, et elle est bien plus grande que le dessin qu'elle
       // porte.
-      className={`absolute left-0 z-10 flex h-[34px] w-full cursor-pointer justify-center focus-visible:outline-none ${
-        haut ? '-top-2 items-start' : '-bottom-2 items-end'
+      className={`${styles.cible} absolute left-0 z-10 flex h-[34px] w-full cursor-pointer justify-center focus-visible:outline-none ${
+        haut ? '-top-2.5 items-start' : '-bottom-2.5 items-end'
       }`}
     >
-      <svg
-        viewBox="0 0 24 16"
-        // 22 × 15 px. Il a pu grandir de moitié parce que la bande est sortie
-        // de la plaque : posé à −8 px du bord, le triangle occupe −8 → 7 en
-        // coordonnées de plaque, quand le médaillon commence à 16. Sept pixels
-        // de jeu, là où la version précédente en cherchait un seul.
-        className={`h-[15px] w-[22px] transition-transform active:scale-90 ${
-          haut ? '' : 'rotate-180'
-        }`}
-        aria-hidden="true"
-      >
-        <path
-          d="M12 1.6 22.4 14.4H1.6z"
-          fill="#ffd66b"
-          stroke="#1e1638"
-          strokeWidth="3"
-          strokeLinejoin="round"
-        />
-      </svg>
+      {/* LE TRIANGLE DE CLASH ROYALE, tourné vers l'EXTÉRIEUR et qui rebondit
+          dans son sens (SubjectPlate.module.css) : un or bombé — clair en haut,
+          ambré en bas —, un reflet, un cerne d'encre aux coins arrondis. */}
+      <span className={styles.fleche} data-sens={direction} aria-hidden="true">
+        <svg viewBox="0 0 28 20" className={`size-full ${haut ? '' : 'rotate-180'}`}>
+          <defs>
+            <linearGradient id={`fleche-or-${direction}`} x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stopColor="#fff3a8" />
+              <stop offset="0.45" stopColor="#ffd13d" />
+              <stop offset="1" stopColor="#ef9410" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M14 2.2 25.6 17.4H2.4Z"
+            fill={`url(#fleche-or-${direction})`}
+            stroke="#1e1638"
+            strokeWidth="3.2"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M10.4 10.6 13.6 6.4"
+            stroke="#ffffff"
+            strokeOpacity="0.85"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+        </svg>
+      </span>
     </button>
   )
 }

@@ -94,7 +94,7 @@ export default async function ComptePage() {
             —{' '}
             <Link
               href="/onboarding"
-              className="font-medium text-primary underline underline-offset-4"
+              className="-my-2 inline-block px-1 py-2 font-medium text-primary underline underline-offset-4"
             >
               modifier
             </Link>
@@ -149,6 +149,15 @@ export default async function ComptePage() {
       </div>
 
       <NotificationsOptIn />
+
+      {/* LES CRÉDITS — ce que la licence demande, là où l'élève ne le cherche
+          pas mais où il est honnête de le mettre : la flamme animée de la
+          série (Freepik, Flaticon — licence gratuite avec attribution). Une
+          ligne, en bas de la page des réglages, sans lien externe : l'app
+          n'ouvre pas de site tiers à un mineur depuis un bas de page. */}
+      <p className="mx-auto mt-8 w-full max-w-md px-2 text-center text-[11px] font-semibold text-muted-foreground">
+        Flamme animée par Freepik (Flaticon).
+      </p>
     </div>
   )
 }

@@ -296,7 +296,7 @@ describe('la plaque Matière', () => {
 
     const plaque = screen.getByRole('button', { name: /^Modes de jeu/ })
     const dessin = plaque.querySelector('img')
-    expect(dessin?.getAttribute('src')).toContain('/images/defi/icones/modes-v2')
+    expect(dessin?.getAttribute('src')).toContain('/images/defi/icones/modes-v4')
     // UN SEUL FOND, ET L'ILLUSTRATION DESSUS. Trois états successifs ont été
     // essayés : posée sur la plaque violette elle disparaissait (violet sur
     // violet) ; sur un médaillon crème elle se lisait, mais l'œil comptait

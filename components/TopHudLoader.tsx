@@ -6,6 +6,7 @@ import { walletLevelInfo } from '@/lib/wallet'
 import { activityCutoff } from '@/lib/streak'
 import { isHudDataSkipped } from '@/lib/top-hud-routes'
 import { fetchGems } from '@/lib/gems-access'
+import { lireFinBoostXp } from '@/lib/boutique/boosts-server'
 import TopHud from './TopHud'
 
 type WalletRow = { xp: number | null; level: number | null }
@@ -56,13 +57,13 @@ export default async function TopHudLoader() {
   if (!user) {
     return (
       <TopHud
-        coins={null}
         gems={null}
         streak={null}
         level={null}
         levelTitle={null}
         progress={0}
         userLabel={null}
+        boostXpJusqua={null}
       />
     )
   }
@@ -79,29 +80,31 @@ export default async function TopHudLoader() {
   // pour deux lignes qui parlent du même élève.
   //
   // Les GEMMES partent en parallèle, dans leur propre lecture tolérante
-  // (lib/gems-access) : les joindre à ce `select` ferait tomber pièces ET
-  // niveau si la migration 183 manquait, alors qu'ici l'absence de la colonne
-  // ne doit coûter que la pastille des gemmes. Deux requêtes concurrentes, zéro
+  // (lib/gems-access) : les joindre à ce `select` ferait tomber le niveau si
+  // la migration 183 manquait, alors qu'ici l'absence de la colonne ne doit
+  // coûter que la pastille des gemmes. Deux requêtes concurrentes, zéro
   // latence ajoutée.
-  const [{ data: hudRow }, gems, streak] = await Promise.all([
+  //
+  // Le Boost XP du Marché (« ×2 XP » dans l'écusson) : sa propre lecture,
+  // tolérante — elle ne doit jamais coûter le niveau ni les gemmes.
+  const [{ data: hudRow }, gems, streak, boostXpJusqua] = await Promise.all([
     supabase
       .from('profiles')
-      .select('coins, user_wallet(xp, level)')
+      .select('user_wallet(xp, level)')
       .eq('id', user.id)
       .maybeSingle<{
-        coins: number | null
         // PostgREST renvoie un objet quand il détecte une relation 1-1, un
         // tableau sinon : on accepte les deux formes.
         user_wallet: WalletRow | WalletRow[] | null
       }>(),
     fetchGems(supabase, user.id),
     fetchStreak(supabase),
+    lireFinBoostXp(supabase, user.id),
   ])
 
   const walletRow = Array.isArray(hudRow?.user_wallet)
     ? (hudRow.user_wallet[0] ?? null)
     : (hudRow?.user_wallet ?? null)
-  const coins = Math.max(0, Number(hudRow?.coins) || 0)
   const userLabel = user.user_metadata?.full_name || user.email || null
 
   // Portefeuille présent (cas normal d'un compte actif) → niveau du portefeuille.
@@ -109,13 +112,13 @@ export default async function TopHudLoader() {
     const info = walletLevelInfo(Math.max(0, Number(walletRow.xp) || 0))
     return (
       <TopHud
-        coins={coins}
         gems={gems}
         streak={streak}
         level={info.level}
         levelTitle={info.title}
         progress={info.progress}
         userLabel={userLabel}
+        boostXpJusqua={boostXpJusqua}
       />
     )
   }
@@ -163,13 +166,13 @@ export default async function TopHudLoader() {
 
   return (
     <TopHud
-      coins={coins}
       gems={gems}
       streak={streak}
       level={level.level}
       levelTitle={level.title}
       progress={level.progress}
       userLabel={userLabel}
+      boostXpJusqua={boostXpJusqua}
     />
   )
 }

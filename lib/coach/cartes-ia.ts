@@ -20,7 +20,7 @@ export type CarteIa = { recto: string; verso: string }
 /**
  * Le tableau JSON, extrait d'une réponse qui peut être entourée de texte.
  *
- * Même principe que le carnet (app/reviser/cours/ai-actions) : on cherche le
+ * Même principe que le carnet (app/carnet/cours/ai-actions) : on cherche le
  * premier `[` et le dernier `]`. Une clôture markdown, une phrase d'intro ou un
  * « Voilà ! » final n'empêchent alors pas de lire la réponse — et un modèle en
  * met un une fois sur dix.

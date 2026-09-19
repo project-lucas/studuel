@@ -102,7 +102,7 @@ export default async function MindMapPage({
             className="mb-4"
           />
           <h1 className="font-heading text-2xl font-bold text-balance md:text-3xl">
-            Carte mentale
+            Fiche de révision
           </h1>
           <p className="mt-1 flex items-center gap-1.5 text-sm font-medium opacity-70">
             <SubjectIcon slug={subject.slug} className="size-4 shrink-0" strokeWidth={2} aria-hidden="true" />
@@ -138,7 +138,7 @@ export default async function MindMapPage({
           // Accès légitime (abonnement ou gemme déjà dépensée) mais contenu
           // injoignable : ne JAMAIS lui servir l'écran « Débloque », il a payé.
           <p className="text-sm text-muted-foreground">
-            La carte mentale n&apos;a pas pu être chargée. Réessaie dans un instant.
+            La fiche n&apos;a pas pu être chargée. Réessaie dans un instant.
           </p>
         ) : (
           <UnlockChapterCard chapterId={chapterId} gems={gems}>

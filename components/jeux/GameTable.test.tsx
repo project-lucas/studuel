@@ -44,6 +44,11 @@ vi.mock('@/app/defi/actions', () => ({
   // échoue à se charger.
   recordGameTrophies: (...args: unknown[]) => recordGameTrophies(...args),
 }))
+// Le score part aussi au Palmarès (355) : ici, le serveur n'a rien à dire.
+vi.mock('@/app/defi/palmares-actions', () => ({
+  recordModeScore: async () => null,
+}))
+
 vi.mock('next/navigation', () => ({
   useRouter: () => ({ push: vi.fn(), back: vi.fn(), replace: vi.fn(), refresh: vi.fn() }),
   usePathname: () => '/defi',
@@ -188,16 +193,17 @@ describe('GameTable — une partie de salon se termine, et son écran de fin ne 
     await repondre('Faux')
     await repondre('Faux')
 
-    // La réponse RETARDATAIRE de la partie 1 arrive maintenant.
+    // La réponse RETARDATAIRE de la partie 1 arrive maintenant. (En gemmes :
+    // l'écu a quitté le catalogue des gains le 16/09, l'écran l'ignore.)
     await act(async () => {
-      repondre1({ saved: true, gains: [{ unite: 'ecu', montant: 11 }] })
+      repondre1({ saved: true, gains: [{ unite: 'gemme', montant: 11 }] })
     })
-    expect(screen.queryByText(/11 écus/)).not.toBeInTheDocument()
+    expect(screen.queryByText(/11 cristaux/)).not.toBeInTheDocument()
 
     // Celle de la partie 2, elle, fait foi.
     await act(async () => {
-      repondre2({ saved: true, gains: [{ unite: 'ecu', montant: 99 }] })
+      repondre2({ saved: true, gains: [{ unite: 'gemme', montant: 99 }] })
     })
-    expect(screen.getByText(/99 écus/)).toBeInTheDocument()
+    expect(screen.getByText(/99 cristaux/)).toBeInTheDocument()
   })
 })

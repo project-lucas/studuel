@@ -1,0 +1,255 @@
+{
+  "niveau": "6e",
+  "matiere": "histoire-geo",
+  "exercices": [
+    {
+      "chapitre": "71d64eba-5487-5da4-b60d-2f1e1f70afd8",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Une métropole vue du ciel",
+      "competence": "observer-schema",
+      "situation": "Vue d’avion, une très grande ville ressemble souvent à une cible : des cercles emboîtés autour d’un centre. Voici le croquis de Grandeville, une métropole imaginaire.",
+      "documents": [
+        {
+          "id": "croquis",
+          "type": "schema",
+          "titre": "Croquis de Grandeville",
+          "source": "Croquis simplifié, réalisé pour l’exercice.",
+          "largeur": 340,
+          "hauteur": 300,
+          "elements": [
+            { "forme": "rect", "x": 10, "y": 10, "l": 320, "h": 280, "arrondi": 14, "teinte": "vert", "motif": "clair" },
+            { "forme": "cercle", "cx": 170, "cy": 150, "r": 128, "teinte": "gris", "motif": "clair", "id": "peripherie", "zone": true },
+            { "forme": "cercle", "cx": 170, "cy": 150, "r": 86, "teinte": "ambre", "motif": "clair", "id": "banlieues", "zone": true },
+            { "forme": "cercle", "cx": 170, "cy": 150, "r": 38, "teinte": "corail", "motif": "clair", "id": "centre", "zone": true },
+            { "forme": "cercle", "cx": 222, "cy": 112, "r": 16, "teinte": "violet", "motif": "plein", "id": "affaires", "zone": true },
+            { "forme": "emoji", "x": 170, "y": 150, "emoji": "🏛️", "taille": 26 },
+            { "forme": "emoji", "x": 222, "y": 112, "emoji": "🏢", "taille": 16 },
+            { "forme": "emoji", "x": 115, "y": 120, "emoji": "🏘️", "taille": 20 },
+            { "forme": "emoji", "x": 150, "y": 212, "emoji": "🏘️", "taille": 20 },
+            { "forme": "emoji", "x": 230, "y": 182, "emoji": "🏘️", "taille": 20 },
+            { "forme": "emoji", "x": 95, "y": 230, "emoji": "✈️", "taille": 22 },
+            { "forme": "emoji", "x": 275, "y": 190, "emoji": "🛒", "taille": 20 },
+            { "forme": "emoji", "x": 235, "y": 62, "emoji": "🏭", "taille": 20 },
+            { "forme": "emoji", "x": 35, "y": 35, "emoji": "🌾", "taille": 20 },
+            { "forme": "emoji", "x": 305, "y": 265, "emoji": "🌾", "taille": 20 },
+            { "forme": "emoji", "x": 305, "y": 35, "emoji": "🌳", "taille": 20 },
+            { "forme": "emoji", "x": 35, "y": 265, "emoji": "🌾", "taille": 20 }
+          ],
+          "legende": [
+            { "teinte": "corail", "motif": "clair", "texte": "Centre-ville" },
+            { "teinte": "violet", "motif": "plein", "texte": "Quartier d’affaires" },
+            { "teinte": "ambre", "motif": "clair", "texte": "Banlieues" },
+            { "teinte": "gris", "motif": "clair", "texte": "Périphéries" },
+            { "teinte": "vert", "motif": "clair", "texte": "Campagne" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "croquis",
+          "enonce": "Sur le croquis, touche la couronne des **banlieues**.",
+          "reponse": ["banlieues"],
+          "aide": "Aide-toi de la légende : cherche la couleur des banlieues, puis retrouve-la sur le croquis.",
+          "explication": "Les **banlieues** forment la couronne orangée qui entoure le centre-ville : c’est là que vivent la plupart des habitants."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque élément du croquis dans la partie de la métropole où il se trouve.",
+          "categories": ["Centre-ville", "Quartier d’affaires", "Banlieues", "Périphéries"],
+          "items": [
+            ["🏛️ Musées et monuments historiques", 0],
+            ["🏢 Tours de bureaux des grandes entreprises", 1],
+            ["🏘️ Quartiers d’immeubles et de pavillons", 2],
+            ["✈️ Aéroport", 3],
+            ["🛒 Centre commercial géant", 3],
+            ["🏭 Zone industrielle", 3]
+          ],
+          "aide": "Regarde dans quel cercle se trouve chaque petit dessin, puis lis la légende.",
+          "explication": "Le **centre-ville** garde le patrimoine, le **quartier d’affaires** ses tours de bureaux, les **banlieues** les logements, et les **périphéries** l’aéroport, les zones commerciales et les usines."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi l’aéroport ✈️ de Grandeville a-t-il été construit en périphérie, et pas au centre-ville ?",
+          "options": [
+            "Il a besoin d’immenses terrains, et le bruit des avions doit rester loin des logements",
+            "Les touristes préfèrent atterrir loin des monuments",
+            "Le centre-ville est interdit aux voyageurs",
+            "Il n’y a aucune route dans le centre-ville"
+          ],
+          "reponse": 0,
+          "aide": "Pense à la taille des pistes et au bruit d’un avion qui décolle.",
+          "explication": "**Il lui faut beaucoup de place, loin des logements.** En périphérie, les terrains sont vastes et moins chers qu’au centre, où chaque mètre carré coûte très cher."
+        }
+      ]
+    },
+    {
+      "chapitre": "71d64eba-5487-5da4-b60d-2f1e1f70afd8",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Karim, trois heures par jour dans le train",
+      "competence": "calculer",
+      "situation": "Karim habite à Meaux, en Seine-et-Marne. Il travaille dans une tour du quartier d’affaires de La Défense, de l’autre côté de Paris. Comme des centaines de milliers de Franciliens, il fait ce trajet tous les jours.",
+      "documents": [
+        {
+          "id": "recit",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Le matin de Karim",
+          "source": "Témoignage imaginé pour l’exercice.",
+          "blocs": [
+            "Mon réveil sonne à 6 h 15. À **6 h 50**, je ferme la porte de ma maison, à Meaux, et je marche jusqu’à la gare.",
+            "Je prends le train jusqu’à la gare de l’Est, à Paris, puis le RER jusqu’à La Défense. Aux [[p|heures]] [[p|de]] [[p|pointe]], les wagons sont si pleins qu’on voyage debout, serrés comme des sardines.",
+            "J’arrive à mon bureau, au 30e étage d’une tour, à **8 h 20**. Le soir, je refais le même trajet dans l’autre sens. Mes enfants disent que je vis dans le train !"
+          ]
+        },
+        {
+          "id": "horaires",
+          "type": "fiche",
+          "modele": "horaires",
+          "titre": "Les horaires du train de Karim",
+          "source": "Horaires simplifiés, imaginés pour l’exercice.",
+          "entete": "Meaux → Paris-Est",
+          "sousTitre": "En semaine",
+          "emoji": "🚆",
+          "lignes": [
+            { "texte": "Départ de Meaux", "valeur": "Arrivée à Paris-Est", "gras": true },
+            { "separateur": true },
+            { "texte": "06:43", "valeur": "07:17", "id": "t0643" },
+            { "texte": "07:03", "valeur": "07:37", "id": "t0703" },
+            { "texte": "07:23", "valeur": "07:57", "id": "t0723" },
+            { "texte": "07:43", "valeur": "08:17", "id": "t0743" }
+          ],
+          "pied": "Marche de la maison de Karim à la gare : 10 min."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "horaires",
+          "enonce": "Karim quitte sa maison à 6 h 50. Touche le **premier train** qu’il peut prendre.",
+          "reponse": ["t0703"],
+          "aide": "Ajoute les 10 minutes de marche à son heure de départ : à quelle heure arrive-t-il à la gare ?",
+          "explication": "6 h 50 + 10 min de marche = 7 h 00 à la gare. Le train de 6 h 43 est déjà parti : Karim prend celui de **7 h 03**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de minutes dure le trajet en train, de Meaux à Paris-Est ?",
+          "reponse": 34,
+          "unite": "min",
+          "aide": "Compte le temps qui s’écoule entre 7 h 03 et 7 h 37.",
+          "explication": "De 7 h 03 à 7 h 37, il s’écoule **34 minutes**."
+        },
+        {
+          "type": "zone",
+          "document": "recit",
+          "enonce": "Dans le Doc 1, touche l’expression qui désigne les moments où les transports sont les plus chargés.",
+          "reponse": ["p"],
+          "aide": "C’est une expression de trois mots, dans le paragraphe 2.",
+          "explication": "Les **heures de pointe** : le matin et le soir, quand tout le monde part au travail ou en revient, les trains sont saturés."
+        },
+        {
+          "type": "nombre",
+          "enonce": "D’après le Doc 1, combien de minutes dure le trajet complet de Karim, de sa porte jusqu’à son bureau ?",
+          "reponse": 90,
+          "unite": "min",
+          "aide": "Il part à 6 h 50 et arrive à 8 h 20. Compte d’abord jusqu’à 7 h 00, puis jusqu’à 8 h 00, puis jusqu’à 8 h 20.",
+          "explication": "De 6 h 50 à 8 h 20 : 10 min + 60 min + 20 min = **90 minutes**, soit une heure et demie."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète le bilan de la journée de Karim.",
+          "texte": "Aller et retour, Karim passe ___ heures par jour dans les transports. Ces trajets quotidiens entre le domicile et le travail s’appellent des migrations ___.",
+          "reponses": [["3", "trois"], ["pendulaires"]],
+          "banque": ["3", "1,5", "6", "pendulaires", "saisonnières", "touristiques"],
+          "aide": "Un aller dure une heure et demie. Et un pendule va… et vient !",
+          "explication": "1 h 30 à l’aller + 1 h 30 au retour = **3 heures**. Ces allers-retours quotidiens sont des **migrations pendulaires**."
+        }
+      ]
+    },
+    {
+      "chapitre": "71d64eba-5487-5da4-b60d-2f1e1f70afd8",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le siècle des villes",
+      "competence": "lire-graphique",
+      "situation": "En 1950, sur dix humains, trois seulement vivaient en ville. Que s’est-il passé depuis, et où vivent tous ces citadins ? Mène l’enquête avec deux documents de l’ONU.",
+      "documents": [
+        {
+          "id": "courbes",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Citadins et ruraux dans le monde, de 1950 à 2050",
+          "source": "Chiffres arrondis, ONU (2018). 2030 et 2050 : projections.",
+          "categories": ["1950", "1970", "1990", "2010", "2030", "2050"],
+          "series": [
+            { "nom": "Citadins", "valeurs": [0.8, 1.4, 2.3, 3.6, 5.2, 6.7], "teinte": "violet" },
+            { "nom": "Ruraux", "valeurs": [1.8, 2.3, 3.0, 3.4, 3.4, 3.1], "teinte": "vert" }
+          ],
+          "axeY": { "titre": "Population", "unite": "milliards", "min": 0, "max": 7, "pas": 1 },
+          "axeX": { "titre": "Année" }
+        },
+        {
+          "id": "villes",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Dix grandes agglomérations du monde",
+          "source": "Chiffres arrondis, ONU (2018).",
+          "categories": ["Tokyo", "Delhi", "Shanghai", "São Paulo", "Le Caire", "Mumbai", "New York", "Lagos", "Paris", "Londres"],
+          "series": [{ "nom": "Habitants", "valeurs": [37, 29, 26, 22, 20, 20, 19, 13, 11, 9], "teinte": "violet" }],
+          "axeY": { "titre": "Habitants", "unite": "millions", "min": 0, "max": 40, "pas": 10 },
+          "valeurs": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "courbes",
+          "enonce": "Sur la courbe des citadins, touche la **première année** du graphique où ils sont plus nombreux que les ruraux.",
+          "reponse": ["k3"],
+          "aide": "Compare les deux courbes année par année : la violette doit passer au-dessus de la verte.",
+          "explication": "En **2010**, on compte 3,6 milliards de citadins pour 3,4 milliards de ruraux. Le basculement a eu lieu en 2007 : depuis, plus de la moitié de l’humanité vit en ville."
+        },
+        {
+          "type": "nombre",
+          "enonce": "D’après les projections, combien de citadins y aura-t-il dans le monde en 2050 ?",
+          "reponse": 6.7,
+          "tolerance": 0.3,
+          "unite": "milliards",
+          "aide": "Lis le dernier point de la courbe violette, entre deux graduations.",
+          "explication": "Environ **6,7 milliards** de citadins, soit à peu près sept humains sur dix."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Une **mégapole** compte plus de 10 millions d’habitants. Combien d’agglomérations du Doc 2 sont des mégapoles ?",
+          "reponse": 9,
+          "unite": "mégapoles",
+          "aide": "Compte les barres qui dépassent 10 millions. Attention à la dernière !",
+          "explication": "**9** : toutes sauf Londres, qui compte environ 9 millions d’habitants."
+        },
+        {
+          "type": "zone",
+          "document": "villes",
+          "enonce": "New York, Londres, Tokyo, Paris et Shanghai sont des **villes mondiales** : elles commandent l’économie de la planète. Touche celle qui n’est **pas** une mégapole.",
+          "reponse": ["k9"],
+          "aide": "Cherche, parmi ces cinq villes, celle qui a moins de 10 millions d’habitants.",
+          "explication": "**Londres** (9 millions d’habitants) n’est pas une mégapole, mais c’est une ville mondiale : ce qui compte, c’est son pouvoir (banques, sièges d’entreprises, aéroports), pas sa taille."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montrent **ensemble** ces deux documents ?",
+          "options": [
+            "Les citadins sont de plus en plus nombreux, et beaucoup vivent dans des agglomérations géantes",
+            "Les ruraux sont de plus en plus nombreux, surtout autour des mégapoles",
+            "Le nombre de citadins baisse depuis 1990",
+            "Les plus grandes villes du monde sont toutes des villes mondiales"
+          ],
+          "reponse": 0,
+          "aide": "Le Doc 1 montre l’évolution des citadins ; le Doc 2, la taille des plus grandes villes.",
+          "explication": "**Les citadins sont de plus en plus nombreux**, et une partie d’entre eux vit dans des mégapoles de plus de 10 millions d’habitants, comme Tokyo, Delhi ou Lagos."
+        }
+      ]
+    }
+  ]
+}

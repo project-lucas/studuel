@@ -603,19 +603,78 @@ export function matchChapters<T extends { title: string; theme: string | null }>
 }
 
 // ---------------------------------------------------------------------------
-// Les formats d'un chapitre, en pastilles (Cours, Quiz, Flashcards, Carte
-// mentale, Défi, Mes erreurs). Ils se posent LÀ OÙ on choisit quoi travailler :
-// dans le chapitre et en pied de cours. L'onglet « Mode de jeu » en a porté une
-// liste, chapitre par chapitre — c'était le Programme redit une deuxième fois,
-// et elle a été retirée.
+// Les formats d'un chapitre, en tuiles (Cours, Fiche, Flashcards, Quiz,
+// Exercice, Moi vs IA, Mes erreurs). Ils se posent LÀ OÙ on choisit quoi
+// travailler : dans le chapitre et en pied de cours. L'onglet « Mode de jeu »
+// en a porté une liste, chapitre par chapitre — c'était le Programme redit une
+// deuxième fois, et elle a été retirée.
+//
+// TROIS GROUPES, TROIS VERBES (Lucas, 16/09/2026). L'écran de chapitre alignait
+// cinq tuiles — Cours · Quiz · Flashcards · Fiche · Défi — dont trois (Quiz,
+// Flashcards, Défi) jouaient LES MÊMES huit questions sous trois habillages :
+// « quelle différence, où se tester, que faire ? ». Chaque tuile répond
+// maintenant à UNE question de l'élève, et le groupe la nomme :
+//
+//   Apprendre   « je ne connais pas »        Cours, Fiche
+//   Mémoriser   « je connais mais j'oublie » Flashcards (+ Mes erreurs)
+//   Se tester   « est-ce que je sais »       Quiz, Exercice, Moi vs IA
+//
+// Le Défi solo de leçon est parti : le mot « Défi » ne désigne plus que
+// l'arène (/defi). À sa place, l'EXERCICE — un faux contrôle rédigé par l'IA
+// dans le style de la matière (problème en maths, texte à traduire en langue)
+// et corrigé par elle. « Moi vs IA » est un BLOC RÉSERVÉ, marqué « Bientôt »,
+// que Lucas a demandé de laisser en place pour décider s'il y revient.
 
 export type SupportKind =
   | 'cours'
   | 'quiz'
   | 'flashcards'
   | 'carte'
-  | 'defi'
+  | 'exercice'
+  | 'ia'
   | 'erreurs'
+
+/** Le groupe d'une tuile : le verbe qui la range sur l'écran de chapitre. */
+export type SupportGroupe = 'apprendre' | 'memoriser' | 'tester'
+
+export const SUPPORT_GROUPES: Record<SupportKind, SupportGroupe> = {
+  cours: 'apprendre',
+  carte: 'apprendre',
+  flashcards: 'memoriser',
+  erreurs: 'memoriser',
+  quiz: 'tester',
+  exercice: 'tester',
+  ia: 'tester',
+}
+
+/** L'ordre des groupes à l'écran : on apprend, on retient, on vérifie. */
+export const GROUPES_ORDRE: readonly SupportGroupe[] = [
+  'apprendre',
+  'memoriser',
+  'tester',
+]
+
+export const GROUPE_LABELS: Record<SupportGroupe, string> = {
+  apprendre: 'Apprendre',
+  memoriser: 'Mémoriser',
+  tester: 'Se tester',
+}
+
+/**
+ * Les tuiles rangées par groupe, dans l'ordre des groupes puis dans l'ordre
+ * reçu. Un groupe sans tuile n'apparaît pas : un titre « Mémoriser » au-dessus
+ * de rien serait une promesse vide.
+ */
+export function groupSupports(
+  chips: readonly SupportChip[],
+): { groupe: SupportGroupe; label: string; chips: SupportChip[] }[] {
+  return GROUPES_ORDRE.flatMap((groupe) => {
+    const siens = chips.filter((c) => SUPPORT_GROUPES[c.kind] === groupe)
+    return siens.length > 0
+      ? [{ groupe, label: GROUPE_LABELS[groupe], chips: siens }]
+      : []
+  })
+}
 
 export type SupportChip = {
   kind: SupportKind
@@ -631,7 +690,19 @@ export type SupportChip = {
   badge: string | null
   href: string
   done: boolean
+  /** Verrouillé par une GEMME (la fiche d'un chapitre pas encore débloqué). */
   locked?: boolean
+  /**
+   * Réservé à Studuel+ : la tuile porte la couronne. `true` dit l'OFFRE, pas
+   * l'accès — un abonné garde la couronne, c'est la page qui ouvre ou non.
+   */
+  premium?: boolean
+  /**
+   * Bloc RÉSERVÉ, pas encore jouable (« Moi vs IA ») : la tuile se montre
+   * mais ne mène nulle part. Elle existe pour qu'on voie la place qu'elle
+   * prendra, et pour que Lucas décide s'il y revient.
+   */
+  bientot?: boolean
   /** Récompense promise AVANT de jouer (« +20 XP »), miroir de lib/wallet. */
   xp?: number
 }
@@ -640,15 +711,17 @@ export const SUPPORT_LABELS: Record<SupportKind, string> = {
   cours: 'Cours',
   quiz: 'Quiz',
   flashcards: 'Flashcards',
-  // « Carte mentale », comme le titre de la page qu'il ouvre. Le support s'est
-  // appelé « Fiches » : le mot que l'élève emploie pour ses fiches de révision.
-  // Mais dans un dossier rangé sous ses chapitres, le header compte déjà des
-  // « fiches » (les lignes du programme) — le même mot désignait deux choses,
-  // et la page derrière s'intitulait une troisième. SEULE SOURCE du nom : il
-  // change ici pour l'écran de chapitre, le pied de cours et la fiche dépliée
-  // à la fois.
-  carte: 'Carte mentale',
-  defi: 'Défi',
+  // « Fiche » — la FICHE DE RÉVISION, le mot que l'élève emploie (décision de
+  // Lucas, 16/09/2026 : « renomme carte mentale par fiche »). Le support s'est
+  // appelé « Carte mentale », comme la page qu'il ouvre, parce que le header
+  // d'un dossier compte déjà des « fiches » (les lignes du programme) ; le
+  // même mot désigne donc deux choses, et c'est assumé : pour l'élève, la
+  // carte mentale d'un chapitre EST sa fiche de révision. SEULE SOURCE du
+  // nom : il change ici pour l'écran de chapitre, le pied de cours et la fiche
+  // dépliée à la fois ; la page `…/carte` porte le même titre.
+  carte: 'Fiche',
+  exercice: 'Exercice',
+  ia: 'Moi vs IA',
   erreurs: 'Mes erreurs',
 }
 
@@ -705,16 +778,41 @@ export function erreursBadge(count: number): string | null {
   return count > 0 ? `${count} à revoir` : null
 }
 
-// Défi : l'item s'appelle « Défi · 10 questions » (le titre de leçon des seeds,
-// type « L'essentiel du cours », n'apportait rien — le chapitre est déjà le
-// titre de section) ; son état dit s'il a déjà été relevé.
-export function defiTitle(questionCount: number): string {
-  return `Défi · ${questionCount} question${questionCount > 1 ? 's' : ''}`
+// Exercice : la meilleure note du faux contrôle (« 14/20 »), ou « Jamais tenté ».
+export function exerciceMeta(
+  best: { note: number; sur: number } | null,
+): string {
+  if (best && best.sur > 0) return `${best.note}/${best.sur}`
+  return NEVER_TRIED_LABEL
 }
 
-export function defiMeta(attempted: boolean): string {
-  return attempted ? 'Relevé' : NEVER_TRIED_LABEL
+/** Le barème se lit AVANT de cliquer : « --/20 » tant qu'on n'a pas rendu de copie. */
+export function exerciceBadge(
+  best: { note: number; sur: number } | null,
+): string {
+  if (best && best.sur > 0) return `${best.note}/${best.sur}`
+  return `--/${EXERCICE_SUR}`
 }
+
+/** Toute copie est notée sur 20 — le barème que l'élève connaît. */
+export const EXERCICE_SUR = 20
+
+/**
+ * Le cahier d'exercices (trois exercices à étoiles) : « 1/3 réussi ». Tant
+ * qu'aucun ne l'est, on dit combien il y en a à faire, pas « 0 ».
+ */
+export function cahierMeta(c: { reussis: number; total: number }): string {
+  if (c.reussis <= 0) return `${c.total} exercices`
+  return `${c.reussis}/${c.total} réussi${c.reussis > 1 ? 's' : ''}`
+}
+
+/** La pastille de la tuile : « ★ 1/3 ». */
+export function cahierBadge(c: { reussis: number; total: number }): string {
+  return `★ ${Math.min(c.reussis, c.total)}/${c.total}`
+}
+
+/** Le bloc réservé « Moi vs IA » n'a qu'un état, et il le dit. */
+export const BIENTOT_LABEL = 'Bientôt'
 
 // Carte mentale : « Vue d'ensemble » si le chapitre est accessible,
 // « Débloquer » (affiché avec la gemme) tant qu'il est verrouillé.
@@ -724,6 +822,11 @@ export function carteMeta(locked: boolean): string {
 
 export type SubjectTemplateData = {
   subject: { slug: string; name: string; color: string }
+  /**
+   * Abonné Studuel+ : les jeux de la matière s'ouvrent tous dans l'onglet
+   * « Mode de jeu » (la version gratuite en ouvre un, lib/jeux/acces).
+   */
+  premium?: boolean
   /** Libellé long du programme affiché en clair (« 3e », « Terminale »). */
   grade: string
   /**

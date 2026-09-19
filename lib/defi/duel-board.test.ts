@@ -170,24 +170,21 @@ describe('duelTarget', () => {
   })
 
   it('pousse vers le jeu le moins travaillé, quand c’est un salon qui se lance', () => {
-    const rows = [
-      { subject: 'maths', gameId: 'calcul-mental', trophies: 890 },
-      { subject: 'maths', gameId: 'compte-est-bon', trophies: 350 },
-    ]
-    // Les maths hors du programme jouable : sans duel de matière à lancer,
+    const rows = [{ subject: 'francais', gameId: 'chasse-faute', trophies: 890 }]
+    // Le français hors du programme jouable : sans duel de matière à lancer,
     // c'est bien le repli qui arbitre, et lui seul — sinon ce test mesurerait
-    // le duel et non le choix du salon. Elles gardent leurs TROIS jeux, dont un
-    // jamais touché, ce qui est tout l'objet de l'arbitrage.
+    // le duel et non le choix du salon. Il garde ses deux jeux, dont un jamais
+    // touché, ce qui est tout l'objet de l'arbitrage.
     const roster = buildRoster(trophyMap(rows), {
       programmeReady: new Set(['histoire-geo']),
     })
     const board = buildDuelBoard(roster)
-    const maths = board.find((e) => e.slug === 'maths')!
-    const target = duelTarget(maths)!
+    const francais = board.find((e) => e.slug === 'francais')!
+    const target = duelTarget(francais)!
 
-    // Le jeu jamais touché rapporte 10, les deux autres 2 et 7.
+    // Le jeu jamais touché rapporte 10, l'autre 2.
     expect(target.nextWin).toBe(10)
-    const chosen = maths.games.find((g) => g.name === target.label)!
+    const chosen = francais.games.find((g) => g.name === target.label)!
     expect(chosen.trophies).toBe(0)
   })
 })

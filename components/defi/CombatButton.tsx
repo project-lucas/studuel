@@ -122,6 +122,7 @@ export default function CombatButton({
         <MatchmakingOverlay
           href={target.href}
           subject={active.subject}
+          vignette={active.vignette}
           onCancel={() => setRecherche(false)}
         />
       ) : null}

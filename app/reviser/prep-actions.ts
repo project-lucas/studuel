@@ -76,7 +76,11 @@ export async function createControle(
   const grade = rows[0].level
 
   const chapters: PrepChapter[] = rows.map((r) => ({ id: r.id, title: r.title }))
+  // LA DATE EST OBLIGATOIRE (17/09/2026) : sans elle, la carte « Contrôle à
+  // venir » de Réviser ne peut pas compter les jours, et c'est ce compte que
+  // l'élève regarde. Le client la refuse déjà ; le serveur aussi.
   const cleanDate = isDayKey(date) ? date : null
+  if (cleanDate === null) return { ok: false, controleId: null }
   const today = toDayKey(new Date())
 
   // Plan : jours ajustés par l'élève (validés) si fournis, sinon plan par défaut.

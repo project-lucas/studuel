@@ -1,6 +1,6 @@
 'use client'
 
-import { Check, Clock3, Crown, Plus, Timer } from 'lucide-react'
+import { Check, Clock3, Crown, Flag, Plus, Timer } from 'lucide-react'
 import SupportChips from '@/components/reviser/SupportChips'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
@@ -22,9 +22,10 @@ import {
 // La page de chapitre existe toujours (liens profonds, pied de cours) ; elle
 // n'est simplement plus le passage obligé.
 //
-// `resumeLabel` : la fiche à reprendre garde son repère jaune — mais sur le
-// « + », pas sur un bouton-texte. C'est le même geste que partout ailleurs dans
-// la liste ; seule la couleur dit « c'est ici qu'on reprend ».
+// `resumeLabel` : LA FICHE DE LA DERNIÈRE SESSION porte un DRAPEAU violet
+// au-dessus de son titre (« Dernière session ») et garde son « + » en jaune.
+// C'est tout ce qui reste des deux blocs d'entrée du dossier, retirés le
+// 17/09/2026 : le repère dit où l'élève s'est arrêté, il ne devine rien.
 //
 // `rank` : non nul quand la liste est rangée sous les chapitres du programme
 // (colonne `theme`). La ligne n'est alors plus un chapitre mais une FICHE de
@@ -62,7 +63,10 @@ export default function ChapterItem({
   return (
     <div
       className={cn(
-        'rounded-2xl border bg-card shadow-sm transition-shadow',
+        // `text-card-foreground` EXPLICITE : la ligne vit dans la carte VIOLETTE
+        // du chapitre, dont le texte est blanc — sans sa propre encre, le titre
+        // de la fiche héritait du blanc et disparaissait sur le fond crème.
+        'rounded-2xl border bg-card text-card-foreground shadow-sm transition-shadow',
         open ? 'shadow-md' : null,
         resumeLabel ? 'border-highlight ring-2 ring-highlight/40' : null,
       )}
@@ -116,6 +120,18 @@ export default function ChapterItem({
       )}
 
       <span className="min-w-0 flex-1">
+        {/* Le drapeau est DÉCORATIF pour le lecteur d'écran : collé devant le
+            titre, il en ferait « Dernière sessionLes auxiliaires modaux ». Le
+            mot est redit APRÈS le titre, en texte caché. */}
+        {resumeLabel ? (
+          <span
+            aria-hidden="true"
+            className="mb-1 mr-1.5 inline-flex items-center gap-1 rounded-full bg-primary px-2 py-0.5 text-[10px] font-extrabold text-primary-foreground"
+          >
+            <Flag className="size-3" />
+            {resumeLabel}
+          </span>
+        ) : null}
         {chapter.examHint ? (
           <span
             className={cn(
@@ -138,6 +154,9 @@ export default function ChapterItem({
             programme est une liste de notions ; elle vaut en fait pour toutes
             les matières. */}
         <span className="block font-semibold text-balance">{chapter.title}</span>
+        {resumeLabel ? (
+          <span className="sr-only"> — {resumeLabel.toLowerCase()}</span>
+        ) : null}
         <span className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs font-semibold text-muted-foreground">
           {chapter.minutes !== null ? (
             <span className="inline-flex items-center gap-1">

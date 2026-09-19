@@ -42,6 +42,10 @@ interface BadgeProps {
  * Pastille de notification à liseré or + contour encre, posée en haut à
  * droite d'un élément (le parent doit être `relative`). Le corail est réservé
  * au « à réclamer maintenant » ; tout compteur d'avancement passe en neutre.
+ *
+ * Sur les plaques de bord de l'arène, passer `arena-pastille` dans
+ * `className` : 22 px et un contour blanc, à cheval sur l'angle — le compteur
+ * de Clash Royale, lisible sur un objet sombre.
  */
 export function NotificationBadge({
   children,
@@ -51,7 +55,7 @@ export function NotificationBadge({
   const toneClass = tone === 'alert' ? 'olympe-badge' : 'olympe-badge--neutral'
   return (
     <span
-      className={`${toneClass} grid h-5 min-w-5 place-items-center rounded-full px-1 font-heading text-[0.6rem] leading-none font-extrabold ${className}`}
+      className={`${toneClass} grid h-5 min-w-5 place-items-center rounded-full px-1 font-heading text-[0.6rem] leading-none font-extrabold [&.arena-pastille]:h-[22px] [&.arena-pastille]:min-w-[22px] [&.arena-pastille]:text-[0.7rem] [&.arena-pastille]:ring-2 [&.arena-pastille]:ring-white ${className}`}
     >
       {children}
     </span>

@@ -2,15 +2,15 @@ import type { SupabaseClient } from '@supabase/supabase-js'
 import { buildChapterSupports, type SupportLesson } from '@/lib/chapter-supports'
 import { mindMapFromLessons } from '@/lib/mind-map-auto'
 import { getReviewItems } from '@/lib/srs'
-import { getUserTierFor } from '@/lib/subscription'
+import { canAccessPremiumTests, getUserTierFor } from '@/lib/subscription'
 import { canOpenChapter } from '@/lib/gems'
 import { fetchUnlockedChapters } from '@/lib/gems-access'
 import type { SupportChip } from '@/lib/subject-template'
 import type { Chapter } from '@/lib/types'
 
 /**
- * Les cinq supports d'un chapitre : Cours · Quiz · Flashcards · Carte mentale ·
- * Défi, avec leur état. Données du CHAPITRE, servies à ses deux écrans :
+ * Les supports d'un chapitre : Cours · Fiche · Flashcards · Quiz · Exercice ·
+ * Moi vs IA, avec leur état. Données du CHAPITRE, servies à ses deux écrans :
  *
  *  - l'écran de chapitre, où l'élève choisit par quoi il commence (aucune leçon
  *    de référence : rien n'est encore lu) ;
@@ -61,11 +61,13 @@ export async function loadChapterSupports(
   const [
     { data: questions },
     { data: sessions },
-    { data: defiEvents },
+    { data: copies },
     { data: lues },
     reviewItems,
     tier,
     unlocked,
+    { data: cahier },
+    { data: cahierReussis },
   ] = await Promise.all([
       quizIds.length
         ? supabase
@@ -84,12 +86,16 @@ export async function loadChapterSupports(
         : Promise.resolve({
             data: [] as { quiz_id: string | null; score: number; total: number }[],
           }),
+      // Les copies rendues sur l'exercice du chapitre (migration 360) : la
+      // meilleure note fait la pastille de la tuile. Tant que la migration
+      // n'est pas passée, la table manque et `data` est nul — la tuile dit
+      // alors « --/20 », elle ne casse rien.
       supabase
-        .from('xp_events')
-        .select('source_key')
+        .from('chapter_exercice_reponses')
+        .select('note, sur')
         .eq('user_id', userId)
-        .eq('source', 'defi')
-        .returns<{ source_key: string | null }[]>(),
+        .eq('chapter_id', chapter.id)
+        .returns<{ note: number; sur: number }[]>(),
       // Les leçons DÉJÀ TERMINÉES du chapitre : c'est ce qui coche la tuile
       // « Cours ». Bornée aux leçons de ce chapitre, donc une lecture courte.
       supabase
@@ -104,6 +110,21 @@ export async function loadChapterSupports(
       getReviewItems(supabase, userId),
       getUserTierFor(supabase, userId),
       fetchUnlockedChapters(supabase, userId),
+      // Le cahier d'exercices du chapitre (migration 372) et ceux que l'élève
+      // a réussis. Tables absentes = `data` nul : la tuile reste sur le
+      // contrôle blanc, rien ne casse.
+      supabase
+        .from('exercices')
+        .select('id')
+        .eq('chapter_id', chapter.id)
+        .returns<{ id: string }[]>(),
+      supabase
+        .from('exercice_resultats')
+        .select('exercice_id')
+        .eq('user_id', userId)
+        .eq('chapter_id', chapter.id)
+        .eq('reussi', true)
+        .returns<{ exercice_id: string }[]>(),
     ])
 
   const questionCountByQuiz = new Map<string, number>()
@@ -131,11 +152,13 @@ export async function loadChapterSupports(
 
   const lecons_lues = new Set((lues ?? []).map((l) => l.lesson_id))
 
-  const defiAttempted = new Set(
-    (defiEvents ?? []).flatMap((e) =>
-      e.source_key ? [e.source_key.split(':')[0]] : [],
-    ),
-  )
+  // La meilleure copie : la note la plus haute, rapportée à son barème.
+  let meilleureCopie: { note: number; sur: number } | null = null
+  for (const c of copies ?? []) {
+    if (!(c.sur > 0)) continue
+    if (!meilleureCopie || c.note / c.sur > meilleureCopie.note / meilleureCopie.sur)
+      meilleureCopie = { note: c.note, sur: c.sur }
+  }
 
   const supportLessons: SupportLesson[] = rows.map((l) => {
     const ownQuizId = ownQuizByLesson.get(l.id) ?? null
@@ -147,7 +170,6 @@ export async function loadChapterSupports(
       questionCount: quizId ? (questionCountByQuiz.get(quizId) ?? 0) : 0,
       dueCount: quizId ? (dueByQuiz.get(quizId) ?? 0) : 0,
       best: ownQuizId ? (bestByQuiz.get(ownQuizId) ?? null) : null,
-      defiAttempted: defiAttempted.has(l.id),
       ownQuiz: ownQuizId !== null,
       read: lecons_lues.has(l.id),
     }
@@ -164,6 +186,16 @@ export async function loadChapterSupports(
           Boolean(chapter.has_mind_map) ||
           mindMapFromLessons(chapter.title, rows) !== null,
         locked: !canOpenChapter(tier, chapter.id, unlocked),
+      },
+      exercice: {
+        best: meilleureCopie,
+        premium: canAccessPremiumTests(tier),
+        cahier: cahier?.length
+          ? {
+              total: cahier.length,
+              reussis: (cahierReussis ?? []).filter((r) => cahier.some((e) => e.id === r.exercice_id)).length,
+            }
+          : null,
       },
     },
     lessonId,

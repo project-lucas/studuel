@@ -16,12 +16,19 @@ import {
   type CardState,
   type Phase,
 } from '@/lib/carnet/planification'
+import { toutLire } from '@/lib/postgrest-pages'
 
 /** Code PostgREST d'une table absente (migration pas encore exécutée). */
 const TABLE_ABSENTE = '42P01'
 
-/** Borne de lecture : au-delà, on ne charge pas tout d'un coup. */
-const MAX_ETATS = 2_000
+/**
+ * Combien d'identifiants au plus dans un `in.(…)`.
+ *
+ * Un UUID pèse 37 caractères dans l'URL. Les 2 000 d'autrefois faisaient une
+ * requête GET de 74 Ko, que le proxy refuse ; et PostgREST n'aurait de toute
+ * façon rendu que les 1 000 premières lignes. On coupe, et on pagine.
+ */
+const IDS_PAR_REQUETE = 200
 
 type EtatRow = {
   question_id: string
@@ -100,21 +107,36 @@ export async function chargerEtats(
   for (const id of questionIds) etats.set(id, etatInitial(nowIso))
   if (questionIds.length === 0) return etats
 
-  const { data, error } = await supabase
-    .from('carnet_question_states')
-    .select(COLONNES)
-    .eq('user_id', userId)
-    .in('question_id', questionIds.slice(0, MAX_ETATS))
-
-  if (error) {
-    if (error.code !== TABLE_ABSENTE) {
-      console.error('[carnet-etats] lecture impossible:', error.message)
-    }
-    return etats
+  // Par paquets d'identifiants, et chaque paquet page par page : une carte
+  // dont l'état n'est pas lu repart NEUVE, c'est-à-dire due — l'élève revoit
+  // une carte acquise, et sa planification recommence à zéro.
+  const paquets: string[][] = []
+  for (let i = 0; i < questionIds.length; i += IDS_PAR_REQUETE) {
+    paquets.push(questionIds.slice(i, i + IDS_PAR_REQUETE))
   }
 
-  for (const row of (data ?? []) as EtatRow[]) {
-    etats.set(String(row.question_id), rowToState(row, nowIso))
+  const resultats = await Promise.all(
+    paquets.map((paquet) =>
+      toutLire<EtatRow, { code?: string; message?: string }>((from, to) =>
+        supabase
+          .from('carnet_question_states')
+          .select(COLONNES)
+          .eq('user_id', userId)
+          .in('question_id', paquet)
+          .order('question_id', { ascending: true })
+          .range(from, to)
+          .returns<EtatRow[]>(),
+      ),
+    ),
+  )
+
+  const erreur = resultats.find((r) => r.error)?.error
+  if (erreur && erreur.code !== TABLE_ABSENTE) {
+    console.error('[carnet-etats] lecture impossible:', erreur.message)
+  }
+
+  for (const { data } of resultats) {
+    for (const row of data) etats.set(String(row.question_id), rowToState(row, nowIso))
   }
   return etats
 }
@@ -130,19 +152,23 @@ export async function chargerTousLesEtats(
   nowIso: string,
 ): Promise<Map<string, CardState>> {
   const etats = new Map<string, CardState>()
-  const { data, error } = await supabase
-    .from('carnet_question_states')
-    .select(COLONNES)
-    .eq('user_id', userId)
-    .limit(MAX_ETATS)
+  // Page par page : `.limit(2 000)` ne protégeait de rien — PostgREST plafonne
+  // à 1 000 AVANT de regarder la limite demandée, et sans ordre les 1 000
+  // retenues n'étaient même pas les mêmes d'un chargement à l'autre.
+  const { data, error } = await toutLire<EtatRow, { code?: string; message?: string }>((from, to) =>
+    supabase
+      .from('carnet_question_states')
+      .select(COLONNES)
+      .eq('user_id', userId)
+      .order('question_id', { ascending: true })
+      .range(from, to)
+      .returns<EtatRow[]>(),
+  )
 
-  if (error) {
-    if (error.code !== TABLE_ABSENTE) {
-      console.error('[carnet-etats] lecture globale impossible:', error.message)
-    }
-    return etats
+  if (error && error.code !== TABLE_ABSENTE) {
+    console.error('[carnet-etats] lecture globale impossible:', error.message)
   }
-  for (const row of (data ?? []) as EtatRow[]) {
+  for (const row of data) {
     etats.set(String(row.question_id), rowToState(row, nowIso))
   }
   return etats

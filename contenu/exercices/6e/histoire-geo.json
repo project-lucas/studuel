@@ -1,0 +1,229 @@
+{
+  "niveau": "6e",
+  "matiere": "histoire-geo",
+  "exercices": [
+    {
+      "chapitre": "6aa853fb-a3a8-5790-b22e-1ffedca7aeee",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les géants des mers",
+      "competence": "lire-carte",
+      "situation": "Ton t-shirt, ton téléphone, ta console : ils ont très probablement voyagé en bateau, dans un **conteneur**. Découvre les ports où ces boîtes géantes arrivent par millions.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Trois très grands ports du monde",
+          "fond": "monde",
+          "cadrage": [-20, -12, 140, 62],
+          "lieux": [
+            { "id": "shanghai", "lieu": "shanghai", "symbole": "lettre", "lettre": "A", "teinte": "bleu" },
+            { "id": "singapour", "lieu": "singapour", "symbole": "lettre", "lettre": "B", "teinte": "bleu" },
+            { "id": "rotterdam", "lieu": "rotterdam", "symbole": "lettre", "lettre": "C", "teinte": "bleu" }
+          ]
+        },
+        {
+          "id": "trafic",
+          "type": "tableau",
+          "titre": "Le nombre de conteneurs passés par chaque port en une année",
+          "source": "Chiffres arrondis, année 2023.",
+          "colonnes": ["Port", "Pays", "Conteneurs (en millions)"],
+          "lignes": [
+            ["Shanghai", "Chine", 49],
+            ["Singapour", "Singapour", 39],
+            ["Rotterdam", "Pays-Bas", 13],
+            ["Le Havre", "France", 3]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "D’après le Doc 2, quel est le **premier port du monde** ?",
+          "options": ["Shanghai", "Singapour", "Rotterdam", "Le Havre"],
+          "reponse": 0,
+          "ordreFixe": true,
+          "aide": "Cherche le plus grand nombre dans la dernière colonne.",
+          "explication": "Avec 49 millions de conteneurs par an, **Shanghai** est le premier port du monde."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Sur la carte, touche le repère qui correspond à **Shanghai**, en Chine.",
+          "reponse": ["shanghai"],
+          "aide": "La Chine se trouve en Asie, tout à l’est de la carte.",
+          "explication": "Shanghai est le repère **A**, sur la côte est de la Chine, au bord de l’océan Pacifique."
+        },
+        {
+          "type": "choix",
+          "enonce": "Sur quel continent se trouve le port de **Rotterdam** ?",
+          "options": ["En Asie", "En Europe", "En Afrique", "En Amérique"],
+          "reponse": 1,
+          "ordreFixe": true,
+          "aide": "Rotterdam est aux Pays-Bas, le repère C sur la carte.",
+          "explication": "Rotterdam est aux Pays-Bas, en **Europe** : c’est le premier port européen."
+        }
+      ]
+    },
+    {
+      "chapitre": "6aa853fb-a3a8-5790-b22e-1ffedca7aeee",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Port-Soleil, la ville qui change de taille",
+      "competence": "lire-graphique",
+      "situation": "Port-Soleil est une petite ville au bord de la mer. Chaque année, entre juillet et août, il s’y passe quelque chose d’étonnant.",
+      "documents": [
+        {
+          "id": "population",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Le nombre de personnes présentes à Port-Soleil chaque mois",
+          "categories": ["Janv.", "Févr.", "Mars", "Avr.", "Mai", "Juin", "Juil.", "Août", "Sept.", "Oct.", "Nov.", "Déc."],
+          "series": [{ "nom": "Personnes présentes", "valeurs": [7, 6, 7, 9, 12, 20, 38, 42, 15, 8, 7, 7], "teinte": "turquoise" }],
+          "axeY": { "titre": "Personnes présentes", "unite": "en milliers", "min": 0, "max": 45, "pas": 5 }
+        },
+        {
+          "id": "article",
+          "type": "texte",
+          "genre": "article",
+          "titre": "« Port-Soleil, la ville accordéon »",
+          "source": "Article de journal imaginé pour l’exercice.",
+          "blocs": [
+            "Chaque été, Port-Soleil voit sa population exploser. Campings, résidences secondaires et hôtels affichent complet, et les restaurants embauchent des serveurs, des sauveteurs et des cuisiniers… pour deux mois seulement.",
+            "Mais ce succès a un prix. Le long de la plage, les immeubles ont remplacé les dunes : les habitants parlent de [[b|bétonisation]]. En hiver, beaucoup de volets restent fermés et les rues sont vides."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de personnes sont présentes à Port-Soleil en **août** ?",
+          "reponse": 42000,
+          "unite": "personnes",
+          "aide": "Attention : le graphique compte en **milliers**. 1 millier = 1 000.",
+          "explication": "La barre d’août monte à 42 milliers, soit **42 000 personnes**."
+        },
+        {
+          "type": "zone",
+          "document": "population",
+          "enonce": "Touche le mois où il y a **le moins de monde** à Port-Soleil.",
+          "reponse": ["k1"],
+          "aide": "Cherche la barre la plus basse.",
+          "explication": "C’est en **février** que la ville est la plus calme : 6 000 personnes."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois plus de personnes y a-t-il en août qu’en février ?",
+          "reponse": 7,
+          "unite": "fois plus",
+          "aide": "Divise le nombre d’août par celui de février : 42 ÷ 6.",
+          "explication": "42 000 ÷ 6 000 = **7** : il y a sept fois plus de monde en août !"
+        },
+        {
+          "type": "zone",
+          "document": "article",
+          "enonce": "Dans le Doc 2, touche le mot qui désigne la **construction massive d’immeubles** sur le bord de mer.",
+          "reponse": ["b"],
+          "aide": "Le mot vient de « béton ».",
+          "explication": "La **bétonisation** : le rivage se couvre de constructions, souvent à la place des dunes et des espaces naturels."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment appelle-t-on les emplois qui n’existent qu’une partie de l’année, comme ceux des serveurs de l’article ?",
+          "options": ["Des emplois saisonniers", "Des emplois industriels", "Des emplois agricoles", "Des emplois de bureau"],
+          "reponse": 0,
+          "aide": "Le mot vient de « saison ».",
+          "explication": "Ce sont des **emplois saisonniers** : ils ne durent que le temps de la saison touristique."
+        }
+      ]
+    },
+    {
+      "chapitre": "6aa853fb-a3a8-5790-b22e-1ffedca7aeee",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "L’immeuble que la mer a rattrapé",
+      "competence": "analyser-document",
+      "situation": "Sur la côte atlantique, un immeuble construit au bord de la plage a dû être abandonné, puis détruit. Mène l’enquête avec les documents.",
+      "documents": [
+        {
+          "id": "signal",
+          "type": "texte",
+          "genre": "article",
+          "titre": "L’histoire du Signal",
+          "source": "Texte écrit pour l’exercice, d’après l’histoire vraie de l’immeuble Le Signal à Soulac-sur-Mer (Gironde).",
+          "blocs": [
+            "À la fin des années 1960, on construit à Soulac-sur-Mer un immeuble de quatre étages, le Signal. Il se trouve alors à environ **200 mètres** de l’océan : les futurs habitants rêvent d’une vue sur la mer.",
+            "Mais tempête après tempête, la mer grignote la dune. En **2014**, elle n’est plus qu’à une **vingtaine de mètres** de l’immeuble. Pour la sécurité des habitants, le Signal est évacué.",
+            "Resté vide pendant des années, l’immeuble est finalement démoli en **2023**. Il est devenu le symbole du recul du trait de côte."
+          ]
+        },
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Quatre villes du littoral français",
+          "fond": "france",
+          "fleuves": ["garonne", "loire", "seine"],
+          "lieux": [
+            { "id": "soulac", "lon": -1.13, "lat": 45.51, "symbole": "lettre", "lettre": "A", "teinte": "corail" },
+            { "id": "le-havre", "lieu": "le-havre", "symbole": "lettre", "lettre": "B", "teinte": "corail" },
+            { "id": "nice", "lieu": "nice", "symbole": "lettre", "lettre": "C", "teinte": "corail" },
+            { "id": "brest", "lieu": "brest", "symbole": "lettre", "lettre": "D", "teinte": "corail" },
+            { "id": "bordeaux", "lieu": "bordeaux", "nom": "Bordeaux", "taille": 1 }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "De combien de mètres la mer s’est-elle rapprochée du Signal entre sa construction et 2014 ?",
+          "reponse": 180,
+          "unite": "m",
+          "aide": "Au départ, la mer est à 200 m ; en 2014, elle n’est plus qu’à 20 m.",
+          "explication": "200 − 20 = **180 mètres** : la côte a reculé de près de deux terrains de football en moins de cinquante ans."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel phénomène explique l’histoire du Signal ?",
+          "options": ["L’érosion du trait de côte", "La bétonisation", "Une marée noire", "L’agrandissement du port"],
+          "reponse": 0,
+          "aide": "Relis le paragraphe 2 : la mer « grignote » la dune.",
+          "explication": "C’est l’**érosion** : les vagues et les tempêtes emportent peu à peu le sable, et le trait de côte recule."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets l’histoire du Signal dans l’ordre.",
+          "items": [
+            "L’immeuble est construit à 200 m de l’océan.",
+            "Les tempêtes grignotent la dune.",
+            "Les habitants sont évacués.",
+            "L’immeuble est démoli."
+          ],
+          "aide": "Aide-toi des dates du Doc 1 : fin des années 1960, 2014, 2023.",
+          "explication": "Construction (fin des années 1960) → recul de la dune → évacuation (2014) → démolition (2023)."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Soulac-sur-Mer se trouve au bord de l’océan Atlantique, au nord de Bordeaux. Touche son repère sur la carte.",
+          "reponse": ["soulac"],
+          "aide": "Repère Bordeaux, puis suis la Garonne jusqu’à l’océan.",
+          "explication": "Soulac-sur-Mer est le repère **A**, à l’embouchure de la Gironde, au bord de l’Atlantique."
+        },
+        {
+          "type": "categories",
+          "enonce": "Les autres repères de la carte sont aussi des littoraux, mais pas du même type. Range chaque ville.",
+          "categories": ["Littoral industrialo-portuaire", "Littoral touristique"],
+          "items": [
+            ["Le Havre (B) : un grand port à conteneurs", 0],
+            ["Nice (C) : plages, hôtels et aéroport", 1],
+            ["Rotterdam : le premier port d’Europe", 0],
+            ["Cancún : plages et grands hôtels au Mexique", 1]
+          ],
+          "aide": "Un littoral industrialo-portuaire vit de ses ports et de ses usines ; un littoral touristique, des vacanciers.",
+          "explication": "Le Havre et Rotterdam sont des **littoraux industrialo-portuaires** ; Nice et Cancún, des **littoraux touristiques**."
+        }
+      ]
+    }
+  ]
+}

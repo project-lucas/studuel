@@ -20,7 +20,7 @@ function mission(over: Partial<Mission> = {}): Mission {
 }
 
 function input(over: Partial<PointInput> = {}): PointInput {
-  const plan: MissionPlan = { mission: mission(), ensuite: [] }
+  const plan: MissionPlan = { mission: mission(), ensuite: [], autresControles: [] }
   return { plan, srsDue: 0, streak: 0, hasHistory: true, goalMinutes: 10, ...over }
 }
 
@@ -39,7 +39,7 @@ describe('le ton', () => {
   it('fait passer une échéance datée avant tout le reste', () => {
     const plan: MissionPlan = {
       mission: mission({ kind: 'controle', countdown: 'J-4', progress: null }),
-      ensuite: [],
+      ensuite: [], autresControles: [],
     }
     const point = pointDuJour(input({ plan, srsDue: 12 }))
 
@@ -54,7 +54,7 @@ describe('le ton', () => {
   it('distingue une découverte d’une reprise', () => {
     const decouverte: MissionPlan = {
       mission: mission({ kind: 'decouverte', isNew: true, progress: 0 }),
-      ensuite: [],
+      ensuite: [], autresControles: [],
     }
     expect(pointDuJour(input({ plan: decouverte })).ton).toBe('decouverte')
     expect(pointDuJour(input()).ton).toBe('reprise')
@@ -63,7 +63,7 @@ describe('le ton', () => {
   it('félicite au lieu d’inventer quand il n’y a plus rien à faire', () => {
     // Sans ce ton, Marcel n'aurait que des reproches et l'élève cesserait
     // d'ouvrir l'onglet.
-    const point = pointDuJour(input({ plan: { mission: null, ensuite: [] } }))
+    const point = pointDuJour(input({ plan: { mission: null, ensuite: [], autresControles: [] } }))
 
     expect(point.ton).toBe('avance')
     expect(point.titre).toContain('Rien à rattraper')
@@ -78,7 +78,7 @@ describe('la méthode', () => {
 
     const francais: MissionPlan = {
       mission: mission({ subjectSlug: 'francais', subjectName: 'Français' }),
-      ensuite: [],
+      ensuite: [], autresControles: [],
     }
     expect(pointDuJour(input({ plan: francais })).consigne).toBe(
       REGIMES.expression.consigne,
@@ -89,7 +89,7 @@ describe('la méthode', () => {
     // C'est tout le produit : on ne révise pas l'histoire comme les maths.
     const hg: MissionPlan = {
       mission: mission({ subjectSlug: 'histoire-geo', subjectName: 'Histoire-géo' }),
-      ensuite: [],
+      ensuite: [], autresControles: [],
     }
     const a = pointDuJour(input())
     const b = pointDuJour(input({ plan: hg }))
@@ -101,7 +101,7 @@ describe('la méthode', () => {
   it('se tait sur une matière hors doctrine, sans casser l’écran', () => {
     const sport: MissionPlan = {
       mission: mission({ subjectSlug: 'sport', subjectName: 'EPS' }),
-      ensuite: [],
+      ensuite: [], autresControles: [],
     }
     const point = pointDuJour(input({ plan: sport }))
 
@@ -129,7 +129,7 @@ describe('le renvoi vers Réviser', () => {
   it('porte la matière DE LA MISSION, pour ne pas renvoyer vers la mauvaise méthode', () => {
     const hg: MissionPlan = {
       mission: mission({ subjectSlug: 'histoire-geo', subjectName: 'Histoire-géo' }),
-      ensuite: [],
+      ensuite: [], autresControles: [],
     }
     expect(pointDuJour(input({ plan: hg })).matiere).toEqual({
       slug: 'histoire-geo',
@@ -138,7 +138,7 @@ describe('le renvoi vers Réviser', () => {
   })
 
   it('n’a pas de matière quand il n’y a rien à faire', () => {
-    const point = pointDuJour(input({ plan: { mission: null, ensuite: [] } }))
+    const point = pointDuJour(input({ plan: { mission: null, ensuite: [], autresControles: [] } }))
     expect(point.matiere).toBeNull()
   })
 })
@@ -164,7 +164,7 @@ describe('les raisons', () => {
   it('n’affiche pas de progression sur un chapitre jamais ouvert', () => {
     const neuf: MissionPlan = {
       mission: mission({ kind: 'decouverte', isNew: true, progress: 0 }),
-      ensuite: [],
+      ensuite: [], autresControles: [],
     }
     expect(
       pointDuJour(input({ plan: neuf })).raisons.some((r) => r.key === 'progress'),
@@ -172,7 +172,7 @@ describe('les raisons', () => {
   })
 
   it('borne un pourcentage aberrant au lieu de l’afficher tel quel', () => {
-    const cassé: MissionPlan = { mission: mission({ progress: 3.7 }), ensuite: [] }
+    const cassé: MissionPlan = { mission: mission({ progress: 3.7 }), ensuite: [], autresControles: [] }
     const label = pointDuJour(input({ plan: cassé })).raisons.find(
       (r) => r.key === 'progress',
     )?.label

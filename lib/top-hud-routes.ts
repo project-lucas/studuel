@@ -30,9 +30,22 @@ export function estOngletMoi(pathname: string): boolean {
   return pathname === '/moi'
 }
 
+/**
+ * L'ARÈNE N'A PLUS DE BANDEAU NON PLUS (Lucas, 17/09/2026 : « assemble ces
+ * trois blocs en un seul bloc placé en haut à gauche »). La carte du joueur de
+ * /defi porte désormais l'avatar, la série, les cristaux, la barre de niveau
+ * et la barre de trophées : la bande de ressources du bandeau, à droite, les
+ * redisait. Exactement `/defi` : les salles de jeu gardent leur bandeau.
+ */
+export function estArene(pathname: string): boolean {
+  return pathname === '/defi'
+}
+
 /** Le bandeau du haut doit-il être masqué sur ce chemin ? */
 export function isHudHidden(pathname: string): boolean {
-  return estChromeMasque(pathname) || estOngletMoi(pathname)
+  return (
+    estChromeMasque(pathname) || estOngletMoi(pathname) || estArene(pathname)
+  )
 }
 
 /**

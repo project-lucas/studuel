@@ -1,20 +1,12 @@
 'use client'
 
-import { useRef, useState, useTransition } from 'react'
+import { useState, useTransition } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { prechargerOnglet } from '@/components/PrechargeurOnglets'
 import PrechargeurDossiers from '@/components/reviser/PrechargeurDossiers'
 import { dossiersAPrecharger } from '@/lib/precharge-onglets'
-import {
-  Check,
-  Pencil,
-  CalendarClock,
-  Crown,
-  Search,
-  Swords,
-  X,
-} from 'lucide-react'
+import { Check, Pencil, CalendarClock, Crown, Star, Swords } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { subjectTheme, subjectVignette } from '@/lib/subject-style'
 import {
@@ -28,9 +20,12 @@ import { sfx } from '@/lib/sounds'
 import { CLOCK_STEP_MS, useClock } from '@/lib/use-clock'
 import { countdownLabel } from '@/lib/traque'
 import type { GardienSorti } from '@/lib/traque-server'
-import { useDialogFocus } from '@/lib/use-dialog'
 import { toast } from '@/lib/toast'
-import { saveSelectedSubjects } from '@/app/reviser/actions'
+import {
+  saveMatieresPrioritaires,
+  saveSelectedSubjects,
+} from '@/app/reviser/actions'
+import { separerPrioritaires } from '@/lib/matieres-prioritaires'
 import type { ExamProximity, SubjectExamHint } from '@/lib/next-exam'
 import type { Subject } from '@/lib/types'
 import type { SubjectGroup } from '@/lib/subject-groups'
@@ -38,15 +33,11 @@ import { programmeGroups } from '@/lib/subject-groups'
 
 // Palette des 3 paliers d'annotation « contrôle qui arrive » sur un dossier :
 // vert = de la marge, orange = bientôt, rouge = très proche.
-const PROX_STYLE: Record<
-  ExamProximity,
-  { ring: string; pill: string }
-> = {
+const PROX_STYLE: Record<ExamProximity, { ring: string; pill: string }> = {
   far: { ring: 'ring-green-500/70', pill: 'bg-green-600 text-white' },
   soon: { ring: 'ring-amber-500/80', pill: 'bg-amber-500 text-white' },
   imminent: { ring: 'ring-destructive', pill: 'bg-destructive text-white' },
 }
-
 
 // Cote « couronnes » façon Duolingo : à la place du pourcentage (déprimant),
 // chaque matière porte 3 emplacements de couronne remplis selon son rang de
@@ -153,132 +144,6 @@ const EMPTY_SLUGS: Set<string> = new Set()
 // lot de dessins (trait épais, objet unique, aplats).
 const ICON_PX = 52
 
-// Normalise pour une recherche tolérante aux accents/casse.
-function normalizeSearch(s: string): string {
-  return s
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
-    .trim()
-}
-
-// Recherche sur TOUT le programme : une loupe (posée près de « Tronc commun »)
-// qui ouvre un panneau plein écran filtrant les matières du niveau. Tap sur un
-// résultat → la page de la matière. Remplace l'ancienne barre visuelle inerte.
-function ProgramSearch({ subjects }: { subjects: Subject[] }) {
-  const [open, setOpen] = useState(false)
-  const [query, setQuery] = useState('')
-  // Le champ porte `autoFocus` : le hook le détecte et ne lui prend pas le
-  // focus — il ne fait ici que piéger la tabulation dans le panneau.
-  const panel = useRef<HTMLDivElement>(null)
-  useDialogFocus(panel, open)
-
-  const q = normalizeSearch(query)
-  const results = q
-    ? subjects.filter((s) => normalizeSearch(s.name).includes(q))
-    : subjects
-
-  return (
-    <>
-      <button
-        type="button"
-        onClick={() => {
-          sfx.tap()
-          setOpen(true)
-        }}
-        aria-label="Rechercher dans le programme"
-        aria-haspopup="dialog"
-        className="flex size-11 shrink-0 items-center justify-center rounded-full bg-white text-primary shadow-sm ring-1 ring-black/5 transition active:translate-y-px"
-      >
-        <Search className="size-4.5" strokeWidth={2.4} aria-hidden="true" />
-      </button>
-
-      {open ? (
-        <div
-          ref={panel}
-          role="dialog"
-          aria-modal="true"
-          aria-label="Recherche dans le programme"
-          className="fixed inset-0 z-[70] flex flex-col bg-background/95 outline-none backdrop-blur-sm"
-        >
-          {/* Barre de recherche en haut du panneau. */}
-          <div className="flex items-center gap-2 border-b border-black/5 p-3">
-            <div className="flex min-w-0 flex-1 items-center gap-2 rounded-full bg-muted/60 px-4 py-2.5">
-              <Search
-                className="size-4 shrink-0 text-muted-foreground"
-                aria-hidden="true"
-              />
-              <input
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                autoFocus
-                placeholder="Chercher une matière…"
-                aria-label="Chercher dans le programme"
-                className="min-w-0 flex-1 bg-transparent text-sm font-medium text-foreground outline-none"
-              />
-            </div>
-            <button
-              type="button"
-              onClick={() => {
-                sfx.tap()
-                setOpen(false)
-              }}
-              aria-label="Fermer la recherche"
-              className="flex size-10 shrink-0 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-muted active:scale-90"
-            >
-              <X className="size-5" aria-hidden="true" />
-            </button>
-          </div>
-
-          {/* Résultats : les matières du programme, filtrées. */}
-          <div className="min-h-0 flex-1 overflow-y-auto p-3">
-            {results.length === 0 ? (
-              <p className="mt-8 text-center text-sm text-muted-foreground">
-                Aucune matière ne correspond à « {query} ».
-              </p>
-            ) : (
-              <ul className="flex flex-col gap-2">
-                {results.map((s) => {
-                  const theme = subjectTheme(s.color)
-                  return (
-                    <li key={s.id}>
-                      <Link
-                        href={`/reviser/${s.slug}`}
-                        onClick={() => {
-                          sfx.tap()
-                          setOpen(false)
-                        }}
-                        className="flex items-center gap-3 rounded-2xl bg-white p-2.5 shadow-sm ring-1 ring-black/5 transition active:scale-[0.99]"
-                      >
-                        <span
-                          aria-hidden="true"
-                          className={cn(
-                            'arena-tile flex size-10 shrink-0 items-center justify-center rounded-2xl',
-                            theme.arena,
-                          )}
-                        >
-                          <SubjectIcon
-                            slug={s.slug}
-                            className="size-5 text-white"
-                            strokeWidth={2.25}
-                          />
-                        </span>
-                        <span className="min-w-0 flex-1 truncate text-sm font-bold text-foreground">
-                          {s.name}
-                        </span>
-                      </Link>
-                    </li>
-                  )
-                })}
-              </ul>
-            )}
-          </div>
-        </div>
-      ) : null}
-    </>
-  )
-}
-
 // Carte matière (grille 2 colonnes) : une RANGÉE — vignette à gauche, nom à
 // droite, couronnes sous le nom. Fond blanc, comme tous les autres blocs de
 // l'écran (la barre de série, les sessions à reprendre).
@@ -302,6 +167,9 @@ function SubjectRow({
   gardien,
   maintenant,
   delayMs,
+  priority = false,
+  prioritizing = false,
+  onTogglePriority,
 }: {
   subject: Subject
   pct: number
@@ -309,6 +177,12 @@ function SubjectRow({
   checked: boolean
   onToggle: () => void
   exam?: SubjectExamHint
+  /** La matière est PRIORITAIRE (étoile pleine) : elle passe en tête. */
+  priority?: boolean
+  /** Mode « prioriser » (l'étoile de la barre de commandes) : on touche une
+   *  carte pour l'étoiler ou la désétoiler. */
+  prioritizing?: boolean
+  onTogglePriority?: () => void
   /** Aucun chapitre à ce niveau : la carte l'annonce au lieu de le cacher. */
   empty?: boolean
   /** Le gardien sorti sur cette matière — la carte passe alors à l'écarlate. */
@@ -342,14 +216,43 @@ function SubjectRow({
         // pour qu'une fenêtre d'une heure ne passe pas inaperçue.
         gardien
           ? 'traque-eclair text-white'
-          : 'bg-white ring-1 ring-black/[0.06]',
+          : priority
+            ? // Le liseré du prioritaire : jaune solaire, fin — la même teinte
+              // que l'étoile, pour que les deux se lisent comme un seul signe.
+              'bg-white ring-1 ring-highlight/70'
+            : 'bg-white ring-1 ring-black/[0.06]',
         prox && !gardien ? `ring-2 ${prox.ring}` : null,
         !editing &&
+          !prioritizing &&
           'group-hover:-translate-y-0.5 group-active:translate-y-[2px]',
-        editing && 'cursor-pointer',
+        (editing || prioritizing) && 'cursor-pointer',
         editing && !checked && 'opacity-45 grayscale',
       )}
     >
+      {/* L'ÉTOILE DE LA MATIÈRE PRIORITAIRE (15/09/2026, Lucas) : un disque
+          sur le coin haut-GAUCHE (le coin droit est à la pastille
+          « contrôle »), l'étoile pleine et jaune — la même que les favoris du
+          carnet. Hors du mode « prioriser », SEULES les matières étoilées la
+          portent : les autres cartes restent nues, l'illustration respire. En
+          mode « prioriser », toutes la portent — pleine pour les marquées,
+          creuse pour les autres — c'est le geste qu'on propose. Décorative :
+          la carte-case à cocher dit l'état. */}
+      {priority || prioritizing ? (
+        <span
+          aria-hidden="true"
+          className={cn(
+            'absolute -top-2 -left-1 z-20 flex size-6 items-center justify-center rounded-full shadow-sm transition',
+            priority
+              ? 'bg-highlight/30 text-highlight ring-1 ring-highlight/50'
+              : 'bg-white text-muted-foreground/50 ring-1 ring-black/10',
+          )}
+        >
+          <Star
+            className={cn('size-3.5', priority && 'fill-current')}
+            strokeWidth={2.6}
+          />
+        </span>
+      ) : null}
       {/* Pastille « contrôle » : compte à rebours coloré, coin haut-droit. */}
       {exam && prox && !editing && !gardien ? (
         <span
@@ -500,6 +403,25 @@ function SubjectRow({
       </button>
     )
   }
+  // Mode « prioriser » : la carte entière est la case à cocher — le geste est
+  // « je touche un dossier », pas « je vise une petite étoile ».
+  if (prioritizing && onTogglePriority) {
+    return (
+      <button
+        type="button"
+        role="checkbox"
+        aria-checked={priority}
+        aria-label={`${subject.name} : prioritaire`}
+        onClick={() => {
+          sfx.tap()
+          onTogglePriority()
+        }}
+        className="group block w-full text-left"
+      >
+        {inner}
+      </button>
+    )
+  }
   // Pas d'`aria-label` sur ce lien : il REMPLAÇAIT tout son contenu accessible,
   // et avalait donc au passage le rang de maîtrise et le « Bientôt ». Le nom de
   // la matière est déjà du texte, la pastille de contrôle et les couronnes
@@ -538,11 +460,19 @@ function SubjectGrid({
   gardiens,
   maintenant,
   delayOffset = 0,
+  isPriority,
+  prioritizing = false,
+  onTogglePriority,
 }: {
   groups: SubjectGroup[]
   editing: boolean
   isChecked: (slug: string) => boolean
   onToggle: (slug: string) => void
+  /** L'étoile des prioritaires ; absents = pas d'étoile (culture générale). */
+  isPriority?: (slug: string) => boolean
+  /** Mode « prioriser » : on touche une carte pour l'étoiler. */
+  prioritizing?: boolean
+  onTogglePriority?: (slug: string) => void
   progressBySlug: Record<string, number>
   examBySubject: Record<string, SubjectExamHint>
   emptySlugs: Set<string>
@@ -576,6 +506,13 @@ function SubjectGrid({
                 gardien={gardienVivant(gardiens[s.slug], maintenant)}
                 maintenant={maintenant}
                 delayMs={cardIndex++ * 40}
+                priority={isPriority ? isPriority(s.slug) : false}
+                prioritizing={prioritizing && !editing}
+                onTogglePriority={
+                  onTogglePriority && !editing
+                    ? () => onTogglePriority(s.slug)
+                    : undefined
+                }
               />
             ))}
           </div>
@@ -593,6 +530,7 @@ function SubjectGrid({
 export default function SubjectsHome({
   subjects,
   selected,
+  prioritaires,
   grade,
   progressBySlug,
   examBySubject = {},
@@ -602,6 +540,8 @@ export default function SubjectsHome({
 }: {
   subjects: Subject[]
   selected: string[] | null
+  /** Les matières étoilées par l'élève (slugs, migration 359). */
+  prioritaires: string[]
   // Toujours nécessaire au regroupement des matières par dossier (tronc commun
   // vs spécialités), même si la puce « Classe de … » a disparu de cet écran.
   grade: string
@@ -637,6 +577,34 @@ export default function SubjectsHome({
     () => new Set(selected ?? subjects.map((s) => s.slug)),
   )
   const [pending, startTransition] = useTransition()
+  // LES PRIORITAIRES (15/09/2026, Lucas) : l'étoile de la barre de commandes
+  // ouvre le mode « prioriser » — on touche les matières qui comptent cette
+  // semaine, elles passent en tête de la grille, un filet les sépare des
+  // autres, « Terminé » referme. Hors du mode, les cartes restent nues (seules
+  // les étoilées gardent leur étoile) : l'illustration respire. OPTIMISTE :
+  // l'étoile s'allume et la carte remonte au tap ; l'écriture suit, et un
+  // échec remet tout en place.
+  const [prioritizing, setPrioritizing] = useState(false)
+  const [priority, setPriority] = useState<Set<string>>(
+    () => new Set(prioritaires),
+  )
+  const [, startPriorite] = useTransition()
+
+  const togglePriority = (slug: string) => {
+    const avant = priority
+    const next = new Set(avant)
+    if (next.has(slug)) next.delete(slug)
+    else next.add(slug)
+    setPriority(next)
+    startPriorite(async () => {
+      try {
+        await saveMatieresPrioritaires([...next])
+      } catch {
+        setPriority(avant)
+        toast('Priorités non enregistrées — réessaie.', 'error')
+      }
+    })
+  }
 
   // Les matières « culture » (hors-programme, hors-niveau) vivent dans leur
   // propre dossier et ne font pas partie de la sélection de matières (ni du
@@ -668,15 +636,23 @@ export default function SubjectsHome({
     })
 
   // Les matières du programme, directement en grille — plus de dossier à
-  // ouvrir pour arriver à sa matière.
-  const groups = programmeGroups({ subjects: visible, grade })
+  // ouvrir pour arriver à sa matière. Les PRIORITAIRES forment leur propre
+  // groupe en tête (sans titre : l'étoile sur chaque carte le dit), les autres
+  // gardent leurs dossiers (tronc commun / spécialités au lycée).
+  const { prioritaires: enTete, autres } = separerPrioritaires(
+    visible,
+    priority,
+  )
+  const groups = programmeGroups({ subjects: autres, grade })
+  const groupePrioritaire: SubjectGroup[] =
+    enTete.length > 0 ? [{ label: null, items: enTete }] : []
 
   // En édition, on ne montre QUE le programme : la culture générale n'est pas
   // sélectionnable, une grille qu'on ne peut pas modifier n'a rien à faire dans
   // un écran de modification.
   const cultureShown = editing ? [] : cultureSubjects
 
-  const programmeCount = groups.reduce((n, g) => n + g.items.length, 0)
+  const programmeCount = visible.length
 
   // « Tes matières » : le nom accessible de TOUT l'écran. Il porte deux grilles
   // — le programme, qui n'a plus de titre visible, et la culture générale, qui
@@ -691,7 +667,10 @@ export default function SubjectsHome({
         hrefs={
           editing
             ? []
-            : dossiersAPrecharger(groups.flatMap((g) => g.items.map((s) => s.slug)))
+            : dossiersAPrecharger([
+                ...enTete.map((s) => s.slug),
+                ...groups.flatMap((g) => g.items.map((s) => s.slug)),
+              ])
         }
       />
 
@@ -700,10 +679,10 @@ export default function SubjectsHome({
       <div className="relative flex flex-col gap-4 sm:px-1">
         {topSlot ? <div className="flex flex-col gap-4">{topSlot}</div> : null}
 
-        {/* Les trois commandes de l'écran, alignées à droite : trier mes
-            matières (crayon), mon carnet, chercher (loupe). La loupe cherche
-            dans TOUT le catalogue, culture générale comprise — elle évite de
-            faire défiler quand on sait déjà quelle matière on vient ouvrir.
+        {/* Les deux commandes de l'écran, alignées à droite : trier mes
+            matières (crayon) et prioriser mes matières (étoile). La loupe est
+            partie le 15/09/2026 (Lucas : « supprime l'icône loupe ») : une
+            classe a quinze matières au plus, la grille se parcourt d'un pouce.
 
             Plus de titre « Ton programme » au-dessus de la grille : l'onglet
             actif le dit déjà en haut de l'écran, et une grille de matières se
@@ -715,9 +694,10 @@ export default function SubjectsHome({
                 lettres au-dessus d'une grille qui ne contient que des matières,
                 c'était nommer deux fois ce que l'on voit. Le libellé reste dans
                 l'aria-label, pour le lecteur d'écran. Il disparaît PENDANT
-                l'édition : la sortie se fait par « Terminé », un crayon qui
-                resterait là promettrait une seconde façon d'entrer. */}
-            {editing ? null : (
+                l'édition et pendant qu'on priorise : la sortie se fait par
+                « Terminé », un crayon qui resterait là promettrait une seconde
+                façon d'entrer. */}
+            {editing || prioritizing ? null : (
               <button
                 type="button"
                 onClick={() => {
@@ -727,10 +707,33 @@ export default function SubjectsHome({
                 aria-label="Modifier mes matières"
                 className="flex size-11 shrink-0 items-center justify-center rounded-full bg-white text-primary shadow-sm ring-1 ring-black/5 transition active:translate-y-px"
               >
-                <Pencil className="size-4.5" strokeWidth={2.4} aria-hidden="true" />
+                <Pencil
+                  className="size-4.5"
+                  strokeWidth={2.4}
+                  aria-hidden="true"
+                />
               </button>
             )}
-            <ProgramSearch subjects={subjects} />
+            {/* L'ÉTOILE — prioriser mes matières. Même disque blanc que le
+                crayon, à sa droite : les deux règlent la grille qu'on regarde
+                (lesquelles, puis lesquelles d'abord). */}
+            {editing || prioritizing ? null : (
+              <button
+                type="button"
+                onClick={() => {
+                  sfx.tap()
+                  setPrioritizing(true)
+                }}
+                aria-label="Prioriser mes matières"
+                className="flex size-11 shrink-0 items-center justify-center rounded-full bg-white text-primary shadow-sm ring-1 ring-black/5 transition active:translate-y-px"
+              >
+                <Star
+                  className="size-4.5"
+                  strokeWidth={2.4}
+                  aria-hidden="true"
+                />
+              </button>
+            )}
           </div>
         </div>
 
@@ -751,7 +754,11 @@ export default function SubjectsHome({
               }}
               className="font-heading flex min-h-9 items-center gap-1.5 rounded-full bg-primary px-3.5 text-xs font-bold text-primary-foreground shadow-sm transition active:translate-y-px"
             >
-              <Pencil className="size-3.5" strokeWidth={2.4} aria-hidden="true" />
+              <Pencil
+                className="size-3.5"
+                strokeWidth={2.4}
+                aria-hidden="true"
+              />
               Choisir mes matières
             </button>
           </div>
@@ -775,17 +782,65 @@ export default function SubjectsHome({
                 </button>
               </div>
             ) : null}
+            {/* En mode « prioriser » : la consigne et la sortie. Chaque tap
+                est déjà enregistré ; « Terminé » ne fait que refermer. */}
+            {prioritizing ? (
+              <div className="flex items-center justify-between gap-3 px-1">
+                <p className="min-w-0 text-sm text-muted-foreground">
+                  Touche une matière pour la mettre en tête, ou l&apos;en
+                  retirer.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => {
+                    sfx.tap()
+                    setPrioritizing(false)
+                  }}
+                  className="font-heading flex min-h-9 shrink-0 items-center gap-1.5 rounded-full bg-primary px-3 text-xs font-bold text-primary-foreground shadow-sm transition active:translate-y-px"
+                >
+                  <Check className="size-3.5" aria-hidden="true" />
+                  Terminé
+                </button>
+              </div>
+            ) : null}
 
+            {/* Les prioritaires d'abord, puis l'ESPACE (un filet, pour que le
+                vide se lise comme un choix), puis les autres dans leurs
+                dossiers. L'étoile pleine sur chaque carte de tête suffit à
+                dire pourquoi elle est là. */}
+            {groupePrioritaire.length > 0 ? (
+              <SubjectGrid
+                groups={groupePrioritaire}
+                editing={editing}
+                isChecked={(slug) => picked.has(slug)}
+                onToggle={toggle}
+                isPriority={(slug) => priority.has(slug)}
+                prioritizing={prioritizing}
+                onTogglePriority={togglePriority}
+                progressBySlug={progressBySlug}
+                examBySubject={examBySubject}
+                emptySlugs={emptySlugs}
+                gardiens={gardiens}
+                maintenant={maintenant}
+              />
+            ) : null}
+            {groupePrioritaire.length > 0 && autres.length > 0 ? (
+              <hr className="mx-4 my-1 border-black/10" aria-hidden="true" />
+            ) : null}
             <SubjectGrid
               groups={groups}
               editing={editing}
               isChecked={(slug) => picked.has(slug)}
               onToggle={toggle}
+              isPriority={(slug) => priority.has(slug)}
+              prioritizing={prioritizing}
+              onTogglePriority={togglePriority}
               progressBySlug={progressBySlug}
               examBySubject={examBySubject}
               emptySlugs={emptySlugs}
               gardiens={gardiens}
               maintenant={maintenant}
+              delayOffset={enTete.length}
             />
           </div>
         )}
@@ -825,7 +880,7 @@ export default function SubjectsHome({
         ) : null}
 
         {/* Légende des rangs de couronnes, comme sur la maquette. */}
-        {!editing ? (
+        {!editing && !prioritizing ? (
           <div
             aria-hidden="true"
             className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 px-1 pb-1"

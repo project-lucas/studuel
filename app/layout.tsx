@@ -6,13 +6,12 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 // Bandeau du haut, toujours visible (pièces + niveau) façon Clash Royale.
 import TopHudLoader from "@/components/TopHudLoader";
-// Pastille rouge « coffre à récupérer » posée sur l'onglet Trésor.
-import NavChestBadgeLoader from "@/components/NavChestBadgeLoader";
+// Pastille rouge « du neuf cette semaine » posée sur l'onglet Boutique.
+import NavBoutiqueBadgeLoader from "@/components/NavBoutiqueBadgeLoader";
 import NavAvatarLoader from "@/components/NavAvatarLoader";
 import NavMoiBust from "@/components/NavMoiBust";
 // Balayage horizontal (façon Clash Royale) : change d'onglet depuis n'importe
 // quel endroit de l'écran.
-import SwipeTabs from "@/components/SwipeTabs";
 // Préchargeur d'onglets : les quatre autres onglets sont demandés au routeur
 // en arrière-plan, un par un, pour qu'un tap les ouvre sans attendre.
 import PrechargeurOnglets from "@/components/PrechargeurOnglets";
@@ -20,7 +19,6 @@ import PrechargeurOnglets from "@/components/PrechargeurOnglets";
 // de son haut ou de son bas (aucun son pendant le défilement normal).
 import ScrollEdgeSound from "@/components/ScrollEdgeSound";
 // Cadeau de connexion : crédite les pièces du jour au premier passage.
-import DailyLoginReward from "@/components/DailyLoginReward";
 // Retour matériel du téléphone : reste dans l'app au lieu de la quitter.
 import BackGuard from "@/components/BackGuard";
 // Toasts globaux (« Enregistré ✓ ») : file lib/toast, aucun provider.
@@ -145,10 +143,10 @@ export default async function RootLayout({
               chrome, au lieu d'être absente du rendu serveur. */}
           <Navigation
             userLabel={userLabel}
-            // Pastille du Coffre streamée : la barre ne l'attend pas.
-            chestBadge={
+            // Pastille de la Boutique streamée : la barre ne l'attend pas.
+            boutiqueBadge={
               <Suspense fallback={null}>
-                <NavChestBadgeLoader />
+                <NavBoutiqueBadgeLoader />
               </Suspense>
             }
             // Avatar de l'onglet Moi, streamé de la même façon. Le repli est le
@@ -160,7 +158,6 @@ export default async function RootLayout({
               </Suspense>
             }
           />
-          {user ? <DailyLoginReward /> : null}
           {/* LES RÉCOMPENSES QUI VOLENT (Clash Royale) : monté ICI, autour du
               contenu, et une seule fois pour toute l'application. Les jetons
               doivent survoler la page ENTIÈRE — bandeau compris — donc échapper
@@ -170,7 +167,7 @@ export default async function RootLayout({
               personne n'a rien gagné. */}
           <RecompensesProvider>
             <AppMain>
-              <SwipeTabs>{children}</SwipeTabs>
+              {children}
             </AppMain>
           </RecompensesProvider>
         </div>

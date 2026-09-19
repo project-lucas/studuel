@@ -1,4 +1,3 @@
-import TabHeader from '@/components/TabHeader'
 import WorldBackdrop from '@/components/WorldBackdrop'
 import AmisHome from '@/components/AmisHome'
 import OralListenCard from '@/components/amis/OralListenCard'
@@ -21,29 +20,26 @@ import type { ClanWeekBoard } from '@/lib/clan-week'
 import { toDayKey } from '@/lib/streak'
 import { schoolLevelForGrade } from '@/lib/clan'
 import { rankPlayers, type RankPlayer } from '@/lib/trophies'
-import { referralSummary, STARTING_GEMS } from '@/lib/gems'
-import {
-  fetchGems,
-  fetchReferralCounts,
-  fetchSquadIds,
-} from '@/lib/gems-access'
+import { referralSummary } from '@/lib/gems'
+import { fetchReferralCounts, fetchSquadIds } from '@/lib/gems-access'
 
 export const metadata = { title: 'Amis — Studuel' }
 export const dynamic = 'force-dynamic'
 
 // Les colonnes du profil qu'affiche cet écran, toutes migrations confondues.
 type AmisProfileRow = {
-  work_seconds: number | null
   friend_code: string | null
   grade_level: string | null
   trophies: number | null
   best_trophies: number | null
   squad_name: string | null
+  avatar: unknown
 }
 
 // Onglet social (extrême gauche). Tout est réel pour un élève connecté :
 // classement aux trophées (RPC friends_trophies) enrichi de la présence en
-// ligne (RPC 160) et école via le clan. Seuls le visiteur et l'élève sans
+// ligne (RPC 160) et école via le clan (RPC clan_mates, aux trophées depuis
+// la 362). Seuls le visiteur et l'élève sans
 // établissement voient un aperçu mocké, signalé par la pastille « Aperçu ».
 export default async function AmisPage() {
   const supabase = await createClient()
@@ -67,10 +63,9 @@ export default async function AmisPage() {
   // « Aperçu » — jamais de mock déguisé en réel.
   let school: SchoolBoard = getMockSchool(0)
   let schoolDemo = true
-  // Économie des gemmes (migration 183). Le visiteur voit la dotation de
-  // départ et un parrainage vierge : la carte lui montre ce qu'il gagnerait,
-  // ce qui est exactement le message qu'on veut lui faire passer.
-  let gems = STARTING_GEMS
+  // Parrainage (migration 183). Le visiteur voit un parrainage vierge : la
+  // carte lui montre ce qu'il gagnerait, ce qui est exactement le message
+  // qu'on veut lui faire passer.
   let referral = referralSummary(0, 0)
   let squadIds: string[] = []
 
@@ -81,10 +76,10 @@ export default async function AmisPage() {
       { data: overviewRows },
       { data: friendStreakRows },
       { data: liveRows },
-      gemsBalance,
       referralCounts,
       squadSet,
       clanBoardRes,
+      { data: portraitRows },
     ] = await Promise.all([
       // Une seule lecture de `profiles` pour toutes les colonnes de l'écran,
       // quelles que soient leurs migrations d'origine : friend_code (019),
@@ -93,12 +88,12 @@ export default async function AmisPage() {
       // connaît pas encore — l'isolation d'avant, sans les trois allers-retours
       // sur la même ligne.
       readRowTolerant<AmisProfileRow>(supabase, 'profiles', 'id', user.id, [
-        'work_seconds',
         'friend_code',
         'grade_level',
         'trophies',
         'best_trophies',
         'squad_name',
+        'avatar',
       ]),
       // [] tant que 079 n'est pas passée ou qu'aucun ami n'est accepté.
       supabase.rpc('friends_trophies'),
@@ -109,16 +104,28 @@ export default async function AmisPage() {
       supabase.rpc('friends_streaks'),
       // « En direct » : amis actifs dans les 20 dernières minutes (migration 160).
       supabase.rpc('friends_live'),
-      // Gemmes et filleuls (migration 183). Les deux helpers ont leur propre
-      // repli si la migration n'est pas passée — pas de quoi casser l'onglet.
-      fetchGems(supabase, user.id),
+      // Filleuls (migration 183) : repli propre si la migration n'est pas
+      // passée — pas de quoi casser l'onglet.
       fetchReferralCounts(supabase, user.id),
       fetchSquadIds(supabase, user.id),
       // Coffre d'équipe hebdo (migration 204) — null si pas encore en base.
       fetchClanWeekBoard(supabase),
+      // Blasons des amis (migration 363). Absente : chacun garde un blason
+      // fixe déduit de son id (lib/portraits.portraitPourId).
+      supabase.rpc('friends_portraits'),
     ])
 
-    gems = gemsBalance
+    const portraitById = new Map<string, string>(
+      (Array.isArray(portraitRows) ? portraitRows : []).flatMap((r) =>
+        r?.friend_id && typeof r.portrait === 'string'
+          ? [[String(r.friend_id), r.portrait]]
+          : [],
+      ),
+    )
+    const avatarBrut = (profile?.avatar ?? {}) as { portrait?: unknown }
+    const monPortrait =
+      typeof avatarBrut.portrait === 'string' ? avatarBrut.portrait : ''
+
     referral = referralSummary(referralCounts.pending, referralCounts.activated)
     squadIds = [...squadSet]
     clanBoard = clanBoardRes
@@ -127,25 +134,40 @@ export default async function AmisPage() {
     squadName = rawSquad.length > 0 ? rawSquad : null
 
     // Présence réelle (vide si personne n'est actif). « Mon école » réelle via
-    // le clan (cycle déduit de la classe) ; à défaut de clan, aperçu adapté au
-    // cycle (avec mon vrai temps) et signalé comme tel.
+    // le clan (cycle déduit de la classe), classée AUX TROPHÉES (migration
+    // 362) ; à défaut de clan, aperçu adapté au cycle (avec mes vrais
+    // trophées) et signalé comme tel.
     onlineFriendIds = buildLiveSessions(liveRows).map((s) => s.friend.id)
     const level = schoolLevelForGrade(profile?.grade_level ?? null)
+    const myTrophies = Math.max(0, Math.floor(Number(profile.trophies ?? 0)))
     const { data: clanMatesRaw } = await supabase.rpc('clan_mates', {
       p_level: level,
     })
     const realSchool = buildSchoolBoard(clanMatesRaw, user.id, level)
+    // Ma ligne porte MON blason, même si la RPC (avant 363) ne le donne pas.
+    realSchool.mates = realSchool.mates.map((m) =>
+      m.isMe ? { ...m, portrait: monPortrait } : m,
+    )
     if (realSchool.mates.length > 0) {
       school = realSchool
       schoolDemo = false
     } else {
-      school = getMockSchool(Number(profile?.work_seconds ?? 0) || 0, level)
+      const apercu = getMockSchool(myTrophies, level)
+      school = {
+        ...apercu,
+        mates: apercu.mates.map((m) =>
+          m.isMe ? { ...m, portrait: monPortrait } : m,
+        ),
+      }
     }
 
     const overview = mapFriendsOverview(
       Array.isArray(overviewRows) ? overviewRows : [],
     )
-    pendingRequests = overview.incoming
+    pendingRequests = overview.incoming.map((r) => ({
+      ...r,
+      portrait: portraitById.get(r.id) ?? '',
+    }))
 
     // Séries : on indexe friend_id → jours, puis on décore chaque ami de sa
     // série (0 par défaut : migration 155 absente ou ami sans activité).
@@ -158,6 +180,7 @@ export default async function AmisPage() {
     )
     friends = overview.accepted.map((f) => ({
       ...f,
+      portrait: portraitById.get(f.id) ?? '',
       streak: streakById.get(f.id) ?? 0,
     }))
 
@@ -172,6 +195,7 @@ export default async function AmisPage() {
           id: String(id),
           name: String(r.full_name ?? 'Ami').split(' ')[0] || 'Ami',
           emoji: avatarEmojiFor(String(id)),
+          portrait: portraitById.get(String(id)) ?? '',
           trophies: Math.max(0, Math.floor(trophies)),
         },
       ]
@@ -182,7 +206,8 @@ export default async function AmisPage() {
         id: 'me',
         name: 'Toi',
         emoji: '🔥',
-        trophies: Math.max(0, Math.floor(Number(profile.trophies ?? 0))),
+        portrait: monPortrait,
+        trophies: myTrophies,
         isMe: true,
       },
       ...friendRanks,
@@ -206,14 +231,12 @@ export default async function AmisPage() {
   return (
     <div>
       {/* Le fond de l'onglet. Porté sur <body> par WorldBackdrop (et pas posé
-          ici en `fixed`) : le conteneur de balayage applique un transform
-          pendant le geste, ce qui recadrerait un fond fixé dans la page. */}
+          ici en `fixed`) : un transform sur un ancêtre recadrerait un fond
+          fixé dans la page. */}
       <WorldBackdrop className="tab-bg" />
 
-      <TabHeader
-        title="Amis"
-        subtitle="Ton équipe, ton école et vos classements."
-      />
+      {/* Plus de titre d'onglet (Lucas, 16/09/2026) : le mot « Amis » vit sous
+          l'icône active de la barre, l'écran commence par son contenu. */}
       <OralListenCard
         className="mb-4"
         demandes={ecoutes.demandes.map((d) => ({
@@ -233,7 +256,6 @@ export default async function AmisPage() {
         myFriendCode={myFriendCode}
         squadName={squadName}
         canRenameSquad={canRenameSquad}
-        gems={gems}
         referral={referral}
         squadIds={squadIds}
         clanBoard={clanBoard}

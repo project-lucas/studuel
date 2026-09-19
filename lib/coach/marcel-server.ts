@@ -24,6 +24,7 @@ import {
 import { examsForProfile } from '@/lib/exams'
 import { normalizeOralList } from '@/lib/oral-texts'
 import { getChapitresVus } from '../chapitres-vus'
+import { lireGelsSerie } from '@/lib/boutique/boosts-server'
 
 // Résolution SERVEUR du point du jour de Marcel. La décision est PURE et testée
 // (./point-du-jour, ./regimes) ; ce module ne fait que rassembler les données.
@@ -140,6 +141,7 @@ export async function getMarcelSnapshot(
     { data: coachCalls },
     { data: coachTokens },
     chapitresVus,
+    gelsSerie,
   ] = await Promise.all([
     getSubjectsCached(),
     grade ? getGradeChaptersCached(grade) : Promise.resolve([]),
@@ -192,6 +194,9 @@ export async function getMarcelSnapshot(
     // Ce que le prof a traité, déclaré par l'élève (migration 224) : c'est le
     // dénominateur du pourcentage de chaque matière.
     getChapitresVus(supabase, userId),
+    // Les gels de série achetés en boutique (368) : Marcel voit la même flamme
+    // que le bandeau du haut.
+    lireGelsSerie(supabase, userId),
   ])
 
   // --- Matières suivies (choix d'onboarding, repli sur tout le catalogue) ------
@@ -264,7 +269,7 @@ export async function getMarcelSnapshot(
       (row) => String(row.created_at).slice(0, 10),
     ),
   )
-  const streak = computeStreak(activityDays)
+  const streak = computeStreak(activityDays, new Date(), gelsSerie)
 
   // « Jour 1 » ne se déduit pas de la série (elle tombe à zéro après une pause)
   // mais de l'absence TOTALE d'activité et de maîtrise : c'est la seule lecture

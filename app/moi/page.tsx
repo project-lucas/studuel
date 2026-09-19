@@ -10,14 +10,11 @@ import {
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
 import WorldBackdrop from '@/components/WorldBackdrop'
-import CarteProfil from '@/components/moi/CarteProfil'
-import Classement from '@/components/moi/Classement'
-import TuileMoyenne from '@/components/moi/TuileMoyenne'
-import Vitrine from '@/components/moi/Vitrine'
-import RythmeBarres from '@/components/moi/RythmeBarres'
-import TrajectoryCard from '@/components/moi/TrajectoryCard'
+import EcranMoi from '@/components/moi/EcranMoi'
+import { fetchMyPalmares } from '@/lib/palmares/palmares-server'
 import { parseGradeStandings } from '@/lib/percentile'
-import { axesSecondaires } from '@/lib/moi/classement'
+import { standingNational } from '@/lib/moi/classement'
+import { normalizeRanking } from '@/lib/clan'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { readRowTolerant } from '@/lib/profile-read'
@@ -28,6 +25,8 @@ import { chapterState } from '@/lib/mastery'
 import { getChapterMastery } from '@/lib/mastery-server'
 import { getChapitresVus } from '@/lib/chapitres-vus'
 import { getProfileData } from '@/app/defi/profile-actions'
+import { fetchGems } from '@/lib/gems-access'
+import { lireGelsSerie } from '@/lib/boutique/boosts-server'
 import {
   bilanCouronnes,
   couronnes,
@@ -124,8 +123,9 @@ type MoiProfileRow = {
 //   1. LA CARTE DE JOUEUR, devenue un objet (violet radial, anneau d'or, trois
 //      compteurs en verre, un reflet holographique à l'ouverture).
 //   2. « TON CLASSEMENT » — le « top X % » passe de 11 px sous le pseudo à
-//      46 px en tête de bloc, avec la foule animée ; les trois mesures réunies,
-//      jamais fondues en une (lib/moi/classement, lib/percentile).
+//      46 px en tête de bloc, avec la foule animée ; deux filtres (temps de
+//      travail, trophées en national), jamais fondus en un chiffre
+//      (lib/moi/classement, lib/percentile).
 //   3. LES TROIS PREUVES en tuiles (série · temps · moyenne).
 //   4. LA VITRINE DES COURONNES, la prochaine nommée et menée.
 //   5. LE RYTHME en barres, l'objectif en pointillé.
@@ -133,6 +133,12 @@ type MoiProfileRow = {
 // l'arène), l'étagère et son ⋮, le diagramme d'effort en toile (et sa RPC
 // `effort_by_subject` : une requête de moins), l'historique 30 jours (redit par
 // le rythme). La trajectoire bac reste, seulement quand des notes existent.
+//
+// REFONTE DU 2026-09-17 (Lucas : « on s'y perd, c'est désagréable »). Sous
+// une carte compactée, TROIS ONGLETS collés en haut — Progrès · Collection ·
+// Palmarès — au lieu de six blocs empilés ; les badges ont leur étagère, les
+// jeux par matière sont repliés. La mise en page vit dans
+// components/moi/EcranMoi ; cette page ne fait que lire et calculer.
 // -----------------------------------------------------------------------------
 export default async function MoiPage() {
   const supabase = await createClient()
@@ -184,9 +190,13 @@ export default async function MoiPage() {
     { data: storedLogs },
     { data: workDays, error: workError },
     { data: standingsRow },
+    { data: nationalRow },
+    palmaresLignes,
     subjects,
     mastery,
     chapitresVus,
+    gems,
+    gelsSerie,
   ] = await Promise.all([
     readRowTolerant<MoiProfileRow>(supabase, 'profiles', 'id', user.id, [
       'full_name',
@@ -257,6 +267,12 @@ export default async function MoiPage() {
     // Place de l'élève dans sa cohorte (223) : RPC SECURITY DEFINER, jamais une
     // jointure — la RLS de `profiles` ne laisserait voir que sa propre ligne.
     supabase.rpc('my_grade_standings'),
+    // Ma place NATIONALE aux trophées (166) : le même classement que l'arène
+    // (Défi → Classements). Le filtre « Trophées » du bloc Ton classement.
+    supabase.rpc('national_ranking'),
+    // Mon palmarès des modes de l'Arène (352) : records, places de la semaine.
+    // Tolérant : vide tant que la migration dort ou que rien n'a été joué.
+    fetchMyPalmares(supabase),
     // --- Ce qu'il faut pour DÉCERNER les couronnes ---------------------------
     // Le catalogue est en cache serveur (identique pour tous), la maîtrise et
     // les chapitres déclarés sont personnels. Aucun des trois n'a besoin du
@@ -264,6 +280,13 @@ export default async function MoiPage() {
     getSubjectsCached(),
     getChapterMastery(supabase, user.id),
     getChapitresVus(supabase, user.id),
+    // Les gemmes, dans leur lecture tolérante (lib/gems-access) : la carte
+    // porte désormais les deux monnaies en haut à droite, là où le bandeau les
+    // met sur les autres onglets — cet onglet n'a pas de bandeau.
+    fetchGems(supabase, user.id),
+    // Les gels de série achetés en boutique (368) : les jours qu'ils ont
+    // pontés comptent dans la flamme, comme dans le bandeau du haut.
+    lireGelsSerie(supabase, user.id),
     // Mission fixe pour tous : « Planifier ma semaine ». Idempotente, et son
     // résultat ne sert à personne — d'où sa place EN DERNIER, hors du
     // déstructurage.
@@ -308,7 +331,7 @@ export default async function MoiPage() {
       ...(challenges ?? []),
     ].map((row) => String(row.created_at).slice(0, 10)),
   )
-  const serie = computeStreak(joursActifs)
+  const serie = computeStreak(joursActifs, new Date(), gelsSerie)
 
   // --- Preuve n°2 : le temps de travail ------------------------------------
   // Le CUMUL vient de `profiles.work_seconds` (014) ; le RYTHME du journal
@@ -397,8 +420,11 @@ export default async function MoiPage() {
 
   const level = workLevel(secondesTotal)
   const standings = parseGradeStandings(standingsRow)
-  // Les deux autres mesures sous l'assiduité : l'arène et la meilleure matière.
-  const axes = axesSecondaires(standings)
+  // Le filtre « Trophées » : ma place nationale, pas celle de mon niveau.
+  const nationalTrophees = standingNational(
+    nationalRow ? normalizeRanking(nationalRow) : null,
+    profilJeu?.summary.trophies ?? 0,
+  )
   const initiale = (profilJeu?.displayName ?? profile?.full_name ?? 'M')
     .trim()
     .charAt(0)
@@ -408,77 +434,74 @@ export default async function MoiPage() {
     <div>
       <WorldBackdrop className="tab-bg" />
 
-      {/* CINQ BLOCS, UN SEUL ESPACEMENT : la carte (qui je suis), le classement
-          (où je suis), les preuves (ce que j'ai fait), la vitrine (ce que j'ai
-          gagné), le rythme (à quelle cadence). Chacun est un objet posé sur le
-          crème, aucun n'est un titre suivi d'une liste. */}
-      <div className="flex flex-col gap-4">
-        {profilJeu ? (
-          <CarteProfil
-            data={{
-              displayName: profilJeu.displayName,
-              gamertag: profilJeu.gamertag,
-              gradeLabel,
-              schoolName: profilJeu.schoolName,
-              avatar: profilJeu.avatar,
-              profileBanner: profilJeu.profileBanner,
-              availableBanners: profilJeu.availableBanners,
-              rank: profilJeu.summary.rank,
-              level: profilJeu.summary.level,
-              badges: profilJeu.badges,
-              equippedBadgeIds: profilJeu.equippedBadgeIds,
-            }}
-            workTitle={level.title}
-            // « Tu es dans le top 8 % des 5e ». Sur cet onglet la mesure en
-            // grand est l'ASSIDUITÉ : /moi est le miroir du travail fourni,
-            // l'arène a déjà le classement de la compétition — il passe ici
-            // en seconde ligne, avec la meilleure matière. Rendu EN VERRE dans
-            // la carte, entre l'identité et les compteurs.
-            classement={
-              <Classement
-                principal={standings.assiduite}
-                grade={standings.grade ?? gradeLevel}
-                secondaires={axes}
-                initiale={initiale}
-                verre
-              />
-            }
-            // Les pastilles en verre — ce qui ne redescend jamais (série,
-            // temps) et ce que l'arène a donné (trophées). Courtes : le record
-            // et la semaine en cours n'ont pas leur place ici, le bloc du
-            // rythme sous la carte raconte les huit semaines.
-            compteurs={[
-              { valeur: `${serie} j`, legende: 'série' },
-              {
-                valeur: secondesTotal > 0 ? formatDuree(secondesTotal) : '0 min',
-                legende: 'travail',
-              },
-              {
-                valeur: profilJeu.summary.trophies.toLocaleString('fr-FR'),
-                legende: 'trophées',
-              },
-            ]}
-            // LA TUILE DES NOTES, entière et cliente : la seule qui ouvre
-            // quelque chose (la saisie des moyennes de trimestre).
-            tuileNotes={
-              <TuileMoyenne bilan={moyenne} terms={terms} disabled={Boolean(termError)} />
-            }
-          />
-        ) : null}
-
-        <Vitrine liste={listeCouronnes} bilan={bilan} />
-
-        {rythmeDisponible ? (
-          <RythmeBarres semaines={semaines} phrase={phraseRythme(semaines)} />
-        ) : null}
-
-        {/* La trajectoire ne s'affiche QUE s'il y a de quoi projeter. Sans
-            notes, elle occupait un tiers de l'écran pour demander une saisie —
-            ce bouton vit dans la tuile des notes. */}
-        {trajectory.hasData ? (
-          <TrajectoryCard trajectory={trajectory} needsMigration={Boolean(termError)} />
-        ) : null}
-      </div>
+      {/* LA CARTE, puis TROIS ONGLETS (Progrès · Collection · Palmarès) —
+          refonte du 17/09/2026, détaillée dans components/moi/EcranMoi. */}
+      <EcranMoi
+        carte={
+          profilJeu
+            ? {
+                data: {
+                  displayName: profilJeu.displayName,
+                  gamertag: profilJeu.gamertag,
+                  gradeLabel,
+                  schoolName: profilJeu.schoolName,
+                  avatar: profilJeu.avatar,
+                  profileBanner: profilJeu.profileBanner,
+                  availableBanners: profilJeu.availableBanners,
+                  rank: profilJeu.summary.rank,
+                  level: profilJeu.summary.level,
+                  badges: profilJeu.badges,
+                  equippedBadgeIds: profilJeu.equippedBadgeIds,
+                },
+                workTitle: level.title,
+                gemmes: gems,
+                // Les pastilles en verre — ce qui ne redescend jamais (série,
+                // temps) et ce que l'arène a donné (trophées).
+                compteurs: [
+                  { valeur: `${serie} j`, legende: 'série' },
+                  {
+                    valeur: secondesTotal > 0 ? formatDuree(secondesTotal) : '0 min',
+                    legende: 'travail',
+                  },
+                  {
+                    valeur: profilJeu.summary.trophies.toLocaleString('fr-FR'),
+                    legende: 'trophées',
+                  },
+                ],
+              }
+            : null
+        }
+        notes={{ bilan: moyenne, terms, indisponible: Boolean(termError) }}
+        classement={{
+          mesures: { travail: standings.assiduite, trophees: nationalTrophees },
+          grade: standings.grade ?? gradeLevel,
+          initiale,
+        }}
+        palmares={{
+          lignes: palmaresLignes,
+          duels: profilJeu
+            ? {
+                played: profilJeu.summary.gamesPlayed,
+                wins: profilJeu.summary.wins,
+                trophies: profilJeu.summary.trophies,
+                bestTrophies: profilJeu.summary.bestTrophies,
+              }
+            : null,
+        }}
+        couronnes={{ liste: listeCouronnes, bilan }}
+        rythme={
+          rythmeDisponible
+            ? { semaines, phrase: phraseRythme(semaines) }
+            : null
+        }
+        // La trajectoire ne s'affiche QUE s'il y a de quoi projeter : sans
+        // notes, le bouton d'ajout vit dans la tuile des notes.
+        trajectoire={
+          trajectory.hasData
+            ? { trajectory, needsMigration: Boolean(termError) }
+            : null
+        }
+      />
     </div>
   )
 }

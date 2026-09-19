@@ -74,6 +74,9 @@ describe('les marqueurs des cours', () => {
     // soit plusieurs megaoctets. Seul il tient en 2 s ; lance en parallele du
     // reste de la suite il a depasse les 5 s par defaut et vire au rouge sans
     // qu'aucun cours ne soit fautif. Un test rouge par LENTEUR apprend a
-    // ignorer le rouge.
-  }, 30_000)
+    // ignorer le rouge. 30 s n'ont pas suffi non plus (18/09/2026 : suite
+    // complete sur une machine deja chargee, chaque module passe par la
+    // transformation de Vitest) : 2 min, c'est un garde de CONTENU, pas de
+    // vitesse.
+  }, 120_000)
 })

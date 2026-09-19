@@ -57,7 +57,7 @@ export const DELAI_APRES_INVALIDATION_MS = 3_000
 
 /**
  * Les autres onglets, du plus probable au moins probable :
- *   1. les deux voisins de balayage (le geste le plus naturel),
+ *   1. les deux voisins dans la barre (les plus proches du pouce),
  *   2. l'arène `/defi`, centre de la barre et accueil de l'app,
  *   3. le reste, dans l'ordre de la barre.
  * Vide hors des onglets principaux : rien n'est préchargé depuis un quiz, un

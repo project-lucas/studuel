@@ -16,7 +16,7 @@ export type Palier = {
   emoji: string
   /** Cri de victoire (« Nouvelle arène ! », « Promotion ! »). */
   title: string
-  /** Nom du palier atteint (« Tableau d'honneur », « Ligue Or »). */
+  /** Nom du palier atteint (« Tableau d'honneur », « Division Or »). */
   name: string
   /** Phrase de félicitation sous le nom. */
   subtitle: string
@@ -64,7 +64,7 @@ export function leaguePalier(
     name: meta.name,
     subtitle: isTop
       ? `Tu atteins la ${meta.name} — le sommet. Reste-y : les 5 derniers descendent chaque lundi.`
-      : `Tu montes en ${meta.name} — top 5 de ta ligue cette semaine. La suivante t'attend.`,
+      : `Tu montes en ${meta.name} — top 5 de ta division cette semaine. La suivante t'attend.`,
     shareText: `Promotion en ${meta.icon} ${meta.name} sur Studuel !`,
   }
 }

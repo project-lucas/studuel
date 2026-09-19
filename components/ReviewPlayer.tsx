@@ -163,8 +163,7 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
 
         {result?.revancheCleared ? (
           <p className="animate-in slide-in-from-bottom-2 flex items-center gap-2 rounded-full bg-highlight px-5 py-2 text-sm font-bold duration-500">
-            <Swords className="size-4" /> Revanche vidée ! +{result.coins}{' '}
-            pièces
+            <Swords className="size-4" /> Revanche vidée !
           </p>
         ) : null}
 

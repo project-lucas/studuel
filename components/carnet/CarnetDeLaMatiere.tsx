@@ -52,7 +52,7 @@ export default function CarnetDeLaMatiere({
           Tes cours
         </h2>
         <Link
-          href="/reviser?espace=carnet"
+          href="/carnet"
           onClick={() => sfx.tap()}
           className="shrink-0 text-[11px] font-extrabold text-primary"
         >
@@ -70,7 +70,7 @@ export default function CarnetDeLaMatiere({
               className="flex items-center gap-2 rounded-2xl ring-1 ring-black/5"
             >
               <Link
-                href={`/reviser/cours/${c.id}`}
+                href={`/carnet/cours/${c.id}`}
                 onClick={() => sfx.tap()}
                 className="flex min-w-0 flex-1 items-center gap-3 rounded-2xl py-2.5 pl-2.5"
               >
@@ -94,7 +94,7 @@ export default function CarnetDeLaMatiere({
                 </span>
               ) : null}
               <Link
-                href={`/reviser/cours/${c.id}/reviser`}
+                href={`/carnet/cours/${c.id}/reviser`}
                 onClick={() => sfx.tap()}
                 aria-label={`Réviser ${c.title}`}
                 className="mr-2.5 flex size-9 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-sm"

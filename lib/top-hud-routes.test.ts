@@ -14,9 +14,16 @@ describe('isHudHidden', () => {
   })
 
   it('affiche le bandeau sur les onglets de l’app', () => {
-    for (const path of ['/', '/defi', '/reviser', '/amis', '/coffre']) {
+    for (const path of ['/', '/reviser', '/amis', '/coffre']) {
       expect(isHudHidden(path), path).toBe(false)
     }
+  })
+
+  it('le masque sur l’arène, dont la carte du joueur porte série et cristaux', () => {
+    expect(isHudHidden('/defi')).toBe(true)
+    // Les salles de jeu n'ont pas la carte : elles gardent le bandeau.
+    expect(isHudHidden('/defi/jouer')).toBe(false)
+    expect(isHudHidden('/defi/jeux/capitales')).toBe(false)
   })
 
   it('le masque sur l’onglet Moi, dont la carte porte déjà tous ses chiffres', () => {
@@ -38,7 +45,7 @@ describe('isHudLevelHidden', () => {
   })
 
   it('la garde partout ailleurs, y compris les sous-pages du Défi', () => {
-    for (const path of ['/', '/moi', '/reviser', '/defi/jouer', '/defi/duel']) {
+    for (const path of ['/', '/moi', '/reviser', '/defi/jouer', '/defi/jeux/capitales']) {
       expect(isHudLevelHidden(path), path).toBe(false)
     }
   })
@@ -70,7 +77,7 @@ describe('isHudAccountHidden', () => {
 
 describe('isHudOverDarkScene', () => {
   it('reconnaît l’arène et ses salles de jeu', () => {
-    for (const path of ['/defi', '/defi/jouer', '/defi/duel/abc']) {
+    for (const path of ['/defi', '/defi/jouer', '/defi/jeux/capitales/2']) {
       expect(isHudOverDarkScene(path), path).toBe(true)
     }
   })

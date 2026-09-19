@@ -16,9 +16,8 @@ import { overscrollDirection } from '@/lib/scroll-edge'
 export default function ScrollEdgeSound() {
   useEffect(() => {
     // Remonte au plus proche ancêtre qui défile VERTICALEMENT ; à défaut, la
-    // page entière. Même esprit que le isSwipeable() de SwipeTabs, en vertical :
-    // on ne veut pas mesurer le scroll du document quand le doigt est en fait
-    // dans une feuille qui défile toute seule.
+    // page entière : on ne veut pas mesurer le scroll du document quand le
+    // doigt est en fait dans une feuille qui défile toute seule.
     const scrollerOf = (target: EventTarget | null): Element | null => {
       let node = target instanceof Element ? target : null
       while (node) {

@@ -1,7 +1,9 @@
 'use client'
 
+import Link from 'next/link'
 import { NotebookPen } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
+import { cn } from '@/lib/utils'
 
 /**
  * LA porte d'entrée de « Mon carnet » — les cours que l'élève écrit lui-même.
@@ -14,10 +16,14 @@ import { sfx } from '@/lib/sounds'
  * icônes rondes, ne dit pas ce qu'il ouvre. Le carnet est pourtant la seule
  * fonction de l'app où l'élève PRODUIT au lieu de consommer.
  *
- * D'où ce bouton-ci : **libellé**, et posé sur la ligne du titre « Réviser »,
- * la bande la plus haute de l'écran — juste au-dessus du « + Contrôle » de la
- * carte de série. C'est la seule commande de l'accueil visible sans défiler
- * d'un pixel.
+ * D'où ce bouton-ci : **libellé**. Il a vécu sur la ligne du titre « Réviser »
+ * ; depuis le 17/09/2026 (Lucas : « Mon carnet va dans le bloc semaine »), il
+ * est posé EN PIED de la carte de série, sous les sept jours, en pleine
+ * largeur (`pleineLargeur`) : le carnet est ce qu'on ouvre après avoir vu où
+ * l'on en est.
+ *
+ * Depuis le 15/09/2026, le carnet est UNE PAGE À PART ENTIÈRE (`/carnet`),
+ * plus un volet de Réviser derrière `?espace=carnet` : ce bouton est un lien.
  *
  * Le résumé (n cours · n questions) reste dans l'`aria-label` : le bouton doit
  * garder la même largeur qu'il y ait zéro ou quarante cours.
@@ -26,43 +32,54 @@ import { sfx } from '@/lib/sounds'
  * étape « Mon carnet »). Sans cet attribut sur un élément monté, l'étape est
  * silencieusement SAUTÉE — `nextAvailableStep` la considère hors écran. Elle
  * suit donc le bouton partout où il déménage.
- *
- * Le volet actif vit dans l'URL (`?espace=carnet`), même mécanique que
- * ReviserSpaces.
  */
 export default function CarnetButton({
   coursesCount,
   questionsCount,
+  capsulesNouvelles = 0,
+  pleineLargeur = false,
 }: {
   coursesCount: number
   questionsCount: number
+  /**
+   * Capsules achetées dans la Boutique et jamais ouvertes : une pastille
+   * rouge sur le bouton, qui s'éteint à la première ouverture (366).
+   */
+  capsulesNouvelles?: number
+  /**
+   * En pied de la carte de série : toute la largeur, centré, sur un voile
+   * violet très léger (la marque, en lavis) — le gris chaud du fond crème se
+   * lisait comme une zone inactive sous les sept jours.
+   */
+  pleineLargeur?: boolean
 }) {
-  const open = () => {
-    sfx.tap()
-    const url = new URL(window.location.href)
-    url.searchParams.set('espace', 'carnet')
-    window.history.replaceState(null, '', url)
-    window.scrollTo({ top: 0 })
-  }
-
   const summary =
     coursesCount > 0
       ? `${coursesCount} cours · ${questionsCount} question${questionsCount > 1 ? 's' : ''}`
       : 'Crée tes cours et révise-les.'
+  const nouvelles =
+    capsulesNouvelles > 0
+      ? ` — ${capsulesNouvelles} nouvelle${capsulesNouvelles > 1 ? 's' : ''} capsule${capsulesNouvelles > 1 ? 's' : ''}`
+      : ''
 
   return (
-    <button
-      type="button"
-      onClick={open}
+    <Link
+      href="/carnet"
+      onClick={() => sfx.tap()}
       data-tour="carnet-switch"
-      aria-label={`Mon carnet — ${summary}`}
+      aria-label={`Mon carnet — ${summary}${nouvelles}`}
       // Robe des commandes blanches de l'accueil (crayon, loupe, agenda) :
       // blanc, filet noir à 5 %, ombre courte. L'ICÔNE porte le violet, le
       // libellé reste à l'encre : un aplat violet ici entrerait en concurrence
       // avec le « + Contrôle » situé juste dessous, qui est l'action principale
       // de la carte de série. Le carnet se met en avant par les MOTS, pas en
       // criant plus fort que son voisin.
-      className="font-heading flex min-h-11 shrink-0 items-center gap-2 rounded-full bg-white pr-4 pl-3 text-sm font-extrabold text-foreground shadow-sm ring-1 ring-black/5 transition active:translate-y-px"
+      className={cn(
+        'font-heading relative flex min-h-11 shrink-0 items-center gap-2 rounded-full text-sm font-extrabold text-foreground transition active:translate-y-px',
+        pleineLargeur
+          ? 'w-full justify-center bg-primary/10 px-4 text-primary ring-1 ring-primary/15 ring-inset'
+          : 'bg-white pr-4 pl-3 shadow-sm ring-1 ring-black/5',
+      )}
     >
       <NotebookPen
         className="size-4.5 text-primary"
@@ -70,6 +87,14 @@ export default function CarnetButton({
         aria-hidden="true"
       />
       Mon carnet
-    </button>
+      {capsulesNouvelles > 0 ? (
+        // Même pastille que l'onglet Boutique (NavBoutiqueBadge) : un point
+        // rouge et son halo — on voit qu'il y a du neuf, on ne compte pas.
+        <span aria-hidden="true" className="absolute -top-1 -right-0.5 flex size-3">
+          <span className="absolute inline-flex size-full animate-ping rounded-full bg-destructive/60" />
+          <span className="relative inline-flex size-3 rounded-full bg-destructive ring-2 ring-white" />
+        </span>
+      ) : null}
+    </Link>
   )
 }

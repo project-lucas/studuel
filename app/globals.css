@@ -274,6 +274,113 @@
   }
 }
 
+/* LA FEUILLE MONTANTE (components/carnet/BottomSheet) : le voile apparaît, le
+   panneau monte du bas — et redescend à la fermeture, le composant restant
+   monté jusqu'à `animationend`. Écrit en CSS pour que la primitive des volets
+   de Réviser, Moi et Marcel n'embarque plus framer-motion (docs/latence.md).
+   `both` : l'état final tient après l'animation, l'état initial avant. */
+@keyframes feuille-voile-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes feuille-voile-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes feuille-monte {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes feuille-descend {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+.feuille-voile[data-etat='ouvert'] {
+  animation: feuille-voile-in 0.2s ease-out both;
+}
+.feuille-voile[data-etat='ferme'] {
+  animation: feuille-voile-out 0.2s ease-out both;
+  pointer-events: none;
+}
+.feuille-panneau[data-etat='ouvert'] {
+  animation: feuille-monte 0.25s ease-out both;
+}
+.feuille-panneau[data-etat='ferme'] {
+  animation: feuille-descend 0.25s ease-out both;
+  pointer-events: none;
+}
+/* Mouvement réduit : le panneau se contente d'apparaître et de disparaître,
+   à la même durée — `animationend` continue de démonter la feuille. */
+@media (prefers-reduced-motion: reduce) {
+  .feuille-panneau[data-etat='ouvert'] {
+    animation-name: feuille-voile-in;
+  }
+  .feuille-panneau[data-etat='ferme'] {
+    animation-name: feuille-voile-out;
+  }
+}
+
+/* LES MODALES CENTRÉES (ajout d'ami, QR code — components/Friend*Button) :
+   voile en fondu, panneau qui s'installe d'un léger zoom. Même mécanique de
+   sortie que la feuille (useSortieAnimee). */
+@keyframes modale-pose {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes modale-retire {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+.modale-voile[data-etat='ouvert'] {
+  animation: feuille-voile-in 0.18s ease-out both;
+}
+.modale-voile[data-etat='ferme'] {
+  animation: feuille-voile-out 0.18s ease-out both;
+  pointer-events: none;
+}
+.modale-panneau[data-etat='ouvert'] {
+  animation: modale-pose 0.2s ease-out both;
+}
+.modale-panneau[data-etat='ferme'] {
+  animation: modale-retire 0.2s ease-out both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .modale-panneau[data-etat='ouvert'] {
+    animation-name: feuille-voile-in;
+  }
+  .modale-panneau[data-etat='ferme'] {
+    animation-name: feuille-voile-out;
+  }
+}
+
 /* ──────────────────────────────────────── TROIS APPELS DU REGARD, DISCRETS
 
    Trois endroits où l'écran doit dire « c'est ici » sans clignoter. Aucun des
@@ -333,13 +440,56 @@
   animation: rev-appel 3.2s ease-out infinite;
 }
 
-/* Mouvement réduit : les trois appels se taisent. Ce qu'ils signalent est
-   toujours dit par autre chose — l'anneau du jour, l'écarlate du dossier, le
-   violet de la carte. Un halo n'a jamais porté seul une information. */
+/* 4. « NOUVEAU CONTRÔLE ? » — le bouton RESPIRE : une pulsation d'échelle
+   (1 → 1,05) et un halo violet qui s'en écarte, toutes les 2,2 s. C'est la
+   fonction clé de l'accueil (sans contrôle annoncé : ni plan, ni carte, ni
+   compte à rebours), et un bouton immobile de 40 px au bout d'une ligne ne se
+   trouvait pas. (La bande de lumière `.attract-sheen` qui s'y ajoutait a été
+   retirée le 16/09 — voir la note plus bas.) La pulsation est
+   sur `transform`, donc `active:translate-y-px` du bouton est neutralisé
+   pendant le cycle : le socle (`border-b`) porte seul l'enfoncement au tap. */
+@keyframes controle-appel {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 color-mix(in oklch, var(--primary), transparent 45%);
+  }
+  40% {
+    transform: scale(1.05);
+  }
+  70% {
+    box-shadow: 0 0 0 9px color-mix(in oklch, var(--primary), transparent 100%);
+  }
+}
+.controle-appel {
+  animation: controle-appel 2.2s ease-in-out infinite;
+}
+
+/* 5. LA FLÈCHE DE LA CARTE DE TÊTE avance et revient (4 px, 1,4 s) : « vas-y ».
+   Un second mouvement, plus petit que le reflet, sur le seul objet de la carte
+   qui signifie déjà l'action. */
+@keyframes rev-fleche {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+.rev-fleche {
+  animation: rev-fleche 1.4s ease-in-out infinite;
+}
+
+/* Mouvement réduit : les appels se taisent. Ce qu'ils signalent est toujours
+   dit par autre chose — l'anneau du jour, l'écarlate du dossier, le violet de
+   la carte, le libellé du bouton. Un halo n'a jamais porté seul une information. */
 @media (prefers-reduced-motion: reduce) {
   .jour-onde,
   .gardien-pouls,
-  .rev-appel {
+  .rev-appel,
+  .controle-appel,
+  .rev-fleche {
     animation: none;
   }
   .jour-onde {
@@ -533,6 +683,14 @@ a:hover > .wiggle-on-hover {
 .flame-breathe {
   animation: flame-breathe 2.4s ease-in-out infinite;
   transform-origin: center bottom;
+}
+/* La flamme de série est un WebP animé (components/FlammeAnimee) : qui a
+   demandé moins de mouvement reçoit déjà son image fixe, le halo qui respire
+   s'éteint avec. */
+@media (prefers-reduced-motion: reduce) {
+  .flame-breathe {
+    animation: none;
+  }
 }
 
 /* Le compagnon dort (série à zéro) : respiration lente et profonde,
@@ -908,155 +1066,126 @@ a:hover > .wiggle-on-hover {
   background-color: color-mix(in oklch, var(--primary), black 55%);
 }
 
-/* La SALLE DE DUEL : un voile violet profond posé par-dessus le décor de
-   l'arène, le temps d'un duel (WorldBackdrop de /defi/duel).
-   Le duel se jouait à même l'académie flottante : les cartes de question
-   restaient lisibles (fond crème opaque), mais TOUT ce qui vivait entre elles
-   ne l'était plus — le titre « Duel 90 s » en encre marine sur des nuages
-   blancs, « Abandonner » en gris clair sur l'herbe, et l'écran de fin entier,
-   posé à nu sur l'image. Le voile rend au texte un fond stable sans effacer le
-   décor : on voit encore où l'on est, mais on lit tout.
-   Plus sombre en haut et en bas (là où vivent le titre et les commandes) qu'au
-   centre, où les cartes portent déjà leur propre fond. */
-.duel-scrim {
-  background:
-    linear-gradient(
-      180deg,
-      color-mix(in oklch, var(--primary), black 62%) 0,
-      color-mix(in oklch, var(--primary), black 55%) 22%,
-      color-mix(in oklch, var(--primary), black 48%) 55%,
-      color-mix(in oklch, var(--primary), black 62%) 100%
-    );
-  opacity: 0.88;
-}
-
-/* --- Rails latéraux de l'arène : tuiles « familles de couleur » --------------
-   Une tuile = un objet, une famille = une fonction (leçon Clash Royale) :
-   or = agir/gagner, violet = marque/événement, vert = quête/réussite,
-   magenta = compétition, bois = butin, ambre = urgence/série. Cadre commun
-   strict : squircle, liseré blanc, socle 3D (ombre dure) + ombre portée. */
-.rail-tile {
+/* --- LES PLAQUES DE BORD DE L'ARÈNE (Lucas, 16/09/2026 : « on doit trouver
+   mieux, plus travaillé, comme Clash Royale ») ----------------------------------
+   Les icônes du bord étaient posées sur du VERRE (translucide, un filet or
+   d'un pixel) : sans couleur propre ni épaisseur, elles se lisaient comme des
+   puces d'interface. Chez Clash Royale chaque plaque est OPAQUE, sombre, avec
+   un biseau or, un reflet en haut et un socle — un objet qu'on prend. Une seule
+   matière pour toutes les plaques du bord (quêtes, boss, amis, route, burger) ;
+   Studuel+ garde l'or, seule plaque dorée du HUD. Le verre reste au bandeau :
+   le bandeau INFORME, les plaques S'OUVRENT. */
+.arena-plaque {
   position: relative;
   display: grid;
   place-items: center;
-  border-radius: 17px;
-  border: 2px solid rgba(255, 255, 255, 0.75);
-  color: #fff;
-}
-.rail-tile-violet {
-  background: linear-gradient(160deg, #8b53e8, #4a2597);
+  border-radius: 16px;
+  /* Violet profond de l'arène, un peu plus clair en haut : la lumière vient
+     d'en haut, comme sur le décor. */
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--primary), black 32%),
+    color-mix(in oklch, var(--primary), black 58%)
+  );
+  /* Le biseau or (2 px) et, dedans, le reflet blanc d'un pixel ; en bas, la
+     tranche sombre puis le socle de 4 px — l'épaisseur des boutons « appuie »
+     de l'app. */
+  border: 2px solid color-mix(in oklch, var(--highlight), transparent 18%);
   box-shadow:
-    0 3px 0 rgba(41, 17, 92, 0.55),
-    0 6px 16px rgba(41, 17, 92, 0.35);
+    inset 0 1px 0 rgba(255, 255, 255, 0.38),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.28),
+    0 4px 0 color-mix(in oklch, var(--primary), black 72%),
+    0 8px 16px rgba(0, 0, 0, 0.45);
 }
-.rail-tile-gold {
-  background: linear-gradient(160deg, #ffd257, #eda50b);
-  box-shadow:
-    0 3px 0 #b17c02,
-    0 6px 16px rgba(146, 100, 3, 0.4);
-  color: #5a3d00;
-}
-.rail-tile-green {
-  background: linear-gradient(160deg, #4cd98a, #1f9d57);
-  box-shadow:
-    0 3px 0 #0f6b3a,
-    0 6px 16px rgba(15, 107, 58, 0.4);
-}
-.rail-tile-amber {
-  background: linear-gradient(160deg, #ffb84d, #f07f13);
-  box-shadow:
-    0 3px 0 #a85608,
-    0 6px 16px rgba(168, 86, 8, 0.4);
-}
-.rail-tile-wood {
-  background: linear-gradient(160deg, #c98d55, #8a5526);
-  box-shadow:
-    0 3px 0 #5e3a1a,
-    0 6px 16px rgba(94, 58, 26, 0.45);
-}
-.rail-tile-magenta {
-  background: linear-gradient(160deg, #d16bef, #8f2bc4);
-  box-shadow:
-    0 3px 0 #5e1585,
-    0 6px 16px rgba(94, 21, 133, 0.45);
+.arena-plaque--ronde {
+  border-radius: 999px;
 }
 
-/* --- Le menu du burger ------------------------------------------------------
-   Un PANNEAU qui tombe du burger, et dedans une LISTE — pas sept plaques
-   violettes empilées. Sept plaques bombées, c'était sept boutons qui criaient
-   pareil : plus rien ne se lisait, et le menu pesait plus lourd que l'arène
-   derrière. Ici le panneau seul porte le matériau (verre de nuit,
-   .olympe-glass) ; les entrées ne sont qu'un survol/appui qui s'éclaire. Le
-   violet de la marque reste aux ACTIONS (les CTA du bas), pas au sommaire. */
+/* LE MENU DE L'ARÈNE — une page posée sur l'angle haut-droit, par-dessus le
+   burger (components/defi/ArenaHud). Refait CLAIR le 18/09/2026 (Lucas :
+   « un fond plus clair pour mettre plus en avant les différents boutons ») :
+   le violet profond noyait les entrées dans le décor. Le panneau prend le
+   CRÈME de l'app, garde le biseau or et le socle des plaques de l'arène ; les
+   entrées deviennent des plaques BLANCHES à socle, qui se lisent comme des
+   boutons ; chaque icône reste posée dans un PUITS de taille fixe, lavande,
+   qui aligne la colonne au pixel. */
 .arena-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  border-radius: 18px;
-  padding: 6px;
+  padding: 8px;
+  border-radius: 24px;
+  background: var(--background);
+  border: 2px solid color-mix(in oklch, var(--highlight), transparent 18%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 4px 0 color-mix(in oklch, var(--primary), black 45%),
+    0 18px 40px rgba(0, 0, 0, 0.45);
 }
-/* La ligne : structure en Tailwind (flex/gap/rayon, sur le composant), matériau
-   ici. Transparente au repos, elle s'allume au survol et à l'appui. */
 .arena-menu-row {
-  background: transparent;
+  min-height: 60px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 3px 0 color-mix(in oklch, var(--border), black 14%);
   transition:
-    background-color 150ms ease,
-    transform 150ms ease;
+    background-color 0.12s var(--ease),
+    box-shadow 0.12s var(--ease);
 }
-@media (hover: hover) {
-  .arena-menu-row:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
+.arena-menu-row:hover {
+  background: color-mix(in oklch, var(--secondary), white 45%);
 }
-button:active > .arena-menu-row,
-a:active > .arena-menu-row {
-  background: rgba(255, 255, 255, 0.16);
+.defi2-press:active > .arena-menu-row {
+  box-shadow: 0 1px 0 color-mix(in oklch, var(--border), black 14%);
 }
-/* Le jeton d'icône : le carré commun de la colonne de gauche. Un seul fond, un
-   seul rayon — c'est lui qui donne au menu son alignement de sommaire. */
+/* Le puits de l'icône : un carré lavande légèrement creusé. */
 .arena-menu-ico {
   display: grid;
   place-items: center;
-  flex: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.09);
-  color: #faf6ef;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: var(--secondary);
+  box-shadow: inset 0 2px 3px color-mix(in oklch, var(--primary), transparent 84%);
+  color: var(--primary);
 }
-/* Une illustration qui porte déjà son cadre (les tuiles d'icônes du Défi) :
-   le jeton garde sa TAILLE — c'est lui qui aligne la colonne — mais perd son
-   fond et son liseré, qui feraient un second carré autour du premier. */
-.arena-menu-ico-nue {
-  border-color: transparent;
-  background: transparent;
+/* La croix du panneau, dans son coin haut-droit : même plaque blanche à socle
+   que les entrées, pour qu'on la voie comme un bouton. */
+.arena-menu-fermer {
+  background: var(--card);
+  color: var(--primary);
+  border: 1px solid var(--border);
+  box-shadow: 0 3px 0 color-mix(in oklch, var(--border), black 14%);
 }
-/* Le séparateur des groupes du menu (lecture / compétition / compte). */
+/* Le filet entre deux groupes. */
 .arena-menu-sep {
-  display: block;
   height: 1px;
-  margin: 5px 8px;
-  background: rgba(255, 255, 255, 0.14);
+  margin: 4px 10px 6px;
+  background: color-mix(in oklch, var(--border), black 8%);
 }
-
-/* Minuteur d'une tuile (« 3j », « 7j ») : pastille NEUTRE (encre marine) calée
-   au coin BAS — l'autre moitié du système de badges : compteur de notification
-   = pastille corail/violette au coin HAUT-droit (.olympe-badge), temps restant
-   = ce jeton-ci. Couleurs par tokens (encre + or éclairci). */
-.rail-timer {
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 999px;
-  background: var(--foreground);
-  color: color-mix(in oklch, var(--highlight), white 60%);
-  padding: 1px 7px;
-  font-size: 0.55rem;
-  font-weight: 800;
+/* L'urgence (un gardien sorti de sa tanière) : la plaque passe à l'ambre, la
+   couleur de l'alerte de série, sans changer de forme ni de biseau. */
+.arena-plaque--ambre {
+  background: linear-gradient(180deg, #ffb84d, #e8720f);
+}
+/* L'enfoncement suit la même règle que les autres plaques : l'objet descend de
+   3 px et sa tranche disparaît d'autant. */
+.arena-plaque.defi2-press:active {
+  transform: translateY(3px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.38),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.28),
+    0 1px 0 color-mix(in oklch, var(--primary), black 72%),
+    0 4px 10px rgba(0, 0, 0, 0.4);
+}
+/* La légende SOUS la plaque (« 96 % », « 3j 12h ») : crème à contour marine,
+   posée sur le décor et jamais dans la plaque — chez Clash Royale, le « 5j 15h »
+   du ticket vit sous l'objet, pas dedans. */
+.arena-legende {
+  color: #faf6ef;
+  text-shadow:
+    0 1px 0 #1e1638,
+    0 -1px 0 #1e1638,
+    1px 0 0 #1e1638,
+    -1px 0 0 #1e1638,
+    0 2px 3px rgba(0, 0, 0, 0.55);
 }
 
 /* --- Scène du héros : les étincelles ----------------------------------------
@@ -1789,61 +1918,13 @@ a:active > .arena-menu-row {
   }
 }
 
-/* --- Brillance continue « attire-l'œil » (façon Clash Royale) -----------------
-   Une bande de lumière diagonale traverse périodiquement l'élément pour attirer
-   le regard sur une action clé, sans clignoter agressivement. À poser sur un
-   conteneur `position: relative; overflow: hidden`. Neutralisée en reduced-motion. */
-/* Balayage CONTINU : le reflet traverse en boucle, sans pause à mi-chemin.
-   (Avant : il balayait sur 14% puis se figeait 86% du cycle → « vague qui
-   s'arrête ».) Rythme régulier `linear`, il sort à droite et rentre à gauche
-   hors écran, donc aucun saut visible — juste un scintillement qui ne s'arrête
-   jamais. */
-@keyframes attract-sheen-sweep {
-  0% {
-    transform: translateX(-160%) rotate(8deg);
-  }
-  100% {
-    transform: translateX(160%) rotate(8deg);
-  }
-}
-.attract-sheen {
-  position: relative;
-  overflow: hidden;
-}
-.attract-sheen::after {
-  content: '';
-  position: absolute;
-  top: -30%;
-  bottom: -30%;
-  left: -40%;
-  width: 40%;
-  pointer-events: none;
-  background: linear-gradient(
-    100deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.55) 50%,
-    transparent 100%
-  );
-  transform: translateX(-160%) rotate(8deg);
-  animation: attract-sheen-sweep 3s linear infinite;
-  animation-delay: var(--sheen-delay, 0s);
-}
-/* Variante douce sur carte crème/colorée : reflet moins intense, plus lent. */
-.attract-sheen--soft::after {
-  background: linear-gradient(
-    100deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.34) 50%,
-    transparent 100%
-  );
-  animation-duration: 4.2s;
-}
-@media (prefers-reduced-motion: reduce) {
-  .attract-sheen::after {
-    animation: none;
-    opacity: 0;
-  }
-}
+/* --- La bande de lumière « attire-l'œil » (.attract-sheen) N'EXISTE PLUS -----
+   Un reflet diagonal traversait en boucle le DUEL de l'arène, puis la carte de
+   tête et le bouton « Nouveau contrôle ? » de Réviser. Retirée partout le
+   16/09/2026 (Lucas : « la bande qui s'arrête au milieu du bloc, c'est bof —
+   garde les ombres »). Ce qui désigne un bloc clé, c'est désormais toujours son
+   POURTOUR : halo diffus (.rev-appel, .controle-appel, la lueur du DUEL), jamais
+   un reflet qui passe SUR le contenu. Ne pas la réintroduire. */
 
 /* Pulse léger du CTA duel — UNIQUEMENT quand un ami est en ligne (le chip de
    présence l'accompagne). Sur la luminosité, pas le transform ni l'ombre :
@@ -1979,8 +2060,13 @@ a:active > .arena-menu-row {
 /* --- Barre d'onglets : crème chaud assorti au halo doré des icônes ----------
    dessinées (public/images/nav). En nuit d'encre, on retombe sur la carte. */
 .tab-bar {
-  background: oklch(0.972 0.016 75 / 0.92);
+  /* Plein, sans transparence ni flou : rien ne se recalcule sous la barre
+     pendant le défilement. Sa propre couche de composition la garde à
+     l'écran, immobile, à toute vitesse de défilement. */
+  background: oklch(0.972 0.016 75);
   border-color: oklch(0.905 0.035 75);
+  transform: translateZ(0);
+  will-change: transform;
 }
 .dark .tab-bar {
   background: color-mix(in oklch, var(--card), transparent 15%);
@@ -2797,95 +2883,8 @@ a:active > .arena-menu-row {
     0 6px 18px rgba(0, 0, 0, 0.4);
 }
 
-/* Le BILLET façon carte « Modes de jeu » de Clash Royale : silhouette de
-   ticket découpée au mask — encoches demi-lune en haut et en bas de la
-   perforation verticale (à --tk-split, la frontière corps/talon) + quatre
-   coins crantés (coupes à 45°). Le liseré et l'ombre passent par `filter`
-   (respectent le mask). L'anneau de focus est porté par le parent NON masqué
-   (voir le TSX). */
-.defi-ticket {
-  --tk-notch: 11px; /* rayon des encoches de la perforation */
-  --tk-cut: 9px; /* profondeur des coins crantés */
-  --tk-split: 70%; /* position de la découpe corps/talon */
-  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.55));
-  -webkit-mask:
-    radial-gradient(var(--tk-notch) at var(--tk-split) 0, #0000 98%, #000 100%),
-    radial-gradient(
-      var(--tk-notch) at var(--tk-split) 100%,
-      #0000 98%,
-      #000 100%
-    ),
-    linear-gradient(135deg, #0000 var(--tk-cut), #000 0),
-    linear-gradient(225deg, #0000 var(--tk-cut), #000 0),
-    linear-gradient(315deg, #0000 var(--tk-cut), #000 0),
-    linear-gradient(45deg, #0000 var(--tk-cut), #000 0);
-  -webkit-mask-composite: source-in;
-  mask:
-    radial-gradient(var(--tk-notch) at var(--tk-split) 0, #0000 98%, #000 100%),
-    radial-gradient(
-      var(--tk-notch) at var(--tk-split) 100%,
-      #0000 98%,
-      #000 100%
-    ),
-    linear-gradient(135deg, #0000 var(--tk-cut), #000 0),
-    linear-gradient(225deg, #0000 var(--tk-cut), #000 0),
-    linear-gradient(315deg, #0000 var(--tk-cut), #000 0),
-    linear-gradient(45deg, #0000 var(--tk-cut), #000 0);
-  mask-composite: intersect;
-}
-
-/* Motif losange : quadrillage diagonal subtil (lignes croisées à 45°), comme la
-   texture des cartes Clash Royale. Sous le contenu (les enfants sont en z-10). */
-.defi-ticket::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background:
-    repeating-linear-gradient(
-      45deg,
-      rgba(255, 255, 255, 0.08) 0 1.5px,
-      transparent 1.5px 15px
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      rgba(255, 255, 255, 0.08) 0 1.5px,
-      transparent 1.5px 15px
-    );
-}
-
-/* Biseau brillant : liseré intérieur clair en haut, sombre en bas. Au-dessus du
-   motif, sous le contenu. */
-.defi-ticket::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  border-radius: inherit;
-  box-shadow:
-    inset 0 3px 0 rgba(255, 255, 255, 0.22),
-    inset 0 -4px 0 rgba(0, 0, 0, 0.28),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-}
-
-/* Titre de billet façon cartoon Clash Royale : blanc, gras, contour sombre
-   épais multi-directionnel, assise portée vers le bas. */
-.defi-ticket-title {
-  color: #fff;
-  text-shadow:
-    -2px -2px 0 rgba(22, 16, 48, 0.95),
-    2px -2px 0 rgba(22, 16, 48, 0.95),
-    -2px 2px 0 rgba(22, 16, 48, 0.95),
-    2px 2px 0 rgba(22, 16, 48, 0.95),
-    -2px 0 0 rgba(22, 16, 48, 0.95),
-    2px 0 0 rgba(22, 16, 48, 0.95),
-    0 -2px 0 rgba(22, 16, 48, 0.95),
-    0 2px 0 rgba(22, 16, 48, 0.95),
-    0 4px 0 rgba(22, 16, 48, 0.6),
-    0 6px 12px rgba(0, 0, 0, 0.5);
-}
+/* Le BILLET de la feuille « Modes de jeu » vit désormais dans son module :
+   components/defi/ModeTicket.module.css (gabarit Clash Royale au pixel). */
 
 /* =============================================================================
    Écran d'arène « Olympe » — langage d'OBJETS SCULPTÉS. Chaque élément d'UI
@@ -3246,6 +3245,7 @@ a:active > .arena-menu-row {
     opacity: 0;
   }
 }
+/* Le halo suit la forme de la plaque (carrée à coins ronds depuis le 16/09). */
 .premium-pill-halo {
   box-shadow: 0 0 0 3px var(--highlight);
   animation: premium-pill-pulse 4.5s ease-out infinite;
@@ -3424,9 +3424,43 @@ a:active > .arena-menu-row {
    sous l'onglet actif. Appliqué globalement (barre partagée) mais discret : ne
    dénature pas les autres mondes. Tous les onglets sont sur la MÊME ligne de
    base — plus d'onglet central surélevé, qui débordait sur le contenu. */
+/* JAMAIS DE DÉFILEMENT HORIZONTAL DE LA PAGE (Lucas, 16/09/2026). Seuls les
+   rails prévus pour ça (divisions de l'école, carrousels) glissent sur le côté,
+   dans leur propre boîte. `clip` et non `hidden` : `hidden` ferait de
+   <body> un conteneur de défilement, ce qui casserait `position: sticky` et
+   le défilement vertical natif ; `clip` se contente de couper. */
+html,
+body {
+  overflow-x: clip;
+}
+
+/* LA BARRE CRÈME SCULPTÉE (Lucas, 16/09/2026 : « plus travaillé, comme Clash
+   Royale »). Ce qui fait l'objet chez Supercell, ce n'est pas la couleur, c'est
+   le RELIEF : un socle, des cases séparées par des filets biseautés, une case
+   active plus dense dont l'icône sort du cadre. On garde le crème de la DA et
+   le mot noir ; on sculpte. */
 .tab-bar {
-  border-top-width: 2px;
-  border-top-color: color-mix(in oklch, var(--highlight), transparent 45%);
+  /* Le liseré or, épaissi, avec son reflet blanc juste dessous : c'est ce qui
+     fait lire un socle et non une bordure. */
+  border-top-width: 3px;
+  border-top-color: color-mix(in oklch, var(--highlight), transparent 25%);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.75),
+    0 -6px 16px -8px rgb(40 20 80 / 0.25);
+}
+/* Le filet biseauté entre deux cases : une ligne marine à 10 % et, collée à
+   droite, une ligne blanche à 60 %. Sur un fond clair, c'est cette paire qui
+   creuse — une seule ligne se lirait comme un trait. Le filet ne touche ni le
+   liseré du haut ni le bord du bas : il est gravé dans la case. */
+.tab-cell + .tab-cell::before {
+  content: '';
+  position: absolute;
+  inset-block: 8px;
+  left: 0;
+  width: 1px;
+  background: color-mix(in oklch, var(--foreground), transparent 90%);
+  box-shadow: 1px 0 0 rgb(255 255 255 / 0.6);
+  pointer-events: none;
 }
 /* Plaque de l'onglet sélectionné (modèle Clash Royale) : un pavé très arrondi
    qui prend TOUTE la hauteur de la barre, icône et libellé posés dessus.
@@ -3449,53 +3483,22 @@ a:active > .arena-menu-row {
   position: absolute;
   inset: 4px 6px;
   border-radius: 14px;
-  /* Violet dilué, un peu plus dense en bas : la plaque a du poids sans jamais
-     rivaliser avec le violet plein des boutons d'action. */
+  /* Violet plus dense qu'avant (82 → 66 %), toujours plus lourd en bas : la
+     plaque doit se voir à côté de quatre cases crème, sans rivaliser avec le
+     violet plein des boutons d'action. */
   background: linear-gradient(
     to bottom,
-    color-mix(in oklch, var(--primary), transparent 90%),
-    color-mix(in oklch, var(--primary), transparent 78%)
+    color-mix(in oklch, var(--primary), transparent 82%),
+    color-mix(in oklch, var(--primary), transparent 66%)
   );
-  /* Liseré violet + reflet clair en haut : le bord doit se lire sur le crème,
-     où un simple aplat à 10 % disparaîtrait. */
+  /* Liseré OR fin + reflet clair en haut : l'or dit « c'est ici », le reflet
+     donne l'épaisseur. */
   box-shadow:
-    inset 0 0 0 1.5px color-mix(in oklch, var(--primary), transparent 66%),
-    inset 0 1px 0 rgb(255 255 255 / 0.55);
+    inset 0 0 0 1.5px color-mix(in oklch, var(--highlight), transparent 30%),
+    inset 0 1px 0 rgb(255 255 255 / 0.6);
 }
-/* L'onglet Moi en DEUX COUCHES : le visage de l'élève, et la couronne de
-   laurier posée par-dessus. La géométrie vit ici et non en classes utilitaires
-   parce qu'elle est solidaire d'un chiffre mesuré sur le dessin — le diamètre du
-   trou de la couronne — que Tailwind ne saurait pas exprimer.
-
-   Le visage est le seul onglet dont l'encre remplit un disque plein, quand les
-   cinq autres sont des objets détourés entourés d'air. Il ne pouvait donc pas
-   occuper toute sa case sans peser plus lourd que ses voisins. La couronne règle
-   ça d'elle-même : elle le ramène au diamètre de son trou et lui rend, tout
-   autour, le contour marine et l'or de la même famille graphique. */
-.nav-cadre-disque {
-  display: block;
-  /* `scripts/nav-icones.mjs` imprime la part du canevas occupée par le trou :
-     54,3 %. On pose le disque un peu PLUS LARGE, pour qu'il passe SOUS le cerne
-     marine de la couronne, qui le rogne alors proprement. Un disque plus étroit
-     que le trou laisserait au contraire apparaître un croissant de fond entre le
-     visage et la couronne — visible, et impossible à rattraper autrement.
-     Si le cadre est redessiné, c'est ce chiffre-là qu'il faut suivre. */
-  width: 58%;
-  height: 58%;
-  overflow: hidden;
-  border-radius: 9999px;
-  background: var(--secondary);
-}
-/* La couronne, en surimpression exacte de la case. Elle ne prend pas le clic :
-   toute la cellule est déjà un lien. */
-.nav-cadre-bague {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  pointer-events: none;
-}
+/* L'onglet Moi n'a plus de cadre (16/09/2026) : le blason choisi par l'élève
+   remplit la case comme les autres icônes, voir `components/Navigation.tsx`. */
 @media (prefers-reduced-motion: reduce) {
   .tab-plate {
     transition: none;
@@ -3542,8 +3545,7 @@ a:active > .arena-menu-row {
      `transform` au survol et à l'appui, on ne fait que le déclarer. Il est posé
      sur le FAB LUI-MÊME et jamais sur un ancêtre — un transform sur un ancêtre
      ferait de lui le containing block des descendants `position: fixed`, ce qui
-     décalerait le bouton et les fonds plein écran (même piège que le conteneur
-     de balayage, cf. SwipeTabs).
+     décalerait le bouton et les fonds plein écran (cf. WorldBackdrop).
 
      `contain: paint` dit à Chrome ce qui est déjà vrai — rien ne déborde du
      disque — et lui évite d'inspecter la zone autour. */
@@ -3556,15 +3558,6 @@ a:active > .arena-menu-row {
   box-shadow:
     0 0 0 2px var(--coach-ring),
     0 7px 0 2px var(--coach-socle);
-}
-/* PENDANT LE DÉFILEMENT, la tête glisse sous le bord bas de l'écran (cf.
-   MarcelFab) : elle libère la colonne des « + » des fiches qu'elle recouvrait.
-   `translate` et non `transform` — le survol et l'appui écrivent déjà
-   `transform`, et les deux se seraient écrasés. */
-.coach-fab[data-cache='true'] {
-  translate: 0 calc(100% + 2rem);
-  opacity: 0;
-  pointer-events: none;
 }
 /* L'enfoncement : le disque descend EXACTEMENT de la hauteur de son socle, qui
    disparaît. C'est ce qui fait « toucher le fond » plutôt que « rétrécir ». */
@@ -3986,13 +3979,6 @@ a:active > .arena-menu-row {
   --jeu-surface: oklch(0.96 0.012 40);
   --jeu-glow: oklch(0.72 0.12 28 / 0.24);
 }
-.jeu-plaques {
-  /* Le compte est bon — vert plateau de jeu télévisé, plaques crème. */
-  --jeu-accent: oklch(0.48 0.12 165);
-  --jeu-ink: oklch(0.99 0.01 165);
-  --jeu-surface: oklch(0.955 0.024 162);
-  --jeu-glow: oklch(0.7 0.12 162 / 0.28);
-}
 .jeu-frise {
   /* La Frise folle — parchemin ambré, encre sépia. */
   --jeu-accent: oklch(0.52 0.1 62);
@@ -4013,13 +3999,6 @@ a:active > .arena-menu-row {
   --jeu-ink: oklch(0.99 0.01 235);
   --jeu-surface: oklch(0.95 0.022 230);
   --jeu-glow: oklch(0.72 0.11 220 / 0.28);
-}
-.jeu-plume {
-  /* Orthographe — encre bleu-noir sur papier vergé. */
-  --jeu-accent: oklch(0.42 0.09 268);
-  --jeu-ink: oklch(0.99 0.005 90);
-  --jeu-surface: oklch(0.955 0.012 265);
-  --jeu-glow: oklch(0.6 0.09 270 / 0.24);
 }
 .jeu-loupe {
   /* Chasse à la faute — vert enquête, feutré. */
@@ -4042,27 +4021,12 @@ a:active > .arena-menu-row {
   --jeu-surface: oklch(0.95 0.018 200);
   --jeu-glow: oklch(0.75 0.12 200 / 0.28);
 }
-.jeu-oracle {
-  /* Suite logique — violet mystique, le seul thème proche de la marque : c'est
-     le jeu de pure réflexion, il a droit à la couleur de l'app. */
-  --jeu-accent: oklch(0.48 0.17 300);
-  --jeu-ink: oklch(0.99 0.01 300);
-  --jeu-surface: oklch(0.955 0.022 300);
-  --jeu-glow: oklch(0.68 0.16 300 / 0.3);
-}
 .jeu-union {
   /* Traduction flash — rouge sprint, drapeau. */
   --jeu-accent: oklch(0.55 0.18 22);
   --jeu-ink: oklch(0.99 0.01 22);
   --jeu-surface: oklch(0.955 0.02 25);
   --jeu-glow: oklch(0.68 0.17 25 / 0.28);
-}
-.jeu-masque {
-  /* Faux amis — pourpre théâtre, rideau lourd. */
-  --jeu-accent: oklch(0.45 0.16 340);
-  --jeu-ink: oklch(0.99 0.01 340);
-  --jeu-surface: oklch(0.95 0.022 340);
-  --jeu-glow: oklch(0.65 0.15 340 / 0.28);
 }
 .jeu-fiesta {
   /* Traducción flash — orange fête, guirlandes. */
@@ -5494,7 +5458,7 @@ a:active > .arena-menu-row {
 /* =============================================================================
    LA COURSE — le duel classé (components/duel/*)
    Deux couloirs qui se remplissent vers le drapeau, la carte de question en
-   crème dessous, le tout sur le voile violet de la salle de duel (.duel-scrim).
+   crème dessous, le tout sur le fond opaque de la course (components/duel/Course.module.css).
    Or = mon couloir (le gain en train de se faire) ; violet clair = le rival.
    Importé par globals.css. Les couleurs hex reprennent la palette de l'arène
    (plaques `.arena-plate--*`, `.olympe-gold`) : c'est le monde de l'arène.
@@ -6566,3 +6530,759 @@ a:active > .arena-menu-row {
     transition: none;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   LE PALMARÈS — l'écran de fin commun aux modes de l'Arène (`.palm-fin`),
+   l'échelle de la semaine (`.palm-echelle`, `.palm-liste`) et le bloc de
+   l'onglet Moi (`.palm-bloc`). Tout en jetons sémantiques : violet = action,
+   jaune = record et progression, encre = texte. Les seuls hex sont les trois
+   métaux du podium (or, argent, bronze), comme dans RankingTabs.
+   --------------------------------------------------------------------------- */
+.palm-fin {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 28rem;
+  padding-top: 8px;
+  text-align: center;
+  animation: palm-entree 0.35s var(--ease) both;
+}
+@keyframes palm-entree {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.palm-eyebrow {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+.palm-titre {
+  font-family: var(--font-heading), 'Baloo 2', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.05;
+  text-wrap: balance;
+  color: var(--foreground);
+}
+.palm-titre--verdict {
+  animation: palm-tampon 0.45s var(--ease) both;
+}
+.palm-fin--record .palm-titre {
+  color: var(--warning);
+}
+.palm-fin--sombre .palm-titre {
+  color: #fff;
+}
+.palm-fin--sombre.palm-fin--record .palm-titre {
+  color: var(--highlight);
+}
+@keyframes palm-tampon {
+  0% {
+    opacity: 0;
+    transform: scale(1.35) rotate(-2deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(0.96) rotate(0.5deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+.palm-score {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  margin-top: -2px;
+}
+.palm-score-nombre {
+  font-family: var(--font-mono, ui-monospace), ui-monospace, monospace;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--foreground);
+}
+.palm-fin--sombre .palm-score-nombre {
+  color: #fff;
+}
+.palm-score-unite {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--muted-foreground);
+}
+.palm-detail {
+  font-size: 13px;
+  color: var(--muted-foreground);
+  text-wrap: balance;
+}
+
+/* La jauge : ma partie (plein), la dernière fois (trait), le record (fanion). */
+.palm-jauge {
+  width: 100%;
+  padding: 22px 8px 4px;
+}
+.palm-jauge-piste {
+  position: relative;
+  height: 14px;
+  border-radius: 9999px;
+  background: color-mix(in oklab, var(--foreground) 10%, transparent);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+.palm-jauge-plein {
+  height: 100%;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, color-mix(in oklab, var(--primary) 75%, #fff), var(--primary));
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset;
+  animation: palm-remplir 0.8s var(--ease) both;
+  transform-origin: left center;
+}
+.palm-jauge-plein--record {
+  background: linear-gradient(90deg, #fcd34d, var(--highlight));
+}
+@keyframes palm-remplir {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: none;
+  }
+}
+.palm-repere {
+  position: absolute;
+  top: -20px;
+  bottom: -2px;
+  width: 0;
+  pointer-events: none;
+}
+.palm-repere i {
+  position: absolute;
+  top: 18px;
+  bottom: 0;
+  left: -1.5px;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--foreground);
+  opacity: 0.55;
+}
+.palm-repere--record i {
+  background: var(--warning);
+  opacity: 1;
+}
+.palm-repere b {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+.palm-repere--record b {
+  color: var(--warning);
+}
+.palm-fin--sombre .palm-repere b {
+  color: rgba(255, 255, 255, 0.8);
+}
+.palm-fin--sombre .palm-repere--record b {
+  color: var(--highlight);
+}
+.palm-fin--sombre .palm-repere--record i {
+  background: var(--highlight);
+}
+.palm-fin--sombre .palm-jauge-piste {
+  background: rgba(255, 255, 255, 0.18);
+}
+.palm-verdict {
+  min-height: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--foreground);
+  text-wrap: balance;
+}
+.palm-fin--sombre .palm-verdict {
+  color: #fff;
+}
+.palm-verdict--attente {
+  font-weight: 600;
+  color: var(--muted-foreground);
+  animation: palm-souffle 1.2s ease-in-out infinite;
+}
+@keyframes palm-souffle {
+  50% {
+    opacity: 0.45;
+  }
+}
+
+/* L'échelle de la semaine. */
+.palm-echelle {
+  width: 100%;
+  border-radius: 20px;
+  border: 2px solid var(--border);
+  background: var(--card);
+  padding: 12px 12px 10px;
+  color: var(--foreground);
+  box-shadow: 0 3px 0 var(--border);
+  animation: palm-entree 0.4s var(--ease) 0.15s both;
+}
+.palm-echelle--monte {
+  border-color: color-mix(in oklab, var(--highlight) 70%, var(--border));
+  box-shadow: 0 3px 0 color-mix(in oklab, var(--highlight) 70%, var(--border));
+}
+.palm-echelle-tete {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.palm-rang {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: color-mix(in oklab, var(--primary) 12%, transparent);
+  color: var(--primary);
+}
+.palm-rang strong {
+  font-family: var(--font-heading), 'Baloo 2', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+}
+.palm-rang small {
+  margin-top: 2px;
+  font-size: 10px;
+  font-weight: 700;
+  opacity: 0.8;
+}
+.palm-rang--1 {
+  background: linear-gradient(180deg, #fde68a, #f5b722);
+  color: #3b2200;
+}
+.palm-rang--2 {
+  background: linear-gradient(180deg, #f1f5f9, #cbd5e1);
+  color: #1f2937;
+}
+.palm-rang--3 {
+  background: linear-gradient(180deg, #f6c8a0, #c47a3a);
+  color: #3b1d05;
+}
+.palm-echelle-phrase {
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+.palm-echelle-reset {
+  margin-top: 3px;
+  font-size: 12px;
+  color: var(--muted-foreground);
+}
+.palm-marche {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  border-radius: 14px;
+  background: color-mix(in oklab, var(--highlight) 14%, transparent);
+  padding: 8px 10px;
+}
+.palm-marche-avatar {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  overflow: hidden;
+  background: var(--card);
+  box-shadow: 0 0 0 2px var(--highlight);
+}
+.palm-marche-avatar > :first-child {
+  border-radius: 9999px;
+  overflow: hidden;
+}
+.palm-marche-phrase {
+  font-size: 13px;
+  font-weight: 800;
+}
+.palm-marche-piste {
+  margin-top: 5px;
+  height: 6px;
+  border-radius: 9999px;
+  background: color-mix(in oklab, var(--foreground) 12%, transparent);
+  overflow: hidden;
+}
+.palm-marche-piste i {
+  display: block;
+  height: 100%;
+  border-radius: 9999px;
+  background: var(--highlight);
+  animation: palm-remplir 0.8s var(--ease) 0.3s both;
+  transform-origin: left center;
+}
+.palm-marche-cible {
+  margin-top: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted-foreground);
+}
+.palm-sommet {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted-foreground);
+}
+.palm-echelle-bouton {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+  border-radius: 9999px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--primary);
+  background: color-mix(in oklab, var(--primary) 10%, transparent);
+}
+.palm-echelle-bouton:active {
+  transform: scale(0.97);
+}
+
+/* La liste de l'échelle (dix lignes + moi). */
+.palm-liste {
+  margin-top: 10px;
+  text-align: left;
+}
+.palm-periodes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  border-radius: 12px;
+  background: color-mix(in oklab, var(--foreground) 6%, transparent);
+  padding: 3px;
+}
+.palm-periode {
+  border-radius: 10px;
+  padding: 6px 8px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--muted-foreground);
+}
+.palm-periode--active {
+  background: var(--card);
+  color: var(--primary);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.palm-liste-vide {
+  padding: 14px 6px;
+  font-size: 13px;
+  color: var(--muted-foreground);
+  text-align: center;
+  text-wrap: balance;
+}
+.palm-lignes {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.palm-ligne {
+  display: grid;
+  grid-template-columns: 26px 32px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  border-radius: 12px;
+  padding: 6px 8px;
+  animation: palm-entree 0.3s var(--ease) both;
+}
+.palm-ligne--moi {
+  background: color-mix(in oklab, var(--primary) 12%, transparent);
+  box-shadow: inset 0 0 0 2px color-mix(in oklab, var(--primary) 40%, transparent);
+}
+.palm-ligne-rang {
+  font-family: var(--font-heading), 'Baloo 2', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  text-align: center;
+  color: var(--muted-foreground);
+}
+.palm-ligne--or .palm-ligne-rang {
+  color: #b8700a;
+}
+.palm-ligne--argent .palm-ligne-rang {
+  color: #64748b;
+}
+.palm-ligne--bronze .palm-ligne-rang {
+  color: #9a5a1e;
+}
+.palm-ligne-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--foreground) 8%, transparent);
+}
+.palm-ligne-avatar > :first-child {
+  border-radius: 9999px;
+  overflow: hidden;
+}
+.palm-ligne-nom {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 700;
+}
+.palm-ligne-nom small {
+  font-weight: 600;
+  color: var(--muted-foreground);
+}
+.palm-ligne-score {
+  font-family: var(--font-mono, ui-monospace), ui-monospace, monospace;
+  font-size: 13px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.palm-rupture {
+  list-style: none;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: var(--muted-foreground);
+  line-height: 1;
+}
+.palm-note {
+  min-height: 18px;
+  font-size: 13px;
+  color: var(--muted-foreground);
+}
+.palm-boutons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  padding-top: 4px;
+}
+
+/* Le bloc « Palmarès » de l'onglet Moi : cinq cases, une par épreuve. */
+.palm-cases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+/* JEUX PAR MATIÈRE (bloc Palmarès de /moi) : une rangée-titre par matière,
+   puis les mêmes cases que les épreuves, un peu plus serrées. */
+.palm-matiere {
+  margin-top: 12px;
+}
+.palm-matiere-tete {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 2px;
+}
+.palm-matiere-emoji {
+  font-size: 16px;
+  line-height: 1;
+}
+.palm-matiere-nom {
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-heading), sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+}
+.palm-matiere-compte {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--muted-foreground);
+  font-variant-numeric: tabular-nums;
+}
+.palm-cases--jeux {
+  margin-top: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+.palm-cases--jeux .palm-case {
+  min-height: 92px;
+}
+/* Les noms de jeux sont longs (« Calcul mental éclair ») : deux lignes plutôt
+   qu'une ellipse qui mange le mot qui compte. */
+.palm-cases--jeux .palm-case-nom {
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.15;
+}
+.palm-case {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 100px;
+  border-radius: 18px;
+  border: 2px solid var(--border);
+  background: var(--card);
+  padding: 10px 12px;
+  color: var(--foreground);
+  text-align: left;
+  text-decoration: none;
+  transition:
+    transform 0.15s var(--ease),
+    box-shadow 0.15s var(--ease);
+}
+.palm-case:active {
+  transform: scale(0.98);
+}
+.palm-case--vide {
+  border-style: dashed;
+  background: color-mix(in oklab, var(--card) 60%, transparent);
+}
+.palm-case--or {
+  border-color: var(--highlight);
+  box-shadow: 0 3px 0 var(--highlight);
+}
+.palm-case--argent {
+  border-color: #cbd5e1;
+  box-shadow: 0 3px 0 #cbd5e1;
+}
+.palm-case--bronze {
+  border-color: #d19a66;
+  box-shadow: 0 3px 0 #d19a66;
+}
+.palm-case-tete {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.palm-case-emoji {
+  font-size: 18px;
+  line-height: 1;
+}
+.palm-case-nom {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+.palm-case-record {
+  font-family: var(--font-mono, ui-monospace), ui-monospace, monospace;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.palm-case-record small {
+  margin-left: 4px;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted-foreground);
+}
+.palm-case-place {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  align-self: flex-start;
+  border-radius: 9999px;
+  padding: 3px 9px;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--primary);
+  background: color-mix(in oklab, var(--primary) 10%, transparent);
+}
+.palm-case--or .palm-case-place {
+  color: #3b2200;
+  background: linear-gradient(180deg, #fde68a, #f5b722);
+}
+.palm-case--argent .palm-case-place {
+  color: #1f2937;
+  background: linear-gradient(180deg, #f1f5f9, #cbd5e1);
+}
+.palm-case--bronze .palm-case-place {
+  color: #3b1d05;
+  background: linear-gradient(180deg, #f6c8a0, #c47a3a);
+}
+.palm-case-place--vide {
+  color: var(--muted-foreground);
+  background: color-mix(in oklab, var(--foreground) 6%, transparent);
+}
+.palm-case-jouer {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 9999px;
+  background: var(--primary);
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .palm-fin,
+  .palm-titre--verdict,
+  .palm-jauge-plein,
+  .palm-marche-piste i,
+  .palm-echelle,
+  .palm-ligne,
+  .palm-verdict--attente {
+    animation: none;
+  }
+}
+
+/* --- carnet bento --- */
+/* Le bloc de suggestion et les dossiers du carnet : une ombre violette
+   douce, la même que les tuiles du Dashboard, et l'enfoncement au tap. */
+.carnet-hero,
+.carnet-dossier {
+  box-shadow:
+    0 1px 0 oklch(0.3 0.05 278 / 0.04),
+    0 10px 30px -12px oklch(0.4 0.18 296 / 0.28);
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    transform 0.12s var(--ease),
+    box-shadow 0.12s var(--ease);
+}
+.carnet-dossier:active {
+  transform: scale(0.98);
+  box-shadow: 0 1px 0 oklch(0.3 0.05 278 / 0.04);
+}
+
+
+
+
+/* --- invitation d'angle (onglet Amis) --- */
+/* Le bouton « Inviter un ami » du classement des amis se trémousse une fois
+   toutes les six secondes : assez pour attirer l'œil, trop rare pour agacer. */
+@keyframes invite-coin {
+  0%,
+  86%,
+  100% {
+    transform: rotate(0deg);
+  }
+  89% {
+    transform: rotate(-12deg) scale(1.06);
+  }
+  92% {
+    transform: rotate(10deg) scale(1.06);
+  }
+  95% {
+    transform: rotate(-6deg);
+  }
+}
+.invite-coin {
+  animation: invite-coin 6s ease-in-out 1.5s infinite;
+}
+.invite-coin:active {
+  animation: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .invite-coin {
+    animation: none;
+  }
+}
+
+/* --- onglets de Moi, soudés sous la carte --- */
+/* La teinte exacte où s'arrête le dégradé de .moi-carte : la barre
+   prolonge la carte au lieu de se poser à côté. */
+.moi-onglets {
+  background: oklch(0.28 0.13 293);
+  box-shadow: 0 18px 34px -22px oklch(0.4 0.18 296 / 0.75);
+}
+/* Le premier bloc d'un panneau remonte sous la barre des onglets : pas
+   d'écart entre la carte et sa section. Son haut gagne la hauteur cachée. */
+.moi-section-soudee {
+  margin-top: -1.5rem;
+}
+.moi-section-soudee > :first-child {
+  padding-top: 2.5rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* ==========================================================================
+   LES CAPSULES — mini-formations de la Boutique, lues dans le carnet
+   (lib/capsules.ts, components/capsules/*). Chaque capsule a sa TEINTE
+   d'emballage : une IDENTITÉ, comme les outils de Marcel, qui ne touche que
+   la couverture (le dégradé derrière l'emoji). Les boutons d'action restent
+   violets. Des rôles du design system mélangés, jamais de hex.
+   ========================================================================== */
+.capsule-couverture {
+  background: linear-gradient(145deg, var(--capsule-a), var(--capsule-b));
+  color: var(--capsule-encre);
+}
+.capsule-teinte-violet {
+  --capsule-a: var(--primary);
+  --capsule-b: color-mix(in oklch, var(--primary), black 32%);
+  --capsule-encre: white;
+}
+.capsule-teinte-soleil {
+  --capsule-a: var(--highlight);
+  --capsule-b: color-mix(in oklch, var(--highlight), var(--destructive) 42%);
+  --capsule-encre: var(--foreground);
+}
+.capsule-teinte-corail {
+  --capsule-a: var(--destructive);
+  --capsule-b: color-mix(in oklch, var(--destructive), black 24%);
+  --capsule-encre: white;
+}
+.capsule-teinte-prune {
+  --capsule-a: color-mix(in oklch, var(--primary), var(--destructive) 45%);
+  --capsule-b: color-mix(in oklch, var(--primary), black 28%);
+  --capsule-encre: white;
+}
+.capsule-teinte-ocean {
+  --capsule-a: color-mix(in oklch, var(--primary), var(--success) 50%);
+  --capsule-b: color-mix(in oklch, var(--primary), var(--foreground) 55%);
+  --capsule-encre: white;
+}
+.capsule-teinte-menthe {
+  --capsule-a: color-mix(in oklch, var(--success), white 12%);
+  --capsule-b: color-mix(in oklch, var(--success), black 22%);
+  --capsule-encre: white;
+}
+/* Les rayons de capsules défilent sur le côté, carte par carte. */
+.capsule-rayon {
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.capsule-rayon::-webkit-scrollbar {
+  display: none;
+}
+
+/* LA BOUTIQUE : ses titres de catégorie (plaque, parchemin, rubans) et ses
+   cartes d'article façon Clash Royale (packs de gemmes, boosts du Marché)
+   vivent dans des modules CSS, à côté de leurs composants :
+   components/boutique/BandeauSection.module.css et CarteMagasin.module.css. */

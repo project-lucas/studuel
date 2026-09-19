@@ -43,6 +43,7 @@ export default function ResetRequestForm() {
               required
               autoComplete="email"
               placeholder="eleve@exemple.fr"
+              className="h-11"
             />
           </div>
 
@@ -60,7 +61,7 @@ export default function ResetRequestForm() {
             ) : null}
           </div>
 
-          <Button type="submit" disabled={pending}>
+          <Button type="submit" size="lg" disabled={pending}>
             {pending ? 'Un instant…' : 'Envoyer le lien'}
           </Button>
         </form>

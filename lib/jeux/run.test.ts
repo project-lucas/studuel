@@ -20,10 +20,23 @@ import {
 } from '@/lib/jeux/run'
 
 const sprint = GAME_FORMATS['traduction-flash'] // 45 s, fastMs 2500
-const vies = GAME_FORMATS['faux-amis'] // 2 vies, 6 s, cible 10
+// Les formats de référence « vies » et « ascension » de ces tests étaient
+// Faux amis et Suite logique, retirés du catalogue le 19/09/2026. Leurs
+// mécaniques restent servies par d'autres jeux : les tests gardent leurs
+// chiffres ronds, posés sur un jeu conservé.
+const vies: GameFormat = {
+  ...GAME_FORMATS['falsos-amigos'],
+  params: { mechanic: 'vies', vies: { lives: 2, questionSeconds: 6, target: 10 } },
+} // 2 vies, 6 s, cible 10
 const paliers = GAME_FORMATS['calcul-mental'] // 4 vagues × 5, 2 vies
 const expedition = GAME_FORMATS.capitales // 8 escales
-const ascension = GAME_FORMATS['suite-logique'] // 10 étages, chute 2
+const ascension: GameFormat = {
+  ...GAME_FORMATS['classe-moi-ca'],
+  params: {
+    mechanic: 'ascension',
+    ascension: { floors: 10, fall: 2, questionSeconds: null, attempts: 30 },
+  },
+} // 10 étages, chute 2
 
 const good = { good: true, elapsedMs: 4000 }
 const fast = { good: true, elapsedMs: 100 }

@@ -14,9 +14,11 @@ export const dynamic = 'force-dynamic'
 //
 // Ouvrir un chapitre menait droit au cours, sans rien demander. C'était rapide
 // pour qui venait lire, et fermé pour tous les autres — celui qui voulait ses
-// flashcards ou son défi tombait sur trois écrans de leçon rédigée et devait
-// repartir en arrière. L'écran rend le choix : cinq boutons, rien d'autre. Le
-// cours en est un, plus le passage obligé.
+// flashcards tombait sur trois écrans de leçon rédigée et devait repartir en
+// arrière. L'écran rend le choix, et le RANGE (16/09/2026) sous trois verbes :
+// Apprendre (Cours, Fiche) · Mémoriser (Flashcards) · Se tester (Quiz,
+// Exercice, Moi vs IA). Cinq tuiles en vrac, dont trois jouaient les mêmes
+// questions, ne disaient pas la différence ; les groupes la disent.
 export default async function ChapterPage({
   params,
 }: {

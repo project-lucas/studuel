@@ -1,0 +1,52 @@
+/* ==========================================================================
+   LES FLÈCHES DE LA PLAQUE DE MATIÈRE (SubjectPlate.tsx) — le triangle animé
+   de Clash Royale (Lucas, 19/09/2026 : « le même bouton animé qui va de haut
+   en bas, mais cette fois tourné vers l'extérieur, pour expliquer qu'en
+   cliquant cela va changer la matière et non ouvrir une page »).
+
+   Un triangle d'or bombé, cerné d'encre, qui REBONDIT VERS L'EXTÉRIEUR de la
+   plaque : celui du haut monte, celui du bas descend. Le mouvement dit « il y
+   en a d'autres, au-dessus et en dessous » — on fait défiler, on n'entre pas.
+
+   Module et non globals.css : la feuille globale ne se recompilait plus en
+   développement.
+   ========================================================================== */
+
+.fleche {
+  display: block;
+  width: 26px;
+  height: 19px;
+  filter: drop-shadow(0 1.5px 0 #120d24);
+  animation: rebond 1.15s ease-in-out infinite;
+}
+.fleche[data-sens='haut'] {
+  --sens: -1;
+}
+.fleche[data-sens='bas'] {
+  --sens: 1;
+}
+
+@keyframes rebond {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  45% {
+    transform: translateY(calc(var(--sens) * 4px));
+  }
+  60% {
+    transform: translateY(calc(var(--sens) * 3px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fleche {
+    animation: none;
+  }
+}
+
+/* Le tap : la flèche s'écrase d'un rien, comme un bouton de jeu. */
+.cible:active .fleche {
+  animation-play-state: paused;
+  scale: 0.88;
+}

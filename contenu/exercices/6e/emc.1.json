@@ -1,0 +1,236 @@
+{
+  "niveau": "6e",
+  "matiere": "emc",
+  "exercices": [
+    {
+      "chapitre": "ac90145b-f5e8-5758-a693-20adf8c54b69",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le nouveau de la 6e C",
+      "competence": "analyser-document",
+      "situation": "Hugo vient d’arriver en 6e C, en plein mois de novembre. Le soir même, sur le groupe de discussion de la classe, on parle de lui… Lis la conversation.",
+      "documents": [
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Le groupe « 6e C 🏀 »",
+          "source": "Conversation imaginée pour l’exercice.",
+          "participants": [
+            { "nom": "Lina", "emoji": "👧", "cote": "gauche" },
+            { "nom": "Enzo", "emoji": "👦", "cote": "gauche" },
+            { "nom": "Maëlys", "emoji": "🧒", "cote": "droite" }
+          ],
+          "repliques": [
+            { "qui": "Lina", "texte": "Vous avez vu le nouveau ? Il a un truc derrière l’oreille 👂" },
+            { "qui": "Enzo", "texte": "Mdr on l’appelle [[s|Bluetooth]] 😂😂" },
+            { "qui": "Maëlys", "texte": "C’est un appareil auditif. Il entend moins bien, c’est tout." },
+            { "qui": "Enzo", "texte": "De toute façon, les nouveaux sont tous bizarres 🙄" },
+            { "qui": "Lina", "texte": "Tu le connais même pas 😅" },
+            { "qui": "Maëlys", "texte": "Demain, je lui propose de manger avec nous à la cantine 🙂" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sms",
+          "enonce": "Enzo invente un **surnom** pour se moquer de Hugo. Touche-le dans la conversation.",
+          "reponse": ["s"],
+          "aide": "Un surnom remplace le prénom de quelqu’un. Cherche ce que « on l’appelle ».",
+          "explication": "**Bluetooth** : ce surnom se moque d’un appareil auditif, donc d’une différence liée à la santé. Donner un surnom sans l’accord de la personne, même « pour rire », c’est manquer de respect."
+        },
+        {
+          "type": "choix",
+          "enonce": "Enzo écrit : « les nouveaux sont tous bizarres ». Comment appelle-t-on une idée toute faite sur **tout un groupe** de personnes ?",
+          "options": ["Un stéréotype", "Une preuve", "Un compliment", "Une règle du collège"],
+          "reponse": 0,
+          "aide": "Enzo parle de « tous » les nouveaux… sans en connaître un seul.",
+          "explication": "C’est un **stéréotype** : une idée toute faite sur un groupe, qui se répand sans preuve. Lina le lui fait remarquer : Enzo ne connaît même pas Hugo."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque message de la conversation.",
+          "categories": ["Respecte Hugo", "Ne respecte pas Hugo"],
+          "items": [
+            ["« On l’appelle Bluetooth 😂 »", 1],
+            ["« C’est un appareil auditif. Il entend moins bien, c’est tout. »", 0],
+            ["« Les nouveaux sont tous bizarres »", 1],
+            ["« Tu le connais même pas »", 0],
+            ["« Je lui propose de manger avec nous »", 0]
+          ],
+          "aide": "Un message respectueux ne rabaisse pas Hugo : il explique sa différence, le défend ou l’accueille.",
+          "explication": "Le surnom et le stéréotype **rabaissent** Hugo. Maëlys et Lina, elles, expliquent sa différence, rappellent qu’on ne le connaît pas et l’accueillent : le respect, ce sont des **gestes qui se voient**."
+        }
+      ]
+    },
+    {
+      "chapitre": "ac90145b-f5e8-5758-a693-20adf8c54b69",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Discrimination ou pas ? La loi tranche",
+      "competence": "raisonner",
+      "situation": "Nour et Théo ont entendu parler de cinq situations cette semaine. Certaines sont-elles des **discriminations** ? Pour le savoir, ils lisent ce que dit la loi.",
+      "documents": [
+        {
+          "id": "loi",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Ce que dit le Code pénal",
+          "source": "D’après le Code pénal, articles 225-1 et 225-2 (extraits simplifiés).",
+          "blocs": [
+            "**Article 225-1.** Constitue une discrimination toute distinction faite entre les personnes à cause de leur origine, de leur [[sexe|sexe]], de leur situation de famille, de leur apparence physique, de leur nom de famille, de leur lieu de résidence, de leur état de santé, de leur handicap, de leur âge, de leurs opinions politiques ou de leur religion…",
+            "**Article 225-2.** La discrimination est punie de trois ans d’emprisonnement et de 45 000 euros d’amende lorsqu’elle consiste notamment à refuser un bien ou un service, ou à refuser d’embaucher une personne."
+          ]
+        },
+        {
+          "id": "cas",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Cinq situations entendues cette semaine",
+          "source": "Situations imaginées pour l’exercice.",
+          "blocs": [
+            "**A.** Le club de foot de la ville refuse l’inscription de Jade : « Le foot, ce n’est pas pour les filles. »",
+            "**B.** La boulangerie ne sert pas Karim, arrivé dix minutes après l’heure de fermeture.",
+            "**C.** Un restaurant refuse d’installer M. Petit, qui se déplace en fauteuil roulant, alors que la salle est de plain-pied : « Ça gênerait les autres clients. »",
+            "**D.** Le professeur de musique met 8 sur 20 à Lucas, qui n’avait pas appris sa partition.",
+            "**E.** Une agence refuse de louer un appartement à Mme Diallo à cause de son nom de famille."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "loi",
+          "enonce": "Situation A : dans l’article 225-1, touche le mot qui correspond à la raison du refus fait à Jade.",
+          "reponse": ["sexe"],
+          "aide": "Jade est refusée parce qu’elle est une fille. Quel critère de la liste est-ce ?",
+          "explication": "Le **sexe** : refuser Jade parce qu’elle est une fille, c’est la traiter moins bien à cause de son sexe. C’est une discrimination."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range les cinq situations du Doc 2.",
+          "categories": ["Discrimination interdite par la loi", "Pas une discrimination"],
+          "items": [
+            ["A. Jade refusée au club de foot", 0],
+            ["B. Karim pas servi après la fermeture", 1],
+            ["C. M. Petit refusé au restaurant", 0],
+            ["D. Lucas noté 8 sur 20", 1],
+            ["E. Mme Diallo refusée à cause de son nom", 0]
+          ],
+          "aide": "Pour chaque situation, demande-toi : la personne est-elle traitée moins bien à cause d’un critère de la liste (sexe, handicap, nom…), ou pour une raison valable pour tout le monde ?",
+          "explication": "A (le **sexe**), C (le **handicap**) et E (le **nom de famille**) sont des discriminations. Karim et Lucas ne sont pas traités moins bien pour ce qu’ils sont, mais pour une raison valable pour tous : l’heure de fermeture, une partition non apprise."
+        },
+        {
+          "type": "nombre",
+          "enonce": "D’après l’article 225-2, combien d’années de prison le restaurant qui refuse M. Petit risque-t-il **au maximum** ?",
+          "reponse": 3,
+          "unite": "ans",
+          "aide": "Refuser d’installer un client, c’est refuser un service. Relis l’article 225-2.",
+          "explication": "Jusqu’à **3 ans** d’emprisonnement et 45 000 euros d’amende : la discrimination n’est pas seulement impolie, c’est un **délit**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le patron du restaurant se défend : « Je n’ai rien contre les personnes handicapées, c’est pour les autres clients. » Qu’en dit la loi ?",
+          "options": [
+            "C’est une discrimination : il a traité M. Petit moins bien à cause de son handicap",
+            "Ce n’est pas une discrimination, puisqu’il dit n’avoir rien contre lui",
+            "C’est autorisé, car un restaurant choisit librement tous ses clients",
+            "C’est autorisé si la plupart des autres clients sont d’accord"
+          ],
+          "reponse": 0,
+          "aide": "Relis la définition : la loi parle de ce qu’on FAIT (une distinction), pas de ce qu’on pense.",
+          "explication": "**C’est une discrimination** : la loi juge l’acte — traiter quelqu’un moins bien à cause de son handicap —, pas les intentions. Le confort des « autres clients » n’est pas une excuse."
+        }
+      ]
+    },
+    {
+      "chapitre": "ac90145b-f5e8-5758-a693-20adf8c54b69",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Égaux en dignité, même en plein débat",
+      "competence": "argumenter",
+      "situation": "En 6e D, le débat du jour porte sur une question : « Faut-il des devoirs le week-end ? ». Le ton monte… Lis le compte rendu écrit par la secrétaire de séance, puis un texte de 1948.",
+      "documents": [
+        {
+          "id": "debat",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Compte rendu du débat",
+          "source": "Compte rendu imaginé pour l’exercice.",
+          "blocs": [
+            "Iris ouvre le débat : elle est **pour** les devoirs le week-end, « parce que ça fait réviser ». Nour lève la main et répond qu’elle est **contre** : le samedi, elle aide ses parents au marché.",
+            "Kylian coupe la parole à Nour : « Toi, t’as de mauvaises [[n|notes]], ton avis ne compte pas. » Quelques élèves rient.",
+            "Iris intervient : « Je ne suis pas d’accord avec Nour, mais je veux entendre ses arguments jusqu’au bout. »",
+            "À la fin de l’heure, Kylian va voir Nour : « J’ai été nul tout à l’heure. Excuse-moi. » Nour accepte ses excuses."
+          ]
+        },
+        {
+          "id": "dudh",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Article 1",
+          "auteur": "Déclaration universelle des droits de l’homme (10 décembre 1948)",
+          "blocs": [
+            "Tous les êtres humains naissent libres et égaux en [[d|dignité]] et en droits. Ils sont doués de raison et de conscience et doivent agir les uns envers les autres dans un esprit de fraternité."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "debat",
+          "enonce": "Pour Kylian, l’avis de Nour ne vaut rien. Sur quoi s’appuie-t-il ? Touche le mot dans le Doc 1.",
+          "reponse": ["n"],
+          "aide": "Relis le paragraphe 2 : Kylian reproche quelque chose à Nour pour lui refuser la parole.",
+          "explication": "Sur ses **notes**. Or la dignité d’une personne ne dépend ni de ses notes, ni de l’argent, ni de l’apparence : elle ne se mérite pas et ne se perd pas."
+        },
+        {
+          "type": "zone",
+          "document": "dudh",
+          "enonce": "Dans le Doc 2, touche le mot qui montre que Kylian a tort : chacun a la même valeur, quelles que soient ses notes.",
+          "reponse": ["d"],
+          "aide": "Cherche ce en quoi tous les êtres humains sont « égaux », en plus des droits.",
+          "explication": "La **dignité** : tous les êtres humains sont égaux en dignité. L’avis de Nour compte donc autant que celui des autres, bonnes ou mauvaises notes."
+        },
+        {
+          "type": "choix",
+          "enonce": "Iris n’est pas d’accord avec Nour. La respecte-t-elle quand même ?",
+          "options": [
+            "Oui : respecter, ce n’est pas être d’accord, c’est écouter sans rabaisser",
+            "Non : pour respecter quelqu’un, il faut être d’accord avec lui",
+            "Non : pour la respecter, elle aurait dû se taire pendant le débat",
+            "On ne peut pas le savoir en lisant le compte rendu"
+          ],
+          "reponse": 0,
+          "aide": "Relis ce que dit Iris au paragraphe 3.",
+          "explication": "**Oui** : Iris garde son avis, mais veut entendre Nour jusqu’au bout. Respecter quelqu’un, ce n’est pas être d’accord avec lui : c’est refuser de le rabaisser."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range les gestes du débat.",
+          "categories": ["Geste de respect", "Manque de respect"],
+          "items": [
+            ["Nour lève la main pour parler", 0],
+            ["Kylian coupe la parole à Nour", 1],
+            ["Des élèves rient de Nour", 1],
+            ["Iris veut entendre les arguments jusqu’au bout", 0],
+            ["Kylian juge l’avis de Nour d’après ses notes", 1],
+            ["Kylian s’excuse auprès de Nour", 0]
+          ],
+          "aide": "Les gestes du respect : écouter sans couper, ne pas se moquer, s’excuser quand on a blessé.",
+          "explication": "Lever la main, écouter jusqu’au bout et **s’excuser** sont des gestes de respect. Couper la parole, rire de quelqu’un et le juger d’après ses notes, non. Kylian finit par réparer : s’excuser, c’est aussi du respect."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la conclusion que la classe écrit au tableau.",
+          "texte": "Tous les êtres humains sont égaux en ___. Elle ne se gagne pas avec de bonnes ___ : c’est pourquoi l’avis de Nour compte autant que celui de Kylian.",
+          "reponses": [["dignité"], ["notes"]],
+          "banque": ["dignité", "notes", "force", "popularité", "argent"],
+          "aide": "Le premier mot vient du Doc 2 ; le second, de ce que Kylian reprochait à Nour.",
+          "explication": "Égaux en **dignité** : elle ne se gagne pas avec de bonnes **notes** et ne se perd pas avec de mauvaises. C’est le fondement de tous les droits."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,334 @@
+/* ==========================================================================
+   LA FEUILLE « MODES DE JEU » (ModesSheet.tsx) — l'écran des modes de Clash
+   Royale, relevé sur la capture de Lucas (19/09/2026) : la feuille ne couvre
+   PAS tout l'écran — le haut de l'arène reste visible, légèrement voilé —,
+   une languette à chevron dépasse du bandeau-titre pour la refermer, et la
+   liste des billets défile dessous.
+
+   Retouches du 19/09 (Lucas : « l'ouverture doit être smooth, légère […]
+   Clash Royale prend la largeur, le fond derrière est clair, pas trop
+   sombre ») :
+     · la feuille prend TOUTE la largeur de l'écran — bandeau et fond d'un
+       bord à l'autre ; seule la COLONNE des billets est plafonnée, pour
+       garder leurs proportions sur un grand écran ;
+     · le voile sur l'arène est léger, et le fond de la feuille est un violet
+       moyen (le bleu moyen du modèle), plus un violet presque noir ;
+     · l'ouverture glisse en douceur (courbe de feuille iOS), dans
+       ModesSheet.tsx.
+
+   Mesures du modèle (écran de 899 px de large), reportées en % de la largeur
+   de la COLONNE (`--col`) ou de la colonne-conteneur des billets (cqw) :
+     · la feuille commence à 19 % de la hauteur de l'écran ;
+     · languette : trapèze de 285 → ~200 × 115, bouton de 183 × 75 dedans ;
+     · bandeau : 128 de haut, titre de 44 de capitales ;
+     · billets à 24 des bords, 38 entre deux.
+
+   Module et non globals.css : la feuille globale ne se recompilait plus en
+   développement.
+   ========================================================================== */
+
+.voile {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  /* Léger : on voit l'arène derrière, simplement passée au second plan. */
+  background: rgb(20 10 45 / 0.36);
+}
+
+.feuille {
+  --contour: color-mix(in oklch, var(--foreground), black 50%);
+  --bandeau: var(--primary);
+  /* La largeur de référence des cotes : l'écran d'un téléphone, plafonnée
+     à celle d'un grand téléphone sur un écran large. */
+  --col: min(100vw, 34rem);
+  position: fixed;
+  top: 19dvh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 71;
+  display: flex;
+  flex-direction: column;
+  /* Le fond du modèle : un violet MOYEN, un rien plus sombre sous le
+     bandeau, plus clair vers le bas. */
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--primary), black 52%) 0%,
+    color-mix(in oklch, var(--primary), black 42%) 45%,
+    color-mix(in oklch, var(--primary), black 34%) 100%
+  );
+  box-shadow: 0 -0.5rem 1.5rem rgb(20 10 45 / 0.25);
+  outline: none;
+  /* Une seule couche composée pendant la glissade : rien ne se repeint. */
+  will-change: transform;
+}
+
+/* ─────────────────────────────── la languette */
+
+/* Le trapèze qui dépasse du bandeau : même matière que lui, coins hauts
+   arrondis — dessiné en SVG (ModesSheet.tsx), il descend d'un rien sous le
+   filet du bandeau pour s'y souder. */
+.languette {
+  position: absolute;
+  bottom: calc(100% - var(--col) * 0.006);
+  left: 50%;
+  width: calc(var(--col) * 0.317);
+  height: calc(var(--col) * 0.128);
+  transform: translateX(-50%);
+  touch-action: none;
+  z-index: 2;
+}
+.languette svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.languetteHaut {
+  stop-color: color-mix(in oklch, var(--bandeau), white 34%);
+}
+.languetteMilieu {
+  stop-color: color-mix(in oklch, var(--bandeau), white 8%);
+}
+.languetteBas {
+  stop-color: var(--bandeau);
+}
+.languetteFilet {
+  stroke: color-mix(in oklch, var(--bandeau), white 60%);
+}
+
+/* Le bouton dans la languette : un pavé plus clair, sa lèvre dessous, le
+   chevron blanc cerné. C'est lui qui referme la feuille. */
+.poignee {
+  position: absolute;
+  left: 50%;
+  top: calc(var(--col) * 0.022);
+  width: calc(var(--col) * 0.204);
+  height: calc(var(--col) * 0.083);
+  transform: translateX(-50%);
+  display: grid;
+  place-items: center;
+  border-radius: calc(var(--col) * 0.022);
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--bandeau), white 58%) 0%,
+    color-mix(in oklch, var(--bandeau), white 34%) 45%,
+    color-mix(in oklch, var(--bandeau), white 22%) 100%
+  );
+  box-shadow:
+    inset 0 calc(var(--col) * 0.004) 0 rgb(255 255 255 / 0.55),
+    inset 0 calc(var(--col) * -0.009) 0 color-mix(in oklch, var(--bandeau), black 12%),
+    0 calc(var(--col) * 0.005) 0 color-mix(in oklch, var(--bandeau), black 40%);
+  cursor: pointer;
+  transition: transform 90ms ease-out;
+}
+.poignee:active {
+  transform: translateX(-50%) translateY(calc(var(--col) * 0.004));
+}
+.poignee:focus-visible {
+  outline: 3px solid var(--highlight);
+  outline-offset: 2px;
+}
+.chevron {
+  width: calc(var(--col) * 0.07);
+  height: calc(var(--col) * 0.07);
+  color: white;
+  filter: drop-shadow(0 0 1px var(--contour)) drop-shadow(0 1px 0 var(--contour));
+}
+
+/* ─────────────────────────────── le bandeau-titre, d'un bord à l'autre */
+
+.bandeau {
+  position: relative;
+  flex-shrink: 0;
+  height: calc(var(--col) * 0.142);
+  display: grid;
+  place-items: center;
+  touch-action: none;
+  background:
+    /* le filet clair du haut, puis le reflet et la lèvre du bas */
+    linear-gradient(
+      180deg,
+      color-mix(in oklch, var(--bandeau), white 58%) 0%,
+      color-mix(in oklch, var(--bandeau), white 40%) 2%,
+      transparent 5%
+    ),
+    linear-gradient(
+      0deg,
+      color-mix(in oklch, var(--bandeau), black 34%) 0%,
+      color-mix(in oklch, var(--bandeau), black 22%) 5%,
+      color-mix(in oklch, var(--bandeau), white 36%) 7%,
+      color-mix(in oklch, var(--bandeau), white 14%) 10%,
+      transparent 22%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in oklch, var(--bandeau), white 10%) 0%,
+      var(--bandeau) 40%,
+      color-mix(in oklch, var(--bandeau), black 16%) 74%,
+      color-mix(in oklch, var(--bandeau), black 8%) 100%
+    );
+  box-shadow: 0 calc(var(--col) * 0.008) calc(var(--col) * 0.01) rgb(0 0 0 / 0.35);
+  z-index: 1;
+}
+
+.encre {
+  color: white;
+  -webkit-text-stroke: var(--trait, 0.14em) var(--contour);
+  paint-order: stroke fill;
+  text-shadow: 0 0.08em 0 var(--contour);
+}
+
+.titre {
+  font-size: calc(var(--col) * 0.07);
+  line-height: 1;
+  --trait: 0.16em;
+  /* le trait déborde : on lui laisse sa place */
+  padding: 0.1em 0.2em;
+}
+
+/* ─────────────────────────────── la liste */
+
+.liste {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  /* Pas de barre de défilement sur la liste, comme au modèle. */
+  scrollbar-width: none;
+}
+
+/* La colonne des billets : pleine largeur sur un téléphone, plafonnée sur un
+   grand écran — c'est ELLE le conteneur des cotes en cqw. */
+.colonne {
+  container-type: inline-size;
+  margin-inline: auto;
+  width: 100%;
+  max-width: 34rem;
+  padding: 4.4cqw 2.7cqw calc(env(safe-area-inset-bottom) + 8cqw);
+  display: flex;
+  flex-direction: column;
+  gap: 4.2cqw;
+}
+
+/* La rangée du haut : le total de trophées au centre, le bouton « tous les
+   modes » contre le bord droit. */
+.enTete {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 11cqw;
+}
+
+/* « Total de trophées : 1 234 » — la coupe, le mot, le nombre en or. */
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8cqw;
+  font-size: 4.3cqw;
+  line-height: 1;
+}
+.total .nombre {
+  color: var(--highlight);
+}
+.coupe {
+  width: 8cqw;
+  height: 8cqw;
+  object-fit: contain;
+  filter: drop-shadow(0 0.4cqw 0 rgb(0 0 0 / 0.35));
+}
+
+/* Le bouton « tous les modes » : un pavé de jeu comme la poignée, plus
+   clair que le fond, l'icône blanche cernée, et en or le nombre de modes
+   repliés. Enfoncé quand la liste est dépliée. */
+.voirTout {
+  position: absolute;
+  right: 0.4cqw;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 11cqw;
+  height: 11cqw;
+  transform: translateY(-50%);
+  border-radius: 2.6cqw;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--primary), white 42%) 0%,
+    color-mix(in oklch, var(--primary), white 18%) 55%,
+    var(--primary) 100%
+  );
+  box-shadow:
+    inset 0 0.5cqw 0 rgb(255 255 255 / 0.5),
+    inset 0 -1cqw 0 color-mix(in oklch, var(--primary), black 22%),
+    0 0 0 0.45cqw var(--contour),
+    0 0.9cqw 0 0.45cqw var(--contour);
+  cursor: pointer;
+  transition: transform 90ms ease-out;
+}
+.voirTout:active {
+  transform: translateY(calc(-50% + 0.6cqw));
+}
+.voirTout[aria-pressed='true'] {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--primary), black 8%) 0%,
+    color-mix(in oklch, var(--primary), white 12%) 100%
+  );
+  box-shadow:
+    inset 0 0.8cqw 1cqw rgb(0 0 0 / 0.35),
+    0 0 0 0.45cqw var(--contour),
+    0 0.3cqw 0 0.45cqw var(--contour);
+}
+.voirTout:focus-visible {
+  outline: 3px solid var(--highlight);
+  outline-offset: 3px;
+}
+.voirToutIcone {
+  width: 6.4cqw;
+  height: 6.4cqw;
+  color: white;
+  filter: drop-shadow(0 0 0.3cqw var(--contour)) drop-shadow(0 0.3cqw 0 var(--contour));
+}
+.voirToutCompte {
+  position: absolute;
+  top: -2.2cqw;
+  right: -2.2cqw;
+  min-width: 5.6cqw;
+  padding: 0.6cqw 1.1cqw;
+  border-radius: 999px;
+  background: linear-gradient(180deg, color-mix(in oklch, var(--highlight), white 25%), var(--highlight));
+  box-shadow: 0 0 0 0.35cqw var(--contour);
+  font-size: 2.8cqw;
+  line-height: 1;
+  color: var(--foreground);
+  text-align: center;
+}
+
+/* Le séparateur de section (« Modes compétitifs » au modèle) : deux filets
+   et le nom de la matière, avec sa vignette. */
+.separateur {
+  display: flex;
+  align-items: center;
+  gap: 2.4cqw;
+  margin-top: 2cqw;
+  font-size: 3.9cqw;
+  line-height: 1;
+}
+.separateur::before,
+.separateur::after {
+  content: '';
+  flex: 1;
+  height: 0.45cqw;
+  border-radius: 999px;
+  background: color-mix(in oklch, var(--primary), white 30%);
+  opacity: 0.6;
+}
+.vignette {
+  width: 7.5cqw;
+  height: 7.5cqw;
+  object-fit: contain;
+  filter: drop-shadow(0 0.3cqw 0 rgb(0 0 0 / 0.35));
+}

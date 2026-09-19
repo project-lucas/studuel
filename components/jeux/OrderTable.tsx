@@ -16,6 +16,7 @@ import { gameSfx, sfx, buzz } from '@/lib/sounds'
 import type { GameFormat } from '@/lib/jeux/formats'
 import { readGameBest, writeGameBest } from '@/lib/jeux/records'
 import { usePalierRun } from '@/lib/jeux/use-palier-run'
+import { avecGemmesPalier } from '@/lib/jeux/palier-gemmes'
 import type { PalierRun } from '@/lib/jeux/paliers'
 import { hasTimeRecord } from '@/lib/jeux/palier-format'
 import { useGameReport } from '@/lib/jeux/use-game-report'
@@ -89,8 +90,9 @@ export default function OrderTable({
     standing: palierStanding,
     record: recordPalier,
     reset: resetPalier,
+    gemmes: palierGemmes,
   } = usePalierRun(format.id, palier)
-  const { saved, gains, trophies, report, reset } = useGameReport(
+  const { saved, gains, trophies, bilan, report, reset } = useGameReport(
     subject,
     format.id,
   )
@@ -145,7 +147,9 @@ export default function OrderTable({
           : null,
       )
 
-      report(final)
+      report(final, {
+        elapsedMs: startedAtRef.current ? Date.now() - startedAtRef.current : null,
+      })
     },
     [audio, format, recordPalier, report],
   )
@@ -295,8 +299,9 @@ export default function OrderTable({
             best={best}
             isRecord={isRecord}
             saved={saved}
-            gains={gains}
+            gains={avecGemmesPalier(gains, palierGemmes)}
             trophies={trophies}
+            bilan={bilan}
             ghost={ghost}
             onReplay={startCountdown}
             onExit={exit}

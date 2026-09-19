@@ -4,7 +4,6 @@ import {
   buildSchoolBoard,
   sortSchool,
   schoolNoun,
-  schoolTotalSeconds,
   getMockSchool,
   getMockGeoBoard,
   geoScopeLabel,
@@ -23,23 +22,12 @@ import {
 } from '@/lib/social'
 
 describe('sortSchool', () => {
-  it('classe l’école au temps de travail décroissant', () => {
+  it('classe l’école aux trophées décroissants', () => {
     const mates = [
-      { id: 'a', name: 'A', emoji: '🦊', seconds: 100 },
-      { id: 'b', name: 'B', emoji: '🐼', seconds: 500 },
+      { id: 'a', name: 'A', emoji: '🦊', trophies: 100 },
+      { id: 'b', name: 'B', emoji: '🐼', trophies: 500 },
     ]
     expect(sortSchool(mates)[0].id).toBe('b')
-  })
-})
-
-describe('schoolTotalSeconds', () => {
-  it('somme les élèves en ignorant les valeurs négatives', () => {
-    expect(
-      schoolTotalSeconds([
-        { id: 'a', name: 'A', emoji: '🦊', seconds: 100 },
-        { id: 'b', name: 'B', emoji: '🐼', seconds: -50 },
-      ]),
-    ).toBe(100)
   })
 })
 
@@ -236,20 +224,28 @@ describe('buildLiveSessions', () => {
 })
 
 describe('buildSchoolBoard', () => {
-  it('construit le tableau école, marque « Toi », trie par temps', () => {
+  it('construit le tableau école, marque « Toi », trie aux trophées', () => {
     const board = buildSchoolBoard(
       {
         school_name: 'Lycée Hugo',
         mates: [
-          { id: 'a', name: 'Ana', seconds: 100 },
-          { id: 'me', name: 'Lucas', seconds: 500 },
+          { id: 'a', name: 'Ana', trophies: 100 },
+          { id: 'me', name: 'Lucas', trophies: 500 },
         ],
       },
       'me',
     )
     expect(board.name).toBe('Lycée Hugo')
-    expect(board.mates[0]).toMatchObject({ id: 'me', name: 'Toi', isMe: true })
+    expect(board.mates[0]).toMatchObject({ id: 'me', name: 'Toi', isMe: true, trophies: 500 })
     expect(board.mates[1]).toMatchObject({ id: 'a', name: 'Ana' })
+  })
+
+  it('une RPC d’avant la 362 (sans trophées) donne 0, jamais NaN', () => {
+    const board = buildSchoolBoard(
+      { school_name: 'X', mates: [{ id: 'a', name: 'Ana', seconds: 100 }] },
+      'me',
+    )
+    expect(board.mates[0].trophies).toBe(0)
   })
 
   it('porte le cycle demandé (collège par défaut)', () => {
@@ -287,24 +283,24 @@ describe('échelons géographiques', () => {
   })
 
   it('échelon établissement → réutilise l’aperçu d’école', () => {
-    const board = getMockGeoBoard('school', 10 * 3600, 'lycee')
-    expect(board).toEqual(getMockSchool(10 * 3600, 'lycee'))
+    const board = getMockGeoBoard('school', 400, 'lycee')
+    expect(board).toEqual(getMockSchool(400, 'lycee'))
   })
 
-  it('échelon large → me place au bon rang selon mon vrai temps', () => {
-    // Petit temps : « Toi » finit dernier du vivier national (on grimpe en bossant).
-    const low = getMockGeoBoard('national', 1 * 3600, 'lycee')
+  it('échelon large → me place au bon rang selon mes vrais trophées', () => {
+    // Peu de trophées : « Toi » finit dernier du vivier national.
+    const low = getMockGeoBoard('national', 40, 'lycee')
     expect(low.name).toBe('France')
     expect(low.mates.at(-1)).toMatchObject({ id: 'me', isMe: true })
 
-    // Gros temps : « Toi » remonte en tête.
-    const high = getMockGeoBoard('national', 9999 * 3600, 'lycee')
+    // Beaucoup : « Toi » remonte en tête.
+    const high = getMockGeoBoard('national', 99999, 'lycee')
     expect(high.mates[0]).toMatchObject({ id: 'me', isMe: true })
   })
 
   it('chaque échelon large porte un nom, un vivier et un seul « Toi »', () => {
     for (const scope of GEO_SCOPES.filter((s) => s !== 'school') as GeoScope[]) {
-      const board = getMockGeoBoard(scope, 5 * 3600, 'college')
+      const board = getMockGeoBoard(scope, 500, 'college')
       expect(board.name.length).toBeGreaterThan(0)
       expect(board.mates.length).toBeGreaterThan(1)
       expect(board.mates.filter((m) => m.isMe)).toHaveLength(1)

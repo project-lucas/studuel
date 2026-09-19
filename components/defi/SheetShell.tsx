@@ -50,7 +50,6 @@ export default function SheetShell({
     >
       <motion.div
         ref={panel}
-        data-no-swipe
         className="defi3-sheet w-full max-w-md outline-none"
         initial={reduce ? { opacity: 0 } : { y: '100%' }}
         animate={reduce ? { opacity: 1 } : { y: 0 }}

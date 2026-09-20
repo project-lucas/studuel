@@ -1,7 +1,7 @@
 // Usine à contenu : transforme les modules de `scripts/contenu/*.mjs` en une
 // migration SQL idempotente (chapitres → leçons → quiz → questions).
 //
-//   node scripts/seed-contenu.mjs --num 216 --slugs emc,sport > supabase/216_….sql
+//   node scripts/seed-contenu.mjs --num 216 --slugs emc,sport > supabase/contenu/216_….sql
 //
 // `--slugs` limite la génération à certaines matières (défaut : toutes), et
 // `--num` fixe le numéro affiché dans l'en-tête. C'est ce qui permet de

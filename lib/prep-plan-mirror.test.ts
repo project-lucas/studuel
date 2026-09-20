@@ -1,7 +1,5 @@
 import { describe, expect, it } from 'vitest'
 import { readFileSync } from 'node:fs'
-import { fileURLToPath } from 'node:url'
-import path from 'node:path'
 import {
   DEFAULT_GOAL_MINUTES,
   addDays,
@@ -9,24 +7,9 @@ import {
   planDates,
   planSessionCount,
 } from '@/lib/prep-plan'
-
-// Garde du MIROIR `lib/prep-plan` ↔ migration 211.
-//
-// La 211 recopie les contrôles hérités de 087 en `controles` + plan de
-// préparation. Comme la seule voie légitime de création (`create_controle`) part
-// d'un plan calculé côté app, la migration a dû REDESSINER l'algorithme en SQL.
-// C'est une duplication, donc une dérive possible — et une dérive ici est
-// SILENCIEUSE : les contrôles repris auraient un plan aux mauvaises dates sans
-// qu'aucune erreur ne sorte. Ce dépôt s'est fait mordre cinq fois par ce motif
-// (boss, coffre, maîtrise, paliers, barème de duel).
-//
-// Le test lit le SQL et compare ses seuils, ses offsets et sa durée à ce que
-// l'implémentation TypeScript produit RÉELLEMENT (valeurs sondées en appelant
-// les fonctions, pas recopiées à la main).
-
-const here = path.dirname(fileURLToPath(import.meta.url))
+import { cheminMigration } from '@/lib/migrations-lecture'
 const SQL = readFileSync(
-  path.join(here, '..', 'supabase', '211_reprise_controles_depuis_upcoming_exams.sql'),
+  cheminMigration('211_reprise_controles_depuis_upcoming_exams.sql'),
   'utf8',
 )
 

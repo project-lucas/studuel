@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { after } from 'next/server'
 import { CircleUser } from 'lucide-react'
 import {
   Card,
@@ -19,7 +20,8 @@ import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { readRowTolerant } from '@/lib/profile-read'
 import { isMissingSchemaObject } from '@/lib/schema-fallback'
-import { toDayKey, activityCutoff, computeStreak } from '@/lib/streak'
+import { toDayKey, computeStreak } from '@/lib/streak'
+import { fetchJoursActifs } from '@/lib/jours-actifs'
 import { getGradeChaptersCached, getSubjectsCached } from '@/lib/catalog'
 import { chapterState } from '@/lib/mastery'
 import { getChapterMastery } from '@/lib/mastery-server'
@@ -32,7 +34,7 @@ import {
   couronnes,
   type MatiereACouronner,
 } from '@/lib/moi/couronnes'
-import { appliquerValidationsAuto } from '@/lib/moi/journal'
+import { appliquerValidationsAuto, lireActiviteDuJour } from '@/lib/moi/journal'
 import {
   formatDuree,
   phraseRythme,
@@ -141,8 +143,7 @@ type MoiProfileRow = {
 // components/moi/EcranMoi ; cette page ne fait que lire et calculer.
 // -----------------------------------------------------------------------------
 export default async function MoiPage() {
-  const supabase = await createClient()
-  const user = await getCurrentUser()
+  const [supabase, user] = await Promise.all([createClient(), getCurrentUser()])
 
   if (!user) {
     return (
@@ -177,19 +178,44 @@ export default async function MoiPage() {
   const depuisRythme = new Date()
   depuisRythme.setUTCDate(depuisRythme.getUTCDate() - (JOURS_HISTORIQUE - 1))
 
+  // UNE VAGUE (19/09/2026, chantier latence). Ce qui dépend d'une autre
+  // lecture y est CHAÎNÉ au lieu d'attendre toute la vague :
+  //   · le programme du niveau part dès que le profil arrive (cache serveur) ;
+  //   · les sessions du JOUR ne sont lues qu'une fois les habitudes connues, et
+  //     seulement si l'une d'elles se coche toute seule aujourd'hui.
+  // La série vient de `jours_actifs()` (une RPC, au plus 400 dates) : avant,
+  // quatre tables d'activité étaient lues sur 400 jours à chaque ouverture.
+  // La place dans le niveau (`my_grade_standings`) n'est plus demandée deux
+  // fois : la carte de joueur la rapporte déjà.
+  const profileP = readRowTolerant<MoiProfileRow>(supabase, 'profiles', 'id', user.id, [
+    'full_name',
+    'grade_level',
+    'selected_subjects',
+    'commute_slots',
+    'capacity_quiz',
+    // work_seconds (014), avatar (082) : `readRowTolerant` retire tout seul
+    // les colonnes que le schéma ne connaîtrait pas encore.
+    'work_seconds',
+    'avatar',
+  ])
+  const habitsP = supabase
+    .from('habits')
+    .select('id, catalog_id, target, created_at, habit_catalog(*)')
+    .order('created_at', { ascending: true })
+    .returns<Habit[]>()
+    .then(({ data }) => data ?? [])
+
   const [
     profile,
     profilJeu,
-    { data: habits },
-    { data: tests },
-    { data: studies },
-    { data: lessonsDone },
-    { data: challenges },
+    activeHabits,
+    activiteDuJour,
+    joursActifs,
+    levelChapters,
     { data: gradeRows },
     { data: termRows, error: termError },
     { data: storedLogs },
     { data: workDays, error: workError },
-    { data: standingsRow },
     { data: nationalRow },
     palmaresLignes,
     subjects,
@@ -198,47 +224,18 @@ export default async function MoiPage() {
     gems,
     gelsSerie,
   ] = await Promise.all([
-    readRowTolerant<MoiProfileRow>(supabase, 'profiles', 'id', user.id, [
-      'full_name',
-      'grade_level',
-      'selected_subjects',
-      'commute_slots',
-      'capacity_quiz',
-      // work_seconds (014), avatar (082) : `readRowTolerant` retire tout seul
-      // les colonnes que le schéma ne connaîtrait pas encore.
-      'work_seconds',
-      'avatar',
-    ]),
+    profileP,
     // La carte de joueur : pseudo, bannière, badges, blason, école, stats de
     // duel. Une seule porte (la même que la modale de /defi utilisait) plutôt
     // que huit lectures recopiées ici — le jour où le profil gagne un champ,
     // les deux écrans l'ont.
     getProfileData(),
-    supabase
-      .from('habits')
-      .select('id, catalog_id, target, created_at, habit_catalog(*)')
-      .order('created_at', { ascending: true })
-      .returns<Habit[]>(),
-    supabase
-      .from('test_sessions')
-      .select('created_at')
-      .eq('user_id', user.id)
-      .gte('created_at', activityCutoff()),
-    supabase
-      .from('study_sessions')
-      .select('created_at')
-      .eq('user_id', user.id)
-      .gte('created_at', activityCutoff()),
-    supabase
-      .from('lesson_completions')
-      .select('created_at')
-      .eq('user_id', user.id)
-      .gte('created_at', activityCutoff()),
-    supabase
-      .from('challenge_sessions')
-      .select('created_at')
-      .eq('user_id', user.id)
-      .gte('created_at', activityCutoff()),
+    habitsP,
+    habitsP.then((habits) => lireActiviteDuJour(supabase, user.id, habits, today)),
+    fetchJoursActifs(supabase, user.id),
+    // Le programme du niveau : cache serveur (5 min, partagé par toute la
+    // classe), lancé dès que le profil donne la classe.
+    profileP.then((p) => (p?.grade_level ? getGradeChaptersCached(p.grade_level) : [])),
     supabase
       .from('school_grades')
       .select('id, subject, label, score, out_of, coefficient, date')
@@ -264,9 +261,6 @@ export default async function MoiPage() {
       .eq('user_id', user.id)
       .gte('day', toDayKey(depuisRythme))
       .returns<JourTravail[]>(),
-    // Place de l'élève dans sa cohorte (223) : RPC SECURITY DEFINER, jamais une
-    // jointure — la RLS de `profiles` ne laisserait voir que sa propre ligne.
-    supabase.rpc('my_grade_standings'),
     // Ma place NATIONALE aux trophées (166) : le même classement que l'arène
     // (Défi → Classements). Le filtre « Trophées » du bloc Ton classement.
     supabase.rpc('national_ranking'),
@@ -287,50 +281,36 @@ export default async function MoiPage() {
     // Les gels de série achetés en boutique (368) : les jours qu'ils ont
     // pontés comptent dans la flamme, comme dans le bandeau du haut.
     lireGelsSerie(supabase, user.id),
-    // Mission fixe pour tous : « Planifier ma semaine ». Idempotente, et son
-    // résultat ne sert à personne — d'où sa place EN DERNIER, hors du
-    // déstructurage.
-    supabase.from('habits').upsert(
-      { user_id: user.id, catalog_id: PLANIFIER_CATALOG_ID, target: {} },
-      { onConflict: 'user_id,catalog_id', ignoreDuplicates: true },
-    ),
   ])
 
+  // Mission fixe pour tous : « Planifier ma semaine ». Idempotente, et son
+  // résultat ne sert à personne : écrite APRÈS la réponse, l'élève ne l'attend
+  // plus.
+  after(async () => {
+    const { error } = await supabase.from('habits').upsert(
+      { user_id: user.id, catalog_id: PLANIFIER_CATALOG_ID, target: {} },
+      { onConflict: 'user_id,catalog_id', ignoreDuplicates: true },
+    )
+    if (error) console.error('[moi] mission « Planifier » non posée :', error.message)
+  })
+
   const grade = profile?.grade_level ?? null
-  // Seule lecture qui ne pouvait pas partir avec les autres : elle a besoin du
-  // niveau. Mise en cache serveur (5 min, partagée par toute la classe), donc
-  // cette seconde vague ne coûte presque jamais un aller-retour réseau.
-  const levelChapters = grade ? await getGradeChaptersCached(grade) : []
 
   const commuteSlots: CommuteSlot[] = Array.isArray(profile?.commute_slots)
     ? (profile.commute_slots as CommuteSlot[])
     : []
 
-  const activeHabits = habits ?? []
   const logs = appliquerValidationsAuto(supabase, user.id, {
     habits: activeHabits,
     storedLogs: storedLogs ?? [],
     commuteSlots,
-    activite: {
-      tests: tests ?? [],
-      studies: studies ?? [],
-      lessons: lessonsDone ?? [],
-      challenges: challenges ?? [],
-    },
+    activite: activiteDuJour,
     today,
   })
 
   // --- Preuve n°1 : la série -----------------------------------------------
-  // Calculée depuis les mêmes journées d'activité que Marcel et le bandeau du
-  // haut (lib/streak), à partir de listes DÉJÀ chargées : aucune requête de plus.
-  const joursActifs = new Set(
-    [
-      ...(tests ?? []),
-      ...(studies ?? []),
-      ...(lessonsDone ?? []),
-      ...(challenges ?? []),
-    ].map((row) => String(row.created_at).slice(0, 10)),
-  )
+  // Les mêmes journées d'activité que Réviser, Marcel et le bandeau du haut
+  // (`jours_actifs()`, carnet compris).
   const serie = computeStreak(joursActifs, new Date(), gelsSerie)
 
   // --- Preuve n°2 : le temps de travail ------------------------------------
@@ -419,7 +399,7 @@ export default async function MoiPage() {
   const gradeLabel = gradeLevel ? GRADE_FULL_LABELS[gradeLevel] : null
 
   const level = workLevel(secondesTotal)
-  const standings = parseGradeStandings(standingsRow)
+  const standings = profilJeu?.standings ?? parseGradeStandings(null)
   // Le filtre « Trophées » : ma place nationale, pas celle de mon niveau.
   const nationalTrophees = standingNational(
     nationalRow ? normalizeRanking(nationalRow) : null,

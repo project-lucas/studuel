@@ -47,8 +47,12 @@ vi.mock('@/lib/sounds', () => ({
   buzz: vi.fn(),
   press: vi.fn(),
 }))
-vi.mock('@/app/defi/duel-course-actions', () => ({
-  recordDuelCourse: (...args: unknown[]) => recordDuelCourse(...args),
+// La fin de course part par la route /api/duel/fin, avec délai et relances
+// (lib/duel/envoi) : ici, un seul essai, livré au faux serveur.
+vi.mock('@/lib/duel/envoi', () => ({
+  envoyerAvecRelances: (envoyer: (signal: AbortSignal) => Promise<unknown>) =>
+    envoyer(new AbortController().signal),
+  posterJson: (_url: string, corps: unknown) => recordDuelCourse(corps),
 }))
 vi.mock('next/navigation', () => ({
   useRouter: () => ({ push: vi.fn(), prefetch: vi.fn() }),
@@ -120,6 +124,8 @@ describe('la course — l’écran ne ment pas', () => {
     recordDuelCourse.mockReset()
     recordDuelCourse.mockImplementation(async (input: { stats: { score: number } }) => ({
       saved: true,
+      statut: 'verifie',
+      trophiesPause: false,
       outcome: 'win',
       rival: { score: 200, goalAtMs: null },
       stats: input.stats,
@@ -162,6 +168,8 @@ describe('la course — l’écran ne ment pas', () => {
     expect(envoye.subjectSlug).toBe('maths')
     expect(envoye.seed).toBe(SEED)
     expect(envoye.opponent).toEqual({ kind: 'bot', botId: 'camille', trophiesRef: 0 })
+    // Une course = un identifiant : c'est lui qui rend la relance sans risque.
+    expect(envoye.courseId).toMatch(/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/)
     expect(envoye.stats.answered).toBe(clics)
     expect(envoye.stats.correct).toBe(clics)
     expect(envoye.stats.score).toBeGreaterThanOrEqual(GOAL_POINTS)

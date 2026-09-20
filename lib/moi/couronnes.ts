@@ -51,22 +51,6 @@ export const SEUILS_COURONNE: Readonly<Record<CouronneGagnee, number>> = {
   diamant: 1,
 }
 
-export const COURONNE_LABELS: Readonly<Record<CouronneTier, string>> = {
-  aucune: 'Pas encore de couronne',
-  bronze: 'Couronne de bronze',
-  argent: 'Couronne d’argent',
-  or: 'Couronne d’or',
-  diamant: 'Couronne de diamant',
-}
-
-/** Le nom court, pour une pastille (« Or »). */
-export const COURONNE_NOMS: Readonly<Record<CouronneGagnee, string>> = {
-  bronze: 'Bronze',
-  argent: 'Argent',
-  or: 'Or',
-  diamant: 'Diamant',
-}
-
 /** Le métal atteint par une part de programme maîtrisée (0..1). */
 export function tierPourRatio(ratio: number): CouronneTier {
   if (!Number.isFinite(ratio) || ratio <= 0) return 'aucune'

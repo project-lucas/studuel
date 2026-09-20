@@ -9,7 +9,8 @@ import {
 } from '@/lib/catalog'
 import { HORS_NIVEAU } from '@/lib/types'
 import { readRowTolerant } from '@/lib/profile-read'
-import { toDayKey, computeStreak, activityCutoff } from '@/lib/streak'
+import { toDayKey, computeStreak } from '@/lib/streak'
+import { fetchJoursActifs } from '@/lib/jours-actifs'
 import { rowsToControles, type ControleRow, type SessionRow } from '@/lib/prep-plan'
 import { pickMission, type ChapterCandidate } from '@/lib/mission'
 import type { Subject } from '@/lib/types'
@@ -109,7 +110,11 @@ export async function getMarcelSnapshot(
   supabase: SupabaseClient,
   userId: string,
 ): Promise<MarcelSnapshot> {
-  const profile = await readRowTolerant<ProfileRow>(
+  // UNE VAGUE (19/09/2026, chantier latence). Le profil était attendu seul,
+  // puis tout le reste partait : deux allers-retours en file. Seuls le
+  // programme et les quiz de la classe dépendent du profil — et ils viennent
+  // du cache serveur ; ils sont CHAÎNÉS sur lui, tout le reste part d'emblée.
+  const profileP = readRowTolerant<ProfileRow>(
     supabase,
     'profiles',
     'id',
@@ -124,18 +129,14 @@ export async function getMarcelSnapshot(
     ],
   )
 
-  const grade = profile?.grade_level ?? null
-  const goalMinutes = profile?.daily_goal_minutes ?? DEFAULT_GOAL
-
   const [
+    profile,
     allSubjects,
     levelChapters,
     gradeQuizzes,
     questionCounts,
     mastery,
-    { data: testDays },
-    { data: studyDays },
-    { data: challengeDays },
+    activityDays,
     { data: controleRows },
     { data: sessionRows },
     { data: coachCalls },
@@ -143,38 +144,39 @@ export async function getMarcelSnapshot(
     chapitresVus,
     gelsSerie,
   ] = await Promise.all([
+    profileP,
     getSubjectsCached(),
-    grade ? getGradeChaptersCached(grade) : Promise.resolve([]),
+    profileP.then((p) => (p?.grade_level ? getGradeChaptersCached(p.grade_level) : [])),
     // Catalogue mis en cache serveur : identique pour tous les élèves de la
     // classe, donc jamais rechargé par utilisateur.
-    grade
-      ? getGradeQuizzesCached(grade, HORS_NIVEAU)
-      : Promise.resolve([] as { id: string; subject: string; lesson_id: string | null }[]),
+    profileP.then((p) =>
+      p?.grade_level
+        ? getGradeQuizzesCached(p.grade_level, HORS_NIVEAU)
+        : ([] as { id: string; subject: string; lesson_id: string | null }[]),
+    ),
     getQuizQuestionCountsCached(),
     getChapterMastery(supabase, userId),
-    supabase
-      .from('test_sessions')
-      .select('created_at')
-      .eq('user_id', userId)
-      .gte('created_at', activityCutoff()),
-    supabase
-      .from('study_sessions')
-      .select('created_at')
-      .eq('user_id', userId)
-      .gte('created_at', activityCutoff()),
-    supabase
-      .from('challenge_sessions')
-      .select('created_at')
-      .eq('user_id', userId)
-      .gte('created_at', activityCutoff()),
+    // La série : `jours_actifs()`, comme Réviser, Moi et le bandeau du haut
+    // (carnet et leçons compris). Marcel lisait trois tables sur 400 jours et
+    // oubliait les leçons terminées : sa flamme pouvait être plus courte que
+    // celle du bandeau, pour le même élève.
+    fetchJoursActifs(supabase, userId),
     supabase
       .from('controles')
-      .select('*')
+      .select(
+        'id, subject_slug, chapters, exam_date, grade, note, note_prompted, snooze_date',
+      )
       .eq('user_id', userId)
       .returns<ControleRow[]>(),
+    // Les séances de préparation vivent dans `sessions_preparation` (203).
+    // Marcel lisait `controle_sessions`, une table qui n'a jamais existé : la
+    // requête échouait en silence et sa mission ignorait les contrôles
+    // planifiés (19/09/2026).
     supabase
-      .from('controle_sessions')
-      .select('*')
+      .from('sessions_preparation')
+      .select(
+        'id, controle_id, planned_date, duration_min, chapter_id, status, position',
+      )
       .eq('user_id', userId)
       .returns<SessionRow[]>(),
     // Compteur et solde du Prof (migration 215). Absents tant qu'elle n'est pas
@@ -198,6 +200,9 @@ export async function getMarcelSnapshot(
     // que le bandeau du haut.
     lireGelsSerie(supabase, userId),
   ])
+
+  const grade = profile?.grade_level ?? null
+  const goalMinutes = profile?.daily_goal_minutes ?? DEFAULT_GOAL
 
   // --- Matières suivies (choix d'onboarding, repli sur tout le catalogue) ------
   const selected = Array.isArray(profile?.selected_subjects)
@@ -264,11 +269,6 @@ export async function getMarcelSnapshot(
       : null
 
   // --- Série et historique ----------------------------------------------------
-  const activityDays = new Set(
-    [...(testDays ?? []), ...(studyDays ?? []), ...(challengeDays ?? [])].map(
-      (row) => String(row.created_at).slice(0, 10),
-    ),
-  )
   const streak = computeStreak(activityDays, new Date(), gelsSerie)
 
   // « Jour 1 » ne se déduit pas de la série (elle tombe à zéro après une pause)

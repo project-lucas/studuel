@@ -18,7 +18,7 @@
  * chaque fichier) : une lecture au lieu de N, et les recherches répétées d'un
  * même motif ne rebalayent pas le corpus.
  */
-import { readdirSync, readFileSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 
@@ -30,27 +30,67 @@ export const DOSSIER_MIGRATIONS = path.join(
   'supabase',
 )
 
+/**
+ * Les sous-dossiers qui portent des migrations (19/09/2026) : `schema/` (tables,
+ * fonctions, droits, correctifs) et `contenu/` (les seeds). `outils/` n'en est
+ * pas. La racine est lue aussi, pour une migration qu'on y déposerait encore.
+ * Le NOM d'un fichier reste sa clé partout : `migrationSql('368_…')` ne dépend
+ * pas du rangement.
+ */
+const SOUS_DOSSIERS = ['', 'schema', 'contenu'] as const
+
+type Entree = { readonly file: string; readonly chemin: string }
+
+let index: readonly Entree[] | null = null
+
+/** `schema.sql` est la base de tout : il passe EN PREMIER, pas après la 374. */
+function cleDeTri(file: string): string {
+  return file === 'schema.sql' ? '000' : file
+}
+
+function indexDesMigrations(): readonly Entree[] {
+  if (index === null) {
+    const entrees: Entree[] = []
+    for (const sous of SOUS_DOSSIERS) {
+      const dossier = path.join(DOSSIER_MIGRATIONS, sous)
+      if (!existsSync(dossier)) continue
+      for (const file of readdirSync(dossier)) {
+        if (file.endsWith('.sql') && !file.startsWith('_')) {
+          entrees.push({ file, chemin: path.join(dossier, file) })
+        }
+      }
+    }
+    entrees.sort((a, b) => cleDeTri(a.file).localeCompare(cleDeTri(b.file)))
+    index = entrees
+  }
+  return index
+}
+
 let toutes: readonly MigrationSql[] | null = null
 
-/** Toutes les migrations, triées par nom (donc par numéro), lues UNE fois. */
+/** Toutes les migrations, triées par numéro (`schema.sql` d'abord), lues UNE fois. */
 export function migrationsDansLOrdre(): readonly MigrationSql[] {
   if (toutes === null) {
-    toutes = readdirSync(DOSSIER_MIGRATIONS)
-      .filter((f) => f.endsWith('.sql'))
-      .sort()
-      .map((file) => ({
-        file,
-        sql: readFileSync(path.join(DOSSIER_MIGRATIONS, file), 'utf8'),
-      }))
+    toutes = indexDesMigrations().map(({ file, chemin }) => ({
+      file,
+      sql: readFileSync(chemin, 'utf8'),
+    }))
   }
   return toutes
 }
 
 /** Les seuls noms de fichiers, sans payer la lecture du contenu. */
 export function nomsDesMigrations(): readonly string[] {
-  return readdirSync(DOSSIER_MIGRATIONS)
-    .filter((f) => f.endsWith('.sql'))
-    .sort()
+  return indexDesMigrations().map((e) => e.file)
+}
+
+/** Le chemin d'une migration nommée, où qu'elle soit rangée. */
+export function cheminMigration(fichier: string): string {
+  const entree = indexDesMigrations().find((e) => e.file === fichier)
+  if (entree === undefined) {
+    throw new Error(`migration introuvable dans supabase/ : ${fichier}`)
+  }
+  return entree.chemin
 }
 
 /**
@@ -69,10 +109,7 @@ export function migrationSql(fichier: string): string {
     }
     return trouvee.sql
   }
-  if (!nomsDesMigrations().includes(fichier)) {
-    throw new Error(`migration introuvable dans supabase/ : ${fichier}`)
-  }
-  return readFileSync(path.join(DOSSIER_MIGRATIONS, fichier), 'utf8')
+  return readFileSync(cheminMigration(fichier), 'utf8')
 }
 
 /** Les migrations dont le NOM colle au motif (`/^3\d\d_contenu_/`…). */

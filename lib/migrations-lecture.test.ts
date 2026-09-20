@@ -15,13 +15,22 @@ import {
 // gardes déterministes : on lit une fois, on cherche une fois.
 
 describe('lecture des migrations', () => {
-  it('rend les migrations triées par numéro', () => {
+  it('rend les migrations triées par numéro, `schema.sql` en tête', () => {
     const noms = migrationsDansLOrdre().map((m) => m.file)
     expect(noms.length).toBeGreaterThan(300)
-    expect([...noms]).toEqual([...noms].sort())
-    // `schema.sql` n'a pas de numéro : il vient après, et c'est sans effet ici
-    // (personne ne l'écrase, il ne redéfinit aucune RPC de barème).
-    expect(noms).toContain('schema.sql')
+    // `schema.sql` est la BASE : il passe avant la 002. Il venait après la 374
+    // (tri alphabétique), si bien qu'une recherche de « dernière définition »
+    // (`handle_new_user`…) aurait rendu sa version, la plus ancienne.
+    expect(noms[0]).toBe('schema.sql')
+    const numerotees = noms.slice(1)
+    expect([...numerotees]).toEqual([...numerotees].sort())
+  })
+
+  it('lit les migrations où qu’elles soient rangées (schema/, contenu/)', () => {
+    const noms = migrationsDansLOrdre().map((m) => m.file)
+    expect(noms).toContain('008_reviser.sql')
+    expect(noms).toContain('216_contenu_emc_sport.sql')
+    expect(noms.some((n) => n.startsWith('_'))).toBe(false)
   })
 
   it('ne lit le dossier QU’UNE FOIS', () => {

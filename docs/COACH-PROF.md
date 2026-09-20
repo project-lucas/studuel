@@ -338,7 +338,7 @@ ne sait pas encore vaut mieux que de le laisser deviner.
 
 | Fichier | Rôle |
 |---|---|
-| `supabase/215_marcel_jetons.sql` | **À EXÉCUTER À LA MAIN.** Compteur quotidien, solde de jetons, `coach_ask_allowed`, `coach_buy_tokens` |
+| `supabase/schema/215_marcel_jetons.sql` | **À EXÉCUTER À LA MAIN.** Compteur quotidien, solde de jetons, `coach_ask_allowed`, `coach_buy_tokens` |
 | `lib/coach/jetons.ts` (+ test) | Miroir applicatif : quotas, plafond absolu, prix du pack, messages |
 | `app/marcel/actions.ts` | L'appel au modèle, derrière la porte SQL |
 | `components/marcel/DemanderMarcel.tsx` | Intentions, champ borné, réponse, mur à deux sorties |

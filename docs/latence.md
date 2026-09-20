@@ -130,6 +130,40 @@ tous les onglets : PostgREST plafonne chaque réponse à 1 000 lignes et le
 catalogue l'avait dépassé (2 323 chapitres). Voir la règle dans CLAUDE.md et
 `lib/postgrest-pages.ts`.
 
+### Quatrième lot (19/09) — une vague par onglet, et le PvP qui tient la charge
+
+Le constat, onglet par onglet : chaque aller-retour Supabase coûte ~60 ms depuis
+cdg1, et les pages les enchaînaient.
+
+| Écran | Avant | Après |
+|---|---|---|
+| Profil de jeu (`getProfileData`, arène ET Moi) | 3 vagues : attribution des badges → lectures → école | 1 vague : l'attribution tourne en parallèle, l'école est chaînée sur le seul profil, catalogue des badges et bannières en cache |
+| Moi | 1 vague + 4 tables d'activité lues sur **400 jours** + `my_grade_standings` lue deux fois + une écriture attendue | `jours_actifs()` (1 RPC) ; sessions du JOUR seulement si une habitude se coche seule ; place du niveau lue une fois ; écriture dans `after()` |
+| Arène | 2 vagues (la 2e attendait TOUT la 1re) ; maîtrise lue deux fois ; quiz de la classe relus sans cache | 1 vague : ce qui dépend de la classe part dès la lecture groupée ; maîtrise partagée ; quiz par matière en cache |
+| Amis | 3 vagues (grande lecture → école → demandes d'écoute) | 1 vague, l'école chaînée sur le profil |
+| Marcel | 2 vagues ; 3 tables d'activité sur 400 jours ; lisait `controle_sessions`, **table qui n'existe pas** | 1 vague ; `jours_actifs()` ; `sessions_preparation` (la mission voit enfin les contrôles planifiés) |
+| Réviser, Carnet, Revoir | `carnet_questions` lue SANS filtre : la RLS testait chaque question de TOUS les élèves | jointure `carnet_courses!inner(owner_id)` : l'index des cours de l'élève |
+| Boutique | objets de profil et capsules relus à chaque rendu | cache serveur (5 min) |
+| Carnet | aucun squelette : le tap restait muet | `app/carnet/loading.tsx` |
+
+Et autour de la navigation :
+
+- **Revalidations.** `markLessonActivity` (appelée à chaque leçon) revalidait
+  /reviser pour rien ; les réglages de Réviser appellent `refresh()` (ne relit
+  que l'écran courant) au lieu de `revalidatePath` (jette TOUS les onglets
+  préchargés). Après une invalidation, la ronde de préchargement repart à
+  **400 ms** au lieu de 3 s.
+- **La course classée** ne revalide plus rien (elle re-rendait la course
+  elle-même, ~14 requêtes, puis faisait recharger quatre onglets — à chaque
+  revanche) ; le préchargeur se tait pendant tout écran plein écran, et
+  rafraîchit UNE fois en sortant de la course. Par course : de ~70-100 requêtes
+  à une vingtaine. La fin de course passe par `/api/duel/fin` (interruptible,
+  relançable, idempotente) et, avec la migration 374, par UNE transaction au
+  lieu de huit appels.
+- **Base (migration 374)** : Realtime vérifié par clé primaire (plus de parcours
+  complet de `live_duels` à chaque connexion), six index en double retirés
+  (chaque écriture les payait), `friendships(addressee_id)` ajouté.
+
 ## Comment vérifier sur le téléphone (après déploiement)
 
 1. Ouvrir l'app, attendre le hub (rideau levé), **ne rien toucher 3 s**.
@@ -158,7 +192,7 @@ pas réglé par ce chantier (voir ci-dessous).
   (`float-y`, `motion-safe:`). La librairie ne reste que là où elle sert au
   premier rendu (arène : HUD, bandeau de saison) et dans les sessions de quiz.
 - **/moi** pointe à 1,5 s par moments : à profiler sur `pg_stat_statements`
-  (voir `supabase/_mesurer-perf.sql`) avant d'y toucher.
+  (voir `supabase/outils/_mesurer-perf.sql`) avant d'y toucher.
 - **Niveau 3** (jamais fait) : `cacheComponents` + `<Suspense>` sur les données
   personnelles + `unstable_instant` par route — la coquille statique de chaque
   onglet servie depuis le CDN, les données en flux. C'est le vrai modèle

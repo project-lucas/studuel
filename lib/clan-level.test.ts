@@ -1,11 +1,8 @@
 import { readFileSync } from 'node:fs'
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
 import { describe, expect, it } from 'vitest'
 import { GRADE_CYCLES, cycleOf } from './grades'
 import { schoolLevelForGrade } from './clan'
-
-const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..')
+import { cheminMigration } from '@/lib/migrations-lecture'
 
 // -----------------------------------------------------------------------------
 // LE MIROIR SQL DU CYCLE SCOLAIRE.
@@ -26,7 +23,7 @@ const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..')
 // -----------------------------------------------------------------------------
 
 const SQL = readFileSync(
-  path.join(ROOT, 'supabase', '322_arene_accueil.sql'),
+  cheminMigration('322_arene_accueil.sql'),
   'utf8',
 )
 

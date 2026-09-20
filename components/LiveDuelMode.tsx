@@ -142,9 +142,9 @@ export default function LiveDuelMode({
   const recordedRef = useRef(false)
   useEffect(() => {
     if (!state.winner || !state.duelId) return
-    if (!state.bot) persist(state.duelId, state.myRounds)
     if (recordedRef.current) return
     recordedRef.current = true
+    if (!state.bot) persist(state.duelId, state.myRounds)
     const answered = state.myRounds.length * ROUND_SIZE
     const correct = state.myRounds.reduce((s, r) => s + r.correct, 0)
     recordChallenge(correct, answered, 'duel').catch(() => {})

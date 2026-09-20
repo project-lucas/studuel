@@ -35,11 +35,28 @@ import {
 } from '@/lib/duel/commentaire'
 import { stepsFromEvents } from '@/lib/duel/replay'
 import { opponentTemperament, opponentTimeline, type Opponent } from '@/lib/duel/opponent'
-import {
-  recordDuelCourse,
-  type DuelCourseOutcome,
-  type OpponentClaim,
-} from '@/app/defi/duel-course-actions'
+import type {
+  DuelCourseInput,
+  DuelCourseOutcome,
+  OpponentClaim,
+} from '@/lib/duel/fin-course'
+import { envoyerAvecRelances, posterJson } from '@/lib/duel/envoi'
+import { marquerCoursePassee } from '@/lib/apres-course'
+
+/** La route qui enregistre la fin d'une course (cf. app/api/duel/fin). */
+const ROUTE_FIN = '/api/duel/fin'
+
+/** Un identifiant de course, tiré au départ (navigateurs anciens compris). */
+function nouvelIdCourse(): string {
+  if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
+    return crypto.randomUUID()
+  }
+  const hex = Array.from({ length: 32 }, () => Math.floor(Math.random() * 16).toString(16))
+  hex[12] = '4'
+  hex[16] = ((parseInt(hex[16], 16) & 0x3) | 0x8).toString(16)
+  const s = hex.join('')
+  return `${s.slice(0, 8)}-${s.slice(8, 12)}-${s.slice(12, 16)}-${s.slice(16, 20)}-${s.slice(20)}`
+}
 
 // -----------------------------------------------------------------------------
 // LE MOTEUR REACT DE LA COURSE — l'horloge, le rival rejoué, les événements.
@@ -104,6 +121,10 @@ export type CourseView = {
   outcome: CourseOutcome | null
   server: DuelCourseOutcome | null
   recorded: boolean
+  /** L'envoi a échoué après ses relances : rien n'est écrit, l'élève peut réessayer. */
+  envoiEchoue: boolean
+  /** Renvoie la même course (même identifiant : jamais payée deux fois). */
+  reessayer: () => void
   answer: (index: number) => void
 }
 
@@ -151,6 +172,11 @@ export function useCourse(input: {
   const [outcome, setOutcome] = useState<CourseOutcome | null>(null)
   const [server, setServer] = useState<DuelCourseOutcome | null>(null)
   const [recorded, setRecorded] = useState(false)
+  const [envoiEchoue, setEnvoiEchoue] = useState(false)
+  // L'identifiant de CETTE course : il suit l'envoi et ses relances.
+  const [courseId] = useState(nouvelIdCourse)
+  // Le dernier envoi préparé, gardé pour « Réessayer ».
+  const envoiRef = useRef<DuelCourseInput | null>(null)
 
   // Miroirs synchrones : les callbacks d'horloge ne voient pas les states frais.
   const meRef = useRef<MeState>(me)
@@ -232,6 +258,26 @@ export function useCourse(input: {
 
   const rivalName = opponent.identity.name
 
+  // L'envoi de la fin, patient (délai maximal, deux relances) et rejouable.
+  const envoyer = useCallback(() => {
+    const corps = envoiRef.current
+    if (!corps) return
+    setEnvoiEchoue(false)
+    setRecorded(false)
+    envoyerAvecRelances((signal) => posterJson<DuelCourseOutcome>(ROUTE_FIN, corps, signal))
+      .then((o) => {
+        setServer(o)
+        setRecorded(true)
+        // L'arène et les onglets se relisent en sortant de la course.
+        marquerCoursePassee()
+      })
+      .catch(() => {
+        setServer(null)
+        setRecorded(true)
+        setEnvoiEchoue(true)
+      })
+  }, [])
+
   // ------------------------------------------------------------------ l'arrivée
   const finish = useCallback(
     (meGoalAtMs: number | null) => {
@@ -260,25 +306,19 @@ export function useCourse(input: {
       const claim: OpponentClaim =
         opponent.kind === 'bot'
           ? { kind: 'bot', botId: opponent.botId, trophiesRef: opponent.trophiesRef }
-          : { kind: 'replay', replayId: opponent.replayId }
-      recordDuelCourse({
+          : { kind: 'replay', replayId: opponent.replayId, version: opponent.version ?? null }
+      envoiRef.current = {
+        courseId,
         subjectSlug,
         seed,
         opponent: claim,
         stats,
         steps: stepsFromEvents(eventsRef.current),
         answers: answersRef.current,
-      })
-        .then((o) => {
-          setServer(o)
-          setRecorded(true)
-        })
-        .catch(() => {
-          setServer(null)
-          setRecorded(true)
-        })
+      }
+      envoyer()
     },
-    [audio, duel, later, opponent, seed, subjectSlug, timeline],
+    [audio, duel, later, opponent, seed, subjectSlug, timeline, courseId, envoyer],
   )
 
   // ------------------------------------------------------------- l'écran VS
@@ -538,6 +578,8 @@ export function useCourse(input: {
     outcome,
     server,
     recorded,
+    envoiEchoue,
+    reessayer: envoyer,
     answer,
   }
 }

@@ -1,5 +1,4 @@
 import { readFileSync } from 'node:fs'
-import path from 'node:path'
 import { describe, expect, it } from 'vitest'
 
 import {
@@ -12,6 +11,7 @@ import {
   progression,
   type Compteurs,
 } from './hauts-faits'
+import { cheminMigration } from '@/lib/migrations-lecture'
 
 const vide: Compteurs = { lecons: 0, serie: 0, cartes: 0, chapitres: 0 }
 const de = (p: Partial<Compteurs>): Compteurs => ({ ...vide, ...p })
@@ -89,7 +89,7 @@ describe('le miroir SQL', () => {
     // qui promet 100 gemmes et une base qui en verse 40 — sans erreur nulle
     // part. D'où ce test, qui lit la migration.
     const sql = readFileSync(
-      path.resolve(process.cwd(), 'supabase/348_economie_apprendre_et_jouer.sql'),
+      cheminMigration('348_economie_apprendre_et_jouer.sql'),
       'utf8',
     )
     // L'INSERT du catalogue est aligné à la main pour se lire en colonnes :

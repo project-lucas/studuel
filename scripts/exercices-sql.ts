@@ -2,8 +2,8 @@
 // LE CONTENU DU CAHIER D'EXERCICES → une migration SQL.
 //
 //   node node_modules/jiti/lib/jiti-cli.mjs scripts/exercices-sql.ts \
-//     --num 374 --niveau 6e [--matieres maths,svt] [--suffixe 1] \
-//     > supabase/374_exercices_6e.sql
+//     --num 375 --niveau 6e [--matieres maths,svt] [--suffixe 1] \
+//     > supabase/contenu/375_exercices_6e.sql
 //
 // Lit contenu/exercices/<niveau>/<matière>.json, RELIT tout (lib/exercices/
 // valider.ts — une seule faute et rien n'est écrit), compile chaque exercice
@@ -87,7 +87,7 @@ const sql = `-- ================================================================
 --
 -- FICHIER GÉNÉRÉ par scripts/exercices-sql.ts depuis contenu/exercices/${niveau}/ :
 -- ne pas l'éditer à la main, corriger le JSON et régénérer :
---   node node_modules/jiti/lib/jiti-cli.mjs scripts/exercices-sql.ts --num ${num} --niveau ${niveau}${matieres ? ` --matieres ${matieres.join(',')}` : ''}${suffixe ? ` --suffixe ${suffixe}` : ''} > supabase/${nomFichier}
+--   node node_modules/jiti/lib/jiti-cli.mjs scripts/exercices-sql.ts --num ${num} --niveau ${niveau}${matieres ? ` --matieres ${matieres.join(',')}` : ''}${suffixe ? ` --suffixe ${suffixe}` : ''} > supabase/contenu/${nomFichier}
 --
 -- ${lignes.length} exercices écrits et relus : pour chaque chapitre, trois exercices faits
 -- comme une page de manuel (★ facile, ★★ moyen, ★★★ plus corsé), avec leurs

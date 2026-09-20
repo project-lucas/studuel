@@ -5,85 +5,85 @@ Ce dossier contient le **contenu pédagogique écrit à la main**, en JavaScript
 
 ```powershell
 # Regénérer les migrations de contenu (216 → 220, puis 225 → 233)
-node scripts/seed-contenu.mjs --num 216 --modules emc,sport                        > supabase/216_contenu_emc_sport.sql
-node scripts/seed-contenu.mjs --num 217 --slugs musique,arts-plastiques            > supabase/217_contenu_musique_arts.sql
-node scripts/seed-contenu.mjs --num 218 --slugs allemand,grec                      > supabase/218_contenu_allemand_grec.sql
-node scripts/seed-contenu.mjs --num 219 --modules snt,hlp,llcer-anglais,si,maths-complementaires > supabase/219_contenu_lycee.sql
-node scripts/seed-contenu.mjs --num 220 --modules espagnol-lycee,latin-lycee       > supabase/220_contenu_espagnol_latin_lycee.sql
-node scripts/seed-contenu.mjs --num 225 --slugs philosophie                        > supabase/225_contenu_philosophie_tle.sql
-node scripts/seed-contenu.mjs --num 226 --modules anglais-tle                      > supabase/226_contenu_anglais_grammaire_tle.sql
-node scripts/seed-contenu.mjs --num 227 --modules histoire-geo-tle                 > supabase/227_contenu_histoire_tle.sql
-node scripts/seed-contenu.mjs --num 228 --slugs enseignement-scientifique          > supabase/228_contenu_enseignement_scientifique_tle.sql
-node scripts/seed-contenu.mjs --num 229 --modules geographie-tle                   > supabase/229_contenu_geographie_tle.sql
-node scripts/seed-contenu.mjs --num 230 --modules emc-tle                          > supabase/230_contenu_emc_tle.sql
-node scripts/seed-contenu.mjs --num 231 --modules espagnol-tle                     > supabase/231_contenu_espagnol_tle.sql
-node scripts/seed-contenu.mjs --num 232 --modules hlp-tle                          > supabase/232_contenu_hlp_tle.sql
-node scripts/seed-contenu.mjs --num 233 --modules svt-tle                          > supabase/233_contenu_svt_tle.sql
-node scripts/seed-contenu.mjs --num 245 --modules histoire-geo-1re                 > supabase/245_contenu_histoire_geo_1re.sql
-node scripts/seed-contenu.mjs --num 246 --modules histoire-tle-1-6                 > supabase/246_contenu_histoire_tle_1_6.sql
-node scripts/seed-contenu.mjs --num 249 --modules allemand-tle                     > supabase/249_contenu_allemand_tle.sql
-node scripts/seed-contenu.mjs --num 252 --modules physique-chimie-tle             > supabase/252_contenu_physique_chimie_tle.sql
-node scripts/seed-contenu.mjs --num 253 --modules ses-tle                          > supabase/253_contenu_ses_tle.sql
-node scripts/seed-contenu.mjs --num 254 --modules nsi-tle                          > supabase/254_contenu_nsi_tle.sql
-node scripts/seed-contenu.mjs --num 255 --modules maths-tle,maths-expertes-tle,maths-complementaires-tle > supabase/255_contenu_maths_tle.sql
-node scripts/seed-contenu.mjs --num 267 --modules espagnol-1re                     > supabase/267_contenu_espagnol_1re_programme.sql
-node scripts/seed-contenu.mjs --num 268 --modules ses-1re                          > supabase/268_contenu_ses_1re_programme.sql
-node scripts/seed-contenu.mjs --num 269 --modules svt-1re                          > supabase/269_contenu_svt_1re_programme.sql
-node scripts/seed-contenu.mjs --num 270 --modules physique-chimie-1re              > supabase/270_contenu_physique_chimie_1re.sql
-node scripts/seed-contenu.mjs --num 271 --modules maths-1re                        > supabase/271_contenu_maths_1re.sql
-node scripts/seed-contenu.mjs --num 272 --modules si-1re                           > supabase/272_contenu_si_1re.sql
-node scripts/seed-contenu.mjs --num 273 --modules nsi-1re                          > supabase/273_contenu_nsi_1re.sql
-node scripts/seed-contenu.mjs --num 274 --modules hlp-1re                          > supabase/274_contenu_hlp_1re.sql
-node scripts/seed-contenu.mjs --num 275 --modules hggsp-1re                        > supabase/275_contenu_hggsp_1re.sql
-node scripts/seed-contenu.mjs --num 276 --modules allemand-1re                     > supabase/276_contenu_allemand_1re.sql
-node scripts/seed-contenu.mjs --num 277 --modules emc-1re                          > supabase/277_contenu_emc_1re.sql
-node scripts/seed-contenu.mjs --num 279 --modules histoire-geo-2de                 > supabase/279_contenu_histoire_geo_2de.sql
-node scripts/seed-contenu.mjs --num 280 --modules ses-2de                          > supabase/280_contenu_ses_2de.sql
-node scripts/seed-contenu.mjs --num 281 --modules snt-2de                          > supabase/281_contenu_snt_2de.sql
-node scripts/seed-contenu.mjs --num 282 --modules maths-2de                        > supabase/282_contenu_maths_2de.sql
-node scripts/seed-contenu.mjs --num 283 --modules francais-2de                     > supabase/283_contenu_francais_2de.sql
-node scripts/seed-contenu.mjs --num 284 --modules emc-2de                          > supabase/284_contenu_emc_2de.sql
-node scripts/seed-contenu.mjs --num 285 --modules svt-2de                          > supabase/285_contenu_svt_2de.sql
-node scripts/seed-contenu.mjs --num 286 --modules anglais-2de                      > supabase/286_contenu_anglais_2de.sql
-node scripts/seed-contenu.mjs --num 287 --modules espagnol-2de                     > supabase/287_contenu_espagnol_2de.sql
-node scripts/seed-contenu.mjs --num 288 --modules allemand-2de                     > supabase/288_contenu_allemand_2de.sql
-node scripts/seed-contenu.mjs --num 289 --modules physique-chimie-2de              > supabase/289_contenu_physique_chimie_2de.sql
-node scripts/seed-contenu.mjs --num 290 --modules francais-3e                      > supabase/290_contenu_francais_3e.sql
-node scripts/seed-contenu.mjs --num 291 --modules histoire-3e                      > supabase/291_contenu_histoire_3e.sql
-node scripts/seed-contenu.mjs --num 292 --modules svt-3e                           > supabase/292_contenu_svt_3e.sql
-node scripts/seed-contenu.mjs --num 293 --modules geographie-3e                    > supabase/293_contenu_geographie_3e.sql
-node scripts/seed-contenu.mjs --num 294 --modules maths-3e                         > supabase/294_contenu_maths_3e.sql
-node scripts/seed-contenu.mjs --num 295 --modules physique-chimie-3e               > supabase/295_contenu_physique_chimie_3e.sql
-node scripts/seed-contenu.mjs --num 296 --modules technologie-3e                   > supabase/296_contenu_technologie_3e.sql
-node scripts/seed-contenu.mjs --num 297 --modules espagnol-3e                      > supabase/297_contenu_espagnol_3e.sql
-node scripts/seed-contenu.mjs --num 298 --modules anglais-3e                       > supabase/298_contenu_anglais_3e.sql
-node scripts/seed-contenu.mjs --num 299 --modules allemand-3e                      > supabase/299_contenu_allemand_3e.sql
-node scripts/seed-contenu.mjs --num 300 --modules francais-4e                      > supabase/300_contenu_francais_4e.sql
-node scripts/seed-contenu.mjs --num 301 --modules maths-4e                         > supabase/301_contenu_maths_4e.sql
-node scripts/seed-contenu.mjs --num 302 --modules physique-chimie-4e               > supabase/302_contenu_physique_chimie_4e.sql
-node scripts/seed-contenu.mjs --num 303 --modules svt-4e                           > supabase/303_contenu_svt_4e.sql
-node scripts/seed-contenu.mjs --num 304 --modules anglais-4e                       > supabase/304_contenu_anglais_4e.sql
-node scripts/seed-contenu.mjs --num 305 --modules espagnol-4e                      > supabase/305_contenu_espagnol_4e.sql
-node scripts/seed-contenu.mjs --num 306 --modules histoire-geo-5e                  > supabase/306_contenu_histoire_geo_5e.sql
-node scripts/seed-contenu.mjs --num 307 --modules francais-5e                      > supabase/307_contenu_francais_5e.sql
-node scripts/seed-contenu.mjs --num 308 --modules maths-5e                         > supabase/308_contenu_maths_5e.sql
-node scripts/seed-contenu.mjs --num 309 --modules physique-chimie-5e               > supabase/309_contenu_physique_chimie_5e.sql
-node scripts/seed-contenu.mjs --num 310 --modules svt-5e                           > supabase/310_contenu_svt_5e.sql
-node scripts/seed-contenu.mjs --num 311 --modules anglais-5e                       > supabase/311_contenu_anglais_5e.sql
-node scripts/seed-contenu.mjs --num 312 --modules espagnol-5e                      > supabase/312_contenu_espagnol_5e.sql
-node scripts/seed-contenu.mjs --num 326 --modules physique-chimie-6e               > supabase/326_contenu_physique_chimie_6e.sql
-node scripts/seed-contenu.mjs --num 327 --modules svt-6e                           > supabase/327_contenu_svt_6e.sql
-node scripts/seed-contenu.mjs --num 328 --modules francais-6e                      > supabase/328_contenu_francais_6e.sql
-node scripts/seed-contenu.mjs --num 329 --modules maths-6e                         > supabase/329_contenu_maths_6e.sql
-node scripts/seed-contenu.mjs --num 330 --modules histoire-geo-6e                  > supabase/330_contenu_histoire_geo_6e.sql
-node scripts/seed-contenu.mjs --num 332 --modules histoire-geo-4e                  > supabase/332_contenu_histoire_geo_4e.sql
-node scripts/seed-contenu.mjs --num 333 --modules anglais-6e                       > supabase/333_contenu_anglais_6e.sql
-node scripts/seed-contenu.mjs --num 334 --modules technologie-5e                   > supabase/334_contenu_technologie_5e.sql
-node scripts/seed-contenu.mjs --num 335 --modules technologie-4e                   > supabase/335_contenu_technologie_4e.sql
-node scripts/seed-contenu.mjs --num 336 --modules technologie-6e                   > supabase/336_contenu_technologie_6e.sql
-node scripts/seed-contenu.mjs --num 337 --modules emc-6e                           > supabase/337_contenu_emc_6e.sql
-node scripts/seed-contenu.mjs --num 338 --modules emc-cycle4                       > supabase/338_contenu_emc_cycle4.sql
-node scripts/seed-contenu.mjs --num 339 --modules sport-college                    > supabase/339_contenu_sport_college.sql
+node scripts/seed-contenu.mjs --num 216 --modules emc,sport                        > supabase/contenu/216_contenu_emc_sport.sql
+node scripts/seed-contenu.mjs --num 217 --slugs musique,arts-plastiques            > supabase/contenu/217_contenu_musique_arts.sql
+node scripts/seed-contenu.mjs --num 218 --slugs allemand,grec                      > supabase/contenu/218_contenu_allemand_grec.sql
+node scripts/seed-contenu.mjs --num 219 --modules snt,hlp,llcer-anglais,si,maths-complementaires > supabase/contenu/219_contenu_lycee.sql
+node scripts/seed-contenu.mjs --num 220 --modules espagnol-lycee,latin-lycee       > supabase/contenu/220_contenu_espagnol_latin_lycee.sql
+node scripts/seed-contenu.mjs --num 225 --slugs philosophie                        > supabase/contenu/225_contenu_philosophie_tle.sql
+node scripts/seed-contenu.mjs --num 226 --modules anglais-tle                      > supabase/contenu/226_contenu_anglais_grammaire_tle.sql
+node scripts/seed-contenu.mjs --num 227 --modules histoire-geo-tle                 > supabase/contenu/227_contenu_histoire_tle.sql
+node scripts/seed-contenu.mjs --num 228 --slugs enseignement-scientifique          > supabase/contenu/228_contenu_enseignement_scientifique_tle.sql
+node scripts/seed-contenu.mjs --num 229 --modules geographie-tle                   > supabase/contenu/229_contenu_geographie_tle.sql
+node scripts/seed-contenu.mjs --num 230 --modules emc-tle                          > supabase/contenu/230_contenu_emc_tle.sql
+node scripts/seed-contenu.mjs --num 231 --modules espagnol-tle                     > supabase/contenu/231_contenu_espagnol_tle.sql
+node scripts/seed-contenu.mjs --num 232 --modules hlp-tle                          > supabase/contenu/232_contenu_hlp_tle.sql
+node scripts/seed-contenu.mjs --num 233 --modules svt-tle                          > supabase/contenu/233_contenu_svt_tle.sql
+node scripts/seed-contenu.mjs --num 245 --modules histoire-geo-1re                 > supabase/contenu/245_contenu_histoire_geo_1re.sql
+node scripts/seed-contenu.mjs --num 246 --modules histoire-tle-1-6                 > supabase/contenu/246_contenu_histoire_tle_1_6.sql
+node scripts/seed-contenu.mjs --num 249 --modules allemand-tle                     > supabase/contenu/249_contenu_allemand_tle.sql
+node scripts/seed-contenu.mjs --num 252 --modules physique-chimie-tle             > supabase/contenu/252_contenu_physique_chimie_tle.sql
+node scripts/seed-contenu.mjs --num 253 --modules ses-tle                          > supabase/contenu/253_contenu_ses_tle.sql
+node scripts/seed-contenu.mjs --num 254 --modules nsi-tle                          > supabase/contenu/254_contenu_nsi_tle.sql
+node scripts/seed-contenu.mjs --num 255 --modules maths-tle,maths-expertes-tle,maths-complementaires-tle > supabase/contenu/255_contenu_maths_tle.sql
+node scripts/seed-contenu.mjs --num 267 --modules espagnol-1re                     > supabase/contenu/267_contenu_espagnol_1re_programme.sql
+node scripts/seed-contenu.mjs --num 268 --modules ses-1re                          > supabase/contenu/268_contenu_ses_1re_programme.sql
+node scripts/seed-contenu.mjs --num 269 --modules svt-1re                          > supabase/contenu/269_contenu_svt_1re_programme.sql
+node scripts/seed-contenu.mjs --num 270 --modules physique-chimie-1re              > supabase/contenu/270_contenu_physique_chimie_1re.sql
+node scripts/seed-contenu.mjs --num 271 --modules maths-1re                        > supabase/contenu/271_contenu_maths_1re.sql
+node scripts/seed-contenu.mjs --num 272 --modules si-1re                           > supabase/contenu/272_contenu_si_1re.sql
+node scripts/seed-contenu.mjs --num 273 --modules nsi-1re                          > supabase/contenu/273_contenu_nsi_1re.sql
+node scripts/seed-contenu.mjs --num 274 --modules hlp-1re                          > supabase/contenu/274_contenu_hlp_1re.sql
+node scripts/seed-contenu.mjs --num 275 --modules hggsp-1re                        > supabase/contenu/275_contenu_hggsp_1re.sql
+node scripts/seed-contenu.mjs --num 276 --modules allemand-1re                     > supabase/contenu/276_contenu_allemand_1re.sql
+node scripts/seed-contenu.mjs --num 277 --modules emc-1re                          > supabase/contenu/277_contenu_emc_1re.sql
+node scripts/seed-contenu.mjs --num 279 --modules histoire-geo-2de                 > supabase/contenu/279_contenu_histoire_geo_2de.sql
+node scripts/seed-contenu.mjs --num 280 --modules ses-2de                          > supabase/contenu/280_contenu_ses_2de.sql
+node scripts/seed-contenu.mjs --num 281 --modules snt-2de                          > supabase/contenu/281_contenu_snt_2de.sql
+node scripts/seed-contenu.mjs --num 282 --modules maths-2de                        > supabase/contenu/282_contenu_maths_2de.sql
+node scripts/seed-contenu.mjs --num 283 --modules francais-2de                     > supabase/contenu/283_contenu_francais_2de.sql
+node scripts/seed-contenu.mjs --num 284 --modules emc-2de                          > supabase/contenu/284_contenu_emc_2de.sql
+node scripts/seed-contenu.mjs --num 285 --modules svt-2de                          > supabase/contenu/285_contenu_svt_2de.sql
+node scripts/seed-contenu.mjs --num 286 --modules anglais-2de                      > supabase/contenu/286_contenu_anglais_2de.sql
+node scripts/seed-contenu.mjs --num 287 --modules espagnol-2de                     > supabase/contenu/287_contenu_espagnol_2de.sql
+node scripts/seed-contenu.mjs --num 288 --modules allemand-2de                     > supabase/contenu/288_contenu_allemand_2de.sql
+node scripts/seed-contenu.mjs --num 289 --modules physique-chimie-2de              > supabase/contenu/289_contenu_physique_chimie_2de.sql
+node scripts/seed-contenu.mjs --num 290 --modules francais-3e                      > supabase/contenu/290_contenu_francais_3e.sql
+node scripts/seed-contenu.mjs --num 291 --modules histoire-3e                      > supabase/contenu/291_contenu_histoire_3e.sql
+node scripts/seed-contenu.mjs --num 292 --modules svt-3e                           > supabase/contenu/292_contenu_svt_3e.sql
+node scripts/seed-contenu.mjs --num 293 --modules geographie-3e                    > supabase/contenu/293_contenu_geographie_3e.sql
+node scripts/seed-contenu.mjs --num 294 --modules maths-3e                         > supabase/contenu/294_contenu_maths_3e.sql
+node scripts/seed-contenu.mjs --num 295 --modules physique-chimie-3e               > supabase/contenu/295_contenu_physique_chimie_3e.sql
+node scripts/seed-contenu.mjs --num 296 --modules technologie-3e                   > supabase/contenu/296_contenu_technologie_3e.sql
+node scripts/seed-contenu.mjs --num 297 --modules espagnol-3e                      > supabase/contenu/297_contenu_espagnol_3e.sql
+node scripts/seed-contenu.mjs --num 298 --modules anglais-3e                       > supabase/contenu/298_contenu_anglais_3e.sql
+node scripts/seed-contenu.mjs --num 299 --modules allemand-3e                      > supabase/contenu/299_contenu_allemand_3e.sql
+node scripts/seed-contenu.mjs --num 300 --modules francais-4e                      > supabase/contenu/300_contenu_francais_4e.sql
+node scripts/seed-contenu.mjs --num 301 --modules maths-4e                         > supabase/contenu/301_contenu_maths_4e.sql
+node scripts/seed-contenu.mjs --num 302 --modules physique-chimie-4e               > supabase/contenu/302_contenu_physique_chimie_4e.sql
+node scripts/seed-contenu.mjs --num 303 --modules svt-4e                           > supabase/contenu/303_contenu_svt_4e.sql
+node scripts/seed-contenu.mjs --num 304 --modules anglais-4e                       > supabase/contenu/304_contenu_anglais_4e.sql
+node scripts/seed-contenu.mjs --num 305 --modules espagnol-4e                      > supabase/contenu/305_contenu_espagnol_4e.sql
+node scripts/seed-contenu.mjs --num 306 --modules histoire-geo-5e                  > supabase/contenu/306_contenu_histoire_geo_5e.sql
+node scripts/seed-contenu.mjs --num 307 --modules francais-5e                      > supabase/contenu/307_contenu_francais_5e.sql
+node scripts/seed-contenu.mjs --num 308 --modules maths-5e                         > supabase/contenu/308_contenu_maths_5e.sql
+node scripts/seed-contenu.mjs --num 309 --modules physique-chimie-5e               > supabase/contenu/309_contenu_physique_chimie_5e.sql
+node scripts/seed-contenu.mjs --num 310 --modules svt-5e                           > supabase/contenu/310_contenu_svt_5e.sql
+node scripts/seed-contenu.mjs --num 311 --modules anglais-5e                       > supabase/contenu/311_contenu_anglais_5e.sql
+node scripts/seed-contenu.mjs --num 312 --modules espagnol-5e                      > supabase/contenu/312_contenu_espagnol_5e.sql
+node scripts/seed-contenu.mjs --num 326 --modules physique-chimie-6e               > supabase/contenu/326_contenu_physique_chimie_6e.sql
+node scripts/seed-contenu.mjs --num 327 --modules svt-6e                           > supabase/contenu/327_contenu_svt_6e.sql
+node scripts/seed-contenu.mjs --num 328 --modules francais-6e                      > supabase/contenu/328_contenu_francais_6e.sql
+node scripts/seed-contenu.mjs --num 329 --modules maths-6e                         > supabase/contenu/329_contenu_maths_6e.sql
+node scripts/seed-contenu.mjs --num 330 --modules histoire-geo-6e                  > supabase/contenu/330_contenu_histoire_geo_6e.sql
+node scripts/seed-contenu.mjs --num 332 --modules histoire-geo-4e                  > supabase/contenu/332_contenu_histoire_geo_4e.sql
+node scripts/seed-contenu.mjs --num 333 --modules anglais-6e                       > supabase/contenu/333_contenu_anglais_6e.sql
+node scripts/seed-contenu.mjs --num 334 --modules technologie-5e                   > supabase/contenu/334_contenu_technologie_5e.sql
+node scripts/seed-contenu.mjs --num 335 --modules technologie-4e                   > supabase/contenu/335_contenu_technologie_4e.sql
+node scripts/seed-contenu.mjs --num 336 --modules technologie-6e                   > supabase/contenu/336_contenu_technologie_6e.sql
+node scripts/seed-contenu.mjs --num 337 --modules emc-6e                           > supabase/contenu/337_contenu_emc_6e.sql
+node scripts/seed-contenu.mjs --num 338 --modules emc-cycle4                       > supabase/contenu/338_contenu_emc_cycle4.sql
+node scripts/seed-contenu.mjs --num 339 --modules sport-college                    > supabase/contenu/339_contenu_sport_college.sql
 ```
 
 ## Le markdown d'un cours — le sous-ensemble, et rien d'autre
@@ -460,7 +460,7 @@ Avant de douter d'un fichier, le passer au lexeur, qui applique les règles de
 Postgres (`E'…'`, `''`, dollar-quoting, commentaires) :
 
 ```powershell
-node _ASSOCIE/verifie-chaines.mjs supabase/254_contenu_nsi_tle.sql eleve
+node _ASSOCIE/verifie-chaines.mjs supabase/contenu/254_contenu_nsi_tle.sql eleve
 ```
 
 Bonne nouvelle au passage : l'éditeur Supabase joue le script dans une
@@ -533,8 +533,8 @@ surtout **un trou sans clé d'origine**.
 **Deux fichiers à régénérer, toujours ensemble** — ils lisent le même module :
 
 ```bash
-node scripts/seed-contenu.mjs --num 231 --modules espagnol-tle > supabase/231_contenu_espagnol_tle.sql
-node scripts/seed-trous.mjs   --num 350 --modules espagnol-tle,anglais-tle,anglais-1re,anglais-2de > supabase/350_questions_a_trous.sql
+node scripts/seed-contenu.mjs --num 231 --modules espagnol-tle > supabase/contenu/231_contenu_espagnol_tle.sql
+node scripts/seed-trous.mjs   --num 350 --modules espagnol-tle,anglais-tle,anglais-1re,anglais-2de > supabase/contenu/350_questions_a_trous.sql
 ```
 
 Le premier tient la source de vérité (un clone neuf sort juste) ; le second est

@@ -1,8 +1,8 @@
 import { readFileSync } from 'node:fs'
-import path from 'node:path'
 import { describe, expect, it } from 'vitest'
 
 import { categorieObjet, normaliserObjetsProfil } from './objets-profil'
+import { cheminMigration } from '@/lib/migrations-lecture'
 
 const ligne = (patch: Record<string, unknown>) => ({
   id: 'banner-cosmos',
@@ -78,7 +78,7 @@ describe('normaliserObjetsProfil', () => {
 
 describe('les six objets en gemmes de la migration 368', () => {
   it('sont des bannières, tenues et accessoires qui existent au vestiaire', () => {
-    const sql = readFileSync(path.resolve(process.cwd(), 'supabase/368_boutique_gemmes.sql'), 'utf8')
+    const sql = readFileSync(cheminMigration('368_boutique_gemmes.sql'), 'utf8')
     const bloc = sql.slice(sql.indexOf('-- LES SIX OBJETS'), sql.indexOf('-- FIN DES SIX OBJETS'))
     const ids = [...bloc.matchAll(/\('([a-z0-9-]+)',\s*(\d+)\)/g)].map((m) => [m[1], Number(m[2])] as const)
     expect(ids).toHaveLength(6)
@@ -88,7 +88,7 @@ describe('les six objets en gemmes de la migration 368', () => {
     }
     // Chaque id est seedé par une migration du vestiaire (189, 200, 240).
     const vestiaire = ['189_avatar_vestiaire.sql', '200_profil_defi.sql', '240_vestiaire_open_peeps.sql']
-      .map((f) => readFileSync(path.resolve(process.cwd(), 'supabase', f), 'utf8'))
+      .map((f) => readFileSync(cheminMigration(f), 'utf8'))
       .join('\n')
     for (const [id] of ids) {
       expect(vestiaire, `${id} n'est seedé par aucune migration du vestiaire`).toContain(`('${id}',`)

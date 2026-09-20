@@ -1,5 +1,4 @@
 import { readFileSync } from 'node:fs'
-import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import {
   ALERT_DAYS_BOUNDS,
@@ -20,6 +19,7 @@ import {
   weekTrend,
   type WeekPoint,
 } from './parents-suivi'
+import { cheminMigration } from '@/lib/migrations-lecture'
 
 // Un lundi, pour que les libellés de semaine soient lisibles dans les tests.
 const LUNDI = '2026-08-24'
@@ -78,7 +78,7 @@ describe('DEFAULT_PARENT_PREFS — miroir de la migration 319', () => {
   // continue d'annoncer l'ancien au parent qui n'a rien réglé, et les deux
   // divergent sans qu'aucune erreur ne soit levée.
   const sql = readFileSync(
-    join(process.cwd(), 'supabase', '319_espace_parents_v2.sql'),
+    cheminMigration('319_espace_parents_v2.sql'),
     'utf8',
   )
 

@@ -21,7 +21,7 @@ OPENAI_API_KEY=…   # optionnel — génération de planning (app/planning)
 
 ## Base de données (Supabase)
 
-Les migrations vivent dans `supabase/` et s'exécutent **à la main** dans le SQL Editor du dashboard Supabase, dans l'ordre (`schema.sql`, puis `002_…` → `024_…`). Elles sont toutes idempotentes : réexécutables sans erreur.
+Les migrations vivent dans `supabase/schema/` (structure) et `supabase/contenu/` (seeds) et s'exécutent **à la main** dans le SQL Editor du dashboard Supabase, dans l'ordre des numéros (`schema.sql` d'abord). Elles sont toutes idempotentes : réexécutables sans erreur. Ce qui reste à exécuter en production : `supabase/README.md`.
 
 La sécurité repose sur les policies RLS définies dans ces fichiers — le serveur Next n'utilise que la clé anonyme.
 

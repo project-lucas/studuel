@@ -1,26 +1,17 @@
 'use server'
 
-import { revalidatePath } from 'next/cache'
+import { refresh, revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { validateRevisionToday, validateCommuteToday } from '@/lib/habits'
 import { normaliserPrioritaires } from '@/lib/matieres-prioritaires'
 import type { EtatBilan } from '@/lib/quiz-bilan'
 import {
-  reviewAfterAnswer,
   sanitizeReviewAnswers,
   REVANCHE_CLEAR_COINS,
-  REVIEW_STATE_COLUMNS,
   type ReviewAnswer,
-  type ReviewState,
 } from '@/lib/srs'
-import {
-  normalizeOralList,
-  isOralStatus,
-  type OralText,
-  type OralTextStatus,
-} from '@/lib/oral-texts'
-import { DAILY_GOAL_OPTIONS, type DailyGoalMinutes } from '@/lib/daily-goal'
+import { enregistrerReponsesRevision } from '@/lib/srs-server'
 import type { Gain } from '@/lib/gains'
 import {
   awardChapterCrowns,
@@ -115,7 +106,10 @@ export async function markLessonActivity(
       { onConflict: 'user_id,lesson_id,activity', ignoreDuplicates: true },
     )
 
-  if (!error) revalidatePath('/reviser')
+  // PAS de revalidation : cette action part toute seule à l'ouverture d'une
+  // fiche (MarkLessonActivity). Revalider vidait le cache de TOUS les onglets
+  // préchargés à chaque fiche ouverte (Next 16) ; l'anneau d'avancement se
+  // mettra à jour au prochain rendu de la page matière.
   return { saved: !error }
 }
 
@@ -142,59 +136,16 @@ export async function recordReviewAnswers(
   const user = await getCurrentUser()
   if (!user) return { saved: false }
 
-  // Assainissement : formes valides seulement, dernière réponse par item,
-  // volume borné (une session ne dépasse jamais quelques dizaines d'items).
-  const clean = sanitizeReviewAnswers(answers)
-  if (clean.length === 0) {
+  // L'écriture vit dans lib/srs-server (partagée avec la fin de course, qui ne
+  // revalide pas) ; cette action, elle, rafraîchit Réviser.
+  const aEcrire = sanitizeReviewAnswers(answers).length > 0
+  const saved = await enregistrerReponsesRevision(supabase, user.id, answers)
+  if (!saved) return { saved: false }
+  if (!aEcrire) {
     return {
       saved: true,
       etats: await lireEtatsBilan(supabase, user.id, scopeIds),
     }
-  }
-
-  // État actuel des items touchés. Toutes les colonnes du moteur sont
-  // nécessaires : `due_at` dit si l'item était RÉELLEMENT à revoir (un succès
-  // sur un item pas encore dû ne fait pas monter la boîte), et les compteurs
-  // de passages doivent être PROLONGÉS et non recalculés — les relire à moitié
-  // remettrait `times_seen` à 1 à chaque session.
-  const { data: existing } = await supabase
-    .from('review_items')
-    .select(`item_kind, item_id, ${REVIEW_STATE_COLUMNS}`)
-    .eq('user_id', user.id)
-    .in(
-      'item_id',
-      clean.map((a) => a.id),
-    )
-  const prevByKey = new Map(
-    (existing ?? []).map((r) => [
-      `${r.item_kind}:${r.item_id}`,
-      r as ReviewState,
-    ]),
-  )
-
-  const now = Date.now()
-  const rows = clean.map((a) => {
-    const prev = prevByKey.get(`${a.kind}:${a.id}`) ?? null
-    const next = reviewAfterAnswer(prev, a.good, now)
-    return {
-      user_id: user.id,
-      item_kind: a.kind,
-      item_id: a.id,
-      subject: a.subject,
-      ...next,
-      updated_at: new Date(now).toISOString(),
-    }
-  })
-
-  const { error } = await supabase
-    .from('review_items')
-    .upsert(rows, { onConflict: 'user_id,item_kind,item_id' })
-  if (error) {
-    console.error(
-      '[srs] enregistrement des réponses impossible:',
-      error.message,
-    )
-    return { saved: false }
   }
 
   revalidatePath('/reviser')
@@ -404,7 +355,10 @@ export async function saveSelectedSubjects(slugs: string[]): Promise<void> {
     throw new Error(error.message)
   }
 
-  revalidatePath('/reviser')
+  // `refresh()` et non `revalidatePath` : le réglage ne change que l'écran
+  // courant (la grille de Réviser), et `refresh()` garde les autres onglets
+  // préchargés là où `revalidatePath` les jette tous.
+  refresh()
 }
 
 // Persiste les MATIÈRES PRIORITAIRES de l'élève (l'étoile sur chaque dossier
@@ -432,108 +386,8 @@ export async function saveMatieresPrioritaires(slugs: string[]): Promise<void> {
     throw new Error(error.message)
   }
 
-  revalidatePath('/reviser')
-}
-
-// Change l'objectif quotidien en minutes (colonne profiles.daily_goal_minutes,
-// déjà dans le GRANT UPDATE de 048). Renvoie { ok } — l'UI est optimiste.
-// Les valeurs autorisées vivent dans lib/daily-goal.ts (un fichier « use server »
-// ne peut exporter que des fonctions async).
-export async function saveDailyGoalMinutes(
-  minutes: number,
-): Promise<{ ok: boolean }> {
-  if (!DAILY_GOAL_OPTIONS.includes(minutes as DailyGoalMinutes)) {
-    return { ok: false }
-  }
-  const supabase = await createClient()
-  const user = await getCurrentUser()
-  if (!user) return { ok: false }
-
-  const { error } = await supabase
-    .from('profiles')
-    .update({ daily_goal_minutes: minutes })
-    .eq('id', user.id)
-  if (error) {
-    console.error('[reviser] objectif quotidien non enregistré:', error.message)
-    return { ok: false }
-  }
-  revalidatePath('/reviser')
-  return { ok: true }
-}
-
-// --- Textes du bac oral (le descriptif) — migration 156 ----------------------
-// Les 3 écritures passent par des RPC atomiques (read-modify-write sûr sous
-// FOR UPDATE, cf. add_upcoming_exam). Chacune renvoie { ok, texts } : la liste
-// normalisée revient à l'UI pour rester synchro sans re-fetch. Si 156 n'est pas
-// passée, la RPC est absente → { ok: false } (pas de faux succès), texts = [].
-type OralResult = { ok: boolean; texts: OralText[] }
-
-async function requireUserId(): Promise<string | null> {
-  const user = await getCurrentUser()
-  return user?.id ?? null
-}
-
-// Ajoute un texte au descriptif (titre + œuvre facultative). L'id et le statut
-// initial sont posés en base.
-export async function addOralTextAction(
-  title: string,
-  work: string | null,
-): Promise<OralResult> {
-  const supabase = await createClient()
-  if (!(await requireUserId())) return { ok: false, texts: [] }
-
-  const cleanTitle = typeof title === 'string' ? title.trim() : ''
-  if (cleanTitle.length === 0) return { ok: false, texts: [] }
-  const cleanWork =
-    typeof work === 'string' && work.trim().length > 0 ? work.trim() : null
-
-  const { data, error } = await supabase.rpc('add_oral_text', {
-    p_title: cleanTitle,
-    p_work: cleanWork,
-  })
-  if (error) {
-    console.error('[reviser] texte oral non ajouté:', error.message)
-    return { ok: false, texts: [] }
-  }
-  revalidatePath('/reviser')
-  return { ok: true, texts: normalizeOralList(data) }
-}
-
-// Change le statut d'un texte (À faire ↔ En cours ↔ Maîtrisé).
-export async function setOralTextStatusAction(
-  id: string,
-  status: OralTextStatus,
-): Promise<OralResult> {
-  const supabase = await createClient()
-  if (!(await requireUserId())) return { ok: false, texts: [] }
-  if (typeof id !== 'string' || id.length === 0 || !isOralStatus(status))
-    return { ok: false, texts: [] }
-
-  const { data, error } = await supabase.rpc('set_oral_text_status', {
-    p_id: id,
-    p_status: status,
-  })
-  if (error) {
-    console.error('[reviser] statut texte oral non changé:', error.message)
-    return { ok: false, texts: [] }
-  }
-  revalidatePath('/reviser')
-  return { ok: true, texts: normalizeOralList(data) }
-}
-
-// Retire un texte du descriptif.
-export async function removeOralTextAction(id: string): Promise<OralResult> {
-  const supabase = await createClient()
-  if (!(await requireUserId())) return { ok: false, texts: [] }
-  if (typeof id !== 'string' || id.length === 0) return { ok: false, texts: [] }
-
-  const { data, error } = await supabase.rpc('remove_oral_text', { p_id: id })
-  if (error) {
-    console.error('[reviser] texte oral non retiré:', error.message)
-    return { ok: false, texts: [] }
-  }
-  revalidatePath('/reviser')
-  return { ok: true, texts: normalizeOralList(data) }
+  // Écran courant seulement : les onglets préchargés restent (cf. plus haut).
+  refresh()
 }
 
 // Marque le tour guidé comme vu (colonne tutorial_completed, migration 188) :
@@ -552,6 +406,8 @@ export async function completeTutorial(): Promise<{ saved: boolean }> {
     console.error('[reviser] tour guidé non enregistré:', error.message)
     return { saved: false }
   }
-  revalidatePath('/reviser')
+  // L'écran courant seulement : le tour ne concerne que Réviser, et `refresh()`
+  // garde les autres onglets préchargés.
+  refresh()
   return { saved: true }
 }

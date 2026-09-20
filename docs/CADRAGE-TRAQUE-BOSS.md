@@ -206,7 +206,7 @@ mode de jeu de plus.
 - `lib/traque.ts` (pur, 43 tests) : barème, seuil, plafond quotidien, fenêtre
   d'une heure, paliers de 10 %, calendrier de la chasse, gemmes + plafond
   hebdomadaire, composition du pool, libellés (« 5 cartes de plus »).
-- `supabase/212_traque_boss.sql` : table `boss_gauges` (RLS lecture seule,
+- `supabase/schema/212_traque_boss.sql` : table `boss_gauges` (RLS lecture seule,
   aucune écriture directe), trois RPC `SECURITY DEFINER` — `traque_credit`,
   `traque_victoire`, `traque_defaite`. Le serveur décide seul du débusquage,
   du rang, du bonus du jour et du montant versé.

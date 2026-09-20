@@ -1,10 +1,6 @@
-import { readdirSync, readFileSync } from 'node:fs'
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
-
-const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..')
-const SUPABASE = path.join(ROOT, 'supabase')
+import { cheminMigration, nomsDesMigrations } from '@/lib/migrations-lecture'
 
 // -----------------------------------------------------------------------------
 // AUCUNE MIGRATION NE DOIT CONTENIR LA SORTIE DE SON GÉNÉRATEUR (31/08/2026).
@@ -42,7 +38,7 @@ const RESUME_GENERATEUR = /^\s*✓\s*\d+\s+chapitres/u
 type Faute = { fichier: string; ligne: number; texte: string }
 
 describe('les migrations SQL sont exécutables telles quelles', () => {
-  const fichiers = readdirSync(SUPABASE).filter((f) => f.endsWith('.sql'))
+  const fichiers = nomsDesMigrations().filter((f) => f.endsWith('.sql'))
 
   it('trouve bien les migrations du dépôt', () => {
     // Garde-fou du garde-fou : si le dossier était vide ou renommé, les deux
@@ -53,7 +49,7 @@ describe('les migrations SQL sont exécutables telles quelles', () => {
   it('ne contient aucune sortie de console', () => {
     const fautes: Faute[] = []
     for (const f of fichiers) {
-      const lignes = readFileSync(path.join(SUPABASE, f), 'utf8').split('\n')
+      const lignes = readFileSync(cheminMigration(f), 'utf8').split('\n')
       lignes.forEach((texte, i) => {
         if (DEBUTS_INTERDITS.test(texte)) {
           fautes.push({ fichier: f, ligne: i + 1, texte: texte.trim().slice(0, 70) })
@@ -70,7 +66,7 @@ describe('les migrations SQL sont exécutables telles quelles', () => {
             `\nCause la plus probable : la commande de génération redirige stderr` +
             ` vers le fichier (\`2>&1\`). Le générateur écrit le SQL sur stdout et` +
             ` son résumé sur stderr — il ne faut JAMAIS les fusionner.` +
-            `\nRegénérer avec : node scripts/seed-contenu.mjs --num NNN --modules X > supabase/NNN_….sql`,
+            `\nRegénérer avec : node scripts/seed-contenu.mjs --num NNN --modules X > supabase/contenu/NNN_….sql`,
     ).toEqual([])
   })
 
@@ -90,12 +86,12 @@ describe('les migrations SQL sont exécutables telles quelles', () => {
     const contenus = fichiers.filter(
       (f) =>
         /^\d{3}_contenu_/.test(f) &&
-        readFileSync(path.join(SUPABASE, f), 'utf8').includes(MARQUE),
+        readFileSync(cheminMigration(f), 'utf8').includes(MARQUE),
     )
     expect(contenus.length).toBeGreaterThan(20)
 
     const tronques = contenus.filter((f) => {
-      const txt = readFileSync(path.join(SUPABASE, f), 'utf8').trimEnd()
+      const txt = readFileSync(cheminMigration(f), 'utf8').trimEnd()
       return !txt.endsWith('END $$;')
     })
 
@@ -110,7 +106,7 @@ describe('les migrations SQL sont exécutables telles quelles', () => {
 
     // Vérifie aussi que ce résumé du générateur n'a pas fini DANS le fichier.
     const pollues = contenus.filter((f) =>
-      readFileSync(path.join(SUPABASE, f), 'utf8')
+      readFileSync(cheminMigration(f), 'utf8')
         .split('\n')
         .some((l) => RESUME_GENERATEUR.test(l)),
     )

@@ -9,7 +9,7 @@ import { TEINTE_MATIERE } from '@/lib/defi/modes-catalog'
 import { SALONS } from '@/lib/jeux/catalog'
 import { programmeSlug } from '@/lib/jeux/programme'
 import { subjectVignette } from '@/lib/subject-style'
-import type { DuelCourseOutcome } from '@/app/defi/duel-course-actions'
+import type { DuelCourseOutcome } from '@/lib/duel/fin-course'
 
 export const dynamic = 'force-dynamic'
 
@@ -41,12 +41,14 @@ export default async function ApercuDuel({
       ? null
       : {
           saved: true,
+          statut: 'verifie',
           outcome: victoire ? 'win' : 'loss',
           rival: { score: rival.score, goalAtMs: victoire ? null : 64_000 },
           stats: { score: moi.score, correct: 7, answered: 9, bestCombo: 4, goalAtMs: moi.goalAtMs },
           trophies: victoire
             ? { before: 20, after: 30, delta: 10, best: 30, total: 30 }
             : { before: 30, after: 22, delta: -8, best: 30, total: 22 },
+          trophiesPause: false,
           clanPoints: victoire ? 5 : 2,
           questsCompleted: [],
           questDayDone: false,

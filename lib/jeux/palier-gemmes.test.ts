@@ -1,5 +1,4 @@
 import { readFileSync } from 'node:fs'
-import path from 'node:path'
 import { describe, expect, it } from 'vitest'
 
 import {
@@ -14,6 +13,7 @@ import {
   lireReclamation,
   resteAReclamer,
 } from './palier-gemmes'
+import { cheminMigration } from '@/lib/migrations-lecture'
 
 describe('le tarif des étoiles', () => {
   it('palier N → N gemmes par étoile, de l’Éveil au Maître', () => {
@@ -28,7 +28,7 @@ describe('le tarif des étoiles', () => {
 
   it('est le miroir du tarif de la migration 373 (le numéro du palier)', () => {
     const sql = readFileSync(
-      path.resolve(process.cwd(), 'supabase/373_boost_jour_gemmes_paliers.sql'),
+      cheminMigration('373_boost_jour_gemmes_paliers.sql'),
       'utf8',
     )
     expect(sql).toContain('v_montant := public.gemmes_avec_bonus(v_user, v_palier);')

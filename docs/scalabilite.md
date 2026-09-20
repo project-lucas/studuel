@@ -101,7 +101,7 @@ chiffres en main**, pas à trancher d'avance. La marche à suivre : exécuter
 les classements y pèsent, on les sort du groupement et on les cache
 globalement ; sinon, le groupement reste le meilleur choix.
 
-## Mesurer — `supabase/_mesurer-perf.sql`
+## Mesurer — `supabase/outils/_mesurer-perf.sql`
 
 Cinq sections à coller dans le SQL Editor : volume des tables, policies non
 optimisées (doit rendre zéro ligne), index jamais scannés, plans des lectures

@@ -218,14 +218,6 @@ const F = {
   rayan: { id: 'rayan', name: 'Rayan', emoji: '🦁', level: 8 },
 } satisfies Record<string, Friend>
 
-export function getMockLive(): LiveSession[] {
-  return [
-    { friend: F.lea, activity: 'révise les fractions', subject: 'Maths', minutes: 12 },
-    { friend: F.naila, activity: 'fait un défi', subject: 'Histoire', minutes: 3 },
-    { friend: F.rayan, activity: 'révise les verbes irréguliers', subject: 'Anglais', minutes: 24 },
-  ]
-}
-
 // Liste d'amis à défier (mock, adversaires fantômes du mode Duel du Défi) —
 // l'ordre met en avant les rivaux « proches » en niveau.
 export function getMockFriends(): Friend[] {

@@ -77,6 +77,10 @@ describe('doitPrecharger', () => {
     expect(doitPrecharger({ ...base, pathname: '/test/abc' })).toBe(false)
   })
 
+  it('se tait pendant une course classée, même sous le préfixe de l’arène', () => {
+    expect(doitPrecharger({ ...base, pathname: '/defi/programme/maths' })).toBe(false)
+  })
+
   it('refuse un téléphone posé (aucun geste depuis trop longtemps)', () => {
     expect(
       doitPrecharger({

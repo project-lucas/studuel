@@ -1,4 +1,4 @@
-// Types du module Test (miroir des tables supabase/002_quizzes.sql).
+// Types du module Test (miroir des tables supabase/schema/002_quizzes.sql).
 
 export type Quiz = {
   id: string

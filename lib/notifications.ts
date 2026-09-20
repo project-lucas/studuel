@@ -2,7 +2,7 @@
 // Ne construit que le CONTENU des notifications et la décision de les envoyer —
 // aucun accès réseau ni DB ici, donc entièrement testable.
 // L'infrastructure (service worker, abonnements, envoi VAPID, cron) s'appuie
-// dessus : cf. public/sw.js, app/api/push/*, supabase/045_push.sql.
+// dessus : cf. public/sw.js, app/api/push/*, supabase/schema/045_push.sql.
 //
 // Deux rappels, et deux seulement : `srs` le matin, `streak` le soir. Un
 // troisième (« ton créneau de trajet commence ») a existé ici sans jamais être

@@ -42,8 +42,7 @@ type AmisProfileRow = {
 // la 362). Seuls le visiteur et l'élève sans
 // établissement voient un aperçu mocké, signalé par la pastille « Aperçu ».
 export default async function AmisPage() {
-  const supabase = await createClient()
-  const user = await getCurrentUser()
+  const [supabase, user] = await Promise.all([createClient(), getCurrentUser()])
 
   const today = toDayKey(new Date())
   let ranking: RankPlayer[] = []
@@ -68,8 +67,29 @@ export default async function AmisPage() {
   // qu'on veut lui faire passer.
   let referral = referralSummary(0, 0)
   let squadIds: string[] = []
+  let ecoutes: Awaited<ReturnType<typeof getDemandesRecues>> = {
+    disponible: false,
+    demandes: [],
+  }
 
   if (user) {
+    // UNE VAGUE (19/09/2026, chantier latence). L'onglet en faisait trois : la
+    // grande lecture, puis l'école (`clan_mates`, qui n'attend que la classe),
+    // puis les demandes d'écoute (qui n'attendent rien). L'école est désormais
+    // CHAÎNÉE sur le seul profil, et les demandes partent avec le reste.
+    const profileP = readRowTolerant<AmisProfileRow>(supabase, 'profiles', 'id', user.id, [
+      'friend_code',
+      'grade_level',
+      'trophies',
+      'best_trophies',
+      'squad_name',
+      'avatar',
+    ])
+    const clanMatesP = profileP.then((p) =>
+      supabase.rpc('clan_mates', {
+        p_level: schoolLevelForGrade(p?.grade_level ?? null),
+      }),
+    )
     const [
       profile,
       { data: friendTrophyRows },
@@ -80,6 +100,8 @@ export default async function AmisPage() {
       squadSet,
       clanBoardRes,
       { data: portraitRows },
+      { data: clanMatesRaw },
+      demandesEcoute,
     ] = await Promise.all([
       // Une seule lecture de `profiles` pour toutes les colonnes de l'écran,
       // quelles que soient leurs migrations d'origine : friend_code (019),
@@ -87,14 +109,7 @@ export default async function AmisPage() {
       // (176). `readRowTolerant` retire tout seul celles que le schéma ne
       // connaît pas encore — l'isolation d'avant, sans les trois allers-retours
       // sur la même ligne.
-      readRowTolerant<AmisProfileRow>(supabase, 'profiles', 'id', user.id, [
-        'friend_code',
-        'grade_level',
-        'trophies',
-        'best_trophies',
-        'squad_name',
-        'avatar',
-      ]),
+      profileP,
       // [] tant que 079 n'est pas passée ou qu'aucun ami n'est accepté.
       supabase.rpc('friends_trophies'),
       // Amis acceptés + demandes reçues/envoyées (migration 019).
@@ -113,7 +128,12 @@ export default async function AmisPage() {
       // Blasons des amis (migration 363). Absente : chacun garde un blason
       // fixe déduit de son id (lib/portraits.portraitPourId).
       supabase.rpc('friends_portraits'),
+      clanMatesP,
+      // Barreau 4 de l'échelle de l'oral (migration 222) : les amis qui
+      // demandent qu'on les écoute.
+      getDemandesRecues(supabase),
     ])
+    ecoutes = demandesEcoute
 
     const portraitById = new Map<string, string>(
       (Array.isArray(portraitRows) ? portraitRows : []).flatMap((r) =>
@@ -140,9 +160,6 @@ export default async function AmisPage() {
     onlineFriendIds = buildLiveSessions(liveRows).map((s) => s.friend.id)
     const level = schoolLevelForGrade(profile?.grade_level ?? null)
     const myTrophies = Math.max(0, Math.floor(Number(profile.trophies ?? 0)))
-    const { data: clanMatesRaw } = await supabase.rpc('clan_mates', {
-      p_level: level,
-    })
     const realSchool = buildSchoolBoard(clanMatesRaw, user.id, level)
     // Ma ligne porte MON blason, même si la RPC (avant 363) ne le donne pas.
     realSchool.mates = realSchool.mates.map((m) =>
@@ -220,14 +237,9 @@ export default async function AmisPage() {
     canRenameSquad = meRanked?.rank === 1
   }
 
-  // Barreau 4 de l'échelle de l'oral (migration 222) : les amis qui demandent
-  // qu'on les écoute. C'est le seul usage social du produit qui ne soit pas une
-  // comparaison — d'où sa place TOUT EN HAUT, avant les classements : quelqu'un
-  // attend quelque chose de toi, ça passe avant ton rang.
-  const ecoutes = user
-    ? await getDemandesRecues(supabase)
-    : { disponible: false, demandes: [] }
-
+  // Les demandes d'écoute (oral) : le seul usage social du produit qui ne
+  // soit pas une comparaison — d'où leur place TOUT EN HAUT, avant les
+  // classements : quelqu'un attend quelque chose de toi, ça passe avant ton rang.
   return (
     <div>
       {/* Le fond de l'onglet. Porté sur <body> par WorldBackdrop (et pas posé

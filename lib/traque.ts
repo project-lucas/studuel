@@ -11,7 +11,7 @@
 // ont rempli la jauge : il interroge littéralement ce qui vient d'être travaillé.
 //
 // Logique PURE et testée (convention projet). La persistance vit dans
-// `lib/traque-server.ts` + `supabase/212_traque_boss.sql`, qui MIROITE le
+// `lib/traque-server.ts` + `supabase/schema/212_traque_boss.sql`, qui MIROITE le
 // barème, le seuil, le plafond et les gemmes ci-dessous — toute modification
 // ici doit toucher la migration suivante.
 //

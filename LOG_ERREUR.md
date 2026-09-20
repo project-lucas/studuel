@@ -22,7 +22,7 @@ passe base de données ni la clé `service_role` (choix Option A — c'est très
 **✅ Action à faire à ton retour (2 minutes) :**
 1. Ouvre **Supabase Dashboard → SQL Editor → New query**.
 2. Colle et exécute **`supabase/schema.sql`** (tables du PRD + RLS).
-3. Colle et exécute **`supabase/002_quizzes.sql`** (module Test : `quizzes`,
+3. Colle et exécute **`supabase/schema/002_quizzes.sql`** (module Test : `quizzes`,
    `quiz_questions`, RLS + 3 quiz de démo, dont 1 gratuit).
 4. Recharge http://localhost:3001/test — le catalogue doit apparaître.
 
@@ -45,7 +45,7 @@ Les deux scripts sont idempotents (réexécutables sans erreur).
 ## ✅ Travail réalisé pendant la session (aucune autre erreur)
 
 - `PRD.md` sauvegardé à la racine (contenu collé en chat + annexe des décisions).
-- `supabase/002_quizzes.sql` : tables + RLS + seed (3 quiz, 10 questions).
+- `supabase/schema/002_quizzes.sql` : tables + RLS + seed (3 quiz, 10 questions).
 - `lib/subscription.ts` (tiers + gating Offre 1), `lib/types.ts`.
 - `/test` : catalogue dynamique depuis Supabase, groupé par matière, badges 🔒.
 - `/test/[id]` : session de quiz (QCM + Vrai/Faux), correction immédiate,

@@ -7,19 +7,11 @@ import type {
   LeaguePlayer,
   RankingBoard,
   RankingEntry,
-  Season,
 } from './types'
 import type { TournamentBoard } from '@/lib/tournament'
 
 /** Total de trophées du joueur (mock) — dans « Salle d'étude », 180 avant CDI… */
 export const MOCK_TROPHIES = 520
-
-export const MOCK_SEASON: Season = {
-  name: 'Saison 1 · Rentrée des classes',
-  endsInLabel: 'Se termine dans 12j',
-  rewardIcon: '👑',
-  rewardLabel: 'Cadre légendaire « Major »',
-}
 
 // --- Ligue hebdomadaire : 30 joueurs, toi 12e avec 240 XP ------------------
 

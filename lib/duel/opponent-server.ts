@@ -20,6 +20,8 @@ import { isReplayUsable, sanitizeSteps, type ReplayStep } from '@/lib/duel/repla
 
 type ReplayRow = {
   replay_id: string
+  /** Absent tant que la 374 n'est pas passée. */
+  created_at?: string | null
   user_id: string
   name: string
   avatar: unknown
@@ -30,6 +32,7 @@ type ReplayRow = {
 
 type ReplayCandidate = MatchCandidate & {
   replayId: string
+  version: string | null
   avatar: unknown
   steps: ReplayStep[]
 }
@@ -54,6 +57,7 @@ export async function fetchReplayCandidates(
     return [
       {
         replayId: String(row.replay_id),
+        version: typeof row.created_at === 'string' ? row.created_at : null,
         userId: String(row.user_id),
         name: String(row.name ?? 'Un élève').slice(0, 24),
         trophies: Math.max(0, Math.floor(Number(row.trophies) || 0)),
@@ -78,8 +82,15 @@ export async function chooseOpponent(input: {
   myName: string | null
   /** Le robot de la course précédente, à ne pas resservir. */
   lastBotId?: string | null
+  /** Le replay de la course précédente (« Nouvel adversaire »), à ne pas resservir. */
+  lastReplayId?: string | null
 }): Promise<Opponent> {
-  const candidates = await fetchReplayCandidates(input.supabase, input.subjectSlug)
+  const tous = await fetchReplayCandidates(input.supabase, input.subjectSlug)
+  // « Nouvel adversaire » doit en être un : sans cette exclusion, l'appariement
+  // (le plus proche en trophées) rendait exactement le même élève.
+  const candidates = input.lastReplayId
+    ? tous.filter((c) => c.replayId !== input.lastReplayId)
+    : tous
   const picked = pickOpponent(candidates, input.myTrophies)
   if (picked && !picked.isBot) {
     const candidate = candidates.find((c) => c.userId === picked.userId)
@@ -87,6 +98,7 @@ export async function chooseOpponent(input: {
       const opponent: ReplayOpponent = {
         kind: 'replay',
         replayId: candidate.replayId,
+        version: candidate.version,
         steps: candidate.steps,
         range: picked.range,
         identity: {
@@ -111,10 +123,20 @@ export async function chooseOpponent(input: {
   return botOpponent('nina', input.myTrophies) as Opponent
 }
 
-/** La trace d'un replay, pour la revalidation serveur. Null si introuvable. */
+/**
+ * La trace d'un replay, pour la revalidation serveur. Null si introuvable.
+ *
+ * `version` = l'instant de la trace que l'élève a affrontée. Une trace est
+ * réécrite à chaque course de son auteur : s'il en a rejoué une PENDANT la
+ * mienne, la ligne porte déjà sa nouvelle trace, et la rejouer donnerait un
+ * verdict sur une course que je n'ai pas courue. Depuis la 374, la ligne garde
+ * aussi la trace précédente ; au-delà, la course est « non vérifiée » (aucun
+ * trophée ne bouge) plutôt que jugée sur la mauvaise trace.
+ */
 export async function fetchReplaySteps(
   supabase: SupabaseClient,
   replayId: string,
+  version: string | null = null,
 ): Promise<ReplayStep[] | null> {
   const { data, error } = await supabase.rpc('duel_replay_get', { p_id: replayId })
   if (error) {
@@ -123,10 +145,39 @@ export async function fetchReplaySteps(
     }
     return null
   }
-  const row = Array.isArray(data) ? data[0] : null
+  const row = (Array.isArray(data) ? data[0] : null) as ReplayGetRow | null
   if (!row) return null
-  const steps = sanitizeSteps((row as { steps: unknown }).steps)
+  const brutes = traceDeLaVersion(row, version)
+  if (brutes === undefined) return null
+  const steps = sanitizeSteps(brutes)
   return isReplayUsable(steps) ? steps : null
+}
+
+type ReplayGetRow = {
+  steps: unknown
+  /** Colonnes de la 374 — absentes avant. */
+  created_at?: string | null
+  steps_precedents?: unknown
+  precedent_le?: string | null
+}
+
+/** Même instant, à la milliseconde (les deux lectures formatent pareil, mais on ne le suppose pas). */
+function memeInstant(a: string | null | undefined, b: string | null | undefined): boolean {
+  if (!a || !b) return false
+  const ta = Date.parse(a)
+  return Number.isFinite(ta) && ta === Date.parse(b)
+}
+
+/**
+ * La trace qui correspond à la version affrontée ; `undefined` si aucune ne
+ * correspond. Sans version (client d'avant) ou sans la 374 : la trace actuelle,
+ * comme avant.
+ */
+export function traceDeLaVersion(row: ReplayGetRow, version: string | null): unknown {
+  if (!version || row.created_at === undefined) return row.steps
+  if (memeInstant(row.created_at, version)) return row.steps
+  if (memeInstant(row.precedent_le, version)) return row.steps_precedents
+  return undefined
 }
 
 /** Dépose la trace de la course jouée. Silencieux si la 351 n'est pas passée. */

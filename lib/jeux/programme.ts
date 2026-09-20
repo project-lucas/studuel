@@ -121,6 +121,20 @@ export function programmeHref(subject: string): string {
   return `/defi/programme/${programmeSlug(subject)}`
 }
 
+/**
+ * Le lien d'une course NEUVE : un tour (`?n=`) tiré à chaque ouverture de la
+ * recherche d'adversaire. La graine de la course (élève, matière, jour, tour)
+ * change donc à chaque DUEL — sans lui, l'arène envoyait toujours le tour 0 :
+ * même adversaire, mêmes questions, et, revenue dans les deux minutes, la page
+ * déjà en cache (19/09/2026). Un lien qui n'est pas une course, ou qui porte
+ * déjà sa requête (revanche, nouvel adversaire), reste tel quel.
+ */
+export function hrefCourseNeuve(href: string, tour: number): string {
+  if (!href.startsWith('/defi/programme/') || href.includes('?')) return href
+  const n = Number.isFinite(tour) ? Math.max(1, Math.floor(Math.abs(tour))) : 1
+  return `${href}?n=${n}`
+}
+
 // ------------------------------------------------------- l'ordre de la pioche
 
 export type ProgrammeQuiz = { id: string; lesson_id: string | null }

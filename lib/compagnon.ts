@@ -52,9 +52,6 @@ export const COMPANION_STAGES: CompanionStage[] = [
     hint: '30 jours — la forme finale. Personne ne t’arrête.',
   },
 ]
-
-// Visuels d'humeur et de célébration (hors évolution).
-export const COMPANION_HUNGRY_IMAGE = '/images/mascotte/flamme-affamee.webp'
 export const COMPANION_CELEBRATION_IMAGE =
   '/images/mascotte/flamme-celebration.webp'
 
@@ -122,28 +119,4 @@ export function companionWeeklyLine(
   }
   return `${name} tient le rythme avec toi : ${sessions} ${plur} cette semaine.`
 }
-
-// ---------------------------------------------------------------------- nom
-
-const NAME_STORAGE_KEY = 'scolaria-compagnon-name'
 export const DEFAULT_COMPANION_NAME = 'Pixel'
-
-export function companionName(): string {
-  if (typeof window === 'undefined') return DEFAULT_COMPANION_NAME
-  try {
-    return (
-      window.localStorage.getItem(NAME_STORAGE_KEY) || DEFAULT_COMPANION_NAME
-    )
-  } catch {
-    return DEFAULT_COMPANION_NAME
-  }
-}
-
-export function setCompanionName(name: string): void {
-  try {
-    const clean = name.trim().slice(0, 20)
-    if (clean) window.localStorage.setItem(NAME_STORAGE_KEY, clean)
-  } catch {
-    // stockage bloqué : le nom par défaut fera l'affaire
-  }
-}

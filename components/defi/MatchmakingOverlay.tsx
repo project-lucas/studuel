@@ -5,6 +5,8 @@ import { createPortal } from 'react-dom'
 import { useRouter } from 'next/navigation'
 import { motion, useReducedMotion } from 'framer-motion'
 import { sfx } from '@/lib/sounds'
+import { hrefCourseNeuve } from '@/lib/jeux/programme'
+import { prechargerOnglet } from '@/components/PrechargeurOnglets'
 import ArenaBackdrop from '@/components/ArenaBackdrop'
 import { FLANK_CLASS } from '@/components/defi/ArenaActionBar'
 import {
@@ -59,6 +61,8 @@ export default function MatchmakingOverlay({
   onCancel: () => void
 }) {
   const router = useRouter()
+  // Une course neuve à chaque ouverture (lib/jeux/programme.hrefCourseNeuve).
+  const [cible] = useState(() => hrefCourseNeuve(href, Date.now() % 1_000_000))
   const reduce = useReducedMotion()
   const [progres, setProgres] = useState(0)
   // La navigation ne doit partir qu'UNE fois, et jamais après une annulation.
@@ -67,8 +71,12 @@ export default function MatchmakingOverlay({
 
   useEffect(() => {
     // Le préchargement démarre à l'ouverture du rideau : c'est lui qui rend
-    // l'attente utile plutôt que décorative.
-    router.prefetch(href)
+    // l'attente utile plutôt que décorative. COMPLET : par défaut le routeur ne
+    // précharge d'une page dynamique que son squelette (loading.tsx) — la
+    // course elle-même (tirage des questions, adversaire) ne se rendait
+    // qu'APRÈS les deux secondes. Préchargée en entier, elle est prête quand
+    // le rideau tombe.
+    prechargerOnglet(router, cible)
     const debut = performance.now()
     let raf = 0
 
@@ -80,7 +88,7 @@ export default function MatchmakingOverlay({
         if (!parti.current) {
           parti.current = true
           sfx.battle()
-          router.push(href)
+          router.push(cible)
         }
         return
       }
@@ -91,7 +99,7 @@ export default function MatchmakingOverlay({
       annule.current = true
       cancelAnimationFrame(raf)
     }
-  }, [href, router])
+  }, [cible, router])
 
   if (typeof document === 'undefined') return null
 

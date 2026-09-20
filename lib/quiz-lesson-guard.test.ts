@@ -1,22 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { readFileSync, readdirSync } from 'node:fs'
-import { fileURLToPath } from 'node:url'
-import path from 'node:path'
-
-// Garde d'unicité quiz ↔ leçon. Le hub de leçon lit LE quiz d'une leçon en
-// `.maybeSingle()` : si deux quiz partageaient le même lesson_id, la requête
-// lèverait une erreur (« multiple rows ») pour de vrais élèves. Les migrations
-// de seed qui rattachent un quiz à une leçon (INSERT ... quizzes(..., lesson_id)
-// SELECT ... FROM lessons l) DOIVENT donc porter la clause anti-doublon
-//   WHERE NOT EXISTS (SELECT 1 FROM public.quizzes q WHERE q.lesson_id = l.id)
-// pour rester rejouables sans créer de second quiz sur la même leçon.
-// Cette garde échoue si une future migration oublie ce garde-fou.
-
-const SUPABASE_DIR = path.join(
-  path.dirname(fileURLToPath(import.meta.url)),
-  '..',
-  'supabase',
-)
+import { readFileSync } from 'node:fs'
+import { cheminMigration, nomsDesMigrations } from '@/lib/migrations-lecture'
 
 // Un INSERT dont la liste de colonnes de public.quizzes contient lesson_id :
 // le quiz est rattaché à une leçon (modèle 025+), pas au seul chapitre (002/004).
@@ -25,11 +9,11 @@ const ATTACH_LESSON = /INSERT INTO public\.quizzes\s*\([^)]*\blesson_id\b[^)]*\)
 const DEDUP_GUARD = /NOT EXISTS[\s\S]*?lesson_id\s*=\s*l\.id/i
 
 function attachLessonSeeds(): { file: string; guarded: boolean }[] {
-  return readdirSync(SUPABASE_DIR)
+  return nomsDesMigrations()
     .filter((f) => f.endsWith('.sql'))
     .map((file) => ({
       file,
-      raw: readFileSync(path.join(SUPABASE_DIR, file), 'utf8'),
+      raw: readFileSync(cheminMigration(file), 'utf8'),
     }))
     .filter(({ raw }) => ATTACH_LESSON.test(raw))
     .map(({ file, raw }) => ({ file, guarded: DEDUP_GUARD.test(raw) }))

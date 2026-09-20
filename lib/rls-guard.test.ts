@@ -1,10 +1,7 @@
-import { readdirSync, readFileSync } from 'node:fs'
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import { policiesNonEnveloppees, revokesIncomplets } from './rls-guard'
-
-const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..')
+import { cheminMigration, nomsDesMigrations } from '@/lib/migrations-lecture'
 
 describe('policiesNonEnveloppees', () => {
   it('signale un appel d’auth nu dans un USING', () => {
@@ -130,10 +127,10 @@ const HERITAGE = new Set([
 
 function fichiersFautifs(): Map<string, ReturnType<typeof policiesNonEnveloppees>> {
   const trouves = new Map<string, ReturnType<typeof policiesNonEnveloppees>>()
-  for (const f of readdirSync(path.join(ROOT, 'supabase'))) {
+  for (const f of nomsDesMigrations()) {
     if (!f.endsWith('.sql')) continue
     const nues = policiesNonEnveloppees(
-      readFileSync(path.join(ROOT, 'supabase', f), 'utf8'),
+      readFileSync(cheminMigration(f), 'utf8'),
     )
     if (nues.length > 0) trouves.set(f, nues)
   }
@@ -255,10 +252,10 @@ describe('cliquet REVOKE — aucun fichier neuf ne ferme à moitié', () => {
 
   it('aucun REVOKE incomplet hors héritage', () => {
     const neufs: string[] = []
-    for (const f of readdirSync(path.join(ROOT, 'supabase'))) {
+    for (const f of nomsDesMigrations()) {
       if (!f.endsWith('.sql') || HERITAGE_REVOKE.has(f)) continue
       const r = revokesIncomplets(
-        readFileSync(path.join(ROOT, 'supabase', f), 'utf8'),
+        readFileSync(cheminMigration(f), 'utf8'),
       )
       for (const x of r) neufs.push(`${f} → ${x.fonction} (oublie ${x.manquants.join(', ')})`)
     }

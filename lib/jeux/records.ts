@@ -74,10 +74,3 @@ export function writeGameBest(id: string, score: number): boolean {
   }
   return true
 }
-
-/** Les records de plusieurs jeux d'un coup (les billets d'une matière). */
-export function readGameBests(ids: string[]): Record<string, number> {
-  const bests: Record<string, number> = {}
-  for (const id of ids) bests[id] = readGameBest(id)
-  return bests
-}

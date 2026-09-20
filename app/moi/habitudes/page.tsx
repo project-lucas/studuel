@@ -8,9 +8,9 @@ import CatalogueHabitudes, {
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { readRowTolerant } from '@/lib/profile-read'
-import { toDayKey, activityCutoff } from '@/lib/streak'
+import { toDayKey } from '@/lib/streak'
 import { PLANIFIER_CATALOG_ID } from '@/lib/habits'
-import { appliquerValidationsAuto } from '@/lib/moi/journal'
+import { appliquerValidationsAuto, lireActiviteDuJour } from '@/lib/moi/journal'
 import {
   DRIVER_WINDOW_DAYS,
   computeCapacite,
@@ -65,8 +65,7 @@ type CatalogRow = {
 const FENETRE_LOGS = Math.max(FENETRE_JOURS, DRIVER_WINDOW_DAYS)
 
 export default async function HabitudesPage() {
-  const supabase = await createClient()
-  const user = await getCurrentUser()
+  const [supabase, user] = await Promise.all([createClient(), getCurrentUser()])
 
   if (!user) {
     return (
@@ -83,17 +82,22 @@ export default async function HabitudesPage() {
   const depuis = new Date()
   depuis.setUTCDate(depuis.getUTCDate() - (FENETRE_LOGS - 1))
 
-  // UNE SEULE VAGUE : le catalogue, les habitudes suivies, le journal et les
-  // quatre historiques d'activité (bornés à la fenêtre) partent ensemble.
+  // UNE SEULE VAGUE : le catalogue, les habitudes suivies et le journal
+  // partent ensemble ; les sessions du JOUR suivent les habitudes, et ne sont
+  // lues que si l'une d'elles se coche toute seule aujourd'hui (avant le
+  // 19/09/2026 : quatre tables d'activité lues sur 400 jours).
+  const habitsP = supabase
+    .from('habits')
+    .select('id, catalog_id, target, created_at, habit_catalog(*)')
+    .order('created_at', { ascending: true })
+    .returns<Habit[]>()
+    .then(({ data }) => data ?? [])
   const [
     profil,
     { data: catalogue },
-    { data: habits },
+    activeHabits,
     { data: storedLogs },
-    { data: tests },
-    { data: studies },
-    { data: lessonsDone },
-    { data: challenges },
+    activiteDuJour,
   ] = await Promise.all([
     readRowTolerant<ProfilRow>(supabase, 'profiles', 'id', user.id, [
       'commute_slots',
@@ -103,55 +107,26 @@ export default async function HabitudesPage() {
       .from('habit_catalog')
       .select('id, title, icon, rationale')
       .returns<CatalogRow[]>(),
-    supabase
-      .from('habits')
-      .select('id, catalog_id, target, created_at, habit_catalog(*)')
-      .order('created_at', { ascending: true })
-      .returns<Habit[]>(),
+    habitsP,
     supabase
       .from('habit_logs')
       .select('id, habit_id, date, completed, auto_validated')
       .gte('date', toDayKey(depuis))
       .returns<HabitLog[]>(),
-    supabase
-      .from('test_sessions')
-      .select('created_at')
-      .eq('user_id', user.id)
-      .gte('created_at', activityCutoff()),
-    supabase
-      .from('study_sessions')
-      .select('created_at')
-      .eq('user_id', user.id)
-      .gte('created_at', activityCutoff()),
-    supabase
-      .from('lesson_completions')
-      .select('created_at')
-      .eq('user_id', user.id)
-      .gte('created_at', activityCutoff()),
-    supabase
-      .from('challenge_sessions')
-      .select('created_at')
-      .eq('user_id', user.id)
-      .gte('created_at', activityCutoff()),
+    habitsP.then((habits) => lireActiviteDuJour(supabase, user.id, habits, today)),
   ])
 
   const commuteSlots: CommuteSlot[] = Array.isArray(profil?.commute_slots)
     ? (profil.commute_slots as CommuteSlot[])
     : []
 
-  const activeHabits = habits ?? []
   // Même validation automatique que sur /moi : sans elle, la révision du jour
   // s'afficherait cochée là-bas et vide ici, pour la même journée.
   const logs = appliquerValidationsAuto(supabase, user.id, {
     habits: activeHabits,
     storedLogs: storedLogs ?? [],
     commuteSlots,
-    activite: {
-      tests: tests ?? [],
-      studies: studies ?? [],
-      lessons: lessonsDone ?? [],
-      challenges: challenges ?? [],
-    },
+    activite: activiteDuJour,
     today,
   })
 

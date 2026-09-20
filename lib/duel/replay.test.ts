@@ -1,6 +1,9 @@
 import { describe, expect, it } from 'vitest'
+import { hasReachedGoal } from '@/lib/duel/course'
+import { timelineFromSteps } from '@/lib/duel/rival'
 import {
   MAX_REPLAY_STEPS,
+  MIN_GAP_MS,
   isReplayUsable,
   sanitizeSteps,
   stepsFromEvents,
@@ -55,5 +58,28 @@ describe('l’assainissement d’un replay', () => {
       { at: 2500, good: true, ms: 2500 },
       { at: 5200, good: false, ms: 2000 },
     ])
+  })
+
+  it('ne va jamais plus vite qu’un joueur : une trace forgée est ralentie', () => {
+    // Cinq bonnes réponses « à l'instant 0 » : la barre se remplissait à 0 ms.
+    const forgee = Array.from({ length: 5 }, () => ({ at: 0, good: true, ms: 250 }))
+    const steps = sanitizeSteps(forgee)
+    expect(steps).toHaveLength(5)
+    expect(steps[0].at).toBe(250)
+    for (let i = 1; i < steps.length; i++) {
+      expect(steps[i].at - steps[i - 1].at).toBeGreaterThanOrEqual(MIN_GAP_MS + steps[i].ms)
+    }
+    const rival = timelineFromSteps(steps, 99)
+    expect(hasReachedGoal(rival.finalScore)).toBe(true)
+    expect(rival.goalAtMs).toBeGreaterThanOrEqual(250 + 4 * (MIN_GAP_MS + 250))
+  })
+
+  it('laisse intacte une trace réellement jouée', () => {
+    const jouee = [
+      { at: 2100, good: true, ms: 2100 },
+      { at: 5000, good: false, ms: 2250 },
+      { at: 7400, good: true, ms: 1750 },
+    ]
+    expect(sanitizeSteps(jouee)).toEqual(jouee)
   })
 })

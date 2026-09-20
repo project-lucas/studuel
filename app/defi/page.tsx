@@ -72,6 +72,7 @@ import {
   getSubjectsCached,
   getGradeChaptersCached,
   getSubjectLevelsCached,
+  getQuizCountBySubjectCached,
 } from '@/lib/catalog'
 import { subjectsWithContentAt } from '@/lib/subject-visibility'
 import { normalizeRankedHistory } from '@/lib/defi/history'
@@ -178,6 +179,28 @@ function friendsRanking(
 }
 
 /**
+ * Quiz de la classe par matière (colonne brute `subject`) : cache serveur,
+ * et lecture authentifiée si le cache froid revient vide (migration 026 absente).
+ */
+async function quizParMatiere(
+  supabase: Awaited<ReturnType<typeof createClient>>,
+  grade: string,
+): Promise<[string, number][]> {
+  const enCache = await getQuizCountBySubjectCached(grade)
+  if (enCache.length > 0) return enCache
+  const { data } = await supabase
+    .from('quizzes')
+    .select('subject')
+    .eq('grade_level', contentLevelFor(grade))
+  const counts = new Map<string, number>()
+  for (const row of Array.isArray(data) ? data : []) {
+    const subject = String(row?.subject ?? '')
+    if (subject) counts.set(subject, (counts.get(subject) ?? 0) + 1)
+  }
+  return [...counts]
+}
+
+/**
  * Onglet Défi (route /defi) — l'écran d'arène VERSION FINALE, façon Clash
  * Royale : l'arène plein viewport (aucun scroll), le PERSONNAGE du joueur sur
  * son socle au centre de la scène, et les systèmes qui réclament leur visite
@@ -192,8 +215,7 @@ function friendsRanking(
  * et la ligue dégradent en vitrine mockée sans leurs migrations.
  */
 export default async function DefiPage() {
-  const supabase = await createClient()
-  const user = await getCurrentUser()
+  const [supabase, user] = await Promise.all([createClient(), getCurrentUser()])
 
   // Valeurs par défaut (visiteur non connecté : démo mockée).
   let trophies = MOCK_TROPHIES
@@ -297,6 +319,52 @@ export default async function DefiPage() {
     // Restent à côté : les quêtes (chaîne de lecture propre), le catalogue
     // (cache serveur, gratuit) et la maîtrise (son propre agrégat depuis la
     // 321).
+    //
+    // PLUS DE SECONDE VAGUE (19/09/2026, chantier latence). Ce qui dépend de
+    // la classe ou de l'école est CHAÎNÉ sur la seule lecture groupée : il part
+    // dès qu'elle rend le profil, sans attendre les quêtes, les gemmes ni la
+    // maîtrise. Le palmarès et les couples (matière, niveau), qui ne dépendent
+    // de rien, partent d'emblée. Le chapitre courant reçoit la maîtrise déjà
+    // demandée ici au lieu de la relire, et les quiz de la classe viennent du
+    // cache serveur.
+    const vague1P = fetchAreneVague1(supabase, user.id, todayKey, previousWeek)
+    const masteryP = getChapterMastery(supabase, user.id)
+    const selonClasseP = vague1P.then(async (v) => {
+      const p = v.profile
+      const niveau = (v.level as SchoolLevel | null)
+        ?? schoolLevelForGrade(p.grade_level ?? null)
+      const idEcole = activeSchoolId(p, p.grade_level ?? null)
+      return Promise.all([
+        // Déjà servis par la lecture groupée quand la 322 est passée : on ne
+        // repart pas les chercher. Sinon, le chemin d'avant.
+        v.clanRes ?? supabase.rpc('clan_ranking', { p_level: niveau }),
+        idEcole
+          ? supabase
+              .from('schools')
+              .select('id, name, city, level')
+              .eq('id', idEcole)
+              .maybeSingle()
+          : Promise.resolve({ data: null }),
+        // Tournoi des écoles (migration 162) — null tant qu'elle n'est pas là.
+        v.tournamentRes
+          ?? supabase.rpc('school_tournament_standings', { p_level: niveau }),
+        // Chapitre courant : dépend de la classe (migration 203).
+        p.grade_level
+          ? resolveCurrentChapter(supabase, user.id, p.grade_level, todayKey, masteryP)
+          : Promise.resolve(null),
+        // Quiz de la classe par matière, pour savoir lesquelles peuvent servir
+        // leur « Programme » : le proxy bon marché de MIN_PROGRAMME_QUIZZES, la
+        // route restant seule juge (cf. programme.ts). Cache serveur ; repli
+        // sur la lecture authentifiée si le cache est froid et vide.
+        p.grade_level ? quizParMatiere(supabase, p.grade_level) : Promise.resolve([]),
+        // Chapitres de la classe (cache serveur, gratuit) : ils rattachent une
+        // maîtrise de chapitre à SA matière, donc disent quelles matières sont
+        // ouvertes au duel classé.
+        p.grade_level
+          ? getGradeChaptersCached(p.grade_level)
+          : Promise.resolve([]),
+      ])
+    })
     const [
       vague1,
       questRes,
@@ -306,16 +374,29 @@ export default async function DefiPage() {
       gemsRes,
       streakRes,
       boostXpRes,
+      subjectLevels,
+      palmaresRes,
+      [clanRes, schoolRes, tournamentRes, chapterRes, quizCounts, gradeChapters],
     ] = await Promise.all([
-      fetchAreneVague1(supabase, user.id, todayKey, previousWeek),
+      vague1P,
       fetchQuestViews(supabase, user.id, todayKey),
       fetchClaimedQuestIds(supabase, user.id, todayKey),
       getSubjectsCached(),
-      getChapterMastery(supabase, user.id),
+      masteryP,
       fetchGems(supabase, user.id),
       // La RPC `my_streak` (migration 155) : tolérante, comme dans TopHudLoader.
       supabase.rpc('my_streak'),
       lireFinBoostXp(supabase, user.id),
+      // Couples (matière, niveau) ayant du contenu (cache serveur, gratuit) :
+      // ils disent quelles matières ont VRAIMENT de quoi réviser — une matière
+      // vide n'aurait pas de gardien à traquer, sa jauge serait un cul-de-sac.
+      // Tous les niveaux, pas seulement celui de l'élève : une matière
+      // hors-niveau (culture générale) range son contenu ailleurs.
+      getSubjectLevelsCached(),
+      // Mon palmarès des modes (352) : chaque billet de la feuille des modes
+      // porte ma place de la semaine. Vide tant que la migration dort.
+      fetchMyPalmares(supabase),
+      selonClasseP,
     ])
     gems = gemsRes
     boostXpJusqua = boostXpRes
@@ -364,68 +445,6 @@ export default async function DefiPage() {
     // est le miroir exact (lib/clan-level.test.ts).
     const level = (vague1.level as SchoolLevel | null)
       ?? schoolLevelForGrade(profile.grade_level ?? null)
-    const schoolId = activeSchoolId(profile, profile.grade_level ?? null)
-
-    // --- VAGUE 2 : ce qui dépend VRAIMENT du cycle et de l'école -------------
-    // Quatre requêtes, pas quinze. Chacune reste tolérante à l'absence de sa
-    // migration (RPC absente → data null → classement vide).
-    const [
-      clanRes,
-      schoolRes,
-      tournamentRes,
-      chapterRes,
-      subjectLevels,
-      gradeQuizRes,
-      gradeChapters,
-      palmaresRes,
-    ] = await Promise.all([
-        // Déjà servis par la lecture groupée quand la 322 est passée : on ne
-        // repart pas les chercher. Sinon, le chemin d'avant.
-        vague1.clanRes ?? supabase.rpc('clan_ranking', { p_level: level }),
-        schoolId
-          ? supabase
-              .from('schools')
-              .select('id, name, city, level')
-              .eq('id', schoolId)
-              .maybeSingle()
-          : Promise.resolve({ data: null }),
-        // Tournoi des écoles (migration 162) — null tant qu'elle n'est pas là.
-        vague1.tournamentRes
-          ?? supabase.rpc('school_tournament_standings', { p_level: level }),
-        // Chapitre courant : dépend de la classe (migration 203).
-        profile.grade_level
-          ? resolveCurrentChapter(
-              supabase,
-              user.id,
-              profile.grade_level,
-              todayKey,
-            )
-          : Promise.resolve(null),
-        // Couples (matière, niveau) ayant du contenu (cache serveur, gratuit) :
-        // ils disent quelles matières ont VRAIMENT de quoi réviser — une matière
-        // vide n'aurait pas de gardien à traquer, sa jauge serait un cul-de-sac.
-        // Tous les niveaux, pas seulement celui de l'élève : une matière
-        // hors-niveau (culture générale) range son contenu ailleurs.
-        getSubjectLevelsCached(),
-        // Quiz de la classe, pour savoir quelles matières peuvent servir leur
-        // « Programme ». Une seule colonne lue : c'est le proxy bon marché de
-        // MIN_PROGRAMME_QUIZZES, la route restant seule juge (cf. programme.ts).
-        profile.grade_level
-          ? supabase
-              .from('quizzes')
-              .select('subject')
-              .eq('grade_level', contentLevelFor(profile.grade_level))
-          : Promise.resolve({ data: null }),
-        // Chapitres de la classe (cache serveur, gratuit) : ils rattachent une
-        // maîtrise de chapitre à SA matière, donc disent quelles matières sont
-        // ouvertes au duel classé.
-        profile.grade_level
-          ? getGradeChaptersCached(profile.grade_level)
-          : Promise.resolve([]),
-        // Mon palmarès des modes (352) : chaque billet de la feuille des modes
-        // porte ma place de la semaine. Vide tant que la migration dort.
-        fetchMyPalmares(supabase),
-      ])
 
     duelEntries = normalizeRankedHistory(matchesRes.data)
     reviewCount = reviewQueue(reviews, todayKey).length
@@ -445,10 +464,10 @@ export default async function DefiPage() {
     })
 
     const quizzesPerSubject = new Map<string, number>()
-    for (const row of Array.isArray(gradeQuizRes?.data) ? gradeQuizRes.data : []) {
-      const slug = programmeSlug(String(row?.subject ?? ''))
+    for (const [subject, count] of quizCounts) {
+      const slug = programmeSlug(subject)
       if (!slug) continue
-      quizzesPerSubject.set(slug, (quizzesPerSubject.get(slug) ?? 0) + 1)
+      quizzesPerSubject.set(slug, (quizzesPerSubject.get(slug) ?? 0) + count)
     }
     const programmeReady = new Set(
       [...quizzesPerSubject]

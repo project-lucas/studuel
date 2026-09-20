@@ -235,6 +235,33 @@ export const getGradeQuizzesCached = unstable_cache(
   { revalidate: CATALOG_TTL_SECONDS, tags: ['catalog'] },
 )
 
+// Nombre de quiz par matière (colonne `subject`, brute) pour UNE classe, hors
+// niveau exclu : le proxy de « cette matière a de quoi servir son Programme »
+// (arène, route du duel). L'arène relisait ces quiz à CHAQUE affichage, sans
+// cache, alors qu'ils sont les mêmes pour toute la classe (19/09/2026).
+export const getQuizCountBySubjectCached = unstable_cache(
+  async (grade: string): Promise<[string, number][]> => {
+    const db = anonClient()
+    const { data } = await toutLire((from, to) =>
+      db
+        .from('quizzes')
+        .select('id, subject')
+        .eq('grade_level', contentLevelFor(grade))
+        .order('id', { ascending: true })
+        .range(from, to)
+        .returns<{ id: string; subject: string | null }[]>(),
+    )
+    const counts = new Map<string, number>()
+    for (const row of data) {
+      const subject = String(row.subject ?? '')
+      if (subject) counts.set(subject, (counts.get(subject) ?? 0) + 1)
+    }
+    return [...counts]
+  },
+  ['catalog-quiz-count-by-subject'],
+  { revalidate: CATALOG_TTL_SECONDS, tags: ['catalog'] },
+)
+
 // Programme complet d'une matière pour un niveau : chapitres → leçons → quiz
 // rattachés. C'est LA structure de la page matière (template structure des
 // cours). select('*') sur les leçons : tolère une base sans la migration 025.

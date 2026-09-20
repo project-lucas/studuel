@@ -4,7 +4,6 @@ import {
   migrationsDansLOrdre,
 } from '@/lib/migrations-lecture'
 import { ALL_BOSSES, weeklyBoss, weeklyTrophyId } from '@/lib/bosses'
-import { WIN_COINS, WIN_COINS_DAILY_CAP } from '@/lib/defi/duel-record'
 import { DAILY_GOAL_OPTIONS } from '@/lib/daily-goal'
 import {
   chasseOfDay,
@@ -102,20 +101,6 @@ describe('rotation des boss : lib/bosses.ts ↔ claim_weekly_trophy', () => {
     for (const boss of ALL_BOSSES) {
       expect(weeklyTrophyId(boss.id)).toBe(`trophee-${boss.id}`)
     }
-  })
-})
-
-describe('barème des duels : lib/defi/duel-record.ts ↔ record_duel_result', () => {
-  it('accorde les mêmes pièces et le même plafond quotidien', () => {
-    const sql = migrationsInOrder()
-      .filter((m) => m.sql.includes('record_duel_result'))
-      .at(-1)
-    expect(sql, 'migration record_duel_result introuvable').toBeDefined()
-    // La RPC écrit `LEAST(<gain>, <plafond> - v_already)`.
-    const m = sql!.sql.match(/LEAST\(\s*(\d+)\s*,\s*(\d+)\s*-/)
-    expect(m, `barème illisible dans ${sql!.file}`).not.toBeNull()
-    expect(Number(m![1]), 'pièces par victoire').toBe(WIN_COINS)
-    expect(Number(m![2]), 'plafond quotidien').toBe(WIN_COINS_DAILY_CAP)
   })
 })
 

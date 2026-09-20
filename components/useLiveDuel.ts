@@ -60,6 +60,12 @@ export function useLiveDuel(userId: string) {
   // La minuterie du robot (arrivée, puis une par manche) : gardée pour être
   // annulée quand on quitte, sinon une manche tomberait dans un duel fini.
   const botTimerRef = useRef<{ round: number; id: number } | null>(null)
+  // Mes manches déjà jouées, pour les RENVOYER quand le rival (re)paraît : un
+  // broadcast part une fois, sans accusé de réception. Une manche envoyée
+  // pendant que le téléphone du rival reconnectait (iOS coupe les websockets en
+  // arrière-plan) était perdue pour de bon, et il attendait indéfiniment « la
+  // manche du rival ». La réception écarte déjà les doublons (par numéro).
+  const mesManchesRef = useRef<RoundRecord[]>([])
 
   const clearBotTimer = useCallback(() => {
     if (botTimerRef.current) {
@@ -117,6 +123,11 @@ export function useLiveDuel(userId: string) {
           const others = Object.keys(channel.presenceState()).filter(
             (k) => k !== userId,
           )
+          if (others.length > 0) {
+            for (const record of mesManchesRef.current) {
+              channel.send({ type: 'broadcast', event: 'round', payload: record })
+            }
+          }
           setState((s) => ({
             ...s,
             opponentPresent: others.length > 0,
@@ -124,9 +135,16 @@ export function useLiveDuel(userId: string) {
               others.length > 0 && s.phase === 'waiting' ? 'active' : s.phase,
           }))
         })
-        .subscribe((status) => {
+        .subscribe((status, err) => {
           if (status === 'SUBSCRIBED') {
             channel.track({ online: true, at: Date.now() })
+            return
+          }
+          // Le client Realtime rejoint tout seul après une coupure ; on le dit
+          // au lieu de le taire (un canal refusé par les policies — migration
+          // 178 absente — finissait sans une ligne de journal).
+          if (status === 'CHANNEL_ERROR' || status === 'TIMED_OUT') {
+            console.warn('[duel-live] canal', status, err?.message ?? '')
           }
         })
 
@@ -143,6 +161,7 @@ export function useLiveDuel(userId: string) {
         typeof crypto !== 'undefined' && 'randomUUID' in crypto
           ? crypto.randomUUID()
           : `${userId}-${ids[0] ?? 'x'}`
+      mesManchesRef.current = []
       setState({ ...initialState, phase: 'connecting' })
       const { data, error } = await supabaseRef.current.rpc('create_live_duel', {
         p_subject: subject,
@@ -171,6 +190,7 @@ export function useLiveDuel(userId: string) {
   // Rival : rejoint une session par son code (l'id du duel).
   const join = useCallback(
     async (duelId: string) => {
+      mesManchesRef.current = []
       setState({ ...initialState, phase: 'connecting' })
       const { data, error } = await supabaseRef.current.rpc('join_live_duel', {
         p_id: duelId,
@@ -202,6 +222,9 @@ export function useLiveDuel(userId: string) {
   // Déclare une manche : broadcast au rival + mise à jour locale.
   const sendRound = useCallback((record: RoundRecord) => {
     const ch = channelRef.current
+    if (!mesManchesRef.current.some((x) => x.round === record.round)) {
+      mesManchesRef.current = [...mesManchesRef.current, record]
+    }
     if (ch) {
       ch.send({ type: 'broadcast', event: 'round', payload: record })
     }
@@ -277,6 +300,7 @@ export function useLiveDuel(userId: string) {
 
   const leave = useCallback(() => {
     teardown()
+    mesManchesRef.current = []
     setState(initialState)
   }, [teardown])
 

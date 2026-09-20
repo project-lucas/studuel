@@ -1,9 +1,9 @@
 import { readFileSync } from 'node:fs'
-import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import { JEUX_RETIRES, SALONS } from './jeux/catalog'
 import { PROGRAMME_GAME_ID, programmeSlug } from './jeux/programme'
 import { BAND_SPAN, SEASON_KEEP_FLOOR, TROPHY_BANDS } from './trophy-road'
+import { cheminMigration } from '@/lib/migrations-lecture'
 
 // Le miroir SQL ↔ TypeScript de la Route des trophées.
 //
@@ -15,7 +15,7 @@ import { BAND_SPAN, SEASON_KEEP_FLOOR, TROPHY_BANDS } from './trophy-road'
 // qu'aucun des deux n'a dérivé.
 
 const SQL = readFileSync(
-  join(process.cwd(), 'supabase', '238_route_des_trophees.sql'),
+  cheminMigration('238_route_des_trophees.sql'),
   'utf8',
 )
 

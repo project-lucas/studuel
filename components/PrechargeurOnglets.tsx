@@ -4,6 +4,8 @@ import { useEffect } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import type { PrefetchOptions } from 'next/dist/shared/lib/app-router-context.shared-runtime'
 import { isAppReady, onAppReady } from '@/lib/app-ready'
+import { consommerCoursePassee } from '@/lib/apres-course'
+import { estPleinEcran } from '@/lib/quiz-chrome'
 import {
   CADENCE_RONDE_MS,
   DELAI_APRES_INVALIDATION_MS,
@@ -64,6 +66,15 @@ const GESTES: Array<keyof WindowEventMap> = [
 export default function PrechargeurOnglets() {
   const router = useRouter()
   const pathname = usePathname()
+
+  // LE RETOUR D'UNE COURSE. La fin d'une course classée ne revalide plus rien
+  // (elle re-rendait la course elle-même) : c'est ici, au premier écran hors
+  // course, qu'on rafraîchit — UNE fois, quelle que soit la longueur de la
+  // chaîne de revanches. `refresh` relit la page courante et périme le cache
+  // des autres onglets, que la ronde ci-dessous recharge aussitôt.
+  useEffect(() => {
+    if (!estPleinEcran(pathname) && consommerCoursePassee()) router.refresh()
+  }, [router, pathname])
 
   useEffect(() => {
     let derniereActivite = Date.now()

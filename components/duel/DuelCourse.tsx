@@ -143,6 +143,8 @@ export default function DuelCourse({
           outcome={view.outcome}
           server={view.server}
           recorded={view.recorded}
+          envoiEchoue={view.envoiEchoue}
+          onReessayer={view.reessayer}
           me={{ name: me.name, avatar: me.avatar, score: view.me.score, goalAtMs: view.me.goalAtMs }}
           rival={{
             name: rival.name,

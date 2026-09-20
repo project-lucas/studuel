@@ -4,7 +4,6 @@ import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import {
-  canMoveChapter,
   emptyQuestionContent,
   gradeQcm,
   gradeAppariement,
@@ -18,7 +17,6 @@ import {
   normalizeQuestionContent,
   normalizeTitle,
   type AppariementContent,
-  type CourseChapter,
   type NumeriqueContent,
   type OrdreContent,
   type LibreContent,
@@ -296,121 +294,6 @@ export async function updateCourseReglages(
   return { ok: true }
 }
 
-// ------------------------------------------------------------- étiquettes ---
-
-/** Longueur maximale d'une étiquette — c'est un mot-clé, pas une phrase. */
-const MAX_TAG_LEN = 30
-
-/**
- * Crée une étiquette (ou retrouve celle qui porte déjà ce nom).
- *
- * Le doublon n'est PAS une erreur : un élève qui tape « bac » deux fois veut
- * la même étiquette, pas un message. L'index unique de la 316 le garantit en
- * base ; ici on retombe simplement dessus.
- */
-export async function creerEtiquette(label: string): Promise<OkId> {
-  const { supabase, userId } = await requireUserId()
-  if (!userId) return fail
-
-  const propre = String(label ?? '')
-    .trim()
-    .slice(0, MAX_TAG_LEN)
-  if (propre.length === 0) return fail
-
-  const { data, error } = await supabase
-    .from('carnet_tags')
-    .insert({ owner_id: userId, label: propre })
-    .select('id')
-    .single()
-
-  if (error) {
-    // 23505 = violation d'unicité : l'étiquette existe déjà, on la rend.
-    if (error.code === '23505') {
-      const { data: existante } = await supabase
-        .from('carnet_tags')
-        .select('id')
-        .eq('owner_id', userId)
-        .ilike('label', propre)
-        .maybeSingle()
-      if (existante) return { ok: true, id: String(existante.id) }
-    }
-    console.error('[carnet-cours] étiquette non créée:', error.message)
-    return fail
-  }
-  refresh()
-  return { ok: true, id: String(data.id) }
-}
-
-/** Pose ou retire une étiquette sur une question. */
-export async function basculerEtiquette(
-  courseId: string,
-  questionId: string,
-  tagId: string,
-  poser: boolean,
-): Promise<Ok> {
-  const { supabase, userId } = await requireUserId()
-  if (!userId || typeof questionId !== 'string' || typeof tagId !== 'string') {
-    return { ok: false }
-  }
-  if (!(await ownsCourse(supabase, userId, courseId))) return { ok: false }
-
-  // La question doit appartenir à CE cours, et l'étiquette à CET élève. Les
-  // policies de la 316 vérifient déjà les deux ; on refuse tôt et clairement.
-  const [{ data: question }, { data: tag }] = await Promise.all([
-    supabase
-      .from('carnet_questions')
-      .select('id')
-      .eq('id', questionId)
-      .eq('course_id', courseId)
-      .maybeSingle(),
-    supabase
-      .from('carnet_tags')
-      .select('id')
-      .eq('id', tagId)
-      .eq('owner_id', userId)
-      .maybeSingle(),
-  ])
-  if (!question || !tag) return { ok: false }
-
-  const { error } = poser
-    ? await supabase
-        .from('carnet_question_tags')
-        .upsert(
-          { question_id: questionId, tag_id: tagId },
-          { onConflict: 'question_id,tag_id' },
-        )
-    : await supabase
-        .from('carnet_question_tags')
-        .delete()
-        .eq('question_id', questionId)
-        .eq('tag_id', tagId)
-
-  if (error) {
-    console.error('[carnet-cours] étiquette non posée:', error.message)
-    return { ok: false }
-  }
-  refresh(courseId)
-  return { ok: true }
-}
-
-/** Supprime une étiquette (elle se détache de toutes ses questions). */
-export async function supprimerEtiquette(tagId: string): Promise<Ok> {
-  const { supabase, userId } = await requireUserId()
-  if (!userId || typeof tagId !== 'string') return { ok: false }
-
-  const { error } = await supabase
-    .from('carnet_tags')
-    .delete()
-    .eq('id', tagId)
-    .eq('owner_id', userId)
-  if (error) {
-    console.error('[carnet-cours] étiquette non supprimée:', error.message)
-    return { ok: false }
-  }
-  refresh()
-  return { ok: true }
-}
-
 // --------------------------------------------------------------- chapitres ---
 
 // Prochaine position libre dans un conteneur (fin de liste).
@@ -501,171 +384,6 @@ export async function renameChapter(
   }
   refresh(courseId)
   return { ok: true }
-}
-
-// Déplace un chapitre sous un autre parent (null = racine), avec validation
-// anti-cycle et de profondeur via la logique pure.
-export async function moveChapter(
-  courseId: string,
-  chapterId: string,
-  newParentId: string | null,
-): Promise<Ok> {
-  const { supabase, userId } = await requireUserId()
-  if (!userId || typeof chapterId !== 'string') return { ok: false }
-  if (!(await ownsCourse(supabase, userId, courseId))) return { ok: false }
-
-  const { data: rows } = await supabase
-    .from('carnet_chapters')
-    .select('id, parent_chapter_id, title, position')
-    .eq('course_id', courseId)
-  const chapters: CourseChapter[] = (rows ?? []).map((r) => ({
-    id: String(r.id),
-    parentChapterId: r.parent_chapter_id ? String(r.parent_chapter_id) : null,
-    title: String(r.title),
-    position: Number(r.position),
-  }))
-  if (!canMoveChapter(chapters, chapterId, newParentId)) return { ok: false }
-
-  const position = await nextPosition(
-    supabase,
-    'carnet_chapters',
-    courseId,
-    'parent_chapter_id',
-    newParentId,
-  )
-  const { error } = await supabase
-    .from('carnet_chapters')
-    .update({ parent_chapter_id: newParentId, position })
-    .eq('id', chapterId)
-    .eq('course_id', courseId)
-  if (error) {
-    console.error('[carnet-cours] déplacement du chapitre impossible:', error.message)
-    return { ok: false }
-  }
-  refresh(courseId)
-  return { ok: true }
-}
-
-// Duplique un chapitre : son sous-arbre complet (sous-chapitres + questions).
-export async function duplicateChapter(
-  courseId: string,
-  chapterId: string,
-): Promise<Ok> {
-  const { supabase, userId } = await requireUserId()
-  if (!userId || typeof chapterId !== 'string') return { ok: false }
-  if (!(await ownsCourse(supabase, userId, courseId))) return { ok: false }
-
-  const [{ data: chapterRows }, { data: questionRows }] = await Promise.all([
-    supabase
-      .from('carnet_chapters')
-      .select('id, parent_chapter_id, title, position')
-      .eq('course_id', courseId),
-    supabase
-      .from('carnet_questions')
-      .select('id, chapter_id, type, position, content')
-      .eq('course_id', courseId),
-  ])
-  const chapters = chapterRows ?? []
-  const source = chapters.find((c) => String(c.id) === chapterId)
-  if (!source) return { ok: false }
-
-  // Sous-arbre du chapitre source (BFS).
-  const subtreeIds = new Set<string>([chapterId])
-  let frontier = [chapterId]
-  while (frontier.length > 0) {
-    const next: string[] = []
-    for (const c of chapters) {
-      const parent = c.parent_chapter_id ? String(c.parent_chapter_id) : null
-      if (parent && frontier.includes(parent) && !subtreeIds.has(String(c.id))) {
-        subtreeIds.add(String(c.id))
-        next.push(String(c.id))
-      }
-    }
-    frontier = next
-  }
-
-  // Copie du chapitre racine puis, niveau par niveau, de ses descendants.
-  const position = await nextPosition(
-    supabase,
-    'carnet_chapters',
-    courseId,
-    'parent_chapter_id',
-    source.parent_chapter_id ? String(source.parent_chapter_id) : null,
-  )
-  const { data: rootCopy, error: rootErr } = await supabase
-    .from('carnet_chapters')
-    .insert({
-      course_id: courseId,
-      parent_chapter_id: source.parent_chapter_id,
-      title: `${String(source.title)} (copie)`.slice(0, 120),
-      position,
-    })
-    .select('id')
-    .single()
-  if (rootErr || !rootCopy) {
-    console.error('[carnet-cours] duplication impossible:', rootErr?.message)
-    return { ok: false }
-  }
-
-  // ancien id → nouvel id
-  const idMap = new Map<string, string>([[chapterId, String(rootCopy.id)]])
-  // Une copie qui perd des morceaux ne doit pas se présenter comme réussie.
-  let incomplet = false
-  let level = [chapterId]
-  while (level.length > 0) {
-    const children = chapters.filter((c) => {
-      const parent = c.parent_chapter_id ? String(c.parent_chapter_id) : null
-      return parent !== null && level.includes(parent)
-    })
-    for (const child of children) {
-      const parentNewId = idMap.get(String(child.parent_chapter_id))
-      if (!parentNewId) continue
-      const { data: copy } = await supabase
-        .from('carnet_chapters')
-        .insert({
-          course_id: courseId,
-          parent_chapter_id: parentNewId,
-          title: String(child.title),
-          position: Number(child.position),
-        })
-        .select('id')
-        .single()
-      if (copy) idMap.set(String(child.id), String(copy.id))
-      // Un sous-chapitre non copié emporte TOUTE sa descendance en silence :
-      // on retient l'incident pour ne pas annoncer une copie complète.
-      else incomplet = true
-    }
-    level = children.map((c) => String(c.id))
-  }
-
-  // Copie des questions du sous-arbre.
-  const toCopy = (questionRows ?? []).filter(
-    (q) => q.chapter_id && subtreeIds.has(String(q.chapter_id)),
-  )
-  if (toCopy.length > 0) {
-    const inserts = toCopy.flatMap((q) => {
-      const newChapterId = idMap.get(String(q.chapter_id))
-      if (!newChapterId) return []
-      return [
-        {
-          course_id: courseId,
-          chapter_id: newChapterId,
-          type: q.type,
-          position: Number(q.position),
-          content: q.content,
-        },
-      ]
-    })
-    const { error } = await supabase.from('carnet_questions').insert(inserts)
-    if (error) {
-      console.error('[carnet-cours] copie des questions impossible:', error.message)
-      incomplet = true
-    }
-  }
-  refresh(courseId)
-  // La copie existe mais lui manque des morceaux : le dire, plutôt que laisser
-  // l'élève découvrir tout seul, plus tard, qu'il en manque.
-  return { ok: !incomplet }
 }
 
 // Supprime un chapitre — ses sous-chapitres et questions partent en cascade
@@ -924,44 +642,6 @@ export async function moveQuestion(
   return { ok: true }
 }
 
-export async function duplicateQuestion(
-  courseId: string,
-  questionId: string,
-): Promise<Ok> {
-  const { supabase, userId } = await requireUserId()
-  if (!userId || typeof questionId !== 'string') return { ok: false }
-  if (!(await ownsCourse(supabase, userId, courseId))) return { ok: false }
-
-  const { data: source } = await supabase
-    .from('carnet_questions')
-    .select('chapter_id, type, content')
-    .eq('id', questionId)
-    .eq('course_id', courseId)
-    .maybeSingle()
-  if (!source) return { ok: false }
-
-  const position = await nextPosition(
-    supabase,
-    'carnet_questions',
-    courseId,
-    'chapter_id',
-    source.chapter_id ? String(source.chapter_id) : null,
-  )
-  const { error } = await supabase.from('carnet_questions').insert({
-    course_id: courseId,
-    chapter_id: source.chapter_id,
-    type: source.type,
-    position,
-    content: source.content,
-  })
-  if (error) {
-    console.error('[carnet-cours] duplication de la question impossible:', error.message)
-    return { ok: false }
-  }
-  refresh(courseId)
-  return { ok: true }
-}
-
 export async function deleteQuestion(
   courseId: string,
   questionId: string,
@@ -981,33 +661,6 @@ export async function deleteQuestion(
   }
   refresh(courseId)
   return { ok: true }
-}
-
-// Réordonne les questions d'un conteneur (racine ou chapitre).
-export async function reorderQuestions(
-  courseId: string,
-  orderedIds: string[],
-): Promise<Ok> {
-  const { supabase, userId } = await requireUserId()
-  if (!userId || !Array.isArray(orderedIds)) return { ok: false }
-  if (!(await ownsCourse(supabase, userId, courseId))) return { ok: false }
-
-  if (orderedIds.length > MAX_REORDER) return { ok: false }
-
-  // Même raison que `reorderChapters` : en parallèle, pas un par un.
-  const results = await Promise.all(
-    orderedIds.map((id, i) =>
-      typeof id === 'string'
-        ? supabase
-            .from('carnet_questions')
-            .update({ position: i })
-            .eq('id', id)
-            .eq('course_id', courseId)
-        : Promise.resolve({ error: null }),
-    ),
-  )
-  refresh(courseId)
-  return { ok: allSucceeded(results, 'réordonnancement des questions') }
 }
 
 // ---------------------------------------------------------------- révision ---

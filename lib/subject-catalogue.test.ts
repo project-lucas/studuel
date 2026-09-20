@@ -1,7 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { readFileSync, readdirSync } from 'node:fs'
-import { fileURLToPath } from 'node:url'
-import path from 'node:path'
+import { readFileSync } from 'node:fs'
 import { GRADE_LEVELS, HORS_NIVEAU, type SubjectCategory } from '@/lib/types'
 import {
   hasSubjectIcon,
@@ -10,24 +8,7 @@ import {
 } from '@/lib/subject-style'
 import { programmeGroups } from '@/lib/subject-groups'
 import { cycleOf, isTechno } from '@/lib/grades'
-
-// Garde du CATALOGUE DES MATIÈRES.
-//
-// Une matière n'apparaît dans une classe que si `subjects.levels` contient ce
-// niveau. C'est exactement ce qui a fait disparaître Sport de la 6e : la
-// migration existait, le niveau était bon, mais rien ne le vérifiait. Ce test
-// rejoue les migrations `subjects` dans l'ordre et contrôle le catalogue final :
-// chaque classe propose assez de matières, et chaque matière est affichable
-// (icône, thème de couleur, catégorie connue).
-//
-// Il ne remplace pas l'exécution des migrations en base — il garantit que le
-// SQL écrit dit bien ce qu'on croit qu'il dit.
-
-const SUPABASE_DIR = path.join(
-  path.dirname(fileURLToPath(import.meta.url)),
-  '..',
-  'supabase',
-)
+import { cheminMigration, nomsDesMigrations } from '@/lib/migrations-lecture'
 
 type Row = {
   slug: string
@@ -55,7 +36,7 @@ const parseLevels = (raw: string): string[] =>
     .filter(Boolean)
 
 function migrationFiles(): string[] {
-  return readdirSync(SUPABASE_DIR)
+  return nomsDesMigrations()
     .filter((f) => f.endsWith('.sql'))
     .sort()
 }
@@ -68,7 +49,7 @@ function buildCatalogue(): Map<string, Row> {
   const rows = new Map<string, Row>()
 
   for (const file of migrationFiles()) {
-    const sql = readFileSync(path.join(SUPABASE_DIR, file), 'utf8')
+    const sql = readFileSync(cheminMigration(file), 'utf8')
     if (!sql.includes('public.subjects')) continue
 
     // --- INSERT : on ne lit que les blocs qui visent bien `subjects`.

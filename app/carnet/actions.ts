@@ -3,7 +3,6 @@
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
-import { normaliserPreferences, type PreferencesCarnet } from '@/lib/carnet/preferences'
 
 // -----------------------------------------------------------------------------
 // LES GESTES DU CARNET, À L'ÉCHELLE DU CARNET : régler ses préférences,
@@ -33,25 +32,6 @@ function colonneAbsente(error: { code?: string; message: string } | null): boole
 }
 
 const MISE_A_JOUR = 'Cette personnalisation arrive bientôt sur ton compte — mise à jour en cours.'
-
-/** Enregistre les préférences du carnet (normalisées ici, jamais telles quelles). */
-export async function enregistrerPreferencesCarnet(brut: unknown): Promise<ResultatCarnet> {
-  const s = await session()
-  if (!s) return { ok: false, message: 'Connecte-toi pour personnaliser ton carnet.' }
-
-  const prefs: PreferencesCarnet = normaliserPreferences(brut)
-  const { error } = await s.supabase
-    .from('profiles')
-    .update({ carnet_prefs: prefs })
-    .eq('id', s.userId)
-
-  if (error) {
-    console.error('[carnet] préférences refusées :', error.message)
-    return { ok: false, message: colonneAbsente(error) ? MISE_A_JOUR : 'Les réglages n’ont pas pu être enregistrés.' }
-  }
-  revalidatePath('/carnet')
-  return { ok: true }
-}
 
 /** Une écriture sur UN dossier de l'élève, avec la vérification de propriété. */
 async function modifierCours(id: string, patch: Record<string, unknown>): Promise<ResultatCarnet> {

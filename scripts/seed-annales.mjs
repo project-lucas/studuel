@@ -1,7 +1,7 @@
 // Usine à annales : transforme les sessions de `scripts/annales/*.mjs` en une
 // migration SQL idempotente pour `exam_papers` (migration 236).
 //
-//   node scripts/seed-annales.mjs --num 237 --sessions session-2026 > supabase/237_….sql
+//   node scripts/seed-annales.mjs --num 237 --sessions session-2026 > supabase/contenu/237_….sql
 //
 // MÊME PRINCIPE QUE `seed-contenu.mjs`, et pour les mêmes raisons : les UUID
 // sont DÉRIVÉS du contenu (SHA-1), donc stables d'une génération à l'autre —

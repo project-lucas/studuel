@@ -22,6 +22,7 @@ import {
 import { activeSchoolId } from '@/lib/clan'
 import { readRowTolerant } from '@/lib/profile-read'
 import { parseGradeStandings, type GradeStandings } from '@/lib/percentile'
+import { lireBannieresGratuites, lireCatalogueBadges } from '@/lib/vitrines-server'
 
 // Tout ce dont la carte + la modale de profil ont besoin, sérialisable.
 export type ProfileData = {
@@ -61,51 +62,69 @@ const str = (v: unknown): string => (typeof v === 'string' ? v : '')
 // connecté. Attribue d'abord les badges mérités (recalcul serveur), puis lit
 // l'état à jour — comme le vestiaire réclame ses déblocages à l'ouverture.
 export async function getProfileData(): Promise<ProfileData | null> {
-  const supabase = await createClient()
-  const user = await getCurrentUser()
+  const [supabase, user] = await Promise.all([createClient(), getCurrentUser()])
   if (!user) return null
 
-  // 1) Attribution serveur des badges mérités (renvoie les slugs neufs).
-  const { data: awarded } = await supabase.rpc('award_earned_badges')
-  const newlyUnlocked = Array.isArray(awarded)
-    ? awarded.map((s) => str(s)).filter(Boolean)
-    : []
+  // UNE SEULE VAGUE (19/09/2026, chantier latence). Le profil de jeu en
+  // enchaînait trois sur le chemin critique de l'arène ET de Moi : l'attribution
+  // des badges, puis les lectures, puis l'école. Chaque vague coûte ~60 ms
+  // depuis cdg1. Désormais tout part ensemble :
+  //   · l'ATTRIBUTION des badges tourne en parallèle des lectures ; ce qu'elle
+  //     vient de débloquer est fusionné plus bas (`newlyUnlocked`), donc la
+  //     célébration et l'état « acquis » restent justes même si la lecture de
+  //     `user_badges` l'a devancée ;
+  //   · l'ÉCOLE est chaînée sur le seul profil : elle part dès qu'il arrive,
+  //     pendant que les RPC lourdes (stats, place dans le niveau) tournent ;
+  //   · le catalogue des badges et les bannières gratuites viennent du cache
+  //     serveur (lib/vitrines-server) — identiques pour tous les élèves.
+  //
+  // Lecture TOLÉRANTE du profil : `primaire_school_id` n'existe qu'après la
+  // migration 242. Dans un `select` ordinaire, une colonne absente fait échouer
+  // TOUTE la requête — le pseudo, la classe et l'avatar disparaîtraient avec
+  // elle. Le lecteur tolérant réessaie sans la colonne fautive.
+  const baseP = readRowTolerant<{
+    full_name: string | null
+    grade_level: string | null
+    avatar: unknown
+    primaire_school_id: string | null
+    college_school_id: string | null
+    lycee_school_id: string | null
+  }>(supabase, 'profiles', 'id', user.id, [
+    'full_name',
+    'grade_level',
+    'avatar',
+    'primaire_school_id',
+    'college_school_id',
+    'lycee_school_id',
+  ])
+  // École courante (nom seulement) selon la classe.
+  const schoolNameP = baseP.then(async (base): Promise<string | null> => {
+    const schoolId = activeSchoolId(base, base?.grade_level ? str(base.grade_level) : null)
+    if (!schoolId) return null
+    const { data: school } = await supabase
+      .from('schools')
+      .select('name')
+      .eq('id', schoolId)
+      .maybeSingle()
+    return school?.name ? str(school.name) : null
+  })
 
-  // 2) Stats d'affichage (RPC unique), identité de base + colonnes profil (200),
-  //    catalogue de badges + badges de l'élève, bannières équipables — TOUT en
-  //    parallèle. Les bannières faisaient une vague à part, après celle-ci,
-  //    alors qu'elles ne dépendent de rien d'autre que de l'élève : un
-  //    aller-retour de moins sur le chemin critique de l'arène.
   const [
+    { data: awarded },
     { data: statsRaw },
-    { data: base },
+    base,
     { data: cosmetics },
-    { data: catalog },
+    catalog,
     { data: mine },
     { data: standingsRow },
-    { data: freeBanners },
+    freeBanners,
     { data: ownedBanners },
+    schoolName,
   ] = await Promise.all([
+    // Attribution serveur des badges mérités (renvoie les slugs neufs).
+    supabase.rpc('award_earned_badges'),
     supabase.rpc('profile_stats'),
-    // Lecture TOLÉRANTE : `primaire_school_id` n'existe qu'après la migration
-    // 242. Dans un `select` ordinaire, une colonne absente fait échouer TOUTE
-    // la requête — le pseudo, la classe et l'avatar disparaîtraient avec elle.
-    // Le lecteur tolérant réessaie sans la colonne fautive (cf. lib/profile-read).
-    readRowTolerant<{
-      full_name: string | null
-      grade_level: string | null
-      avatar: unknown
-      primaire_school_id: string | null
-      college_school_id: string | null
-      lycee_school_id: string | null
-    }>(supabase, 'profiles', 'id', user.id, [
-      'full_name',
-      'grade_level',
-      'avatar',
-      'primaire_school_id',
-      'college_school_id',
-      'lycee_school_id',
-    ]).then((data) => ({ data })),
+    baseP,
     // Colonnes de la migration 200 isolées : si elle n'est pas encore passée,
     // seule cette lecture échoue (le reste du profil s'affiche quand même).
     supabase
@@ -113,7 +132,7 @@ export async function getProfileData(): Promise<ProfileData | null> {
       .select('gamertag, equipped_badges, profile_banner')
       .eq('id', user.id)
       .maybeSingle(),
-    supabase.from('badges').select('id, slug, title, description, icon, condition'),
+    lireCatalogueBadges(supabase),
     supabase.from('user_badges').select('badge_id, unlocked_at').eq('user_id', user.id),
     // Place de l'élève parmi son niveau (223) : ce qui traduit « 3 000
     // trophées » en « top 2 % des 3e ». RPC SECURITY DEFINER obligatoire — la
@@ -121,17 +140,16 @@ export async function getProfileData(): Promise<ProfileData | null> {
     supabase.rpc('my_grade_standings'),
     // Bannières équipables : les gratuites d'office (price + unlock null) et
     // celles que l'élève possède (user_avatar_items), catégorie 'banner'.
-    supabase
-      .from('avatar_items')
-      .select('asset_key')
-      .eq('category', 'banner')
-      .is('price', null)
-      .is('unlock_condition', null),
+    lireBannieresGratuites(supabase),
     supabase
       .from('user_avatar_items')
       .select('avatar_items(asset_key, category)')
       .eq('user_id', user.id),
+    schoolNameP,
   ])
+  const newlyUnlocked = Array.isArray(awarded)
+    ? awarded.map((s) => str(s)).filter(Boolean)
+    : []
 
   const availableBanners = Array.from(
     new Set([
@@ -151,26 +169,26 @@ export async function getProfileData(): Promise<ProfileData | null> {
   const firstName = str(base?.full_name).split(' ')[0] || 'Moi'
   const gamertag = cosmetics?.gamertag ? str(cosmetics.gamertag) : null
 
-  // École courante (nom seulement) selon la classe.
   const gradeLevel = base?.grade_level ? str(base.grade_level) : null
-  const schoolId = activeSchoolId(base, gradeLevel)
-  let schoolName: string | null = null
-  if (schoolId) {
-    const { data: school } = await supabase
-      .from('schools')
-      .select('name')
-      .eq('id', schoolId)
-      .maybeSingle()
-    schoolName = school?.name ? str(school.name) : null
-  }
 
-  // Badges : fusion catalogue + acquis, condition typée.
+  // Badges : fusion catalogue + acquis, condition typée. Un badge que
+  // l'attribution vient de débloquer compte comme acquis même si la lecture de
+  // `user_badges`, partie en même temps, ne l'a pas encore vu.
   const earnedMap = new Map<string, string>()
   for (const row of Array.isArray(mine) ? mine : []) {
     const o = row as Record<string, unknown>
     if (o.badge_id) earnedMap.set(str(o.badge_id), str(o.unlocked_at) || '')
   }
-  const badges: BadgeState[] = (Array.isArray(catalog) ? catalog : [])
+  if (newlyUnlocked.length > 0) {
+    const maintenant = new Date().toISOString()
+    for (const row of catalog) {
+      const id = str(row.id)
+      if (id && newlyUnlocked.includes(str(row.slug)) && !earnedMap.has(id)) {
+        earnedMap.set(id, maintenant)
+      }
+    }
+  }
+  const badges: BadgeState[] = catalog
     .map((row) => {
       const o = row as Record<string, unknown>
       const condition = parseCondition(o.condition)
@@ -306,24 +324,6 @@ export async function equipProfileBanner(
     p_banner: String(banner),
   })
   if (error) return { ok: false, error: 'Bannière non débloquée.' }
-
-  revalidatePath('/defi')
-  return { ok: true }
-}
-
-// Achète une bannière du profil (réutilise l'économie du vestiaire : prix lu en
-// base par la RPC, jamais reçu du client).
-export async function purchaseProfileBanner(
-  itemId: string,
-): Promise<{ ok: boolean; error?: string }> {
-  const supabase = await createClient()
-  const user = await getCurrentUser()
-  if (!user) return { ok: false, error: 'Connecte-toi pour acheter une bannière.' }
-
-  const { error } = await supabase.rpc('purchase_avatar_item', {
-    p_item_id: String(itemId),
-  })
-  if (error) return { ok: false, error: 'Achat impossible (pièces insuffisantes ?).' }
 
   revalidatePath('/defi')
   return { ok: true }

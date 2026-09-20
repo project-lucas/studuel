@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { RotateCcw, Shuffle, Users } from 'lucide-react'
+import { RefreshCw, RotateCcw, Shuffle, Users } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import AvatarRender from '@/components/avatar/AvatarRender'
 import TropheeAnime from '@/components/amis/TropheeAnime'
@@ -10,7 +10,7 @@ import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
 import type { AvatarConfig } from '@/lib/avatar'
 import { cn } from '@/lib/utils'
 import { outcomeCaption, outcomeTitle, type CourseOutcome } from '@/lib/duel/course'
-import type { DuelCourseOutcome } from '@/app/defi/duel-course-actions'
+import type { DuelCourseOutcome } from '@/lib/duel/fin-course'
 import styles from './Course.module.css'
 
 export type ResultCamp = {
@@ -35,6 +35,8 @@ export default function DuelResult({
   outcome,
   server,
   recorded,
+  envoiEchoue = false,
+  onReessayer,
   me,
   rival,
   bestCombo,
@@ -46,6 +48,10 @@ export default function DuelResult({
   outcome: CourseOutcome
   server: DuelCourseOutcome | null
   recorded: boolean
+  /** L'envoi a échoué malgré ses relances : rien n'est écrit. */
+  envoiEchoue?: boolean
+  /** Renvoie la même course (jamais payée deux fois). */
+  onReessayer?: () => void
   me: ResultCamp
   rival: ResultCamp
   bestCombo: number
@@ -55,10 +61,14 @@ export default function DuelResult({
   /** L'illustration de la matière, en médaillon sur la carte. */
   vignette?: string | null
 }) {
-  const verdict = server?.outcome ?? outcome
+  // Le verdict du SERVEUR ne remplace celui de l'écran que s'il l'a VÉRIFIÉ.
+  // Un rival introuvable, une session expirée : le serveur n'en sait pas plus
+  // que l'écran, et « Victoire ! » ne doit pas basculer en « Défaite » pour ça.
+  const verifie = server?.statut === 'verifie'
+  const verdict = verifie && server ? server.outcome : outcome
   const won = verdict !== 'loss'
   const trophies = server?.trophies ?? null
-  const rivalFinal = server?.rival ?? { score: rival.score, goalAtMs: rival.goalAtMs }
+  const rivalFinal = (verifie ? server?.rival : null) ?? { score: rival.score, goalAtMs: rival.goalAtMs }
 
   return (
     // La carte au MILIEU de l'écran, sur le fond opaque de la course — plus
@@ -132,12 +142,19 @@ export default function DuelResult({
                 ) : null}
               </span>
             </>
-          ) : (
+          ) : envoiEchoue ? (
+            // Rien n'est écrit : on le dit, et on propose de renvoyer. La course
+            // porte son identifiant — la renvoyer ne la paie jamais deux fois.
             <span className="course-fin-attente">
-              {server?.rival === null
-                ? 'Adversaire non vérifié : course comptée, trophées inchangés.'
-                : 'Résultat non confirmé — tes trophées apparaîtront au prochain chargement.'}
+              Connexion perdue : ta course n’est pas encore enregistrée.
+              {onReessayer ? (
+                <Button type="button" variant="secondary" size="sm" className="mt-2 font-bold" onClick={onReessayer}>
+                  <RefreshCw className="mr-1.5 size-4" aria-hidden="true" /> Réessayer
+                </Button>
+              ) : null}
             </span>
+          ) : (
+            <span className="course-fin-attente">{messageSansTrophees(server)}</span>
           )}
         </div>
 
@@ -181,6 +198,23 @@ export default function DuelResult({
       </div>
     </div>
   )
+}
+
+/** Pourquoi les trophées n'ont pas bougé — ce que le serveur a vraiment établi. */
+function messageSansTrophees(server: DuelCourseOutcome | null): string {
+  if (!server) return 'Résultat non confirmé : réessaie depuis l’arène.'
+  switch (server.statut) {
+    case 'non_verifie':
+      return 'Adversaire non vérifié : course comptée, trophées inchangés.'
+    case 'deja_compte':
+      return 'Course déjà enregistrée : tes trophées sont à jour dans l’arène.'
+    case 'non_connecte':
+      return 'Session expirée : reconnecte-toi pour que tes courses comptent.'
+    default:
+      return server.trophiesPause
+        ? 'Pause trophées : trop de courses classées en une heure. Reviens un peu plus tard.'
+        : 'Trophées non enregistrés cette fois : la course, elle, est comptée.'
+  }
 }
 
 function Camp({

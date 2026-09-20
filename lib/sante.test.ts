@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { existsSync, readFileSync, readdirSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import {
@@ -9,12 +9,13 @@ import {
   restantes,
   type Verdict,
 } from '@/lib/sante'
+import { nomsDesMigrations } from '@/lib/migrations-lecture'
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..')
 
 describe('MIGRATIONS_SANTE — le catalogue colle au dépôt', () => {
   it('chaque fichier listé existe dans supabase/', () => {
-    const files = new Set(readdirSync(path.join(ROOT, 'supabase')))
+    const files = new Set(nomsDesMigrations())
     for (const m of MIGRATIONS_SANTE) {
       expect(files.has(m.fichier), `${m.fichier} introuvable`).toBe(true)
     }
@@ -34,7 +35,7 @@ describe('MIGRATIONS_SANTE — le catalogue colle au dépôt', () => {
     // d'anglais, remplacée par la 243) laisse un trou de numérotation qui est
     // volontaire. Ce qui doit rester vrai, c'est qu'aucun fichier du dépôt
     // n'échappe à la surveillance.
-    const duDepot = readdirSync(path.join(ROOT, 'supabase'))
+    const duDepot = nomsDesMigrations()
       .map((f) => Number(f.slice(0, 3)))
       .filter((n) => Number.isFinite(n) && n >= 192)
       .map(String)

@@ -1,6 +1,7 @@
 import { toutLire } from '@/lib/postgrest-pages'
 import type { SupabaseClient } from '@supabase/supabase-js'
 import { getChapterMastery } from '@/lib/mastery-server'
+import type { ChapterMastery } from '@/lib/mastery'
 import {
   getGradeQuizzesCached,
   getLessonChapterPairsCached,
@@ -50,6 +51,11 @@ export async function resolveCurrentChapter(
   userId: string,
   grade: string,
   today: string = toDayKey(new Date()),
+  /**
+   * La maîtrise, quand l'appelant la lit déjà (l'arène) : sinon elle était
+   * relue ici, deux fois la même agrégation pour une seule page.
+   */
+  masteryDejaLue?: Promise<ChapterMastery>,
 ): Promise<ResolvedChapter> {
   // UNE SEULE VAGUE. La fonction en enchaînait trois — le vivier de quiz, puis
   // les leçons de ces quiz, puis les chapitres et le comptage des questions —
@@ -67,7 +73,7 @@ export async function resolveCurrentChapter(
     questionCountPairs,
   ] = await Promise.all([
     getGradeQuizzesCached(grade, HORS_NIVEAU),
-    getChapterMastery(supabase, userId),
+    masteryDejaLue ?? getChapterMastery(supabase, userId),
     supabase
       .from('controles')
       .select(

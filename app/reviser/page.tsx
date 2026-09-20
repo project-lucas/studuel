@@ -174,10 +174,15 @@ export default async function ReviserPage() {
     // Questions des cours du carnet (type + contenu : il faut distinguer les
     // brouillons des questions jouables), page par page — PostgREST plafonne
     // à 1 000 lignes sans le dire, la RLS limite aux cours de l'élève.
+    // BORNÉ AUX COURS DE L'ÉLÈVE (19/09/2026) : la RLS seule filtrait APRÈS
+    // coup — sans filtre, Postgres parcourait les questions de TOUS les
+    // élèves pour tester chacune. La jointure sur `carnet_courses.owner_id`
+    // part de l'index des cours de l'élève.
     toutLire<{ id: string; type: string; content: unknown }>((from, to) =>
       supabase
         .from('carnet_questions')
-        .select('id, type, content')
+        .select('id, type, content, carnet_courses!inner(owner_id)')
+        .eq('carnet_courses.owner_id', user.id)
         .order('id', { ascending: true })
         .range(from, to)
         .returns<{ id: string; type: string; content: unknown }[]>(),

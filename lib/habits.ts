@@ -18,7 +18,7 @@ export const PLANIFIER_CATALOG_ID = '55555555-5555-4555-8555-555555555509'
 export const REVISION_CATALOG_ID = '55555555-5555-4555-8555-555555555502'
 
 // Habitude « Test sur trajets » (auto-validée quand un quiz/défi est joué
-// pendant un créneau de trajet). Voir supabase/010_moi.sql.
+// pendant un créneau de trajet). Voir supabase/schema/010_moi.sql.
 export const COMMUTE_CATALOG_ID = '55555555-5555-4555-8555-555555555503'
 
 // Les 4 tables qui comptent comme « session de travail » (série, temps, révision).
@@ -118,6 +118,20 @@ export type AutoHabitLog = {
   auto_validated: true
 }
 
+/**
+ * Les habitudes AUTOMATIQUES planifiées aujourd'hui — les seules que les
+ * sessions du jour peuvent cocher. Vide = inutile de lire la moindre session.
+ */
+export function habitudesAutoDuJour(habits: Habit[], today: string): Habit[] {
+  const todayIdx = dayIndexOf(today)
+  return habits.filter(
+    (h) =>
+      (h.habit_catalog?.validation_type === 'auto_revision' ||
+        h.habit_catalog?.validation_type === 'auto_commute') &&
+      habitDays(h).includes(todayIdx), // seulement si planifiée aujourd'hui
+  )
+}
+
 // Décision pure : quelles habitudes automatiques sont validées aujourd'hui, au
 // vu des sessions de la journée. Isolée de l'accès base pour être testable —
 // c'est ici que vit la règle, `syncAutoHabits` ne fait plus que l'écrire.
@@ -128,13 +142,7 @@ export function autoHabitLogs(
   sessions: SessionsByKind,
   today: string,
 ): AutoHabitLog[] {
-  const todayIdx = dayIndexOf(today)
-  const autoHabits = habits.filter(
-    (h) =>
-      (h.habit_catalog?.validation_type === 'auto_revision' ||
-        h.habit_catalog?.validation_type === 'auto_commute') &&
-      habitDays(h).includes(todayIdx), // seulement si planifiée aujourd'hui
-  )
+  const autoHabits = habitudesAutoDuJour(habits, today)
   if (autoHabits.length === 0) return []
 
   // Les listes reçues couvrent TOUT l'historique (la page les charge déjà pour
@@ -281,6 +289,18 @@ export async function validateRevisionToday(
   const today = toDayKey(new Date())
   if (!habitDays(habit).includes(dayIndexOf(today))) return // pas prévue ce jour
 
+  // Déjà cochée aujourd'hui : rien à recompter. Cette fonction tourne à CHAQUE
+  // fin de partie ; sans cette sortie, chacune relançait quatre comptages
+  // alors que la journée était validée depuis la première.
+  const { data: dejaFait } = await supabase
+    .from('habit_logs')
+    .select('id')
+    .eq('habit_id', habit.id)
+    .eq('date', today)
+    .eq('completed', true)
+    .limit(1)
+  if (Array.isArray(dejaFait) && dejaFait.length > 0) return
+
   const target = Number(
     (habit.target as { sessions?: unknown }).sessions ??
       (habit.habit_catalog?.default_target as { sessions?: unknown })?.sessions ??
@@ -367,25 +387,6 @@ export function longestRun(dayKeys: Set<string>): number {
       cursor.setUTCDate(cursor.getUTCDate() + 1)
     }
     best = Math.max(best, length)
-  }
-  return best
-}
-
-// Plus longue habitude ancrée : meilleure série de logs complétés, toutes
-// habitudes confondues. Renvoie aussi le nom de l'habitude.
-export function longestAnchored(
-  habits: Habit[],
-  logs: HabitLog[],
-): { days: number; title: string | null } {
-  let best = { days: 0, title: null as string | null }
-  for (const habit of habits) {
-    const days = new Set(
-      logs.filter((l) => l.habit_id === habit.id && l.completed).map((l) => l.date),
-    )
-    const run = longestRun(days)
-    if (run > best.days) {
-      best = { days: run, title: habit.habit_catalog?.title ?? null }
-    }
   }
   return best
 }

@@ -145,71 +145,41 @@ export async function loadQuestionStates(
 ): Promise<Map<string, QuestionState>> {
   if (questionIds.length === 0) return new Map()
 
-  const { data, error } = await supabase
-    .from('review_items')
-    .select(REVIEW_COLUMNS)
-    .eq('user_id', userId)
-    .eq('item_kind', QUESTION_KIND)
-    .in('item_id', [...questionIds].slice(0, MAX_POOL))
-    .returns<ReviewRow[]>()
+  // PAR PAQUETS (19/09/2026). Le filtre `.in()` voyage dans l'URL d'un GET :
+  // 600 identifiants font ~23 Ko d'URL, au-delà de ce que la passerelle de
+  // Supabase accepte — la lecture échouait alors en entier, en silence, et le
+  // tirage perdait toutes les échéances de l'élève. Des paquets de 150 (~6 Ko)
+  // partent en parallèle ; un paquet refusé n'emporte que lui.
+  const ids = [...questionIds].slice(0, MAX_POOL)
+  const paquets: string[][] = []
+  for (let i = 0; i < ids.length; i += IDS_PAR_REQUETE) {
+    paquets.push(ids.slice(i, i + IDS_PAR_REQUETE))
+  }
+  const reponses = await Promise.all(
+    paquets.map((paquet) =>
+      supabase
+        .from('review_items')
+        .select(REVIEW_COLUMNS)
+        .eq('user_id', userId)
+        .eq('item_kind', QUESTION_KIND)
+        .in('item_id', paquet)
+        .returns<ReviewRow[]>(),
+    ),
+  )
 
-  if (error) {
-    if (!isMissingSchemaObject(error)) {
-      console.error('[questions] états indisponibles:', error.message)
+  const states = new Map<string, QuestionState>()
+  for (const { data, error } of reponses) {
+    if (error) {
+      if (!isMissingSchemaObject(error)) {
+        console.error('[questions] états indisponibles:', error.message)
+      }
+      continue
     }
-    return new Map()
+    for (const row of data ?? []) states.set(row.item_id, rowToState(row))
   }
-
-  return new Map((data ?? []).map((row) => [row.item_id, rowToState(row)]))
+  return states
 }
 
-// -------------------------------------------------------------------- écriture
+/** Identifiants par requête pour un filtre `.in()` (taille d'URL, cf. plus haut). */
+const IDS_PAR_REQUETE = 150
 
-/**
- * Écrit un lot d'états. UN SEUL appel par session : c'est la contrepartie du
- * cache local (cf. `store.ts`), et la raison pour laquelle le moteur encaisse
- * les réponses au lieu de les pousser une par une.
- *
- * `due_date` n'est PAS écrite : le trigger de la 239 la dérive de `due_at`. Deux
- * écrivains sur la même échéance finiraient par diverger, et c'est précisément
- * ce que la migration corrige.
- */
-export async function saveQuestionStates(
-  supabase: SupabaseClient,
-  userId: string,
-  states: readonly QuestionState[],
-): Promise<boolean> {
-  if (states.length === 0) return true
-
-  const rows = states.map((s) => ({
-    user_id: userId,
-    item_kind: QUESTION_KIND,
-    item_id: s.questionId,
-    subject: s.subjectId,
-    chapter_id: s.chapterId,
-    level: s.level,
-    box: s.box,
-    times_seen: s.timesSeen,
-    times_correct: s.timesCorrect,
-    times_wrong: s.timesWrong,
-    streak: s.consecutiveCorrect,
-    lapses: s.timesWrong,
-    due_at: new Date(s.dueAt).toISOString(),
-    last_seen_at: s.lastSeenAt ? new Date(s.lastSeenAt).toISOString() : null,
-    // La Revanche (021) reste branchée sur le même enregistrement : une
-    // question ratée y entre, une bonne réponse l'en sort. Le cahier d'erreurs
-    // n'a pas d'autre source, et le moteur est désormais le seul écrivain.
-    in_revanche: s.consecutiveCorrect === 0 && s.timesWrong > 0,
-    updated_at: new Date().toISOString(),
-  }))
-
-  const { error } = await supabase
-    .from('review_items')
-    .upsert(rows, { onConflict: 'user_id,item_kind,item_id' })
-
-  if (error) {
-    console.error('[questions] enregistrement impossible:', error.message)
-    return false
-  }
-  return true
-}

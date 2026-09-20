@@ -2463,6 +2463,19 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
       'Le Boost XP se rachète dès qu’il finit, sans limite par jour. Les paliers affichent leurs gemmes, mais aucune n’est versée (la réclamation répond « pas encore ouvert »). Rien ne casse. À exécuter APRÈS la 371.',
     sonde: { type: 'table', table: 'palier_gemmes' },
   },
+  {
+    id: '374',
+    fichier: '374_charge_et_course.sql',
+    feature:
+      'TENIR LA CHARGE. (A) Badges et objets de profil lisibles en anon : le serveur les sert depuis son cache (lib/vitrines-server) au lieu d’une requête par onglet. (B) La fin d’une course classée en UNE transaction idempotente (`duel_course_enregistrer`, `challenge_sessions.course_id` unique) : huit appels deviennent un, et un renvoi ne repaie jamais. (C) Une trace de rival garde sa version précédente : le serveur rejoue celle que l’élève a vraiment courue. (D) Les canaux Realtime privés vérifiés par clé primaire (`realtime_topic_uuid`), live_duels/coop_sessions hors de la publication. (E) Six index en double retirés, quatre ajoutés.',
+    siAbsente:
+      'Tout marche, plus lentement et moins sûrement : les vitrines retombent sur une lecture par élève, la fin de course repasse par huit appels séparés et NON rejouables (une relance après une réponse perdue peut payer deux fois), un rival qui rejoue pendant ta course fait juger ta course « non vérifiée », et chaque connexion à un duel en direct parcourt toute la table. À exécuter APRÈS la 373.',
+    sonde: {
+      type: 'rpc',
+      fn: 'realtime_topic_uuid',
+      args: { p_topic: 'duel-x', p_prefix: 'duel-' },
+    },
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

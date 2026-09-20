@@ -217,14 +217,6 @@
   }
 }
 
-/* Carrousel : la molette/le doigt scrollent, la barre reste invisible. */
-.hide-scrollbar {
-  scrollbar-width: none;
-}
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
 /* =============================================================================
    Micro-animations « Cahier Arcade »
    ========================================================================== */
@@ -693,68 +685,6 @@ a:hover > .wiggle-on-hover {
   }
 }
 
-/* Le compagnon dort (série à zéro) : respiration lente et profonde,
-   il s'affaisse doucement sur son tas de cendres. */
-@keyframes compagnon-sleep {
-  0%,
-  100% {
-    transform: scale(1) translateY(0);
-  }
-  50% {
-    transform: scale(1.03, 0.97) translateY(2px);
-  }
-}
-.compagnon-sleep {
-  animation: compagnon-sleep 3.6s ease-in-out infinite;
-  transform-origin: center bottom;
-}
-
-/* Le compagnon a faim (série vivante mais rien aujourd'hui) :
-   la flamme vacille, penche et faiblit — elle appelle une session. */
-@keyframes compagnon-flicker {
-  0%,
-  100% {
-    transform: rotate(0deg) scaleY(1);
-    opacity: 1;
-  }
-  22% {
-    transform: rotate(-2.5deg) scaleY(0.96);
-    opacity: 0.85;
-  }
-  45% {
-    transform: rotate(1.5deg) scaleY(1.01);
-    opacity: 1;
-  }
-  68% {
-    transform: rotate(-1.5deg) scaleY(0.94);
-    opacity: 0.8;
-  }
-  84% {
-    transform: rotate(2deg) scaleY(1);
-    opacity: 0.95;
-  }
-}
-.compagnon-flicker {
-  animation: compagnon-flicker 2.2s ease-in-out infinite;
-  transform-origin: center bottom;
-}
-
-/* Le halo du compagnon rayonnant pulse au rythme de sa respiration. */
-@keyframes compagnon-halo {
-  0%,
-  100% {
-    opacity: 0.7;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.12);
-  }
-}
-.compagnon-halo {
-  animation: compagnon-halo 2.4s ease-in-out infinite;
-}
-
 /* Pop façon spring : scale 0 → 1.15 → 1 */
 @keyframes pop-spring {
   0% {
@@ -769,70 +699,6 @@ a:hover > .wiggle-on-hover {
 }
 .pop-spring {
   animation: pop-spring 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
-}
-
-/* Le checkmark se dessine (stroke-dashoffset) après le pop du cercle */
-@keyframes check-draw {
-  from {
-    stroke-dashoffset: 24;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-.check-draw {
-  stroke-dasharray: 24;
-  animation: check-draw 0.35s ease-out backwards;
-}
-
-/* Halo incitatif : une lueur balaye la chaîne de gauche à droite
-   quand la série est en cours — « viens compléter ta semaine » */
-.chain-halo {
-  position: relative;
-  overflow: hidden;
-}
-.chain-halo::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 44px;
-  pointer-events: none;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(237, 169, 78, 0.3),
-    rgba(224, 138, 40, 0.24),
-    transparent
-  );
-  animation: halo-sweep 2.8s ease-in-out infinite;
-}
-@keyframes halo-sweep {
-  0% {
-    left: -18%;
-    opacity: 0;
-  }
-  12% {
-    opacity: 1;
-  }
-  82% {
-    opacity: 1;
-  }
-  100% {
-    left: 104%;
-    opacity: 0;
-  }
-}
-
-/* Les segments de la chaîne se remplissent de gauche à droite */
-@keyframes seg-fill {
-  from {
-    transform: scaleX(0);
-  }
-}
-.seg-fill {
-  transform-origin: left;
-  animation: seg-fill 0.3s ease-out backwards;
 }
 
 /* Le bouton GO respire tant que le défi du jour n'est pas fait */
@@ -854,67 +720,6 @@ a:hover > .wiggle-on-hover {
 /* Les visuels des modes vivent. L'illustration étant fondue dans l'image du
    bouton, on anime l'image entière avec l'origine haute (côté illustration) :
    le haut balaie, le socle bouge à peine. */
-
-/* Duel : les épées s'entrechoquent — armé, choc (flash blanc), contrecoup. */
-@keyframes mode-clash {
-  0%,
-  62%,
-  91%,
-  100% {
-    transform: rotate(0deg) scale(1);
-    filter: brightness(1);
-  }
-  68% {
-    transform: rotate(-3.5deg) scale(0.985);
-    filter: brightness(1);
-  }
-  73% {
-    transform: rotate(3deg) scale(1.03);
-    filter: brightness(1.35) drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
-  }
-  79% {
-    transform: rotate(-2deg) scale(1.01);
-    filter: brightness(1.08);
-  }
-  85% {
-    transform: rotate(1.2deg) scale(1);
-    filter: brightness(1);
-  }
-}
-.mode-anim-duel {
-  transform-origin: 50% 78%;
-  animation: mode-clash 3.6s ease-in-out infinite;
-}
-
-/* Contre-la-montre : le sablier tangue, le sable coule d'un bord à l'autre. */
-@keyframes mode-hourglass {
-  0%,
-  100% {
-    transform: rotate(-2.4deg);
-  }
-  50% {
-    transform: rotate(2.4deg);
-  }
-}
-.mode-anim-chrono {
-  transform-origin: 50% 80%;
-  animation: mode-hourglass 2.6s ease-in-out infinite;
-}
-
-/* Survie : bouclier et crayon flottent doucement. */
-@keyframes mode-survival {
-  0%,
-  100% {
-    transform: translateY(0) rotate(-1.1deg);
-  }
-  50% {
-    transform: translateY(-4px) rotate(1.1deg);
-  }
-}
-.mode-anim-survie {
-  transform-origin: 50% 70%;
-  animation: mode-survival 3.4s ease-in-out infinite;
-}
 
 /* Tuile « jeu mobile » : socle 3D qui s'enfonce au tap (façon Duolingo).
    La couleur du socle dérive du token primary — rien de codé en dur. */
@@ -949,9 +754,6 @@ a:hover > .wiggle-on-hover {
 .press-3d-deep:active {
   transform: translateY(2px);
   box-shadow: 0 0 0 0 color-mix(in oklch, var(--press-base), black 30%);
-}
-.press-base-highlight {
-  --press-base: var(--highlight);
 }
 
 /* Palette de l'Arène — chaque mode a sa couleur de tuile, façon Brawl Stars.
@@ -1043,17 +845,6 @@ a:hover > .wiggle-on-hover {
     rgba(255, 255, 255, 0.05) 68%,
     transparent 68%
   );
-}
-
-/* Le panneau de l'Arène : fond rayé bleu très léger, comme un écran d'events. */
-.arena-panel {
-  background:
-    repeating-linear-gradient(
-      -55deg,
-      color-mix(in oklch, var(--primary), transparent 95%) 0 12px,
-      transparent 12px 24px
-    ),
-    color-mix(in oklch, var(--primary), transparent 97%);
 }
 
 /* Fond de l'onglet Défi : le décor est l'académie flottante à six variantes
@@ -1947,116 +1738,6 @@ a:hover > .wiggle-on-hover {
   }
 }
 
-/* --- Bloc trophées « plaque de marbre ciselée » ------------------------------
-   Reconstruit en CSS net (au lieu d'un raster pleine largeur) : plus petit,
-   plus fin, infiniment croustillant. Marbre crème + cadre or + deux gemmes
-   violettes en bout, dans le vocabulaire olympe. */
-.trophy-plate {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  /* Marge horizontale : dégage la place des rouleaux de parchemin en bout. */
-  padding: 0.5rem 1.55rem;
-  border-radius: 0.5rem;
-  /* Parchemin vieilli : papier chaud moucheté (au lieu du marbre crème). */
-  background:
-    radial-gradient(115% 80% at 22% 18%, rgba(176, 132, 66, 0.1), transparent 60%),
-    radial-gradient(120% 95% at 82% 92%, rgba(150, 104, 52, 0.14), transparent 55%),
-    linear-gradient(
-      180deg,
-      color-mix(in oklch, var(--highlight), white 78%),
-      color-mix(in oklch, var(--highlight), white 56%)
-    );
-  border: 2px solid color-mix(in oklch, var(--highlight), black 6%);
-  box-shadow:
-    inset 0 2px 0 rgba(255, 255, 255, 0.75),
-    inset 0 -6px 12px -6px rgba(120, 82, 34, 0.45),
-    0 4px 0 var(--foreground),
-    0 10px 18px -8px rgba(0, 0, 0, 0.5);
-}
-/* Les deux « parchemins » : rouleaux de papier enroulés sertis à chaque bout du
-   ruban, à la place des anciennes gemmes violettes. Cylindres dégradés purement
-   CSS (aucun asset), avec reflet clair au centre et ombre portée. */
-.trophy-plate::before,
-.trophy-plate::after {
-  content: '';
-  position: absolute;
-  /* Les rouleaux ne débordent plus par le HAUT (ils dépassaient au-dessus du
-     ruban) : calés sous le liseré, ils pendent légèrement plus bas. */
-  top: 0.28rem;
-  bottom: -0.34rem;
-  width: 0.95rem;
-  border-radius: 0.5rem;
-  /* Cylindre de parchemin dérivé du token `--highlight` (règle du projet : pas
-     de hex en dur hors la flamme de série). */
-  background: linear-gradient(
-    90deg,
-    color-mix(in oklch, var(--highlight), black 28%) 0%,
-    color-mix(in oklch, var(--highlight), white 62%) 42%,
-    color-mix(in oklch, var(--highlight), white 44%) 60%,
-    color-mix(in oklch, var(--highlight), black 33%) 100%
-  );
-  box-shadow:
-    inset 0 0 0 1px rgba(120, 80, 30, 0.4),
-    inset 0 2px 2px rgba(255, 255, 255, 0.5),
-    0 3px 5px -1px rgba(0, 0, 0, 0.4);
-}
-.trophy-plate::before {
-  left: -0.4rem;
-}
-.trophy-plate::after {
-  right: -0.4rem;
-}
-
-/* Variante compacte : la cartouche de rang en haut à droite de l'arène. Mêmes
-   matières (parchemin, liseré, rouleaux), au tiers de l'encombrement. */
-.trophy-plate--sm {
-  gap: 0.35rem;
-  padding: 0.25rem 1.05rem;
-  border-radius: 0.4rem;
-  box-shadow:
-    inset 0 2px 0 rgba(255, 255, 255, 0.75),
-    inset 0 -5px 10px -6px rgba(120, 82, 34, 0.45),
-    0 3px 0 var(--foreground),
-    0 8px 14px -8px rgba(0, 0, 0, 0.5);
-}
-.trophy-plate--sm::before,
-.trophy-plate--sm::after {
-  top: 0.2rem;
-  bottom: -0.24rem;
-  width: 0.68rem;
-  border-radius: 0.35rem;
-}
-.trophy-plate--sm::before {
-  left: -0.28rem;
-}
-.trophy-plate--sm::after {
-  right: -0.28rem;
-}
-
-/* Coffre du Trésor : léger dandinement pour inviter au tap */
-@keyframes chest-wobble {
-  0%,
-  92%,
-  100% {
-    transform: rotate(0deg);
-  }
-  94% {
-    transform: rotate(-7deg);
-  }
-  96% {
-    transform: rotate(6deg);
-  }
-  98% {
-    transform: rotate(-3deg);
-  }
-}
-.chest-wobble {
-  animation: chest-wobble 3s ease-in-out infinite;
-  transform-origin: 50% 80%;
-}
-
 /* --- Barre d'onglets : crème chaud assorti au halo doré des icônes ----------
    dessinées (public/images/nav). En nuit d'encre, on retombe sur la carte. */
 .tab-bar {
@@ -2083,61 +1764,10 @@ a:hover > .wiggle-on-hover {
    2026-07-10). Tokens locaux à cet écran — le reste de l'app garde le code
    couleur marine/orange. Violet vif du bandeau, crème chaud du fond, jaune
    solaire des barres de progression. */
-.rev-hero {
-  /* Violet de marque monté en profondeur : un foyer clair en haut à droite qui
-     accroche la lumière, un creux plus sombre en bas à gauche pour détacher les
-     cartes blanches qui viennent chevaucher le bandeau. */
-  background:
-    radial-gradient(
-      115% 80% at 88% -12%,
-      oklch(0.63 0.25 322 / 0.75),
-      transparent 58%
-    ),
-    radial-gradient(
-      95% 75% at -5% 112%,
-      oklch(0.4 0.24 305 / 0.55),
-      transparent 55%
-    ),
-    linear-gradient(175deg, oklch(0.55 0.26 315), oklch(0.46 0.26 310));
-}
-.rev-blob {
-  /* Floutées, les capsules décoratives deviennent des halos de lumière plutôt
-     que des formes à bords nets — le hero respire. */
-  background: oklch(0.68 0.23 322 / 0.45);
-  filter: blur(20px);
-}
-.rev-chip {
-  color: oklch(0.47 0.26 310);
-}
-.rev-track {
-  background: oklch(0.93 0.022 50);
-}
-.rev-fill {
-  /* Ambre « allumé » : léger dégradé vertical, sheen en haut et halo chaud —
-     la progression a l'air d'émettre de la lumière au lieu d'un aplat. */
-  background: linear-gradient(180deg, oklch(0.9 0.16 92), oklch(0.82 0.18 84));
-  box-shadow:
-    inset 0 1px 0 oklch(1 0 0 / 0.55),
-    0 1px 3px oklch(0.75 0.17 80 / 0.5);
-}
 .rev-card {
   box-shadow:
     0 1px 2px oklch(0.4 0.15 310 / 0.06),
     0 14px 28px -18px oklch(0.42 0.18 310 / 0.42);
-}
-/* Carte matière de l'accueil : UN SEUL fond crème pour les 22 matières. Avant,
-   six pastels (bleu lavande, pêche, mauve, menthe, rose…) se disputaient la
-   grille et sortaient de la palette crème/violet/or — l'écran paraissait
-   dispersé. La couleur de la matière n'a pas disparu : elle s'est concentrée
-   sur la barre d'accent de 4 px du bord gauche (`accent` dans subject-style).
-   Crème chaud, posé sur le panneau blanc légèrement violet du dossier ouvert :
-   c'est le contraste de TEINTE (chaud sur froid) qui détache la carte, pas un
-   écart de clarté qui salirait le texte. */
-.rev-tile {
-  background: oklch(0.975 0.022 85);
-}
-.rev-tile:hover {
-  background: oklch(0.955 0.032 85);
 }
 /* La barre de recherche d'un chapitre (ChapterList) : elle se déplie SOUS
    l'en-tête, dans le bloc. Elle descend de quelques pixels en apparaissant —
@@ -2243,10 +1873,6 @@ a:hover > .wiggle-on-hover {
 }
 .moi-blob {
   background: oklch(0.62 0.24 315 / 0.35);
-}
-/* Étincelles jaunes du bandeau. */
-.moi-braise {
-  background: oklch(0.85 0.17 88 / 0.85);
 }
 /* LE FOND DES ONGLETS DE LISTE : une feuille de papier quadrillé.
    Réviser, Boutique, Amis et Moi sont des piles de cartes opaques. Un décor
@@ -2377,16 +2003,6 @@ a:hover > .wiggle-on-hover {
 }
 
 /* Écriture à la craie : blanc cassé + halo poudreux léger. */
-  /* Écriture à la craie : blanc cassé + halo poudreux léger. */
-.moi-chalk {
-  color: oklch(0.97 0.008 90);
-  text-shadow: 0 0 6px oklch(1 0 0 / 0.22);
-}
-/* Case du tableau de bord, tracée à la craie (pointillés main levée). */
-.moi-chalk-box {
-  border: 2px dashed oklch(1 0 0 / 0.38);
-  background: oklch(1 0 0 / 0.05);
-}
 
 /* =============================================================================
    Onboarding « Studuel » — monde visuel autonome (page /bienvenue)
@@ -2531,26 +2147,6 @@ a:hover > .wiggle-on-hover {
    corail = --destructive — plus quelques teintes locales (vert promo, teal) à
    cette portée `.defi2-*`, comme les autres mondes de l'app.
    ========================================================================== */
-
-/* La carte « verre d'arène » : panneau violet sombre translucide, bord lumineux
-   fin, reflet en haut et halo porté profond. Texte clair par défaut. */
-.defi2-card {
-  position: relative;
-  border-radius: 22px;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0.02) 42%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    color-mix(in oklch, var(--primary) 40%, oklch(0.16 0.035 300));
-  border: 1px solid rgba(255, 255, 255, 0.13);
-  box-shadow:
-    0 18px 40px -18px rgba(0, 0, 0, 0.82),
-    inset 0 1px 0 rgba(255, 255, 255, 0.14);
-  color: oklch(0.96 0.015 300);
-}
 /* Variante pressable (boutons/tuiles) : s'enfonce et s'éclaire au tap. */
 .defi2-press {
   transition:
@@ -2563,265 +2159,9 @@ a:hover > .wiggle-on-hover {
   filter: brightness(1.08);
 }
 
-/* Bandeau Saison : dégradé violet de marque, foyer clair en haut à droite. */
-.defi2-banner {
-  border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  box-shadow:
-    0 16px 34px -16px rgba(0, 0, 0, 0.72),
-    inset 0 1px 0 rgba(255, 255, 255, 0.18);
-  background:
-    radial-gradient(
-      120% 130% at 92% -25%,
-      color-mix(in oklch, var(--primary), white 24%),
-      transparent 60%
-    ),
-    linear-gradient(
-      158deg,
-      color-mix(in oklch, var(--primary), white 6%),
-      color-mix(in oklch, var(--primary), black 36%)
-    );
-}
-
-/* Carte Arène : verre sombre + halo lumineux au sommet (comme un projecteur
-   d'arène) et fines rayures diagonales à peine perceptibles. */
-.defi2-arena {
-  position: relative;
-  border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow:
-    0 20px 44px -18px rgba(0, 0, 0, 0.82),
-    inset 0 1px 0 rgba(255, 255, 255, 0.16);
-  color: oklch(0.96 0.015 300);
-  background:
-    radial-gradient(
-      120% 82% at 50% -12%,
-      color-mix(in oklch, var(--primary), white 12%),
-      transparent 58%
-    ),
-    repeating-linear-gradient(
-      -52deg,
-      rgba(255, 255, 255, 0.035) 0 14px,
-      transparent 14px 28px
-    ),
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.08),
-      rgba(255, 255, 255, 0.02)
-    ),
-    color-mix(in oklch, var(--primary) 46%, oklch(0.15 0.03 300));
-}
-
-/* =============================================================================
-   Vitrine du perso (haut de /defi) — fond « soleil » doré façon Brawl Stars.
-   Base radiale dorée + rayons en éventail (conique alterné) qui tournent très
-   lentement, personnage en idle (respiration + balancement) et ombre au sol.
-   Teinte dorée = token --highlight (jaune solaire = récompense/vitrine).
-   ========================================================================== */
-.defi2-hero {
-  /* Dôme doré : foyer clair au centre-haut (là où se tient le perso), qui
-     descend vers un or plus chaud sur les bords. Le halo doré porté détache
-     la vitrine du fond violet profond de l'arène. */
-  border-radius: 22px;
-  border: 1px solid color-mix(in oklch, var(--highlight), black 22%);
-  box-shadow:
-    0 22px 48px -20px color-mix(in oklch, var(--highlight), black 4%),
-    inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  background:
-    radial-gradient(
-      120% 95% at 50% 38%,
-      color-mix(in oklch, var(--highlight), white 20%),
-      color-mix(in oklch, var(--highlight), white 4%) 46%,
-      color-mix(in oklch, var(--highlight), black 12%) 100%
-    );
-}
-
-/* Les rayons : secteurs alternés clair/transparent, centrés sur le perso.
-   Masque radial pour qu'ils s'estompent avant le bord de la carte. */
-.defi2-hero-rays {
-  position: absolute;
-  inset: -45%;
-  background: repeating-conic-gradient(
-    from 0deg at 50% 50%,
-    color-mix(in oklch, var(--highlight), white 34%) 0deg 8deg,
-    transparent 8deg 16deg
-  );
-  opacity: 0.7;
-  animation: hero-rays-spin 100s linear infinite;
-  -webkit-mask-image: radial-gradient(closest-side, #000 62%, transparent 100%);
-  mask-image: radial-gradient(closest-side, #000 62%, transparent 100%);
-}
-@keyframes hero-rays-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Halo blanc doux derrière le perso, pour le détacher des rayons. */
-.defi2-hero-glow {
-  position: absolute;
-  top: 46%;
-  left: 50%;
-  width: 74%;
-  aspect-ratio: 1;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(
-    closest-side,
-    color-mix(in oklch, var(--highlight), white 60%),
-    transparent 72%
-  );
-}
-
-/* Idle du perso : respire et se balance doucement, ancré sur ses pieds. */
-.defi2-hero-char {
-  transform-origin: 50% 92%;
-  animation: hero-idle 3.8s ease-in-out infinite;
-  filter: drop-shadow(0 14px 12px rgba(60, 30, 0, 0.28));
-}
-@keyframes hero-idle {
-  0%,
-  100% {
-    transform: translateY(0) rotate(-1.4deg) scale(1);
-  }
-  50% {
-    transform: translateY(-9px) rotate(1.4deg) scale(1.02);
-  }
-}
-
-/* Ombre au sol : ellipse qui rétrécit quand le perso s'élève (contre-idle). */
-.defi2-hero-floor {
-  margin-top: -8px;
-  width: 7rem;
-  height: 1.15rem;
-  border-radius: 50%;
-  background: radial-gradient(
-    closest-side,
-    color-mix(in oklch, var(--foreground), transparent 55%),
-    transparent 78%
-  );
-  animation: hero-floor 3.8s ease-in-out infinite;
-}
-@keyframes hero-floor {
-  0%,
-  100% {
-    transform: scaleX(1);
-    opacity: 0.55;
-  }
-  50% {
-    transform: scaleX(0.82);
-    opacity: 0.35;
-  }
-}
-
-/* Zones de la ligue (bandes de fond derrière les rangs) — teintes vives, car
-   posées sur le verre sombre de l'arène. */
-.defi2-zone-promo {
-  background: color-mix(in oklch, oklch(0.72 0.17 150), transparent 80%);
-}
-.defi2-zone-releg {
-  background: color-mix(in oklch, var(--destructive), transparent 78%);
-}
-.defi2-promo-ink {
-  color: oklch(0.84 0.16 152);
-}
-
-/* Accents des modes libres (petites tuiles d'échauffement). */
-.defi2-accent-jaune {
-  --accent-a: oklch(0.82 0.15 85);
-  --accent-b: oklch(0.68 0.15 62);
-}
-.defi2-accent-teal {
-  --accent-a: oklch(0.66 0.11 195);
-  --accent-b: oklch(0.48 0.1 200);
-}
-.defi2-accent-violet {
-  --accent-a: oklch(0.5 0.2 300);
-  --accent-b: oklch(0.36 0.16 302);
-}
-.defi2-mode-tile {
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  box-shadow:
-    0 14px 28px -14px rgba(0, 0, 0, 0.7),
-    inset 0 1px 0 rgba(255, 255, 255, 0.22);
-  background: linear-gradient(155deg, var(--accent-a), var(--accent-b));
-}
-
-/* Coffre prêt : socle doré + lueur pulsée (repli CSS si Framer réduit). */
-.defi2-chest-ready {
-  border: 1px solid color-mix(in oklch, var(--highlight), black 18%);
-  color: oklch(0.24 0.06 70);
-  background: linear-gradient(
-    180deg,
-    color-mix(in oklch, var(--highlight), white 6%),
-    color-mix(in oklch, var(--highlight), black 6%)
-  );
-}
-
-/* Coffre verrouillé / vide : verre sombre discret. */
-.defi2-chest-slot {
-  border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02)),
-    color-mix(in oklch, var(--primary) 34%, oklch(0.15 0.03 300));
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-}
-.defi2-chest-empty {
-  border-radius: 18px;
-  border: 1px dashed rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.03);
-}
-
 /* ---- Défi v3 : écran d'arène plein viewport (façon Clash Royale) --------
    L'onglet Défi devient un écran de jeu : arène au centre, icônes rondes
    flottantes sur les bords qui ouvrent des feuilles, gros CTA en bas. */
-
-/* Disque d'icône flottante : verre violet bombé, liseré or. */
-.defi3-orb {
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 9999px;
-  display: grid;
-  place-items: center;
-  background: radial-gradient(
-    circle at 32% 26%,
-    color-mix(in oklch, var(--primary), white 34%),
-    color-mix(in oklch, var(--primary), black 6%) 62%,
-    color-mix(in oklch, var(--primary), black 40%)
-  );
-  border: 2px solid color-mix(in oklch, var(--highlight), black 10%);
-  /* Médaillon « cadré or » façon écran d'arène : un liseré doré discret entoure
-     le disque violet pour que les icônes ressortent nettement sur le décor,
-     sans virer au tout-or. */
-  box-shadow:
-    0 0 0 2px color-mix(in oklch, var(--highlight), transparent 62%),
-    0 6px 14px -4px rgba(0, 0, 0, 0.6),
-    inset 0 2px 4px rgba(255, 255, 255, 0.42);
-}
-
-/* Orbe « médaillon » : l'image illustrée porte déjà son cadre violet + liseré
-   or, donc on neutralise le fond/bordure/box-shadow du disque (qui créait un
-   halo rond autour du médaillon). Un `drop-shadow` épouse la forme ronde du
-   coin pour le détacher du décor sans halo. Un poil plus grand pour la présence. */
-.defi3-orb--medallion {
-  background: none;
-  border: none;
-  box-shadow: none;
-  padding: 0;
-  overflow: visible;
-  width: 3.75rem;
-  height: 3.75rem;
-  filter: drop-shadow(0 4px 7px rgba(0, 0, 0, 0.5));
-}
-
-/* Libellé sous l'orbe : lisible quel que soit le décor d'arène derrière. */
-.defi3-orb-label {
-  font-size: 0.62rem;
-  font-weight: 900;
-  line-height: 1.1;
-  color: white;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
-}
 
 /* Feuille ancrée en bas (contenu des orbes) : panneau violet profond. */
 .defi3-sheet {
@@ -2927,42 +2267,11 @@ a:hover > .wiggle-on-hover {
   color: #fff;
 }
 
-/* Cadre « gemme » SANS fond (liseré or 2px + contour encre 3px + ombre dure) :
-   à combiner avec un dégradé Tailwind propre quand la teinte varie (Duel qui
-   vire au magenta, Modes en violet plein). */
-.olympe-gem-frame {
-  border: 2px solid var(--highlight);
-  box-shadow:
-    0 0 0 3px var(--foreground),
-    inset 0 2px 0 rgba(255, 255, 255, 0.3),
-    0 4px 0 var(--foreground);
-  color: #fff;
-}
-
 /* Le nom de matière qui se pose sous COMBAT quand la roulette s'arrête. Monté
    par `key` (donc remonté à chaque changement), il rejoue son apparition : le
    mot arrive APRÈS le tambour, ce qui donne au geste une fin. Sans lui, le
    texte permutait sèchement pendant que la roulette tournait encore, et les
    deux mouvements se marchaient dessus. */
-@keyframes subject-swap-in {
-  from {
-    opacity: 0;
-    transform: translateY(5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.subject-swap {
-  animation: subject-swap-in 240ms var(--ease) both;
-  animation-delay: 90ms;
-}
-@media (prefers-reduced-motion: reduce) {
-  .subject-swap {
-    animation: none;
-  }
-}
 
 /* MÉDAILLON DE MATIÈRE (roulette du duel, feuille de la Route des trophées) :
    le cadre de gemme du HUD — liseré or, contour encre, ombre dure — posé sur un
@@ -3173,32 +2482,6 @@ a:hover > .wiggle-on-hover {
   }
 }
 
-/* LA LIGNE D'INFORMATION, au-dessus de la barre. Elle porte ce qui vivait DANS
-   le bouton (la matière, la contribution de clan, sa jauge). Aucun biseau,
-   aucun contour, aucune ombre portée : le relief est le langage des CONTRÔLES
-   sur cet écran, et cette ligne ne se touche pas. Lui donner du volume aurait
-   ajouté un quatrième bouton apparent au-dessus des trois vrais. */
-.combat-meta-pill {
-  background: rgba(45, 28, 74, 0.82);
-  border-radius: 14px;
-  color: #faf6ef;
-}
-.combat-meta-note {
-  color: rgba(250, 246, 239, 0.68);
-  /* Le compteur tombe sur l'illustration de l'arène, dont la valeur change d'un
-     pixel à l'autre : sans ce halo d'encre, il disparaissait sur les zones
-     claires du décor. La couleur, elle, reste celle du texte secondaire. */
-  text-shadow: 0 1px 3px rgba(12, 7, 32, 0.9);
-}
-/* La jauge de clan : or DÉSATURÉ. Le doré saturé du bouton, repris ici,
-   aurait fait deux appels à l'action sur la même colonne. */
-.combat-meta-bar {
-  background: rgba(0, 0, 0, 0.35);
-}
-.combat-meta-bar > span {
-  background: #c9922e;
-}
-
 /* Les plaques pressables « Olympe » écrasent leur ombre dure au tap. */
 .olympe-press {
   transition:
@@ -3216,8 +2499,7 @@ a:hover > .wiggle-on-hover {
     inset 0 2px 0 rgba(255, 255, 255, 0.4),
     0 0 0 0 var(--foreground);
 }
-.olympe-gem.olympe-press:active,
-.olympe-gem-frame.olympe-press:active {
+.olympe-gem.olympe-press:active {
   box-shadow:
     0 0 0 3px var(--foreground),
     inset 0 2px 0 rgba(255, 255, 255, 0.3),
@@ -3279,45 +2561,6 @@ a:hover > .wiggle-on-hover {
     0 2px 8px -4px rgba(0, 0, 0, 0.6);
 }
 
-/* Médaillon rond (orbes latéraux + éléments récompense) : anneau extérieur en
-   or ciselé (~5px, via le padding), cœur en gemme violette, icône crème au
-   centre. La lumière vient d'en haut sur les deux couches. */
-.olympe-medallion {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 9999px;
-  padding: 5px;
-  background: linear-gradient(180deg, #fcd34d 0%, #f9b233 55%, #d97706 100%);
-  border: 3px solid var(--foreground);
-  box-shadow:
-    inset 0 2px 0 rgba(255, 255, 255, 0.5),
-    0 5px 10px -3px rgba(0, 0, 0, 0.55);
-}
-/* Variante compacte pour le menu dépliant du burger (colonne d'entrées). */
-.olympe-medallion--sm {
-  width: 3rem;
-  height: 3rem;
-  padding: 4px;
-  border-width: 2.5px;
-}
-.olympe-medallion-core {
-  width: 100%;
-  height: 100%;
-  border-radius: 9999px;
-  display: grid;
-  place-items: center;
-  background: radial-gradient(
-    circle at 50% 28%,
-    #9b6fe8 0%,
-    #7b4fd8 55%,
-    #5b35b0 100%
-  );
-  box-shadow:
-    inset 0 0 12px rgba(255, 255, 255, 0.25),
-    inset 0 -4px 9px rgba(40, 20, 80, 0.45),
-    inset 0 2px 0 rgba(255, 255, 255, 0.28);
-}
-
 /* Badge de notification : pastille corail, liseré or fin + contour encre.
    RÉSERVÉ aux actions à réclamer MAINTENANT (coffre prêt, récompense dispo) —
    un compteur « en cours » prend la variante neutre ci-dessous. */
@@ -3334,90 +2577,6 @@ a:hover > .wiggle-on-hover {
   border: 1.5px solid var(--highlight);
   box-shadow: 0 0 0 2px var(--foreground);
   color: var(--primary-foreground);
-}
-
-/* Jeton d'aperçu « Olympe » (rang « 7e », « Aperçu ») : mini gemme violette. */
-.olympe-tag {
-  background: radial-gradient(
-    circle at 50% 20%,
-    #9b6fe8,
-    #7b4fd8 70%,
-    #5b35b0
-  );
-  border: 1px solid var(--highlight);
-  box-shadow: 0 0 0 1.5px color-mix(in oklch, var(--foreground), transparent 30%);
-  color: #fff;
-}
-
-/* Cartouche de trophées : plaque marbre horizontale, une gemme en losange à
-   chaque extrémité (pseudo-éléments). */
-.olympe-cartouche {
-  position: relative;
-}
-.olympe-cartouche::before,
-.olympe-cartouche::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 0.7rem;
-  height: 0.7rem;
-  transform: translateY(-50%) rotate(45deg);
-  background: radial-gradient(circle at 50% 30%, #9b6fe8, #7b4fd8 70%, #5b35b0);
-  border: 1.5px solid var(--foreground);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
-}
-.olympe-cartouche::before {
-  left: -0.35rem;
-}
-.olympe-cartouche::after {
-  right: -0.35rem;
-}
-
-/* Coffre CSS : carré marbre, bandeau supérieur (couvercle) en or, serrure gemme
-   ronde. Deux variantes : neutre (verrouillé/vide) et doré saturé (ouvrable). */
-.olympe-chest {
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-}
-.olympe-chest-lid {
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 38%;
-  border-bottom: 2px solid var(--foreground);
-  background: linear-gradient(180deg, #fcd34d, #f9b233);
-  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.45);
-}
-.olympe-chest--locked .olympe-chest-lid {
-  background: linear-gradient(
-    180deg,
-    color-mix(in oklch, var(--highlight), #8a8398 60%),
-    color-mix(in oklch, var(--highlight), #6f6a80 70%)
-  );
-}
-/* Serrure : petite gemme violette ronde, centrée sur la ligne du couvercle. */
-.olympe-chest-lock {
-  position: absolute;
-  top: 38%;
-  left: 50%;
-  width: 0.85rem;
-  height: 0.85rem;
-  transform: translate(-50%, -50%);
-  border-radius: 9999px;
-  background: radial-gradient(circle at 50% 30%, #9b6fe8, #7b4fd8 70%, #5b35b0);
-  border: 1.5px solid var(--foreground);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
-}
-/* Lueur dorée pulsée derrière un coffre ouvrable (moment de récompense). */
-.olympe-chest-glow {
-  position: absolute;
-  inset: -18%;
-  border-radius: 9999px;
-  background: radial-gradient(
-    closest-side,
-    color-mix(in oklch, var(--highlight), transparent 25%),
-    transparent 72%
-  );
 }
 
 /* Barre d'onglets « Olympe » : socle crème, hairline or en haut, plaque violette
@@ -4224,86 +3383,6 @@ body {
    prefers-reduced-motion (bloc commun en fin de fichier).
    ========================================================================== */
 
-/* Balayage radar : un trait de lumière descend sur le panneau adverse tant
-   qu'on cherche. C'est le signal « ça travaille », version arène. */
-@keyframes rk-scan {
-  0% {
-    transform: translateY(-110%);
-    opacity: 0;
-  }
-  12%,
-  88% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(110%);
-    opacity: 0;
-  }
-}
-.rk-scan {
-  animation: rk-scan 1.15s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-/* Verrouillage : l'adversaire s'abat depuis la droite, dépasse, puis se cale. */
-@keyframes rk-slam {
-  0% {
-    transform: translateX(38%) scale(1.35);
-    opacity: 0;
-  }
-  55% {
-    transform: translateX(-4%) scale(0.94);
-    opacity: 1;
-  }
-  75% {
-    transform: translateX(2%) scale(1.03);
-  }
-  100% {
-    transform: translateX(0) scale(1);
-    opacity: 1;
-  }
-}
-.rk-slam {
-  animation: rk-slam 460ms cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-/* Onde de choc : un anneau d'or part du VS au moment du verrouillage. */
-@keyframes rk-shock {
-  0% {
-    transform: scale(0.25);
-    opacity: 0.85;
-    border-width: 10px;
-  }
-  100% {
-    transform: scale(2.6);
-    opacity: 0;
-    border-width: 1px;
-  }
-}
-.rk-shock {
-  animation: rk-shock 620ms cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-/* Le « VS » encaisse l'impact : il grossit d'un coup puis retombe. */
-@keyframes rk-impact {
-  0% {
-    transform: scale(2.1) rotate(-8deg);
-    opacity: 0;
-  }
-  45% {
-    transform: scale(0.86) rotate(3deg);
-    opacity: 1;
-  }
-  70% {
-    transform: scale(1.12) rotate(-1deg);
-  }
-  100% {
-    transform: scale(1) rotate(0deg);
-  }
-}
-.rk-impact {
-  animation: rk-impact 520ms cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
 /* Flash blanc plein cadre au verrouillage — un seul battement, très court. */
 @keyframes rk-flash {
   0% {
@@ -4318,44 +3397,6 @@ body {
 }
 .rk-flash {
   animation: rk-flash 420ms ease-out both;
-}
-
-/* Jauge de recherche : elle se remplit pendant qu'on cherche l'adversaire. La
-   durée est calée sur SEARCH_MS (components/RankedMode.tsx) — les deux doivent
-   bouger ensemble, sinon la barre ment sur ce qui se passe. */
-@keyframes rk-search {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-}
-.rk-search {
-  animation: rk-search 1100ms linear both;
-}
-
-/* Compte à rebours : chaque chiffre jaillit puis s'efface en s'éloignant. */
-@keyframes rk-count {
-  0% {
-    transform: scale(1.9);
-    opacity: 0;
-  }
-  22% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  70% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0.72);
-    opacity: 0;
-  }
-}
-.rk-count {
-  animation: rk-count 620ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 /* ==========================================================================
@@ -4486,26 +3527,6 @@ body {
 }
 .heart-break {
   animation: heart-break 520ms ease-out both;
-}
-
-/* Chute du boss : il se dissout (flou + éclat + fondu). */
-@keyframes boss-dissolve {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-    filter: blur(0) brightness(1);
-  }
-  40% {
-    filter: blur(1px) brightness(1.7);
-  }
-  100% {
-    transform: scale(1.35);
-    opacity: 0;
-    filter: blur(10px) brightness(2.2);
-  }
-}
-.boss-dissolve {
-  animation: boss-dissolve 760ms ease-in both;
 }
 
 /* --- Écran de chargement (splash) --------------------------------------------
@@ -4796,8 +3817,6 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
-
-
 
 /* --- L'ÉCRAN DE RECHERCHE D'ADVERSAIRE ---------------------------------------
    Le bandeau et le bouton du rideau qui précède un duel (MatchmakingOverlay).
@@ -5177,9 +4196,6 @@ body {
     0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-
-
-
 /* ===========================================================================
    L'IMPRESSION D'UN COURS — la feuille qu'on emporte au contrôle.
 
@@ -5407,9 +4423,6 @@ body {
 .moi-carte .moi-marqueur {
   border-color: oklch(0.32 0.15 294);
 }
-.moi-jauge {
-  transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
-}
 
 /* LES MÉDAILLES de la vitrine : un métal peint (couche illustrative), un
    creux d'ombre en bas, un éclat en haut à gauche. */
@@ -5449,8 +4462,7 @@ body {
     opacity: 0;
   }
   .moi-silhouette,
-  .moi-marqueur,
-  .moi-jauge {
+  .moi-marqueur {
     transition: none;
   }
 }
@@ -5922,20 +4934,6 @@ body {
     course-carte-entree 0.28s var(--ease) both,
     course-or 1.4s ease-in-out infinite;
 }
-.course-carte-doree-titre {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 8px;
-  border-radius: 9999px;
-  background: linear-gradient(180deg, #fcd34d, #f5b722);
-  padding: 3px 10px;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
-  color: #5a3a00;
-}
 .course-enonce {
   font-family: var(--font-heading), 'Baloo 2', sans-serif;
   font-size: 22px;
@@ -5981,17 +4979,6 @@ body {
   justify-content: space-between;
   gap: 8px;
   padding: 2px 4px;
-}
-.course-serie {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  border-radius: 9999px;
-  background: rgba(252, 211, 77, 0.18);
-  padding: 4px 10px;
-  font-size: 13px;
-  font-weight: 800;
-  color: #fcd34d;
 }
 .course-abandon {
   min-height: 40px;
@@ -6132,13 +5119,6 @@ body {
     0 18px 40px rgba(0, 0, 0, 0.4);
   animation: course-carte-entree 0.35s var(--ease) both;
 }
-.course-fin-eyebrow {
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
-  color: #8f8a78;
-}
 .course-fin-titre {
   font-family: var(--font-heading), 'Baloo 2', sans-serif;
   font-size: 40px;
@@ -6208,10 +5188,6 @@ body {
   font-size: 16px;
   font-weight: 800;
   color: #8f8a78;
-}
-.course-fin-stats {
-  font-size: 13px;
-  color: #5b6480;
 }
 .course-fin-trophees {
   display: flex;
@@ -7179,9 +6155,6 @@ body {
   transform: scale(0.98);
   box-shadow: 0 1px 0 oklch(0.3 0.05 278 / 0.04);
 }
-
-
-
 
 /* --- invitation d'angle (onglet Amis) --- */
 /* Le bouton « Inviter un ami » du classement des amis se trémousse une fois

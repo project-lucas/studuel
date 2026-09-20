@@ -17,7 +17,7 @@
 // élèves (`review_items`, qui porte l'id de la question sans clé étrangère)
 // reste intacte.
 //
-//   node scripts/seed-trous.mjs --num 350 --modules espagnol-tle > supabase/350_….sql
+//   node scripts/seed-trous.mjs --num 350 --modules espagnol-tle > supabase/contenu/350_….sql
 //
 // ⚠️ À REGÉNÉRER EN MÊME TEMPS que le seed du module (`npm run contenu`) :
 // les deux lisent le même fichier `.mjs` et doivent rester d'accord.

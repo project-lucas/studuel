@@ -7,7 +7,7 @@
 ## Le seuil
 
 **~50 millions de lignes dans `test_sessions`.** Il se lit avec la section 1 de
-`supabase/_mesurer-perf.sql` :
+`supabase/outils/_mesurer-perf.sql` :
 
 ```sql
 SELECT c.relname, c.reltuples::bigint AS lignes_estimees

@@ -1,4 +1,5 @@
 import { NAV_TABS, tabIndexForPath } from '@/lib/nav-tabs'
+import { estPleinEcran } from '@/lib/quiz-chrome'
 
 /**
  * LE PRÉCHARGEMENT DES ONGLETS — la règle, pure et testée. Le composant
@@ -52,8 +53,16 @@ export const CADENCE_RONDE_MS = 45_000
 /** Sans geste de l'élève depuis ce délai, on cesse : le téléphone est posé. */
 export const INACTIVITE_MAX_MS = 3 * 60_000
 
-/** Après une invalidation (action serveur), on laisse retomber la poussière. */
-export const DELAI_APRES_INVALIDATION_MS = 3_000
+/**
+ * Après une invalidation (action serveur), on relance VITE la ronde. Une action
+ * qui revalide (fin de quiz, gain, achat…) jette TOUS les onglets préchargés
+ * (Next 16 vide le cache client, `invalidateEntirePrefetchCache`) : à 3 s, un
+ * tap sur un onglet depuis l'écran de résultat tombait presque toujours sur un
+ * onglet vide — la latence que Lucas ressentait (19/09/2026). À 400 ms, la
+ * ronde repart pendant que l'élève lit son résultat, et les onglets, allégés en
+ * allers-retours le même jour, se remplissent avant le tap.
+ */
+export const DELAI_APRES_INVALIDATION_MS = 400
 
 /**
  * Les autres onglets, du plus probable au moins probable :
@@ -94,7 +103,10 @@ export type ContexteDePrechargement = {
 
 /**
  * Faut-il précharger maintenant ? Oui seulement depuis un onglet principal,
- * l'app visible, et un élève actif récemment.
+ * l'app visible, et un élève actif récemment — et JAMAIS pendant un écran plein
+ * écran : la course du duel classé (`/defi/programme/…`) passait pour l'onglet
+ * Défi (préfixe) et déclenchait quatre rendus complets d'onglets en pleine
+ * partie, puis quatre autres après chaque fin de course (19/09/2026).
  */
 export function doitPrecharger({
   pathname,
@@ -103,6 +115,7 @@ export function doitPrecharger({
   nowMs,
 }: ContexteDePrechargement): boolean {
   if (!visible) return false
+  if (estPleinEcran(pathname)) return false
   if (tabIndexForPath(pathname) < 0) return false
   return nowMs - derniereActiviteMs <= INACTIVITE_MAX_MS
 }

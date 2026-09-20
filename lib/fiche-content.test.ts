@@ -1,19 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { readFileSync, readdirSync } from 'node:fs'
-import { fileURLToPath } from 'node:url'
-import path from 'node:path'
-
-// Garde d'intégrité des fiches de révision (migrations SQL). Les fiches sont du
-// markdown en dollar-quoting ($md$…$md$) dans lessons.revision_sheet. Défauts
-// visibles par l'élève : bloc $md$ non fermé (contenu tronqué à l'exécution),
-// fiche vide/stub, ou entité HTML encodée qui n'aurait pas dû rester dans le
-// markdown. On scanne `supabase/*fiche*.sql` à chaque `npm test`.
-
-const SUPABASE_DIR = path.join(
-  path.dirname(fileURLToPath(import.meta.url)),
-  '..',
-  'supabase',
-)
+import { readFileSync } from 'node:fs'
+import { cheminMigration, nomsDesMigrations } from '@/lib/migrations-lecture'
 
 // Séquences qui ne doivent jamais apparaître dans du markdown écrit à la main :
 // l'auteur écrit « & », « < », « > » directement, pas leur forme encodée.
@@ -23,14 +10,14 @@ const MIN_BODY = 20 // en-dessous = stub, pas une vraie fiche
 type Issue = { file: string; problem: string; sample?: string }
 
 function scanFiches(): { totalBlocks: number; issues: Issue[] } {
-  const files = readdirSync(SUPABASE_DIR).filter(
+  const files = nomsDesMigrations().filter(
     (f) => f.endsWith('.sql') && /fiche/i.test(f),
   )
   let totalBlocks = 0
   const issues: Issue[] = []
 
   for (const file of files) {
-    const raw = readFileSync(path.join(SUPABASE_DIR, file), 'utf8')
+    const raw = readFileSync(cheminMigration(file), 'utf8')
     // Le header de migration mentionne « $md$…$md$ » en commentaire : on retire
     // les lignes de commentaire SQL avant de compter/extraire les blocs.
     const code = raw

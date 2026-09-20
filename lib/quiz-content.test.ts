@@ -1,21 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { readFileSync, readdirSync } from 'node:fs'
-import { fileURLToPath } from 'node:url'
-import path from 'node:path'
-
-// Garde d'intégrité du contenu des quiz (migrations SQL). Ce n'est pas de la
-// logique pure mais l'invariant est critique : un QCM avec une option en double,
-// un correct_index hors bornes, un mauvais nombre d'options ou un id de question
-// dupliqué (qui provoquerait un écrasement silencieux à l'exécution) est un bug
-// visible par l'élève ou une perte de contenu. On scanne les migrations
-// `supabase/*quiz*.sql` à chaque `npm test` pour qu'aucun ajout futur ne
-// réintroduise ce type de défaut.
-
-const SUPABASE_DIR = path.join(
-  path.dirname(fileURLToPath(import.meta.url)),
-  '..',
-  'supabase',
-)
+import { readFileSync } from 'node:fs'
+import { cheminMigration, nomsDesMigrations } from '@/lib/migrations-lecture'
 
 // SQL échappe l'apostrophe en '' ; dans une chaîne JSON entre guillemets doubles
 // l'apostrophe est littérale → on désescape '' -> ' avant de lire le tableau.
@@ -30,7 +15,7 @@ const QUESTION_ID_RE =
 type Issue = { file: string; problem: string; options: string }
 
 function quizFiles(): string[] {
-  return readdirSync(SUPABASE_DIR).filter(
+  return nomsDesMigrations().filter(
     (f) => f.endsWith('.sql') && /quiz/i.test(f),
   )
 }
@@ -40,7 +25,7 @@ function scanOptions(): { total: number; issues: Issue[] } {
   let total = 0
   const issues: Issue[] = []
   for (const file of quizFiles()) {
-    const raw = readFileSync(path.join(SUPABASE_DIR, file), 'utf8').replaceAll("''", "'")
+    const raw = readFileSync(cheminMigration(file), 'utf8').replaceAll("''", "'")
     let m: RegExpExecArray | null
     OPTS_RE.lastIndex = 0
     while ((m = OPTS_RE.exec(raw)) !== null) {
@@ -76,7 +61,7 @@ function scanDuplicateIds(): string[] {
   const seen = new Set<string>()
   const duplicates: string[] = []
   for (const file of quizFiles()) {
-    const raw = readFileSync(path.join(SUPABASE_DIR, file), 'utf8')
+    const raw = readFileSync(cheminMigration(file), 'utf8')
     let m: RegExpExecArray | null
     QUESTION_ID_RE.lastIndex = 0
     while ((m = QUESTION_ID_RE.exec(raw)) !== null) {

@@ -9,6 +9,7 @@ import {
   type ContenuCapsule,
 } from '@/lib/capsules'
 import { isMissingSchemaObject } from '@/lib/schema-fallback'
+import { capsulesPublieesEnCache } from '@/lib/vitrines-server'
 
 // -----------------------------------------------------------------------------
 // Lectures des capsules (migration 366). Séparées de lib/capsules.ts, qui reste
@@ -28,6 +29,10 @@ function signaler(contexte: string, error: { code?: string | null; message?: str
 }
 
 export async function lireCatalogueCapsules(supabase: SupabaseClient): Promise<Capsule[]> {
+  // Le catalogue est le même pour tous et lisible en anon (366) : servi par le
+  // cache serveur. Vide = cache froid sans la 366 → lecture par élève.
+  const enCache = await capsulesPublieesEnCache(COLONNES_CATALOGUE)
+  if (enCache.length > 0) return lireCatalogue(enCache)
   const { data, error } = await supabase
     .from('capsules')
     .select(COLONNES_CATALOGUE)

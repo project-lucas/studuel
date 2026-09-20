@@ -5,6 +5,7 @@ import {
   MIN_PROGRAMME_QUESTIONS,
   PROGRAMME_FORMAT,
   PROGRAMME_GAME_ID,
+  hrefCourseNeuve,
   orderQuizzesByWeakness,
   programmeHref,
   programmeSlug,
@@ -171,5 +172,19 @@ describe('orderQuizzesByWeakness', () => {
     ]
     orderQuizzesByWeakness(input, chapters, masteryOf)
     expect(input.map((q) => q.id)).toEqual(['a', 'b'])
+  })
+})
+
+describe('une course neuve à chaque DUEL', () => {
+  it('ajoute un tour à la course de l’arène', () => {
+    expect(hrefCourseNeuve('/defi/programme/maths', 4821)).toBe('/defi/programme/maths?n=4821')
+  })
+  it('ne touche ni une revanche (déjà un tour) ni un autre lien', () => {
+    expect(hrefCourseNeuve('/defi/programme/maths?n=3&vs=bot%3Anina', 9)).toBe('/defi/programme/maths?n=3&vs=bot%3Anina')
+    expect(hrefCourseNeuve('/defi/jeux/calcul-mental', 9)).toBe('/defi/jeux/calcul-mental')
+  })
+  it('un tour est toujours un entier positif', () => {
+    expect(hrefCourseNeuve('/defi/programme/svt', 0)).toBe('/defi/programme/svt?n=1')
+    expect(hrefCourseNeuve('/defi/programme/svt', Number.NaN)).toBe('/defi/programme/svt?n=1')
   })
 })

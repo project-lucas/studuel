@@ -47,6 +47,11 @@ export type BotOpponent = {
 export type ReplayOpponent = {
   kind: 'replay'
   replayId: string
+  /**
+   * L'instant de la trace servie (`created_at`, migration 374). Le serveur
+   * rejoue CETTE trace-là, même si son auteur en a déposé une autre entre-temps.
+   */
+  version?: string | null
   steps: ReplayStep[]
   /** Écart de trophées avec l'élève, pour la légende (null = appariement ouvert). */
   range: number | null

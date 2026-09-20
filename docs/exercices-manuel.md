@@ -2,7 +2,7 @@
 
 > La tuile **Exercice** de chaque chapitre ouvre un **cahier** : trois exercices faits comme une page de manuel scolaire (une mise en situation, des documents, des questions dessous), notés **★ / ★★ / ★★★**, débloqués l’un après l’autre, qui rapportent des gemmes (5 / 10 / 15). Ce guide dit comment les écrire.
 >
-> Moteur : `lib/exercices/` (types, validation, compilation, jugement) · écran : `components/exercices/` · base : `supabase/372_cahier_exercices.sql` · contenu : `contenu/exercices/<niveau>/<matière>.json`.
+> Moteur : `lib/exercices/` (types, validation, compilation, jugement) · écran : `components/exercices/` · base : `supabase/schema/372_cahier_exercices.sql` · contenu : `contenu/exercices/<niveau>/<matière>.json`.
 
 ---
 
@@ -75,7 +75,7 @@ Un fichier par niveau et par matière : `contenu/exercices/6e/maths.json`.
 **Générer la migration** (quand un niveau est prêt) :
 
 ```bash
-node node_modules/jiti/lib/jiti-cli.mjs scripts/exercices-sql.ts --num 374 --niveau 6e --matieres maths,svt --suffixe 1 > supabase/374_exercices_6e_1.sql
+node node_modules/jiti/lib/jiti-cli.mjs scripts/exercices-sql.ts --num 375 --niveau 6e --matieres maths,svt --suffixe 1 > supabase/contenu/375_exercices_6e_1.sql
 ```
 
 ---

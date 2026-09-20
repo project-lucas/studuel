@@ -12,6 +12,13 @@ assets-sources
 loading
 sound
 
+# migrations SQL (collées à la main dans Supabase), docs et scripts de
+# génération : rien de tout ça n'est lu par l'app en production — 22 Mo de
+# migrations ne partaient à chaque déploiement que pour être ignorés.
+supabase
+docs
+scripts
+
 # outillage local
 graphify-out
 _ASSOCIE

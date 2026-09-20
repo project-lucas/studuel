@@ -72,10 +72,15 @@ export default async function CarnetPage() {
       // Page par page : `.limit(2 000)` ne protégeait de rien — PostgREST
       // plafonne à 1 000 sans le dire, et un carnet plus gros perdait des
       // cartes de ses compteurs ET de sa file de révision.
+      // BORNÉ AUX COURS DE L'ÉLÈVE (19/09/2026) : la RLS seule filtrait APRÈS
+      // coup — sans filtre, Postgres parcourait les questions de TOUS les
+      // élèves pour tester chacune. La jointure sur `carnet_courses.owner_id`
+      // part de l'index des cours de l'élève.
       toutLire<{ id: string; course_id: string; type: string; content: unknown }>((from, to) =>
         supabase
           .from('carnet_questions')
-          .select('id, course_id, type, content')
+          .select('id, course_id, type, content, carnet_courses!inner(owner_id)')
+          .eq('carnet_courses.owner_id', user.id)
           .order('id', { ascending: true })
           .range(from, to)
           .returns<{ id: string; course_id: string; type: string; content: unknown }[]>(),

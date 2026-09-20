@@ -58,14 +58,6 @@ export const MASTERY_RANK_LABEL: Record<MasteryRank, string> = {
   legendaire: 'Légendaire',
 }
 
-export const MASTERY_RANK_EMOJI: Record<MasteryRank, string> = {
-  bronze: '🥉',
-  argent: '🥈',
-  or: '🥇',
-  diamant: '💎',
-  legendaire: '🏆',
-}
-
 // Rang d'une valeur agrégée (moyenne de matière, 0..1) — mêmes paliers que
 // masteryRank, sans la nuance leçon/quiz qui n'a pas de sens sur une moyenne.
 // null tant que rien n'est commencé (pas de rang « vide » culpabilisant).

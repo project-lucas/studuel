@@ -7,6 +7,10 @@
 // d'onglet sans cérémonie ; on garde juste assez de fondu pour que le
 // remplacement ne claque pas. Respecte prefers-reduced-motion (désactivé
 // globalement dans globals.css).
+//
+// Et il part de 60 % d'opacité, plus de 0 (19/09/2026) : partant de zéro, même
+// un onglet déjà en mémoire restait illisible 150 ms — une latence fabriquée
+// par l'animation. Le contenu est lisible dès la première image.
 export default function Template({ children }: { children: React.ReactNode }) {
-  return <div className="animate-in fade-in duration-150">{children}</div>
+  return <div className="animate-in fade-in-60 duration-100">{children}</div>
 }

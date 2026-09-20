@@ -1,5 +1,4 @@
 import { readFileSync } from 'node:fs'
-import path from 'node:path'
 import { describe, expect, it } from 'vitest'
 
 import {
@@ -17,6 +16,7 @@ import {
   type IdOffre,
   type Offre,
 } from './offres'
+import { cheminMigration } from '@/lib/migrations-lecture'
 
 // Vendredi 18 septembre 2026, midi UTC.
 const VENDREDI = new Date('2026-09-18T12:00:00Z')
@@ -58,7 +58,7 @@ describe('le Marché (OFFRES)', () => {
     // prélèverait un autre. Les INSERT sont alignés à la main : on compare
     // sans les espaces.
     const sql = ['370_boutique_marche.sql', '371_bouclier_trophees.sql']
-      .map((f) => readFileSync(path.resolve(process.cwd(), 'supabase', f), 'utf8'))
+      .map((f) => readFileSync(cheminMigration(f), 'utf8'))
       .join('\n')
       .split(' ')
       .join('')
@@ -70,7 +70,7 @@ describe('le Marché (OFFRES)', () => {
   })
 
   it('le plafond de boucliers est celui du CHECK de la 371', () => {
-    const sql = readFileSync(path.resolve(process.cwd(), 'supabase/371_bouclier_trophees.sql'), 'utf8')
+    const sql = readFileSync(cheminMigration('371_bouclier_trophees.sql'), 'utf8')
     expect(sql).toContain(`CHECK (boucliers_trophees BETWEEN 0 AND ${MAX_BOUCLIERS})`)
   })
 
@@ -195,7 +195,7 @@ describe('etatOffre', () => {
 
   it('la 373 refuse le second Boost XP du jour UTC (miroir de boostXpDejaAchete)', () => {
     const sql = readFileSync(
-      path.resolve(process.cwd(), 'supabase/373_boost_jour_gemmes_paliers.sql'),
+      cheminMigration('373_boost_jour_gemmes_paliers.sql'),
       'utf8',
     )
     expect(sql).toContain("(a.created_at AT TIME ZONE 'UTC')::date = (now() AT TIME ZONE 'UTC')::date")

@@ -3,6 +3,7 @@ import { isMissingSchemaObject } from '@/lib/schema-fallback'
 import { AUCUN_GEL, parseGelsSerie, type GelsSerie } from '@/lib/streak'
 import { AUCUN_BOOST, finBoostXp, normaliserBoosts, type BoostsActifs } from './offres'
 import { normaliserObjetsProfil, type ObjetProfil } from './objets-profil'
+import { lireObjetsBoutique } from '@/lib/vitrines-server'
 
 // Lectures de la boutique en gemmes (migration 368).
 //
@@ -117,15 +118,14 @@ export async function lireObjetsProfil(
   supabase: SupabaseClient,
   userId: string,
 ): Promise<ObjetProfil[]> {
+  // La vitrine (identique pour tous) vient du cache serveur — lib/vitrines-server,
+  // repli sur la lecture par élève tant que la 374 n'ouvre pas la lecture anon.
   const [objets, possedes] = await Promise.all([
-    supabase
-      .from('avatar_items')
-      .select('id, category, name, prix_gemmes, asset_key')
-      .not('prix_gemmes', 'is', null),
+    lireObjetsBoutique(supabase),
     supabase.from('user_avatar_items').select('item_id').eq('user_id', userId),
   ])
-  if (objets.error) {
-    signaler('objets de profil illisibles', objets.error)
+  if (objets === null) {
+    console.error('[boutique] objets de profil illisibles')
     return []
   }
   // Possession illisible : on n'affiche pas la vitrine comme si l'élève ne
@@ -140,5 +140,5 @@ export async function lireObjetsProfil(
       .map((r) => (r as { item_id?: unknown }).item_id)
       .filter((id): id is string => typeof id === 'string'),
   )
-  return normaliserObjetsProfil(objets.data, ids)
+  return normaliserObjetsProfil(objets, ids)
 }

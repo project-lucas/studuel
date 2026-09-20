@@ -105,7 +105,7 @@ export default async function AbonnementsPage() {
         </p>
         <p className="text-muted-foreground mt-3 text-xs">
           Supabase Dashboard → SQL Editor → coller{' '}
-          <code>supabase/221_abonnements_v0.sql</code> → Run.
+          <code>supabase/schema/221_abonnements_v0.sql</code> → Run.
         </p>
       </div>
     )

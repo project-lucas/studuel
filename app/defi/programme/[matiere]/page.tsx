@@ -1,5 +1,6 @@
 import { redirect } from 'next/navigation'
 import { contentLevelFor } from '@/lib/grades'
+import { getQuizCountBySubjectCached } from '@/lib/catalog'
 import DuelCourse from '@/components/duel/DuelCourse'
 import { SALONS } from '@/lib/jeux/catalog'
 import {
@@ -63,18 +64,8 @@ export default async function ProgrammePage({
   const subject = subjectFromProgrammeSlug(matiere)
   if (!subject) redirect('/defi')
 
-  const user = await getCurrentUser()
+  const [supabase, user] = await Promise.all([createClient(), getCurrentUser()])
   if (!user) redirect('/defi')
-
-  const supabase = await createClient()
-  const { data: profile } = await supabase
-    .from('profiles')
-    .select('grade_level, full_name, avatar')
-    .eq('id', user.id)
-    .maybeSingle()
-
-  const grade = profile?.grade_level ?? null
-  if (!grade) redirect('/onboarding')
 
   const wanted = programmeSlug(subject)
   const round = Number.isFinite(Number(n)) ? Math.max(0, Math.floor(Number(n))) : 0
@@ -83,36 +74,54 @@ export default async function ProgrammePage({
   // chaque « Revanche » ou « Nouvel adversaire » (?n=), donc la course entière.
   const seed = `${user.id}#${wanted}#${today}#${round}`
 
-  // Les trois lectures qui ne dépendent pas les unes des autres partent
-  // ensemble : les quiz de la classe, mes trophées sur la matière, la session
-  // du moteur de questions.
-  const [{ data: allQuizzes }, { data: mesTrophees }, drawn] = await Promise.all([
-    supabase.from('quizzes').select('id, subject, lesson_id').eq('grade_level', contentLevelFor(grade)),
-    supabase.from('game_trophies').select('subject_slug, game_id, trophies').eq('user_id', user.id),
-    drawSubjectSession({
+  // TOUT EN PARALLÈLE, CHAÎNÉ SUR CE DONT ÇA DÉPEND (19/09/2026). La page
+  // enchaînait cinq vagues avant de rendre la course : profil, puis quiz +
+  // trophées + tirage, puis états, puis questions, puis l'adversaire. Or
+  // l'adversaire ne dépend que de mes trophées et de mon prénom, le tirage que
+  // de ma classe : chacun part dès que SA donnée arrive.
+  const profileP = Promise.resolve(
+    supabase
+      .from('profiles')
+      .select('grade_level, full_name, avatar')
+      .eq('id', user.id)
+      .maybeSingle(),
+  )
+  const myTrophiesP = supabase
+    .from('game_trophies')
+    .select('subject_slug, game_id, trophies')
+    .eq('user_id', user.id)
+    .then(({ data, error }) => {
+      if (error) throw new Error(`Trophées illisibles : ${error.message}`)
+      const rows: GameTrophyRow[] = (Array.isArray(data) ? data : []).flatMap((row) => {
+        const value = Number(row?.trophies)
+        if (!row?.subject_slug || !row?.game_id || !Number.isFinite(value)) return []
+        return [{ subject: String(row.subject_slug), gameId: String(row.game_id), trophies: value }]
+      })
+      return subjectTotal(rows, wanted)
+    })
+  const opponentP = Promise.all([profileP, myTrophiesP]).then(([{ data: profile }, myTrophies]) =>
+    resolveOpponent({
+      supabase,
+      wanted,
+      myTrophies,
+      seed,
+      myName: profile?.full_name ?? null,
+      vs,
+      sans,
+    }),
+  )
+  // Le tirage du moteur, puis les questions tirées — dès que la classe est connue.
+  const engineP = profileP.then(async ({ data: profile }): Promise<ModeQuestion[]> => {
+    const niveau = profile?.grade_level ?? null
+    if (!niveau) return []
+    const drawn = await drawSubjectSession({
       supabase,
       userId: user.id,
       subjectSlug: wanted,
-      level: grade,
+      level: niveau,
       count: COURSE_QUESTION_BUFFER,
-    }),
-  ])
-
-  const quizzes = (allQuizzes ?? []).filter(
-    (q) => programmeSlug(String(q.subject ?? '')) === wanted,
-  )
-  if (quizzes.length === 0) redirect('/defi')
-
-  const rows: GameTrophyRow[] = (Array.isArray(mesTrophees) ? mesTrophees : []).flatMap((row) => {
-    const value = Number(row?.trophies)
-    if (!row?.subject_slug || !row?.game_id || !Number.isFinite(value)) return []
-    return [{ subject: String(row.subject_slug), gameId: String(row.game_id), trophies: value }]
-  })
-  const myTrophies = subjectTotal(rows, wanted)
-
-  // ------------------------------------------------------------ LES QUESTIONS
-  let pool: ModeQuestion[] = []
-  if (drawn.length >= MIN_PROGRAMME_QUESTIONS) {
+    })
+    if (drawn.length < MIN_PROGRAMME_QUESTIONS) return []
     const { data: engineRows } = await supabase
       .from('quiz_questions')
       .select('id, quiz_id, question, kind, options, correct_index, explanation')
@@ -121,18 +130,51 @@ export default async function ProgrammePage({
     // `.in()` rend les lignes dans un ordre arbitraire : on rejoue l'ordre du
     // moteur, sinon le mélange qui empêche de lire les buckets serait perdu.
     const parId = new Map((engineRows ?? []).map((row) => [row.id, row]))
-    pool = toModeQuestions(
+    return toModeQuestions(
       drawn.flatMap((ref) => {
         const row = parId.get(ref.questionId)
         return row ? [row] : []
       }),
       () => subject,
     )
-  }
+  })
+  // Rien ne reste en l'air si la page s'arrête avant de les attendre.
+  opponentP.catch(() => {})
+  engineP.catch(() => {})
+
+  // Une base qui ne répond pas n'est PAS une donnée manquante : on ne renvoie
+  // plus l'élève vers l'onboarding ou l'arène sur une panne passagère — l'écran
+  // d'erreur (app/defi/error.tsx) propose de réessayer.
+  const { data: profile, error: profileError } = await profileP
+  if (profileError) throw new Error(`Profil illisible : ${profileError.message}`)
+  const grade = profile?.grade_level ?? null
+  if (!grade) redirect('/onboarding')
+
+  // La matière a-t-elle un programme à cette classe ? Catalogue en cache
+  // serveur ; vide = cache froid, la course décide plus bas avec le repli.
+  const quizCounts = await getQuizCountBySubjectCached(grade)
+  const matiereOuverte =
+    quizCounts.length === 0 ||
+    quizCounts.some(([s, count]) => count > 0 && programmeSlug(s) === wanted)
+  if (!matiereOuverte) redirect('/defi')
+
+  const [myTrophies, enginePool] = await Promise.all([myTrophiesP, engineP])
+
+  // ------------------------------------------------------------ LES QUESTIONS
+  let pool: ModeQuestion[] = enginePool
 
   // LE REPLI, tant que la 239 n'est pas passée : classement par faiblesse de
   // chapitre. La course reste jouable, elle perd la mémoire anti-répétition.
   if (pool.length < MIN_PROGRAMME_QUESTIONS) {
+    const { data: allQuizzes, error: quizError } = await supabase
+      .from('quizzes')
+      .select('id, subject, lesson_id')
+      .eq('grade_level', contentLevelFor(grade))
+    if (quizError) throw new Error(`Quiz illisibles : ${quizError.message}`)
+    const quizzes = (allQuizzes ?? []).filter(
+      (q) => programmeSlug(String(q.subject ?? '')) === wanted,
+    )
+    if (quizzes.length === 0) redirect('/defi')
     const lessonIds = quizzes.map((q) => q.lesson_id).filter((id): id is string => !!id)
     const [mastery, { data: lessons }] = await Promise.all([
       getChapterMastery(supabase, user.id),
@@ -169,15 +211,7 @@ export default async function ProgrammePage({
   if (pool.length < MIN_PROGRAMME_QUESTIONS) redirect('/defi')
 
   // ------------------------------------------------------------ L'ADVERSAIRE
-  const opponent = await resolveOpponent({
-    supabase,
-    wanted,
-    myTrophies,
-    seed,
-    myName: profile?.full_name ?? null,
-    vs,
-    sans,
-  })
+  const opponent = await opponentP
 
   const emoji = SALONS.find((s) => s.subject === subject)?.emoji ?? '📘'
   const firstName = (profile?.full_name ?? '').trim().split(' ')[0] || 'Toi'
@@ -199,10 +233,9 @@ export default async function ProgrammePage({
       }}
       hrefs={{
         revanche: `${base}?n=${round + 1}&vs=${encodeURIComponent(revancheVs)}`,
-        nouveau:
-          opponent.kind === 'bot'
-            ? `${base}?n=${round + 1}&sans=${encodeURIComponent(opponent.botId)}`
-            : `${base}?n=${round + 1}`,
+        // « Nouvel adversaire » écarte celui qu'on vient d'affronter, robot OU
+        // élève — sans quoi l'appariement rendait le même replay.
+        nouveau: `${base}?n=${round + 1}&sans=${encodeURIComponent(revancheVs)}`,
         arene: '/defi',
       }}
     />
@@ -223,6 +256,9 @@ async function resolveOpponent(input: {
   sans?: string
 }): Promise<Opponent> {
   const { supabase, wanted, myTrophies, seed, myName, vs, sans } = input
+  // `sans` : « bot:<id> » ou « replay:<id> » ; un id nu (liens d'avant) = un robot.
+  const lastReplayId = sans?.startsWith('replay:') ? sans.slice(7) : null
+  const lastBotId = sans?.startsWith('bot:') ? sans.slice(4) : lastReplayId ? null : (sans ?? null)
   if (vs?.startsWith('bot:')) {
     const bot = botOpponent(vs.slice(4), myTrophies)
     if (bot) return bot
@@ -235,6 +271,7 @@ async function resolveOpponent(input: {
       return {
         kind: 'replay',
         replayId: found.replayId,
+        version: found.version,
         steps: found.steps,
         range: Math.abs(found.trophies - myTrophies) <= 150 ? 150 : null,
         identity: {
@@ -253,6 +290,7 @@ async function resolveOpponent(input: {
     myTrophies,
     seed,
     myName,
-    lastBotId: sans ?? null,
+    lastBotId,
+    lastReplayId,
   })
 }

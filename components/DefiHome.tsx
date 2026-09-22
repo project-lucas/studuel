@@ -326,7 +326,13 @@ export default function DefiHome({
   // fond crème se ressemblaient bien plus que leurs affiches ne le promettaient.
   if (phase === 'blitz') {
     return (
-      <ModeStage title="Blitz 60s" Icon={Timer} theme="eclair" onExit={exitMode}>
+      <ModeStage
+        title="Blitz 60s"
+        Icon={Timer}
+        theme="eclair"
+        scene={modeScene('blitz')}
+        onExit={exitMode}
+      >
         <BlitzMode pool={pool} onExit={exitMode} />
       </ModeStage>
     )
@@ -337,6 +343,7 @@ export default function DefiHome({
         title="Duel fantôme"
         Icon={Swords}
         theme="fantome"
+        scene={modeScene('duel')}
         onExit={exitMode}
       >
         <DuelMode
@@ -354,6 +361,7 @@ export default function DefiHome({
         title="Duel en direct"
         Icon={Swords}
         theme="fantome"
+        scene={modeScene('duel')}
         onExit={exitMode}
       >
         <LiveDuelMode
@@ -372,6 +380,7 @@ export default function DefiHome({
         title="Contre-la-montre"
         Icon={Hourglass}
         theme="sablier"
+        scene={modeScene('chrono')}
         onExit={exitMode}
       >
         <ChronoMode pool={pool} onExit={exitMode} />
@@ -380,14 +389,26 @@ export default function DefiHome({
   }
   if (phase === 'survie') {
     return (
-      <ModeStage title="Survie" Icon={Skull} theme="abysse" onExit={exitMode}>
+      <ModeStage
+        title="Survie"
+        Icon={Skull}
+        theme="abysse"
+        scene={modeScene('survie')}
+        onExit={exitMode}
+      >
         <SurvivalMode pool={pool} onExit={exitMode} />
       </ModeStage>
     )
   }
   if (phase === 'boss') {
     return (
-      <ModeStage title="Boss" Icon={Crown} theme="couronne" onExit={exitMode}>
+      <ModeStage
+        title="Boss"
+        Icon={Crown}
+        theme="couronne"
+        scene={modeScene('boss')}
+        onExit={exitMode}
+      >
         <BossMode pool={pool} onExit={exitMode} scene={modeScene('boss')} />
       </ModeStage>
     )

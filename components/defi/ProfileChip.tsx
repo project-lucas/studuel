@@ -1,13 +1,11 @@
 'use client'
 
 import { useState } from 'react'
-import { Trophy } from 'lucide-react'
 import ProfileModal from '@/components/defi/ProfileModal'
 import BadgeBoostXp from '@/components/BadgeBoostXp'
 import AvatarRender from '@/components/avatar/AvatarRender'
 import FlammeAnimee from '@/components/FlammeAnimee'
 import { CristalIcon } from '@/components/ui/MonnaieIcon'
-import { rankFor, DIVISION_SPAN } from '@/lib/rank'
 import { walletLevelInfo } from '@/lib/wallet'
 import type { ProfileData } from '@/app/defi/profile-actions'
 import { sfx } from '@/lib/sounds'
@@ -27,9 +25,14 @@ import { sfx } from '@/lib/sounds'
  *     blason de rang, qui vit dans la barre de trophées), son NOM, et à droite
  *     la série et les cristaux ;
  *   • dessous : la BARRE DE NIVEAU (jaune, la couleur de l'XP dans toute
- *     l'app), le niveau en disque violet à sa gauche ;
- *   • dessous : la BARRE DE TROPHÉES (violet clair), le rang en toutes lettres
- *     et le compte dans la division.
+ *     l'app), le niveau en disque violet à sa gauche.
+ *
+ * LA BARRE DE TROPHÉES A QUITTÉ LA CARTE (22/09/2026). Elle disait le rang et
+ * « 30/500 » ; le compte de trophées de l'arène (CompteTropheesArene), posé
+ * juste sous la carte comme le « 🏆 7503 » de Clash Royale, dit le total en
+ * or et le rang — la même nouvelle n'a pas à se lire deux fois à quinze
+ * pixels d'écart, et la carte ne dit plus que QUI je suis et où en est mon
+ * niveau.
  *
  * La bande de saison est partie (« inutile »). Le bandeau du haut (TopHud) se
  * masque sur /defi : c'est cette carte qui porte série et cristaux, et les
@@ -37,14 +40,11 @@ import { sfx } from '@/lib/sounds'
  */
 export default function ProfileChip({
   data,
-  trophies,
   gems,
   streak,
   boostXpJusqua = null,
 }: {
   data: ProfileData
-  /** Total de trophées — il donne le palier et la position dans la division. */
-  trophies: number
   /** Solde de cristaux ; `null` = inconnu (rien d'affiché). */
   gems: number | null
   /** Série en jours ; `null` = inconnue (rien d'affiché), zéro = flamme éteinte. */
@@ -56,11 +56,6 @@ export default function ProfileChip({
   const info = walletLevelInfo(data.summary.totalXp)
   const xpLabel = `${info.currentXp.toLocaleString('fr-FR')} / ${info.nextAt.toLocaleString('fr-FR')} XP`
   const xpPct = Math.round(info.progress * 100)
-  const rank = rankFor(trophies)
-  const hasDivision = rank.ceiling !== null
-  const trophyLabel = hasDivision
-    ? `${rank.inDivision} trophées sur ${DIVISION_SPAN} dans la division, ${trophies} au total`
-    : `${trophies} trophées`
 
   return (
     <>
@@ -71,7 +66,7 @@ export default function ProfileChip({
           setOpen(true)
         }}
         aria-haspopup="dialog"
-        aria-label={`${data.displayName} — niveau ${info.level}, ${xpLabel} — rang ${rank.label}, ${trophyLabel}${
+        aria-label={`${data.displayName} — niveau ${info.level}, ${xpLabel}${
           streak !== null ? ` — série : ${streak} jour${streak > 1 ? 's' : ''}` : ''
         }${gems !== null ? ` — ${gems} cristaux` : ''}. Voir mes stats et badges`}
         className="olympe-glass olympe-glass--sculpte olympe-press flex w-[14.5rem] cursor-pointer flex-col gap-1.5 rounded-[18px] p-2 text-left focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
@@ -140,50 +135,6 @@ export default function ProfileChip({
             <span className="text-white/55">/{info.nextAt.toLocaleString('fr-FR')}</span>
           </span>
           <BadgeBoostXp jusqua={boostXpJusqua} />
-        </span>
-
-        {/* --- La barre de trophées : coupe, rang, jauge violette --------- */}
-        <span className="flex items-center gap-1.5">
-          <Trophy
-            className="size-[18px] shrink-0 text-highlight drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]"
-            strokeWidth={2.6}
-            aria-hidden="true"
-          />
-          <span className="flex min-w-0 flex-1 flex-col gap-[3px]">
-            <span className="flex items-center justify-between leading-none">
-              <span className="truncate text-[0.6rem] font-extrabold tracking-wider text-highlight uppercase">
-                {rank.label}
-              </span>
-              <span
-                className="font-heading shrink-0 text-[0.62rem] font-extrabold text-[#faf6ef] tabular-nums"
-                aria-hidden="true"
-              >
-                {hasDivision ? (
-                  <>
-                    {rank.inDivision}
-                    <span className="text-white/55">/{DIVISION_SPAN}</span>
-                  </>
-                ) : (
-                  trophies.toLocaleString('fr-FR')
-                )}
-              </span>
-            </span>
-            {hasDivision ? (
-              <span
-                className="h-1.5 w-full overflow-hidden rounded-full bg-black/40 ring-1 ring-white/15 ring-inset"
-                role="progressbar"
-                aria-label={`Rang ${rank.label} — ${trophyLabel}`}
-                aria-valuemin={0}
-                aria-valuemax={100}
-                aria-valuenow={Math.round(rank.progress * 100)}
-              >
-                <span
-                  className="block h-full rounded-full bg-[color-mix(in_oklch,var(--primary),white_30%)]"
-                  style={{ width: `${Math.round(rank.progress * 100)}%` }}
-                />
-              </span>
-            ) : null}
-          </span>
         </span>
       </button>
 

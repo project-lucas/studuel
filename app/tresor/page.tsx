@@ -1,4 +1,3 @@
-import WorldBackdrop from '@/components/WorldBackdrop'
 import CarteStudueLPlus from '@/components/boutique/CarteStudueLPlus'
 import Marche from '@/components/boutique/Marche'
 import RayonsCapsules from '@/components/boutique/RayonsCapsules'
@@ -62,7 +61,6 @@ export default async function BoutiquePage() {
 
   return (
     <div className="flex flex-col gap-9 pb-10">
-      <WorldBackdrop className="tab-bg" />
       {user ? <MarqueurBoutiqueVue semaine={cleSemaineVitrine(maintenant)} /> : null}
 
       <CarteStudueLPlus tier={tier} />

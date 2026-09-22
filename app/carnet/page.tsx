@@ -1,5 +1,4 @@
 import { redirect } from 'next/navigation'
-import WorldBackdrop from '@/components/WorldBackdrop'
 import BentoCarnet from '@/components/carnet/BentoCarnet'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
@@ -161,7 +160,6 @@ export default async function CarnetPage() {
 
   return (
     <>
-      <WorldBackdrop className="tab-bg" />
       {/* Le « + » flottant vit dans BentoCarnet : une seule feuille « Nouveau
           dossier », qui connaît les dossiers existants (doublons). */}
       <BentoCarnet

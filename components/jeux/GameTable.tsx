@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { Lightbulb } from 'lucide-react'
 import ModeStage from '@/components/defi/ModeStage'
 import AnswerBoard from '@/components/jeux/AnswerBoard'
 import GameHud from '@/components/jeux/GameHud'
@@ -42,6 +43,8 @@ type Phase = 'intro' | 'countdown' | 'playing' | 'done'
 const TICK_MS = 100
 // Sous ce seuil (secondes), le chrono d'une question se met à biper.
 const URGENT_FROM = 3
+// La pause après une ERREUR quand il y a une méthode à lire (cf. `commit`).
+const REVIEW_MS = 2200
 
 
 /**
@@ -62,9 +65,12 @@ export default function GameTable({
   name,
   subject,
   subjectEmoji,
+  scene = null,
   ghost,
 }: {
   format: GameFormat
+  /** La scène du billet du jeu, en filigrane dans sa pièce (ModeStage). */
+  scene?: string | null
   /**
    * Palier joué et plancher de classe (lib/jeux/paliers), ou null pour un jeu
    * hors échelle — le « Programme » d'une matière, dont la difficulté est le
@@ -220,9 +226,24 @@ export default function GameTable({
     [audio, format, isUltime, recordPalier, recordUltime, report],
   )
 
+  // Y a-t-il quelque chose à LIRE sous la question courante (correction,
+  // astuce) ? Posé dans une ref pour que `commit`, mémoïsé, le voie sans se
+  // reconstruire à chaque question.
+  const lectureRef = useRef(false)
+  useEffect(() => {
+    lectureRef.current = Boolean(question?.explanation || question?.astuce)
+  }, [question])
+
   // Applique une transition du moteur et enchaîne (ou termine).
+  //
+  // LA PAUSE APRÈS UNE ERREUR S'ALLONGE quand il y a une méthode à lire. Les
+  // 750 ms de l'auto-avance suffisent à voir le vert ; elles ne suffisent pas à
+  // lire « 47 + 30 = 77, moins 1 : 76 » — et c'est après une erreur qu'une
+  // astuce s'apprend. Le chrono de la question suivante ne part qu'après
+  // (`armQuestion`) : la lecture ne coûte rien à la partie.
   const commit = useCallback(
     (next: GameRun, good: boolean) => {
+      const pause = !good && lectureRef.current ? REVIEW_MS : AUTO_ADVANCE_MS
       const before = runRef.current
       runRef.current = next
       setRun(next)
@@ -237,7 +258,7 @@ export default function GameTable({
       if (!good) setShake((n) => n + 1)
 
       if (next.status !== 'playing') {
-        window.setTimeout(() => finish(next), AUTO_ADVANCE_MS)
+        window.setTimeout(() => finish(next), pause)
         return
       }
       window.setTimeout(() => {
@@ -246,7 +267,7 @@ export default function GameTable({
         setRevealed(false)
         armQuestion(next)
         lockRef.current = false
-      }, AUTO_ADVANCE_MS)
+      }, pause)
     },
     [audio, finish, armQuestion],
   )
@@ -364,6 +385,7 @@ export default function GameTable({
       title={name}
       Icon={MECHANIC_ICON[format.params.mechanic]}
       theme={format.theme}
+      scene={scene}
       onExit={exit}
       backLabel={surLaCarte ? 'Retour aux paliers' : undefined}
       headerRight={
@@ -430,6 +452,14 @@ export default function GameTable({
             {revealed && question.explanation ? (
               <p className="animate-in fade-in mt-3 rounded-2xl bg-card px-4 py-3 text-sm shadow-sm">
                 {question.explanation}
+              </p>
+            ) : null}
+            {/* L'ASTUCE, à part de la correction : c'est la méthode, pas le
+                résultat — ce qui fera aller plus vite à la question suivante. */}
+            {revealed && question.astuce ? (
+              <p className="animate-in fade-in mt-2 flex items-start gap-2 rounded-2xl bg-highlight/20 px-4 py-3 text-sm font-semibold shadow-sm">
+                <Lightbulb className="mt-0.5 size-4 shrink-0" strokeWidth={2.6} aria-hidden="true" />
+                <span>{question.astuce}</span>
               </p>
             ) : null}
 

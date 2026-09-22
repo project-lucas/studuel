@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
-import WorldBackdrop from '@/components/WorldBackdrop'
 import JaugeCapacite from '@/components/moi/JaugeCapacite'
 import CatalogueHabitudes, {
   type LigneHabitude,
@@ -176,7 +175,6 @@ export default async function HabitudesPage() {
 
   return (
     <div>
-      <WorldBackdrop className="tab-bg" />
       <RetourHeader />
 
       <div className="flex flex-col gap-4">

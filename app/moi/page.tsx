@@ -10,7 +10,6 @@ import {
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
-import WorldBackdrop from '@/components/WorldBackdrop'
 import EcranMoi from '@/components/moi/EcranMoi'
 import { fetchMyPalmares } from '@/lib/palmares/palmares-server'
 import { parseGradeStandings } from '@/lib/percentile'
@@ -412,8 +411,6 @@ export default async function MoiPage() {
 
   return (
     <div>
-      <WorldBackdrop className="tab-bg" />
-
       {/* LA CARTE, puis TROIS ONGLETS (Progrès · Collection · Palmarès) —
           refonte du 17/09/2026, détaillée dans components/moi/EcranMoi. */}
       <EcranMoi

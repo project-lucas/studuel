@@ -1,5 +1,4 @@
 import { notFound, redirect } from 'next/navigation'
-import WorldBackdrop from '@/components/WorldBackdrop'
 import LecteurCapsule from '@/components/capsules/LecteurCapsule'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
@@ -28,7 +27,6 @@ export default async function CapsuleCarnetPage({
 
   return (
     <>
-      <WorldBackdrop className="tab-bg" />
       <LecteurCapsule
         capsule={capsule}
         contenu={contenu}

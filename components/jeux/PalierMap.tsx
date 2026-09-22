@@ -1,23 +1,16 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { motion, useReducedMotion } from 'framer-motion'
-import {
-  Check,
-  Infinity as InfinityIcon,
-  Lock,
-  Play,
-  Star,
-  Timer,
-  Trophy,
-} from 'lucide-react'
+import { Infinity as InfinityIcon, Lock, Play, Star } from 'lucide-react'
 import ModeStage from '@/components/defi/ModeStage'
 import ModeHero from '@/components/defi/ModeHero'
 import { CristalIcon } from '@/components/ui/MonnaieIcon'
 import { reclamerGemmesPalier } from '@/app/defi/palier-actions'
 import PalierStars from '@/components/jeux/PalierStars'
+import PistePalier from '@/components/jeux/PistePalier'
 import { MECHANIC_ICON } from '@/components/jeux/icons'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
@@ -27,9 +20,9 @@ import { usePalierProgress } from '@/lib/jeux/use-palier-progress'
 import {
   PALIERS,
   TOTAL_STARS,
+  accuracyAt,
   bestAt,
   bestTimeAt,
-  formatDuration,
   currentPalier,
   isUnlocked,
   palierDef,
@@ -43,7 +36,6 @@ import {
   GEMMES_PAR_JEU,
   etoilesDeProgression,
   gemmesDesEtoiles,
-  gemmesParEtoile,
   resteAReclamer,
   type EtoilesParPalier,
 } from '@/lib/jeux/palier-gemmes'
@@ -93,6 +85,7 @@ export default function PalierMap({
   standings,
   ultime,
   etoilesPayees,
+  dojo = null,
 }: {
   format: GameFormat
   name: string
@@ -122,6 +115,11 @@ export default function PalierMap({
    * quand la migration n'est pas passée : on affiche le tarif, sans réclamer.
    */
   etoilesPayees: EtoilesParPalier | null
+  /**
+   * Un bloc propre au jeu, posé sous la collection : le dojo des astuces du
+   * Calcul mental (components/jeux/DojoAstuces). Null pour les autres jeux.
+   */
+  dojo?: ReactNode
 }) {
   const router = useRouter()
   const reduce = useReducedMotion()
@@ -179,6 +177,7 @@ export default function PalierMap({
       title={name}
       Icon={MECHANIC_ICON[format.params.mechanic]}
       theme={format.theme}
+      scene={scene}
       onExit={() => router.push('/defi')}
       headerRight={
         <span className="shrink-0 rounded-full bg-[color:var(--jeu-accent)]/12 px-2.5 py-1 text-[11px] font-bold text-[color:var(--jeu-accent)]">
@@ -257,6 +256,8 @@ export default function PalierMap({
           </p>
         </section>
 
+        {dojo}
+
         {/* L'échelle. Le trait vertical derrière les numéros la fait lire comme
             un chemin plutôt que comme une liste de réglages. */}
         <ol className="relative flex flex-col gap-3">
@@ -278,6 +279,7 @@ export default function PalierMap({
                 isCurrent={palier.level === current}
                 stars={starsAt(progress, palier.level)}
                 best={bestAt(progress, palier.level)}
+                accuracy={accuracyAt(progress, palier.level)}
                 timeMs={
                   standings[palier.level]?.bestMs ??
                   bestTimeAt(progress, palier.level)
@@ -448,6 +450,7 @@ function PalierRow({
   isCurrent,
   stars,
   best,
+  accuracy,
   timeMs,
   speed,
   missing,
@@ -459,6 +462,8 @@ function PalierRow({
   isCurrent: boolean
   stars: 0 | 1 | 2 | 3
   best: number
+  /** Meilleur taux de réussite mémorisé, ou null : place le curseur de la piste. */
+  accuracy: number | null
   /** Meilleur temps de bouclage, ou null tant que le palier n'a pas été gagné. */
   timeMs: number | null
   /** « Top 5 % des joueurs », ou null quand il n'y a rien d'honnête à dire. */
@@ -524,36 +529,24 @@ function PalierRow({
           ))}
         </span>
 
-        {/* LES GEMMES DU PALIER (migration 373) : une par étoile, au tarif
-            du palier — le cristal de nos gemmes, et une coche sur celles déjà
-            gagnées. Plus on monte, plus l'étoile vaut. */}
-        <GainsPalier level={level} acquises={acquises} unlocked={unlocked} />
-
-        {/* La ligne des records : le score, le CHRONO de bouclage, et la place
-            qu'il donne. Le chrono n'apparaît que là où il veut dire quelque
-            chose (`hasTimeRecord`) — sur un sprint de 40 secondes, tout le monde
-            met 40 secondes. Le pourcentage, lui, ne s'affiche qu'au-delà de 100
-            joueurs classés : en dessous, `speedLabelFor` annonce le rang brut,
-            qui est vrai à toute taille. */}
-        {best > 0 || timed ? (
-          <span className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-bold text-muted-foreground">
-            {best > 0 ? (
-              <span className="flex items-center gap-1.5">
-                <Trophy className="size-3.5" aria-hidden="true" />
-                Record {best}
-              </span>
-            ) : null}
-            {timed ? (
-              <span className="flex items-center gap-1.5 tabular-nums">
-                <Timer className="size-3.5" aria-hidden="true" />
-                {formatDuration(timeMs as number)}
-              </span>
-            ) : null}
-            {timed && speed ? (
-              <span className="text-primary">{speed}</span>
-            ) : null}
-          </span>
-        ) : null}
+        {/* LA PISTE DU PALIER (22/09/2026) : une ligne, les trois jalons de
+            gemmes (migration 373 : une par étoile, au tarif du palier), et le
+            curseur du record dessus — au meilleur taux de réussite, l'axe des
+            étoiles. Elle réunit les anciens jetons « Gains » et la ligne
+            « Record ». Le chrono de bouclage n'y figure que là où il veut dire
+            quelque chose (`hasTimeRecord`) — sur un sprint de 40 secondes, tout
+            le monde met 40 secondes. Le pourcentage de place ne s'affiche
+            qu'au-delà de 100 joueurs classés (`speedLabelFor`). */}
+        <PistePalier
+          level={level}
+          stars={stars}
+          acquises={acquises}
+          accuracy={accuracy}
+          best={best}
+          timeMs={timed ? (timeMs as number) : null}
+          speed={speed}
+          unlocked={unlocked}
+        />
       </span>
 
       {unlocked ? (
@@ -599,67 +592,5 @@ function PalierRow({
     >
       {body}
     </Link>
-  )
-}
-
-/**
- * LES GAINS D'UN PALIER — trois jetons, un par étoile : le cristal de nos
- * gemmes et ce qu'il vaut à ce palier (palier N → N gemmes). Une étoile déjà
- * décrochée garde son jeton en jaune, coché : c'est gagné, pour toujours.
- * Un palier fermé montre quand même ses gains, en retrait — on voit ce qui
- * attend là-haut.
- */
-function GainsPalier({
-  level,
-  acquises,
-  unlocked,
-}: {
-  level: PalierLevel
-  acquises: number
-  unlocked: boolean
-}) {
-  const parEtoile = gemmesParEtoile(level)
-  return (
-    <span
-      className="mt-2 flex flex-wrap items-center gap-1"
-      role="img"
-      aria-label={`Gains : ${parEtoile} gemme${parEtoile > 1 ? 's' : ''} par étoile, ${acquises} étoile${acquises > 1 ? 's' : ''} sur 3 déjà gagnée${acquises > 1 ? 's' : ''}`}
-    >
-      <span
-        aria-hidden="true"
-        className={cn(
-          'mr-0.5 text-[10px] font-extrabold tracking-wide uppercase',
-          unlocked ? 'text-foreground/55' : 'text-foreground/35',
-        )}
-      >
-        Gains
-      </span>
-      {([1, 2, 3] as const).map((rang) => {
-        const gagnee = acquises >= rang
-        return (
-          <span
-            key={rang}
-            aria-hidden="true"
-            className={cn(
-              'relative inline-flex items-center gap-0.5 rounded-full py-0.5 pr-1.5 pl-0.5 text-[11px] font-extrabold tabular-nums',
-              gagnee
-                ? 'bg-highlight/25 text-foreground ring-1 ring-highlight/70'
-                : unlocked
-                  ? 'bg-black/[0.05] text-foreground/75'
-                  : 'bg-muted text-foreground/40',
-            )}
-          >
-            <CristalIcon className={cn('size-4', !unlocked && 'opacity-60 grayscale')} />+{parEtoile}
-            {/* La coche d'une étoile décrochée : ce jeton-là est gagné. */}
-            {gagnee ? (
-              <Check
-                className="absolute -top-1 -right-1 size-3 rounded-full bg-success p-px text-white"
-                strokeWidth={4}
-              />
-            ) : null}
-          </span>
-        )
-      })}
-    </span>
   )
 }

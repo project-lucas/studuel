@@ -3,6 +3,7 @@ import GameTable from '@/components/jeux/GameTable'
 import OrderTable from '@/components/jeux/OrderTable'
 import AnatomyTable from '@/components/jeux/AnatomyTable'
 import { playableSalonGame } from '@/lib/jeux/catalog'
+import { gameScene } from '@/lib/defi/modes-catalog'
 import {
   buildOrderPool,
   buildSalonPool,
@@ -116,7 +117,7 @@ export default async function SalonPalierPage({
   const kind = poolKind(jeu)
 
   if (kind === 'zones') {
-    const zoneRounds = buildZonePool(jeu, seed, size)
+    const zoneRounds = buildZonePool(jeu, seed, size, level)
     if (!zoneRounds || zoneRounds.length === 0) redirect('/defi')
     return (
       <AnatomyTable
@@ -126,6 +127,7 @@ export default async function SalonPalierPage({
         name={found.game.name}
         subject={found.salon.subject}
         subjectEmoji={found.salon.emoji}
+        scene={gameScene(found.game.id) ?? null}
         ghost={ghost}
       />
     )
@@ -143,6 +145,7 @@ export default async function SalonPalierPage({
         name={found.game.name}
         subject={found.salon.subject}
         subjectEmoji={found.salon.emoji}
+        scene={gameScene(found.game.id) ?? null}
         ghost={ghost}
       />
     )
@@ -162,6 +165,7 @@ export default async function SalonPalierPage({
       name={found.game.name}
       subject={found.salon.subject}
       subjectEmoji={found.salon.emoji}
+      scene={gameScene(found.game.id) ?? null}
       ghost={ghost}
     />
   )

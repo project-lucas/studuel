@@ -97,12 +97,19 @@ interface ArenaHudProps {
    */
   premiumSlot?: ReactNode
   /**
-   * La Route des trophées, SOUS Studuel+ — le troisième cran de la colonne de
-   * l'angle. C'est un écran de LECTURE (où j'en suis, ce que vaut la prochaine
-   * partie, pourquoi) : il rejoint les commandes du HUD au lieu d'occuper la
-   * rangée de combat, rendue à l'action.
+   * LE COMPTE DE TROPHÉES, juste SOUS la carte du joueur (22/09/2026) : la
+   * coupe, le total en or, le rang — et la porte de la Route des trophées.
+   * Elle était une plaque de la colonne de l'angle droit ; le chiffre, lui,
+   * vivait en tête de la feuille des modes. Chez Clash Royale le « 🏆 7503 »
+   * est sous la bannière, à gauche, en évidence : ici pareil.
    */
-  roadSlot?: ReactNode
+  tropheesSlot?: ReactNode
+  /**
+   * LA PLAQUE CLASSEMENT, sous Studuel+ dans la colonne de l'angle droit
+   * (22/09/2026) : sortie du menu burger, elle ouvre l'écran qui a absorbé la
+   * Route des trophées (ClassementSheet).
+   */
+  classementSlot?: ReactNode
   /**
    * LA CARTE DU JOUEUR, calée dans l'ANGLE haut-gauche (façon Clash Royale) :
    * avatar, nom, série et cristaux, puis la barre de niveau et la barre de
@@ -120,11 +127,16 @@ interface ArenaHudProps {
  * laissé au personnage (children, ancré en bas au-dessus de la zone CTA), et
  * les systèmes réclament leur visite depuis le HUD.
  *
- * Rangement façon Clash Royale : la CARTE DU JOUEUR tient l'angle gauche
- * (avatar, nom, série, cristaux, barre de niveau, barre de trophées — un seul
- * objet depuis le 17/09/2026), la colonne des commandes tient l'angle droit
- * (burger, Studuel+, Route des trophées), et le rail des missions descend
- * sous la carte, le long de la scène.
+ * Rangement façon Clash Royale (repris sur la capture de Lucas, 22/09/2026) :
+ * UN ESPACE EN HAUT d'abord — Clash Royale laisse une bande vide au-dessus des
+ * monnaies, le HUD ne touche plus le bord (`HUD_TOP`, plus large que
+ * l'encoche s'il y en a une) ; puis la COLONNE GAUCHE, un seul empilement :
+ * la CARTE DU JOUEUR (avatar, nom, série, cristaux, barre de niveau), le
+ * COMPTE DE TROPHÉES en or juste dessous, puis le rail des missions le long
+ * de la scène ; et la colonne des commandes dans l'angle droit (burger,
+ * Studuel+, Classement). La plaque à coupe de la Route des trophées a quitté
+ * l'angle droit : son contenu vit derrière la plaque Classement, sortie du
+ * burger, et le compte de trophées de gauche n'ouvre rien — il se lit.
  *
  * Le burger était posé au troisième cran, sous le bandeau de saison : il ne
  * tenait plus l'angle, et la colonne droite n'avait qu'un seul objet. Remonté
@@ -133,11 +145,19 @@ interface ArenaHudProps {
  * ligue, classements, historique, réglages) vit toujours derrière le burger :
  * une seule porte.
  */
+/**
+ * Le haut du HUD : la bande vide au-dessus des monnaies, comme chez Clash
+ * Royale — 2,5 rem, ou l'encoche du téléphone plus une demi-marge si elle
+ * est plus haute. Les deux colonnes et le menu ouvert partagent la cote.
+ */
+const HUD_TOP = 'top-[max(2.5rem,calc(env(safe-area-inset-top)+0.5rem))] md:top-8'
+
 export default function ArenaHud({
   leftTiles = [],
   menuItems,
   premiumSlot,
-  roadSlot,
+  tropheesSlot,
+  classementSlot,
   profileSlot,
   children,
 }: ArenaHudProps) {
@@ -217,7 +237,10 @@ export default function ArenaHud({
                     role="dialog"
                     aria-modal="true"
                     aria-labelledby="arena-menu-titre"
-                    className="arena-menu absolute top-2 right-3 flex max-h-[calc(100dvh-1rem)] w-[min(20rem,calc(100vw-1.5rem))] flex-col outline-none md:top-4"
+                    className={cn(
+                      'arena-menu absolute right-3 flex max-h-[calc(100dvh-3.5rem)] w-[min(20rem,calc(100vw-1.5rem))] flex-col outline-none',
+                      HUD_TOP,
+                    )}
                     style={{ transformOrigin: 'top right' }}
                     initial={reduce ? false : { scale: 0.96, y: -6 }}
                     animate={{ scale: 1, y: 0 }}
@@ -261,29 +284,34 @@ export default function ArenaHud({
           )
         : null}
 
-      {/* La carte du joueur tient l'angle haut-gauche. `fixed` pour tenir
+      {/* L'ANGLE HAUT-GAUCHE, UNE SEULE COLONNE : la carte du joueur, le
+          compte de trophées juste dessous, puis le rail des missions — même
+          bord gauche pour tout, et l'écart entre les objets tient dans le
+          conteneur (plus de cote absolue pour le rail). `fixed` pour tenir
           l'angle quel que soit le format ; sur desktop, après la barre
           latérale (md:left-56). */}
-      <div className="fixed top-2 left-3 z-40 md:top-4 md:left-56">
+      <div className={cn('fixed left-3 z-40 flex flex-col items-start gap-2.5 md:left-56', HUD_TOP)}>
         {profileSlot}
+        {tropheesSlot}
+
+        {/* Le rail des missions, le long de la scène — une COLONNE régulière :
+            même plaque, même écart. */}
+        {leftTiles.length > 0 ? (
+          <div className="mt-1 flex flex-col items-center gap-3">
+            {leftTiles.map((tile) => (
+              <RailTileFace key={tile.id} tile={tile} onOpen={openSheet} />
+            ))}
+          </div>
+        ) : null}
       </div>
 
-      {/* Le rail des missions, SOUS la carte du joueur, le long de la scène —
-          une COLONNE régulière : même plaque, même écart. */}
-      {leftTiles.length > 0 ? (
-        <div className="fixed top-[9rem] left-3 z-40 flex flex-col items-center gap-3 md:top-[10rem] md:left-[14.125rem]">
-          {leftTiles.map((tile) => (
-            <RailTileFace key={tile.id} tile={tile} onOpen={openSheet} />
-          ))}
-        </div>
-      ) : null}
-
-      {/* ANGLE HAUT-DROIT : la COLONNE d'objets, au ras de la bande des
-          monnaies — le burger tient l'angle, puis dessous, sur la même plaque
-          sculptée et au même écart : Studuel+ (en or) et la Route des
-          trophées. (Amis a rejoint le menu le 16/09/2026.) z-40 : SOUS les
+      {/* ANGLE HAUT-DROIT : la COLONNE d'objets, à la hauteur de la carte du
+          joueur — le burger tient l'angle, puis dessous, sur la même plaque
+          sculptée et au même écart : Studuel+ (en or), puis Classement. (Amis
+          a rejoint le menu le 16/09/2026 ; Classement en est sorti le
+          22/09/2026, à la place de la plaque à coupe.) z-40 : SOUS les
           feuilles modales (z-50) et sous le menu ouvert, qui la recouvre. */}
-      <div className="fixed top-2 right-3 z-40 flex flex-col items-center gap-3 md:top-4">
+      <div className={cn('fixed right-3 z-40 flex flex-col items-center gap-3', HUD_TOP)}>
         <div className="flex items-center gap-2">
           {/* Le burger, sur la plaque sculptée comme le reste de la colonne :
               chez Clash Royale la colonne est une SÉRIE d'objets de la même
@@ -325,8 +353,8 @@ export default function ArenaHud({
             recouvrent, rien ne bouge dans la colonne. */}
         {premiumSlot ?? null}
 
-        {/* La Route des trophées, au cran suivant de la même colonne. */}
-        {roadSlot ?? null}
+        {/* Classement, au cran suivant : moi, mes matières, le barème. */}
+        {classementSlot ?? null}
       </div>
 
       {/* Feuille de détail d'une entrée (tuile ou plaque) — portail pour

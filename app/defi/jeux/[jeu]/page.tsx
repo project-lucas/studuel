@@ -1,4 +1,5 @@
 import { redirect } from 'next/navigation'
+import DojoAstuces from '@/components/jeux/DojoAstuces'
 import PalierMap from '@/components/jeux/PalierMap'
 import { playableSalonGame } from '@/lib/jeux/catalog'
 import { gameFormat } from '@/lib/jeux/formats'
@@ -84,6 +85,9 @@ export default async function SalonJeuPage({
       standings={standings}
       ultime={ultime}
       etoilesPayees={etoilesPayees}
+      // Le dojo des astuces n'existe que pour le Calcul mental : c'est le seul
+      // jeu dont les questions portent une méthode (lib/jeux/calcul-astuces).
+      dojo={jeu === 'calcul-mental' ? <DojoAstuces /> : null}
     />
   )
 }

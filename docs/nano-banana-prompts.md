@@ -417,28 +417,41 @@ contenu.
 L'ironie utile : ce quadrillage était le **tiers bas** de l'illustration
 abandonnée — la seule partie qui fonctionnait à l'écran.
 
-### Le correctif du fond `/defi` — 1 génération, lui, reste valable
+**Depuis le 22/09/2026, ce papier est le mur de TOUTE l'app**, posé une fois
+dans `app/layout.tsx` sous tous les mondes : il ne s'arrêtait qu'aux onglets,
+et disparaissait dès qu'on entrait dans un dossier, un chapitre, un cours ou
+un quiz. Et chaque jeu ou mode a sa **pièce** (`.jeu-monde`, posée par
+`ModeStage`) : la recette de la course classée — le violet profond éclairé
+dans l'accent de sa robe, la scène de son billet en filigrane —, ce qu'on voit
+autour de la table sur un écran large et le temps du chargement, à la place du
+château de l'arène. L'arène garde sa scène pour elle seule.
 
-La scène actuelle est bonne et n'est pas à refaire. Elle viole seulement la
-règle du haut : elle est riche exactement là où l'UI se pose — nuages violets
-contrastés derrière le bandeau, colonnes sombres et détaillées le long des deux
-bords, là où vivent les boutons Quêtes, Boss, Menu et Trophées.
+### Le correctif du fond `/defi` — 2 retouches (le matin et le midi), le reste est bon
 
-Image actuelle en référence, format **9:16** :
+Depuis l'académie flottante, l'arène a **six variantes horaires**
+(`public/images/arene/arena-{dawn,morning,noon,afternoon,evening,night}.webp`,
+choisies par `lib/arena-background.ts`). Relues le 22/09/2026 : **quatre sont
+justes** — aube, après-midi, soir et nuit ont un ciel calme sous le bandeau, et
+le bas est vide par construction, c'est le podium du personnage. **Deux violent
+la règle du haut** : `arena-morning.webp` et `arena-noon.webp` posent le soleil
+et de gros nuages blancs contrastés exactement derrière le bandeau de verre.
+Rien d'autre n'est à refaire.
 
-> Keep the exact same scene, character, podium, columns, braziers, laurel,
-> floor inlay and art style as the reference image. Change only the lighting
-> and the level of detail in two places. First, the top third of the image:
-> keep the violet sky, but make it calm and even, much lighter in value, with
-> no contrasted cloud shapes and no dark areas — it must stay quiet, because a
-> heads-up display sits over it. Second, the left and right vertical edges over
-> their full height: keep the columns and the hangings, but light them clearly
-> and flatten their detail, with no deep shadow and no dark corner — round
-> buttons sit over them. All the remaining detail, contrast and warm glow
-> concentrates in the central stage and on the floor. High-key throughout:
-> there is no black anywhere, the darkest tone is a soft mid-tone. Full-bleed
-> vertical composition edge to edge, no frame, no border, no letterboxing. No
-> text, no letters, no numbers, no logo, no watermark.
+Une génération par fichier, l'image actuelle en référence, format **9:16** :
+
+> Keep the exact same scene, castle, floating island, waterfall, meadow, rocks
+> and art style as the reference image, and match its exact art style. Change
+> only the top third of the image: keep the same sky color and time of day, but
+> make the sky calm and even — move the sun out of the frame or reduce it to a
+> soft, diffuse glow, and replace the big contrasted cumulus clouds with a few
+> faint, low-contrast wisps. No bright spot and no dark shape may remain in
+> the top third, because a translucent heads-up display sits over it. Keep all
+> detail, contrast and light in the castle, the island and the meadow below.
+> Full-bleed vertical composition edge to edge, no frame, no border, no
+> letterboxing. No text, no letters, no numbers, no logo, no watermark.
+
+Après réception : même nom de fichier, même format (webp), même cadrage — la
+variante est choisie par l'heure, rien d'autre ne change.
 
 ---
 

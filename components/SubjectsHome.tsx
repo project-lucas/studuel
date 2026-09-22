@@ -15,7 +15,6 @@ import {
   type MasteryRank,
 } from '@/lib/mastery'
 import SubjectIcon from '@/components/SubjectIcon'
-import WorldBackdrop from '@/components/WorldBackdrop'
 import { sfx } from '@/lib/sounds'
 import { CLOCK_STEP_MS, useClock } from '@/lib/use-clock'
 import { countdownLabel } from '@/lib/traque'
@@ -659,8 +658,6 @@ export default function SubjectsHome({
   // garde le sien pour se distinguer de la première.
   return (
     <section aria-label="Tes matières">
-      {/* Fond crème pleine page, derrière tout le contenu de l'onglet. */}
-      <WorldBackdrop className="tab-bg" />
       {/* Les premiers dossiers de la grille, préchargés en arrière-plan une
           fois les onglets servis — pas en édition, où l'on ne les ouvre pas. */}
       <PrechargeurDossiers

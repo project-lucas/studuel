@@ -31,6 +31,7 @@ import AppReadyBeacon from "@/components/AppReadyBeacon";
 // Gabarit de page : marges de lecture, ou plein écran. Client, pour suivre la
 // navigation — cf. son en-tête.
 import AppMain from "@/components/AppMain";
+import WorldBackdrop from "@/components/WorldBackdrop";
 import { estPleinEcran } from "@/lib/quiz-chrome";
 import { shouldShowSplash, tipOfDay } from "@/lib/splash";
 import { getCurrentUser } from "@/lib/supabase/user";
@@ -103,6 +104,14 @@ export default async function RootLayout({
       className={`light ${nunito.variable} ${baloo.variable}`}
     >
       <body className="antialiased">
+        {/* LE MUR DE L'APP : le papier quadrillé (`.tab-bg`), posé UNE fois et
+            sous tous les mondes (-z-20). L'arène et la course classée peignent
+            leur scène par-dessus (-z-10) ; tout le reste — onglets, dossiers,
+            chapitres, cours, quiz, Marcel, Parents, Compte — est posé sur ce
+            papier. Jusqu'au 22/09/2026 il n'était posé que sur les onglets de
+            liste, page par page : on touchait un dossier et il disparaissait,
+            l'écran « attendait un fond ». */}
+        <WorldBackdrop className="tab-bg -z-20" />
         {/* Écran de chargement : l'astuce est tirée ici (serveur) pour que les
             deux rendus affichent la même phrase — sinon React signale une
             différence d'hydratation sur le tout premier écran de l'app. */}

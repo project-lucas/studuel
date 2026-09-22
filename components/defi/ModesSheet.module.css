@@ -212,33 +212,15 @@
   gap: 4.2cqw;
 }
 
-/* La rangée du haut : le total de trophées au centre, le bouton « tous les
-   modes » contre le bord droit. */
+/* La rangée du haut : le bouton « tous les modes » contre le bord droit.
+   (Le total de trophées qui en tenait le centre est parti sur l'arène, sous
+   la carte du joueur — 22/09/2026.) */
 .enTete {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   min-height: 11cqw;
-}
-
-/* « Total de trophées : 1 234 » — la coupe, le mot, le nombre en or. */
-.total {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.8cqw;
-  font-size: 4.3cqw;
-  line-height: 1;
-}
-.total .nombre {
-  color: var(--highlight);
-}
-.coupe {
-  width: 8cqw;
-  height: 8cqw;
-  object-fit: contain;
-  filter: drop-shadow(0 0.4cqw 0 rgb(0 0 0 / 0.35));
 }
 
 /* Le bouton « tous les modes » : un pavé de jeu comme la poignée, plus
@@ -308,7 +290,8 @@
 }
 
 /* Le séparateur de section (« Modes compétitifs » au modèle) : deux filets
-   et le nom de la matière, avec sa vignette. */
+   et le nom de la matière, seul (la vignette collée au titre a été retirée le
+   22/09/2026 : elle faisait doublon avec la scène du billet dessous). */
 .separateur {
   display: flex;
   align-items: center;
@@ -325,10 +308,4 @@
   border-radius: 999px;
   background: color-mix(in oklch, var(--primary), white 30%);
   opacity: 0.6;
-}
-.vignette {
-  width: 7.5cqw;
-  height: 7.5cqw;
-  object-fit: contain;
-  filter: drop-shadow(0 0.3cqw 0 rgb(0 0 0 / 0.35));
 }

@@ -135,18 +135,18 @@ describe('currentPalier', () => {
 })
 
 describe('applyRun', () => {
-  it('range les étoiles et le meilleur score', () => {
+  it('range les étoiles, le meilleur score et la meilleure précision', () => {
     const { progress, outcome } = applyRun({}, 1, 1, run(20, 20))
     expect(outcome.stars).toBe(3)
     expect(outcome.gained).toBe(3)
     expect(outcome.isBest).toBe(true)
-    expect(progress[1]).toEqual({ stars: 3, best: 2000 })
+    expect(progress[1]).toEqual({ stars: 3, best: 2000, accuracy: 1 })
   })
 
   it('n’écrase JAMAIS un meilleur résultat par une partie ratée', () => {
-    const avant: PalierProgress = { 2: { stars: 3, best: 5000 } }
+    const avant: PalierProgress = { 2: { stars: 3, best: 5000, accuracy: 0.95 } }
     const { progress, outcome } = applyRun(avant, 1, 2, run(2, 10, false))
-    expect(progress[2]).toEqual({ stars: 3, best: 5000 })
+    expect(progress[2]).toEqual({ stars: 3, best: 5000, accuracy: 0.95 })
     expect(outcome.stars).toBe(0)
     expect(outcome.gained).toBe(0)
     expect(outcome.isBest).toBe(false)
@@ -200,6 +200,18 @@ describe('parseProgress', () => {
     expect(parseProgress('pas du json')).toEqual({})
     expect(parseProgress('"une chaîne"')).toEqual({})
     expect(parseProgress('[1,2,3]')).toEqual({})
+  })
+
+  it('relit la précision, et ignore une précision hors de 0..1', () => {
+    expect(parseProgress('{"1":{"stars":2,"best":10,"accuracy":0.8333}}')[1]).toEqual({
+      stars: 2,
+      best: 10,
+      accuracy: 0.833,
+    })
+    expect(parseProgress('{"1":{"stars":2,"best":10,"accuracy":7}}')[1]).toEqual({
+      stars: 2,
+      best: 10,
+    })
   })
 
   it('borne des étoiles aberrantes au lieu de les croire', () => {

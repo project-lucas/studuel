@@ -61,7 +61,7 @@ vi.mock('next/image', () => ({
 
 import CombatButton from '@/components/defi/CombatButton'
 import SubjectPlate from '@/components/defi/SubjectPlate'
-import TrophyRoadSheet from '@/components/defi/TrophyRoadSheet'
+import ClassementSheet from '@/components/defi/ClassementSheet'
 import ArenaActionBar from '@/components/defi/ArenaActionBar'
 import ModesSheet from '@/components/defi/ModesSheet'
 import DuelSubjectProvider from '@/components/defi/DuelSubjectProvider'
@@ -408,34 +408,40 @@ describe('la plaque Matière', () => {
   })
 })
 
-describe('la Route des trophées', () => {
+describe('le Classement', () => {
   const MATHS = [
     { subject: 'maths', gameId: 'calcul-mental', trophies: 890 },
     { subject: 'maths', gameId: 'compte-est-bon', trophies: 350 },
   ]
 
-  function openRoad(board: DuelSubject[]) {
+  function ouvrir(
+    board: DuelSubject[],
+    classement: { rank: number | null; total: number } | null = null,
+  ) {
     return render(
       <DuelSubjectProvider board={board} initialSlug="maths">
-        <TrophyRoadSheet />
+        <ClassementSheet classement={classement} />
       </DuelSubjectProvider>,
     )
   }
 
-  it('annonce le total dans l’étiquette de son bouton', () => {
-    openRoad(boardWith(MATHS, ['maths']))
+  it('annonce le total dans l’étiquette de sa plaque', () => {
+    ouvrir(boardWith(MATHS, ['maths']))
 
     expect(screen.getByRole('button').getAttribute('aria-label')).toContain(
       '1240 trophées',
     )
   })
 
-  it('détaille chaque jeu avec le gain de sa prochaine victoire', async () => {
+  it('liste les matières à la verticale, chaque jeu avec le gain de sa prochaine victoire', async () => {
     const user = userEvent.setup()
-    openRoad(boardWith(MATHS, ['maths']))
-    await user.click(screen.getByRole('button', { name: /route des trophées/i }))
+    const board = boardWith(MATHS, ['maths'])
+    ouvrir(board)
+    await user.click(screen.getByRole('button', { name: /^classement/i }))
 
     const dialog = screen.getByRole('dialog')
+    // Toutes les matières du plateau, dans son ordre — plus de roulette.
+    expect(within(dialog).getAllByRole('article')).toHaveLength(board.length)
     // Le jeu monté à 890 ne rapporte plus que +2, le jeu neuf en rapporte 10 :
     // c'est l'écart que l'élève doit pouvoir lire d'un coup d'œil.
     expect(within(dialog).getByText('890')).toBeInTheDocument()
@@ -443,23 +449,35 @@ describe('la Route des trophées', () => {
     expect(within(dialog).getAllByText('+10').length).toBeGreaterThan(0)
   })
 
-  it('porte le rang de la matière — le module qu’elle a absorbé', async () => {
+  it('porte mon rang global et le rang de chaque matière', async () => {
     const user = userEvent.setup()
-    openRoad(boardWith(MATHS, ['maths']))
-    await user.click(screen.getByRole('button', { name: /route des trophées/i }))
+    ouvrir(boardWith(MATHS, ['maths']))
+    await user.click(screen.getByRole('button', { name: /^classement/i }))
 
     const dialog = screen.getByRole('dialog')
+    expect(within(dialog).getByRole('region', { name: /mon classement/i })).toBeInTheDocument()
     // 1240 trophées en maths : le blason et la division doivent s'y lire.
-    expect(within(dialog).getByText(/Argent|Bronze|Or/)).toBeInTheDocument()
+    expect(within(dialog).getAllByText(/Argent|Bronze|Or/).length).toBeGreaterThan(0)
     expect(
-      within(dialog).getByRole('progressbar', { name: /progression vers/i }),
-    ).toBeInTheDocument()
+      within(dialog).getAllByRole('progressbar', { name: /progression vers/i }).length,
+    ).toBeGreaterThan(0)
+  })
+
+  it('dit la bande parmi tous les élèves quand la base la donne, jamais sinon', async () => {
+    const user = userEvent.setup()
+    ouvrir(boardWith(MATHS, ['maths']), { rank: 21, total: 23 })
+    // 21e sur 23 : 91,3 %, arrondi contre l'élève → « Top 95 % ».
+    expect(screen.getByRole('button').getAttribute('aria-label')).toContain(
+      'top 95 % de tous les élèves',
+    )
+    await user.click(screen.getByRole('button', { name: /^classement/i }))
+    expect(within(screen.getByRole('dialog')).getByText(/Top 95 %/)).toBeInTheDocument()
   })
 
   it('explique le barème et les conditions, chiffres à l’appui', async () => {
     const user = userEvent.setup()
-    openRoad(boardWith(MATHS, ['maths']))
-    await user.click(screen.getByRole('button', { name: /route des trophées/i }))
+    ouvrir(boardWith(MATHS, ['maths']))
+    await user.click(screen.getByRole('button', { name: /^classement/i }))
 
     const dialog = screen.getByRole('dialog')
     expect(
@@ -472,11 +490,11 @@ describe('la Route des trophées', () => {
 
   it('dit pourquoi le classé est fermé, sans confondre les deux verrous', async () => {
     const user = userEvent.setup()
-    openRoad(boardWith(MATHS, []))
-    await user.click(screen.getByRole('button', { name: /route des trophées/i }))
+    ouvrir(boardWith(MATHS, []))
+    await user.click(screen.getByRole('button', { name: /^classement/i }))
 
     expect(
-      within(screen.getByRole('dialog')).getByText(/termine un chapitre/i),
-    ).toBeInTheDocument()
+      within(screen.getByRole('dialog')).getAllByText(/termine un chapitre/i).length,
+    ).toBeGreaterThan(0)
   })
 })

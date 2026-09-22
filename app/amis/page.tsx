@@ -1,4 +1,3 @@
-import WorldBackdrop from '@/components/WorldBackdrop'
 import AmisHome from '@/components/AmisHome'
 import OralListenCard from '@/components/amis/OralListenCard'
 import { createClient } from '@/lib/supabase/server'
@@ -242,11 +241,6 @@ export default async function AmisPage() {
   // classements : quelqu'un attend quelque chose de toi, ça passe avant ton rang.
   return (
     <div>
-      {/* Le fond de l'onglet. Porté sur <body> par WorldBackdrop (et pas posé
-          ici en `fixed`) : un transform sur un ancêtre recadrerait un fond
-          fixé dans la page. */}
-      <WorldBackdrop className="tab-bg" />
-
       {/* Plus de titre d'onglet (Lucas, 16/09/2026) : le mot « Amis » vit sous
           l'icône active de la barre, l'écran commence par son contenu. */}
       <OralListenCard

@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import ModeStage from '@/components/defi/ModeStage'
-import AnatomyBoard from '@/components/jeux/AnatomyBoard'
+import AnatomyBoard, { AnatomyCorrection } from '@/components/jeux/AnatomyBoard'
 import GameHud from '@/components/jeux/GameHud'
 import GameOutcome from '@/components/jeux/GameOutcome'
 import {
@@ -21,7 +21,7 @@ import type { PalierRun } from '@/lib/jeux/paliers'
 import { hasTimeRecord } from '@/lib/jeux/palier-format'
 import { useGameReport } from '@/lib/jeux/use-game-report'
 import type { GameGhost } from '@/lib/jeux/ghost-server'
-import type { Organ, OrganRound } from '@/lib/jeux/anatomie'
+import { isGoodPick, type OrganRound, type ZonePlanche } from '@/lib/jeux/anatomie'
 import {
   answer as applyAnswer,
   questionSeconds,
@@ -36,7 +36,7 @@ const TICK_MS = 100
 const URGENT_FROM = 4
 // La correction reste affichée plus longtemps qu'ailleurs : c'est une planche
 // d'anatomie, l'intérêt est de VOIR où était l'organe.
-const REVEAL_MS = 2000
+const REVEAL_MS = 2200
 
 /**
  * La table d'« Anatomie express » — le seul jeu où l'on répond en désignant un
@@ -52,9 +52,12 @@ export default function AnatomyTable({
   name,
   subject,
   subjectEmoji,
+  scene = null,
   ghost,
 }: {
   format: GameFormat
+  /** La scène du billet du jeu, en filigrane dans sa pièce (ModeStage). */
+  scene?: string | null
   /**
    * Palier joué et plancher de classe (lib/jeux/paliers), ou null pour un jeu
    * hors échelle — le « Programme » d'une matière, dont la difficulté est le
@@ -75,7 +78,7 @@ export default function AnatomyTable({
   const [count, setCount] = useState(3)
   const [run, setRun] = useState<GameRun>(() => startRun(format))
   const [index, setIndex] = useState(0)
-  const [picked, setPicked] = useState<Organ | null>(null)
+  const [picked, setPicked] = useState<ZonePlanche | null>(null)
   const [revealed, setRevealed] = useState(false)
   const [best, setBest] = useState(0)
   const [isRecord, setIsRecord] = useState(false)
@@ -169,15 +172,15 @@ export default function AnatomyTable({
     [finish, format],
   )
 
-  const onPick = (organ: Organ | null) => {
+  const onPick = (zone: ZonePlanche | null) => {
     if (!round || phase !== 'playing' || lockRef.current) return
-    // Un tap hors de toute zone n'est pas une réponse : on ne punit pas un
-    // doigt qui glisse à côté de la silhouette.
-    if (organ === null) return
+    // Un tap hors de tout organe n'est pas une réponse : on ne punit pas un
+    // doigt qui glisse à côté de la planche.
+    if (zone === null) return
     lockRef.current = true
-    setPicked(organ)
+    setPicked(zone)
     setRevealed(true)
-    const good = organ.id === round.target.id
+    const good = isGoodPick(round.target, zone)
     const next = applyAnswer(format, runRef.current, { good, elapsedMs: 0 })
     runRef.current = next
     setRun(next)
@@ -262,6 +265,7 @@ export default function AnatomyTable({
       title={name}
       Icon={MECHANIC_ICON[format.params.mechanic]}
       theme={format.theme}
+      scene={scene}
       onExit={exit}
       backLabel={palier ? 'Retour aux paliers' : undefined}
       headerRight={
@@ -323,16 +327,13 @@ export default function AnatomyTable({
             />
 
             {/* Le repère ne tombe qu'APRÈS la réponse : avant, il donnerait
-                l'organe. C'est ici que le jeu enseigne au lieu de tester. */}
-            {revealed ? (
-              <p className="animate-in fade-in mt-3 rounded-2xl bg-card px-4 py-3 text-center text-sm shadow-sm">
-                <strong>{round.target.name}</strong> — {round.target.hint}
-              </p>
-            ) : null}
+                l'organe. C'est ici que le jeu enseigne au lieu de tester — et
+                il nomme aussi ce qu'on a touché à tort. */}
+            {revealed ? <AnatomyCorrection target={round.target} picked={picked} /> : null}
 
             <p role="status" aria-live="polite" className="sr-only">
               {revealed
-                ? picked?.id === round.target.id
+                ? isGoodPick(round.target, picked)
                   ? 'Bien localisé'
                   : `Raté — c'était ${round.target.name}`
                 : ''}

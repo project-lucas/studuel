@@ -1,7 +1,9 @@
 'use client'
 
 import type { ReactNode } from 'react'
+import Image from 'next/image'
 import { ArrowLeft, type LucideIcon } from 'lucide-react'
+import WorldBackdrop from '@/components/WorldBackdrop'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 
@@ -23,12 +25,21 @@ import { sfx } from '@/lib/sounds'
  * négatives), pour que la page couvre toute la largeur sans laisser transparaître
  * l'arène sur les côtés. La barre du haut et la barre d'onglets (z-50) restent
  * au-dessus ; l'en-tête colle sous la barre du haut sur mobile.
+ *
+ * LA PIÈCE DU MODE (22/09/2026). Sur un téléphone la scène couvre tout l'écran ;
+ * mais sur un écran large, et le temps du chargement, c'était le château de
+ * l'arène qui dépassait autour d'un « labo » ou d'un « atlas » — deux mondes
+ * superposés. La scène pose donc aussi SON fond plein écran (`WorldBackdrop`,
+ * porté sur <body>, au-dessus de l'arène) : `.jeu-monde`, la recette de la
+ * course classée — le violet profond éclairé dans l'accent de la robe, et la
+ * scène du billet en filigrane. L'arène garde son décor pour elle seule.
  */
 export default function ModeStage({
   title,
   Icon,
   tone = 'light',
   theme,
+  scene,
   onExit,
   backLabel,
   headerRight,
@@ -46,6 +57,11 @@ export default function ModeStage({
    * encore sa robe ne doit pas devenir illisible pour autant.
    */
   theme?: string
+  /**
+   * La scène du billet du mode (`/images/defi/...-scene.webp`), posée en
+   * filigrane dans la pièce. Sans scène, la pièce est la robe seule.
+   */
+  scene?: string | null
   onExit: () => void
   /**
    * Ce que dit la flèche retour. Par défaut « Retour à l'Arène », qui était vrai
@@ -63,6 +79,18 @@ export default function ModeStage({
   const themed = !dark && !!theme
   const back = backLabel ?? 'Retour à l’Arène'
   return (
+    <>
+      {/* La pièce : la robe du mode doit être SUR le fond lui-même (le portal
+          le sort de cet arbre), d'où `jeu-<theme>` répété ici. La scène en
+          filigrane n'est chargée que sur écran large : sur un téléphone la
+          scène du mode la recouvre entièrement. */}
+      <WorldBackdrop className={cn('jeu-monde', theme && `jeu-${theme}`)}>
+        {scene ? (
+          <span className="jeu-monde-scene hidden md:block" aria-hidden="true">
+            <Image src={scene} alt="" fill sizes="100vw" className="object-cover object-[50%_35%]" />
+          </span>
+        ) : null}
+      </WorldBackdrop>
     <div
       className={cn(
         '-mx-4 -mt-16 -mb-24 flex min-h-dvh flex-col pt-12 md:-mx-8 md:-my-10 md:pt-0',
@@ -131,5 +159,6 @@ export default function ModeStage({
         {children}
       </div>
     </div>
+    </>
   )
 }

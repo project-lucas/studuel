@@ -137,6 +137,14 @@ export type PalierScore = {
   best: number
   /** Meilleur temps de bouclage en millisecondes, absent tant qu'on n'a pas gagné. */
   timeMs?: number
+  /**
+   * Meilleur taux de réussite (0..1), toutes parties confondues. C'est lui
+   * qui place le record sur la PISTE du palier (lib/jeux/piste-palier) : les
+   * étoiles se gagnent à la précision, le score ne dit pas où l'on en est.
+   * Absent sur une progression écrite avant le 22/09/2026 : la piste retombe
+   * alors sur le seuil de la dernière étoile décrochée.
+   */
+  accuracy?: number
 }
 
 export type PalierProgress = Partial<Record<PalierLevel, PalierScore>>
@@ -147,6 +155,14 @@ export function starsAt(progress: PalierProgress, level: PalierLevel): StarCount
 
 export function bestAt(progress: PalierProgress, level: PalierLevel): number {
   return progress[level]?.best ?? 0
+}
+
+/** Meilleur taux de réussite du palier (0..1), ou null s'il n'a jamais été joué. */
+export function accuracyAt(
+  progress: PalierProgress,
+  level: PalierLevel,
+): number | null {
+  return progress[level]?.accuracy ?? null
 }
 
 /** Meilleur temps de bouclage du palier, ou null tant qu'il n'a pas été gagné. */
@@ -278,10 +294,20 @@ export function applyRun(
       : previousTime === null
         ? timeMs
         : Math.min(previousTime, timeMs)
+  // La précision de CETTE partie, à trois décimales, et le meilleur des deux.
+  const accuracy =
+    run.answered > 0
+      ? Math.round((run.correct / run.answered) * 1000) / 1000
+      : null
+  const bestAccuracy =
+    accuracy === null
+      ? (previous.accuracy ?? null)
+      : Math.max(previous.accuracy ?? 0, accuracy)
   const merged: PalierScore = {
     stars: Math.max(previous.stars, stars) as StarCount,
     best: Math.max(previous.best, Math.round(run.score)),
     ...(bestTimeMs === null ? {} : { timeMs: bestTimeMs }),
+    ...(bestAccuracy === null ? {} : { accuracy: bestAccuracy }),
   }
   const next: PalierProgress = { ...progress, [level]: merged }
   const after = unlockedThrough(next, floor)
@@ -387,20 +413,25 @@ export function parseProgress(raw: string | null | undefined): PalierProgress {
     for (const level of PALIER_LEVELS) {
       const entry = (data as Record<string, unknown>)[String(level)]
       if (!entry || typeof entry !== 'object') continue
-      const { stars, best, timeMs } = entry as {
+      const { stars, best, timeMs, accuracy } = entry as {
         stars?: unknown
         best?: unknown
         timeMs?: unknown
+        accuracy?: unknown
       }
       const s = Math.round(Number(stars))
       const b = Math.round(Number(best))
       const t = Math.round(Number(timeMs))
+      const a = Number(accuracy)
       progress[level] = {
         stars: (Number.isFinite(s)
           ? Math.min(MAX_STARS, Math.max(0, s))
           : 0) as StarCount,
         best: Number.isFinite(b) ? Math.max(0, b) : 0,
         ...(isPlausibleTime(t) ? { timeMs: t } : {}),
+        ...(Number.isFinite(a) && a >= 0 && a <= 1
+          ? { accuracy: Math.round(a * 1000) / 1000 }
+          : {}),
       }
     }
     return progress

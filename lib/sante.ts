@@ -2303,7 +2303,13 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
       'LE PALMARÈS S’ÉTEND AUX JEUX DE SALON : chaque jeu jouable (calcul mental, orthographe, capitales… un salon par matière) est inscrit à `mode_catalog`, et ses parties laissent leur score dans les tables de la 352 — record de toujours, record de la semaine, place dans la classe. L’écran de fin d’un jeu affiche sa ligne de palmarès, et /moi montre « Jeux par matière » sous les cinq épreuves.',
     siAbsente:
       'Les jeux se jouent comme avant, avec leurs étoiles et leur record local ; `record_mode_score` rend NULL pour un jeu hors catalogue, donc ni ligne de palmarès à l’écran de fin ni place dans /moi (cases « À poser »). Rien ne casse, aucun chiffre n’est inventé.',
-    sonde: { type: 'ligne', table: 'mode_catalog', colonne: 'mode_id', valeur: 'calcul-mental' },
+    // NON SONDABLE À LA CLÉ ANON — et ça s'est vu (22/09/2026) : après
+    // l'exécution du lot, la sonde 'ligne' répondait encore « absente ». La
+    // policy `mode_catalog_read` (352) est réservée aux comptes connectés :
+    // un visiteur ne verra JAMAIS la ligne, présente ou non. Une sonde qui ne
+    // peut répondre que « absente » n'est pas une sonde, c'est un faux positif
+    // permanent qui apprend à être ignoré.
+    sonde: null,
     decision:
       'MÊME BARÈME, MÊME PLAFOND POUR TOUS LES JEUX (30 000 pts, 1 ms par point) : le moteur lib/jeux/run donne 100 pts par bonne réponse à tous les jeux, les scores sont comparables entre eux. La cohorte reste la classe, la semaine repart le lundi (352). L’épreuve ultime n’est pas classée ici — sans plafond, elle a sa cote (314). Un jeu se classe TOUS PALIERS CONFONDUS : dans une même classe, le plancher de palier est le même pour tous (lib/jeux/paliers), la comparaison reste juste.',
   },

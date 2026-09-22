@@ -1,138 +1,201 @@
 'use client'
 
+import { useId, useState } from 'react'
 import { cn } from '@/lib/utils'
 import {
-  BOARD_HEIGHT,
-  BOARD_WIDTH,
-  ORGANS,
-  organAt,
+  PLANCHE_HAUTEUR,
+  PLANCHE_LARGEUR,
+  ZONES,
+  isGoodPick,
+  zoneAt,
   zoneLabel,
   type Organ,
+  type ZonePlanche,
 } from '@/lib/jeux/anatomie'
+import { CORPS_D, FONDU_DEPUIS } from '@/lib/jeux/anatomie-planche'
+import styles from './AnatomyBoard.module.css'
+
+/** L'onde d'un tap tombé à côté de tout organe, là où il est tombé. */
+type Onde = { x: number; y: number; cle: number }
+
+/** Épaisseur du halo qui bat autour de la bonne réponse, à la correction. */
+const HALO_PLEIN = 4.5
+const HALO_TUBE_EN_PLUS = 5
 
 /**
- * La planche d'anatomie : une silhouette et des zones qu'on touche.
+ * La planche d'anatomie : un corps de face, et dedans les organes DESSINÉS —
+ * sans étiquette. C'est le schéma à légender du cours de SVT.
  *
- * C'est la seule interaction de l'app où l'on répond en DÉSIGNANT un endroit —
- * aucune proposition à lire, donc aucune possibilité d'éliminer les mauvaises
- * réponses. On sait, ou on ne sait pas.
+ * On répond en touchant l'organe demandé. Aucune proposition à lire, donc
+ * aucune possibilité d'éliminer les mauvaises réponses : il faut reconnaître
+ * le foie à sa forme et à sa place. Et le geste est précis : la zone de clic
+ * est le contour de l'organe, calculé par `zoneAt` sur les mêmes formes que
+ * celles qu'on voit — les tests de lib/jeux/anatomie.test.ts mesurent ce que
+ * le doigt peut atteindre.
  *
- * Les zones sont invisibles au repos : les afficher reviendrait à donner huit
- * cibles nommées, c'est-à-dire un QCM déguisé. Elles ne se révèlent qu'à la
- * correction — la bonne en vert, celle qu'on a touchée à tort en corail.
+ * Tous les organes sont dans la même teinte : une couleur par organe (ou par
+ * appareil) trahirait la réponse. À la correction seulement, la cible passe
+ * en vert et l'organe touché à tort en corail, le reste s'efface.
  */
 export default function AnatomyBoard({
   target,
-  /** Organe touché par l'élève, ou null tant qu'il n'a pas répondu. */
+  /** Zone touchée par l'élève, ou null tant qu'il n'a pas répondu. */
   picked,
   revealed,
   onPick,
 }: {
   target: Organ
-  picked: Organ | null
+  picked: ZonePlanche | null
   revealed: boolean
-  /** L'organe touché, ou null si le tap est tombé en dehors de toute zone. */
-  onPick: (organ: Organ | null) => void
+  /** La zone touchée, ou null si le tap est tombé en dehors de tout organe. */
+  onPick: (zone: ZonePlanche | null) => void
 }) {
+  const id = useId()
+  const [onde, setOnde] = useState<Onde | null>(null)
+
   const handleClick = (event: React.MouseEvent<SVGSVGElement>) => {
     if (revealed) return
     // On convertit le clic écran en coordonnées du viewBox : le SVG est mis à
     // l'échelle par la mise en page, donc les pixels de la page ne veulent rien
-    // dire ici.
+    // dire ici. Le SVG garde les proportions du viewBox, la conversion est donc
+    // la même sur les deux axes.
     const rect = event.currentTarget.getBoundingClientRect()
-    const x = ((event.clientX - rect.left) / rect.width) * BOARD_WIDTH
-    const y = ((event.clientY - rect.top) / rect.height) * BOARD_HEIGHT
-    onPick(organAt(x, y))
+    const x = ((event.clientX - rect.left) / rect.width) * PLANCHE_LARGEUR
+    const y = ((event.clientY - rect.top) / rect.height) * PLANCHE_HAUTEUR
+    const zone = zoneAt(x, y)
+    if (!zone) setOnde({ x, y, cle: Date.now() })
+    onPick(zone)
   }
 
+  const fonduId = `${id}-fondu`
+  const masqueId = `${id}-masque`
+
   return (
-    <div className="mx-auto w-full max-w-[260px]">
+    <div className="bg-card mx-auto w-full max-w-[360px] rounded-3xl p-2 shadow-sm ring-1 ring-[color:var(--jeu-accent)]/15">
       <svg
-        viewBox={`0 0 ${BOARD_WIDTH} ${BOARD_HEIGHT}`}
+        viewBox={`0 0 ${PLANCHE_LARGEUR} ${PLANCHE_HAUTEUR}`}
         onClick={handleClick}
         // `group` et non `img` : la planche CONTIENT des zones activables.
         // `img` est un rôle feuille — un lecteur d'écran ignorerait tout ce
-        // qu'il y a dedans, y compris les huit zones.
+        // qu'il y a dedans, y compris les zones.
         role="group"
-        aria-label={`Silhouette humaine — trouve ${target.name}`}
-        className={cn(
-          'w-full touch-manipulation select-none',
-          !revealed && 'cursor-pointer',
-        )}
+        aria-label={`Planche d’anatomie — trouve ${target.name}`}
+        className={cn(styles.planche, !revealed && styles.cliquable)}
       >
-        {/* La silhouette : tête, tronc, bras, jambes. Volontairement schématique
-            — une planche trop détaillée donnerait des indices de forme. */}
-        <g fill="var(--jeu-accent)" opacity={0.14}>
-          <circle cx="50" cy="20" r="16" />
-          <rect x="30" y="40" width="40" height="100" rx="16" />
-          <rect x="14" y="46" width="13" height="66" rx="6.5" />
-          <rect x="73" y="46" width="13" height="66" rx="6.5" />
-          <rect x="33" y="136" width="14" height="76" rx="7" />
-          <rect x="53" y="136" width="14" height="76" rx="7" />
-        </g>
-        {/* Contour, pour que la silhouette se lise sur le fond du thème. */}
-        <g
-          fill="none"
-          stroke="var(--jeu-accent)"
-          strokeWidth="1.2"
-          opacity={0.5}
-        >
-          <circle cx="50" cy="20" r="16" />
-          <rect x="30" y="40" width="40" height="100" rx="16" />
+        <defs>
+          {/* Les cuisses s'estompent vers le bas : la planche s'arrête à
+              mi-cuisse, comme celle du manuel, sans couper net. */}
+          <linearGradient
+            id={fonduId}
+            gradientUnits="userSpaceOnUse"
+            x1="0"
+            y1={FONDU_DEPUIS}
+            x2="0"
+            y2={PLANCHE_HAUTEUR}
+          >
+            <stop offset="0" stopColor="#fff" />
+            <stop offset="1" stopColor="#000" />
+          </linearGradient>
+          <mask id={masqueId}>
+            <rect width={PLANCHE_LARGEUR} height={PLANCHE_HAUTEUR} fill={`url(#${fonduId})`} />
+          </mask>
+        </defs>
+
+        <g mask={`url(#${masqueId})`}>
+          <path d={CORPS_D} className={styles.corps} />
         </g>
 
-        {ORGANS.map((organ, index) => {
-          const isTarget = organ.id === target.id
-          const isPicked = picked?.id === organ.id
-          // Avant la correction, aucune zone n'est peinte : les montrer
-          // reviendrait à afficher huit cibles, donc un QCM déguisé. Elles
-          // restent en revanche ATTEIGNABLES au clavier, sous un nom qui décrit
-          // leur position et jamais leur contenu (cf. `zoneLabel`).
-          if (!revealed) {
-            return (
-              <circle
-                key={organ.id}
-                cx={organ.zone.cx}
-                cy={organ.zone.cy}
-                r={organ.zone.r}
-                fill="transparent"
-                tabIndex={0}
-                role="button"
-                aria-label={zoneLabel(organ.zone, index)}
-                onKeyDown={(event) => {
-                  if (event.key !== 'Enter' && event.key !== ' ') return
-                  // Sinon la barre d'espace fait défiler la page sous le jeu.
-                  event.preventDefault()
-                  onPick(organ)
-                }}
-                // Une zone transparente qui prend le focus sans rien montrer
-                // laisse l'élève au clavier totalement perdu : on lui dessine
-                // son contour, et seulement au focus clavier.
-                className="cursor-pointer stroke-transparent outline-none focus-visible:stroke-primary"
-                strokeWidth="1.6"
-                strokeDasharray="3 2"
-              />
-            )
-          }
-          if (!isTarget && !isPicked) return null
+        {ZONES.map((zone, index) => {
+          const isTarget = isGoodPick(target, zone)
+          const isPicked = picked?.id === zone.id
+          const etat = !revealed
+            ? undefined
+            : isTarget
+              ? styles.cible
+              : isPicked
+                ? styles.ratee
+                : styles.eteinte
+          const tube = zone.forme.type === 'tube' ? zone.forme : null
           return (
-            <g key={organ.id}>
-              <circle
-                cx={organ.zone.cx}
-                cy={organ.zone.cy}
-                r={organ.zone.r}
-                className={cn(
-                  'jeu-monte',
-                  isTarget
-                    ? 'fill-success/35 stroke-success'
-                    : 'fill-destructive/30 stroke-destructive',
-                )}
-                strokeWidth="1.6"
-              />
+            // Chaque zone est ATTEIGNABLE au clavier, sous un nom qui décrit sa
+            // position et jamais son contenu (cf. `zoneLabel`) : la nommer
+            // donnerait la réponse à qui tabule.
+            <g
+              key={zone.id}
+              role="button"
+              tabIndex={revealed ? -1 : 0}
+              aria-label={zoneLabel(zone, index)}
+              aria-disabled={revealed || undefined}
+              onKeyDown={(event) => {
+                if (revealed) return
+                if (event.key !== 'Enter' && event.key !== ' ') return
+                // Sinon la barre d'espace fait défiler la page sous le jeu.
+                event.preventDefault()
+                onPick(zone)
+              }}
+              className={cn(styles.zone, etat)}
+            >
+              {revealed && isTarget ? (
+                <path
+                  d={zone.forme.d}
+                  className={styles.halo}
+                  strokeWidth={tube ? tube.largeur + HALO_TUBE_EN_PLUS : HALO_PLEIN}
+                />
+              ) : null}
+              {tube ? (
+                <>
+                  <path d={tube.d} className={styles.tubeFond} strokeWidth={tube.largeur + 1.6} />
+                  <path d={tube.d} className={styles.tubeCorps} strokeWidth={tube.largeur} />
+                </>
+              ) : (
+                <path d={zone.forme.d} className={styles.plein} />
+              )}
+              {zone.details?.map((d) => (
+                <path key={d} d={d} className={styles.detail} />
+              ))}
             </g>
           )
         })}
+
+        {onde ? (
+          <circle key={onde.cle} cx={onde.x} cy={onde.y} r={7} className={styles.onde} />
+        ) : null}
       </svg>
     </div>
+  )
+}
+
+/**
+ * La carte de correction sous la planche : où était l'organe, ce qu'il fait,
+ * et — si l'on s'est trompé — ce qu'on a touché à la place. C'est là que le
+ * jeu enseigne au lieu de tester : un élève qui touche le pancréas en
+ * cherchant l'estomac repart en sachant les deux.
+ */
+export function AnatomyCorrection({
+  target,
+  picked,
+}: {
+  target: Organ
+  picked: ZonePlanche | null
+}) {
+  const good = isGoodPick(target, picked)
+  // « le foie » ouvre une phrase : il lui faut sa majuscule.
+  const nom = target.name.charAt(0).toUpperCase() + target.name.slice(1)
+  return (
+    <p className="animate-in fade-in bg-card mt-3 rounded-2xl px-4 py-3 text-center text-sm shadow-sm">
+      {!good && picked ? (
+        <>
+          <span className="text-destructive font-bold">Tu as touché {picked.nom}.</span>{' '}
+        </>
+      ) : null}
+      {!good && !picked ? (
+        <>
+          <span className="text-muted-foreground font-bold">Temps écoulé.</span>{' '}
+        </>
+      ) : null}
+      <strong>{nom}</strong>
+      {good ? ' — ' : ', c’était là. '}
+      {target.hint}
+    </p>
   )
 }

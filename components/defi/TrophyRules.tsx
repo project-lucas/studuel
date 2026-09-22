@@ -30,54 +30,60 @@ export default function TrophyRules({
   currentTrophies,
   /** Le nom de ce jeu, pour nommer la bande courante. */
   currentGame,
+  /** L'appelant porte déjà le titre (le résumé d'un bloc repliable) : on ne le redit pas. */
+  sansTitre = false,
 }: {
   currentTrophies?: number
   currentGame?: string
+  sansTitre?: boolean
 }) {
   const here =
     currentTrophies === undefined ? null : trophyBand(currentTrophies)
 
   return (
     <section
-      aria-labelledby="trophy-rules-title"
-      className="rounded-2xl border border-white/10 bg-white/5 p-3"
+      aria-labelledby={sansTitre ? undefined : 'trophy-rules-title'}
+      aria-label={sansTitre ? 'Comment on gagne des trophées' : undefined}
+      className="text-foreground"
     >
-      <h3
-        id="trophy-rules-title"
-        className="font-heading mb-2 flex items-center gap-2 text-sm font-extrabold text-white"
-      >
-        <Info className="size-4 shrink-0 text-highlight" strokeWidth={2.6} aria-hidden="true" />
-        Comment on gagne des trophées
-      </h3>
+      {sansTitre ? null : (
+        <h3
+          id="trophy-rules-title"
+          className="font-heading mb-2 flex items-center gap-2 text-sm font-extrabold text-foreground"
+        >
+          <Info className="size-4 shrink-0 text-primary" strokeWidth={2.6} aria-hidden="true" />
+          Comment on gagne des trophées
+        </h3>
+      )}
 
-      <ol className="mb-3 list-inside list-decimal space-y-1.5 text-[0.72rem] leading-snug text-white/70 marker:font-bold marker:text-highlight">
+      <ol className="mb-3 list-inside list-decimal space-y-1.5 text-[0.72rem] leading-snug text-muted-foreground marker:font-bold marker:text-primary">
         <li>
-          Chaque <strong className="font-bold text-white">jeu</strong> a son
+          Chaque <strong className="font-bold text-foreground">jeu</strong> a son
           compteur. Le total d’une matière est la somme de ses jeux, et ton rang
           de matière n’est qu’une lecture de ce total.
         </li>
         <li>
-          Le gain ne dépend <strong className="font-bold text-white">pas</strong>{' '}
+          Le gain ne dépend <strong className="font-bold text-foreground">pas</strong>{' '}
           de l’adversaire, seulement de ton compteur sur ce jeu-là. Il est donc
           annoncé <em>avant</em> la partie : c’est le « +N » sur la tuile.
         </li>
         <li>
           Plus un jeu est monté, moins il rapporte. Un jeu jamais touché vaut{' '}
-          <strong className="font-bold text-highlight">+{TROPHY_BANDS[0].win}</strong>{' '}
+          <strong className="font-bold text-accent-foreground">+{TROPHY_BANDS[0].win}</strong>{' '}
           et ne coûte rien — c’est là que se gagnent les trophées.
         </li>
       </ol>
 
       {/* Le barème, tel quel. Neuf lignes valent mieux qu'une phrase qui
           résumerait : l'élève doit pouvoir repérer SA ligne. */}
-      <div className="overflow-hidden rounded-xl border border-white/10">
+      <div className="overflow-hidden rounded-xl border border-border">
         <table className="w-full border-collapse text-[0.7rem]">
           <caption className="sr-only">
             Trophées gagnés et perdus selon le compteur du jeu, par tranche de{' '}
             {BAND_SPAN}
           </caption>
           <thead>
-            <tr className="bg-white/10 text-[0.6rem] tracking-wide text-white/60 uppercase">
+            <tr className="bg-muted/60 text-[0.6rem] tracking-wide text-muted-foreground uppercase">
               <th scope="col" className="px-2 py-1 text-left font-extrabold">
                 Compteur du jeu
               </th>
@@ -95,8 +101,8 @@ export default function TrophyRules({
               return (
                 <tr
                   key={band.floor}
-                  className={`border-t border-white/8 ${
-                    isHere ? 'bg-highlight/15 text-white' : 'text-white/65'
+                  className={`border-t border-border ${
+                    isHere ? 'bg-accent text-foreground' : 'text-muted-foreground'
                   }`}
                 >
                   <th
@@ -112,7 +118,7 @@ export default function TrophyRules({
                       </span>
                     ) : null}
                   </th>
-                  <td className="px-2 py-1 text-right font-mono font-extrabold text-highlight tabular-nums">
+                  <td className="px-2 py-1 text-right font-mono font-extrabold text-accent-foreground tabular-nums">
                     +{band.win}
                   </td>
                   <td className="px-2 py-1 text-right font-mono font-bold tabular-nums">
@@ -125,29 +131,29 @@ export default function TrophyRules({
         </table>
       </div>
 
-      <h4 className="font-heading mt-3 mb-1.5 text-[0.7rem] font-extrabold tracking-wide text-white/80 uppercase">
+      <h4 className="font-heading mt-3 mb-1.5 text-[0.7rem] font-extrabold tracking-wide text-foreground/80 uppercase">
         Les conditions
       </h4>
-      <ul className="space-y-1.5 text-[0.72rem] leading-snug text-white/70">
+      <ul className="space-y-1.5 text-[0.72rem] leading-snug text-muted-foreground">
         <li>
-          <strong className="font-bold text-white">Ouvrir le duel classé</strong>{' '}
+          <strong className="font-bold text-foreground">Ouvrir le duel classé</strong>{' '}
           d’une matière : réussir le quiz d’un de ses chapitres à{' '}
           {Math.round(CHAPTER_COMPLETE_SCORE * 100)} % au moins une fois. Une
           matière ouverte ne se referme jamais.
         </li>
         <li>
-          <strong className="font-bold text-white">L’adversaire</strong> est
+          <strong className="font-bold text-foreground">L’adversaire</strong> est
           apparié sur tes trophées de cette matière (±{MATCH_RANGE} au départ),
           jamais sur un niveau général. La fourchette s’élargit s’il n’y a
           personne.
         </li>
         <li>
-          <strong className="font-bold text-white">Ton rang de matière</strong> :{' '}
+          <strong className="font-bold text-foreground">Ton rang de matière</strong> :{' '}
           {SUBJECT_DIVISION_SPAN} trophées font une division,{' '}
           {SUBJECT_DIVISIONS_PER_TIER} divisions font un palier (III → II → I).
         </li>
         <li>
-          <strong className="font-bold text-white">Fin de saison</strong> :
+          <strong className="font-bold text-foreground">Fin de saison</strong> :
           au-dessus de {SEASON_KEEP_FLOOR} trophées sur un jeu, tu gardes{' '}
           {SEASON_KEEP_FLOOR} plus la moitié du reste. En dessous, rien ne bouge.
         </li>

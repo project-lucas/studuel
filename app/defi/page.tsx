@@ -6,7 +6,9 @@ import ModesSheet from '@/components/defi/ModesSheet'
 import CombatButton from '@/components/defi/CombatButton'
 import SubjectPlate from '@/components/defi/SubjectPlate'
 import ArenaActionBar from '@/components/defi/ArenaActionBar'
-import TrophyRoadSheet from '@/components/defi/TrophyRoadSheet'
+import ClassementSheet from '@/components/defi/ClassementSheet'
+import CompteTropheesArene from '@/components/defi/CompteTropheesArene'
+import { cleEtatCompte, topPourcent } from '@/lib/defi/classement-arene'
 import DuelSubjectProvider from '@/components/defi/DuelSubjectProvider'
 import { buildDuelBoard } from '@/lib/defi/duel-board'
 import {
@@ -36,7 +38,6 @@ import { fetchAreneVague1 } from '@/lib/arene-vague1'
 import { reviewQueue } from '@/lib/srs'
 import WeeklyLeague from '@/components/defi/WeeklyLeague'
 import LeaguePromotionWatch from '@/components/defi/LeaguePromotionWatch'
-import RankingTabs from '@/components/defi/RankingTabs'
 import ClanBanner from '@/components/defi/ClanBanner'
 import ProfileChip from '@/components/defi/ProfileChip'
 import { getProfileData } from '@/app/defi/profile-actions'
@@ -48,7 +49,6 @@ import {
 } from 'lucide-react'
 import {
   MOCK_LEAGUE,
-  MOCK_RANKINGS,
   MOCK_TOURNAMENT,
   MOCK_TROPHIES,
 } from '@/lib/defi/mock-data'
@@ -84,9 +84,7 @@ import {
   activeSchoolId,
   schoolLevelForGrade,
   type SchoolLevel,
-  rankHeadline,
   ordinalFr,
-  type Ranking,
   type School,
 } from '@/lib/clan'
 import { clanWeekReward, type ClanWeekBoard } from '@/lib/clan-week'
@@ -106,12 +104,7 @@ import { fetchMyPalmares } from '@/lib/palmares/palmares-server'
 import type { LignePalmares } from '@/lib/palmares/palmares'
 import ClanWeekCard from '@/components/defi/ClanWeekCard'
 import { normalizeLeagueStandings, buildLeague } from '@/lib/league'
-import type {
-  League,
-  RankingBoard,
-  RankingEntry,
-  RankingScope,
-} from '@/lib/defi/types'
+import type { League } from '@/lib/defi/types'
 import type { ReactNode } from 'react'
 
 export const metadata = { title: 'Défi — Studuel' }
@@ -129,54 +122,6 @@ export const dynamic = 'force-dynamic'
 // menu est clair (18/09/2026) : l'or se perdait dans le puits lavande.
 const ORB_ICON = 'size-6 text-primary'
 const ORB_STROKE = 2.2
-
-// Convertit un classement (lib/clan) en tableau prêt pour RankingTabs.
-// La donnée ne porte QUE le nombre : l'unité (le trophée) est dessinée par la
-// vue, avec le picto du jeu — et le mock parle la même langue.
-function toEntries(r: Ranking, myId: string): RankingEntry[] {
-  return r.entries.map((e) => ({
-    id: e.id,
-    rank: e.rank,
-    name: e.name,
-    avatar: avatarEmojiFor(e.id),
-    score: e.trophies,
-    scoreLabel: e.trophies.toLocaleString('fr-FR'),
-    isMe: e.id === myId,
-  }))
-}
-
-// Classement des amis (RPC friends_trophies) + moi, rangés par trophées.
-function friendsRanking(
-  rows: unknown,
-  myId: string,
-  myName: string,
-  myTrophies: number,
-): Ranking {
-  const people = [
-    { id: myId, name: myName, trophies: myTrophies },
-    ...(Array.isArray(rows) ? rows : []).flatMap((r) => {
-      const o = r as Record<string, unknown>
-      const id = String(o?.friend_id ?? '')
-      if (!id) return []
-      return [
-        {
-          id,
-          name: String(o?.full_name ?? 'Ami').split(' ')[0] || 'Ami',
-          trophies: Math.max(0, Number(o?.trophies) || 0),
-        },
-      ]
-    }),
-  ]
-  people.sort((a, b) => b.trophies - a.trophies || (a.id < b.id ? -1 : 1))
-  const entries = people.map((p, i) => ({ ...p, rank: i + 1 }))
-  return {
-    schoolId: null,
-    schoolName: null,
-    myRank: entries.find((e) => e.id === myId)?.rank ?? null,
-    total: entries.length,
-    entries,
-  }
-}
 
 /**
  * Quiz de la classe par matière (colonne brute `subject`) : cache serveur,
@@ -219,7 +164,6 @@ export default async function DefiPage() {
 
   // Valeurs par défaut (visiteur non connecté : démo mockée).
   let trophies = MOCK_TROPHIES
-  let boards: Record<RankingScope, RankingBoard> = MOCK_RANKINGS
   let league: League = MOCK_LEAGUE
   // Drapeau « Aperçu » : la ligue mockée (visiteur ou migration 161 absente)
   // est signalée comme telle, jamais déguisée en réelle.
@@ -229,7 +173,10 @@ export default async function DefiPage() {
   let leagueTier: number | null = null
   let clanLabel: string | undefined
   let clanNode: ReactNode = null
-  let rankingPreview: string | undefined
+  // Mon rang parmi TOUS les élèves (`national_ranking`, 159) : la bande
+  // « Top 90 % » du compte de trophées et de l'écran Classement. Null pour un
+  // visiteur ou tant que la base n'a rien dit.
+  let classementNational: { rank: number | null; total: number } | null = null
   let hasSchool = true
   let duelEntries: ReturnType<typeof normalizeRankedHistory> = []
   let reviewCount = 0
@@ -335,9 +282,6 @@ export default async function DefiPage() {
         ?? schoolLevelForGrade(p.grade_level ?? null)
       const idEcole = activeSchoolId(p, p.grade_level ?? null)
       return Promise.all([
-        // Déjà servis par la lecture groupée quand la 322 est passée : on ne
-        // repart pas les chercher. Sinon, le chemin d'avant.
-        v.clanRes ?? supabase.rpc('clan_ranking', { p_level: niveau }),
         idEcole
           ? supabase
               .from('schools')
@@ -376,7 +320,7 @@ export default async function DefiPage() {
       boostXpRes,
       subjectLevels,
       palmaresRes,
-      [clanRes, schoolRes, tournamentRes, chapterRes, quizCounts, gradeChapters],
+      [schoolRes, tournamentRes, chapterRes, quizCounts, gradeChapters],
     ] = await Promise.all([
       vague1P,
       fetchQuestViews(supabase, user.id, todayKey),
@@ -408,7 +352,6 @@ export default async function DefiPage() {
     const {
       profile,
       natRes,
-      friendsRes,
       liveRes,
       leagueRes,
       matchesRes,
@@ -435,9 +378,6 @@ export default async function DefiPage() {
     friendRequests = mapFriendsOverview(
       Array.isArray(overviewRes.data) ? overviewRes.data : [],
     ).incoming.length
-    // Le prénom ne sert plus au socle (la pastille en est partie) mais reste
-    // nécessaire aux classements, où il identifie la ligne de l'élève.
-    const firstName = String(profile.full_name ?? '').split(' ')[0] || 'Moi'
     // Le cycle vient de la base quand la 322 est là (elle le calcule au moment
     // où elle lit le profil) : c'est lui qui obligeait à une SECONDE vague,
     // pour une donnée que Postgres avait déjà sous la main. Repli sur la règle
@@ -534,36 +474,14 @@ export default async function DefiPage() {
       tournamentIsDemo = false
     }
 
-    const clan = normalizeRanking(clanRes.data)
+    // MON RANG PARMI TOUS LES ÉLÈVES (national_ranking, 159) : c'est lui que
+    // le compte de trophées de l'arène traduit en « Top 90 % ». Les tableaux
+    // du menu (clan, national, amis) sont partis avec l'entrée « Classements »
+    // du burger (22/09/2026) : l'école se lit dans l'onglet Amis.
     const national = normalizeRanking(natRes.data)
-    const amis = friendsRanking(friendsRes.data, user.id, firstName, trophies)
+    classementNational = { rank: national.myRank, total: national.total }
     const currentSchool: School | null = normalizeSchool(schoolRes.data)
     hasSchool = currentSchool !== null
-
-    boards = {
-      college: {
-        scope: 'college',
-        headline: currentSchool
-          ? rankHeadline(clan.myRank, clan.total)
-          : 'Rejoins ton école pour entrer dans le classement de ton clan.',
-        subline: currentSchool?.city ?? undefined,
-        entries: toEntries(clan, user.id),
-      },
-      national: {
-        scope: 'national',
-        headline: rankHeadline(national.myRank, national.total),
-        subline: 'Tous les élèves de Studuel',
-        entries: toEntries(national, user.id),
-      },
-      amis: {
-        scope: 'amis',
-        headline:
-          amis.total > 1
-            ? rankHeadline(amis.myRank, amis.total)
-            : 'Ajoute des amis pour vous comparer.',
-        entries: toEntries(amis, user.id),
-      },
-    }
 
     // Ligue hebdo réelle (XP de la semaine par palier). À défaut de données
     // (migration 161 non passée), on garde la vitrine mockée.
@@ -580,8 +498,6 @@ export default async function DefiPage() {
 
     clanLabel = level === 'college' ? 'Mon collège' : 'Mon lycée'
     clanNode = <ClanBanner level={level} current={currentSchool} />
-    rankingPreview =
-      currentSchool && clan.myRank ? ordinalFr(clan.myRank) : undefined
 
     duelReason = chapterRes?.chapter
       ? reasonLabel(chapterRes.chapter, todayKey)
@@ -636,17 +552,6 @@ export default async function DefiPage() {
           todayKey={todayKey}
         />
       ),
-    },
-    {
-      // Une LISTE ordonnée, pas un trophée : le trophée désigne déjà le Tournoi
-      // des écoles et la coupe du classement. Trois récompenses différentes
-      // portaient le même dessin — on ne savait plus laquelle ouvrait quoi.
-      id: 'classements',
-      label: 'Classements',
-      image: '/images/defi/icones/classement-v3.webp',
-      sub: rankingPreview,
-      sheetTitle: 'Classements',
-      sheetContent: <RankingTabs boards={boards} clanLabel={clanLabel} />,
     },
     {
       // Médaille (pas une couronne : la couronne appartient à la SAISON —
@@ -847,25 +752,41 @@ export default async function DefiPage() {
       <DuelSubjectProvider board={duelBoard} initialSlug={activeSubjectSlug}>
         <div className="mx-auto flex h-full w-full max-w-md flex-col gap-4">
           {/* La scène : arène plein cadre, le PERSONNAGE sur son socle ancré en
-              bas au centre. Quatre rangées façon Clash Royale : monnaies (niveau
-              dans l'angle gauche), puis rang à gauche FACE à la barrette
-              Amis + burger dans l'angle droit, puis le bandeau de saison en
-              pleine largeur, puis le rail des missions. Aucun bandeau de titre :
+              bas au centre. Façon Clash Royale (22/09/2026) : une bande vide en
+              haut, puis la carte du joueur dans l'angle gauche FACE au burger
+              et à Studuel+ dans l'angle droit, le compte de trophées en or sous
+              la carte, puis le rail des missions. Aucun bandeau de titre :
               l'arène DIT déjà où l'on est. */}
           <ArenaHud
             leftTiles={leftTiles}
             menuItems={menuItems}
             // L'appel Studuel+ n'existe que pour qui n'est pas (encore) abonné.
             premiumSlot={isPremium ? null : <PremiumPill key="premium" />}
-            // La Route des trophées : sous Studuel+, dans la colonne de l'angle.
-            // Elle a absorbé le module de rang qui occupait la hauteur au-dessus
-            // du CTA — les deux lisaient les mêmes compteurs.
-            roadSlot={<TrophyRoadSheet key="road" />}
+            // Le COMPTE DE TROPHÉES sous la carte du joueur (22/09/2026) : la
+            // coupe, le total en or, la bande « Top 90 % » en jaune — et la
+            // fête du retour quand ils ont bougé. Rien pour un visiteur.
+            tropheesSlot={
+              user ? (
+                <CompteTropheesArene
+                  trophees={trophies}
+                  top={topPourcent(classementNational?.rank, classementNational?.total)}
+                  cle={cleEtatCompte(user.id)}
+                />
+              ) : null
+            }
+            // La plaque CLASSEMENT, sous Studuel+ : l'écran clair qui a absorbé
+            // la Route des trophées — moi, mes matières à la verticale, le barème.
+            classementSlot={
+              <ClassementSheet
+                key="classement"
+                trophees={user ? trophies : undefined}
+                classement={classementNational}
+              />
+            }
             profileSlot={
               profileData ? (
                 <ProfileChip
                   data={profileData}
-                  trophies={trophies}
                   gems={gems}
                   streak={streak}
                   boostXpJusqua={boostXpJusqua}
@@ -911,9 +832,9 @@ export default async function DefiPage() {
                   todayKey={todayKey}
                   liveDuel={!!user}
                   palmares={palmaresLignes}
-                  // Le TOTAL DE TROPHÉES sous le titre de la feuille, et
-                  // l'accès Studuel+ qui ouvre tous les jeux d'une matière.
-                  trophees={user ? trophies : null}
+                  // L'accès Studuel+ ouvre tous les jeux d'une matière. (Le
+                  // total de trophées a quitté la feuille pour l'arène, sous
+                  // la carte du joueur — 22/09/2026.)
                   premium={isPremium}
                 />
               }

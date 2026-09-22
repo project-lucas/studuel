@@ -125,11 +125,13 @@ export function buildOrderPool(
 // --------------------------------------------------------------- anatomie
 // Quatrième forme : des ZONES à désigner sur un schéma, ni QCM, ni tableaux,
 // ni tirages.
+// Le palier est transmis comme aux QCM : la planche montre toujours tout, mais
+// la QUESTION monte avec lui (trachée, diaphragme, pancréas, rate…).
 export const ZONE_BUILDERS: Record<
   string,
-  (seed: string, count: number) => OrganRound[]
+  (seed: string, count: number, tier: number) => OrganRound[]
 > = {
-  'anatomie-express': (seed, count) => buildAnatomiePool(seed, count),
+  'anatomie-express': (seed, count, tier) => buildAnatomiePool(seed, count, tier),
 }
 
 /** Les manches d'un jeu de désignation, ou null si aucune banque enregistrée. */
@@ -137,9 +139,10 @@ export function buildZonePool(
   id: string,
   seed: string,
   count: number,
+  tier: number = DEFAULT_PALIER,
 ): OrganRound[] | null {
   const builder = ZONE_BUILDERS[id]
-  return builder ? builder(seed, count) : null
+  return builder ? builder(seed, count, tier) : null
 }
 
 /**

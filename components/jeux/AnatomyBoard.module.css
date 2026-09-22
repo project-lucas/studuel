@@ -1,0 +1,158 @@
+/* La planche d'anatomie (AnatomyBoard.tsx) : un corps sur papier blanc, ses
+   organes dessinés dans la teinte du jeu (`--jeu-accent`, le rouge sang de la
+   robe `.jeu-anatomie`), tous de la MÊME couleur — la couleur ne doit pas
+   trahir un organe, seule sa forme et sa place le désignent. Les états de la
+   correction (cible en vert, erreur en corail) sont les rôles de la DA. */
+
+.planche {
+  display: block;
+  width: 100%;
+  height: auto;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.cliquable {
+  cursor: pointer;
+}
+
+.corps {
+  fill: color-mix(in oklab, var(--jeu-accent) 8%, var(--card));
+  stroke: color-mix(in oklab, var(--jeu-accent) 40%, transparent);
+  stroke-width: 0.9;
+  stroke-linejoin: round;
+}
+
+/* Une zone : un groupe qui porte ses couleurs en variables, pour que le
+   plein, le tube et les traits intérieurs changent d'un seul coup. */
+.zone {
+  --fond: color-mix(in oklab, var(--jeu-accent) 24%, var(--card));
+  --trait: color-mix(in oklab, var(--jeu-accent) 72%, transparent);
+  --detail: color-mix(in oklab, var(--jeu-accent) 55%, transparent);
+  outline: none;
+  transition: opacity 200ms ease-out;
+}
+
+.cliquable .zone {
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .cliquable .zone:hover {
+    --fond: color-mix(in oklab, var(--jeu-accent) 40%, var(--card));
+  }
+}
+
+/* Au clavier, la zone qui a le focus se cerne en violet (la couleur de ce qui
+   se clique), et seulement au focus clavier. */
+.zone:focus-visible .plein,
+.zone:focus-visible .tubeFond {
+  stroke: var(--primary);
+  stroke-dasharray: 2 1.5;
+}
+
+.cible {
+  --fond: color-mix(in oklab, var(--success) 48%, var(--card));
+  --trait: var(--success);
+  --detail: color-mix(in oklab, var(--success) 70%, transparent);
+}
+
+.ratee {
+  --fond: color-mix(in oklab, var(--destructive) 46%, var(--card));
+  --trait: var(--destructive);
+  --detail: color-mix(in oklab, var(--destructive) 70%, transparent);
+}
+
+/* À la correction, tout ce qui n'est ni la cible ni l'erreur s'efface. */
+.eteinte {
+  opacity: 0.4;
+}
+
+.plein {
+  fill: var(--fond);
+  stroke: var(--trait);
+  stroke-width: 0.8;
+  stroke-linejoin: round;
+  transition: fill 150ms ease-out;
+}
+
+/* Un tube se dessine en deux traits superposés : le contour (plus large),
+   puis le corps. L'épaisseur est posée en attribut par le composant. */
+.tubeFond {
+  fill: none;
+  stroke: var(--trait);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.tubeCorps {
+  fill: none;
+  stroke: var(--fond);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 150ms ease-out;
+}
+
+.detail {
+  fill: none;
+  stroke: var(--detail);
+  stroke-width: 0.5;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+/* Le halo qui bat autour de la bonne réponse, pour qu'on la trouve d'un
+   coup d'œil même quand on a touché à l'autre bout de la planche. */
+.halo {
+  fill: none;
+  stroke: var(--success);
+  stroke-opacity: 0.4;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  animation: planche-halo 650ms ease-in-out 3 alternate;
+}
+
+@keyframes planche-halo {
+  from {
+    stroke-opacity: 0.05;
+  }
+  to {
+    stroke-opacity: 0.45;
+  }
+}
+
+/* L'onde d'un tap tombé à côté de tout : le geste a été vu, il n'a rien
+   touché — et il n'a rien coûté. */
+.onde {
+  fill: none;
+  stroke: var(--jeu-accent);
+  stroke-width: 0.8;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: planche-onde 480ms ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes planche-onde {
+  from {
+    transform: scale(0.3);
+    opacity: 0.9;
+  }
+  to {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .halo {
+    animation: none;
+    stroke-opacity: 0.4;
+  }
+  .onde {
+    animation: none;
+    opacity: 0;
+  }
+}

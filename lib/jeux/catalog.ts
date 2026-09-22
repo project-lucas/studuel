@@ -142,7 +142,7 @@ export const SALONS: Salon[] = [
         id: 'anatomie-express',
         name: 'Anatomie express',
         emoji: '🦴',
-        tagline: 'Touche l’organe demandé sur la silhouette',
+        tagline: 'Touche l’organe demandé sur la planche d’anatomie',
         implemented: true,
       },
       {

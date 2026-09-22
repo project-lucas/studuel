@@ -1,9 +1,10 @@
 'use client'
 
-import { useState, type ReactNode } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
 import { CalendarDays, Check, Plus } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
+import { quandLaScenePrete } from '@/lib/scene-prete'
 import { subjectTheme } from '@/lib/subject-style'
 import YearHistory from '@/components/YearHistory'
 import FlammeAnimee from '@/components/FlammeAnimee'
@@ -27,6 +28,19 @@ const DAY_FULL = [
 ]
 
 export type WeekDay = { done: boolean; isToday: boolean; isFuture: boolean }
+
+// Le marqueur « la validation du jour a déjà été jouée », par jour : elle ne
+// se joue qu'une fois, la première fois qu'on revoit la semaine avec le jour
+// fait. Les autres visites du jour montrent la coche, posée. Le « 2 » de la
+// clé : la première version posait le marqueur alors que l'animation tournait
+// derrière le rideau de chargement — ces marqueurs-là ne comptent plus.
+const cleValidation = (today: string) => `studuel:serie:validee:2:${today}`
+
+// `?fete=1` rejoue la validation quel que soit le marqueur : pour la voir
+// autant de fois qu'on veut (réglages, démonstration, relecture).
+const rejouerDemande = () =>
+  typeof window !== 'undefined' &&
+  new URLSearchParams(window.location.search).get('fete') === '1'
 
 // Les 7 clés UTC de la semaine courante (lundi → dimanche) — même définition
 // que weekProgress (lundi = 0).
@@ -106,6 +120,41 @@ export default function SerieBar({
         ? 'Série en cours — reviens demain pour la prolonger.'
         : 'Travaille un peu aujourd’hui pour la garder.'
       : 'Une session aujourd’hui, et la flamme repart.'
+
+  // LA VALIDATION DU JOUR (Lucas, 22/09/2026). La première fois qu'on revoit
+  // la semaine avec le jour fait — au retour du quiz, de la leçon, de la
+  // dictée —, la pastille du jour se RETOURNE comme une pièce (grise →
+  // violette), la coche se TRACE, une onde s'écarte, deux notes montent
+  // (`jour-valide*`, globals.css). Les visites suivantes la montrent posée :
+  // un marqueur local par jour s'en souvient. Décidé APRÈS montage, jamais au
+  // rendu : le serveur ne connaît pas le marqueur, et un écart d'hydratation
+  // sur la barre la plus regardée de l'écran se verrait.
+  //
+  // ET SEULEMENT QUAND LA SCÈNE EST PRÊTE (lib/scene-prete) : rideau de
+  // chargement parti, onglet visible. Jouée dès l'hydratation, l'animation se
+  // déroulait derrière le rideau et l'élève ne voyait que la coche posée. Le
+  // marqueur n'est posé qu'au moment où l'animation part vraiment : une
+  // validation jamais vue n'est pas une validation fêtée.
+  const [validation, setValidation] = useState(false)
+  useEffect(() => {
+    if (!todayDone) return
+    const cle = cleValidation(today)
+    const rejouer = rejouerDemande()
+    try {
+      if (!rejouer && window.localStorage.getItem(cle)) return
+    } catch {
+      // Stockage illisible : on fête, une fois par affichage.
+    }
+    return quandLaScenePrete(() => {
+      try {
+        window.localStorage.setItem(cle, '1')
+      } catch {
+        // Stockage indisponible : la fête aura lieu, elle ne sera pas mémorisée.
+      }
+      setValidation(true)
+      sfx.correct()
+    })
+  }, [todayDone, today])
 
   return (
     <section
@@ -231,7 +280,12 @@ export default function SerieBar({
                 className={cn(
                   'relative flex size-8 items-center justify-center rounded-full transition',
                   d.done
-                    ? 'wave-in bg-primary text-primary-foreground'
+                    ? cn(
+                        'bg-primary text-primary-foreground',
+                        // Le jour qui vient d'être validé se retourne au lieu
+                        // d'arriver par la vague : une animation par élément.
+                        d.isToday && validation ? 'jour-valide' : 'wave-in',
+                      )
                     : d.isFuture
                       ? 'bg-muted'
                       : 'bg-muted ring-1 ring-black/[0.06] ring-inset',
@@ -252,6 +306,14 @@ export default function SerieBar({
                   <span
                     aria-hidden="true"
                     className="jour-onde pointer-events-none absolute -inset-1 -z-10 rounded-full ring-2 ring-primary"
+                  />
+                ) : null}
+                {/* L'onde de la validation : elle ne vit que le temps de son
+                    animation, sur le seul jour qui vient d'être fait. */}
+                {d.done && d.isToday && validation ? (
+                  <span
+                    aria-hidden="true"
+                    className="jour-valide-onde pointer-events-none absolute inset-0 rounded-full ring-2 ring-primary"
                   />
                 ) : null}
                 {d.done ? (

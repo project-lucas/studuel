@@ -168,6 +168,14 @@ export type ModeQuestion = {
    * poser un vrai/faux en deux grandes plaques plutôt qu'en liste.
    */
   kind?: 'mcq' | 'true_false'
+  /**
+   * L'ASTUCE : la méthode la plus rapide pour cette question, avec ses
+   * nombres (« ×5 : ×10 puis la moitié — 28 × 10 = 280, la moitié : 140. »).
+   * Servie par les banques génératives (calcul mental, lib/jeux/calcul-astuces)
+   * et affichée à part de l'explication, parce qu'elle s'apprend : c'est ce
+   * qui fait aller plus vite à la partie suivante.
+   */
+  astuce?: string
 }
 
 // ------------------------------------------------------------------- duel BO3

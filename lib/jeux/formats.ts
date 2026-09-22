@@ -479,10 +479,10 @@ export const GAME_FORMATS: Record<SalonGameId, GameFormat> = {
     theme: 'anatomie',
     timbre: 'cristal',
     layout: 'grille',
-    rule: '8 organes à localiser sur la silhouette. 15 secondes chacun, et rien ne t’élimine.',
+    rule: '8 organes à trouver sur la planche d’anatomie. 15 secondes chacun, et rien ne t’élimine.',
     emoji: '🫀',
     lexicon: {
-      verb: 'Touche-le sur la silhouette',
+      verb: 'Touche-le sur la planche',
       step: 'organe',
       steps: 'organes',
       hit: 'organe localisé',

@@ -51,11 +51,6 @@ function placesDeLaSemaine(lignes: readonly LignePalmares[]): Record<string, str
 const GLISSE = { type: 'tween', duration: 0.44, ease: [0.32, 0.72, 0, 1] } as const
 const REPLI = { type: 'tween', duration: 0.26, ease: [0.4, 0, 1, 1] } as const
 
-/** Le compte de trophées à la française : « 1 234 », espace fine insécable. */
-function nombre(n: number): string {
-  return Math.round(n).toLocaleString('fr-FR').replace(/\s/g, ' ')
-}
-
 /**
  * Le bouton « MODES DE JEU » de l'arène et sa feuille — l'écran des modes de
  * Clash Royale (Lucas, 19/09/2026) :
@@ -63,21 +58,23 @@ function nombre(n: number): string {
  *   · la feuille monte du bas mais NE COUVRE PAS tout : le haut de l'arène
  *     reste visible, assombri — on sait d'où l'on vient, et un tap dessus
  *     referme ; la languette à chevron aussi, comme le glisser vers le bas ;
- *   · en tête, le titre « Modes de jeu », puis le TOTAL DE TROPHÉES ;
+ *   · en tête, le titre « Modes de jeu » (le total de trophées y vivait
+ *     aussi : il est parti sur l'arène, sous la carte du joueur — 22/09/2026) ;
  *   · puis la LISTE : le mode du jour en grand billet, chaque matière avec
  *     UN jeu — son jeu libre —, et les modes de l'Arène. Le bouton en haut à
  *     droite déplie TOUS les modes de chaque matière (les jeux Studuel+ sous
  *     cadenas pour qui ne l'a pas, les « Bientôt ») : sans lui, un mode par
  *     matière (Lucas, 19/09/2026).
  *
- * Plus de roulette de matières : la liste montre tout, comme au modèle, et
- * chaque matière y porte sa vignette — la même que dans son dossier.
+ * Plus de roulette de matières : la liste montre tout, comme au modèle. Le
+ * titre d'une matière est son NOM seul (Lucas, 22/09/2026 : « retire les
+ * illustrations collées au texte ») : la vignette du dossier, collée au titre,
+ * faisait doublon avec la scène du billet juste dessous.
  */
 export default function ModesSheet({
   todayKey,
   liveDuel = false,
   palmares = [],
-  trophees = null,
   premium = false,
 }: {
   todayKey: string
@@ -85,8 +82,6 @@ export default function ModesSheet({
   liveDuel?: boolean
   /** Mon palmarès (352) : la place de la semaine se pose sur les billets. */
   palmares?: readonly LignePalmares[]
-  /** Mon total de trophées, null pour un visiteur. */
-  trophees?: number | null
   /** Abonné Studuel+ : tous les jeux de chaque matière s'ouvrent. */
   premium?: boolean
 }) {
@@ -252,23 +247,6 @@ export default function ModesSheet({
                     <div className={styles.liste}>
                       <div className={styles.colonne}>
                         <div className={styles.enTete}>
-                          {trophees !== null ? (
-                            <p className={cn(styles.total, 'font-heading font-extrabold')}>
-                              <Image
-                                src="/images/defi/icones/trophees-v3.webp"
-                                alt=""
-                                aria-hidden="true"
-                                width={96}
-                                height={96}
-                                className={styles.coupe}
-                              />
-                              <span className={styles.encre}>Total de trophées :</span>
-                              <span className={cn(styles.encre, styles.nombre, 'tabular-nums')}>
-                                {nombre(trophees)}
-                              </span>
-                            </p>
-                          ) : null}
-
                           {/* TOUS LES MODES : sans lui, un jeu par matière. */}
                           {replies > 0 ? (
                             <button
@@ -305,18 +283,6 @@ export default function ModesSheet({
                         {sections.map((s) => (
                           <section key={s.subject} aria-label={`Jeux · ${s.subject}`} className="contents">
                             <h3 className={cn(styles.separateur, 'font-heading font-extrabold')}>
-                              {s.vignette ? (
-                                <Image
-                                  src={s.vignette}
-                                  alt=""
-                                  aria-hidden="true"
-                                  width={64}
-                                  height={64}
-                                  className={styles.vignette}
-                                />
-                              ) : (
-                                <span aria-hidden="true">{s.emoji}</span>
-                              )}
                               <span className={styles.encre}>{s.subject}</span>
                             </h3>
                             {s.tickets.map(billet)}

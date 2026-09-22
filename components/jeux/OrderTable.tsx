@@ -53,9 +53,12 @@ export default function OrderTable({
   name,
   subject,
   subjectEmoji,
+  scene = null,
   ghost,
 }: {
   format: GameFormat
+  /** La scène du billet du jeu, en filigrane dans sa pièce (ModeStage). */
+  scene?: string | null
   /**
    * Palier joué et plancher de classe (lib/jeux/paliers), ou null pour un jeu
    * hors échelle — le « Programme » d'une matière, dont la difficulté est le
@@ -270,6 +273,7 @@ export default function OrderTable({
       title={name}
       Icon={MECHANIC_ICON[format.params.mechanic]}
       theme={format.theme}
+      scene={scene}
       onExit={exit}
       backLabel={palier ? 'Retour aux paliers' : undefined}
       headerRight={

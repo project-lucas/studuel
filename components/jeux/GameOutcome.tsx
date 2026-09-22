@@ -12,12 +12,12 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
+import CarteBilan from '@/components/jeux/CarteBilan'
 import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
 import type { Gain } from '@/lib/gains'
 import type { GameFormat } from '@/lib/jeux/formats'
 import { runAchieved, runTarget, type GameRun } from '@/lib/jeux/run'
 import type { GameTrophyOutcome } from '@/app/defi/actions'
-import { trophyBand } from '@/lib/trophy-road'
 import type { GameGhost } from '@/lib/jeux/ghost-server'
 import PalierStars from '@/components/jeux/PalierStars'
 import {
@@ -34,8 +34,7 @@ import {
 import { coteTitle, nextCoteTitle } from '@/lib/jeux/ultime'
 import { gradeLabel, worldLabel } from '@/lib/jeux/ultime-standing'
 import type { UltimeResult } from '@/lib/jeux/use-ultime-run'
-import { titreVerdict, verdictPartie, type BilanPartie } from '@/lib/palmares/bilan'
-import { ordinal, standingFor } from '@/lib/percentile'
+import type { BilanPartie } from '@/lib/palmares/bilan'
 
 /**
  * L'écran de fin d'un jeu de salon. Il raconte la partie DANS LA LANGUE DU JEU
@@ -178,17 +177,11 @@ export default function GameOutcome({
           que le compteur du bandeau ne recevait jamais. */}
       <PanneauRecompenses gains={gains} className="w-full" />
 
-      <TrophyLine trophies={trophies} />
       <GhostLine ghost={ghost} score={run.score} />
-      <PalmaresLine bilan={bilan} />
 
-      <p className="min-h-5 text-sm text-muted-foreground">
-        {saved === true
-          ? '✓ Journée validée — ta série continue 🔥'
-          : saved === false
-            ? 'Partie non enregistrée (connecte-toi pour garder ta progression).'
-            : ''}
-      </p>
+      {/* LE BILAN, EN UNE CARTE : trophées, palmarès et journée validée
+          (trois blocs jusqu'au 22/09/2026 — components/jeux/CarteBilan). */}
+      <CarteBilan trophies={trophies} bilan={bilan} saved={saved} />
 
       {/* `shine` : l'écran de fin n'a qu'UNE action qui compte — relancer.
           Le balayage de lumière la désigne sans un mot. Le retour à l'arène
@@ -384,62 +377,6 @@ function PalierResult({
 }
 
 /**
- * Le mouvement de trophées sur la Route. Trois choses, dans cet ordre : ce que
- * la partie a rapporté, le compteur du jeu, et CE QUE VAUDRA LA PROCHAINE
- * VICTOIRE.
- *
- * Cette dernière ligne est le cœur du système et non une décoration : c'est en
- * lisant « +10 » ici et « +3 » sur son jeu habituel que l'élève arbitre tout
- * seul, et va vers la compétence qu'il n'a jamais travaillée. Brawl Stars ne
- * l'affiche pas ; une app scolaire le doit — on ne veut pas que l'arbitrage
- * reste réservé à ceux qui devinent la courbe.
- *
- * La perte ne prend JAMAIS la couleur d'alerte : un trophée perdu n'est pas une
- * erreur à corriger, et la doctrine du Défi est de ne pas punir l'échec au
- * point de faire fuir un collégien.
- */
-function TrophyLine({ trophies }: { trophies?: GameTrophyOutcome }) {
-  if (!trophies) return null
-
-  const gained = trophies.delta > 0
-  const shielded = trophies.delta === 0
-  const nextWin = trophyBand(trophies.after).win
-
-  return (
-    <div className="w-full space-y-1.5 rounded-2xl bg-card px-4 py-3 shadow-sm">
-      <div className="flex items-center justify-between gap-3">
-        <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
-          <Trophy className="size-4" aria-hidden="true" /> Trophées
-        </span>
-        <span
-          className={cn(
-            'font-mono text-xl font-extrabold tabular-nums',
-            gained ? 'text-highlight' : 'text-muted-foreground',
-          )}
-        >
-          {gained ? '+' : ''}
-          {trophies.delta}
-        </span>
-      </div>
-
-      <div className="flex items-center justify-between gap-3 text-xs text-muted-foreground">
-        <span>
-          {shielded && !gained
-            ? 'Rien perdu — tu débutes sur ce jeu'
-            : `Total sur ce jeu : ${trophies.after}`}
-        </span>
-        <span>
-          Prochaine victoire{' '}
-          <strong className="font-mono font-bold text-foreground tabular-nums">
-            +{nextWin}
-          </strong>
-        </span>
-      </div>
-    </div>
-  )
-}
-
-/**
  * LE FANTÔME — le meilleur score d'un ami sur ce jeu.
  *
  * Il tient la place des dix « adversaires » en dur du mode classé supprimé
@@ -490,52 +427,5 @@ function Stat({ label, value }: { label: string; value: string }) {
       <dd className="font-mono text-lg font-bold tabular-nums">{value}</dd>
       <dt className="mt-0.5 leading-tight text-muted-foreground">{label}</dt>
     </div>
-  )
-}
-
-/**
- * LA LIGNE DU PALMARÈS — ce que cette partie change à ma place dans la classe
- * (migration 355). Le verdict vient du serveur, qui voit tout le monde ; on
- * n'invente aucun rang. Rien tant qu'il n'a pas répondu.
- */
-function PalmaresLine({ bilan }: { bilan: BilanPartie | null }) {
-  if (!bilan) return null
-  const verdict = verdictPartie({
-    score: bilan.score,
-    last: bilan.last,
-    bestBefore: bilan.bestBefore,
-  })
-  const place = standingFor({ rank: bilan.weekRank, total: bilan.weekTotal })
-  const placeLabel =
-    place.kind === 'rang'
-      ? `${ordinal(place.rank)} de ta classe cette semaine`
-      : place.kind === 'pourcentage'
-        ? place.side === 'top'
-          ? `Top ${place.value} % de ta classe cette semaine`
-          : `Mieux que ${place.value} % de ta classe cette semaine`
-        : null
-  const marche = bilan.next
-    ? `Prochaine marche : ${bilan.next.name} · ${bilan.next.score}`
-    : bilan.leader?.isMe
-      ? 'Tu mènes ta classe cette semaine.'
-      : null
-  return (
-    <Link
-      href="/moi"
-      className="flex w-full items-center gap-3 rounded-2xl border-2 border-border bg-card px-3 py-2.5 text-left transition active:scale-[0.99]"
-      aria-label={`Palmarès : ${titreVerdict(verdict)}${placeLabel ? `, ${placeLabel}` : ''}. Voir mon palmarès.`}
-    >
-      <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-highlight/25 text-lg" aria-hidden="true">
-        🏅
-      </span>
-      <span className="min-w-0 flex-1">
-        <span className="block text-sm font-extrabold">{titreVerdict(verdict)}</span>
-        {placeLabel ? (
-          <span className="block text-xs font-semibold text-muted-foreground">{placeLabel}</span>
-        ) : null}
-        {marche ? <span className="block text-xs text-muted-foreground">{marche}</span> : null}
-      </span>
-      <Trophy className="size-4 shrink-0 text-primary" aria-hidden="true" />
-    </Link>
   )
 }

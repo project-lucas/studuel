@@ -71,10 +71,11 @@ export const EMPTY_ANSWERS: OnboardingAnswers = {
   avatar: null,
 }
 
-// Ordre des 14 écrans (numérotation du design handoff en commentaire).
+// Ordre des écrans (numérotation du design handoff en commentaire).
 export const WELCOME_STEPS = [
   'intro', //           1. Bienvenue (splash + logo)
   'profil', //          2. Parent ou élève
+  'parentIntro', //     2bis. Ce que le parent va trouver (parcours parent — ajouté le 22/09/2026)
   'motivation', //      3. Motivation (le crayon te parle)
   'source', //          4. Comment tu nous as connu ?
   'goal', //            5. Objectif n°1
@@ -84,6 +85,7 @@ export const WELCOME_STEPS = [
   'dailyGoal', //       8. Objectif quotidien (minutes)
   'placementIntro', //  9. Placement — intro
   'placementQuiz', //  10. Mini-quiz de placement
+  'placementResult', // 10ter. Le résultat du placement (ajouté le 22/09/2026)
   'avatar', //         10bis. Ton avatar (blason de joueur — ajouté le 16/09/2026)
   'friends', //        11. Défie tes amis
   'notifications', //  12. Notifications
@@ -92,6 +94,13 @@ export const WELCOME_STEPS = [
 ] as const
 
 export type WelcomeStep = (typeof WELCOME_STEPS)[number]
+
+export function isWelcomeStep(value: unknown): value is WelcomeStep {
+  return (
+    typeof value === 'string' &&
+    (WELCOME_STEPS as readonly string[]).includes(value)
+  )
+}
 
 // Progression de la barre par écran (valeurs du design). La barre n'apparaît
 // pas sur l'accueil, le profil, la motivation ni le plan final (null).
@@ -102,12 +111,16 @@ const STEP_PROGRESS: Partial<Record<WelcomeStep, number>> = {
   grade: 0.2,
   placementIntro: 0.3,
   placementQuiz: 0.4,
+  placementResult: 0.44,
   avatar: 0.48,
   signup: 0.55,
   goal: 0.7,
   dailyGoal: 0.8,
   school: 0.88,
   notifications: 0.94,
+  // Le parcours PARENT n'a que deux écrans après le profil : la barre y fait
+  // la moitié du chemin à l'intro, et rejoint le compte.
+  parentIntro: 0.3,
   // Écrans hors chemin par défaut : gardés pour qu'un brouillon repris affiche
   // toujours une barre cohérente.
   source: 0.6,
@@ -121,7 +134,7 @@ export function stepProgress(step: WelcomeStep): number | null {
 
 // --- Ordre du parcours : « jouer d'abord, questionner ensuite » --------------
 //
-// Les 14 écrans ci-dessus décrivent le design complet. L'ORDRE dans lequel on
+// Les écrans ci-dessus décrivent le design complet. L'ORDRE dans lequel on
 // les enchaîne, lui, est une décision produit — et c'est elle qu'on a changée.
 //
 // Le parcours d'origine posait DOUZE écrans de questions avant que l'élève ne
@@ -152,6 +165,12 @@ export const FAST_PATH: readonly WelcomeStep[] = [
   ...STEPS_BEFORE_PLAY,
   'placementIntro', // → le jeu
   'placementQuiz', // ← LA démonstration
+  // LE RÉSULTAT, tout de suite après le jeu. Le quiz est le sommet émotionnel
+  // du parcours ; l'enchaîner sans un mot sur l'écran de l'avatar, c'est
+  // gâcher le moment où l'élève vient de prouver quelque chose. Un score, un
+  // niveau, une phrase — et la promesse que le plan en tient compte. Sauté
+  // avec le quiz : « Je débute, passer » ne montre pas un résultat vide.
+  'placementResult',
   // Le blason de joueur, JUSTE AVANT le compte : l'élève vient de jouer, il se
   // choisit un visage — et c'est ce visage qu'on lui demande d'enregistrer à
   // l'écran suivant. Avant le compte et non après, pour que le choix parte
@@ -164,6 +183,20 @@ export const FAST_PATH: readonly WelcomeStep[] = [
   'school', // ton établissement = ton clan (cf. lib/clan-week)
   'notifications',
   'plan',
+]
+
+/**
+ * Le chemin du PARENT. Il n'a ni classe, ni quiz, ni plan : il va au compte —
+ * mais pas sans savoir ce qu'il va y trouver. L'écran `parentIntro` dit les
+ * trois choses que l'espace parents lui donnera et COMMENT on lie l'enfant
+ * (le code de l'onglet Amis) : sans lui, le parent créait un compte pour
+ * tomber sur « Aucun enfant lié » et un champ de code dont il ignorait tout.
+ */
+export const PARENT_PATH: readonly WelcomeStep[] = [
+  'intro',
+  'profil',
+  'parentIntro',
+  'signup',
 ]
 
 /** Écrans conservés dans le code mais retirés du chemin par défaut :
@@ -180,15 +213,22 @@ export const OFF_PATH: readonly WelcomeStep[] = [
  * L'écran suivant, ou null à la fin du parcours.
  *
  * Le parcours PARENT court-circuite tout ce qui est élève : un parent n'a ni
- * classe, ni objectif quotidien, ni quiz de placement. Il va droit au compte.
+ * classe, ni objectif quotidien, ni quiz de placement. Il passe par son écran
+ * de présentation, puis va droit au compte.
  */
 export function nextStep(
   step: WelcomeStep,
   answers: OnboardingAnswers,
 ): WelcomeStep | null {
-  if (step === 'profil' && answers.profileType === 'parent') return 'signup'
-  // Un parent qui arrive au compte a fini : la suite est l'espace parents.
-  if (step === 'signup' && answers.profileType === 'parent') return null
+  if (answers.profileType === 'parent') {
+    const i = PARENT_PATH.indexOf(step)
+    // Un parent qui arrive au compte a fini : la suite est l'espace parents.
+    if (step === 'signup') return null
+    // Hors du chemin parent (brouillon élève repris puis « je suis parent ») :
+    // on rejoint le chemin à sa présentation.
+    if (i === -1) return 'parentIntro'
+    return i + 1 < PARENT_PATH.length ? PARENT_PATH[i + 1] : null
+  }
 
   const i = FAST_PATH.indexOf(step)
   // Un écran hors chemin (remis à la main, ou repris d'un brouillon plus
@@ -201,6 +241,68 @@ export function nextStep(
  *  garde-fou testé : cette valeur ne doit pas remonter sans décision explicite. */
 export function screensBeforePlay(): number {
   return STEPS_BEFORE_PLAY.length
+}
+
+// --- Reprise d'un parcours interrompu ----------------------------------------
+//
+// Le brouillon des RÉPONSES survivait déjà à un rechargement ; l'ÉCRAN, non :
+// l'élève qui revenait (onglet fermé, appel, app passée en arrière-plan sur
+// mobile) repartait de l'intro et retraversait ses écrans déjà remplis.
+// On mémorise donc aussi l'écran courant, et on y revient — mais seulement
+// AVANT le compte : après, l'élève est connecté et la page le renvoie dans
+// l'app (le confort restant prend ses valeurs par défaut).
+
+export const STORAGE_STEP_KEY = 'studuel:onboarding:etape'
+
+/** Les écrans où un parcours peut REPRENDRE, et vers quel écran. */
+const RESUME_TARGET: Partial<Record<WelcomeStep, WelcomeStep>> = {
+  grade: 'grade',
+  placementIntro: 'placementIntro',
+  // Les questions du quiz ne sont pas mémorisées : on repart de son intro,
+  // un tap plus tôt, plutôt que sur un quiz sans questions.
+  placementQuiz: 'placementIntro',
+  placementResult: 'placementResult',
+  avatar: 'avatar',
+  signup: 'signup',
+  parentIntro: 'parentIntro',
+}
+
+/**
+ * Où reprendre un brouillon, ou null pour repartir de l'intro.
+ *
+ * On ne reprend jamais plus loin que ce que les réponses permettent : un
+ * écran mémorisé à « avatar » sans classe dans le brouillon (brouillon
+ * effacé, ou réponses invalides) ramènerait sur un parcours incohérent — on
+ * recule alors jusqu'au premier écran dont la réponse manque.
+ */
+export function resumeStep(
+  savedStep: unknown,
+  answers: OnboardingAnswers,
+): WelcomeStep | null {
+  if (!isWelcomeStep(savedStep)) return null
+  const target = RESUME_TARGET[savedStep]
+  if (!target) return null
+  if (answers.profileType === null) return null
+
+  if (answers.profileType === 'parent') {
+    return target === 'parentIntro' || target === 'signup' ? target : 'parentIntro'
+  }
+
+  if (target === 'parentIntro') return null
+  if (answers.grade === null) return 'grade'
+  // Le résultat n'a de sens que si le quiz a été FAIT (pas sauté, pas vide).
+  if (target === 'placementResult' && !answers.placement?.total) {
+    return 'placementIntro'
+  }
+  return target
+}
+
+/** Le chemin parcouru pour arriver à `step`, pour reconstruire l'historique du
+ *  bouton « retour » après une reprise. */
+export function pathTo(step: WelcomeStep, answers: OnboardingAnswers): WelcomeStep[] {
+  const path = answers.profileType === 'parent' ? PARENT_PATH : FAST_PATH
+  const i = path.indexOf(step)
+  return i <= 0 ? [] : [...path.slice(0, i)]
 }
 
 // --- Catalogues d'options ---------------------------------------------------
@@ -229,6 +331,59 @@ export const GOAL_HEADLINE: Record<Goal, string> = {
   examen: 'Objectif : décrocher ton examen 🏆',
   avance: "Objectif : prendre de l'avance ⚡",
   defi: 'Objectif : dominer tes duels 🔥',
+}
+
+// La PREMIÈRE MISSION du plan (écran 14) : un geste concret, pas une promesse.
+// Un plan qui dit « Studuel s'occupe du reste » laisse l'élève devant cinq
+// onglets ; un plan qui dit « déclare ton contrôle » lui met le doigt sur le
+// bon bouton. La mission découle de l'objectif, et elle est là où le bouton
+// « Commencer » l'emmène (cf. destinationApresPlan).
+export type PremiereMission = {
+  titre: string
+  detail: string
+  /** L'écran de l'app où cette mission se joue. */
+  destination: '/defi' | '/reviser'
+}
+
+const MISSION_PAR_OBJECTIF: Record<Goal, PremiereMission> = {
+  controles: {
+    titre: 'Déclare ton prochain contrôle',
+    detail: 'Studuel te découpe les révisions jour par jour, jusqu’au jour J.',
+    destination: '/reviser',
+  },
+  moyenne: {
+    titre: 'Lance ton premier duel',
+    detail: 'Une course de 90 secondes sur ton programme, contre un élève de ta classe.',
+    destination: '/defi',
+  },
+  examen: {
+    titre: 'Ouvre ton programme',
+    detail: 'Chaque chapitre a son cours, sa fiche et son quiz : coche-les un à un.',
+    destination: '/reviser',
+  },
+  avance: {
+    titre: 'Ouvre ton programme',
+    detail: 'Prends le chapitre suivant avant la classe — il t’attend déjà.',
+    destination: '/reviser',
+  },
+  defi: {
+    titre: 'Lance ton premier duel',
+    detail: 'Gagne tes premiers trophées et entre au classement de ton école.',
+    destination: '/defi',
+  },
+}
+
+const MISSION_PAR_DEFAUT: PremiereMission = MISSION_PAR_OBJECTIF.moyenne
+
+export function premiereMission(answers: OnboardingAnswers): PremiereMission {
+  return answers.goal ? MISSION_PAR_OBJECTIF[answers.goal] : MISSION_PAR_DEFAUT
+}
+
+/** Où le bouton « Commencer » du plan emmène. Un parent va à son espace ; un
+ *  élève va là où se joue sa première mission. */
+export function destinationApresPlan(answers: OnboardingAnswers): string {
+  if (answers.profileType === 'parent') return '/parents'
+  return premiereMission(answers).destination
 }
 
 export const DAILY_GOALS: {
@@ -283,6 +438,68 @@ export function makePlacement(correct: number, total: number): PlacementResult {
   }
 }
 
+// --- Le résultat du placement (écran 10ter) ---------------------------------
+
+export const PLACEMENT_LEVEL_LABEL: Record<PlacementLevel, string> = {
+  debutant: 'Débutant',
+  intermediaire: 'Intermédiaire',
+  avance: 'Avancé',
+}
+
+export type PlacementFeedback = {
+  /** « 4 / 5 » */
+  score: string
+  level: PlacementLevel
+  levelLabel: string
+  /** Le titre de l'écran — une réaction, pas un verdict. */
+  titre: string
+  /** Ce que le score change au plan. */
+  phrase: string
+  /** Vrai quand ça mérite des confettis. */
+  celebration: boolean
+}
+
+// Un placement n'est jamais une mauvaise nouvelle : l'écran l'a promis
+// (« aucune mauvaise réponse ») et il tient parole. Le score bas dit « on part
+// des bases » — ce qui est exactement ce que fait le plan. Le score haut
+// est fêté : c'est la seule chose que l'élève vient de gagner, et la première.
+export function placementFeedback(placement: PlacementResult): PlacementFeedback | null {
+  if (!placement || placement.total <= 0) return null
+  const { correct, total, level } = placement
+  const levelLabel = PLACEMENT_LEVEL_LABEL[level]
+  if (level === 'avance') {
+    return {
+      score: `${correct} / ${total}`,
+      level,
+      levelLabel,
+      titre: correct === total ? 'Sans faute !' : 'Très solide !',
+      phrase:
+        'Tu maîtrises déjà l’essentiel : ton plan ira droit aux chapitres qui font la différence.',
+      celebration: true,
+    }
+  }
+  if (level === 'intermediaire') {
+    return {
+      score: `${correct} / ${total}`,
+      level,
+      levelLabel,
+      titre: 'Bonne base !',
+      phrase:
+        'Tu as les fondations : ton plan alterne rappels rapides et nouveaux chapitres.',
+      celebration: false,
+    }
+  }
+  return {
+    score: `${correct} / ${total}`,
+    level,
+    levelLabel,
+    titre: 'On part des bases',
+    phrase:
+      'C’est le meilleur point de départ : ton plan commence par les notions clés, une par une.',
+    celebration: false,
+  }
+}
+
 // --- Matières ---------------------------------------------------------------
 
 // Matières proposées pour un niveau donné.
@@ -300,6 +517,20 @@ export function defaultSelectedForGrade(
   grade: string,
 ): string[] {
   return subjectsForGrade(subjects, grade).map((s) => s.slug)
+}
+
+// La ligne de réassurance sous la grille des classes (« 8 matières · tout le
+// programme de 4e »). Elle transforme un choix administratif en promesse :
+// l'élève voit, avant même de continuer, que sa classe est couverte.
+export function gradeReassurance(
+  subjects: Subject[],
+  grade: string | null,
+): string | null {
+  if (!grade) return null
+  const n = subjectsForGrade(subjects, grade).length
+  if (n === 0) return null
+  const label = GRADE_SHORT_LABELS[grade as keyof typeof GRADE_SHORT_LABELS] ?? grade
+  return `${n} matière${n > 1 ? 's' : ''} · tout le programme de ${label}`
 }
 
 // --- Validation d'avancement ------------------------------------------------

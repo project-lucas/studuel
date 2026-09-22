@@ -2,39 +2,43 @@ import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import { Suspense } from 'react'
 import { HeartHandshake } from 'lucide-react'
+import BienvenueParent from '@/components/parents/BienvenueParent'
 import ChildReport from '@/components/parents/ChildReport'
 import ConseilsPanel, {
   type ParentVideo,
 } from '@/components/parents/ConseilsPanel'
+import EnfantsPanneaux from '@/components/parents/EnfantsPanneaux'
+import EnteteParents from '@/components/parents/EnteteParents'
 import LinkChildForm from '@/components/parents/LinkChildForm'
+import OffrirStuduelPlus from '@/components/parents/OffrirStuduelPlus'
 import ParentsSpaces from '@/components/parents/ParentsSpaces'
 import ReglagesEnfant from '@/components/parents/ReglagesEnfant'
 import { getSubjectsCached } from '@/lib/catalog'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { computeStreak, toDayKey, weekProgress } from '@/lib/streak'
-import { GRID_PATTERN } from '@/lib/subject-style'
 import { childDisplayNames, type ChildDashboard } from '@/lib/parents'
 import {
   clampParentPrefs,
   DEFAULT_PARENT_PREFS,
   type ParentPrefs,
 } from '@/lib/parents-suivi'
+import { sousTitreParents } from '@/lib/parents-entete'
 
 export const metadata = { title: 'Espace parents — Studuel' }
 export const dynamic = 'force-dynamic'
 
 // L'espace parents, en trois volets (cf. components/parents/ParentsSpaces) :
-//   Suivi     — ce que fait l'enfant, et ce qui l'attend (contrôles, objectif,
-//               tendance, matières).
+//   Suivi     — ce que fait l'enfant, et ce qui l'attend (bilan en phrases et
+//               gestes de la semaine, puis contrôles, objectif, tendance,
+//               matières). À partir de deux enfants, une pastille par enfant.
 //   Conseils  — ce que le parent peut faire : les fiches écrites, et les vidéos
 //               du coach quand il y en a.
-//   Réglages  — l'objectif hebdomadaire, l'alerte d'inactivité, la liaison.
+//   Réglages  — l'objectif hebdomadaire, l'alerte d'inactivité, la liaison,
+//               et Studuel+ (le parent est le payeur).
 //
-// L'écran était auparavant un seul rouleau où ces trois contenus se
-// succédaient : le formulaire de liaison passait devant le tableau de bord
-// chez un parent qui avait déjà lié son enfant, et le suivi repoussait les
-// conseils hors de l'écran.
+// Depuis le 22/09/2026 l'espace n'a plus le chrome de l'élève (bandeau,
+// onglets) : il porte son propre en-tête (EnteteParents). Cf. lib/quiz-chrome.
 
 type ChildRow = { child_id: string; full_name: string | null }
 
@@ -54,12 +58,16 @@ export default async function ParentsPage() {
   // 172). Un parent a profile_type 'parent' (ou NULL legacy) ; un élève 'eleve'.
   const { data: me } = await supabase
     .from('profiles')
-    .select('profile_type')
+    .select('profile_type, full_name')
     .eq('id', user.id)
-    .maybeSingle()
-  if ((me as { profile_type?: string | null } | null)?.profile_type === 'eleve') {
+    .maybeSingle<{ profile_type: string | null; full_name: string | null }>()
+  if (me?.profile_type === 'eleve') {
     redirect('/reviser')
   }
+  const prenomParent =
+    (me?.full_name ?? (user.user_metadata?.full_name as string | undefined) ?? '')
+      .trim()
+      .split(' ')[0] || null
 
   // Enfants liés. On tolère une base sans la migration 044 (RPC absente =
   // PGRST202) : l'écran se replie alors sur « aucun enfant lié ». Toute AUTRE
@@ -142,28 +150,66 @@ export default async function ParentsPage() {
   const now = new Date()
   const today = toDayKey(now)
 
-  return (
-    <div className="-mx-4 -mt-16 md:-mx-8 md:-mt-10">
-      {/* Hero violet : le suivi des enfants, façon espace famille */}
-      <header className="bg-primary text-primary-foreground relative overflow-hidden px-4 pt-20 pb-10 md:px-8 md:pt-14">
+  const enfants = reports.map((r) => ({ id: r.childId, nom: r.displayName }))
+  const sousTitre = sousTitreParents(
+    reports.map((r) => ({
+      nom: r.displayName,
+      lastActivity: r.dashboard?.last_activity ?? null,
+    })),
+    today,
+  )
+
+  // Le panneau de suivi d'UN enfant — carte pleine, ou carte d'erreur.
+  const panneauSuivi = (r: (typeof reports)[number]) => {
+    if (!r.dashboard) {
+      return (
         <div
-          className="pointer-events-none absolute inset-0 opacity-[0.08]"
-          style={GRID_PATTERN}
-          aria-hidden="true"
-        />
-        <div className="relative mx-auto w-full max-w-2xl">
-          <h1 className="font-heading text-3xl font-bold text-balance md:text-4xl">
-            Suivi de vos enfants
-          </h1>
-          <p className="mt-2 max-w-prose text-sm opacity-90">
-            Le temps de travail, la régularité et les progrès par matière — mis à
-            jour à chaque session. Les résultats peuvent mettre un moment à
-            s&apos;actualiser.
+          role="alert"
+          className="bg-card border-destructive/40 rounded-2xl border p-5 shadow-sm"
+        >
+          <h3 className="mb-1 font-semibold">{r.displayName} : données indisponibles</h3>
+          <p className="text-muted-foreground text-sm">
+            Le lien avec son compte est toujours actif — seul le détail
+            n&apos;a pas pu être chargé. Réessayez en rechargeant la page.
           </p>
         </div>
-      </header>
+      )
+    }
+    const activeDays = new Set(r.dashboard.active_days)
+    const enfantQuery = enfants.length > 1 ? `&enfant=${r.childId}` : ''
+    return (
+      <ChildReport
+        childId={r.childId}
+        displayName={r.displayName}
+        dashboard={r.dashboard}
+        streak={computeStreak(activeDays, now)}
+        week={weekProgress(activeDays, now)}
+        prefs={prefsByChild.get(r.childId) ?? DEFAULT_PARENT_PREFS}
+        subjectNames={subjectNames}
+        today={today}
+        reglagesHref={`/parents?volet=reglages${enfantQuery}`}
+        conseilsHref="/parents?volet=conseils"
+      />
+    )
+  }
 
-      <div className="mx-auto w-full max-w-2xl px-4 py-8 md:px-8">
+  const panneauReglages = (r: (typeof reports)[number]) => (
+    <div className="flex flex-col gap-4">
+      <ReglagesEnfant
+        childId={r.childId}
+        childName={r.displayName}
+        prefs={prefsByChild.get(r.childId) ?? DEFAULT_PARENT_PREFS}
+        disponible={prefsDisponibles}
+      />
+      <OffrirStuduelPlus childName={r.displayName} contact={user.email ?? null} />
+    </div>
+  )
+
+  return (
+    <div className="bg-background min-h-svh">
+      <EnteteParents prenom={prenomParent} sousTitre={sousTitre} />
+
+      <div className="mx-auto w-full max-w-2xl px-4 py-6 md:px-8 md:py-8">
         {/* `useSearchParams` (le volet actif vit dans l'URL) impose une
             frontière Suspense sur une page rendue au serveur. */}
         <Suspense fallback={null}>
@@ -186,69 +232,29 @@ export default async function ParentsPage() {
                   </div>
                 ) : null}
 
-                {reports.length === 0 && !listePerdue ? (
-                  <div className="bg-card rounded-2xl border p-5 shadow-sm">
-                    <h3 className="font-heading mb-1 text-lg font-semibold">
-                      Aucun enfant lié pour l&apos;instant
-                    </h3>
-                    <p className="text-muted-foreground mb-4 text-sm">
-                      Saisissez le code affiché dans l&apos;application de votre
-                      enfant : son temps de travail, ses contrôles à venir et
-                      ses résultats par matière apparaîtront ici.
-                    </p>
-                    <LinkChildForm />
-                  </div>
-                ) : null}
+                {reports.length === 0 && !listePerdue ? <BienvenueParent /> : null}
 
-                {reports.map(({ childId, displayName, dashboard }) => {
-                  if (!dashboard) {
-                    return (
-                      <div
-                        key={childId}
-                        role="alert"
-                        className="bg-card border-destructive/40 mb-4 rounded-2xl border p-5 shadow-sm"
-                      >
-                        <h3 className="mb-1 font-semibold">
-                          {displayName} : données indisponibles
-                        </h3>
-                        <p className="text-muted-foreground text-sm">
-                          Le lien avec son compte est toujours actif — seul le
-                          détail n&apos;a pas pu être chargé. Réessayez en
-                          rechargeant la page.
-                        </p>
-                      </div>
-                    )
-                  }
-                  const activeDays = new Set(dashboard.active_days)
-                  return (
-                    <ChildReport
-                      key={childId}
-                      childId={childId}
-                      displayName={displayName}
-                      dashboard={dashboard}
-                      streak={computeStreak(activeDays, now)}
-                      week={weekProgress(activeDays, now)}
-                      prefs={prefsByChild.get(childId) ?? DEFAULT_PARENT_PREFS}
-                      subjectNames={subjectNames}
-                      today={today}
-                      reglagesHref="/parents?volet=reglages"
-                    />
-                  )
-                })}
+                {reports.length > 0 ? (
+                  <EnfantsPanneaux
+                    enfants={enfants}
+                    panneaux={Object.fromEntries(
+                      reports.map((r) => [r.childId, panneauSuivi(r)]),
+                    )}
+                  />
+                ) : null}
               </section>
             }
             conseils={<ConseilsPanel videos={videos} />}
             reglages={
               <div className="flex flex-col gap-4">
-                {reports.map(({ childId, displayName }) => (
-                  <ReglagesEnfant
-                    key={childId}
-                    childId={childId}
-                    childName={displayName}
-                    prefs={prefsByChild.get(childId) ?? DEFAULT_PARENT_PREFS}
-                    disponible={prefsDisponibles}
+                {reports.length > 0 ? (
+                  <EnfantsPanneaux
+                    enfants={enfants}
+                    panneaux={Object.fromEntries(
+                      reports.map((r) => [r.childId, panneauReglages(r)]),
+                    )}
                   />
-                ))}
+                ) : null}
 
                 <section className="bg-card rounded-2xl border p-5 shadow-sm">
                   <h3 className="mb-1 font-semibold">
@@ -297,12 +303,12 @@ export default async function ParentsPage() {
                     </li>
                   </ul>
                   <p className="text-muted-foreground mt-3 text-xs">
-                    Retour à l&apos;application :{' '}
+                    Vous avez aussi un compte élève ?{' '}
                     <Link
                       href="/reviser"
                       className="text-primary font-medium underline underline-offset-4"
                     >
-                      espace élève
+                      Ouvrir l&apos;espace élève
                     </Link>
                   </p>
                 </section>

@@ -30,6 +30,11 @@ export default function SignUpStep({
   initialError?: string | null
 }) {
   const oauthDisponible = auMoinsUnePorteOAuth(portes)
+  // Un PARENT ne « sauvegarde » aucune progression : il ouvre un espace pour
+  // suivre son enfant. Le même écran, tutoyé et parlant de série et d'XP, lui
+  // disait qu'il s'était trompé de porte. Les textes, le vouvoiement et le
+  // placeholder suivent le profil ; la mécanique ne change pas.
+  const parent = answers.profileType === 'parent'
   const [showEmail, setShowEmail] = useState(!oauthDisponible)
   const [showPassword, setShowPassword] = useState(false)
   const [fullName, setFullName] = useState('')
@@ -55,14 +60,15 @@ export default function SignUpStep({
     <div className="flex flex-1 flex-col pt-2 text-center">
       <PencilLogo size={78} className="mx-auto" />
       <h1 className="onb-title mt-1 text-[23px] leading-[1.18]">
-        Sauvegarde ta progression
+        {parent ? 'Créez votre espace parent' : 'Sauvegarde ta progression'}
       </h1>
       <p
         className="mt-1.5 text-[14px] leading-[1.45] font-semibold"
         style={{ color: 'var(--onb-mut)' }}
       >
-        Crée ton compte pour garder ta série, tes XP et retrouver tes duels
-        partout.
+        {parent
+          ? 'Un compte pour suivre les progrès de votre enfant, semaine après semaine.'
+          : 'Crée ton compte pour garder ta série, tes XP et retrouver tes duels partout.'}
       </p>
 
       <div className="mt-4 flex flex-col gap-[11px] text-left">
@@ -79,14 +85,14 @@ export default function SignUpStep({
         {showEmail ? (
           <form onSubmit={submitEmail} className="flex flex-col gap-2.5">
             <OnbField
-              placeholder="Prénom et nom"
+              placeholder={parent ? 'Votre prénom et nom' : 'Prénom et nom'}
               autoComplete="name"
               value={fullName}
               onChange={setFullName}
             />
             <OnbField
               type="email"
-              placeholder="eleve@exemple.fr"
+              placeholder={parent ? 'parent@exemple.fr' : 'eleve@exemple.fr'}
               autoComplete="email"
               required
               value={email}
@@ -151,10 +157,12 @@ export default function SignUpStep({
       </div>
 
       <p className="mt-3.5 text-[13px] font-bold" style={{ color: 'var(--onb-mut)' }}>
-        En continuant, tu acceptes les CGU et la politique de confidentialité.
+        {parent
+          ? 'En continuant, vous acceptez les CGU et la politique de confidentialité.'
+          : 'En continuant, tu acceptes les CGU et la politique de confidentialité.'}
       </p>
       <p className="mt-2 text-[13px] font-semibold" style={{ color: 'var(--onb-mut)' }}>
-        Déjà inscrit ?{' '}
+        {parent ? 'Déjà un compte ? ' : 'Déjà inscrit ? '}
         <Link href="/login" className="font-extrabold underline" style={{ color: 'var(--onb-pp)' }}>
           Se connecter
         </Link>

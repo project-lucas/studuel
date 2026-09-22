@@ -103,10 +103,41 @@ export function estOnboarding(pathname: string): boolean {
 }
 
 /**
- * Les deux réunis : les routes où le CHROME de l'app (bandeau du haut + barre
+ * L'ONBOARDING D'UN COMPTE CONNECTÉ (`/onboarding`, trois questions) prend
+ * l'écran entier comme `/bienvenue`, dont il reprend les écrans depuis le
+ * 22/09/2026. Il se termine par une redirection SERVEUR (Server Action), et
+ * n'est PAS dans `isHudDataSkipped` : le bandeau doit exister quand l'élève
+ * en ressort par le bouton retour (navigation client vers l'arène).
+ */
+export function estOnboardingCompte(pathname: string): boolean {
+  const p = typeof pathname === 'string' ? pathname : ''
+  const chemin = p.split('?')[0]
+  return chemin === '/onboarding' || chemin.startsWith('/onboarding/')
+}
+
+/**
+ * L'ESPACE PARENTS (`/parents`) n'a ni bandeau ni barre d'onglets élève
+ * (22/09/2026). Un parent y lisait le niveau, la série et les gemmes de SON
+ * compte — vides, puisqu'il ne joue pas — sous cinq onglets (Défi, Boutique…)
+ * qui ne lui étaient pas destinés. L'espace porte son propre en-tête (compte,
+ * déconnexion) : cf. components/parents/EnteteParents.
+ */
+export function estEspaceParents(pathname: string): boolean {
+  const p = typeof pathname === 'string' ? pathname : ''
+  const chemin = p.split('?')[0]
+  return chemin === '/parents' || chemin.startsWith('/parents/')
+}
+
+/**
+ * Tous réunis : les routes où le CHROME de l'app (bandeau du haut + barre
  * d'onglets) ne s'affiche pas. C'est le verdict que lisent `Navigation` et
  * `TopHud`, tous deux clients — donc réévalué à chaque navigation.
  */
 export function estChromeMasque(pathname: string): boolean {
-  return estPleinEcran(pathname) || estOnboarding(pathname)
+  return (
+    estPleinEcran(pathname) ||
+    estOnboarding(pathname) ||
+    estOnboardingCompte(pathname) ||
+    estEspaceParents(pathname)
+  )
 }

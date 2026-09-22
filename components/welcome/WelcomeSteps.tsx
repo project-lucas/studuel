@@ -9,6 +9,7 @@ import {
   GOALS,
   GRADE_LABELS,
   SOURCES,
+  gradeReassurance,
   subjectsForGrade,
   type DailyGoalMinutes,
   type Goal,
@@ -19,6 +20,7 @@ import {
 import { schoolLevelForGrade, SCHOOL_LEVEL_LABEL } from '@/lib/clan'
 import { PORTRAIT_KEYS, portraitSrc, type PortraitKey } from '@/lib/portraits'
 import PencilLogo from './PencilLogo'
+import OnbButton from './OnbButton'
 import {
   Bubble,
   OptionGroup,
@@ -73,9 +75,103 @@ export function ProfilStep({
               </OptionIcon>
             }
             label="Je suis parent"
-            description="Je crée un compte pour mon enfant"
+            description="Je suis les progrès de mon enfant"
           />
         </OptionGroup>
+      </div>
+    </div>
+  )
+}
+
+// ---------------------------------------------------------------------------
+// Écran 2bis — Le parcours PARENT : ce qu'il va trouver (ajouté le 22/09/2026)
+//
+// Un parent qui choisissait « Je suis parent » tombait sur « Sauvegarde ta
+// progression… garde ta série, tes XP » — l'écran de compte de l'ÉLÈVE —
+// puis, une fois inscrit, sur « Aucun enfant lié » et un champ de code dont
+// personne ne lui avait parlé. Cet écran dit, AVANT le compte, les trois
+// choses que l'espace parents lui donne, et comment on lie l'enfant : son
+// code, dans l'onglet Amis de SON application. Vouvoiement : c'est la règle
+// de tout l'espace parents.
+// ---------------------------------------------------------------------------
+const PARENT_PROMESSES: { titre: string; detail: string; color: string; icon: ReactNode }[] = [
+  {
+    titre: 'Ce qu’il a fait cette semaine',
+    detail: 'Le temps de révision, la régularité, la tendance sur quatre semaines.',
+    color: 'var(--onb-pp)',
+    icon: (
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" strokeWidth="2.2">
+        <path d="M4 19V9m5 10V5m5 14v-7m5 7V8" />
+      </svg>
+    ),
+  },
+  {
+    titre: 'Ses contrôles à venir',
+    detail: 'Déclarés par votre enfant dans l’app, avec leurs chapitres.',
+    color: 'var(--onb-co)',
+    icon: (
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" strokeWidth="2.2">
+        <path d="M4 5h16v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" />
+        <path d="M4 9h16M8 3v4M16 3v4" />
+      </svg>
+    ),
+  },
+  {
+    titre: 'Des conseils concrets',
+    detail: 'Six repères sur l’apprentissage, et des gestes adaptés à sa semaine.',
+    color: 'var(--onb-yl)',
+    icon: (
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#5a3d00" strokeWidth="2.2">
+        <path d="M12 3l2.5 5.3 5.8.8-4.2 4 1 5.7L12 16l-5.1 2.6 1-5.7L3.7 9l5.8-.8z" />
+      </svg>
+    ),
+  },
+]
+
+export function ParentIntroStep({ onContinue }: { onContinue: () => void }) {
+  return (
+    <div className="flex flex-1 flex-col">
+      <StepHead
+        title="Votre espace parent"
+        subtitle="Un tableau de bord clair, mis à jour à chaque session de votre enfant."
+      />
+      <ul className="flex flex-col gap-[11px] pt-6">
+        {PARENT_PROMESSES.map((p) => (
+          <li
+            key={p.titre}
+            className="flex items-center gap-3.5 rounded-2xl border-2 bg-white p-[15px]"
+            style={{ borderColor: 'var(--onb-line)' }}
+          >
+            <OptionIcon color={p.color}>{p.icon}</OptionIcon>
+            <span className="min-w-0">
+              <span className="block text-[15px] font-extrabold">{p.titre}</span>
+              <span className="mt-0.5 block text-[13px] leading-[1.35] font-semibold" style={{ color: 'var(--onb-mut)' }}>
+                {p.detail}
+              </span>
+            </span>
+          </li>
+        ))}
+      </ul>
+
+      <div
+        className="mt-4 rounded-[18px] border-2 p-4"
+        style={{ borderColor: 'var(--onb-yl)', background: '#FFF7E0' }}
+      >
+        <p className="text-[11px] font-extrabold tracking-[0.1em] uppercase" style={{ color: '#a06d00' }}>
+          Comment ça marche
+        </p>
+        <ol className="mt-1.5 flex flex-col gap-1 text-[13.5px] leading-[1.4] font-semibold" style={{ color: 'var(--onb-ink)' }}>
+          <li>1. Vous créez votre compte (écran suivant).</li>
+          <li>
+            2. Votre enfant vous donne son code — dans l’onglet <strong>Amis</strong>{' '}
+            de son application.
+          </li>
+          <li>3. Vous le saisissez dans votre espace : son suivi apparaît.</li>
+        </ol>
+      </div>
+
+      <div className="mt-auto pt-5">
+        <OnbButton onClick={onContinue}>Créer mon espace</OnbButton>
       </div>
     </div>
   )
@@ -299,18 +395,32 @@ function GradeCell({
 
 export function GradeStep({
   answers,
+  subjects,
   onPick,
 }: {
   answers: OnboardingAnswers
+  /** Le catalogue, pour dire combien de matières couvre la classe choisie. */
+  subjects: Subject[]
   onPick: (grade: string) => void
 }) {
+  const reassurance = gradeReassurance(subjects, answers.grade)
   return (
     <div className="flex flex-1 flex-col">
       <StepHead
         title="Tu es en quelle classe ?"
         subtitle="Pour te proposer le bon programme."
       />
-      <div className="pt-6">
+      {/* La réassurance, dès qu'une classe est cochée : « 8 matières · tout
+          le programme de 4e ». Un choix administratif devient une promesse
+          tenue — et elle se lit avant même d'appuyer sur Continuer. */}
+      <p
+        aria-live="polite"
+        className="mt-2 min-h-[20px] text-[13px] font-extrabold"
+        style={{ color: reassurance ? '#2AA36B' : 'transparent' }}
+      >
+        {reassurance ? `✓ ${reassurance}` : ' '}
+      </p>
+      <div className="pt-4">
         {/* Groupé par cycle. À sept classes, une grille à plat se lisait ; à
             quatorze — le primaire et la voie technologique sont arrivés — elle
             ne dit plus rien de la structure, et un CE1 doit parcourir tout le

@@ -4,16 +4,24 @@ import {
   EMPTY_ANSWERS,
   FAST_PATH,
   OFF_PATH,
+  PARENT_PATH,
   STEPS_BEFORE_PLAY,
   WELCOME_STEPS,
   canAdvance,
   defaultSelectedForGrade,
+  destinationApresPlan,
+  gradeReassurance,
   isDailyGoalMinutes,
+  isWelcomeStep,
   makePlacement,
   minutesToSessions,
   nextStep,
   parseAnswers,
+  pathTo,
+  placementFeedback,
   placementLevel,
+  premiereMission,
+  resumeStep,
   screensBeforePlay,
   serializeAnswers,
   stepProgress,
@@ -244,7 +252,7 @@ describe('chemin par défaut', () => {
   it('couvre chaque écran du design, sur le chemin ou hors chemin', () => {
     // Rien ne doit être perdu : un écran absent des deux listes serait du code
     // mort qu'on ne saurait plus remettre.
-    const known = new Set([...FAST_PATH, ...OFF_PATH])
+    const known = new Set([...FAST_PATH, ...PARENT_PATH, ...OFF_PATH])
     for (const s of WELCOME_STEPS) expect(known.has(s)).toBe(true)
   })
 
@@ -258,9 +266,18 @@ describe('chemin par défaut', () => {
     // pour l'écrire plus tard. Et après le jeu : pas un péage de plus avant
     // la démonstration.
     const quiz = FAST_PATH.indexOf('placementQuiz')
-    expect(FAST_PATH[quiz + 1]).toBe('avatar')
-    expect(FAST_PATH[quiz + 2]).toBe('signup')
+    expect(FAST_PATH[quiz + 1]).toBe('placementResult')
+    expect(FAST_PATH[quiz + 2]).toBe('avatar')
+    expect(FAST_PATH[quiz + 3]).toBe('signup')
     expect(STEPS_BEFORE_PLAY).not.toContain('avatar')
+  })
+
+  it('montre le résultat du quiz avant toute autre chose', () => {
+    // Le quiz est le sommet émotionnel du parcours : on ne l'enchaîne pas
+    // muettement sur le choix d'un blason.
+    const quiz = FAST_PATH.indexOf('placementQuiz')
+    expect(FAST_PATH[quiz + 1]).toBe('placementResult')
+    expect(STEPS_BEFORE_PLAY).not.toContain('placementResult')
   })
 })
 
@@ -272,7 +289,8 @@ describe('écran « Ton avatar »', () => {
 
   it('un parent ne le voit jamais', () => {
     const a = answers({ profileType: 'parent' })
-    expect(nextStep('profil', a)).toBe('signup')
+    expect(nextStep('profil', a)).toBe('parentIntro')
+    expect(PARENT_PATH).not.toContain('avatar')
   })
 })
 
@@ -282,15 +300,25 @@ describe('nextStep', () => {
     expect(nextStep('intro', a)).toBe('profil')
     expect(nextStep('profil', a)).toBe('grade')
     expect(nextStep('grade', a)).toBe('placementIntro')
-    expect(nextStep('placementQuiz', a)).toBe('avatar')
+    expect(nextStep('placementQuiz', a)).toBe('placementResult')
+    expect(nextStep('placementResult', a)).toBe('avatar')
     expect(nextStep('avatar', a)).toBe('signup')
   })
 
   it('court-circuite tout l’élève pour un parent', () => {
     const a = answers({ profileType: 'parent' })
-    expect(nextStep('profil', a)).toBe('signup')
+    // Le parent passe par SA présentation (ce qu'il va trouver, comment lier
+    // son enfant), puis va droit au compte.
+    expect(nextStep('profil', a)).toBe('parentIntro')
+    expect(nextStep('parentIntro', a)).toBe('signup')
     // Un parent n'a pas de plan élève : son parcours s'arrête au compte.
     expect(nextStep('signup', a)).toBeNull()
+  })
+
+  it('ramène un parent égaré sur un écran élève à sa présentation', () => {
+    const a = answers({ profileType: 'parent' })
+    expect(nextStep('grade', a)).toBe('parentIntro')
+    expect(nextStep('avatar', a)).toBe('parentIntro')
   })
 
   it('renvoie null à la fin du parcours', () => {
@@ -320,5 +348,131 @@ describe('stepProgress sur le nouvel ordre', () => {
     // La barre doit dire « on y est presque » quand le quiz arrive, sinon les
     // trois premiers écrans paraissent être le début d'un long tunnel.
     expect(stepProgress('placementQuiz')).toBeGreaterThanOrEqual(0.3)
+  })
+})
+
+// --- Le résultat du placement, la première mission, la reprise -------------
+
+describe('placementFeedback', () => {
+  it('se tait quand le quiz a été sauté ou est vide', () => {
+    expect(placementFeedback(null)).toBeNull()
+    expect(placementFeedback(makePlacement(0, 0))).toBeNull()
+  })
+
+  it('fête un score avancé, et distingue le sans-faute', () => {
+    const parfait = placementFeedback(makePlacement(5, 5))
+    expect(parfait?.celebration).toBe(true)
+    expect(parfait?.titre).toBe('Sans faute !')
+    expect(parfait?.score).toBe('5 / 5')
+    const presque = placementFeedback(makePlacement(4, 5))
+    expect(presque?.celebration).toBe(true)
+    expect(presque?.titre).not.toBe('Sans faute !')
+    expect(presque?.levelLabel).toBe('Avancé')
+  })
+
+  it('ne dit jamais « mauvais » à un débutant', () => {
+    const fb = placementFeedback(makePlacement(1, 5))
+    expect(fb?.level).toBe('debutant')
+    expect(fb?.celebration).toBe(false)
+    expect(fb?.titre.toLowerCase()).not.toMatch(/mauvais|raté|faible/)
+    expect(fb?.phrase.length).toBeGreaterThan(20)
+  })
+})
+
+describe('premiereMission / destinationApresPlan', () => {
+  it('envoie un parent à son espace', () => {
+    expect(destinationApresPlan(answers({ profileType: 'parent' }))).toBe('/parents')
+  })
+
+  it('emmène là où se joue la première mission', () => {
+    const controles = answers({ profileType: 'eleve', goal: 'controles' })
+    expect(premiereMission(controles).destination).toBe('/reviser')
+    expect(destinationApresPlan(controles)).toBe('/reviser')
+    const defi = answers({ profileType: 'eleve', goal: 'defi' })
+    expect(destinationApresPlan(defi)).toBe('/defi')
+  })
+
+  it('a une mission par défaut sans objectif choisi', () => {
+    const m = premiereMission(answers({ profileType: 'eleve' }))
+    expect(m.titre.length).toBeGreaterThan(5)
+    expect(['/defi', '/reviser']).toContain(m.destination)
+  })
+})
+
+describe('resumeStep — reprendre là où on s’était arrêté', () => {
+  const eleve = answers({ profileType: 'eleve', grade: '4e' })
+
+  it('ignore une étape inconnue ou un brouillon sans profil', () => {
+    expect(resumeStep('nimporte', eleve)).toBeNull()
+    expect(resumeStep(undefined, eleve)).toBeNull()
+    expect(resumeStep('avatar', answers())).toBeNull()
+    expect(isWelcomeStep('avatar')).toBe(true)
+    expect(isWelcomeStep('robot')).toBe(false)
+  })
+
+  it('reprend sur les écrans d’avant le compte', () => {
+    expect(resumeStep('grade', eleve)).toBe('grade')
+    expect(resumeStep('avatar', eleve)).toBe('avatar')
+    expect(resumeStep('signup', eleve)).toBe('signup')
+  })
+
+  it('ne reprend JAMAIS après le compte', () => {
+    // Après le compte l'élève est connecté : la page le renvoie dans l'app.
+    for (const s of ['goal', 'dailyGoal', 'school', 'notifications', 'plan'] as const) {
+      expect(resumeStep(s, eleve)).toBeNull()
+    }
+  })
+
+  it('repart de l’intro du quiz, jamais d’un quiz sans questions', () => {
+    expect(resumeStep('placementQuiz', eleve)).toBe('placementIntro')
+  })
+
+  it('ne montre pas un résultat qui n’existe pas', () => {
+    expect(resumeStep('placementResult', eleve)).toBe('placementIntro')
+    expect(
+      resumeStep('placementResult', { ...eleve, placement: makePlacement(3, 5) }),
+    ).toBe('placementResult')
+  })
+
+  it('recule jusqu’à la classe si elle manque', () => {
+    expect(resumeStep('avatar', answers({ profileType: 'eleve' }))).toBe('grade')
+  })
+
+  it('tient le parcours parent à part', () => {
+    const parent = answers({ profileType: 'parent' })
+    expect(resumeStep('signup', parent)).toBe('signup')
+    expect(resumeStep('avatar', parent)).toBe('parentIntro')
+    expect(resumeStep('parentIntro', eleve)).toBeNull()
+  })
+
+  it('reconstruit l’historique du bouton retour', () => {
+    expect(pathTo('avatar', eleve)).toEqual([
+      'intro',
+      'profil',
+      'grade',
+      'placementIntro',
+      'placementQuiz',
+      'placementResult',
+    ])
+    expect(pathTo('intro', eleve)).toEqual([])
+    expect(pathTo('signup', answers({ profileType: 'parent' }))).toEqual([
+      'intro',
+      'profil',
+      'parentIntro',
+    ])
+  })
+})
+
+describe('gradeReassurance', () => {
+  it('compte les matières de la classe choisie', () => {
+    // Le libellé court porte l'exposant du design (« 4ᵉ ») : on ne le
+    // recopie pas ici, on vérifie le compte et l'accord.
+    expect(gradeReassurance(SUBJECTS, '4e')).toMatch(/^2 matières · tout le programme de 4/)
+    expect(gradeReassurance(SUBJECTS, 'Tle')).toMatch(/^1 matière · tout le programme de T/)
+  })
+
+  it('se tait sans classe ou sans matière', () => {
+    expect(gradeReassurance(SUBJECTS, null)).toBeNull()
+    expect(gradeReassurance([], '4e')).toBeNull()
   })
 })

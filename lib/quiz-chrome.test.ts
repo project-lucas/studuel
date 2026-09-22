@@ -1,5 +1,11 @@
 import { describe, expect, it } from 'vitest'
-import { estChromeMasque, estOnboarding, estPleinEcran } from '@/lib/quiz-chrome'
+import {
+  estChromeMasque,
+  estEspaceParents,
+  estOnboarding,
+  estOnboardingCompte,
+  estPleinEcran,
+} from '@/lib/quiz-chrome'
 
 describe('estPleinEcran', () => {
   it('masque le chrome sur une session de quiz ouverte', () => {
@@ -76,6 +82,25 @@ describe('estChromeMasque', () => {
   it('ne se laisse pas prendre par une route qui COMMENCE pareil', () => {
     expect(estOnboarding('/bienvenue-parents')).toBe(false)
     expect(estChromeMasque('/bienvenue-parents')).toBe(false)
+    expect(estEspaceParents('/parentsx')).toBe(false)
+    expect(estOnboardingCompte('/onboarding-bis')).toBe(false)
+  })
+
+  it('masque le chrome sur l’onboarding d’un compte connecté', () => {
+    // Trois questions dans le monde de /bienvenue : le bandeau et la barre
+    // d'onglets passeraient sous (ou sur) l'écran fixé.
+    expect(estOnboardingCompte('/onboarding')).toBe(true)
+    expect(estChromeMasque('/onboarding')).toBe(true)
+    expect(estChromeMasque('/onboarding?retour=compte')).toBe(true)
+  })
+
+  it('masque le chrome élève sur l’espace parents', () => {
+    // Un parent ne joue pas : niveau, série et gemmes de SON compte sont
+    // vides, et les cinq onglets ne lui sont pas destinés. L'espace porte son
+    // propre en-tête.
+    expect(estEspaceParents('/parents')).toBe(true)
+    expect(estEspaceParents('/parents?volet=conseils')).toBe(true)
+    expect(estChromeMasque('/parents')).toBe(true)
   })
 
   it('le garde partout ailleurs', () => {

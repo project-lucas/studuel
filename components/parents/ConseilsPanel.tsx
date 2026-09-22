@@ -1,5 +1,6 @@
 import { ChevronDown, Clock, ExternalLink, MonitorPlay, Sparkles } from 'lucide-react'
 import { CONSEILS } from '@/lib/parents-conseils'
+import OuvrirFicheDepuisHash from '@/components/parents/OuvrirFicheDepuisHash'
 
 export type ParentVideo = {
   id: string
@@ -35,6 +36,9 @@ export type ParentVideo = {
 export default function ConseilsPanel({ videos }: { videos: ParentVideo[] }) {
   return (
     <div className="flex flex-col gap-8">
+      {/* Les gestes du bilan (volet Suivi) renvoient ici par une ancre
+          `#conseil-<id>` : la fiche visée s'ouvre d'elle-même. */}
+      <OuvrirFicheDepuisHash />
       {videos.length > 0 ? (
         <section>
           <h2 className="font-heading mb-1 flex items-center gap-2 text-lg font-semibold">
@@ -105,7 +109,10 @@ export default function ConseilsPanel({ videos }: { videos: ParentVideo[] }) {
         <ul className="flex flex-col gap-3">
           {CONSEILS.map((c) => (
             <li key={c.id}>
-              <details className="bg-card group rounded-2xl border shadow-sm">
+              <details
+                id={`conseil-${c.id}`}
+                className="bg-card group scroll-mt-4 rounded-2xl border shadow-sm"
+              >
                 <summary className="flex cursor-pointer list-none items-start gap-3 p-4">
                   <span className="min-w-0 flex-1">
                     <span className="text-muted-foreground mb-1 block text-[11px] font-bold tracking-wide uppercase">

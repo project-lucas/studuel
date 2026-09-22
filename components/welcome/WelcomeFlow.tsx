@@ -7,11 +7,15 @@ import type { Subject } from '@/lib/types'
 import { toast } from '@/lib/toast'
 import {
   STORAGE_KEY,
+  STORAGE_STEP_KEY,
   canAdvance,
   defaultSelectedForGrade,
+  destinationApresPlan,
   makePlacement,
   nextStep,
   parseAnswers,
+  pathTo,
+  resumeStep,
   serializeAnswers,
   stepProgress,
   type OnboardingAnswers,
@@ -31,6 +35,7 @@ import {
   GoalStep,
   GradeStep,
   MotivationStep,
+  ParentIntroStep,
   ProfilStep,
   SchoolStep,
   SourceStep,
@@ -41,6 +46,7 @@ import {
   NotificationsStep,
   PlacementIntroStep,
   PlacementQuizStep,
+  PlacementResultStep,
   PlanStep,
 } from './EngageSteps'
 import SignUpStep from './SignUpStep'
@@ -59,6 +65,24 @@ const STANDARD_FOOTER: WelcomeStep[] = [
   'dailyGoal',
   'avatar',
 ]
+
+function lireLocal(cle: string): string | null {
+  try {
+    return window.localStorage.getItem(cle)
+  } catch {
+    return null
+  }
+}
+
+function ecrireLocal(cle: string, valeur: string | null): void {
+  try {
+    if (valeur === null) window.localStorage.removeItem(cle)
+    else window.localStorage.setItem(cle, valeur)
+  } catch {
+    // Stockage indisponible (navigation privée, quota) : le parcours
+    // fonctionne sans reprise, c'est tout.
+  }
+}
 
 export default function WelcomeFlow({
   subjects,
@@ -97,9 +121,14 @@ export default function WelcomeFlow({
   // (?finish=1) — applique CE brouillon au profil (le compte existe déjà). On
   // lit ici et pas dans l'initialiseur d'état pour éviter tout écart
   // d'hydratation sur l'écran « plan ».
+  //
+  // REPRISE. Si un écran d'AVANT le compte a été mémorisé (onglet fermé,
+  // appel, app passée en arrière-plan), on y revient directement, avec
+  // l'historique du bouton retour reconstruit — plutôt que de faire
+  // retraverser à l'élève des écrans déjà remplis (cf. resumeStep).
   useEffect(() => {
     const loadDraft = () => {
-      const draft = parseAnswers(window.localStorage.getItem(STORAGE_KEY))
+      const draft = parseAnswers(lireLocal(STORAGE_KEY))
       setAnswers(draft)
       setDraftLoaded(true)
       if (finish) {
@@ -110,6 +139,13 @@ export default function WelcomeFlow({
             if (!res?.ok) setApplyFailed(true)
           })
           .catch(() => setApplyFailed(true))
+        return
+      }
+      if (oauthFailed) return
+      const reprise = resumeStep(lireLocal(STORAGE_STEP_KEY), draft)
+      if (reprise && reprise !== 'intro') {
+        setStep(reprise)
+        setHistory(pathTo(reprise, draft))
       }
     }
     loadDraft()
@@ -120,8 +156,14 @@ export default function WelcomeFlow({
   // écraserait le brouillon existant avec l'état vide initial.
   useEffect(() => {
     if (!draftLoaded) return
-    window.localStorage.setItem(STORAGE_KEY, serializeAnswers(answers))
+    ecrireLocal(STORAGE_KEY, serializeAnswers(answers))
   }, [answers, draftLoaded])
+
+  // L'écran courant, mémorisé pour la reprise (même garde).
+  useEffect(() => {
+    if (!draftLoaded) return
+    ecrireLocal(STORAGE_STEP_KEY, step)
+  }, [step, draftLoaded])
 
   // Changement d'écran : on déplace le focus sur le nouvel écran. Sans ça, le
   // clavier et le lecteur d'écran restent sur le bouton qui vient de
@@ -142,8 +184,11 @@ export default function WelcomeFlow({
     screenRef.current?.focus({ preventScroll: true })
   }, [step])
 
-  function go(to: WelcomeStep) {
-    setHistory((h) => [...h, step])
+  // `sansRetour` : l'écran quitté ne rentre pas dans l'historique. Sert au
+  // quiz → résultat : revenir « en arrière » depuis le résultat doit ramener à
+  // l'intro du quiz, pas relancer un quiz à moitié fait.
+  function go(to: WelcomeStep, sansRetour = false) {
+    if (!sansRetour) setHistory((h) => [...h, step])
     setStep(to)
   }
   function back() {
@@ -176,10 +221,19 @@ export default function WelcomeFlow({
     }
   }
 
+  // Le parcours est FINI : le brouillon et l'écran mémorisé n'ont plus de
+  // raison d'être — un frère ou une sœur qui ouvre l'app sur le même appareil
+  // ne doit pas reprendre au milieu du parcours d'un autre.
+  function oublierBrouillon() {
+    ecrireLocal(STORAGE_KEY, null)
+    ecrireLocal(STORAGE_STEP_KEY, null)
+  }
+
   function finishOnboarding() {
     setFinishing(true)
-    const dest = answers.profileType === 'parent' ? '/parents' : '/defi'
+    const dest = destinationApresPlan(answers)
     if (!applyFailed) {
+      oublierBrouillon()
       router.push(dest)
       return
     }
@@ -194,7 +248,10 @@ export default function WelcomeFlow({
       .catch(() => {
         toast('Ton plan n’a pas pu être enregistré — refais-le depuis ton compte.', 'error')
       })
-      .finally(() => router.push(dest))
+      .finally(() => {
+        oublierBrouillon()
+        router.push(dest)
+      })
   }
 
   const progress = stepProgress(step)
@@ -224,12 +281,15 @@ export default function WelcomeFlow({
       {step === 'placementQuiz' ? (
         <div className="mx-auto flex min-h-0 w-full max-w-md flex-1 flex-col">
           <PlacementQuizStep
-            progress={progress ?? 0.78}
+            progress={progress ?? 0.4}
             questions={questions}
             onBack={back}
             onDone={(correct, total) => {
               setAnswers((a) => ({ ...a, placement: makePlacement(correct, total) }))
-              go(nextStep('placementQuiz', answers) ?? 'signup')
+              // Un quiz FAIT montre son résultat ; un quiz vide (aucune
+              // question servie) file droit à l'écran suivant.
+              if (total > 0) go('placementResult', true)
+              else go(nextStep('placementResult', answers) ?? 'avatar', true)
             }}
           />
         </div>
@@ -266,6 +326,8 @@ export default function WelcomeFlow({
             onPick={(v) => setAnswers((a) => ({ ...a, profileType: v }))}
           />
         )
+      case 'parentIntro':
+        return <ParentIntroStep onContinue={next} />
       case 'motivation':
         return <MotivationStep />
       case 'source':
@@ -286,6 +348,7 @@ export default function WelcomeFlow({
         return (
           <GradeStep
             answers={answers}
+            subjects={subjects}
             onPick={(grade) =>
               setAnswers((a) => ({
                 ...a,
@@ -335,12 +398,14 @@ export default function WelcomeFlow({
             onStart={() => void startPlacement()}
             onSkip={() => {
               setAnswers((a) => ({ ...a, placement: makePlacement(0, 0) }))
-              // Passer le quiz saute AUSSI l'écran de quiz : on rejoint la
-              // suite du chemin (le compte), sans écran orphelin.
-              go(nextStep('placementQuiz', answers) ?? 'signup')
+              // Passer le quiz saute AUSSI le quiz et son résultat : on
+              // rejoint la suite du chemin (le blason), sans écran orphelin.
+              go(nextStep('placementResult', answers) ?? 'signup')
             }}
           />
         )
+      case 'placementResult':
+        return <PlacementResultStep answers={answers} onContinue={next} />
       case 'friends':
         return (
           <FriendsStep
@@ -381,8 +446,10 @@ export default function WelcomeFlow({
               // Le parcours parent n'a pas de suite élève : direct l'espace
               // parents (nextStep renvoie null pour lui).
               const to = nextStep('signup', answers)
-              if (to === null) router.push('/parents')
-              else go(to)
+              if (to === null) {
+                oublierBrouillon()
+                router.push('/parents')
+              } else go(to)
             }}
           />
         )

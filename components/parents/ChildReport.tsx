@@ -1,11 +1,10 @@
-import { CalendarClock, Clock, Flame, Gauge, TriangleAlert, Trophy } from 'lucide-react'
+import { CalendarClock, Clock, Flame, Gauge, Trophy } from 'lucide-react'
 import { GRADE_SHORT_LABELS } from '@/lib/grades'
 import { isGradeLevel } from '@/lib/grades'
 import { workLevel } from '@/lib/work-level'
 import {
   averageDailySeconds,
   formatWorkDuration,
-  parentHeadline,
   scorePercent,
   strongestSubject,
   type ChildDashboard,
@@ -17,6 +16,8 @@ import {
   weekTrend,
   type ParentPrefs,
 } from '@/lib/parents-suivi'
+import { bilanSemaine, gestesDeLaSemaine } from '@/lib/parents-bilan'
+import BilanSemaine from '@/components/parents/BilanSemaine'
 import ControlesAVenir from '@/components/parents/ControlesAVenir'
 import MatieresSuivi from '@/components/parents/MatieresSuivi'
 import ObjectifSemaine from '@/components/parents/ObjectifSemaine'
@@ -41,6 +42,8 @@ type Props = {
   today: string
   /** Lien vers le volet Réglages de cet enfant. */
   reglagesHref: string
+  /** Lien vers le volet Conseils (les gestes du bilan y renvoient). */
+  conseilsHref: string
 }
 
 const DAY_LABELS = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
@@ -51,6 +54,9 @@ const DAY_LABELS = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
  * L'ORDRE DES BLOCS EST L'ORDRE DES QUESTIONS. Un parent ouvre cet écran avec
  * une hiérarchie précise en tête, et la carte la suit :
  *
+ *   0. Ça va, et qu'est-ce que je fais ? → le bilan en phrases et les gestes
+ *      de la semaine (lib/parents-bilan) — la réponse en dix secondes, AVANT
+ *      tout chiffre. Depuis le 22/09/2026 ; il remplace la ligne d'accroche.
  *   1. Y a-t-il un problème ?     → l'alerte d'inactivité, quand elle existe
  *   2. Qu'est-ce qui est prévu ?  → les contrôles à venir
  *   3. Est-ce qu'il en fait assez ? → l'objectif de la semaine
@@ -77,6 +83,7 @@ export default function ChildReport({
   subjectNames,
   today,
   reglagesHref,
+  conseilsHref,
 }: Props) {
   const level = workLevel(dashboard.work_seconds)
   const strong = strongestSubject(dashboard.per_subject)
@@ -85,7 +92,9 @@ export default function ChildReport({
     dashboard.week_seconds,
     dashboard.week_active_days,
   )
-  const joursActifs = week.filter((d) => d.done).length
+  const entreeBilan = { displayName, dashboard, prefs, streak, today, subjectNames }
+  const bilan = bilanSemaine(entreeBilan)
+  const gestes = gestesDeLaSemaine(entreeBilan)
 
   // Les trois blocs de la 319. `undefined` = migration pas encore passée : on
   // se tait. `[]` = migration passée et rien à montrer : on le dit.
@@ -119,31 +128,18 @@ export default function ChildReport({
             </span>
           ) : null}
         </div>
-        <p className="text-muted-foreground mt-0.5 text-sm">
-          {/* Le 3e argument est EXACTEMENT ce que compte la grille « Cette
-              semaine » plus bas : les deux ne peuvent pas se contredire. */}
-          {parentHeadline(dashboard.sessions_7, streak, joursActifs)}
-        </p>
       </header>
 
-      {/* 1. L'alerte, quand il y en a une. Elle passe avant tout le reste :
-             c'est la seule raison pour laquelle un parent doit agir AUJOURD'HUI. */}
+      {/* 0. Le bilan et les gestes : la réponse en dix secondes. C'est LUI
+             qui porte l'alerte d'inactivité (liseré corail, premier geste) :
+             le bandeau d'alerte séparé la redisait mot pour mot juste dessous. */}
+      <BilanSemaine bilan={bilan} gestes={gestes} conseilsHref={conseilsHref} />
+
+      {/* 1. L'alerte, en annonce pour le lecteur d'écran : la seule raison
+             pour laquelle un parent doit agir AUJOURD'HUI. */}
       {alerte ? (
-        <p
-          role="status"
-          className="border-destructive/35 bg-destructive/[0.05] mb-4 flex items-start gap-2.5 rounded-xl border p-3 text-sm"
-        >
-          <TriangleAlert
-            className="text-destructive mt-0.5 size-4 shrink-0"
-            strokeWidth={2.4}
-            aria-hidden="true"
-          />
-          <span>
-            <span className="font-semibold">{alerte.message}</span>{' '}
-            <span className="text-muted-foreground">
-              Un mot d’encouragement suffit souvent à relancer la série.
-            </span>
-          </span>
+        <p role="status" className="sr-only">
+          {alerte.message}
         </p>
       ) : null}
 

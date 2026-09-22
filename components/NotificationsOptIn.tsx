@@ -3,9 +3,12 @@
 import { useEffect, useState } from 'react'
 import { Bell, BellOff, BellRing } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { urlBase64ToUint8Array } from '@/lib/notifications'
-
-const VAPID_PUBLIC_KEY = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY ?? ''
+import {
+  desabonnerPush,
+  pushConfigure,
+  pushDisponible,
+  souscrirePush,
+} from '@/lib/push-client'
 
 type Status =
   | 'loading'
@@ -32,7 +35,9 @@ function estIOS(): boolean {
 }
 
 // Carte d'activation des rappels push : enregistre le service worker, demande
-// la permission et enregistre l'abonnement côté serveur. Tout est côté client.
+// la permission et enregistre l'abonnement côté serveur. Tout est côté client,
+// et la mécanique vit dans `lib/push-client` — la même que l'écran
+// « Notifications » de l'onboarding.
 export default function NotificationsOptIn() {
   const [status, setStatus] = useState<Status>('loading')
   const [error, setError] = useState<string | null>(null)
@@ -40,15 +45,11 @@ export default function NotificationsOptIn() {
   useEffect(() => {
     let cancelled = false
     async function init() {
-      const supported =
-        'serviceWorker' in navigator &&
-        'PushManager' in window &&
-        'Notification' in window
-      if (!supported) {
+      if (!pushDisponible()) {
         if (!cancelled) setStatus(estIOS() ? 'ios-a-installer' : 'unsupported')
         return
       }
-      if (!VAPID_PUBLIC_KEY) {
+      if (!pushConfigure()) {
         if (!cancelled) setStatus('unconfigured')
         return
       }
@@ -75,80 +76,29 @@ export default function NotificationsOptIn() {
   async function enable() {
     setError(null)
     setStatus('busy')
-    // Gardé hors du try : en cas d'échec côté serveur, il faut pouvoir défaire
-    // l'abonnement NAVIGATEUR (cf. le catch).
-    let subscription: PushSubscription | null = null
-    try {
-      const permission = await Notification.requestPermission()
-      if (permission !== 'granted') {
-        setStatus(permission === 'denied' ? 'bloque' : 'off')
+    const resultat = await souscrirePush()
+    switch (resultat) {
+      case 'on':
+        setStatus('on')
+        return
+      case 'refuse':
+        setStatus(Notification.permission === 'denied' ? 'bloque' : 'off')
         // Tutoiement : c'est la règle partout dans l'app côté élève, et ce
         // composant tutoie déjà dans tous ses autres textes.
-        setError(
-          'Autorisation refusée. Active les notifications dans ton navigateur.',
-        )
+        setError('Autorisation refusée. Active les notifications dans ton navigateur.')
         return
-      }
-      const reg = await navigator.serviceWorker.ready
-      const applicationServerKey = urlBase64ToUint8Array(
-        VAPID_PUBLIC_KEY,
-      ) as BufferSource
-      // `subscribe()` renvoie l'abonnement EXISTANT si le navigateur en a déjà
-      // un pour cette origine (il est lié au navigateur, pas à l'onglet). On
-      // note donc s'il préexistait : le défaire dans le `catch` couperait alors
-      // les rappels d'un autre onglet — ou du même élève — qui, lui, marchait.
-      const deja = await reg.pushManager.getSubscription()
-      subscription = await reg.pushManager.subscribe({
-        userVisibleOnly: true,
-        applicationServerKey,
-      })
-      if (deja) subscription = null // pas le nôtre : on n'y touchera pas
-      const res = await fetch('/api/push/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(subscription),
-      })
-      if (!res.ok) throw new Error('save failed')
-      setStatus('on')
-    } catch {
-      // Panne silencieuse évitée : l'abonnement navigateur pouvait rester en
-      // place alors que le serveur ne le connaissait pas. Au rechargement,
-      // `getSubscription()` le retrouvait, la carte affichait « Désactiver les
-      // rappels »… et l'élève n'aurait JAMAIS rien reçu. On défait donc
-      // l'abonnement — mais SEULEMENT celui qu'on vient de créer (cf. plus
-      // haut) : défaire un abonnement préexistant casserait ce qui marchait.
-      if (subscription) {
-        try {
-          await subscription.unsubscribe()
-        } catch {
-          // désabonnement impossible : rien de plus à tenter ici
-        }
-      }
-      setStatus('off')
-      setError('Impossible d’activer les rappels pour le moment.')
+      default:
+        setStatus('off')
+        setError('Impossible d’activer les rappels pour le moment.')
     }
   }
 
   async function disable() {
     setError(null)
     setStatus('busy')
-    try {
-      const reg = await navigator.serviceWorker.ready
-      const subscription = await reg.pushManager.getSubscription()
-      if (subscription) {
-        const res = await fetch('/api/push/subscribe', {
-          method: 'DELETE',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ endpoint: subscription.endpoint }),
-        })
-        // Le pendant du garde-fou d'`enable` : sans ce test, un 401/500 passait
-        // inaperçu et l'écran annonçait « désactivé » alors que le serveur
-        // gardait la ligne.
-        if (!res.ok) throw new Error('delete failed')
-        await subscription.unsubscribe()
-      }
+    if (await desabonnerPush()) {
       setStatus('off')
-    } catch {
+    } else {
       setStatus('on')
       setError('Impossible de désactiver les rappels pour le moment.')
     }

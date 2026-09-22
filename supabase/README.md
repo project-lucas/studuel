@@ -23,11 +23,17 @@ vitesse de l'app dépend des requêtes faites à chaque écran, pas de l'histori
 
 ## Ce qui reste à exécuter en production
 
-Mesuré par la sonde (`npm run sonde`, lecture seule, clé anon) le 19/09/2026 :
+Mesuré par la sonde (`npm run sonde`, lecture seule, clé anon) le **22/09/2026**
+(inchangé depuis le 19/09) :
 
 **14 migrations absentes** : 353 · 354 · 355 · 363 · 364 · 366 · 367 · 368 · 369 ·
-370 · 371 · 372 · 373 · 374. Elles sont rassemblées, dans l'ordre, en **un seul
-fichier** à coller :
+370 · 371 · 372 · 373 · 374 — dont deux de **performance** (354 : comptes du
+catalogue en base ; 374 : fin de course en une transaction, Realtime par clé
+primaire, index en double retirés) sur lesquelles le code tourne en mode
+dégradé tant qu'elles dorment. Puis la **375** (ménage du schéma, audit du 22/09 :
+`docs/audit-migrations.md`). Elles sont rassemblées, dans l'ordre, en **un seul
+fichier** à coller, qui se termine par le filet RLS de la 320
+(`SELECT public.optimiser_policies_rls();`) :
 
 ```bash
 node _ASSOCIE/genere-a-executer.mjs   # sonde la base, écrit _ASSOCIE/a-executer.sql

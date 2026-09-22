@@ -50,7 +50,9 @@ export default async function SantePage() {
         verdicts.set(m.id, interpreterSonde(s, error, 0))
         return
       }
-      const colonne = s.type === 'table' ? '*' : s.colonne
+      // 'table' et 'table-absente' se LISENT de la même façon — c'est leur
+      // interprétation qui s'oppose (`interpreterSonde`).
+      const colonne = s.type === 'table' || s.type === 'table-absente' ? '*' : s.colonne
       let query = supabase.from(s.table).select(colonne).limit(1)
       // 'ligne' et 'ligne-absente' se LISENT de la même façon — c'est leur
       // interprétation qui s'oppose, et `interpreterSonde` s'en charge.

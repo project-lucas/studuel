@@ -44,6 +44,17 @@ export type Sonde =
    * être refusé. On mesure donc une porte qui ne s'ouvre plus.
    */
   | { type: 'rpc-ferme'; fn: string; args: Record<string, unknown> }
+  /**
+   * La TABLE a DISPARU — la sonde à l'envers, pour une migration de ménage
+   * qui supprime des relations entières (375).
+   *
+   * Une sonde 'table' y répondrait « présente » avant et « absente » après :
+   * elle lirait la migration à l'envers. Ici, c'est la relation inconnue
+   * (42P01 / PGRST205) qui prouve le passage ; une lecture qui aboutit ou un
+   * accès refusé (42501 : la relation existe, elle est seulement fermée)
+   * prouvent qu'elle est toujours là.
+   */
+  | { type: 'table-absente'; table: string }
 
 export type MigrationSante = {
   /** Numéro de la migration ('188'). */
@@ -2476,6 +2487,15 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
       args: { p_topic: 'duel-x', p_prefix: 'duel-' },
     },
   },
+  {
+    id: '375',
+    fichier: '375_menage_schema.sql',
+    feature:
+      'MÉNAGE DU SCHÉMA (audit des migrations, 22/09/2026 — docs/audit-migrations.md) : six index redondants retirés (chacun préfixe d’une clé primaire ou d’une contrainte UNIQUE), cinq tables mortes supprimées (tableau de révision 005, débrief du soir 027, bibliothèque de fiches 158), une fonction morte (`season_crowns_for_tier`). Aucune feature allumée : de l’hygiène, et des écritures un peu moins chères sur les tables concernées.',
+    siAbsente:
+      'Rien ne casse et rien ne se voit : les index en double continuent d’être entretenus à chaque écriture, les tables mortes gardent leur place. À exécuter APRÈS la 374.',
+    sonde: { type: 'table-absente', table: 'library_items' },
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */
@@ -2507,6 +2527,18 @@ export function interpreterSonde(
     if (erreur?.code === PERMISSION_DENIED) return 'non-sondable'
     if (erreur) return 'non-sondable'
     return rows === 0 ? 'vivante' : 'eteinte'
+  }
+  if (sonde.type === 'table-absente') {
+    // L'INVERSE de la sonde 'table' : ici, une relation qui répond est un
+    // ÉCHEC — et un accès refusé aussi, puisqu'il prouve qu'elle existe.
+    //   42P01 / PGRST205 → la relation n'existe plus : migration passée
+    //   pas d'erreur      → elle répond encore : migration NON passée
+    //   42501             → elle existe, fermée à l'anon : NON passée
+    //   autre erreur      → on ne sait pas
+    if (!erreur) return 'eteinte'
+    if (erreur.code === '42P01' || erreur.code === 'PGRST205') return 'vivante'
+    if (erreur.code === PERMISSION_DENIED) return 'eteinte'
+    return 'non-sondable'
   }
   if (sonde.type === 'rpc-ferme') {
     // L'INVERSE de la sonde 'rpc' : ici, une réponse est un ÉCHEC.

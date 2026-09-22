@@ -121,6 +121,33 @@ describe('interpreterSonde', () => {
     expect(interpreterSonde(absente, null, 0)).toBe('vivante')
   })
 
+  it('TABLE ABSENTE : la disparition de la relation prouve le ménage', () => {
+    // La sonde de la 375, qui SUPPRIME des tables. Elle se lit à l'envers de
+    // la sonde 'table' : ici, une relation qui répond est le symptôme.
+    const sonde = { type: 'table-absente', table: 'library_items' } as const
+
+    // Relation inconnue : le ménage a bien eu lieu.
+    expect(interpreterSonde(sonde, { code: 'PGRST205' }, 0)).toBe('vivante')
+    expect(interpreterSonde(sonde, { code: '42P01' }, 0)).toBe('vivante')
+    // Elle répond encore : la migration n'a pas tourné.
+    expect(interpreterSonde(sonde, null, 0)).toBe('eteinte')
+    // Accès refusé : la relation EXISTE (seulement fermée à l'anon) — c'est
+    // une preuve de présence, donc de migration NON passée. Surtout pas
+    // « vivante », qui absoudrait un ménage jamais fait.
+    expect(interpreterSonde(sonde, { code: PERMISSION_DENIED }, 0)).toBe('eteinte')
+    // Une autre erreur ne conclut rien.
+    expect(interpreterSonde(sonde, { code: 'PGRST301' }, 0)).toBe('non-sondable')
+  })
+
+  it('les deux sondes de table lisent le MÊME retour à l’envers', () => {
+    const presente = { type: 'table', table: 'library_items' } as const
+    const absente = { type: 'table-absente', table: 'library_items' } as const
+    expect(interpreterSonde(presente, null, 0)).toBe('vivante')
+    expect(interpreterSonde(absente, null, 0)).toBe('eteinte')
+    expect(interpreterSonde(presente, { code: 'PGRST205' }, 0)).toBe('eteinte')
+    expect(interpreterSonde(absente, { code: 'PGRST205' }, 0)).toBe('vivante')
+  })
+
   it('RPC FERMÉE : un refus prouve la migration, une réponse la dément', () => {
     // La sonde des migrations de REVOKE (324). Elle se lit à l'ENVERS des
     // autres : ici, une fonction qui répond est le symptôme du problème.

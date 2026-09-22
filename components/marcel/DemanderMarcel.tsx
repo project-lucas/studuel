@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState, useTransition } from 'react'
+import { useRef, useState, useTransition, type ReactNode } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
@@ -94,6 +94,7 @@ export default function DemanderMarcel({
   matieres,
   matiereParDefaut,
   vision,
+  outils,
 }: {
   tier: Tier
   utilisesAujourdhui: number
@@ -105,6 +106,12 @@ export default function DemanderMarcel({
   matiereParDefaut: string | null
   /** Un modèle capable de LIRE une photo est-il branché ? (lib/coach/ia-vision) */
   vision: boolean
+  /**
+   * La rangée de ce que Marcel sait faire (CoachSuggestions), posée DANS la
+   * carte du champ, au-dessus de la saisie (22/09/2026 : elle vivait en rail
+   * de cartes entre le personnage et le champ, et prenait un tiers de l'écran).
+   */
+  outils?: ReactNode
 }) {
   const {
     id: filId,
@@ -253,13 +260,18 @@ export default function DemanderMarcel({
   }
 
   return (
-    <section className="mt-4" data-teinte={spec.teinte}>
+    <section className="mt-3 flex min-h-0 flex-1 flex-col" data-teinte={spec.teinte}>
       <h2 className="sr-only">Demander à Marcel</h2>
 
       {/* LE FIL. `aria-live` annonce la réponse sans déplacer le focus —
-          l'élève peut enchaîner sans revenir chercher le champ. */}
+          l'élève peut enchaîner sans revenir chercher le champ. Il défile
+          dans SA boîte (la page, elle, ne bouge pas) : l'écran de Marcel tient
+          en une vue, le champ toujours en bas. */}
       {(messages.length > 0 || occupe) && (
-        <div className="mb-3 space-y-2.5" aria-live="polite">
+        <div
+          className="mb-3 min-h-0 flex-1 space-y-2.5 overflow-y-auto overscroll-contain px-0.5 [scrollbar-width:thin]"
+          aria-live="polite"
+        >
           {messages.map((message) =>
             message.role === 'eleve' ? (
               <p
@@ -322,7 +334,7 @@ export default function DemanderMarcel({
 
       {etat.possible ? (
         <>
-          <div className="bg-card rounded-[26px] p-3 shadow-[inset_0_0_0_1.5px_color-mix(in_oklch,var(--foreground),transparent_90%),0_14px_26px_-22px_rgba(36,48,79,.9)]">
+          <div className="bg-card mt-auto shrink-0 rounded-[26px] p-3 shadow-[inset_0_0_0_1.5px_color-mix(in_oklch,var(--foreground),transparent_90%),0_14px_26px_-22px_rgba(36,48,79,.9)]">
             <div className="flex items-center justify-between gap-2">
               {/* La matière n'est pas un réglage caché : Marcel ne répond pas en
                   histoire comme en maths (cf. lib/coach/regimes), et c'est ce
@@ -358,6 +370,10 @@ export default function DemanderMarcel({
                   : `${solde.jetons} jetons`}
               </span>
             </div>
+
+            {/* Ce que Marcel sait faire — dans le champ, là où l'on décide ce
+                qu'on demande. */}
+            {outils}
 
             {/* Le mode armé se voit DANS le champ, à sa couleur : sinon on tape
                 une question ordinaire et on reçoit une fiche sans comprendre
@@ -417,7 +433,7 @@ export default function DemanderMarcel({
               maxLength={400}
               disabled={occupeOuPending}
               placeholder={spec.placeholder}
-              className="placeholder:text-muted-foreground/70 mt-2 min-h-[7.5rem] w-full resize-none bg-transparent px-1.5 text-[15px] font-semibold outline-none"
+              className="placeholder:text-muted-foreground/70 mt-2 min-h-[4.25rem] w-full resize-none bg-transparent px-1.5 text-[15px] font-semibold outline-none"
             />
 
             {menu && (
@@ -566,7 +582,7 @@ export default function DemanderMarcel({
       ) : (
         // Le mur : deux sorties, jamais une. Et l'une des deux fait grandir
         // Studuel (les gemmes se gagnent en invitant).
-        <div className="bg-card rounded-[26px] p-4 text-center shadow-[inset_0_0_0_1.5px_color-mix(in_oklch,var(--foreground),transparent_90%),0_14px_26px_-22px_rgba(36,48,79,.9)]">
+        <div className="bg-card mt-auto rounded-[26px] p-4 text-center shadow-[inset_0_0_0_1.5px_color-mix(in_oklch,var(--foreground),transparent_90%),0_14px_26px_-22px_rgba(36,48,79,.9)]">
           <p className="font-heading text-[15px] font-extrabold">
             {etat.message}
           </p>

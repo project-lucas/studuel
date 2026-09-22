@@ -27,6 +27,7 @@ import ArenaHud, {
   type RailTile,
 } from '@/components/defi/ArenaHud'
 import ArenaHero from '@/components/defi/ArenaHero'
+import FigerArene from '@/components/defi/FigerArene'
 import {
   buildSubjectLadders,
   defaultSubject,
@@ -740,6 +741,8 @@ export default async function DefiPage() {
   // lit l'XP du portefeuille) ; le socle du personnage ne porte que le prénom.
   return (
     <div className="-mx-4 -mt-16 -mb-24 flex h-dvh flex-col overflow-hidden px-3 pt-14 pb-[calc(5.75rem+env(safe-area-inset-bottom))] md:mx-0 md:-my-10 md:pt-4 md:pb-4">
+      {/* L'arène ne défile pas : le document est figé le temps de cet écran. */}
+      <FigerArene />
       {/* Vigie de promotion : fête la montée de ligue depuis la dernière visite. */}
       {leagueTier !== null ? <LeaguePromotionWatch tier={leagueTier} /> : null}
       {/* Rythme vertical : gap-4 (2x) entre la scène/le podium et le groupe
@@ -768,6 +771,7 @@ export default async function DefiPage() {
             tropheesSlot={
               user ? (
                 <CompteTropheesArene
+                  key="trophees"
                   trophees={trophies}
                   top={topPourcent(classementNational?.rank, classementNational?.total)}
                   cle={cleEtatCompte(user.id)}
@@ -786,6 +790,7 @@ export default async function DefiPage() {
             profileSlot={
               profileData ? (
                 <ProfileChip
+                  key="profil"
                   data={profileData}
                   gems={gems}
                   streak={streak}

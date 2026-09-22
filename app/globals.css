@@ -6371,3 +6371,85 @@ body {
    cartes d'article façon Clash Royale (packs de gemmes, boosts du Marché)
    vivent dans des modules CSS, à côté de leurs composants :
    components/boutique/BandeauSection.module.css et CarteMagasin.module.css. */
+
+/* ==========================================================================
+   LA GARDE DU PORTRAIT (components/GardePortrait, 22/09/2026). Un rideau qui
+   ne se pose que sur un TÉLÉPHONE couché : écran tactile (hover: none), en
+   paysage, et bas (une tablette en paysage dépasse 600 px de haut). Il couvre
+   tout, barre d'onglets comprise, et demande de tourner l'appareil.
+   ========================================================================== */
+.garde-portrait {
+  display: none;
+}
+@media (orientation: landscape) and (max-height: 600px) and (hover: none) {
+  .garde-portrait {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    background: var(--background);
+    color: var(--foreground);
+  }
+}
+.garde-portrait-icone {
+  width: 3rem;
+  height: 3rem;
+  color: var(--primary);
+  transform: rotate(90deg);
+  animation: garde-portrait-tourne 1.6s ease-in-out infinite alternate;
+}
+@keyframes garde-portrait-tourne {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .garde-portrait-icone {
+    animation: none;
+    transform: rotate(0deg);
+  }
+}
+
+/* L'ARÈNE FIGÉE (components/defi/FigerArene, 22/09/2026) : le document ne
+   défile pas et ne rebondit pas le temps de l'écran d'arène — sa hauteur est
+   celle de l'écran, ses feuilles défilent dans leur propre boîte. */
+html.arene-figee,
+html.arene-figee body {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+/* LA PLAQUE CLAIRE (22/09/2026, Lucas : « des fonds d'icône transparents et
+   clairs, pas violet clair ») — les boutons de l'angle chez Clash Royale : un
+   verre translucide qui laisse voir le décor, un liseré blanc, le même socle
+   que la plaque violette. Portée par les plaques d'ICÔNES (burger, quêtes,
+   boss, classement) ; le compte de trophées et Studuel+ gardent leur robe. */
+.arena-plaque--claire {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.46),
+    rgba(255, 255, 255, 0.22)
+  );
+  border-color: rgba(255, 255, 255, 0.72);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -3px 0 rgba(30, 22, 56, 0.12),
+    0 4px 0 rgba(30, 22, 56, 0.32),
+    0 8px 16px rgba(0, 0, 0, 0.28);
+}
+.arena-plaque--claire.defi2-press:active {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -3px 0 rgba(30, 22, 56, 0.12),
+    0 1px 0 rgba(30, 22, 56, 0.32);
+}

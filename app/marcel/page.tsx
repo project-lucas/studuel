@@ -102,32 +102,29 @@ export default async function MarcelPage({
   const titre = titreVue(vue)
 
   return (
-    <div className="pb-6">
+    <div className={vue === 'aujourdhui' ? 'pb-0' : 'pb-6'}>
       <div className="px-4 pt-2">
         {vue === 'aujourdhui' ? (
           // Le fil en cours est partagé par la pastille d'historique (en haut)
           // et par le champ (tout en bas) : le contexte les relie sans obliger
           // la page à devenir un composant client.
           <CoachFilProvider>
-            {/* LA SORTIE. Marcel n'a plus d'onglet : on entre ici par sa tête
-                flottante, en bas à droite de Réviser. Sans cette flèche,
-                l'accueil du coach est un cul-de-sac — la barre du bas n'y
-                montre aucun onglet actif, et il ne reste que le bouton du
-                téléphone. Elle renvoie d'où l'on vient, Réviser.
-
-                Vrai lien plutôt que `history.back()`, comme la flèche des
-                sous-pages (VueHeader) : arrivé par une notification ou un lien
-                partagé, un retour d'historique sortirait de l'app.
-
-                La ligne ne porte plus la date : elle est passée sur la page de
-                la mission, où elle veut dire quelque chose (« voilà ton travail
-                de ce mardi »). Ici, elle volait la place du logo. */}
-            <div className="mx-0.5 mb-1 flex items-start justify-between">
-              {/* Deux pastilles empilées, comme deux boutons d'un même jeu :
-                  sortir, et retrouver ses conversations. L'historique est SOUS
-                  la sortie parce qu'il sert moins souvent — et parce que la
-                  colonne se lit de haut en bas. */}
-              <div className="flex flex-col gap-2">
+            {/* UNE SEULE VUE, SANS DÉFILEMENT (Lucas, 22/09/2026 : « je dois
+                scroller… je veux tout sur une même vue »). La colonne prend
+                exactement la hauteur libre entre le bandeau et la barre
+                d'onglets (10 rem à eux deux, plus la marge du haut) : le
+                personnage en tête, le champ en bas, et le fil qui défile dans
+                sa propre boîte entre les deux. Sur grand écran, la page
+                reprend sa hauteur naturelle. */}
+            <div className="flex h-[calc(100dvh-10.5rem)] min-h-[26rem] flex-col md:h-auto md:min-h-0">
+              {/* LA SORTIE et L'HISTORIQUE, sur une seule ligne : la flèche
+                  renvoie d'où l'on vient (Réviser — vrai lien plutôt que
+                  `history.back()` : arrivé par une notification, un retour
+                  d'historique sortirait de l'app) ; l'historique des
+                  conversations tient l'angle DROIT (Lucas, 22/09/2026), avec
+                  la série à sa gauche. La colonne de deux pastilles empilées
+                  poussait tout l'écran vers le bas. */}
+              <div className="mx-0.5 flex shrink-0 items-center justify-between gap-2">
                 <Link
                   href="/reviser"
                   aria-label="Revenir à Réviser"
@@ -139,56 +136,61 @@ export default async function MarcelPage({
                     strokeWidth={2.6}
                   />
                 </Link>
-                <BoutonHistorique />
+                <div className="flex items-center gap-2">
+                  {streak >= 2 && (
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#ffeed2] px-2.5 py-1 text-xs font-extrabold text-[#b4550c]">
+                      <Flame aria-hidden="true" className="size-3.5" />
+                      {streak} jours
+                    </span>
+                  )}
+                  <BoutonHistorique />
+                </div>
               </div>
-              {streak >= 2 && (
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-[#ffeed2] px-2.5 py-1 text-xs font-extrabold text-[#b4550c]">
-                  <Flame aria-hidden="true" className="size-3.5" />
-                  {streak} jours
-                </span>
+
+              {/* La salutation est fixe, le diagnostic ne l'est pas : c'est
+                  `point.titre`, écrit par lib/coach/point-du-jour à partir du
+                  travail réel. Marcel n'ouvre jamais sur une question vide. */}
+              <CoachEntete salut="Salut !" bulle={point.titre} />
+
+              {catalogueVide && (
+                <p className="bg-card text-muted-foreground mt-3 shrink-0 rounded-[20px] p-4 text-center text-[13px] leading-relaxed font-semibold">
+                  Je n’ai pas encore de chapitres pour ta classe. Choisis tes
+                  matières dans Réviser et je m’occupe du reste.
+                </p>
               )}
+
+              {/* Ce que Marcel sait faire vit DANS le champ (la rangée de
+                  pastilles), plus en rail de cartes au milieu de l'écran. */}
+              <DemanderMarcel
+                tier={demande.tier}
+                utilisesAujourdhui={demande.utilisesAujourdhui}
+                jetons={demande.jetons}
+                gemmes={demande.gemmes}
+                matieres={matieres.map((m) => ({ slug: m.slug, name: m.name }))}
+                matiereParDefaut={point.matiere?.slug ?? null}
+                // Lire une photo demande un modèle qui en est capable, et il est
+                // configuré à part (lib/coach/ia-vision). Quand il manque, on ne
+                // propose pas la porte : un bouton qui échoue à tous les coups est
+                // pire que pas de bouton.
+                vision={visionDisponible()}
+                outils={
+                  <CoachSuggestions
+                    matiere={point.matiere?.slug ?? courante?.slug}
+                    stats={{
+                      mission: `${point.minutes} min`,
+                      entrainement:
+                        entrainements.length > 0
+                          ? `${countPretes(entrainements)}/${entrainements.length} prêtes`
+                          : undefined,
+                      progres:
+                        couverture.length > 0
+                          ? `${couvertureGlobale(couverture)} %`
+                          : undefined,
+                    }}
+                  />
+                }
+              />
             </div>
-
-            {/* La salutation est fixe, le diagnostic ne l'est pas : c'est
-                `point.titre`, écrit par lib/coach/point-du-jour à partir du
-                travail réel. Marcel n'ouvre jamais sur une question vide. */}
-            <CoachEntete salut="Salut !" bulle={point.titre} />
-
-            {catalogueVide && (
-              <p className="bg-card text-muted-foreground mt-3 rounded-[20px] p-4 text-center text-[13px] leading-relaxed font-semibold">
-                Je n’ai pas encore de chapitres pour ta classe. Choisis tes
-                matières dans Réviser et je m’occupe du reste.
-              </p>
-            )}
-
-            <CoachSuggestions
-              matiere={point.matiere?.slug ?? courante?.slug}
-              stats={{
-                mission: `${point.minutes} min`,
-                entrainement:
-                  entrainements.length > 0
-                    ? `${countPretes(entrainements)}/${entrainements.length} prêtes`
-                    : undefined,
-                progres:
-                  couverture.length > 0
-                    ? `${couvertureGlobale(couverture)} %`
-                    : undefined,
-              }}
-            />
-
-            <DemanderMarcel
-              tier={demande.tier}
-              utilisesAujourdhui={demande.utilisesAujourdhui}
-              jetons={demande.jetons}
-              gemmes={demande.gemmes}
-              matieres={matieres.map((m) => ({ slug: m.slug, name: m.name }))}
-              matiereParDefaut={point.matiere?.slug ?? null}
-              // Lire une photo demande un modèle qui en est capable, et il est
-              // configuré à part (lib/coach/ia-vision). Quand il manque, on ne
-              // propose pas la porte : un bouton qui échoue à tous les coups est
-              // pire que pas de bouton.
-              vision={visionDisponible()}
-            />
           </CoachFilProvider>
         ) : (
           <>

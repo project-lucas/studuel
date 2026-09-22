@@ -5,7 +5,6 @@ import {
   BarChart3,
   BookOpenCheck,
   GraduationCap,
-  Layers,
   Mic,
   NotebookPen,
   Sigma,
@@ -19,30 +18,35 @@ import { vueHref, type MarcelVueSecondaire } from '@/lib/coach/marcel-vues'
 import { MARCEL_ENTREES } from '@/lib/coach/marcel-vues'
 import { useCoachFil } from './CoachFil'
 
-// CE QUE MARCEL SAIT FAIRE — le rail de cartes, juste sous le personnage.
+// CE QUE MARCEL SAIT FAIRE — la rangée de pastilles DANS le champ.
 //
-// Il mélange volontairement DEUX natures, parce que l'élève, lui, n'en voit
-// qu'une (« qu'est-ce que Marcel peut faire pour moi ? ») :
-//   • les MODES arment le champ — faire une fiche, débloquer un exercice,
-//     fabriquer des cartes. Ils appellent le modèle, et se paient ;
+// C'était un rail de grandes cartes entre le personnage et le champ ; il
+// prenait un tiers de l'écran et obligeait à défiler pour trouver où parler
+// (Lucas, 22/09/2026 : « mets les blocs dans la conversation, ça prend de la
+// place ; tout sur une même vue, pas de scroll »). Les mêmes outils tiennent
+// maintenant sur une ligne de pastilles, posée dans la carte du champ, au-dessus
+// de la zone de saisie — là où l'on décide ce qu'on demande.
+//
+// Deux natures, un seul geste pour l'élève :
+//   • les MODES arment le champ — faire une fiche, débloquer un exercice. Ils
+//     appellent le modèle, et se paient ; une pastille armée reste ALLUMÉE
+//     (liseré à sa teinte) et le champ le redit à sa couleur ;
 //   • les PAGES ouvrent un écran déjà calculé — la mission du jour, la méthode,
 //     l'oral, l'entraînement, les progrès. Elles ne coûtent rien.
-// La différence se voit sans être expliquée : une carte armée reste ALLUMÉE
-// (liseré épais, coche), une page s'ouvre et l'écran change.
 //
-// CHAQUE OUTIL A SA TEINTE. Avant, huit cartes violettes se suivaient : on ne
-// se souvenait d'aucune, et il fallait lire chaque titre à chaque fois. La
-// couleur ne touche que l'icône, sa pastille et le liseré — les boutons
-// d'action restent violets (cf. `.outil-*` dans globals.css).
+// PLUS DE FLASHCARDS (Lucas, 22/09/2026). Le mode existe encore dans
+// lib/coach/outils (le fil sait relire des cartes), mais il n'a plus de porte :
+// il n'était pas assez utilisé pour valoir une pastille.
 //
-// La carte coupée sur le bord droit dit qu'il y en a d'autres : un rail qui
-// déborde s'attrape au doigt, une grille qui déborde ne se voit pas.
+// CHAQUE OUTIL A SA TEINTE (`.outil-*`, globals.css) : elle ne colore que le
+// disque de l'icône et le liseré de la pastille armée ; la mission du jour,
+// seule à RECOMMANDER, est la seule pleine.
 
 const ICONE_MODE: Record<ModeCle, LucideIcon> = {
   question: GraduationCap,
   fiche: NotebookPen,
   exercice: Sigma,
-  flashcards: Layers,
+  flashcards: NotebookPen,
 }
 
 const ICONE_VUE: Record<MarcelVueSecondaire, LucideIcon> = {
@@ -53,10 +57,10 @@ const ICONE_VUE: Record<MarcelVueSecondaire, LucideIcon> = {
   progres: BarChart3,
 }
 
-/** Les modes montrés en carte — « poser une question » est déjà le champ. */
-const MODES_RAIL: ModeCle[] = ['fiche', 'exercice', 'flashcards']
+/** Les modes montrés en pastille — « poser une question » est déjà le champ. */
+const MODES_RAIL: ModeCle[] = ['fiche', 'exercice']
 
-type Carte = {
+type Pastille = {
   cle: string
   label: string
   hint: string
@@ -72,9 +76,9 @@ export default function CoachSuggestions({
   /** Matière courante, emportée vers les vues qui en dépendent. */
   matiere?: string | null
   /**
-   * Le repère chiffré d'une carte, quand il existe — laisser vide plutôt que
-   * d'inventer. « L'oral » n'en a pas : son état demande deux requêtes de plus,
-   * que l'écran d'accueil n'a aucune raison de payer.
+   * Le repère chiffré d'une pastille, quand il existe — laisser vide plutôt
+   * que d'inventer. « L'oral » n'en a pas : son état demande deux requêtes de
+   * plus, que l'écran d'accueil n'a aucune raison de payer.
    */
   stats?: Partial<Record<MarcelVueSecondaire, string>>
 }) {
@@ -85,7 +89,7 @@ export default function CoachSuggestions({
   const mission = MARCEL_ENTREES.find((e) => e.key === 'mission')
   const autresVues = MARCEL_ENTREES.filter((e) => e.key !== 'mission')
 
-  const cartes: Carte[] = [
+  const pastilles: Pastille[] = [
     ...(mission
       ? [
           {
@@ -96,7 +100,7 @@ export default function CoachSuggestions({
             Icone: ICONE_VUE[mission.key],
             stat: stats?.[mission.key],
             href: vueHref(mission.key, matiere),
-          } as Carte,
+          } as Pastille,
         ]
       : []),
     ...MODES_RAIL.map((cle) => {
@@ -108,7 +112,7 @@ export default function CoachSuggestions({
         teinte: m.teinte,
         Icone: ICONE_MODE[cle],
         mode: cle,
-      } as Carte
+      } as Pastille
     }),
     ...autresVues.map(
       (e) =>
@@ -120,100 +124,80 @@ export default function CoachSuggestions({
           Icone: ICONE_VUE[e.key],
           stat: stats?.[e.key],
           href: vueHref(e.key, matiere),
-        }) as Carte,
+        }) as Pastille,
     ),
   ]
 
   return (
-    <nav aria-label="Ce que Marcel peut faire" className="mt-4">
-      {/* Le rail déborde des marges de la page (`-mx-4`) et les rend en
-          rembourrage : la première carte reste alignée sur le texte, la
-          dernière peut aller mourir au bord de l'écran. */}
-      <ul className="-mx-4 flex snap-x gap-3 overflow-x-auto px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        {cartes.map((carte, index) => {
-          const { Icone } = carte
+    <nav aria-label="Ce que Marcel peut faire" className="-mx-1 mt-2">
+      {/* La rangée déborde de la carte d'un rien et glisse au doigt : la
+          dernière pastille coupée dit qu'il y en a d'autres. */}
+      <ul className="flex gap-1.5 overflow-x-auto px-1 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        {pastilles.map((pastille, index) => {
+          const { Icone } = pastille
           const pleine = index === 0
-          const arme = 'mode' in carte && modeActif === carte.mode
+          const arme = 'mode' in pastille && modeActif === pastille.mode
 
           const contenu = (
             <>
-              <span className="mb-2 flex items-start justify-between gap-2">
-                <span
-                  className={cn(
-                    'grid size-10 shrink-0 place-items-center rounded-2xl',
-                    pleine ? 'bg-white/18 text-white' : 'outil-pastille',
-                  )}
-                >
-                  <Icone aria-hidden="true" className="size-5" strokeWidth={2.2} />
-                </span>
-                {/* Le chiffre est un repère, pas un titre : discret, et jamais
-                    seul porteur du sens — la ligne d'explication reste là. */}
-                {carte.stat ? (
-                  <span
-                    className={cn(
-                      'rounded-full px-2 py-0.5 text-[10.5px] font-extrabold',
-                      pleine
-                        ? 'bg-white/20 text-white'
-                        : 'bg-foreground/6 text-muted-foreground',
-                    )}
-                  >
-                    {carte.stat}
-                  </span>
-                ) : null}
-                {arme ? (
-                  <span className="outil-encre text-[10.5px] font-extrabold">
-                    Choisi
-                  </span>
-                ) : null}
-              </span>
-
-              <b
-                className={cn(
-                  'font-heading text-[15px] leading-tight font-extrabold text-balance',
-                  !pleine && arme && 'outil-encre',
-                )}
-              >
-                {carte.label}
-              </b>
               <span
                 className={cn(
-                  'mt-1 text-xs leading-snug font-semibold text-balance',
-                  pleine ? 'text-white/80' : 'text-muted-foreground',
+                  'grid size-6 shrink-0 place-items-center rounded-full',
+                  pleine ? 'bg-white/20 text-white' : 'outil-pastille',
                 )}
+                aria-hidden="true"
               >
-                {carte.hint}
+                <Icone className="size-3.5" strokeWidth={2.4} />
               </span>
+              <span className="font-heading text-[12px] leading-none font-extrabold whitespace-nowrap">
+                {pastille.label}
+              </span>
+              {pastille.stat ? (
+                <span
+                  className={cn(
+                    'rounded-full px-1.5 py-0.5 text-[10px] leading-none font-extrabold whitespace-nowrap',
+                    pleine ? 'bg-white/20 text-white' : 'bg-foreground/6 text-muted-foreground',
+                  )}
+                >
+                  {pastille.stat}
+                </span>
+              ) : null}
             </>
           )
 
-          const classeCarte = cn(
-            'flex h-full min-h-[132px] w-full flex-col rounded-[22px] p-3.5 text-left transition-transform active:translate-y-0.5',
-            pleine ? 'outil-carte-pleine text-white' : 'bg-card outil-carte',
-            arme && 'ring-[2.5px] ring-[var(--outil)]',
+          const classe = cn(
+            'flex min-h-9 items-center gap-1.5 rounded-full py-1 pr-3 pl-1.5 transition active:translate-y-px',
+            pleine
+              ? 'outil-carte-pleine text-white'
+              : 'bg-background/70 text-foreground shadow-[0_2px_0_rgba(36,48,79,.09)]',
+            arme && 'bg-card ring-2 ring-[var(--outil)]',
           )
 
           return (
-            <li
-              key={carte.cle}
-              data-teinte={carte.teinte}
-              className="w-[62%] max-w-[224px] min-w-[172px] shrink-0 snap-start"
-            >
-              {'href' in carte ? (
-                <Link href={carte.href} className={classeCarte}>
+            <li key={pastille.cle} data-teinte={pastille.teinte} className="shrink-0">
+              {'href' in pastille ? (
+                <Link
+                  href={pastille.href}
+                  className={classe}
+                  aria-label={`${pastille.label} — ${pastille.hint}`}
+                  title={pastille.hint}
+                >
                   {contenu}
                 </Link>
               ) : (
                 <button
                   type="button"
                   aria-pressed={arme}
+                  aria-label={`${pastille.label} — ${pastille.hint}`}
+                  title={pastille.hint}
                   onClick={() => {
                     sfx.tap()
-                    // Re-toucher la carte armée revient au mode ordinaire :
+                    // Re-toucher la pastille armée revient au mode ordinaire :
                     // sans ça, on reste coincé en « fiche » sans comprendre
                     // pourquoi Marcel ne répond plus normalement.
-                    choisirMode(arme ? 'question' : carte.mode)
+                    choisirMode(arme ? 'question' : pastille.mode)
                   }}
-                  className={classeCarte}
+                  className={classe}
                 >
                   {contenu}
                 </button>

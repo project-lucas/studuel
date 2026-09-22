@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Suspense } from "react";
 import { Nunito, Baloo_2 } from "next/font/google";
 import "./globals.css";
@@ -32,6 +32,9 @@ import AppReadyBeacon from "@/components/AppReadyBeacon";
 // navigation — cf. son en-tête.
 import AppMain from "@/components/AppMain";
 import WorldBackdrop from "@/components/WorldBackdrop";
+// Le rideau « tourne ton téléphone » et le verrou d'orientation : l'app se
+// joue à la verticale, et seulement (Lucas, 22/09/2026).
+import GardePortrait from "@/components/GardePortrait";
 import { estPleinEcran } from "@/lib/quiz-chrome";
 import { shouldShowSplash, tipOfDay } from "@/lib/splash";
 import { getCurrentUser } from "@/lib/supabase/user";
@@ -64,6 +67,20 @@ const baloo = Baloo_2({
 export const metadata: Metadata = {
   title: "Studuel",
   description: "Apprends, teste-toi, progresse — de la 6e à la Terminale.",
+};
+
+// PAS DE ZOOM (Lucas, 22/09/2026 : « enlève la possibilité de zoomer, ça fait
+// bugger »). Un pincement sur une table de jeu ou une carte d'exercice
+// agrandissait la page entière et laissait l'écran décalé ; `user-scalable=no`
+// et l'échelle plafonnée le coupent, et `viewport-fit=cover` laisse l'app
+// peindre jusque sous l'encoche (les marges `env(safe-area-inset-*)` font le
+// reste). Les textes restent agrandissables par les réglages du téléphone.
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: "cover",
 };
 
 export default async function RootLayout({
@@ -104,6 +121,7 @@ export default async function RootLayout({
       className={`light ${nunito.variable} ${baloo.variable}`}
     >
       <body className="antialiased">
+        <GardePortrait />
         {/* LE MUR DE L'APP : le papier quadrillé (`.tab-bg`), posé UNE fois et
             sous tous les mondes (-z-20). L'arène et la course classée peignent
             leur scène par-dessus (-z-10) ; tout le reste — onglets, dossiers,

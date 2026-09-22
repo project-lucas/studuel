@@ -135,6 +135,13 @@ const GAME_SCENE_IDS = [
   'calcul-mental',
   'traduction-flash',
   'traduccion-flash',
+  // Lot du 22/09/2026 (scripts/scenes-jeux.mjs).
+  'phrase-en-vrac',
+  'falsos-amigos',
+  'anatomie-express',
+  'classe-moi-ca',
+  'chasse-elements',
+  'bonne-unite',
 ]
 
 export function gameScene(id: string): string | undefined {

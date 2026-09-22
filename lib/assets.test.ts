@@ -127,9 +127,13 @@ describe('scènes des jeux de salon', () => {
     expect(gameScene('jeu-fantome')).toBeUndefined()
   })
 
-  it('laisse un jeu sans scène s’afficher quand même', () => {
-    // Le repli est un choix, pas un oubli : il ne doit jamais lever.
-    expect(gameScene('bonne-unite')).toBeUndefined()
+  it('illustre désormais les treize jeux du catalogue', () => {
+    // Le lot du 22/09/2026 (scripts/scenes-jeux.mjs) a fermé la liste : chaque
+    // jeu jouable a sa scène. Le repli sur la robe unie reste un choix, pas
+    // un oubli — il ne lève jamais (cf. le jeu fantôme ci-dessus).
+    for (const id of ids) {
+      expect(gameScene(id), ).toBeDefined()
+    }
   })
 })
 

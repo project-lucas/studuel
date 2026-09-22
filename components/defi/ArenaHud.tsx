@@ -328,12 +328,12 @@ export default function ArenaHud({
               alerts > 0 ? ` ${alerts} à voir` : ''
             }`}
             title="Menu de l'arène"
-            className="arena-plaque arena-plaque--ronde defi2-press relative grid size-12 cursor-pointer place-items-center focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
+            className="arena-plaque arena-plaque--claire arena-plaque--ronde defi2-press relative grid size-12 cursor-pointer place-items-center focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
           >
             {/* Toujours un burger : c'est le panneau ouvert, posé par-dessus,
                 qui porte la croix. Le bouton ne se transforme plus. */}
             <Menu
-              className="size-6 text-[#faf6ef]"
+              className="size-6 text-foreground"
               strokeWidth={2.6}
               aria-hidden="true"
             />
@@ -405,7 +405,9 @@ export default function ArenaHud({
 
 /**
  * Une plaque de bord — la même des deux côtés de la scène : la plaque sculptée
- * (opaque, biseau or, socle), 68 px, l'illustration à 58 px avec son ombre, la
+ * CLAIRE (verre translucide, liseré blanc, socle — comme les boutons de l'angle
+ * chez Clash Royale ; Lucas, 22/09/2026 : « des fonds d'icône transparents et
+ * clairs, pas violet clair »), 68 px, l'illustration à 58 px avec son ombre, la
  * pastille à cheval sur l'angle, et la légende SOUS la plaque. Avant, le rail
  * gauche portait des squircles colorés et l'angle droit des jetons de verre :
  * deux robes pour un même geste (ouvrir quelque chose), et des dessins de 36 px
@@ -421,7 +423,7 @@ function RailTileFace({
   const face = (
     <span
       className={cn(
-        'hud-face arena-plaque relative grid size-[68px] place-items-center text-[#faf6ef]',
+        'hud-face arena-plaque arena-plaque--claire relative grid size-[68px] place-items-center text-foreground',
         tile.family === 'amber' && 'arena-plaque--ambre',
       )}
     >

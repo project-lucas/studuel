@@ -72,7 +72,7 @@ export default function RailDivisions({ trophies }: { trophies: number }) {
       // jusqu'au dernier blason (869 px sur un écran de 412). Chrome Android
       // agrandissait alors la zone de mise en page : la barre d'onglets, fixée
       // en bas de CETTE zone, sortait de l'écran (17/09/2026).
-      className="relative flex snap-x snap-mandatory items-end gap-3 overflow-x-auto overscroll-x-contain px-[calc(50%-48px)] pt-3 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      className="relative flex snap-x snap-mandatory items-end gap-3 overflow-x-auto overscroll-x-contain px-[calc(50%-48px)] pt-2 pb-0.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
     >
       {divisions.map(({ tier, etat }) => {
         const taille = TAILLE[etat]

@@ -651,15 +651,19 @@ function GeoRankingSection({
         <RailDivisions trophies={myTrophies} />
 
         {/* --- 2 : ma place ------------------------------------------------- */}
-        <div className="flex flex-col items-center px-4 pb-3 text-center">
-          <h3 className="font-heading text-lg leading-tight font-extrabold text-balance">
+        {/* Resserré le 22/09/2026 (Lucas : « je dois scroller sur mon
+            portable ») : le titre d'un cran plus petit, les interlignes et la
+            boîte de la liste plus courts — les blasons du rail, eux, gardent
+            leur taille. */}
+        <div className="flex flex-col items-center px-4 pb-2 text-center">
+          <h3 className="font-heading text-base leading-tight font-extrabold text-balance">
             {titreEcole(rang, complement)}
           </h3>
-          <p className="mt-1 text-[13px] font-semibold text-muted-foreground text-balance">
+          <p className="mt-0.5 text-xs font-semibold text-muted-foreground text-balance">
             {sousTitreEcole(board.mates, complement)}
           </p>
           {/* Ma division, et le prochain blason à débloquer. */}
-          <p className="mt-1 inline-flex items-center gap-1 text-[0.68rem] font-bold text-muted-foreground/80">
+          <p className="mt-0.5 inline-flex items-center gap-1 text-[0.68rem] font-bold text-muted-foreground/80">
             <TropheeAnime className="size-3.5" />
             {ligneDivision(myTrophies)}
             {capped ? ` · les ${SCHOOL_BOARD_LIMIT} mieux classés` : ''}
@@ -679,7 +683,7 @@ function GeoRankingSection({
           ref={boite}
           aria-label="Classement"
           // `relative` : les `offsetTop` des lignes se mesurent depuis la boîte.
-          className="relative mx-3 mb-3 max-h-[min(16.5rem,36svh)] overflow-y-auto rounded-2xl border-2 border-border [scrollbar-width:thin]"
+          className="relative mx-3 mb-2.5 max-h-[min(12.5rem,27svh)] overflow-y-auto rounded-2xl border-2 border-border [scrollbar-width:thin]"
         >
           {lignes.map((ligne) => {
             if (ligne.kind === 'separateur') {

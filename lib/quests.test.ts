@@ -14,6 +14,8 @@ import {
   applyEvent,
   questsReward,
   normalizeProgress,
+  libelleRenouvellement,
+  minutesAvantMinuitUtc,
 } from './quests'
 
 const DAY = '2026-07-25'
@@ -243,5 +245,20 @@ describe('normalizeProgress', () => {
     expect(normalizeProgress(null)).toEqual({})
     expect(normalizeProgress([1, 2])).toEqual({})
     expect(normalizeProgress('nope')).toEqual({})
+  })
+})
+
+describe('le renouvellement des quêtes', () => {
+  it('compte les minutes avant minuit UTC, la minute en cours comprise', () => {
+    expect(minutesAvantMinuitUtc(Date.UTC(2026, 8, 22, 18, 48))).toBe(312)
+    expect(minutesAvantMinuitUtc(Date.UTC(2026, 8, 22, 23, 59, 30))).toBe(1)
+    expect(minutesAvantMinuitUtc(Date.UTC(2026, 8, 22, 0, 0, 0))).toBe(1440)
+  })
+
+  it('écrit la pastille du jour', () => {
+    expect(libelleRenouvellement(null)).toBe('Nouvelles quêtes chaque jour')
+    expect(libelleRenouvellement(8)).toBe('Nouvelles quêtes dans 8 min')
+    expect(libelleRenouvellement(312)).toBe('Nouvelles quêtes dans 5 h 12')
+    expect(libelleRenouvellement(120)).toBe('Nouvelles quêtes dans 2 h')
   })
 })

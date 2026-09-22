@@ -30,7 +30,7 @@ export default function CoachEntete({
   bulle: string
 }) {
   return (
-    <div className="coach-entree flex flex-col items-center gap-2">
+    <div className="coach-entree flex shrink-0 flex-col items-center gap-1.5">
       {/* `h1` : c'est le titre de la page, et il se trouve que c'est un logo.
           Le mot est écrit deux fois — une pour l'œil, une pour la couche de
           remplissage (`data-mot`) — mais une seule est lue à voix haute,
@@ -52,7 +52,9 @@ export default function CoachEntete({
         aria-hidden="true"
         priority
         sizes="160px"
-        className="mt-1 h-[168px] w-auto object-contain drop-shadow-[0_16px_20px_-14px_rgba(36,48,79,.55)]"
+        // Remonté et resserré le 22/09/2026 : l'accueil tient sur un seul
+        // écran, sans défilement — le personnage a cédé un tiers de sa hauteur.
+        className="mt-0.5 h-[116px] w-auto object-contain drop-shadow-[0_16px_20px_-14px_rgba(36,48,79,.55)]"
       />
     </div>
   )

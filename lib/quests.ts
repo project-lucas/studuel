@@ -241,3 +241,29 @@ export function normalizeProgress(raw: unknown): QuestProgress {
   }
   return out
 }
+
+// ------------------------------------------------------ le renouvellement
+
+/**
+ * Minutes avant le prochain minuit UTC — le moment où les quêtes du jour
+ * changent (les clés de jour de l'app sont en UTC, cf. lib/time). Toujours
+ * au moins 1 : la minute en cours compte.
+ */
+export function minutesAvantMinuitUtc(now: number): number {
+  const d = new Date(now)
+  const minuit = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate() + 1)
+  return Math.max(1, Math.ceil((minuit - now) / 60_000))
+}
+
+/**
+ * La pastille du jour : « Nouvelles quêtes dans 5 h 12 », « … dans 8 min ».
+ * Sans minutes (le serveur ne connaît pas l'heure du téléphone), la promesse
+ * seule : de nouvelles quêtes chaque jour.
+ */
+export function libelleRenouvellement(minutes: number | null): string {
+  if (minutes === null) return 'Nouvelles quêtes chaque jour'
+  if (minutes < 60) return `Nouvelles quêtes dans ${minutes} min`
+  const h = Math.floor(minutes / 60)
+  const m = minutes % 60
+  return `Nouvelles quêtes dans ${h} h${m > 0 ? ` ${String(m).padStart(2, '0')}` : ''}`
+}

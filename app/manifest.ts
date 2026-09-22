@@ -14,6 +14,9 @@ export default function manifest(): MetadataRoute.Manifest {
     // vers l'identité actuelle, donc l'ajouter ne casse rien.
     id: "/",
     display: "standalone",
+    // À LA VERTICALE, ET SEULEMENT (Lucas, 22/09/2026) : l'app installée ne
+    // tourne pas. Dans un navigateur, components/GardePortrait prend le relais.
+    orientation: "portrait",
     // `background_color` = fond du splash SYSTÈME (celui que l'OS affiche
     // pendant le lancement, avant le moindre pixel de l'app). Il doit donc
     // s'accorder au HAUT de notre propre écran de chargement — et NON au crème

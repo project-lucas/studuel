@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { derniereDefinition } from '@/lib/migrations-lecture'
 import {
   QUEST_CATALOG,
@@ -19,6 +19,12 @@ import {
   TIER_COUNT,
   rewardFor,
 } from '@/lib/saison'
+
+// Ces gardes relisent les 22 Mo de `supabase/` : sous charge (un serveur de dev
+// qui compile à côté), les 5 s par défaut de Vitest ne suffisent pas et le test
+// échoue pour une raison qui n'a rien à voir avec ce qu'il garde. Un garde qui
+// échoue au hasard finit par être relancé jusqu'au vert, donc ignoré.
+vi.setConfig({ testTimeout: 30_000 })
 
 // Garde des MIROIRS lib ↔ SQL de la vague « boucle quotidienne » (204/205/207).
 //

@@ -9,6 +9,7 @@ import { cn } from '@/lib/utils'
 import { GRID_PATTERN } from '@/lib/subject-style'
 import {
   SEARCH_MIN_CHAPTERS,
+  accesQuizChapitre,
   chapterGroupProgress,
   chapterQuizHref,
   chapterUnit,
@@ -348,6 +349,9 @@ export default function ChapterList({
           !cherche && group.theme && hasChapterQuiz(group)
             ? chapterQuizHref(subjectSlug, group.theme)
             : null
+        // Il s'OUVRE quand chaque fiche a été testée au moins une fois : tant
+        // qu'il est fermé, l'en-tête le montre cadenassé et dit ce qui manque.
+        const acces = accesQuizChapitre(group.chapters)
         // L'ÉTAT DU CHAPITRE, VISIBLE. Une carte crème identique à 0 % et à
         // 60 % ne rendait rien des heures passées dessus. La robe (crème,
         // cernée de jaune, violet plein), le médaillon et les pastilles par
@@ -368,7 +372,10 @@ export default function ChapterList({
             key={cle}
             data-etat={etat}
             className={cn(
-              'relative overflow-hidden rounded-3xl px-4 py-4 transition-opacity duration-200',
+              // Pas d' : la bulle du quiz du chapitre déborde de
+              // la carte, et s'y faisait couper. C'est le quadrillage qui se
+              // découpe lui-même (ci-dessous).
+              'relative rounded-3xl px-4 py-4 transition-opacity duration-200',
               ROBES[etat],
               efface ? EFFACE : null,
             )}
@@ -377,7 +384,7 @@ export default function ChapterList({
                 c'est la plaque violette de l'arène (toutes les cartes la
                 portent depuis le 16/09/2026, cf. `ROBES`). */}
             <div
-              className="pointer-events-none absolute inset-0 opacity-[0.07]"
+              className="pointer-events-none absolute inset-0 rounded-3xl opacity-[0.07]"
               style={GRID_PATTERN}
               aria-hidden="true"
             />
@@ -390,6 +397,7 @@ export default function ChapterList({
               deplie={deplie}
               onToggle={() => basculerChapitre(cle, deplie)}
               quizHref={quiz}
+              accesQuiz={acces}
               cherche={cherche}
               // La loupe ne sort que sur un bloc unique (`cherchable`) : elle
               // cherche dans toute la liste, et posée sur l'un des cinq

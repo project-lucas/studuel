@@ -1,7 +1,13 @@
 import { readFileSync } from 'node:fs'
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { policiesNonEnveloppees, revokesIncomplets } from './rls-guard'
 import { cheminMigration, nomsDesMigrations } from '@/lib/migrations-lecture'
+
+// Ces gardes relisent les 22 Mo de `supabase/` : sous charge (un serveur de dev
+// qui compile à côté), les 5 s par défaut de Vitest ne suffisent pas et le test
+// échoue pour une raison qui n'a rien à voir avec ce qu'il garde. Un garde qui
+// échoue au hasard finit par être relancé jusqu'au vert, donc ignoré.
+vi.setConfig({ testTimeout: 30_000 })
 
 describe('policiesNonEnveloppees', () => {
   it('signale un appel d’auth nu dans un USING', () => {

@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import { readFileSync } from 'node:fs'
 import { GRADE_LEVELS, HORS_NIVEAU, type SubjectCategory } from '@/lib/types'
 import {
@@ -9,6 +9,12 @@ import {
 import { programmeGroups } from '@/lib/subject-groups'
 import { cycleOf, isTechno } from '@/lib/grades'
 import { cheminMigration, nomsDesMigrations } from '@/lib/migrations-lecture'
+
+// Ces gardes relisent les 22 Mo de `supabase/` : sous charge (un serveur de dev
+// qui compile à côté), les 5 s par défaut de Vitest ne suffisent pas et le test
+// échoue pour une raison qui n'a rien à voir avec ce qu'il garde. Un garde qui
+// échoue au hasard finit par être relancé jusqu'au vert, donc ignoré.
+vi.setConfig({ testTimeout: 30_000 })
 
 type Row = {
   slug: string

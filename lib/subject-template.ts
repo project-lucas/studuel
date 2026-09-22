@@ -5,6 +5,7 @@
 // ajouter des lignes en base, zéro code.
 
 import { isExamYear } from '@/lib/annales'
+import { aUneEncyclopedie } from '@/lib/encyclopedie/matieres'
 import { LESSON_FLOOR } from '@/lib/mastery'
 import type { ExamProximity } from '@/lib/next-exam'
 import type { ModeQuestion } from '@/lib/defi-modes'
@@ -23,14 +24,14 @@ import type { Standing } from '@/lib/percentile'
 // Boss (un panneau, pas une liste) prend la tête. « Annales » ne s'ajoute que
 // les années à examen.
 
-export type ModeKey = 'programme' | 'jeu' | 'annales'
+export type ModeKey = 'programme' | 'encyclopedie' | 'jeu' | 'annales'
 
 /**
  * Pictogramme d'un onglet, désigné par son NOM (le composant fait la
  * correspondance avec l'icône) : `lib/` reste pur, sans JSX ni dépendance à une
  * bibliothèque d'icônes.
  */
-export type ModeIcon = 'manette'
+export type ModeIcon = 'manette' | 'livre'
 
 export type ModeTab = {
   key: ModeKey
@@ -123,6 +124,13 @@ export function tabId(tab: { key: ModeKey; discipline?: string }): string {
 export function modesFor(
   grade: string | null | undefined,
   disciplines: string[] = [],
+  /**
+   * Le slug de la matière — pour les onglets qu'une matière SEULE possède.
+   * Aujourd'hui l'« Encyclopédie » de l'histoire-géo : la question se pose à
+   * `lib/encyclopedie/matieres`, un module sans aucun import, pour qu'une
+   * barre d'onglets (composant client) n'embarque pas le corpus.
+   */
+  subjectSlug?: string | null,
 ): ModeTab[] {
   const tabs: ModeTab[] =
     disciplines.length > 1
@@ -139,6 +147,14 @@ export function modesFor(
         // celui du BO — la liste ne dit pas un type d'objet, elle dit l'année
         // à couvrir.
         [{ key: 'programme', label: 'Programme' }]
+  // L'ENCYCLOPÉDIE, juste après le programme : c'est le rayon qu'on ouvre pour
+  // une raison inverse de celle des autres onglets — non pas « je révise mon
+  // chapitre », mais « ce nom est tombé quelque part, qui est-ce ? ». Elle se
+  // place avant le mode de jeu parce qu'elle appartient au travail, pas au
+  // divertissement. Elle ne s'affiche que là où il y a quelque chose derrière.
+  if (aUneEncyclopedie(subjectSlug)) {
+    tabs.push({ key: 'encyclopedie', label: 'Encyclopédie', icon: 'livre' })
+  }
   // La manette : c'est l'onglet qui se JOUE (boss, jeux de l'arène, défis).
   tabs.push({ key: 'jeu', label: 'Mode de jeu', icon: 'manette' })
   if (isExamYear(grade)) tabs.push({ key: 'annales', label: 'Annales' })
@@ -180,7 +196,7 @@ export function modeFromParam(
   if (exact) return tabId(exact)
   // 2. une clé seule : on ouvre le PREMIER onglet qui la porte — sur une
   //    matière à deux disciplines, `?onglet=programme` ouvre l'histoire.
-  const key = (['programme', 'jeu', 'annales'] as ModeKey[]).includes(
+  const key = (['programme', 'encyclopedie', 'jeu', 'annales'] as ModeKey[]).includes(
     raw as ModeKey,
   )
     ? (raw as ModeKey)
@@ -359,6 +375,51 @@ export function chapterQuizHref(subjectSlug: string, theme: string): string {
   return `/reviser/examen-blanc?${params.toString()}`
 }
 
+/**
+ * L'ACCÈS AU QUIZ DU CHAPITRE — il s'OUVRE, il ne s'offre pas d'emblée.
+ *
+ * Le quiz du chapitre est un CONTRÔLE : il retombe sur les questions de toutes
+ * ses fiches à la fois. Proposé à quelqu'un qui n'a testé aucune fiche, il ne
+ * mesure rien et décourage ; proposé après un tour complet, il dit quelque
+ * chose. Il s'ouvre donc quand CHAQUE fiche du chapitre a été testée au moins
+ * une fois (Lucas, 20/09/2026 : « on ne comprend pas bien que c'est le quiz
+ * global du chapitre »).
+ *
+ * Une fiche SANS quiz ne compte pas : elle ne pourrait jamais être testée, et
+ * bloquerait le chapitre pour toujours.
+ */
+export type AccesQuizChapitre = {
+  debloque: boolean
+  /** Fiches dont le quiz a déjà été fait au moins une fois. */
+  testees: number
+  /** Fiches qui ont un quiz — les seules qui comptent. */
+  total: number
+}
+
+export function accesQuizChapitre(
+  fiches: readonly { aQuiz: boolean; quizTeste: boolean }[],
+): AccesQuizChapitre {
+  const avecQuiz = fiches.filter((f) => f.aQuiz)
+  const testees = avecQuiz.filter((f) => f.quizTeste).length
+  return {
+    debloque: avecQuiz.length > 0 && testees >= avecQuiz.length,
+    testees,
+    total: avecQuiz.length,
+  }
+}
+
+/** Ce qu'il reste à faire, en une phrase — le bas de la bulle d'information. */
+export function phraseAccesQuiz(acces: AccesQuizChapitre): string {
+  if (acces.total === 0) return 'Aucune fiche de ce chapitre n’a encore de quiz.'
+  if (acces.debloque) {
+    return acces.total > 1
+      ? `Tu as testé les ${acces.total} fiches : il est ouvert.`
+      : 'Tu as testé sa fiche : il est ouvert.'
+  }
+  const reste = acces.total - acces.testees
+  return `Encore ${reste} fiche${reste > 1 ? 's' : ''} à tester (${acces.testees}/${acces.total}).`
+}
+
 /** Un chapitre du programme mérite-t-il son quiz ? */
 export function hasChapterQuiz(group: {
   theme: string | null
@@ -430,6 +491,10 @@ export type ChapterRow = {
    * Géographie.
    */
   discipline: string | null
+  /** La fiche a-t-elle un quiz ? (une fiche sans quiz ne se teste pas) */
+  aQuiz: boolean
+  /** Son quiz a-t-il déjà été joué au moins une fois ? (cf. accesQuizChapitre) */
+  quizTeste: boolean
 }
 
 // ---------------------------------------------------------------------------

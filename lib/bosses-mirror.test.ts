@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import {
   derniereOccurrence,
   migrationsDansLOrdre,
@@ -16,6 +16,12 @@ import {
   TRAQUE_PLAFOND_JOUR,
   TRAQUE_SEUIL,
 } from '@/lib/traque'
+
+// Ces gardes relisent les 22 Mo de `supabase/` : sous charge (un serveur de dev
+// qui compile à côté), les 5 s par défaut de Vitest ne suffisent pas et le test
+// échoue pour une raison qui n'a rien à voir avec ce qu'il garde. Un garde qui
+// échoue au hasard finit par être relancé jusqu'au vert, donc ignoré.
+vi.setConfig({ testTimeout: 30_000 })
 
 // Une semaine de référence, lundi → vendredi (2026-07-27 est un lundi). Le
 // week-end n'y figure pas : la chasse y est ouverte à TOUS, sans liste.

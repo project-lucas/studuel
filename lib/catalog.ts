@@ -300,3 +300,36 @@ export const getProgrammeCached = unstable_cache(getProgrammeFresh, ['catalog-pr
   revalidate: CATALOG_TTL_SECONDS,
   tags: ['catalog'],
 })
+
+/**
+ * Les DISCIPLINES d'une matière à ce niveau, dans l'ordre du programme
+ * (« histoire » puis « geographie »).
+ *
+ * La colonne `chapters.discipline` (migration 247) ne fait pas partie du
+ * catalogue : la page matière la lit dans un select ISOLÉ, pour qu'une base où
+ * la migration manque ne fasse pas tomber le dossier entier. Même précaution
+ * ici, plus le cache : la réponse est la même pour tous les élèves de la
+ * classe, et elle ne sert qu'à dessiner une barre d'onglets.
+ *
+ * Rend un tableau VIDE si la colonne n'existe pas — l'appelant retombe alors
+ * sur un onglet « Programme » unique, ce qui est exactement le bon repli.
+ */
+export const getDisciplinesCached = unstable_cache(
+  async (subjectId: string, grade: string): Promise<string[]> => {
+    const { data } = await anonClient()
+      .from('chapters')
+      .select('discipline')
+      .eq('subject_id', subjectId)
+      .eq('level', contentLevelFor(grade))
+      .order('position', { ascending: true })
+      .returns<{ discipline: string | null }[]>()
+    const vues: string[] = []
+    for (const ligne of data ?? []) {
+      const discipline = ligne.discipline?.trim()
+      if (discipline && !vues.includes(discipline)) vues.push(discipline)
+    }
+    return vues
+  },
+  ['catalog-disciplines'],
+  { revalidate: CATALOG_TTL_SECONDS, tags: ['catalog'] },
+)

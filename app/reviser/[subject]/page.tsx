@@ -14,6 +14,7 @@ import {
   type CatalogChapter,
 } from '@/lib/catalog'
 import { contentLevelOf } from '@/lib/subject-visibility'
+import { hrefEncyclopedie } from '@/lib/encyclopedie/matieres'
 import { fetchGardienCard } from '@/lib/traque-server'
 import {
   catalogIsStale,
@@ -256,22 +257,35 @@ export default async function SubjectPage({
     { data: carnetQuestions },
     { data: carnetEtats },
   ] = await Promise.all([
+    // PAGINÉ (20/09/2026) : un élève assidu dépasse les 1 000 sessions sur une
+    // matière, et PostgREST coupe à 1 000 sans le dire — les meilleurs scores
+    // des fiches les plus anciennes disparaissaient, et le quiz du chapitre
+    // (ouvert quand chaque fiche a été testée) se re-verrouillait tout seul.
     quizIds.length
-      ? supabase
-          .from('test_sessions')
-          // `created_at` : la date de la dernière session, pour le drapeau
-          // posé sur la fiche où l'élève s'est arrêté (lib/derniere-session).
-          .select('quiz_id, score, total, created_at')
-          .eq('user_id', user.id)
-          .in('quiz_id', quizIds)
-          .returns<
-            {
-              quiz_id: string | null
-              score: number
-              total: number
-              created_at: string | null
-            }[]
-          >()
+      ? toutLire<{
+          quiz_id: string | null
+          score: number
+          total: number
+          created_at: string | null
+        }>((from, to) =>
+          supabase
+            .from('test_sessions')
+            // `created_at` : la date de la dernière session, pour le drapeau
+            // posé sur la fiche où l'élève s'est arrêté (lib/derniere-session).
+            .select('quiz_id, score, total, created_at')
+            .eq('user_id', user.id)
+            .in('quiz_id', quizIds)
+            .order('id', { ascending: true })
+            .range(from, to)
+            .returns<
+              {
+                quiz_id: string | null
+                score: number
+                total: number
+                created_at: string | null
+              }[]
+            >(),
+        )
       : Promise.resolve({
           data: [] as {
             quiz_id: string | null
@@ -457,6 +471,14 @@ export default async function SubjectPage({
     }),
     theme: themeById.get(chapter.id) ?? null,
     discipline: disciplineById.get(chapter.id) ?? null,
+    // Le quiz du chapitre s'ouvre quand chaque fiche a été testée une fois
+    // (lib/subject-template.accesQuizChapitre) : ces deux drapeaux se lisent
+    // dans les sessions DÉJÀ chargées, sans une requête de plus.
+    aQuiz: chapter.lessons.some((l) => Boolean(l.quizzes[0]?.id)),
+    quizTeste: chapter.lessons.some((l) => {
+      const quizId = l.quizzes[0]?.id
+      return Boolean(quizId && bestByQuiz.has(quizId))
+    }),
   }))
 
   const progress = subjectProgress(values)
@@ -538,8 +560,13 @@ export default async function SubjectPage({
   // n'existerait pas encore au moment de résoudre le paramètre.
   const initialMode = modeFromParam(
     onglet,
-    modesFor(standings.grade, disciplinesOf(chapters)),
+    modesFor(standings.grade, disciplinesOf(chapters), subject.slug),
   )
+  // L'ENCYCLOPÉDIE EST UNE AUTRE PAGE. Un lien `?onglet=encyclopedie` — partagé,
+  // ou reconstruit par une barre d'onglets — ne doit pas ouvrir ce dossier avec
+  // l'onglet allumé et le contenu d'à côté en dessous : il conduit là où
+  // l'encyclopédie vit vraiment.
+  if (initialMode === 'encyclopedie') redirect(hrefEncyclopedie(subject.slug))
 
   // Les cours du CARNET rattachés à cette matière (migration 316) : le carnet
   // cesse d'être une île, ses cours se posent à côté du programme officiel.

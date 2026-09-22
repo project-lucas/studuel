@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import StandingLine from '@/components/StandingLine'
 import GardienBadge from '@/components/reviser/GardienBadge'
 import SubjectHeader from '@/components/reviser/SubjectHeader'
@@ -21,6 +22,7 @@ import {
   type SubjectTemplateData,
 } from '@/lib/subject-template'
 import { examYearFor } from '@/lib/annales'
+import { hrefEncyclopedie } from '@/lib/encyclopedie/matieres'
 import { afficheEcusson, gardienVue } from '@/lib/reviser/gardien'
 
 // Template GÉNÉRIQUE de page matière : valable pour toutes les matières, tout
@@ -38,9 +40,23 @@ export default function SubjectTemplate({
   // Les onglets dépendent de la CLASSE (« Annales » n'existe que les années à
   // examen) ET de la matière : celle qui réunit deux disciplines — histoire-géo
   // — remplace « Programme » par « Histoire » et « Géographie ».
+  const router = useRouter()
   const disciplines = disciplinesOf(data.chapters)
-  const modes = modesFor(data.gradeLevel, disciplines)
+  const modes = modesFor(data.gradeLevel, disciplines, data.subject.slug)
   const [tab, setTab] = useState<string>(initialMode ?? tabId(modes[0]))
+
+  // L'ENCYCLOPÉDIE N'EST PAS UN PANNEAU DE CETTE PAGE, c'est un rayon à part —
+  // et l'onglet y conduit au lieu de changer d'état. Deux raisons : une fiche
+  // doit avoir SON adresse (on partage « Jeanne d'Arc », on ne partage pas
+  // « le dossier d'histoire, quatrième onglet »), et le corpus fait des
+  // centaines de kilo-octets que le bundle du dossier n'a pas à porter.
+  const changerOnglet = (id: string) => {
+    if (id === 'encyclopedie') {
+      router.push(hrefEncyclopedie(data.subject.slug))
+      return
+    }
+    setTab(id)
+  }
   // Un identifiant inconnu (onglet disparu, lien ancien) retombe sur le premier.
   const active = modes.find((m) => tabId(m) === tab) ?? modes[0]
   const mode = active.key
@@ -109,7 +125,7 @@ export default function SubjectTemplate({
         <ModeTabs
           modes={modes}
           active={tabId(active)}
-          onChange={setTab}
+          onChange={changerOnglet}
           bulle={
             gardien.bulle && jeuId ? { tab: jeuId, label: gardien.bulle } : null
           }

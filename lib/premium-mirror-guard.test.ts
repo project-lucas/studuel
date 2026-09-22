@@ -1,6 +1,12 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import { migrationsDansLOrdre } from '@/lib/migrations-lecture'
 import { canAccessMindMaps, type Tier } from './subscription'
+
+// Ces gardes relisent les 22 Mo de `supabase/` : sous charge (un serveur de dev
+// qui compile à côté), les 5 s par défaut de Vitest ne suffisent pas et le test
+// échoue pour une raison qui n'a rien à voir avec ce qu'il garde. Un garde qui
+// échoue au hasard finit par être relancé jusqu'au vert, donc ignoré.
+vi.setConfig({ testTimeout: 30_000 })
 
 // Garde du MIROIR SQL ↔ application des paliers premium.
 //

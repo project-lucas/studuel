@@ -1,5 +1,7 @@
 import { describe, expect, test } from 'vitest'
 import {
+  accesQuizChapitre,
+  phraseAccesQuiz,
   carteMeta,
   chapterStatus,
   chapterValue,
@@ -270,6 +272,8 @@ const row = (
   minutes: null,
   theme,
   discipline: null,
+  aQuiz: true,
+  quizTeste: false,
 })
 
 describe('groupChaptersByTheme', () => {
@@ -346,6 +350,46 @@ describe('disciplinesOf', () => {
         { discipline: 'geographie' },
       ]),
     ).toEqual(['histoire', 'geographie'])
+  })
+})
+
+describe('modesFor — l’onglet Encyclopédie', () => {
+  test('n’apparaît que pour la matière qui en a une', () => {
+    expect(modesFor('4e', [], 'maths').map((t) => t.key)).toEqual(['programme', 'jeu'])
+    expect(modesFor('4e', [], 'histoire-geo').map((t) => t.key)).toEqual([
+      'programme',
+      'encyclopedie',
+      'jeu',
+    ])
+  })
+
+  test('se place APRÈS le programme et AVANT le mode de jeu', () => {
+    // Elle appartient au travail, pas au divertissement : une encyclopédie
+    // rangée derrière la manette se lirait comme un bonus.
+    const tabs = modesFor('3e', ['histoire', 'geographie'], 'histoire-geo')
+    expect(tabs.map((t) => t.label)).toEqual([
+      'Histoire',
+      'Géographie',
+      'Encyclopédie',
+      'Mode de jeu',
+      'Annales',
+    ])
+  })
+
+  test('sans slug, rien ne change pour les matières existantes', () => {
+    expect(modesFor('Tle', ['histoire', 'geographie']).map((t) => t.key)).toEqual([
+      'programme',
+      'programme',
+      'jeu',
+      'annales',
+    ])
+  })
+
+  test('« ?onglet=encyclopedie » désigne bien cet onglet', () => {
+    const tabs = modesFor('4e', [], 'histoire-geo')
+    expect(modeFromParam('encyclopedie', tabs)).toBe('encyclopedie')
+    // Sur une matière qui n'en a pas, la clé retombe sur le programme.
+    expect(modeFromParam('encyclopedie', modesFor('4e', [], 'maths'))).toBeUndefined()
   })
 })
 
@@ -724,5 +768,32 @@ describe('les mots de l’écran', () => {
 
   test('le support de la carte mentale s’appelle « Fiche » (fiche de révision)', () => {
     expect(SUPPORT_LABELS.carte).toBe('Fiche')
+  })
+})
+
+describe('le quiz du chapitre s’ouvre quand chaque fiche a été testée', () => {
+  const fiche = (aQuiz: boolean, quizTeste: boolean) => ({ aQuiz, quizTeste })
+
+  test('reste fermé tant qu’une fiche n’a pas été testée', () => {
+    const acces = accesQuizChapitre([fiche(true, true), fiche(true, false)])
+    expect(acces).toEqual({ debloque: false, testees: 1, total: 2 })
+    expect(phraseAccesQuiz(acces)).toBe('Encore 1 fiche à tester (1/2).')
+  })
+
+  test('s’ouvre quand toutes le sont', () => {
+    const acces = accesQuizChapitre([fiche(true, true), fiche(true, true)])
+    expect(acces.debloque).toBe(true)
+    expect(phraseAccesQuiz(acces)).toBe('Tu as testé les 2 fiches : il est ouvert.')
+  })
+
+  test('une fiche SANS quiz ne bloque personne — elle ne pourrait jamais être testée', () => {
+    const acces = accesQuizChapitre([fiche(true, true), fiche(false, false)])
+    expect(acces).toEqual({ debloque: true, testees: 1, total: 1 })
+  })
+
+  test('un chapitre sans aucun quiz de fiche ne s’ouvre pas, et le dit', () => {
+    const acces = accesQuizChapitre([fiche(false, false)])
+    expect(acces.debloque).toBe(false)
+    expect(phraseAccesQuiz(acces)).toBe('Aucune fiche de ce chapitre n’a encore de quiz.')
   })
 })

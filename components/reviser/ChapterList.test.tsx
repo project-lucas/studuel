@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest'
-import { render, screen, within } from '@testing-library/react'
+import { fireEvent, render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import ChapterList from '@/components/reviser/ChapterList'
 import { SEARCH_MIN_CHAPTERS, type ChapterRow } from '@/lib/subject-template'
@@ -25,6 +25,9 @@ const row = (
   title: string,
   theme: string | null,
   position: number,
+  // Le quiz du chapitre ne s'ouvre qu'une fois CHAQUE fiche testée : par
+  // défaut la fiche a un quiz, jamais joué (le cas d'un élève qui arrive).
+  quizTeste = false,
 ): ChapterRow => ({
   id,
   position,
@@ -37,6 +40,8 @@ const row = (
   minutes: null,
   theme,
   discipline: null,
+  aQuiz: true,
+  quizTeste,
 })
 
 const anglais = [
@@ -457,10 +462,15 @@ describe('ChapterList — le drapeau de la dernière session', () => {
 })
 
 describe('ChapterList — le quiz du chapitre', () => {
+  // Les deux fiches du « groupe nominal » testées : son quiz s'ouvre.
+  const testees = anglais.map((c) =>
+    c.theme === 'Le groupe nominal' ? { ...c, quizTeste: true } : c,
+  )
+
   it('un chapitre d’au moins deux fiches porte son quiz sur l’en-tête, même replié', () => {
     render(
       <ChapterList
-        chapters={anglais}
+        chapters={testees}
         resume={{ chapterId: 'd', label: 'Commencer' }}
         subjectSlug="anglais"
         subjectName="Anglais"
@@ -478,6 +488,48 @@ describe('ChapterList — le quiz du chapitre', () => {
     // Les chapitres d'une seule fiche n'en offrent pas : leur quiz est déjà
     // celui de la fiche.
     expect(screen.getAllByRole('link', { name: /^Quiz du chapitre/ })).toHaveLength(1)
+  })
+
+  it('tant qu’une fiche n’a pas été testée, il est cadenassé (et pas un lien mort)', () => {
+    const unePasTestee = testees.map((c) =>
+      c.id === 'b' ? { ...c, quizTeste: false } : c,
+    )
+    render(
+      <ChapterList
+        chapters={unePasTestee}
+        resume={{ chapterId: 'd', label: 'Commencer' }}
+        subjectSlug="anglais"
+        subjectName="Anglais"
+        grade="Terminale"
+      />,
+    )
+    expect(screen.queryByRole('link', { name: /^Quiz du chapitre/ })).toBeNull()
+    expect(
+      screen.getAllByRole('button', { name: /Quiz du chapitre/ }).length,
+    ).toBeGreaterThan(0)
+  })
+
+  it('le (i) explique que c’est le quiz de TOUT le chapitre, et ce qu’il reste à faire', async () => {
+    render(
+      <ChapterList
+        chapters={anglais}
+        resume={{ chapterId: 'd', label: 'Commencer' }}
+        subjectSlug="anglais"
+        subjectName="Anglais"
+        grade="Terminale"
+      />,
+    )
+    const info = screen.getByRole('button', {
+      name: 'À quoi sert le quiz du chapitre Le groupe nominal ?',
+    })
+    expect(screen.queryByRole('note')).toBeNull()
+    fireEvent.click(info)
+    const bulle = screen.getByRole('note')
+    expect(bulle.textContent).toContain('toutes les fiches du chapitre')
+    expect(bulle.textContent).toContain('Encore 2 fiches à tester (0/2).')
+    // Échap la referme : une bulle qu'on ne sait pas fermer est une bulle qui reste.
+    fireEvent.keyDown(document, { key: 'Escape' })
+    expect(screen.queryByRole('note')).toBeNull()
   })
 
   it('la robe d’un chapitre dit son avancement', () => {

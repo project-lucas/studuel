@@ -1,13 +1,18 @@
 'use client'
 
-import type { ReactNode } from 'react'
+import { useEffect, useId, useRef, useState, type ReactNode } from 'react'
 import Link from 'next/link'
-import { ChevronDown, Crown, ListChecks } from 'lucide-react'
+import { ChevronDown, Crown, Info, ListChecks, Lock } from 'lucide-react'
 import AnneauProgression from '@/components/reviser/AnneauProgression'
 import ChapterProgressBar from '@/components/reviser/ChapterProgressBar'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
-import type { ChapterStatus, SubjectProgress } from '@/lib/subject-template'
+import {
+  phraseAccesQuiz,
+  type AccesQuizChapitre,
+  type ChapterStatus,
+  type SubjectProgress,
+} from '@/lib/subject-template'
 
 /** L'état d'un chapitre du programme, tel que sa carte le porte (`data-etat`). */
 export type EtatChapitre = 'vierge' | 'entame' | 'termine'
@@ -45,6 +50,119 @@ export const ROBES: Record<EtatChapitre, string> = {
 }
 
 /**
+ * LE QUIZ DU CHAPITRE, avec sa bulle d'explication.
+ *
+ * Deux choses à faire comprendre d'un coup d'œil, et c'est pour ça que ce
+ * bouton existe séparément :
+ *   1. ce quiz-là est GLOBAL — il reprend toutes les fiches du chapitre, quand
+ *      celui d'une fiche ne porte que sur elle ;
+ *   2. il s'OUVRE — après avoir testé chaque fiche au moins une fois.
+ *
+ * Le (i) ouvre une bulle qui le dit en toutes lettres, avec ce qui reste à
+ * faire. Fermée au clic ailleurs et à Échap : sur un téléphone, une bulle
+ * qu'on ne sait pas fermer est une bulle qui reste.
+ */
+function QuizDuChapitre({
+  titre,
+  href,
+  acces,
+}: {
+  titre: string
+  href: string
+  acces: AccesQuizChapitre
+}) {
+  const [ouverte, setOuverte] = useState(false)
+  const bulleId = useId()
+  const boite = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!ouverte) return
+    const dehors = (e: PointerEvent) => {
+      if (!boite.current?.contains(e.target as Node)) setOuverte(false)
+    }
+    const echap = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOuverte(false)
+    }
+    document.addEventListener('pointerdown', dehors)
+    document.addEventListener('keydown', echap)
+    return () => {
+      document.removeEventListener('pointerdown', dehors)
+      document.removeEventListener('keydown', echap)
+    }
+  }, [ouverte])
+
+  const label = 'Quiz du chapitre'
+  const plaque =
+    'inline-flex items-center gap-1.5 rounded-full border-b-[3px] px-3 py-2 text-[13px] font-extrabold transition-transform sm:text-sm'
+
+  return (
+    <div ref={boite} className="relative flex shrink-0 items-center gap-1">
+      {acces.debloque ? (
+        <Link
+          href={href}
+          onClick={() => sfx.tap()}
+          aria-label={`${label} ${titre}`}
+          className={cn(
+            plaque,
+            'border-b-black/30 bg-highlight text-foreground hover:-translate-y-px active:translate-y-[2px] active:border-b-0',
+          )}
+        >
+          <ListChecks className="size-4.5" strokeWidth={2.75} aria-hidden="true" />
+          {label}
+        </Link>
+      ) : (
+        /* Fermé : un bouton, pas un lien mort — il explique au lieu de ne rien
+           faire (une porte qui ne s'ouvre pas sans un mot, le projet l'a déjà
+           refusé ailleurs). */
+        <button
+          type="button"
+          onClick={() => {
+            sfx.tap()
+            setOuverte((v) => !v)
+          }}
+          aria-expanded={ouverte}
+          aria-controls={bulleId}
+          className={cn(plaque, 'border-b-black/20 bg-white/15 text-white/75')}
+        >
+          <Lock className="size-4" strokeWidth={2.75} aria-hidden="true" />
+          {label}
+        </button>
+      )}
+
+      <button
+        type="button"
+        onClick={() => setOuverte((v) => !v)}
+        aria-expanded={ouverte}
+        aria-controls={bulleId}
+        aria-label={`À quoi sert le quiz du chapitre ${titre} ?`}
+        className="grid size-7 shrink-0 cursor-pointer place-items-center rounded-full bg-white/15 text-white transition-colors hover:bg-white/25"
+      >
+        <Info className="size-4" strokeWidth={2.75} aria-hidden="true" />
+      </button>
+
+      {ouverte ? (
+        <div
+          id={bulleId}
+          role="note"
+          className="bg-background text-foreground absolute top-full right-0 z-30 mt-2 w-64 rounded-2xl p-3 text-left text-[13px] leading-snug font-semibold shadow-[0_10px_24px_rgba(0,0,0,0.25)] ring-1 ring-black/10"
+        >
+          <p className="font-heading text-sm font-extrabold">{label}</p>
+          <p className="mt-1">
+            Il reprend <strong>toutes les fiches du chapitre</strong> d’un coup, en
+            conditions de contrôle — les quiz au-dessous, eux, ne portent que sur
+            leur fiche.
+          </p>
+          <p className="text-muted-foreground mt-1.5">
+            Il s’ouvre quand chaque fiche a été testée au moins une fois.{' '}
+            {phraseAccesQuiz(acces)}
+          </p>
+        </div>
+      ) : null}
+    </div>
+  )
+}
+
+/**
  * L'EN-TÊTE D'UN CHAPITRE DU PROGRAMME — la carte qu'on voit avant de déplier.
  *
  * Elle a été un titre en gras sur une barre fine : quatre cartes identiques,
@@ -71,6 +189,7 @@ export default function ChapitreEntete({
   deplie,
   onToggle,
   quizHref,
+  accesQuiz,
   cherche,
   loupe = null,
 }: {
@@ -85,6 +204,8 @@ export default function ChapitreEntete({
   onToggle: () => void
   /** L'adresse du quiz du chapitre, ou `null` s'il n'en a pas. */
   quizHref: string | null
+  /** Où en est l'élève de son ouverture (lib/subject-template.accesQuizChapitre). */
+  accesQuiz: AccesQuizChapitre
   /** Sous recherche : ni médaillon, ni pastilles, ni quiz — le compte des trouvailles. */
   cherche: boolean
   /** La loupe, sur le bloc unique qui la porte. */
@@ -205,19 +326,13 @@ export default function ChapitreEntete({
                 </span>
               ) : null}
             </div>
-            {/* LE QUIZ, en plaque D'OR : sur une carte violette, le violet ne
-                ressort pas — l'or, si (la dérogation de l'arène, cf.
-                CLAUDE.md). */}
+            {/* LE QUIZ DU CHAPITRE, en plaque D'OR : sur une carte violette, le
+                violet ne ressort pas — l'or, si (la dérogation de l'arène, cf.
+                CLAUDE.md). Il DIT son nom en entier : « Quiz » tout court se
+                confondait avec le quiz d'une fiche, juste en dessous. Fermé, il
+                passe en plaque éteinte, cadenassée. */}
             {quizHref ? (
-              <Link
-                href={quizHref}
-                onClick={() => sfx.tap()}
-                aria-label={`Quiz du chapitre ${titre}`}
-                className="inline-flex shrink-0 items-center gap-1.5 rounded-full border-b-[3px] border-b-black/30 bg-highlight px-3.5 py-2 text-sm font-extrabold text-foreground transition-transform hover:-translate-y-px active:translate-y-[2px] active:border-b-0"
-              >
-                <ListChecks className="size-4.5" strokeWidth={2.75} aria-hidden="true" />
-                Quiz
-              </Link>
+              <QuizDuChapitre titre={titre} href={quizHref} acces={accesQuiz} />
             ) : null}
           </div>
         )}

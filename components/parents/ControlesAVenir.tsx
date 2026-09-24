@@ -29,7 +29,7 @@ export default function ControlesAVenir({
 }) {
   return (
     <section className="mb-5">
-      <h4 className="text-muted-foreground mb-2 text-xs font-medium tracking-wide uppercase">
+      <h4 className="titre-section mb-2">
         Contrôles à venir
       </h4>
 

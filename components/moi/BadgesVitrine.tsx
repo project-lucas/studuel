@@ -29,14 +29,14 @@ export default function BadgesVitrine({
   const ranges = [...gagnes, ...aVenir]
 
   return (
-    <section aria-label="Tes badges" className="moi-bloc rounded-[22px] p-4">
+    <section aria-label="Tes badges" className="carte p-4">
       <div className="flex items-center gap-2.5">
         <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-secondary text-primary">
           <Award className="size-5" strokeWidth={2.4} aria-hidden="true" />
         </span>
         <div className="min-w-0 flex-1">
-          <h2 className="font-heading text-base leading-tight font-extrabold">Tes badges</h2>
-          <p className="moi-sourcil mt-0.5">
+          <h2 className="titre-section">Tes badges</h2>
+          <p className="surtitre mt-0.5">
             {gagnes.length === 0
               ? 'Le premier se gagne en jouant'
               : `${gagnes.length} gagné${gagnes.length > 1 ? 's' : ''} sur ${badges.length}`}

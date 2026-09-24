@@ -69,8 +69,8 @@ export default function Classement({
   const [filtre, setFiltre] = useState<FiltreClassement>('travail')
 
   return (
-    <section aria-label="Ton classement" className="moi-bloc rounded-[22px] p-4">
-      <p className="moi-sourcil">Ton classement</p>
+    <section aria-label="Ton classement" className="carte p-4">
+      <h2 className="titre-section">Ton classement</h2>
 
       <div
         role="group"

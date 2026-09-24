@@ -96,7 +96,6 @@ export function hasSubjectIcon(slug: string): boolean {
 // Classes statiques → compatibles avec le compilateur Tailwind.
 
 export type SubjectTheme = {
-  header: string // fond pastel du header matière/chapitre
   chip: string // vignette de leçon / chapitre
   bar: string // remplissage des barres de progression
   stroke: string // anneaux de progression (SVG)
@@ -113,7 +112,6 @@ export type SubjectTheme = {
 
 const THEMES: Record<string, SubjectTheme> = {
   blue: {
-    header: 'bg-sky-100 text-sky-950 dark:bg-sky-950/60 dark:text-sky-100',
     chip: 'bg-sky-100 dark:bg-sky-900/60',
     bar: 'bg-sky-500',
     stroke: 'stroke-sky-500',
@@ -121,7 +119,6 @@ const THEMES: Record<string, SubjectTheme> = {
     accent: 'border-l-sky-500',
   },
   red: {
-    header: 'bg-rose-100 text-rose-950 dark:bg-rose-950/60 dark:text-rose-100',
     chip: 'bg-rose-100 dark:bg-rose-900/60',
     bar: 'bg-rose-500',
     stroke: 'stroke-rose-500',
@@ -129,7 +126,6 @@ const THEMES: Record<string, SubjectTheme> = {
     accent: 'border-l-rose-500',
   },
   orange: {
-    header: 'bg-orange-100 text-orange-950 dark:bg-orange-950/60 dark:text-orange-100',
     chip: 'bg-orange-100 dark:bg-orange-900/60',
     bar: 'bg-orange-500',
     stroke: 'stroke-orange-500',
@@ -137,7 +133,6 @@ const THEMES: Record<string, SubjectTheme> = {
     accent: 'border-l-orange-500',
   },
   green: {
-    header: 'bg-emerald-100 text-emerald-950 dark:bg-emerald-950/60 dark:text-emerald-100',
     chip: 'bg-emerald-100 dark:bg-emerald-900/60',
     bar: 'bg-emerald-500',
     stroke: 'stroke-emerald-500',
@@ -145,7 +140,6 @@ const THEMES: Record<string, SubjectTheme> = {
     accent: 'border-l-emerald-500',
   },
   purple: {
-    header: 'bg-violet-100 text-violet-950 dark:bg-violet-950/60 dark:text-violet-100',
     chip: 'bg-violet-100 dark:bg-violet-900/60',
     bar: 'bg-violet-500',
     stroke: 'stroke-violet-500',
@@ -153,7 +147,6 @@ const THEMES: Record<string, SubjectTheme> = {
     accent: 'border-l-violet-500',
   },
   indigo: {
-    header: 'bg-indigo-100 text-indigo-950 dark:bg-indigo-950/60 dark:text-indigo-100',
     chip: 'bg-indigo-100 dark:bg-indigo-900/60',
     bar: 'bg-indigo-500',
     stroke: 'stroke-indigo-500',
@@ -161,7 +154,6 @@ const THEMES: Record<string, SubjectTheme> = {
     accent: 'border-l-indigo-500',
   },
   teal: {
-    header: 'bg-teal-100 text-teal-950 dark:bg-teal-950/60 dark:text-teal-100',
     chip: 'bg-teal-100 dark:bg-teal-900/60',
     bar: 'bg-teal-500',
     stroke: 'stroke-teal-500',
@@ -169,7 +161,6 @@ const THEMES: Record<string, SubjectTheme> = {
     accent: 'border-l-teal-500',
   },
   pink: {
-    header: 'bg-pink-100 text-pink-950 dark:bg-pink-950/60 dark:text-pink-100',
     chip: 'bg-pink-100 dark:bg-pink-900/60',
     bar: 'bg-pink-500',
     stroke: 'stroke-pink-500',
@@ -177,7 +168,6 @@ const THEMES: Record<string, SubjectTheme> = {
     accent: 'border-l-pink-500',
   },
   yellow: {
-    header: 'bg-amber-100 text-amber-950 dark:bg-amber-950/60 dark:text-amber-100',
     chip: 'bg-amber-100 dark:bg-amber-900/60',
     bar: 'bg-amber-500',
     stroke: 'stroke-amber-500',
@@ -185,7 +175,6 @@ const THEMES: Record<string, SubjectTheme> = {
     accent: 'border-l-amber-500',
   },
   slate: {
-    header: 'bg-slate-200 text-slate-950 dark:bg-slate-800/80 dark:text-slate-100',
     chip: 'bg-slate-200 dark:bg-slate-700/80',
     bar: 'bg-slate-500',
     stroke: 'stroke-slate-500',
@@ -198,20 +187,9 @@ export function subjectTheme(color: string): SubjectTheme {
   return THEMES[color] ?? THEMES.blue
 }
 
-/**
- * La ROBE d'une matière : le nom de la classe CSS qui pose ses quatre variables
- * `--jeu-*` (globals.css). C'est ce qui habille la SESSION DE QUIZ, exactement
- * comme chaque jeu de salon porte la sienne — un quiz est le même geste qu'un
- * jeu (une question, des réponses, un verdict), il doit donc se jouer dans le
- * même écrin.
- *
- * Repli sur le violet de l'app quand la couleur est inconnue ou absente : un
- * quiz personnel, ou détaché de toute matière, garde une table cohérente.
- */
-export function subjectRobe(color: string | null | undefined): string {
-  const c = String(color ?? '').trim()
-  return c && c in THEMES ? `robe-${c}` : 'robe-purple'
-}
+// La robe de QUIZ d'une matière (`subjectRobe`, classes `robe-*`) n'a plus
+// d'appelant depuis que le quiz se joue sur le mur crème en violet (audit du
+// 23/09/2026) ; les classes `robe-*` restent dans globals.css pour les jeux.
 
 /**
  * Cette couleur a-t-elle VRAIMENT un thème ? `subjectTheme` retombe en silence

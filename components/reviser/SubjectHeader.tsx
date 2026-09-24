@@ -1,21 +1,20 @@
-import BackButton from '@/components/BackButton'
-import SubjectIcon from '@/components/SubjectIcon'
-import { cn } from '@/lib/utils'
-import {
-  subjectTheme,
-  subjectDecor,
-  subjectVignette,
-  GRID_PATTERN,
-} from '@/lib/subject-style'
+import EnTetePage from '@/components/reviser/EnTetePage'
+import MedaillonMatiere from '@/components/reviser/MedaillonMatiere'
 import type { SubjectProgress } from '@/lib/subject-template'
 
-// Header de la page matière : retour, icône + nom (depuis la base), niveau,
-// progression globale « X/Y chapitres · Z% » + barre, et l'écusson du gardien en
-// haut à droite. Le décor d'arène de la matière habille le fond quand il existe,
-// sinon la tuile colorée du thème.
+// Header de la page matière : retour, médaillon + nom (depuis la base), niveau,
+// progression globale « X/Y fiches » + barre, l'écusson du gardien au bout de
+// la ligne du titre, puis la rangée d'onglets.
+//
+// PLUS DE BANDEAU COLORÉ (audit du 23/09/2026) : l'aplat de la matière — bleu
+// Maths, vert SVT, orange Histoire-Géo — prenait tout l'en-tête, et l'or ou le
+// violet n'y avaient plus de place. L'identité de la matière tient désormais
+// au MÉDAILLON ; le fond est le mur crème de toute l'app, et la recette de
+// l'en-tête est celle de toutes les pages de Réviser (`EnTetePage`).
 //
 // Il portait aussi le solde de gemmes et la série : c'était un doublon du
-// bandeau du haut, retiré le 2026-08-28 (cf. le bloc de l'écusson plus bas).
+// bandeau du haut, retiré le 2026-08-28. Un solde ne se dit qu'à un seul
+// endroit.
 export default function SubjectHeader({
   subject,
   grade,
@@ -36,9 +35,10 @@ export default function SubjectHeader({
    */
   standing?: React.ReactNode
   /**
-   * L'écusson du gardien de la matière (anneau de traque). Posé à GAUCHE des
-   * monnaies : la jauge se remplit avec le travail de la page, elle doit se lire
-   * sans changer d'onglet. `null` quand la traque est illisible.
+   * L'écusson du gardien de la matière (anneau de traque), au bout de la ligne
+   * du titre (Lucas, 17/09/2026 : « l'icône boss doit aller là »). Sa jauge se
+   * remplit avec le travail de la page, elle doit se lire sans changer d'onglet.
+   * `null` quand la traque est illisible.
    */
   gardien?: React.ReactNode
   /**
@@ -53,129 +53,42 @@ export default function SubjectHeader({
    * annoncerait le dossier entier au-dessus d'une demi-liste.
    */
   discipline?: string | null
-  children?: React.ReactNode // barre d'onglets, rendue dans le monde coloré
+  children?: React.ReactNode // barre d'onglets, sous la barre de progression
 }) {
-  const theme = subjectTheme(subject.color)
-  const decor = subjectDecor(subject.slug)
-  const vignette = subjectVignette(subject.slug)
-
   return (
-    <header
-      className={cn(
-        'relative overflow-hidden px-4 pt-20 pb-10 text-white md:px-8 md:pt-12',
-        decor ? null : cn('arena-tile', theme.arena),
-      )}
-      style={
-        decor
-          ? {
-              backgroundImage: `linear-gradient(to bottom, rgba(10,14,30,0.45), rgba(10,14,30,0.15) 45%, rgba(10,14,30,0.4)), url(${decor})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center top',
-            }
-          : undefined
+    <EnTetePage
+      retour={{ fallback: '/reviser', label: 'Retour aux matières' }}
+      titre={subject.name}
+      medaillon={<MedaillonMatiere slug={subject.slug} />}
+      sousTitre={
+        <>
+          {discipline ?? 'Programme'} de {grade} · {progress.done}/{progress.total}{' '}
+          {unit}s
+          {/* Sous la ligne de programme, qui dit où l'élève en est DANS la
+              matière : celle-ci dit où il se situe PAR RAPPORT aux autres.
+              Deux informations différentes, d'où deux lignes. */}
+          {standing}
+        </>
       }
+      fin={gardien}
     >
-      {decor ? null : (
+      {/* Barre de progression globale de la matière : piste grise, jaune
+          solaire pour ce qui est fait — l'or est la couleur du gain. */}
+      <div
+        className="h-2 w-full overflow-hidden rounded-full bg-muted"
+        role="progressbar"
+        aria-label={`${discipline ?? subject.name} — ${progress.done} ${unit}s sur ${progress.total}, ${progress.pct}% travaillé`}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={progress.pct}
+      >
         <div
-          className="pointer-events-none absolute inset-0 opacity-[0.06]"
-          style={GRID_PATTERN}
-          aria-hidden="true"
+          className="bar-fill h-full rounded-full bg-highlight transition-all"
+          style={{ width: `${progress.pct}%` }}
         />
-      )}
-      <div className="relative mx-auto w-full max-w-4xl">
-        <div className="mb-4 flex items-center gap-3">
-          <BackButton fallback="/reviser" label="Retour aux matières" />
-
-          {/* ⚠️ NI GEMMES NI SÉRIE ICI — c'était un DOUBLON du bandeau du haut.
-              Le header portait le solde de gemmes et la flamme dans deux
-              pastilles sombres. Mais `TopHud` affiche déjà les deux, à quelques
-              pixels au-dessus et sur toutes les pages de l'app : l'élève lisait
-              « 75 💎 · 1 🔥 » deux fois dans le même regard, dans deux habillages
-              différents (verre sombre ici, pastilles crème là-haut), ce qui
-              donnait à croire à deux compteurs distincts. Un solde ne se dit
-              qu'à un seul endroit.
-
-              L'écusson du GARDIEN, lui, est descendu sur la ligne du titre
-              (voir plus bas). */}
-        </div>
-        <div className="flex items-center gap-4">
-          {/* LE MÉDAILLON DE LA MATIÈRE : son illustration, la même que sur sa
-              carte de l'accueil Réviser — l'élève reconnaît son dossier à son
-              dessin, pas à un pictogramme de trait blanc que six matières
-              partagent (trois langues portaient le même). Le dessin est posé
-              sur une plaque CRÈME et non sur le verre translucide d'avant :
-              ces illustrations sont dessinées pour un fond clair, et sur le
-              bandeau saturé leurs couleurs se seraient éteintes. */}
-          <span
-            className={cn(
-              'relative flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl shadow-[0_4px_10px_rgba(0,0,0,0.2)] ring-1 ring-black/10',
-              vignette ? 'bg-background' : cn('arena-tile', theme.arena),
-            )}
-          >
-            {vignette ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={vignette}
-                alt=""
-                aria-hidden="true"
-                width={320}
-                height={320}
-                // Le héros de l'écran : rien à différer, il est déjà à l'image.
-                className="size-13 object-contain"
-              />
-            ) : (
-              <>
-                <span
-                  aria-hidden="true"
-                  className="pointer-events-none absolute inset-x-2 top-1 h-5 rounded-full bg-gradient-to-b from-white/40 to-transparent"
-                />
-                <SubjectIcon
-                  slug={subject.slug}
-                  className="size-7 drop-shadow-[0_1.5px_1px_rgba(0,0,0,0.35)]"
-                  strokeWidth={2.25}
-                  aria-hidden="true"
-                />
-              </>
-            )}
-          </span>
-          <div className="min-w-0 flex-1">
-            <h1 className="font-heading text-3xl font-bold md:text-4xl">
-              {subject.name}
-            </h1>
-            <p className="text-sm font-medium opacity-70">
-              {discipline ?? 'Programme'} de {grade} ·{' '}
-              {progress.done}/{progress.total} {unit}s
-            </p>
-            {/* Sous la ligne de programme, qui dit où l'élève en est DANS la
-                matière : celle-ci dit où il se situe PAR RAPPORT aux autres.
-                Deux informations différentes, d'où deux lignes. */}
-            {standing}
-          </div>
-          {/* L'ÉCUSSON DU GARDIEN, au bout de la ligne du titre (Lucas,
-              17/09/2026 : « l'icône boss doit aller là »). Il remplace l'anneau
-              du pourcentage : la barre en dessous le montre, et « · 1 % » au bout
-              de la ligne grise la faisait passer à deux lignes sur 390 px. Le gardien n'est nulle part ailleurs, et sa jauge se
-              remplit avec le travail de CETTE page. */}
-          {gardien ? <div className="shrink-0">{gardien}</div> : null}
-        </div>
-
-        {/* Barre de progression globale de la matière */}
-        <div
-          className="mt-3 h-2 w-full overflow-hidden rounded-full bg-black/25"
-          role="progressbar"
-          aria-label={`${discipline ?? subject.name} — ${progress.done} ${unit}s sur ${progress.total}, ${progress.pct}% travaillé`}
-          aria-valuemin={0}
-          aria-valuemax={100}
-          aria-valuenow={progress.pct}
-        >
-          <div
-            className="bar-fill h-full rounded-full bg-highlight transition-all"
-            style={{ width: `${progress.pct}%` }}
-          />
-        </div>
-
-        {children}
       </div>
-    </header>
+
+      {children ? <div className="mt-4">{children}</div> : null}
+    </EnTetePage>
   )
 }

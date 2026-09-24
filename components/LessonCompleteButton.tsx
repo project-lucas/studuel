@@ -39,10 +39,11 @@ export default function LessonCompleteButton({
     )
   }
 
+  // Violet plein : c'est l'ACTION de la page de cours. L'état « lu », lui,
+  // reste vert (ci-dessus) — un verdict, pas un bouton.
   return (
     <Button
       ref={ref}
-      variant="outline"
       className="rounded-full"
       disabled={pending}
       onClick={() =>

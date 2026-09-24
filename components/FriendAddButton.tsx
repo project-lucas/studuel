@@ -13,14 +13,16 @@ import { useSortieAnimee } from '@/components/useSortieAnimee'
 import ParrainageCard from '@/components/ParrainageCard'
 import { CristalIcon } from '@/components/ui/MonnaieIcon'
 import { REFERRAL_GEM_REWARD, type ReferralSummary } from '@/lib/gems'
+import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
 
 /**
  * « Ajouter un ami » de l'onglet Amis : ouvre une modale avec tout le
  * nécessaire — mon QR à faire scanner, mon code à copier, et le champ
- * « code d'un ami ». Trois déclencheurs possibles : le rond du header
- * (`icon`, défaut), le gros bouton vert façon Clash Royale sous le
- * classement (`cta`), ou la pastille « Inviter » de la rangée stories
- * (`story`), ou le bouton D'ANGLE du classement des amis (`coin`).
+ * « code d'un ami ». Quatre déclencheurs possibles : le rond du header
+ * (`icon`, défaut), le gros bouton violet sous le classement (`cta` — il a été
+ * vert, une couleur d'état posée sur une action), ou la pastille « Ajouter »
+ * de la rangée stories (`story`), ou le bouton D'ANGLE du classement des amis
+ * (`coin`). Un seul libellé partout : « Ajouter un ami ».
  *
  * LE BOUTON D'ANGLE (Lucas, 17/09/2026 : « le bloc inviter un ami est trop
  * bas, il faut l'intégrer dans le bloc classement des amis, dans l'angle, avec
@@ -42,6 +44,7 @@ export default function FriendAddButton({
 }) {
   const avecParrainage = variant === 'coin' && referral !== null
   const [open, setOpen] = useState(false)
+  useFermeAuMasquage(setOpen, false)
   const panel = useRef<HTMLDivElement>(null)
   useDialogFocus(panel, open)
   const [copied, setCopied] = useState(false)
@@ -95,24 +98,16 @@ export default function FriendAddButton({
   return (
     <>
       {variant === 'cta' ? (
-        <button
+        <Button
           type="button"
-          onClick={() => {
-            sfx.tap()
-            setOpen(true)
-          }}
+          size="lg"
+          onClick={() => setOpen(true)}
           aria-haspopup="dialog"
-          className="defi2-press flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-2xl border border-[oklch(0.72_0.15_145)] bg-gradient-to-b from-[oklch(0.68_0.17_145)] to-[oklch(0.55_0.18_148)] px-3 py-2.5 shadow-[0_10px_22px_-10px_oklch(0.5_0.17_147)] focus-visible:ring-4 focus-visible:ring-white/40 focus-visible:outline-none"
+          className="w-full"
         >
-          <UserPlus
-            className="size-4 shrink-0 text-white"
-            strokeWidth={2.8}
-            aria-hidden="true"
-          />
-          <span className="font-heading truncate text-sm font-extrabold text-white">
-            Ajouter un ami
-          </span>
-        </button>
+          <UserPlus strokeWidth={2.8} aria-hidden="true" />
+          Ajouter un ami
+        </Button>
       ) : variant === 'coin' ? (
         <button
           type="button"
@@ -121,7 +116,7 @@ export default function FriendAddButton({
             setOpen(true)
           }}
           aria-haspopup="dialog"
-          aria-label={`Inviter un ami — +${REFERRAL_GEM_REWARD} gemmes chacun`}
+          aria-label={`Ajouter un ami — +${REFERRAL_GEM_REWARD} gemmes chacun`}
           className="invite-coin relative mr-1 flex size-11 shrink-0 cursor-pointer items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-[0_4px_0_color-mix(in_oklch,var(--primary),black_28%)] transition active:translate-y-[3px] active:shadow-none"
         >
           <UserPlus className="size-5" strokeWidth={2.6} aria-hidden="true" />
@@ -144,7 +139,7 @@ export default function FriendAddButton({
             setOpen(true)
           }}
           aria-haspopup="dialog"
-          aria-label="Inviter un ami"
+          aria-label="Ajouter un ami"
           className="flex w-16 shrink-0 cursor-pointer flex-col items-center gap-1"
         >
           <span
@@ -153,7 +148,7 @@ export default function FriendAddButton({
           >
             ＋
           </span>
-          <span className="text-[11px] font-bold text-foreground">Inviter</span>
+          <span className="text-[11px] font-bold text-foreground">Ajouter</span>
           <span className="-mt-1 text-[10px] font-semibold text-transparent">
             ·
           </span>
@@ -181,7 +176,7 @@ export default function FriendAddButton({
                 className="modale-voile fixed inset-0 z-50 flex items-center justify-center bg-black/55 p-4"
                 role="dialog"
                 aria-modal="true"
-                aria-label={avecParrainage ? 'Inviter un ami' : 'Ajouter un ami'}
+                aria-label="Ajouter un ami"
                 onClick={() => setOpen(false)}
               >
                 <div
@@ -195,7 +190,7 @@ export default function FriendAddButton({
                     {avecParrainage ? (
                       // La carte de parrainage porte son propre titre : ici
                       // il ne reste que la croix, et le nom pour le lecteur.
-                      <h2 className="sr-only">Inviter un ami</h2>
+                      <h2 className="sr-only">Ajouter un ami</h2>
                     ) : (
                       <>
                         <UserPlus
@@ -203,7 +198,7 @@ export default function FriendAddButton({
                           strokeWidth={2.4}
                           aria-hidden="true"
                         />
-                        <h2 className="font-heading min-w-0 flex-1 truncate text-lg font-bold">
+                        <h2 className="font-heading min-w-0 flex-1 truncate text-lg font-extrabold">
                           Ajouter un ami
                         </h2>
                       </>
@@ -233,7 +228,7 @@ export default function FriendAddButton({
                           summary={referral}
                         />
                       </div>
-                      <div className="mt-1 flex items-center gap-2 text-[11px] font-extrabold tracking-wide text-muted-foreground uppercase">
+                      <div className="surtitre mt-1 flex items-center gap-2">
                         <span className="h-px flex-1 bg-border" />
                         Ton ami est à côté ?
                         <span className="h-px flex-1 bg-border" />
@@ -266,7 +261,7 @@ export default function FriendAddButton({
                     >
                       {myFriendCode || '——————'}
                       {copied ? (
-                        <Check className="size-4 text-green-600" />
+                        <Check className="size-4 text-success" />
                       ) : (
                         <Copy className="size-4 text-muted-foreground" />
                       )}
@@ -317,9 +312,7 @@ export default function FriendAddButton({
                       aria-live="polite"
                       className={cn(
                         'px-1 text-sm font-medium',
-                        feedback.ok
-                          ? 'text-green-700 dark:text-green-400'
-                          : 'text-destructive',
+                        feedback.ok ? 'text-success' : 'text-destructive',
                       )}
                     >
                       {feedback.message}

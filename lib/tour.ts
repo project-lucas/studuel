@@ -30,8 +30,8 @@ export const TOUR_STEPS: TourStep[] = [
   {
     id: 'carnet',
     target: 'carnet-switch',
-    title: 'Mon carnet',
-    text: 'Crée tes propres cours et questions, et révise-les comme le reste.',
+    title: 'Ma bibliothèque',
+    text: 'Tes propres cours, tes capsules et tes fiches achetées : tout ce qui est à toi, rangé ici.',
   },
   {
     id: 'defi',

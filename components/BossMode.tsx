@@ -2,8 +2,9 @@
 
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import Image from 'next/image'
-import { Heart, Zap, Check, X, RotateCcw, Star } from 'lucide-react'
+import { Heart, Zap, RotateCcw, Star, Swords } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import AnswerBoard from '@/components/jeux/AnswerBoard'
 import { cn } from '@/lib/utils'
 import { gameSfx, sfx } from '@/lib/sounds'
 import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
@@ -192,8 +193,9 @@ export default function BossMode({
     answerLockRef.current = false
   }, [qIndex])
 
+  // Pas de son ici : tout ce qui lance un combat (« C'est parti », le boss de
+  // la semaine, « Rejouer », « Revanche ») est un `Button`, qui joue déjà son clic.
   const start = (event: boolean) => {
-    sfx.flip()
     streakRef.current = 0
     setEventFight(event)
     const s = event ? WEEKLY_BOSS_STATS : RANK_STATS[rank]
@@ -366,7 +368,7 @@ export default function BossMode({
             <BossFace boss={character} px={onDark ? 128 : 96} />
           </span>
           <div className="flex items-center gap-2">
-            <h1 className="font-heading text-3xl font-bold">{character.name}</h1>
+            <h1 className="font-heading text-3xl font-extrabold">{character.name}</h1>
             {rankStars}
           </div>
           <p
@@ -397,21 +399,17 @@ export default function BossMode({
           <Zap className="size-4" /> +{MODE_XP_BONUS.boss} XP en cas de victoire
         </p>
 
-        <button
-          type="button"
+        {/* L'action unique de l'écran : le gros bouton de l'app, plus le rond
+            « GO » maison (audit du 23/09/2026). */}
+        <Button
+          size="xl"
+          shine
+          className="w-full max-w-sm"
           onClick={() => start(false)}
           disabled={pool.length === 0}
-          className="group go-pulse relative flex size-32 flex-col items-center justify-center gap-1 overflow-hidden rounded-full bg-primary text-primary-foreground shadow-xl shadow-primary/30 transition-all hover:scale-105 active:scale-95 disabled:opacity-40"
         >
-          <span
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-x-4 top-2 h-12 rounded-full bg-gradient-to-b from-white/20 to-transparent"
-          />
-          <span aria-hidden="true" className="text-4xl transition-transform group-hover:rotate-12">
-            ⚔️
-          </span>
-          <span className="font-heading text-xl font-bold">GO</span>
-        </button>
+          <Swords /> C&apos;est parti
+        </Button>
 
         {pool.length === 0 ? (
           <p className={cn('max-w-xs text-sm', inkSoft)}>
@@ -423,16 +421,18 @@ export default function BossMode({
             exclusif. Disparaît lundi — vaincu ou pas. Réservé à l'Arène. */}
         {variant === 'arena' ? (
         <section className="w-full max-w-sm rounded-3xl border-2 border-highlight/60 bg-card p-4 text-left shadow-sm">
-          <p className="flex items-center gap-1.5 text-[11px] font-extrabold tracking-widest text-primary uppercase">
-            <Zap className="size-3.5 text-highlight" aria-hidden="true" />
+          {/* Titre de section : la recette commune de l'app, plus de petites
+              capitales espacées (audit du 23/09/2026). */}
+          <h2 className="titre-section flex items-center gap-1.5 text-primary">
+            <Zap className="size-4 text-highlight" aria-hidden="true" />
             Événement · Boss de la semaine
-          </p>
+          </h2>
           <div className="mt-2 flex items-center gap-3">
             <span className="flex size-12 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-primary text-2xl">
               <BossFace boss={weekly} px={48} />
             </span>
             <div className="min-w-0 flex-1">
-              <p className="font-heading text-base font-bold leading-tight">
+              <p className="font-heading text-base font-extrabold leading-tight">
                 {weekly.name}
               </p>
               <p className="text-xs text-muted-foreground">
@@ -572,7 +572,7 @@ export default function BossMode({
           )}
         </div>
         <div>
-          <h1 className="font-heading text-3xl font-bold">
+          <h1 className="font-heading text-3xl font-extrabold">
             {outcome === 'won'
               ? `${character.name} est vaincu !`
               : `${character.name} t’a eu…`}
@@ -721,48 +721,25 @@ export default function BossMode({
           le texte et les cartes de réponse (captures du 30/07). */}
       <div className={cn('flex flex-col gap-2', panel)}>
         {question.subject ? (
-          <p className="text-xs font-semibold text-muted-foreground uppercase">
-            {question.subject}
-          </p>
+          <p className="surtitre">{question.subject}</p>
         ) : null}
 
-        <h2 className="font-heading mb-1 text-xl font-bold text-balance">
+        <h2 className="font-heading mb-1 text-xl font-extrabold text-balance">
           {question.prompt}
         </h2>
-        {question.options.map((option, i) => {
-          const isCorrect = i === question.correctIndex
-          const isSelected = i === selected
-          return (
-            <button
-              key={i}
-              type="button"
-              disabled={answered}
-              onClick={() => answer(i)}
-              className={cn(
-                'flex items-center justify-between gap-3 rounded-2xl border px-4 py-3 text-left text-sm font-medium transition-all',
-                // Sur le panneau crème, une réponse « transparente » se
-                // confondrait avec le fond : on lui donne son propre relief.
-                onDark && !answered && 'bg-background',
-                !answered &&
-                  'hover:border-primary/40 hover:bg-accent hover:text-accent-foreground active:scale-[0.99]',
-                answered &&
-                  isCorrect &&
-                  'border-green-600 bg-green-600/10 text-green-700 dark:text-green-400',
-                answered &&
-                  isSelected &&
-                  !isCorrect &&
-                  'border-destructive bg-destructive/10 text-destructive',
-                answered && !isSelected && !isCorrect && 'opacity-50',
-              )}
-            >
-              {option}
-              {answered && isCorrect ? <Check className="size-4 shrink-0" /> : null}
-              {answered && isSelected && !isCorrect ? (
-                <X className="size-4 shrink-0" />
-              ) : null}
-            </button>
-          )
-        })}
+        {/* Le plateau partagé des jeux et du quiz : juste/faux en rôles
+            success/destructive, plus de liste maison en vert Tailwind (audit
+            du 23/09/2026). Sur le panneau crème de La Traque, ses plaques
+            gardent leur relief propre (contour net + tranche), plus besoin
+            du `bg-background` d'avant. La réponse se fige au premier tap. */}
+        <AnswerBoard
+          options={question.options}
+          correctIndex={question.correctIndex}
+          selected={selected}
+          revealed={answered}
+          layout="liste"
+          onAnswer={answer}
+        />
       </div>
 
       <p role="status" aria-live="polite" className="sr-only">

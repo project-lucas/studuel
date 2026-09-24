@@ -77,7 +77,7 @@ export default function Cahier({
                 <FileText className="size-4" />
               </span>
               <span className="min-w-0 flex-1">
-                <span className="block text-[0.7rem] font-extrabold tracking-wider text-[var(--muted-foreground)] uppercase">Pour aller plus loin</span>
+                <span className="surtitre block">Pour aller plus loin</span>
                 <span className="font-heading block text-[1.05rem] leading-tight font-extrabold">Le contrôle blanc</span>
                 <span className="block text-[0.8rem] text-[var(--muted-foreground)]">Une copie à rédiger, notée sur 20 par le prof IA.</span>
               </span>
@@ -119,7 +119,7 @@ function CarteExercice({
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
             <Etoiles n={l.etoiles} />
-            <span className="text-[0.68rem] font-extrabold tracking-wider text-[var(--muted-foreground)] uppercase">{COMPETENCES[l.competence] ?? ''}</span>
+            <span className="surtitre">{COMPETENCES[l.competence] ?? ''}</span>
           </div>
           <p className={cn('font-heading mt-0.5 text-[1.12rem] leading-tight font-extrabold text-balance', verrouille && 'text-[var(--muted-foreground)]')}>
             <span className="sr-only">Exercice {l.position} : </span>

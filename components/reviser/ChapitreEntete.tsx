@@ -252,7 +252,7 @@ export default function ChapitreEntete({
           >
             {/* Le titre du chapitre, SEUL, sans numéro : chaque professeur
                 suit l'ordre qu'il choisit. */}
-            <span className="font-heading block text-xl leading-tight font-bold text-balance">
+            <span className="font-heading block text-xl leading-tight font-extrabold text-balance">
               {titre}
             </span>
           </button>

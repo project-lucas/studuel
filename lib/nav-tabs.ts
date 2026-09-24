@@ -89,3 +89,39 @@ export function tabIndexForPath(pathname: string): number {
   )
 }
 
+
+/**
+ * L'onglet qu'on vient de toucher, et l'écran d'où on l'a touché.
+ *
+ * LA BARRE RÉPOND AU DOIGT, PAS À L'ÉCRAN. L'URL ne change qu'une fois le
+ * nouvel onglet entièrement construit — 150 à 700 ms sur un téléphone moyen
+ * (mesuré le 23/09/2026). Si la plaque violette attend l'URL, le doigt a
+ * touché et rien ne bouge : c'est cette immobilité qui se lit « lent ». Chez
+ * Clash Royale, la sélection part à l'instant du toucher.
+ */
+export type OngletVise = { cible: string; depuis: string }
+
+/**
+ * Le chemin que la barre d'onglets AFFICHE : l'onglet visé tant que l'URL
+ * n'a pas bougé depuis le toucher, l'URL dès qu'elle a changé (arrivée, ou
+ * navigation ailleurs entre-temps).
+ */
+export function cheminAffiche(pathname: string, vise: OngletVise | null): string {
+  return vise !== null && vise.depuis === pathname ? vise.cible : pathname
+}
+
+/**
+ * L'onglet VIVANT à l'écran : le chemin de l'onglet quand l'URL est EXACTEMENT
+ * sa racine (`/reviser`), `null` partout ailleurs — sous-pages comprises
+ * (`/reviser/maths` est une page ordinaire, pas l'onglet).
+ *
+ * LES CINQ ONGLETS RESTENT MONTÉS, COMME CHEZ CLASH ROYALE. Chacun vit dans son
+ * emplacement de la mise en page racine (`app/@defi`, `app/@reviser`…) ;
+ * `components/OngletsVivants` montre celui-ci et CACHE les autres sans les
+ * détruire (`<Activity>` de React). Revenir sur un onglet déjà visité ne le
+ * reconstruit plus : il se ré-affiche (35 à 130 ms au processeur ×4, contre 170
+ * à 680 ms pour le reconstruire — mesuré le 23/09/2026).
+ */
+export function ongletVivant(pathname: string): string | null {
+  return NAV_TABS.find((tab) => tab.path === pathname)?.path ?? null
+}

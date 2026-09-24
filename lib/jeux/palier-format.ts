@@ -252,57 +252,7 @@ export function hasTimeRecord(format: GameFormat): boolean {
   return true
 }
 
-// ------------------------------------------------------- les jetons de la carte
-
-/**
- * Ce qui change à ce palier, en deux ou trois jetons : les chiffres qui
- * comptent, plus la promesse de la banque quand le jeu en a une graduée. C'est
- * ce que la carte du jeu affiche sous chaque barreau de l'échelle — la
- * différence entre deux paliers doit se LIRE avant de se jouer.
- */
-export function palierChips(format: GameFormat, level: PalierLevel): string[] {
-  const scaled = scaleFormat(format, level)
-  const p = scaled.params
-  const l = scaled.lexicon
-  const chips: string[] = []
-  switch (p.mechanic) {
-    case 'sprint':
-      chips.push(`${p.sprint.seconds} s chrono`)
-      break
-    case 'vies':
-      chips.push(plural(p.vies.target, l.step))
-      chips.push(plural(p.vies.lives, 'vie'))
-      if (p.vies.questionSeconds !== null) {
-        chips.push(`${seconds(p.vies.questionSeconds)} / question`)
-      }
-      break
-    case 'paliers':
-      chips.push(plural(p.paliers.waves, l.step))
-      chips.push(`${seconds(p.paliers.startSeconds)} au départ`)
-      chips.push(plural(p.paliers.lives, 'vie'))
-      break
-    case 'expedition':
-      chips.push(plural(p.expedition.stops, l.step))
-      chips.push(`${seconds(p.expedition.questionSeconds)} / ${l.step}`)
-      break
-    case 'ascension':
-      chips.push(plural(p.ascension.floors, l.step))
-      chips.push(`−${p.ascension.fall} par erreur`)
-      break
-    case 'ordre':
-      if (p.ordre.boards !== null) chips.push(plural(p.ordre.boards, l.step))
-      if (p.ordre.globalSeconds !== null) chips.push(`${p.ordre.globalSeconds} s chrono`)
-      if (p.ordre.lives !== null) chips.push(plural(p.ordre.lives, 'vie'))
-      break
-    case 'ultime':
-      chips.push('1 vie')
-      chips.push('sans fin')
-      break
-  }
-  const bank = bankBrief(format.id, level)
-  if (bank) chips.unshift(bank)
-  return chips
-}
+// -------------------------------------------------------------- la banque
 
 /**
  * Ce que la BANQUE sert à ce palier, quand elle est graduée. Les jeux dont la

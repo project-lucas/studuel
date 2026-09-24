@@ -17,13 +17,13 @@ export default function ExamBanner({
     <Link
       href={`/reviser/examen-blanc?subject=${subject.slug}`}
       onClick={() => sfx.tap()}
-      className="group mt-3 flex items-center gap-3 rounded-2xl border-b-4 border-b-black/25 bg-gradient-to-r from-primary to-[color-mix(in_oklch,var(--primary),black_18%)] p-3.5 text-white shadow-md transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-[2px] active:border-b-2"
+      className="group mt-3 flex items-center gap-3 rounded-carte border-b-4 border-b-black/25 bg-gradient-to-r from-primary to-[color-mix(in_oklch,var(--primary),black_18%)] p-3.5 text-white shadow-md transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-[2px] active:border-b-2"
     >
       <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-white/15">
         <GraduationCap className="size-5.5" strokeWidth={2.2} aria-hidden="true" />
       </span>
       <span className="min-w-0 flex-1">
-        <span className="font-heading block text-sm leading-tight font-bold">
+        <span className="font-heading block text-sm leading-tight font-extrabold">
           Examen blanc {deLaMatiere(subject.name)}
         </span>
         <span className="mt-0.5 block text-[11px] font-semibold text-white/75">

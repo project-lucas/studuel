@@ -191,6 +191,8 @@ export type ConseilsResult = {
   ok: boolean
   conseils?: string[]
   quota?: boolean
+  /** Élève gratuit : Marcel fait partie de Studuel+ (migration 378). */
+  abonnement?: boolean
   plafond?: boolean
   unavailable?: boolean
 }
@@ -216,7 +218,8 @@ export async function conseilsOral(input: {
     return { ok: false, unavailable: true }
   }
   if (verdict === 'plafond') return { ok: false, plafond: true }
-  if (verdict !== 'quota' && verdict !== 'jeton')
+  if (verdict === 'abonnement') return { ok: false, abonnement: true }
+  if (verdict !== 'credit' && verdict !== 'quota' && verdict !== 'jeton')
     return { ok: false, quota: true }
 
   const apiKey = process.env.AI_API_KEY ?? process.env.OPENAI_API_KEY ?? null

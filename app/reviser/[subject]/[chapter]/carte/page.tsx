@@ -1,5 +1,5 @@
 import { notFound, redirect } from 'next/navigation'
-import BackButton from '@/components/BackButton'
+import EnTetePage from '@/components/reviser/EnTetePage'
 import MindMap from '@/components/MindMap'
 import UnlockChapterCard from '@/components/UnlockChapterCard'
 import { createClient } from '@/lib/supabase/server'
@@ -10,8 +10,6 @@ import { fetchGems, fetchUnlockedChapters } from '@/lib/gems-access'
 import { mindMapPlaceholder } from '@/lib/mind-map'
 import { mindMapFromLessons, type LessonForMap } from '@/lib/mind-map-auto'
 import { chapterHasMindMap, fetchMindMap } from '@/lib/mind-map-access'
-import { cn } from '@/lib/utils'
-import { subjectTheme, GRID_PATTERN } from '@/lib/subject-style'
 import SubjectIcon from '@/components/SubjectIcon'
 import GemIcon from '@/components/ui/GemIcon'
 import { CHAPTER_COLUMNS, type Subject, type Chapter, type MindMapData } from '@/lib/types'
@@ -54,7 +52,6 @@ export default async function MindMapPage({
   if (!row) notFound()
 
   const { subject, ...chapter } = row
-  const theme = subjectTheme(subject.color)
   const access = chapterAccess(tier, chapterId, unlockedChapters)
   const unlocked = access !== 'locked'
 
@@ -86,40 +83,31 @@ export default async function MindMapPage({
   const carteExiste = hasMindMap || derivee || !unlocked
 
   return (
-    <div className="-mx-4 -mt-16 md:-mx-8 md:-mt-10">
-      <header
-        className={cn('relative overflow-hidden px-4 pt-20 pb-6 md:px-8 md:pt-12', theme.header)}
-      >
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.06]"
-          style={GRID_PATTERN}
-          aria-hidden="true"
-        />
-        <div className="relative mx-auto w-full max-w-4xl">
-          <BackButton
-            fallback={`/reviser/${subject.slug}`}
-            label={`Retour — ${subject.name}`}
-            className="mb-4"
-          />
-          <h1 className="font-heading text-2xl font-bold text-balance md:text-3xl">
-            Fiche de révision
-          </h1>
-          <p className="mt-1 flex items-center gap-1.5 text-sm font-medium opacity-70">
+    // La carte est large : elle prend toute la largeur de lecture du gabarit
+    // (max-w-4xl). L'en-tête est celui de toutes les pages de Réviser, sur le
+    // mur crème de l'app — plus de lavis de matière (audit du 23/09/2026).
+    <div>
+      <EnTetePage
+        retour={{ fallback: `/reviser/${subject.slug}`, label: `Retour — ${subject.name}` }}
+        titre="Fiche de révision"
+        sousTitre={
+          <span className="flex items-center gap-1.5">
             <SubjectIcon slug={subject.slug} className="size-4 shrink-0" strokeWidth={2} aria-hidden="true" />
             {subject.name} · {chapter.level} · {chapter.title}
+          </span>
+        }
+      >
+        {access === 'unlocked' ? (
+          // Badge réservé au déblocage à la gemme : il rappelle que CE
+          // chapitre appartient à l'élève (un abonné, lui, a déjà tout).
+          <p className="inline-flex items-center gap-1.5 rounded-full border bg-card px-3 py-1 text-xs font-bold">
+            <GemIcon className="size-3.5" aria-hidden="true" />
+            Débloquée
           </p>
-          {access === 'unlocked' ? (
-            // Badge réservé au déblocage à la gemme : il rappelle que CE
-            // chapitre appartient à l'élève (un abonné, lui, a déjà tout).
-            <p className="bg-card/70 mt-3 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-bold">
-              <GemIcon className="size-3.5" aria-hidden="true" />
-              Débloquée
-            </p>
-          ) : null}
-        </div>
-      </header>
+        ) : null}
+      </EnTetePage>
 
-      <div className="mx-auto w-full max-w-4xl px-4 py-6 md:px-8">
+      <div className="mt-6">
         {!carteExiste ? (
           <p className="text-sm text-muted-foreground">
             Ce chapitre n&apos;a pas encore de cours écrit : il n&apos;y a rien à

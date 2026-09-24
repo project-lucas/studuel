@@ -8,7 +8,7 @@ import {
   CardFooter,
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import PageHeader from '@/components/PageHeader'
+import EnTetePage from '@/components/reviser/EnTetePage'
 import ReviewPlayer, { type ReviewPlayItem } from '@/components/ReviewPlayer'
 import WorkTimer from '@/components/WorkTimer'
 import { createClient } from '@/lib/supabase/server'
@@ -45,10 +45,11 @@ export default async function RevoirPage({
 
   if (!user) {
     return (
-      <div>
-        <PageHeader
-          title="À revoir"
-          description="Ta file de révision espacée — chaque chose au bon moment."
+      <div className="flex flex-col gap-6">
+        <EnTetePage
+          retour={{ fallback: '/reviser', label: 'Retour à Réviser' }}
+          titre="À revoir"
+          sousTitre="Ta file de révision espacée — chaque chose au bon moment."
         />
         <Card className="mx-auto w-full max-w-md">
           <CardHeader>
@@ -198,9 +199,12 @@ export default async function RevoirPage({
           ce compteur, un élève qui ne révise QUE par le SRS affichait 0 min de
           temps de travail, sur /moi comme chez ses parents. */}
       <WorkTimer />
-      <PageHeader
-        title={subjectName ? `À revoir · ${subjectName}` : 'À revoir'}
-        description="Revanche d'abord, puis ce que ta mémoire s'apprête à oublier."
+      {/* L'en-tête commun de Réviser : un H1 seul, sans retour, était une
+          recette à part (audit du 23/09/2026). */}
+      <EnTetePage
+        retour={{ fallback: '/reviser', label: 'Retour à Réviser' }}
+        titre={subjectName ? `À revoir · ${subjectName}` : 'À revoir'}
+        sousTitre="Revanche d'abord, puis ce que ta mémoire s'apprête à oublier."
       />
       <ReviewPlayer items={items} />
     </div>

@@ -51,11 +51,11 @@ beforeEach(() => {
 })
 
 describe('la fiche d’une capsule', () => {
-  it('débloque en gemmes quand le solde suffit, puis mène au carnet', async () => {
+  it('débloque en gemmes quand le solde suffit, puis mène à la bibliothèque', async () => {
     fiche(600)
     fireEvent.click(screen.getByRole('button', { name: /Débloquer pour/ }))
     await waitFor(() => expect(acheterCapsule).toHaveBeenCalledWith('orientation'))
-    expect(await screen.findByText('C’est rangé dans ton carnet !')).toBeInTheDocument()
+    expect(await screen.findByText('C’est rangé dans ta bibliothèque !')).toBeInTheDocument()
     fireEvent.click(screen.getByRole('button', { name: 'Ouvrir maintenant' }))
     expect(push).toHaveBeenCalledWith('/carnet/capsules/orientation')
   })
@@ -85,7 +85,7 @@ describe('la fiche d’une capsule', () => {
       ouverteLe: null,
       termineeLe: null,
     })
-    fireEvent.click(screen.getByRole('button', { name: 'Ouvrir dans mon carnet' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Ouvrir dans ma bibliothèque' }))
     expect(push).toHaveBeenCalledWith('/carnet/capsules/orientation')
   })
 

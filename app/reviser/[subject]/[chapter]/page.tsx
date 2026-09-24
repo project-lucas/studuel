@@ -1,10 +1,8 @@
 import { notFound, redirect } from 'next/navigation'
-import BackButton from '@/components/BackButton'
+import EnTetePage from '@/components/reviser/EnTetePage'
 import SupportChips from '@/components/reviser/SupportChips'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
-import { cn } from '@/lib/utils'
-import { subjectTheme, GRID_PATTERN } from '@/lib/subject-style'
 import { CHAPTER_COLUMNS, type Chapter, type Subject } from '@/lib/types'
 import { loadChapterSupports } from './supports'
 
@@ -19,6 +17,10 @@ export const dynamic = 'force-dynamic'
 // Apprendre (Cours, Fiche) · Mémoriser (Flashcards) · Se tester (Quiz,
 // Exercice, Moi vs IA). Cinq tuiles en vrac, dont trois jouaient les mêmes
 // questions, ne disaient pas la différence ; les groupes la disent.
+//
+// Plus de lavis bleu ciel ni de « Chapitre N » en surtitre (audit du
+// 23/09/2026, docs/template-matiere.md) : l'en-tête est celui de toutes les
+// pages de Réviser, sur le mur crème de l'app, et la matière se dit dessous.
 export default async function ChapterPage({
   params,
 }: {
@@ -52,46 +54,26 @@ export default async function ChapterPage({
   // écran de choix qui n'en propose aucun.
   if (supports.length === 0) redirect(`/reviser/${slug}`)
 
-  const theme = subjectTheme(subject.color)
-
   return (
-    <div className="-mx-4 -mt-16 md:-mx-8 md:-mt-10">
-      <header
-        className={cn(
-          'relative overflow-hidden px-4 pt-20 pb-10 md:px-8 md:pt-12',
-          theme.header,
-        )}
-      >
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.08]"
-          style={GRID_PATTERN}
-          aria-hidden="true"
-        />
-        <div className="relative mx-auto w-full max-w-2xl">
-          <BackButton fallback={`/reviser/${subject.slug}`} />
-          <p className="mt-4 text-center text-sm font-semibold opacity-70">
-            Chapitre {chapter.position}
-          </p>
-          <h1 className="font-heading mt-0.5 text-center text-2xl font-bold text-balance md:text-3xl">
-            {chapter.title}
-          </h1>
-        </div>
-      </header>
+    <div className="mx-auto w-full max-w-2xl">
+      <EnTetePage
+        retour={{ fallback: `/reviser/${subject.slug}` }}
+        titre={chapter.title}
+        sousTitre={subject.name}
+      />
 
-      <div className="relative -mt-6 rounded-t-3xl bg-background">
-        <div className="mx-auto w-full max-w-2xl px-4 pt-6 pb-24 md:px-8">
-          <h2 className="font-heading text-center text-lg font-bold">
-            Par quoi tu commences ?
-          </h2>
-          <p className="mt-0.5 mb-5 text-center text-sm text-muted-foreground">
-            Tout ce chapitre, dans le format qui te va.
-          </p>
-          <SupportChips
-            chips={supports}
-            layout="grid"
-            label={`Travailler ${chapter.title}`}
-          />
-        </div>
+      <div className="mt-6">
+        <h2 className="titre-section text-center">
+          Par quoi tu commences ?
+        </h2>
+        <p className="mt-0.5 mb-5 text-center text-sm text-muted-foreground">
+          Tout ce chapitre, dans le format qui te va.
+        </p>
+        <SupportChips
+          chips={supports}
+          layout="grid"
+          label={`Travailler ${chapter.title}`}
+        />
       </div>
     </div>
   )

@@ -399,7 +399,7 @@ export default function ResumeSessions({ items }: { items: ResumeItem[] }) {
 
   return (
     <section aria-label="Reprendre une session">
-      <h2 className="font-heading mb-2 px-1 text-sm font-bold tracking-wide text-muted-foreground uppercase">
+      <h2 className="titre-section mb-2 px-1">
         {titre}
       </h2>
 

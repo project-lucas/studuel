@@ -12,6 +12,7 @@ import {
   TimerOff,
   Trophy,
 } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { recordReviewAnswers } from '@/app/reviser/actions'
@@ -166,7 +167,7 @@ export default function LessonFlashcards({
           <TimerOff className="size-10" strokeWidth={2.4} aria-hidden="true" />
         </span>
         <div>
-          <h2 className="font-heading text-2xl font-bold">Temps écoulé !</h2>
+          <h2 className="font-heading text-2xl font-extrabold">Temps écoulé !</h2>
           <p className="text-muted-foreground mt-1 text-sm text-balance">
             La manche s’arrête là, et rien n’est enregistré : {index} carte
             {index > 1 ? 's' : ''} sur {deck.length}. En duel non plus, le chrono
@@ -208,7 +209,7 @@ export default function LessonFlashcards({
           <Trophy className="text-foreground size-10" aria-hidden="true" />
         </span>
         <div>
-          <h2 className="font-heading text-2xl font-bold">Paquet terminé !</h2>
+          <h2 className="font-heading text-2xl font-extrabold">Paquet terminé !</h2>
           <p className="text-muted-foreground mt-1 text-sm">
             {known} carte{known > 1 ? 's' : ''} sue{known > 1 ? 's' : ''} ·{' '}
             {toReview} à revoir
@@ -366,25 +367,20 @@ export default function LessonFlashcards({
         </button>
       </div>
 
-      {/* Auto-évaluation — EN BAS de la carte. Corail pour « À revoir » (c'est
-          le rôle de l'alerte), vert `success` pour « su » : les rôles de la DA,
-          plus l'ambre et le vert bruts d'avant. */}
+      {/* Auto-évaluation — EN BAS de la carte, avec les boutons de la maison.
+          Ils ont été corail (« À revoir ») et vert (« Je le savais ») : deux
+          ÉTATS posés sur deux actions, et « revoir une carte » n'a rien d'une
+          alerte. Le violet plein va au geste qu'on veut voir cliqué, le
+          contour à l'autre ; le vert et le corail restent aux verdicts. */}
       <div className="grid grid-cols-2 gap-3">
-        <button
-          type="button"
-          onClick={() => assess('review')}
-          className="flex cursor-pointer items-center justify-center gap-2 rounded-2xl bg-destructive px-4 py-3.5 font-bold text-white shadow-[0_5px_0_0] shadow-black/20 transition-transform active:translate-y-[3px] active:shadow-[0_2px_0_0]"
-        >
-          <RotateCcw className="size-5" aria-hidden="true" />À revoir
-        </button>
-        <button
-          type="button"
-          onClick={() => assess('known')}
-          className="flex cursor-pointer items-center justify-center gap-2 rounded-2xl bg-success px-4 py-3.5 font-bold text-white shadow-[0_5px_0_0] shadow-black/20 transition-transform active:translate-y-[3px] active:shadow-[0_2px_0_0]"
-        >
-          <Check className="size-5" strokeWidth={3} aria-hidden="true" />
-          Je le savais !
-        </button>
+        <Button type="button" variant="outline" size="xl" onClick={() => assess('review')}>
+          <RotateCcw aria-hidden="true" />
+          À revoir
+        </Button>
+        <Button type="button" size="xl" onClick={() => assess('known')}>
+          <Check strokeWidth={3} aria-hidden="true" />
+          Je le savais
+        </Button>
       </div>
 
       <p className="text-muted-foreground text-center text-xs">
@@ -421,14 +417,14 @@ function CardFace({
     >
       {/* Onglet du haut */}
       <span
-        className="font-heading -mt-11 flex size-9 items-center justify-center rounded-full border-4 border-white/30 bg-inherit text-lg font-bold"
+        className="font-heading -mt-11 flex size-9 items-center justify-center rounded-full border-4 border-white/30 bg-inherit text-lg font-extrabold"
         aria-hidden="true"
       >
         {tab}
       </span>
 
       <div className="flex flex-1 flex-col items-center justify-center gap-3 text-center">
-        <p className="font-heading text-lg leading-snug font-bold text-balance md:text-xl">
+        <p className="font-heading text-lg leading-snug font-extrabold text-balance md:text-xl">
           {body}
         </p>
         {hint ? (

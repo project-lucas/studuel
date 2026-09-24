@@ -1,3 +1,4 @@
+import { useId } from 'react'
 import {
   BookOpen,
   Brain,
@@ -38,6 +39,11 @@ function Anneau({
 }) {
   const R = 64
   const C = 2 * Math.PI * R
+  // UN IDENTIFIANT PAR DESSIN (useId) : les onglets restent montés
+  // (components/OngletsVivants) et Chrome ne peint pas un dégradé défini dans un
+  // onglet caché (`display: none`). Un identifiant partagé pouvait donc viser
+  // le dégradé d'un onglet caché et laisser ce dessin sans couleur.
+  const gradId = useId()
   const filled = capacite === null ? 0 : (capacite / 100) * C
 
   return (
@@ -53,7 +59,7 @@ function Anneau({
         }
       >
         <defs>
-          <linearGradient id="jauge-capacite-grad" x1="0" y1="0" x2="1" y2="1">
+          <linearGradient id={gradId} x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stopColor="var(--color-emerald-300)" />
             <stop offset="100%" stopColor="var(--destructive)" />
           </linearGradient>
@@ -74,7 +80,7 @@ function Anneau({
             cy="80"
             r={R}
             fill="none"
-            stroke="url(#jauge-capacite-grad)"
+            stroke={`url(#${gradId})`}
             strokeWidth="13"
             strokeLinecap="round"
             strokeDasharray={`${filled} ${C}`}
@@ -114,7 +120,7 @@ export default function JaugeCapacite({
   return (
     <section
       aria-label="Ma capacité"
-      className="moi-hero moi-card relative overflow-hidden rounded-3xl p-4 text-white"
+      className="moi-hero moi-card relative overflow-hidden p-4 text-white"
     >
       <span
         aria-hidden="true"
@@ -124,7 +130,7 @@ export default function JaugeCapacite({
       <div className="relative flex items-center gap-4">
         <Anneau capacite={capacite} plafond={plafond} />
         <div className="min-w-0 flex-1">
-          <h2 className="font-heading text-lg leading-tight font-bold">
+          <h2 className="titre-section">
             Ton plafond invisible
           </h2>
           <p className="mt-1 text-sm leading-snug text-white/85">

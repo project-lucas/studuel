@@ -9,7 +9,6 @@ import { toast } from '@/lib/toast'
 import { epinglerCours } from '@/app/carnet/actions'
 import { deleteCourse } from '@/app/carnet/cours/actions'
 import ProgressRing from '@/components/ProgressRing'
-import BackButton from '@/components/BackButton'
 import CarnetFab from '@/components/carnet/CarnetFab'
 import CarteCours from '@/components/carnet/CarteCours'
 import CreateCourseSheet from '@/components/carnet/CreateCourseSheet'
@@ -87,6 +86,11 @@ import {
 // transverse, `/carnet/cours/revoir`) est reliée ICI, sous la suggestion, dès
 // que des cartes sont dues dans AU MOINS DEUX dossiers : la suggestion ne
 // reprend qu'un cours, ce lien joue tout ce qui est dû d'un coup.
+//
+// MA BIBLIOTHÈQUE (24/09/2026) : le carnet est devenu le rayon « Dossiers » de
+// la bibliothèque, à côté des capsules et des fiches achetées. L'en-tête et le
+// filtre sont tenus par `components/bibliotheque/Bibliotheque`, qui garde ce
+// composant monté (caché) quand un autre rayon s'affiche.
 // -----------------------------------------------------------------------------
 
 export default function BentoCarnet({
@@ -94,15 +98,12 @@ export default function BentoCarnet({
   prefs: prefsInitiales,
   revuesAujourdhui,
   aujourdhui,
-  capsules,
 }: {
   cours: CoursCarnet[]
   prefs: PreferencesCarnet
   /** Cartes revues aujourd'hui, tous dossiers confondus. */
   revuesAujourdhui: number
   aujourdhui: string
-  /** L'étagère « Mes capsules » (rendue par la page), en tête du carnet. */
-  capsules?: React.ReactNode
 }) {
   const [cours, setCours] = useState(coursInitiaux)
   const [prefs, setPrefs] = useState(prefsInitiales)
@@ -187,18 +188,11 @@ export default function BentoCarnet({
   }
   const coursOptions = cours.find((c) => c.id === optionsDe) ?? null
 
+  // L'en-tête, le filtre de la bibliothèque, les capsules et les fiches vivent
+  // dans `Bibliotheque` (24/09/2026) : ce composant n'est plus que le rayon
+  // Dossiers.
   return (
-    <div className="cascade flex flex-col gap-3 pb-14">
-      <header className="mb-0.5 flex items-center gap-3">
-        <BackButton fallback="/reviser" label="Retour à Réviser" />
-        <h1 className="font-heading text-2xl font-bold text-foreground">
-          Mon carnet
-        </h1>
-      </header>
-
-      {/* --- 0. Les capsules de la Boutique (migration 366) ----------------- */}
-      {capsules}
-
+    <>
       {/* --- 1. La barre d'outils ------------------------------------------ */}
       <div className="flex items-center gap-1.5">
         <div
@@ -243,7 +237,7 @@ export default function BentoCarnet({
         <Link
           href="/carnet/cours/revoir"
           onClick={() => sfx.tap()}
-          className="flex items-center gap-2.5 rounded-2xl bg-card px-3.5 py-2.5 text-sm font-extrabold text-foreground ring-1 ring-black/[0.06] transition active:scale-[0.99]"
+          className="carte flex items-center gap-2.5 px-3.5 py-2.5 text-sm font-extrabold text-foreground transition active:scale-[0.99]"
         >
           <Layers
             className="size-4 shrink-0 text-primary"
@@ -370,7 +364,7 @@ export default function BentoCarnet({
         onClose={() => setCreer(false)}
         cours={cours}
       />
-    </div>
+    </>
   )
 }
 
@@ -404,7 +398,7 @@ function BlocSuggestion({
         type="button"
         onClick={onCreer}
         aria-haspopup="dialog"
-        className="carnet-hero flex items-center gap-3 rounded-[22px] bg-primary p-3 text-left text-primary-foreground shadow-sm transition active:scale-[0.98]"
+        className="carnet-hero flex items-center gap-3 rounded-carte bg-primary p-3 text-left text-primary-foreground transition active:scale-[0.98]"
       >
         <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-white/16 text-xl">
           ✨
@@ -434,7 +428,7 @@ function BlocSuggestion({
 
   if (suggestion.type === 'remplir') {
     return (
-      <div className="carnet-hero flex items-center gap-3 rounded-[22px] bg-highlight/30 p-3 ring-1 ring-highlight/50">
+      <div className="carnet-hero flex items-center gap-3 rounded-carte bg-highlight/30 p-3 ring-1 ring-highlight/50">
         <span
           className={cn(
             'flex size-11 shrink-0 items-center justify-center rounded-2xl bg-white',
@@ -472,7 +466,7 @@ function BlocSuggestion({
       href={hrefRevision(cours.id)}
       onClick={() => sfx.tap()}
       aria-label={`Reprendre ${cours.title} : ${cartes} carte${cartes > 1 ? 's' : ''}, environ ${minutes} minute${minutes > 1 ? 's' : ''}, ${complement}. Lancer la révision.`}
-      className="carnet-hero relative flex items-center gap-3 rounded-[22px] bg-primary p-3 pr-2.5 text-primary-foreground shadow-sm transition active:scale-[0.98]"
+      className="carnet-hero relative flex items-center gap-3 rounded-carte bg-primary p-3 pr-2.5 text-primary-foreground transition active:scale-[0.98]"
     >
       <span
         className={cn(

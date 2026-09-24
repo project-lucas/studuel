@@ -24,7 +24,7 @@ export default function EntrainementPanel({
 }) {
   if (matieres.length === 0) {
     return (
-      <p className="bg-card text-muted-foreground rounded-[20px] p-5 text-center text-[13px] leading-relaxed font-semibold">
+      <p className="carte text-muted-foreground p-5 text-center text-[13px] leading-relaxed font-semibold">
         Choisis tes matières dans Réviser, et je te préparerai un contrôle pour
         chacune d’elles.
       </p>
@@ -48,7 +48,7 @@ export default function EntrainementPanel({
         </span>
       </header>
 
-      <ul className="bg-card divide-foreground/8 divide-y rounded-[20px] px-3 shadow-[0_2px_0_rgba(36,48,79,.06),0_14px_26px_-22px_rgba(36,48,79,.9)]">
+      <ul className="carte divide-foreground/8 divide-y px-3">
         {matieres.map((matiere) => {
           const initials = subjectInitials(matiere.slug, matiere.name)
 

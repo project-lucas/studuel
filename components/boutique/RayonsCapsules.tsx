@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { Check, Clock } from 'lucide-react'
-import CouvertureCapsule from '@/components/capsules/CouvertureCapsule'
+import { Check } from 'lucide-react'
+import BlocCapsule from '@/components/capsules/BlocCapsule'
 import BandeauSection from '@/components/boutique/BandeauSection'
 import PrixGemmes from '@/components/boutique/PrixGemmes'
 import FicheCapsule from '@/components/boutique/FicheCapsule'
@@ -14,13 +14,20 @@ import {
   type Capsule,
 } from '@/lib/capsules'
 import { sfx } from '@/lib/sounds'
+import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
 
 /**
  * LES CAPSULES, AU CENTRE DE LA BOUTIQUE (Lucas, 18/09/2026) : des
- * mini-formations rangées par thème, un rayon qui défile sur le côté par
- * thème. Une carte ouvre la fiche produit (FicheCapsule), où l'on débloque en
- * gemmes — ou, pour les plus chères, par carte bancaire.
+ * mini-formations rangées par thème. Depuis le 24/09/2026, chacune est un BLOC
+ * pleine largeur façon offre du magasin de Clash Royale (BlocCapsule : cadre à
+ * sa teinte, scènes qui défilent, panneau du prix à droite), les blocs les uns
+ * sous les autres — plus de rayon qui défile sur le côté. Un bloc ouvre la
+ * fiche produit (FicheCapsule), où l'on débloque en gemmes — ou, pour les plus
+ * chères, par carte bancaire.
  */
+/** La fiche fermée — une CONSTANTE : `useFermeAuMasquage` la veut stable. */
+const FICHE_FERMEE: { id: string | null; open: boolean } = { id: null, open: false }
+
 export default function RayonsCapsules({
   capsules,
   achats,
@@ -34,10 +41,11 @@ export default function RayonsCapsules({
 }) {
   // La fiche garde sa capsule pendant l'animation de fermeture : on retient
   // la dernière ouverte, et `open` dit seulement si elle est à l'écran.
-  const [fiche, setFiche] = useState<{ id: string | null; open: boolean }>({
-    id: null,
-    open: false,
-  })
+  const [fiche, setFiche] = useState(FICHE_FERMEE)
+  // « Ouvrir dans mon carnet » quitte la Boutique sans refermer la fiche : au
+  // retour sur l'onglet (gardé vivant, components/OngletsVivants), elle repart
+  // fermée.
+  useFermeAuMasquage(setFiche, FICHE_FERMEE)
   const parCapsule = new Map(achats.map((a) => [a.capsuleId, a]))
   const rayons = rayonsParTheme(capsules)
   const ouverte = capsules.find((c) => c.id === fiche.id) ?? null
@@ -50,7 +58,7 @@ export default function RayonsCapsules({
         </BandeauSection>
         <p className="px-1 text-sm text-muted-foreground">
           Apprends autre chose avec des mini-formations à débloquer en gemmes : un cours, une
-          fiche, un quiz et un outil. Elles t’attendent ensuite dans ton carnet.
+          fiche, un quiz et un outil. Elles t’attendent ensuite dans ta bibliothèque.
         </p>
       </header>
 
@@ -59,19 +67,20 @@ export default function RayonsCapsules({
           Les premières capsules arrivent très bientôt.
         </p>
       ) : (
-        rayons.map(({ theme, capsules: liste }) => (
+        rayons.map(({ theme, capsules: liste }, indexRayon) => (
           <div key={theme.id} className="flex flex-col gap-2">
             <div className="flex items-baseline justify-between gap-3 px-1">
               <h3 className="font-heading text-lg font-extrabold">{theme.label}</h3>
               <p className="truncate text-xs font-semibold text-muted-foreground">{theme.accroche}</p>
             </div>
-            <ul className="capsule-rayon -mx-4 flex gap-3 overflow-x-auto px-4 pt-1 pb-3">
-              {liste.map((capsule) => (
-                <li key={capsule.id} className="flex w-60 shrink-0 snap-start">
-                  <CarteCapsule
+            <ul className="mx-auto flex w-full max-w-xl flex-col gap-4 pb-1">
+              {liste.map((capsule, index) => (
+                <li key={capsule.id}>
+                  <OffreCapsule
                     capsule={capsule}
                     achat={parCapsule.get(capsule.id) ?? null}
                     gemmes={gemmes}
+                    prioritaire={indexRayon === 0 && index === 0}
                     onOpen={() => {
                       sfx.tap()
                       setFiche({ id: capsule.id, open: true })
@@ -99,61 +108,49 @@ export default function RayonsCapsules({
   )
 }
 
-function CarteCapsule({
+/** Une capsule en vente : le bloc, et au pied de son panneau le prix ou l'état. */
+function OffreCapsule({
   capsule,
   achat,
   gemmes,
+  prioritaire,
   onOpen,
 }: {
   capsule: Capsule
   achat: AchatCapsule | null
   gemmes: number
+  prioritaire: boolean
   onOpen: () => void
 }) {
   const etat = etatCapsule(capsule, achat, gemmes)
   const possedee = etat.kind === 'possedee'
 
   return (
-    <button
-      type="button"
+    <BlocCapsule
+      capsule={capsule}
       onClick={onOpen}
-      aria-haspopup="dialog"
-      aria-label={`${capsule.titre} — ${possedee ? 'dans ton carnet' : `${capsule.prixGemmes} gemmes`}`}
-      className="press-3d flex w-full cursor-pointer flex-col overflow-hidden rounded-3xl bg-card text-left ring-1 ring-border"
-    >
-      <CouvertureCapsule capsule={capsule} taille="carte">
-        <span className="absolute bottom-2.5 left-2.5 flex items-center gap-1 rounded-full bg-black/25 px-2 py-0.5 text-[11px] font-bold backdrop-blur-sm">
-          <Clock className="size-3" aria-hidden="true" /> {capsule.dureeMin} min
-        </span>
-        {possedee ? (
-          <span className="absolute top-2.5 right-2.5 flex items-center gap-1 rounded-full bg-card px-2 py-0.5 text-[11px] font-extrabold text-primary shadow-sm">
-            <Check className="size-3" strokeWidth={3} aria-hidden="true" /> À toi
+      ouvreUneFeuille
+      premiereImagePrioritaire={prioritaire}
+      ariaLabel={`${capsule.titre} — ${possedee ? 'dans ta bibliothèque' : `${capsule.prixGemmes} gemmes`}`}
+      pied={
+        possedee ? (
+          <span className="flex items-center justify-center gap-1 rounded-lg bg-white py-1.5 text-xs font-extrabold text-primary">
+            <Check className="size-3.5" strokeWidth={3} aria-hidden="true" /> À toi
           </span>
         ) : etat.kind === 'en-attente' ? (
-          <span className="absolute top-2.5 right-2.5 rounded-full bg-card px-2 py-0.5 text-[11px] font-extrabold text-foreground shadow-sm">
+          <span className="block rounded-lg bg-white/90 py-1.5 text-center text-[11px] font-extrabold text-foreground">
             Demande envoyée
           </span>
-        ) : null}
-      </CouvertureCapsule>
-
-      <div className="flex flex-1 flex-col gap-1 p-3.5">
-        <h4 className="font-heading text-base leading-tight font-extrabold text-balance">
-          {capsule.titre}
-        </h4>
-        <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">{capsule.accroche}</p>
-        <div className="mt-auto flex items-center justify-between gap-2 pt-3">
-          {possedee ? (
-            <span className="font-heading text-sm font-extrabold text-primary">Ouvrir</span>
-          ) : (
-            <PrixGemmes montant={capsule.prixGemmes} className="text-base text-primary" />
-          )}
-          {!possedee && capsule.prixEuros !== null ? (
-            <span className="text-[11px] font-bold text-muted-foreground">
-              ou {libelleEuros(capsule.prixEuros)}
-            </span>
-          ) : null}
-        </div>
-      </div>
-    </button>
+        ) : (
+          // Le prix, sur la bande sombre du bas du panneau, comme au magasin.
+          <span className="flex flex-col items-center gap-0.5 rounded-lg bg-black/35 py-1.5">
+            <PrixGemmes montant={capsule.prixGemmes} className="text-base text-white" iconeClassName="size-4.5" />
+            {capsule.prixEuros !== null ? (
+              <span className="text-[10px] font-bold text-white/75">ou {libelleEuros(capsule.prixEuros)}</span>
+            ) : null}
+          </span>
+        )
+      }
+    />
   )
 }

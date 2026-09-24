@@ -73,7 +73,7 @@ export default function OralPanel({ snapshot }: { snapshot: OralSnapshot }) {
 
   if (!disponible) {
     return (
-      <div className="bg-card rounded-[20px] p-5 text-center">
+      <div className="carte p-5 text-center">
         <Mic className="text-muted-foreground mx-auto size-6" aria-hidden="true" />
         <p className="font-heading mt-2 text-[15px] font-extrabold">
           L’atelier d’oral n’est pas encore ouvert.
@@ -93,7 +93,7 @@ export default function OralPanel({ snapshot }: { snapshot: OralSnapshot }) {
   return (
     <div className="flex flex-col gap-4">
       {/* L'accroche : toujours la PROCHAINE marche, jamais un pourcentage. */}
-      <section className="bg-card rounded-[20px] p-4 shadow-[0_2px_0_rgba(36,48,79,.06),0_14px_26px_-22px_rgba(36,48,79,.9)]">
+      <section className="carte p-4">
         <p className="font-heading text-[15px] leading-snug font-extrabold text-balance">
           {accrocheEchelle(etat)}
         </p>
@@ -125,7 +125,7 @@ export default function OralPanel({ snapshot }: { snapshot: OralSnapshot }) {
         <h2 className="font-heading mx-0.5 mb-1.5 text-[15px] font-extrabold">
           Les quatre barreaux
         </h2>
-        <ul className="bg-card divide-foreground/8 divide-y rounded-[20px] py-1 shadow-[0_2px_0_rgba(36,48,79,.06),0_14px_26px_-22px_rgba(36,48,79,.9)]">
+        <ul className="carte divide-foreground/8 divide-y py-1">
           {BARREAUX.map((b, i) => (
             <BarreauLigne
               key={b.id}
@@ -147,7 +147,7 @@ export default function OralPanel({ snapshot }: { snapshot: OralSnapshot }) {
             {repondues.slice(0, 3).map((d) => (
               <li
                 key={d.id}
-                className="bg-card rounded-[20px] px-4 py-3 shadow-[0_2px_0_rgba(36,48,79,.06)]"
+                className="carte px-4 py-3"
               >
                 <p className="text-[13px] font-extrabold">{d.sujet}</p>
                 <p className="text-foreground/80 mt-1 text-sm">

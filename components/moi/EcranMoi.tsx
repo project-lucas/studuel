@@ -5,7 +5,8 @@ import TuileMoyenne from '@/components/moi/TuileMoyenne'
 import Vitrine from '@/components/moi/Vitrine'
 import BadgesVitrine from '@/components/moi/BadgesVitrine'
 import Palmares from '@/components/moi/Palmares'
-import RythmeBarres from '@/components/moi/RythmeBarres'
+import BoutonRythme from '@/components/moi/BoutonRythme'
+import MatieresRevisees from '@/components/moi/MatieresRevisees'
 import TrajectoryCard from '@/components/moi/TrajectoryCard'
 import OngletsMoi from '@/components/moi/OngletsMoi'
 import type { Standing } from '@/lib/percentile'
@@ -13,6 +14,7 @@ import type { FiltreClassement } from '@/lib/moi/classement'
 import type { BilanCouronnes, Couronne } from '@/lib/moi/couronnes'
 import type { BilanMoyenne } from '@/lib/moi/moyenne'
 import type { SemaineTravail } from '@/lib/moi/temps'
+import type { MatiereRevisee } from '@/lib/moi/matieres-revisees'
 import type { LignePalmares } from '@/lib/palmares/palmares'
 import type { BacTrajectory, TermPoint } from '@/lib/trajectoire-bac'
 
@@ -27,7 +29,9 @@ import type { BacTrajectory, TermPoint } from '@/lib/trajectoire-bac'
 //      onglets doit apparaître sans défiler.
 //   2. LES ONGLETS, soudés sous la carte (un seul bloc violet), et collés en
 //      haut en descendant :
-//        Progrès    : classement · rythme · trajectoire (si notes)
+//        Progrès    : classement · matières révisées · trajectoire (si notes)
+//      Le rythme (huit semaines en barres) est une icône en haut de la carte
+//      depuis le 24/09/2026 : il s'ouvre dans une feuille (BoutonRythme).
 //        Collection : couronnes · badges
 //        Palmarès   : épreuves, duels, jeux par matière (repliés)
 // -----------------------------------------------------------------------------
@@ -37,6 +41,8 @@ export type EcranMoiProps = {
     data: CarteProfilData
     workTitle: string
     gemmes: number
+    /** Studuel+ : l'avatar dessiné par Marcel s'ouvre au toucher de l'avatar. */
+    abonne: boolean
     compteurs: CompteurCarte[]
   } | null
   notes: { bilan: BilanMoyenne; terms: TermPoint[]; indisponible: boolean }
@@ -53,6 +59,8 @@ export type EcranMoiProps = {
   couronnes: { liste: readonly Couronne[]; bilan: BilanCouronnes }
   /** Null : le journal quotidien (084) n'est pas en base — pas de graphique qui ment. */
   rythme: { semaines: readonly SemaineTravail[]; phrase: string } | null
+  /** Les matières révisées, de la plus travaillée à la moins travaillée (lib/moi/matieres-revisees). */
+  matieres: readonly MatiereRevisee[]
   /** Null : aucune note, rien à projeter. */
   trajectoire: { trajectory: BacTrajectory; needsMigration: boolean } | null
 }
@@ -64,6 +72,7 @@ export default function EcranMoi({
   palmares,
   couronnes,
   rythme,
+  matieres,
   trajectoire,
 }: EcranMoiProps) {
   const badges = carte?.data.badges ?? []
@@ -78,8 +87,10 @@ export default function EcranMoi({
           // bandeau lui donne sur les autres onglets. Plus de pièces (Lucas,
           // 16/09/2026) : il ne reste que les gemmes.
           monnaies={{ gemmes: carte.gemmes }}
+          abonne={carte.abonne}
           soudee
           compteurs={carte.compteurs}
+          boutonGauche={rythme ? <BoutonRythme semaines={rythme.semaines} phrase={rythme.phrase} /> : null}
           // LA TUILE DES NOTES, entière et cliente : la seule qui ouvre
           // quelque chose (la saisie des moyennes de trimestre).
           tuileNotes={
@@ -109,9 +120,8 @@ export default function EcranMoi({
                   grade={classement.grade}
                   initiale={classement.initiale}
                 />
-                {rythme ? (
-                  <RythmeBarres semaines={rythme.semaines} phrase={rythme.phrase} />
-                ) : null}
+                {/* Les matières que je révise le plus : une colonne chacune. */}
+                <MatieresRevisees matieres={matieres} />
                 {trajectoire ? (
                   <TrajectoryCard
                     trajectory={trajectoire.trajectory}

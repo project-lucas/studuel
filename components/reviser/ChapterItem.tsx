@@ -66,9 +66,10 @@ export default function ChapterItem({
         // `text-card-foreground` EXPLICITE : la ligne vit dans la carte VIOLETTE
         // du chapitre, dont le texte est blanc — sans sa propre encre, le titre
         // de la fiche héritait du blanc et disparaissait sur le fond crème.
-        'rounded-2xl border bg-card text-card-foreground shadow-sm transition-shadow',
-        open ? 'shadow-md' : null,
-        resumeLabel ? 'border-highlight ring-2 ring-highlight/40' : null,
+        // Une seule recette de carte (tokens de globals.css, audit du 23/09/2026) :
+        // plus d'ombre à part quand la fiche est ouverte, le panneau déplié le dit.
+        'carte text-card-foreground',
+        resumeLabel ? 'ring-2 ring-highlight/60' : null,
       )}
     >
     <button
@@ -80,7 +81,7 @@ export default function ChapterItem({
       aria-expanded={open}
       aria-controls={panneau}
       className={cn(
-        'flex w-full cursor-pointer items-center gap-3 rounded-2xl text-left transition-transform active:scale-[0.99]',
+        'flex w-full cursor-pointer items-center gap-3 rounded-carte text-left transition-transform active:scale-[0.99]',
         // Une ligne encore vierge n'a rien à raconter : elle se fait discrète
         // pour laisser respirer celles qui portent un vrai avancement.
         started ? 'p-4' : 'px-4 py-3',
@@ -110,7 +111,7 @@ export default function ChapterItem({
       ) : (
         <span
           className={cn(
-            'font-heading flex shrink-0 items-center justify-center rounded-xl bg-primary/10 font-bold text-primary',
+            'font-heading flex shrink-0 items-center justify-center rounded-xl bg-primary/10 font-extrabold text-primary',
             started ? 'size-11 text-lg' : 'size-9 text-base',
           )}
           aria-hidden="true"

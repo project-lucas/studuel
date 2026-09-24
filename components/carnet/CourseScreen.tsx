@@ -1,10 +1,8 @@
 'use client'
 
 import { useRef, useState, useSyncExternalStore, useTransition } from 'react'
-import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 import {
-  ArrowLeft,
   FileText,
   FolderPlus,
   Pencil,
@@ -14,6 +12,7 @@ import {
   Sparkles,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import BackButton from '@/components/BackButton'
 import { sfx } from '@/lib/sounds'
 import { toast } from '@/lib/toast'
 import {
@@ -45,6 +44,7 @@ import SessionOptionsSheet, {
   type EtiquetteChoix,
 } from '@/components/carnet/SessionOptionsSheet'
 import { COURSE_ICON, COURSE_TINT, TYPE_ICON } from '@/components/carnet/style'
+import { hrefRayon } from '@/lib/bibliotheque'
 import type { CourseHeader, CourseQuestionRow } from '@/components/carnet/types'
 
 // -----------------------------------------------------------------------------
@@ -238,20 +238,17 @@ export default function CourseScreen({
 
   return (
     <div className="relative mx-auto w-full max-w-md pb-24">
+      {/* 0. Le retour : la pastille ronde blanche de toute l'app, au-dessus
+          du bloc (audit du 23/09/2026 : dix recettes de retour, une seule
+          reste). Le titre, lui, reste DANS le bloc : il s'y renomme. */}
+      <div className="mb-3">
+        <BackButton fallback={hrefRayon('dossiers')} label="Retour à ma bibliothèque" />
+      </div>
       {/* LE BLOC : tout le dossier, posé sur le fond crème. */}
       <section
         aria-busy={pending || lecturePdf}
-        className="rounded-[1.75rem] bg-white p-4 shadow-sm ring-1 ring-black/5"
+        className="carte p-4"
       >
-        {/* 0. La flèche retour, dans l'angle haut gauche du bloc. */}
-        <Link
-          href="/carnet"
-          onClick={() => sfx.tap()}
-          aria-label="Retour à mon carnet"
-          className="mb-3 flex size-9 items-center justify-center rounded-full bg-primary/10 text-primary transition active:scale-90"
-        >
-          <ArrowLeft className="size-4" strokeWidth={2.6} aria-hidden="true" />
-        </Link>
 
         {/* 1. Le titre et l'icône. */}
         <div className="flex items-center gap-3">

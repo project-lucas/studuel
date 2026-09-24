@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound, redirect } from 'next/navigation'
-import { ArrowLeft, ArrowRight, Timer } from 'lucide-react'
+import { ArrowRight, Timer } from 'lucide-react'
+import EnTetePage from '@/components/reviser/EnTetePage'
+import { Button } from '@/components/ui/button'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { formatNote } from '@/lib/francais/dictee/correction'
@@ -14,9 +16,15 @@ export const dynamic = 'force-dynamic'
 /**
  * L'ÉCRAN DE PRÉSENTATION D'UNE DICTÉE.
  *
- * Un héros sombre — le texte y est le sujet, pas l'interface — puis ce que
- * l'élève a besoin de savoir avant de se lancer : où il en est sur CETTE
- * dictée, et le conseil de méthode. Un seul bouton en sortie.
+ * L'en-tête commun de Réviser (le titre du texte, sa source, ses pastilles de
+ * niveau et de durée), puis ce que l'élève a besoin de savoir avant de se
+ * lancer : où il en est sur CETTE dictée, et le conseil de méthode. Un seul
+ * bouton en sortie. Plus de héros marine (audit du 23/09/2026) : c'est le mur
+ * crème de toute l'app, la dictée se distingue par son contenu, pas par un
+ * fond à part.
+ *
+ * La page est en PLEIN ÉCRAN (lib/quiz-chrome : ni bandeau ni barre
+ * d'onglets), elle pose donc ses propres marges sûres.
  */
 export default async function PresentationDicteePage({
   params,
@@ -56,50 +64,25 @@ export default async function PresentationDicteePage({
   const niveau = normalizeNiveau(dictee.niveau)
 
   return (
-    <div className="flex min-h-svh flex-col">
-      {/* LE HÉROS. Fond marine : la dictée est un exercice d'examen, l'écran le
-          dit avant le premier mot. Le reste de l'app est crème — le contraste
-          fait de cette page un lieu, pas un onglet de plus. */}
-      <header className="relative bg-[color-mix(in_oklab,var(--foreground),black_8%)] px-5 pt-4 pb-12 text-white">
-        <div className="mx-auto w-full max-w-xl">
-          <div className="flex items-center gap-3">
-            <Link
-              href="/reviser/francais/dictee"
-              aria-label="Retour aux dictées"
-              className="flex size-10 shrink-0 items-center justify-center rounded-full bg-white text-foreground shadow-sm"
-            >
-              <ArrowLeft className="size-5" aria-hidden="true" />
-            </Link>
-            <span className="flex flex-1 items-center justify-center gap-2 font-extrabold">
-              <Timer className="size-5" aria-hidden="true" />
+    <div className="flex min-h-svh flex-col px-4 pt-[calc(1rem+env(safe-area-inset-top))] pb-[calc(1.5rem+env(safe-area-inset-bottom))]">
+      <div className="mx-auto flex w-full max-w-xl flex-1 flex-col">
+        <EnTetePage
+          retour={{ fallback: '/reviser/francais/dictee', label: 'Retour aux dictées' }}
+          titre={String(dictee.titre)}
+          sousTitre={dictee.source ? `– ${String(dictee.source)} –` : undefined}
+        >
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="rounded-full bg-primary px-3 py-1 text-xs font-extrabold text-primary-foreground">
+              {NIVEAU_LABEL[niveau]}
+            </span>
+            <span className="flex items-center gap-1 rounded-full border bg-card px-3 py-1 text-xs font-bold text-foreground">
+              <Timer className="size-3.5" aria-hidden="true" />
               {Number(dictee.duree_min)} min
             </span>
-            <span className="size-10 shrink-0" aria-hidden="true" />
           </div>
+        </EnTetePage>
 
-          <h1 className="font-heading mt-8 text-center text-3xl leading-tight font-extrabold text-balance">
-            {String(dictee.titre)}
-          </h1>
-          {dictee.source ? (
-            <p className="mt-2 text-center text-lg opacity-80">
-              – {String(dictee.source)} –
-            </p>
-          ) : null}
-        </div>
-      </header>
-
-      {/* La pastille de niveau chevauche la couture des deux fonds : elle
-          appartient aux deux, ce qui coud le héros au corps de la page. */}
-      <div className="relative z-10 -mt-5 px-5">
-        <div className="mx-auto flex w-full max-w-xl justify-end">
-          <span className="rounded-full bg-primary px-4 py-2 text-sm font-extrabold text-primary-foreground shadow-sm">
-            {NIVEAU_LABEL[niveau]}
-          </span>
-        </div>
-      </div>
-
-      <main className="flex flex-1 flex-col px-5 pt-6 pb-6">
-        <div className="mx-auto flex w-full max-w-xl flex-1 flex-col">
+        <div className="mt-6 flex flex-1 flex-col">
           {demo ? (
             <p className="mb-3 flex items-center gap-2 rounded-2xl bg-highlight/25 px-3 py-2 text-xs font-semibold text-foreground">
               <span className="rounded-full bg-highlight px-2 py-0.5 text-[11px] font-extrabold">
@@ -118,7 +101,7 @@ export default async function PresentationDicteePage({
           {/* LE CONSEIL DE MÉTHODE, dit par la mascotte. Une dictée ne se joue
               pas comme un quiz : écouter le texte EN ENTIER avant d'écrire un
               mot change tout, et personne ne le devine seul. */}
-          <div className="mt-8 flex items-center gap-3 rounded-3xl border-2 border-black/10 bg-card p-4">
+          <div className="mt-8 flex items-center gap-3 rounded-3xl border bg-card p-4 shadow-sm">
             <Image
               src="/images/nav/marcel.webp"
               alt=""
@@ -135,15 +118,16 @@ export default async function PresentationDicteePage({
 
           <div className="flex-1" aria-hidden="true" />
 
-          <Link
-            href={`/reviser/francais/dictee/${String(dictee.slug)}/jouer`}
-            className="quiz-plaque h-14 w-full gap-2 text-lg font-extrabold text-white [--plaque-bas:color-mix(in_oklab,var(--success),black_14%)] [--plaque-bord:color-mix(in_oklab,var(--success),black_50%)] [--plaque-haut:color-mix(in_oklab,var(--success),white_14%)]"
-          >
-            Commencer
-            <ArrowRight className="size-5" aria-hidden="true" />
-          </Link>
+          {/* L'action principale de l'écran : le gros bouton violet de l'app,
+              plus de plaque verte à part (audit du 23/09/2026). */}
+          <Button asChild size="xl" className="w-full">
+            <Link href={`/reviser/francais/dictee/${String(dictee.slug)}/jouer`}>
+              Commencer
+              <ArrowRight className="size-5" aria-hidden="true" />
+            </Link>
+          </Button>
         </div>
-      </main>
+      </div>
     </div>
   )
 }

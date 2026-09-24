@@ -2,8 +2,9 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 import Image from 'next/image'
-import { Swords, Check, X, Trophy, RotateCcw, ChevronRight } from 'lucide-react'
+import { Swords, Trophy, RotateCcw, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import AnswerBoard from '@/components/jeux/AnswerBoard'
 import { cn } from '@/lib/utils'
 import { gameSfx, sfx } from '@/lib/sounds'
 import DefiTimer from '@/components/DefiTimer'
@@ -512,47 +513,23 @@ export default function DuelMode({
         </div>
 
         {question.subject ? (
-          <p className="text-xs font-semibold text-muted-foreground uppercase">
-            {question.subject}
-          </p>
+          <p className="surtitre">{question.subject}</p>
         ) : null}
 
-        <h2 className="font-heading mb-1 text-xl font-bold text-balance">
+        <h2 className="font-heading mb-1 text-xl font-extrabold text-balance">
           {question.prompt}
         </h2>
-        <div className="flex flex-col gap-2">
-          {question.options.map((option, i) => {
-            const isCorrect = i === question.correctIndex
-            const isSelected = i === selected
-            return (
-              <button
-                key={i}
-                type="button"
-                disabled={answered}
-                onClick={() => answer(i)}
-                className={cn(
-                  'flex items-center justify-between gap-3 rounded-2xl border px-4 py-3 text-left text-sm font-medium transition-all',
-                  !answered &&
-                    'hover:border-primary/40 hover:bg-accent hover:text-accent-foreground active:scale-[0.99]',
-                  answered &&
-                    isCorrect &&
-                    'border-green-600 bg-green-600/10 text-green-700 dark:text-green-400',
-                  answered &&
-                    isSelected &&
-                    !isCorrect &&
-                    'border-destructive bg-destructive/10 text-destructive',
-                  answered && !isSelected && !isCorrect && 'opacity-50',
-                )}
-              >
-                {option}
-                {answered && isCorrect ? <Check className="size-4 shrink-0" /> : null}
-                {answered && isSelected && !isCorrect ? (
-                  <X className="size-4 shrink-0" />
-                ) : null}
-              </button>
-            )
-          })}
-        </div>
+        {/* Le plateau partagé des jeux et du quiz : juste/faux en rôles
+            success/destructive, plus de liste maison en vert Tailwind
+            (audit du 23/09/2026). La réponse se fige au premier tap. */}
+        <AnswerBoard
+          options={question.options}
+          correctIndex={question.correctIndex}
+          selected={selected}
+          revealed={answered}
+          layout="liste"
+          onAnswer={answer}
+        />
 
         <p role="status" aria-live="polite" className="sr-only">
           {answered
@@ -606,10 +583,8 @@ export default function DuelMode({
         ) : (
           <>
             <div className="animate-in zoom-in duration-300">
-              <p className="text-xs font-bold tracking-wide text-muted-foreground uppercase">
-                Manche {rounds.length}
-              </p>
-              <p className="font-heading mt-1 text-3xl font-bold">
+              <p className="surtitre">Manche {rounds.length}</p>
+              <p className="font-heading mt-1 text-3xl font-extrabold">
                 {iWon ? 'Manche gagnée !' : 'Manche perdue'}
               </p>
               <p className="mt-2 font-mono text-xl font-bold tabular-nums">
@@ -684,9 +659,7 @@ function DuelDone({
     >
       <ArenaBackdrop />
       <div className="relative">
-        <p className="text-[11px] font-bold tracking-widest text-white/75 uppercase">
-          Duel terminé · vs {opponent.name}
-        </p>
+        <p className="surtitre text-white/75">Duel terminé · vs {opponent.name}</p>
         {iWon ? (
           <Image
             src="/images/mascotte/flamme-celebration.webp"
@@ -697,7 +670,7 @@ function DuelDone({
             className="pop-in mx-auto mt-2 object-contain"
           />
         ) : null}
-        <p className="font-heading mt-2 text-4xl font-bold italic">
+        <p className="font-heading mt-2 text-4xl font-extrabold italic">
           {iWon ? 'VICTOIRE !' : 'DÉFAITE'}
         </p>
         <div className="mt-4 flex items-center justify-center gap-6">
@@ -758,9 +731,7 @@ function DuelDone({
       >
         <ArenaBackdrop />
         <div className="relative">
-          <p className="text-[11px] font-bold tracking-widest text-white/75 uppercase">
-            Duel terminé · vs {opponent.name}
-          </p>
+          <p className="surtitre text-white/75">Duel terminé · vs {opponent.name}</p>
           {iWon ? (
             <Image
               src="/images/mascotte/flamme-celebration.webp"
@@ -771,7 +742,7 @@ function DuelDone({
               className="pop-in mx-auto mt-2 object-contain"
             />
           ) : null}
-          <p className="font-heading mt-2 text-4xl font-bold italic">
+          <p className="font-heading mt-2 text-4xl font-extrabold italic">
             {iWon ? 'VICTOIRE !' : 'DÉFAITE'}
           </p>
           <div className="mt-4 flex items-center justify-center gap-6">

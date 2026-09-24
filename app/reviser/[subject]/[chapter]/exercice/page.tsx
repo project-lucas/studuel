@@ -53,8 +53,9 @@ export default async function ExercicePage({
 
   return (
     <PageChapitre
-      couleur={subject.color}
-      surtitre={`${subject.name} · Chapitre ${chapter.position}`}
+      // Plus de « Chapitre N » : le numéro promettait un ordre que personne ne
+      // suit (docs/template-matiere.md), la matière suffit sous le titre.
+      sousTitre={subject.name}
       titre={`${aUnCahier ? 'Exercices' : 'Exercice'} · ${chapter.title}`}
       retour={backHref}
     >

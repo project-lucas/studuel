@@ -22,8 +22,9 @@ describe('subjectIcon', () => {
 })
 
 describe('subjectTheme', () => {
+  // Plus de `header` : le lavis pastel des en-têtes est parti le 23/09/2026
+  // (un seul fond dans Réviser, le mur crème).
   const KEYS: (keyof SubjectTheme)[] = [
-    'header',
     'chip',
     'bar',
     'stroke',
@@ -50,7 +51,7 @@ describe('subjectTheme', () => {
     }
   })
 
-  it('tout thème connu renseigne les 6 rôles (aucune classe vide)', () => {
+  it('tout thème connu renseigne les 5 rôles (aucune classe vide)', () => {
     for (const color of ['blue', 'red', 'green', 'purple', 'yellow', 'slate']) {
       const theme = subjectTheme(color)
       for (const key of KEYS) {

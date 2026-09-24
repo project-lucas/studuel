@@ -4,15 +4,17 @@
 // L'infrastructure (service worker, abonnements, envoi VAPID, cron) s'appuie
 // dessus : cf. public/sw.js, app/api/push/*, supabase/schema/045_push.sql.
 //
-// Deux rappels, et deux seulement : `srs` le matin, `streak` le soir. Un
+// Trois rappels : `srs` le matin, `streak` le soir, et `coffre` le lundi
+// matin (« ton coffre d'équipe est ouvert », migration 379). Un
 // troisième (« ton créneau de trajet commence ») a existé ici sans jamais être
 // envoyé par quoi que ce soit — il demanderait un ciblage par créneau, propre à
 // chaque élève, donc un autre cron et une autre requête. Il est retiré plutôt
 // que gardé en vitrine : cf. git si le sujet revient.
 
-import { parisHourMinute } from '@/lib/time'
+import { contenuCoffre, nombreFr } from '@/lib/ligue'
+import { parisDayKey, parisHourMinute } from '@/lib/time'
 
-export type ReminderKind = 'srs' | 'streak'
+export type ReminderKind = 'srs' | 'streak' | 'coffre'
 
 export type PushMessage = {
   kind: ReminderKind
@@ -24,6 +26,7 @@ export type PushMessage = {
 // Destinations profondes dans l'app.
 export const SRS_URL = '/reviser/revoir'
 export const STREAK_URL = '/defi'
+export const COFFRE_URL = '/amis'
 
 // Rappel SRS : « X cartes à revoir ». Rien à envoyer si la file est vide.
 export function srsMessage(
@@ -60,17 +63,36 @@ export function streakMessage(
   }
 }
 
+// Le lundi matin : le coffre d'équipe de la semaine finie est ouvert (migration
+// 379). Rien sous le niveau 1 : un coffre vide ne s'ouvre pas.
+export function coffreMessage(niveau: number): PushMessage | null {
+  const contenu = contenuCoffre(Math.trunc(niveau))
+  if (!contenu) return null
+  return {
+    kind: 'coffre',
+    title: 'Ton coffre d’équipe est ouvert !',
+    body: `Niveau ${contenu.niveau} : ${nombreFr(contenu.xp)} XP et ${contenu.gemmes} gemmes t’attendent. Viens l’ouvrir !`,
+    url: COFFRE_URL,
+  }
+}
+
 // -----------------------------------------------------------------------------
 // À quelle heure part un rappel ?
 // -----------------------------------------------------------------------------
 
-/** Les deux rappels envoyés par le cron (le `?type=` de /api/push/send). */
-export type ScheduledReminder = 'srs' | 'streak'
+/** Les rappels envoyés par le cron (le `?type=` de /api/push/send). */
+export type ScheduledReminder = 'srs' | 'streak' | 'coffre'
 
 /** Heure de PARIS à laquelle chaque rappel doit arriver chez l'élève. */
 export const REMINDER_PARIS_HOUR: Record<ScheduledReminder, number> = {
   srs: 8,
   streak: 19,
+  coffre: 8,
+}
+
+/** Le lundi (heure de Paris) : le seul jour où part le rappel du coffre. */
+function estLundiAParis(now: Date): boolean {
+  return new Date(`${parisDayKey(now)}T12:00:00Z`).getUTCDay() === 1
 }
 
 /**
@@ -87,6 +109,7 @@ export function isReminderDue(
   kind: ScheduledReminder,
   now: Date = new Date(),
 ): boolean {
+  if (kind === 'coffre' && !estLundiAParis(now)) return false
   return parisHourMinute(now).hour === REMINDER_PARIS_HOUR[kind]
 }
 

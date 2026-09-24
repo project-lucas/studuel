@@ -195,7 +195,7 @@ export default function LessonRichContent({
                 <th
                   key={i}
                   scope="col"
-                  className="px-3 py-2 text-left font-heading text-[13px] font-bold whitespace-nowrap text-foreground"
+                  className="px-3 py-2 text-left font-heading text-[13px] font-extrabold whitespace-nowrap text-foreground"
                 >
                   {renderInline(c)}
                 </th>
@@ -338,7 +338,7 @@ export default function LessonRichContent({
       blocks.push(
         <h2
           key={`h2-${blocks.length}`}
-          className="font-heading flex items-center gap-3 pt-5 text-2xl font-bold first:pt-0"
+          className="font-heading flex items-center gap-3 pt-5 text-2xl font-extrabold first:pt-0"
         >
           <span
             aria-hidden="true"

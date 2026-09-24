@@ -1,20 +1,13 @@
-import WorldBackdrop from '@/components/WorldBackdrop'
-import ArenaBackdrop from '@/components/ArenaBackdrop'
+import DecorArene from '@/components/defi/DecorArene'
 
-// Décor de l'Arène : l'académie flottante, en SIX variantes qui suivent l'heure
-// de l'élève (aube → nuit, voir lib/arena-background.ts). Remplace le colisée
-// doré statique : la scène du bas est volontairement vide, c'est le podium du
-// personnage. ArenaBackdrop gère le timer, le fondu et le préchargement.
-// Porté sur <body> (WorldBackdrop) pour ne jamais être rogné par un ancêtre
-// transformé — sinon, bordures blanches autour de l'arène.
+// Le décor de l'Arène derrière les SOUS-PAGES de /defi. L'onglet lui-même a le
+// sien, dans son emplacement (`app/@defi/defi/layout.tsx`) — voir DecorArene.
 export default function DefiLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <>
-      <WorldBackdrop className="defi-arena-bg">
-        <ArenaBackdrop />
-      </WorldBackdrop>
+      <DecorArene horsOnglet />
       {children}
     </>
   )

@@ -12,6 +12,7 @@ import { menuAlertCount } from '@/lib/arene-hud'
 import { useDialogFocus } from '@/lib/use-dialog'
 import SheetShell from './SheetShell'
 import { NotificationBadge } from './SculptedPlate'
+import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
 
 /**
  * Une entrée du menu burger. Deux comportements exclusifs :
@@ -163,6 +164,9 @@ export default function ArenaHud({
 }: ArenaHudProps) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [openId, setOpenId] = useState<string | null>(null)
+  // Menu et feuilles de l'arène se referment quand l'onglet est caché.
+  useFermeAuMasquage(setMenuOpen, false)
+  useFermeAuMasquage(setOpenId, null)
   const reduce = useReducedMotion()
   // Le panneau du menu : le focus y entre à l'ouverture et revient au burger
   // à la fermeture.

@@ -1,0 +1,231 @@
+/* --- L'ARÈNE VIVANTE : le décor horaire qui bouge --------------------------
+   Posé par components/defi/ArenaVivante.tsx dans le fond de l'onglet Défi, à
+   la place de l'image fixe d'une plage horaire qui a sa scène (voir
+   lib/arena-vivante.ts pour la composition, recopiée des exports de Lucas).
+
+   TOUT EST EN PIXELS DE PLANCHE. Le composant pose les cotes de la planche
+   (`--pw`, `--ph`, depuis PLANCHE_LARGEUR / PLANCHE_HAUTEUR) ; `--u` vaut UN
+   pixel de planche à l'écran, calculé pour reproduire `background-size:
+   cover` (la plus grande des deux échelles), et chaque couche se place avec
+   `calc(N * var(--u))` — les nombres de l'export, tels quels.
+
+   Les mouvements PÉRIODIQUES (nuages, rochers, lueur, bougie, lanternes,
+   étoiles, écume) sont des images-clés échantillonnées par
+   lib/arena-vivante.ts et injectées par le composant, qui pose aussi
+   l'`animation` de chaque couche. Ceux en DENTS DE SCIE (reflets de la
+   cascade, nappes de brume) sont ici : de simples translations linéaires.
+
+   Seules des transformations et des opacités bougent : rien n'est repeint
+   image par image. Aucun `filter` animé, aucun flou : la douceur des brumes,
+   de l'écume et des halos est dans leurs dégradés — un flou sur une couche qui
+   bouge se recalcule à chaque image. */
+
+/* Le cadre mesure la boîte du fond : c'est le conteneur dont les unités cqw /
+   cqh servent à calculer l'unité de planche. */
+.cadre {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  container-type: size;
+  pointer-events: none;
+}
+
+/* La planche, posée en « cover » et centrée — comme .arena-img (globals.css).
+   Sur un écran plus large que haut, le cadrage remonte au tiers supérieur, là
+   où vivent le ciel, l'île et le bâtiment (même règle que .arena-img). */
+.planche {
+  --u: max(100cqw / var(--pw), 100cqh / var(--ph));
+  --ancre-y: 0.5;
+  position: absolute;
+  width: calc(var(--pw) * var(--u));
+  height: calc(var(--ph) * var(--u));
+  left: calc((100cqw - var(--pw) * var(--u)) * 0.5);
+  top: calc((100cqh - var(--ph) * var(--u)) * var(--ancre-y));
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .planche {
+    --ancre-y: 0.3;
+  }
+}
+
+/* Chaque couche est absolue dans la planche ; ses cotes viennent du composant. */
+.couche {
+  position: absolute;
+}
+
+/* Un élément détouré (nuage, rocher) : son image remplit sa boîte. */
+.detoure {
+  composes: couche;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* --- Les étoiles : un point blanc et son halo bleuté. ---------------------- */
+.etoile {
+  composes: couche;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(210, 220, 255, 0.55) 18%,
+    rgba(200, 210, 255, 0) 60%
+  );
+}
+
+/* --- La lueur de l'horizon, derrière l'académie. -------------------------- */
+.lueur {
+  composes: couche;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    var(--centre) 0%,
+    var(--halo) 40%,
+    transparent 70%
+  );
+  mix-blend-mode: screen;
+}
+
+/* --- La bougie des fenêtres. ------------------------------------------------ */
+.bougie {
+  composes: couche;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse,
+    rgba(255, 180, 90, 0.6),
+    rgba(255, 160, 80, 0) 65%
+  );
+  mix-blend-mode: screen;
+}
+
+/* --- Les lanternes du parvis. ---------------------------------------------- */
+.lanterne {
+  composes: couche;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 210, 120, 0.85) 0%,
+    rgba(255, 170, 80, 0.35) 30%,
+    rgba(255, 160, 80, 0) 70%
+  );
+  mix-blend-mode: screen;
+}
+
+/* --- La cascade : trois reflets qui glissent dans sa colonne. -------------- */
+.cascade {
+  composes: couche;
+  overflow: hidden;
+  border-radius: calc(18 * var(--u));
+  mix-blend-mode: screen;
+}
+/* Le RAIL d'un reflet : une colonne haute de la course du reflet (posée en
+   ligne par le composant), qui glisse de SA PROPRE HAUTEUR — `translateY(100%)`.
+   La course était lue dans une variable par les images-clés, ce qui faisait
+   tourner l'animation sur le fil principal (23/09/2026) : un pourcentage de
+   l'élément lui-même se passe de variable. */
+.rail {
+  position: absolute;
+  top: calc(-80 * var(--u));
+  width: calc(10 * var(--u));
+}
+.reflet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(70 * var(--u));
+  border-radius: calc(6 * var(--u));
+  background: linear-gradient(
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0)
+  );
+  opacity: 0.8;
+}
+@keyframes glisse {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+.animee .rail {
+  animation-name: glisse;
+  /* `--passages` passages par boucle. */
+  animation-duration: calc(var(--boucle) / var(--passages));
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* --- L'écume au pied de la cascade. ---------------------------------------- */
+.ecume {
+  composes: couche;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3) 40%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+
+/* --- La brume : des nappes qui roulent d'un bord à l'autre. -----------------
+   Chaque nappe est un rail de trois copies (une à gauche, une au centre, une à
+   droite) qui avance d'une largeur de planche par boucle : la copie qui sort
+   est remplacée par celle qui entre, le raccord est invisible. */
+.brume {
+  composes: couche;
+  left: 0;
+  width: calc(var(--pw) * var(--u));
+}
+.nappe {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse,
+    rgba(var(--brume), 0.95),
+    rgba(var(--brume), 0.55) 35%,
+    rgba(var(--brume), 0) 68%
+  );
+}
+/* Une largeur de planche par boucle : la nappe est exactement large d'une
+   planche, donc `100%` de SA largeur — sans variable dans l'image-clé (qui
+   renverrait l'animation sur le fil principal). */
+@keyframes roule {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes rouleGauche {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.animee .brume {
+  animation-name: roule;
+  animation-duration: var(--boucle);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.animee .brumeGauche {
+  animation-name: rouleGauche;
+}
+
+/* Réduire le mouvement : la scène reste, figée à sa première image — c'est
+   l'illustration d'avant. `!important` l'emporte sur l'animation posée en
+   ligne par le composant. */
+@media (prefers-reduced-motion: reduce) {
+  .cadre * {
+    animation: none !important;
+  }
+}

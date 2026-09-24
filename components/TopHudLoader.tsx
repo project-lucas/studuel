@@ -7,9 +7,12 @@ import { activityCutoff } from '@/lib/streak'
 import { isHudDataSkipped } from '@/lib/top-hud-routes'
 import { fetchGems } from '@/lib/gems-access'
 import { lireFinBoostXp } from '@/lib/boutique/boosts-server'
+import { compterAmis } from '@/lib/ligue-server'
+import { avatarAffiche } from '@/lib/avatar-affiche'
 import TopHud from './TopHud'
 
 type WalletRow = { xp: number | null; level: number | null }
+
 
 /**
  * LA SÉRIE, en UNE requête. Elle s'affiche désormais dans le bandeau, donc sur
@@ -87,12 +90,17 @@ export default async function TopHudLoader() {
   //
   // Le Boost XP du Marché (« ×2 XP » dans l'écusson) : sa propre lecture,
   // tolérante — elle ne doit jamais coûter le niveau ni les gemmes.
-  const [{ data: hudRow }, gems, streak, boostXpJusqua] = await Promise.all([
+  //
+  // L'avatar vient avec le niveau (même ligne de profil), et le nombre d'amis
+  // — le multiplicateur d'XP (migration 380) — part en parallèle : zéro vague
+  // de plus.
+  const [{ data: hudRow }, gems, streak, boostXpJusqua, nbAmis] = await Promise.all([
     supabase
       .from('profiles')
-      .select('user_wallet(xp, level)')
+      .select('avatar, user_wallet(xp, level)')
       .eq('id', user.id)
       .maybeSingle<{
+        avatar: unknown
         // PostgREST renvoie un objet quand il détecte une relation 1-1, un
         // tableau sinon : on accepte les deux formes.
         user_wallet: WalletRow | WalletRow[] | null
@@ -100,7 +108,12 @@ export default async function TopHudLoader() {
     fetchGems(supabase, user.id),
     fetchStreak(supabase),
     lireFinBoostXp(supabase, user.id),
+    compterAmis(supabase, user.id),
   ])
+  // L'AVATAR DANS LE DISQUE de l'écusson, à la place du numéro de niveau
+  // (Lucas, 24/09/2026 : « le 7 fait doublon » avec « NIVEAU 7 ») — le même que
+  // l'onglet Moi, résolu ici : DiceBear n'entre pas dans le paquet du bandeau.
+  const avatar = hudRow ? avatarAffiche(hudRow.avatar, 72) : null
 
   const walletRow = Array.isArray(hudRow?.user_wallet)
     ? (hudRow.user_wallet[0] ?? null)
@@ -119,6 +132,8 @@ export default async function TopHudLoader() {
         progress={info.progress}
         userLabel={userLabel}
         boostXpJusqua={boostXpJusqua}
+        avatar={avatar}
+        nbAmis={nbAmis}
       />
     )
   }
@@ -173,6 +188,8 @@ export default async function TopHudLoader() {
       progress={level.progress}
       userLabel={userLabel}
       boostXpJusqua={boostXpJusqua}
+      avatar={avatar}
+      nbAmis={nbAmis}
     />
   )
 }

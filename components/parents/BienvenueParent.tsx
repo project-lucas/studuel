@@ -17,7 +17,7 @@ import LinkChildForm from '@/components/parents/LinkChildForm'
 export default function BienvenueParent() {
   return (
     <div className="flex flex-col gap-4">
-      <section className="bg-card rounded-2xl border p-5 shadow-sm">
+      <section className="carte p-5">
         <h3 className="font-heading mb-1 text-lg font-semibold">
           Bienvenue dans votre espace
         </h3>
@@ -43,7 +43,7 @@ export default function BienvenueParent() {
         </ul>
       </section>
 
-      <section className="bg-card rounded-2xl border p-5 shadow-sm">
+      <section className="carte p-5">
         <h3 className="font-heading mb-1 flex items-center gap-2 text-lg font-semibold">
           <span className="bg-primary text-primary-foreground flex size-8 items-center justify-center rounded-xl">
             <Users className="size-4" aria-hidden="true" />

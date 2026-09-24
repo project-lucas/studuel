@@ -1,0 +1,176 @@
+/* ==========================================================================
+   LES MATIÈRES QUE JE RÉVISE LE PLUS (MatieresRevisees.tsx) — des colonnes
+   qui poussent, une par matière, façon podium de Clash Royale / Brawl Stars :
+   des piliers brillants qui montent à l'ouverture, la couronne sur celui de
+   tête, les médaillons de matière posés en tuiles au pied de chacun.
+
+   Règles de lecture (une seule série) : UNE teinte — le violet de la marque,
+   plus clair pour les colonnes que l'on ne regarde pas —, 24 px de large au
+   plus, 4 px d'arrondi au sommet et une base carrée sur UNE ligne de sol, la
+   valeur posée sur le chapiteau. L'identité de la matière, c'est son
+   médaillon et son nom, jamais une couleur (la teinte d'une matière n'est
+   pas un fond, CLAUDE.md).
+
+   Animations : transform et opacity seulement, valeurs littérales ; rien ne
+   bouge en mouvement réduit.
+   ========================================================================== */
+
+/* La rangée défile de côté quand les matières ne tiennent pas. */
+.scene {
+  margin: 14px -4px 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+.scene::-webkit-scrollbar {
+  display: none;
+}
+/* Plus de colonnes qu'il n'en tient : le bord droit s'efface, on voit que
+   la rangée continue. */
+.scene[data-defile] {
+  mask-image: linear-gradient(to right, black calc(100% - 28px), transparent);
+}
+
+.colonnes {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(50px, 1fr);
+  align-items: end;
+  padding: 0 4px;
+}
+
+.colonne {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* La piste : toute la hauteur est la cible du doigt, pas seulement la barre. */
+.piste {
+  display: flex;
+  width: 100%;
+  height: 138px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.piste:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+/* La hauteur utile d'une colonne : la piste moins la place de la valeur et de
+   la couronne. */
+.fut {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  align-items: flex-end;
+  justify-content: center;
+  /* La ligne de sol : les colonnes se touchent, les fûts la tracent d'un
+     bout à l'autre, et tous les piliers poussent d'elle. */
+  border-bottom: 1px solid var(--border);
+}
+
+.valeur {
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+  font-size: 12.5px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--foreground);
+  font-variant-numeric: tabular-nums;
+  animation: apparait 0.3s ease-out both;
+}
+
+.couronne {
+  width: 18px;
+  height: 18px;
+  color: color-mix(in oklch, var(--highlight), var(--warning) 55%);
+  fill: var(--highlight);
+  animation: apparait 0.3s ease-out both;
+}
+
+/* Le pilier : violet brillant, un reflet sur le chapiteau. Clair quand on en
+   regarde un autre. */
+.barre {
+  width: 24px;
+  border-radius: 4px 4px 0 0;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--primary), white 45%) 0%,
+    color-mix(in oklch, var(--primary), white 30%) 100%
+  );
+  box-shadow: inset 0 2px 0 rgb(255 255 255 / 0.45);
+  transform-origin: 50% 100%;
+  animation: pousse 0.7s cubic-bezier(0.22, 1.2, 0.36, 1) both;
+}
+.colonne[data-choisie] .barre {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--primary), white 18%) 0%,
+    var(--primary) 100%
+  );
+}
+
+/* Le médaillon de la matière, en tuile posée. */
+.medaillon {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  margin-top: 8px;
+  place-items: center;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+  box-shadow: 0 2px 0 var(--border);
+}
+.colonne[data-choisie] .medaillon {
+  border-color: color-mix(in oklch, var(--primary), white 45%);
+  box-shadow: 0 2px 0 color-mix(in oklch, var(--primary), white 45%);
+}
+.nom {
+  max-width: 100%;
+  margin-top: 4px;
+  overflow: hidden;
+  font-size: 10px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--muted-foreground);
+}
+.colonne[data-choisie] .nom {
+  color: var(--foreground);
+}
+
+@keyframes pousse {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes apparait {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .barre,
+  .valeur,
+  .couronne {
+    animation: none;
+  }
+}

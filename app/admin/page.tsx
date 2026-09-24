@@ -37,7 +37,7 @@ export default async function AdminHomePage() {
         <span className="flex items-center gap-3">
           <LineChart className="size-5 shrink-0 text-primary" aria-hidden="true" />
           <span>
-            <span className="font-heading block font-bold">Rétention</span>
+            <span className="font-heading block font-extrabold">Rétention</span>
             <span className="block text-sm text-muted-foreground">
               D1 / D7 / D30, entonnoir d’arrivée, engagement
             </span>
@@ -56,7 +56,7 @@ export default async function AdminHomePage() {
         <span className="flex items-center gap-3">
           <CreditCard className="size-5 shrink-0 text-foreground" aria-hidden="true" />
           <span>
-            <span className="font-heading block font-bold">Abonnements</span>
+            <span className="font-heading block font-extrabold">Abonnements</span>
             <span className="block text-sm text-muted-foreground">
               Demandes reçues, octroi manuel, échéances
             </span>
@@ -66,7 +66,7 @@ export default async function AdminHomePage() {
       </Link>
 
       <header>
-        <h1 className="font-heading text-2xl font-bold">Contenu pédagogique</h1>
+        <h1 className="font-heading text-3xl font-extrabold">Contenu pédagogique</h1>
         <p className="mt-1 text-sm text-muted-foreground">
           Choisis une matière pour éditer ses chapitres, leçons, fiches et quiz.
           Les modifications sont visibles immédiatement par les élèves.

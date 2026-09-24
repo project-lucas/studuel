@@ -7,7 +7,13 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Studuel",
     short_name: "Studuel",
     description: "Apprends, teste-toi, progresse — de la 6e à la Terminale.",
-    start_url: "/",
+    // L'ÉCRAN DE LANCEMENT STATIQUE (24/09/2026) : un fichier servi par le CDN,
+    // qui peint l'illustration et la barre du rideau en quelques dizaines de
+    // millisecondes, puis part vers l'app. Avant, `/` attendait un démarrage à
+    // froid du serveur et une redirection : Android laissait son propre rideau
+    // (l'icône sur le violet) tout ce temps. Voir public/lancement.html.
+    start_url: "/lancement.html",
+    scope: "/",
     // Identité stable de l'app installée. Sans `id`, elle est dérivée de
     // `start_url` : un changement de page d'accueil créerait un DOUBLON sur
     // l'écran d'accueil au lieu de mettre à jour l'app existante. `"/"` résout

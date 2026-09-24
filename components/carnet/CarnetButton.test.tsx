@@ -10,7 +10,7 @@ import CarnetButton from './CarnetButton'
 // Ce bouton a déjà déménagé trois fois : tuile pleine largeur en bas de page,
 // puis bouton-icône rond dans la rangée de commandes, puis bouton libellé sur
 // la ligne du titre. À chaque déménagement, `data-tour="carnet-switch"` doit
-// suivre — c'est la cible de l'étape « Mon carnet » du tour guidé.
+// suivre — c'est la cible de l'étape « Ma bibliothèque » du tour guidé.
 //
 // L'oublier ne casse RIEN de visible : `nextAvailableStep` ne trouve pas la
 // cible, considère l'étape hors écran et la SAUTE. Le tour continue, une étape
@@ -31,7 +31,14 @@ describe('CarnetButton', () => {
     // Tout l'objet du changement : l'icône seule ne disait pas ce qu'elle
     // ouvrait.
     render(<CarnetButton coursesCount={3} questionsCount={42} />)
-    expect(screen.getByText('Mon carnet')).toBeInTheDocument()
+    expect(screen.getByText('Ma bibliothèque')).toBeInTheDocument()
+  })
+
+  it('mène au rayon Capsules quand une capsule neuve attend, aux Dossiers sinon', () => {
+    const { rerender } = render(<CarnetButton coursesCount={3} questionsCount={42} />)
+    expect(screen.getByRole('link')).toHaveAttribute('href', '/carnet')
+    rerender(<CarnetButton coursesCount={3} questionsCount={42} capsulesNouvelles={1} />)
+    expect(screen.getByRole('link')).toHaveAttribute('href', '/carnet?rayon=capsules')
   })
 
   it('garde le résumé pour les lecteurs d’écran', () => {
@@ -41,13 +48,13 @@ describe('CarnetButton', () => {
       <CarnetButton coursesCount={3} questionsCount={42} />,
     )
     expect(
-      screen.getByRole('link', { name: 'Mon carnet — 3 cours · 42 questions' }),
+      screen.getByRole('link', { name: 'Ma bibliothèque — 3 cours · 42 questions' }),
     ).toBeInTheDocument()
 
     rerender(<CarnetButton coursesCount={0} questionsCount={0} />)
     expect(
       screen.getByRole('link', {
-        name: 'Mon carnet — Crée tes cours et révise-les.',
+        name: 'Ma bibliothèque — Tes cours, tes capsules et tes fiches.',
       }),
     ).toBeInTheDocument()
   })

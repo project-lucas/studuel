@@ -26,24 +26,27 @@ function libelleSemaine(lundi: string, courante: boolean): string {
 export default function RythmeBarres({
   semaines,
   phrase,
+  nu = false,
 }: {
   semaines: readonly SemaineTravail[]
   /** La phrase du rythme (lib/moi/temps), sous le titre. */
   phrase: string
+  /** Sans carte : posé dans la feuille du bouton du rythme (BoutonRythme). */
+  nu?: boolean
 }) {
   if (semaines.length === 0) return null
   const { hauteurs, objectifPct } = hauteursBarres(semaines, OBJECTIF_HEBDO_SECONDES)
   const derniere = semaines.length - 1
 
   return (
-    <section aria-label="Ton rythme" className="moi-bloc rounded-[22px] p-4">
+    <section aria-label="Ton rythme" className={nu ? 'pt-2' : 'carte p-4'}>
       <div className="flex items-center gap-2.5">
         <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-secondary text-primary">
           <CalendarDays className="size-5" strokeWidth={2.4} aria-hidden="true" />
         </span>
         <div className="min-w-0 flex-1">
-          <h2 className="font-heading text-base leading-tight font-extrabold">Ton rythme</h2>
-          <p className="moi-sourcil mt-0.5">{phrase}</p>
+          <h2 className="titre-section">Ton rythme</h2>
+          <p className="surtitre mt-0.5">{phrase}</p>
         </div>
       </div>
 

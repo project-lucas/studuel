@@ -167,7 +167,7 @@ export default async function ParentsPage() {
           role="alert"
           className="bg-card border-destructive/40 rounded-2xl border p-5 shadow-sm"
         >
-          <h3 className="mb-1 font-semibold">{r.displayName} : données indisponibles</h3>
+          <h3 className="titre-section mb-1">{r.displayName} : données indisponibles</h3>
           <p className="text-muted-foreground text-sm">
             Le lien avec son compte est toujours actif — seul le détail
             n&apos;a pas pu être chargé. Réessayez en rechargeant la page.
@@ -221,7 +221,7 @@ export default async function ParentsPage() {
                     role="alert"
                     className="bg-card border-destructive/40 mb-4 rounded-2xl border p-5 shadow-sm"
                   >
-                    <h3 className="mb-1 font-semibold">
+                    <h3 className="titre-section mb-1">
                       Suivi momentanément indisponible
                     </h3>
                     <p className="text-muted-foreground text-sm">
@@ -257,7 +257,7 @@ export default async function ParentsPage() {
                 ) : null}
 
                 <section className="bg-card rounded-2xl border p-5 shadow-sm">
-                  <h3 className="mb-1 font-semibold">
+                  <h3 className="titre-section mb-1">
                     {reports.length === 0
                       ? 'Lier le compte de votre enfant'
                       : 'Lier un autre enfant'}

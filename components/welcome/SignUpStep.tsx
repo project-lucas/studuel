@@ -8,6 +8,7 @@ import { auMoinsUnePorteOAuth, type PortesOAuth } from '@/lib/auth-portes'
 import { signUpWelcome } from '@/app/bienvenue/actions'
 import BoutonsOAuth from '@/components/auth/BoutonsOAuth'
 import PencilLogo from './PencilLogo'
+import OnbButton from './OnbButton'
 
 // Écran 13 — Créer un compte. Jusqu'à trois portes : Apple, Google (OAuth
 // réel, SEULEMENT si le fournisseur est activé côté Supabase), e-mail.
@@ -119,27 +120,14 @@ export default function SignUpStep({
                 {showPassword ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
               </button>
             </div>
-            <button
-              type="submit"
-              disabled={pending}
-              className="onb-btn"
-            >
+            <OnbButton type="submit" disabled={pending}>
               {pending ? 'Un instant…' : 'Créer mon compte'}
-            </button>
+            </OnbButton>
           </form>
         ) : (
-          <button
-            type="button"
-            onClick={() => setShowEmail(true)}
-            className="flex min-h-[48px] w-full cursor-pointer items-center justify-center rounded-2xl border-2 p-[13px_15px] text-[15px] font-extrabold"
-            style={{
-              background: 'var(--onb-pp)',
-              color: '#fff',
-              borderColor: 'var(--onb-pp)',
-            }}
-          >
+          <OnbButton onClick={() => setShowEmail(true)}>
             Continuer avec un e-mail
-          </button>
+          </OnbButton>
         )}
       </div>
 
@@ -150,7 +138,7 @@ export default function SignUpStep({
           </p>
         ) : null}
         {message ? (
-          <p className="text-[13px] font-bold" style={{ color: '#2AA36B' }}>
+          <p className="text-[13px] font-bold text-success">
             {message}
           </p>
         ) : null}

@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils'
  * rechargement. On retient l'échéance déjà passée plutôt qu'un booléen : un
  * nouvel achat apporte une autre échéance, et le badge revient de lui-même.
  */
-function useBoostEnCours(jusqua: string | null): boolean {
+export function useBoostEnCours(jusqua: string | null): boolean {
   const [echu, setEchu] = useState<string | null>(null)
   useEffect(() => {
     if (jusqua === null) return

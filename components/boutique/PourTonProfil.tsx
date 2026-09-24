@@ -4,6 +4,7 @@ import { useState, useTransition } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
 import { Check, Shirt } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import BandeauSection from '@/components/boutique/BandeauSection'
@@ -28,6 +29,9 @@ const CATEGORIES: Record<ObjetProfil['categorie'], string> = {
  * Boutique vend d'abord de quoi apprendre (les capsules), la décoration vient
  * en dernier.
  */
+/** Aucun objet choisi — une CONSTANTE : `useFermeAuMasquage` la veut stable. */
+const CHOIX_FERME: { id: string | null; open: boolean } = { id: null, open: false }
+
 export default function PourTonProfil({
   objets,
   gemmes,
@@ -37,7 +41,11 @@ export default function PourTonProfil({
   gemmes: number
   connecte: boolean
 }) {
-  const [choix, setChoix] = useState<{ id: string | null; open: boolean }>({ id: null, open: false })
+  const [choix, setChoix] = useState(CHOIX_FERME)
+  // « Aller à mon profil » quitte la Boutique sans refermer la fiche : au
+  // retour sur l'onglet (gardé vivant, components/OngletsVivants), elle repart
+  // fermée.
+  useFermeAuMasquage(setChoix, CHOIX_FERME)
   const objet = objets.find((o) => o.id === choix.id) ?? null
   if (objets.length === 0) return null
 
@@ -181,7 +189,7 @@ function FeuilleObjet({
   return (
     <Feuille open={open} onClose={onClose} label={objet.nom}>
       <Vignette objet={objet} className="mt-10 h-40 rounded-3xl" />
-      <p className="mt-4 text-xs font-extrabold tracking-wide text-primary uppercase">
+      <p className="surtitre mt-4 text-primary">
         {CATEGORIES[objet.categorie]}
       </p>
       <h2 className="font-heading text-2xl font-extrabold">{objet.nom}</h2>

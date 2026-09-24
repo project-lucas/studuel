@@ -490,9 +490,9 @@ function IntroStep({ onStart }: { onStart: () => void }) {
       </div>
       <div className="mt-auto flex flex-col gap-2.5 pt-4">
         <OnbButton onClick={onStart}>C&apos;est parti</OnbButton>
-        <Link href="/login" className="onb-btn onb-btn-ghost block text-center no-underline">
-          J&apos;ai déjà un compte
-        </Link>
+        <OnbButton variant="ghost" asChild>
+          <Link href="/login">J&apos;ai déjà un compte</Link>
+        </OnbButton>
       </div>
     </div>
   )

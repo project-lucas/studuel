@@ -13,6 +13,9 @@
 // La reconnaissance est volontairement EXIGEANTE : il faut le mot « carnet » ET
 // un verbe qui range. « C'est quoi un carnet de bord ? » reste une question
 // pour le modèle ; « mets ça dans mon carnet » est un ordre.
+//
+// Le carnet s'appelle « Ma bibliothèque » depuis le 24/09/2026 : « bibliothèque »
+// (et « biblio ») rangent autant que « carnet » — les deux mots circulent.
 
 /** Le cours d'accueil, créé à la demande dans le carnet de l'élève. */
 export const COURS_MARCEL = 'Avec Marcel'
@@ -53,7 +56,7 @@ const VERBES =
 export function veutCarnet(texte: unknown): boolean {
   if (typeof texte !== 'string') return false
   const plat = aplati(texte)
-  if (!/\bcarnet\b/.test(plat)) return false
+  if (!/\b(?:carnet|bibliotheque|biblio)\b/.test(plat)) return false
   if (!VERBES.test(plat)) return false
 
   // « ne mets pas ça dans mon carnet » : la négation renverse l'ordre, et une

@@ -115,8 +115,8 @@ export default function NotificationsOptIn() {
     return null
 
   return (
-    <section className="bg-card mx-auto mt-4 w-full max-w-md rounded-xl border p-4 shadow-sm">
-      <h2 className="mb-1 flex items-center gap-2 font-semibold">
+    <section className="carte mx-auto mt-4 w-full max-w-md p-4">
+      <h2 className="titre-section mb-1 flex items-center gap-2">
         <Bell className="text-primary size-4" aria-hidden="true" />
         Rappels
       </h2>

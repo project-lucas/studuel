@@ -36,7 +36,7 @@ const MISE_A_JOUR = 'Cette personnalisation arrive bientôt sur ton compte — m
 /** Une écriture sur UN dossier de l'élève, avec la vérification de propriété. */
 async function modifierCours(id: string, patch: Record<string, unknown>): Promise<ResultatCarnet> {
   const s = await session()
-  if (!s) return { ok: false, message: 'Connecte-toi pour modifier ton carnet.' }
+  if (!s) return { ok: false, message: 'Connecte-toi pour modifier ta bibliothèque.' }
   if (typeof id !== 'string' || id.length === 0) return { ok: false, message: 'Cours inconnu.' }
 
   const { error } = await s.supabase

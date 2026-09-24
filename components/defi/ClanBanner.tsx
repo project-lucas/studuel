@@ -7,6 +7,7 @@ import SchoolPicker from '@/components/SchoolPicker'
 import { sfx } from '@/lib/sounds'
 import { SCHOOL_LEVEL_LABEL, type School, type SchoolLevel } from '@/lib/clan'
 import { useDialogFocus } from '@/lib/use-dialog'
+import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
 
 // Bannière « clan » en tête des classements du Défi : montre l'école de l'élève
 // (son clan) et permet d'en choisir/changer via le sélecteur d'école, ouvert en
@@ -20,6 +21,7 @@ export default function ClanBanner({
 }) {
   const router = useRouter()
   const [open, setOpen] = useState(false)
+  useFermeAuMasquage(setOpen, false)
   const panel = useRef<HTMLDivElement>(null)
   useDialogFocus(panel, open)
 

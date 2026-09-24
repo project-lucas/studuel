@@ -9,7 +9,9 @@ import {
   nextArenaSlot,
   type ArenaPeriod,
 } from '@/lib/arena-background'
+import { fichiersDeScene, sceneVivanteDe } from '@/lib/arena-vivante'
 import ArenaSky from '@/components/ArenaSky'
+import ArenaVivante from '@/components/defi/ArenaVivante'
 import AnimatedBackground from '@/components/background/AnimatedBackground'
 
 /**
@@ -50,8 +52,13 @@ export default function ArenaBackdrop({ anime = true }: { anime?: boolean } = {}
       }
       const now = new Date()
       setPeriod(arenaPeriodAt(now.getHours()))
-      // Précharge la variante suivante pour que le fondu parte d'un cache chaud.
-      new window.Image().src = nextArenaSlot(now.getHours()).src
+      // Précharge la variante suivante pour que le fondu parte d'un cache chaud
+      // — sa planche et ses nuages si elle est vivante, son image sinon.
+      const suivante = nextArenaSlot(now.getHours())
+      const sceneSuivante = sceneVivanteDe(suivante.period)
+      for (const src of sceneSuivante ? fichiersDeScene(sceneSuivante) : [suivante.src]) {
+        new window.Image().src = src
+      }
       // Réveil pile sur la frontière (+1 s de marge d'horloge).
       timer = window.setTimeout(sync, msUntilNextArenaChange(now) + 1_000)
     }
@@ -86,28 +93,39 @@ export default function ArenaBackdrop({ anime = true }: { anime?: boolean } = {}
 
   return (
     <>
-      {layers.map((p) => (
-        <div
-          key={p}
-          className="arena-img"
-          style={{ backgroundImage: `url(${arenaSrcOf(p)})` }}
-        />
-      ))}
+      {layers.map((p) => {
+        // Une plage qui a sa scène VIVANTE (lib/arena-vivante.ts) la pose à la
+        // place de son image fixe, dans la même couche `.arena-img` : même
+        // fondu à l'arrivée, même empilement pour le changement de plage.
+        const scene = sceneVivanteDe(p)
+        return scene ? (
+          <div key={p} className="arena-img">
+            <ArenaVivante scene={scene} anime={anime} />
+          </div>
+        ) : (
+          <div
+            key={p}
+            className="arena-img"
+            style={{ backgroundImage: `url(${arenaSrcOf(p)})` }}
+          />
+        )
+      })}
       {/* Voiles violets haut/bas : gardent HUD et barre d'onglets lisibles. */}
       <div className="arena-veils" />
-      {/* Le ciel vit (nuages) puis la scène s'anime en continu
-          (bannières, feuilles sur canvas, torches, poussière dorée) — montée
+      {/* Le ciel vit (nuages, rayon) puis la poussière dorée flotte — montée
           après les voiles pour rester bien lisible. Sans imageUrl : le décor
-          horaire est déjà peint par les couches .arena-img ci-dessus. */}
+          horaire est déjà peint par les couches .arena-img ci-dessus. Les
+          feuilles qui tombaient et les deux braises dorées ont été retirées le
+          23/09/2026 (Lucas). */}
       {/* Les couches VIVANTES sont facultatives. Le rideau de recherche
           d'adversaire remonte ce décor par-dessus le HUD pour le masquer
           (cf. MatchmakingOverlay) : il n'a besoin que de l'illustration. Faire
-          tourner un SECOND ciel et un SECOND canvas de particules coûterait des
+          tourner un SECOND ciel et une SECONDE poussière coûterait des
           images par seconde exactement au moment où l'app charge la route du
           duel — c'est-à-dire au pire moment possible. */}
       {anime ? (
         <>
-          <ArenaSky period={period} />
+          <ArenaSky period={period} vivant={sceneVivanteDe(period) !== undefined} />
           <AnimatedBackground />
         </>
       ) : null}

@@ -46,7 +46,7 @@ export default function AnnalesPanel({
   return (
     <div className="mx-auto flex w-full max-w-xl flex-col gap-6">
       <section aria-labelledby="epreuve-blanche">
-        <h2 id="epreuve-blanche" className="font-heading text-lg font-bold">
+        <h2 id="epreuve-blanche" className="titre-section">
           T’entraîner dans les conditions
         </h2>
         <p className="mt-0.5 mb-3 text-sm text-muted-foreground">
@@ -57,7 +57,7 @@ export default function AnnalesPanel({
         <Link
           href={`/reviser/examen-blanc?subject=${subject.slug}`}
           onClick={() => sfx.tap()}
-          className="group flex items-center gap-3 rounded-2xl border-b-4 border-b-black/25 bg-gradient-to-r from-primary to-[color-mix(in_oklch,var(--primary),black_18%)] p-3.5 text-white shadow-md transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-[2px] active:border-b-2"
+          className="group flex items-center gap-3 rounded-carte border-b-4 border-b-black/25 bg-gradient-to-r from-primary to-[color-mix(in_oklch,var(--primary),black_18%)] p-3.5 text-white shadow-md transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-[2px] active:border-b-2"
         >
           <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-white/15">
             <GraduationCap
@@ -67,7 +67,7 @@ export default function AnnalesPanel({
             />
           </span>
           <span className="min-w-0 flex-1">
-            <span className="font-heading block text-sm leading-tight font-bold">
+            <span className="font-heading block text-sm leading-tight font-extrabold">
               Épreuve blanche de {subject.name}
             </span>
             <span className="mt-0.5 block text-[11px] font-semibold text-white/75">
@@ -82,7 +82,7 @@ export default function AnnalesPanel({
       </section>
 
       <section aria-labelledby="sujets-officiels">
-        <h2 id="sujets-officiels" className="font-heading text-lg font-bold">
+        <h2 id="sujets-officiels" className="titre-section">
           L’épreuve {exam.short === 'Bac' ? 'du bac' : `du ${exam.short.toLowerCase()}`}, partie
           par partie
         </h2>
@@ -92,7 +92,7 @@ export default function AnnalesPanel({
             <span className="flex size-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
               <FileText className="size-6" aria-hidden="true" />
             </span>
-            <p className="font-heading font-bold">Pas encore d’épreuve ici</p>
+            <p className="font-heading font-extrabold">Pas encore d’épreuve ici</p>
             <p className="max-w-xs text-sm text-muted-foreground">
               {subject.name} n’a pas encore sa fiche d’épreuve dans l’app. En
               attendant, l’épreuve blanche ci-dessus se joue sur tout le
@@ -109,7 +109,7 @@ export default function AnnalesPanel({
               {sessions.map((group) => (
                 <div key={group.session} className="flex flex-col gap-3">
                   {sessions.length > 1 && (
-                    <h3 className="font-heading text-sm font-bold text-muted-foreground">
+                    <h3 className="font-heading text-sm font-extrabold text-muted-foreground">
                       Session {group.session}
                     </h3>
                   )}
@@ -131,9 +131,9 @@ function PaperCard({ paper }: { paper: ExamPaper }) {
   const total = totalPoints(paper)
 
   return (
-    <article className="overflow-hidden rounded-2xl border bg-card shadow-sm">
+    <article className="carte overflow-hidden">
       <header className="border-b bg-primary/5 px-4 py-3">
-        <h4 className="font-heading text-sm leading-tight font-bold">
+        <h4 className="font-heading text-sm leading-tight font-extrabold">
           {paper.title}
           {paper.center && (
             <span className="ml-1.5 font-sans text-[11px] font-semibold text-muted-foreground">
@@ -160,7 +160,7 @@ function PaperCard({ paper }: { paper: ExamPaper }) {
         {paper.parts.map((part, i) => (
           <li key={`${paper.id}-${i}`} className="px-4 py-3">
             <div className="flex items-baseline justify-between gap-3">
-              <p className="font-heading text-sm font-bold">
+              <p className="font-heading text-sm font-extrabold">
                 <span className="text-muted-foreground">{i + 1}.</span> {part.title}
               </p>
               <p className="shrink-0 text-[11px] font-semibold text-muted-foreground">

@@ -82,7 +82,7 @@ export default function Fiche({
               {entree.emoji}
             </span>
             <div className="min-w-0 flex-1">
-              <h1 className="font-heading text-2xl leading-tight font-extrabold md:text-4xl">
+              <h1 className="font-heading text-3xl leading-tight font-extrabold">
                 {entree.nom}
               </h1>
               {estPersonnage(entree) && entree.surnom ? (
@@ -112,11 +112,15 @@ export default function Fiche({
         </div>
       </header>
 
-      <div className="relative -mt-6 rounded-t-3xl bg-background">
+      {/* Plus de feuille opaque sous le bandeau : le corps de la fiche se
+          pose sur le mur crème de l'app comme toute page de Réviser (audit du
+          23/09/2026). Le bandeau, lui, garde sa teinte : c'est la dérogation
+          écrite des périodes. */}
+      <div className="relative">
         <div className="mx-auto w-full max-w-3xl px-4 pt-6 pb-24 md:px-8">
           {/* L'ACCROCHE : une phrase, plus grande que le corps. Si l'élève ne
               lit que ça, il sait déjà pourquoi ce nom existe. */}
-          <p className="font-heading text-lg leading-snug font-bold text-foreground md:text-xl">
+          <p className="font-heading text-lg leading-snug font-extrabold text-foreground md:text-xl">
             <TexteRiche texte={entree.accroche} />
           </p>
 

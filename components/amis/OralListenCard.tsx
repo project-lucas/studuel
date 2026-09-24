@@ -49,7 +49,7 @@ function UneDemande({ demande }: { demande: DemandeEcoute }) {
 
   if (etat === 'fait' || etat === 'refuse') {
     return (
-      <li className="bg-card rounded-2xl px-4 py-3 text-sm shadow-sm">
+      <li className="carte px-4 py-3 text-sm">
         <p role="status" className="font-semibold">
           {etat === 'fait'
             ? `Retour envoyé à ${nom}. Ça compte pour son échelle de l’oral.`
@@ -84,7 +84,7 @@ function UneDemande({ demande }: { demande: DemandeEcoute }) {
   }
 
   return (
-    <li className="bg-card rounded-2xl px-4 py-3 shadow-sm">
+    <li className="carte px-4 py-3">
       <p className="text-sm">
         <span className="font-extrabold">{nom}</span> veut te faire écouter son
         oral.

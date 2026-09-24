@@ -1,8 +1,10 @@
-import BackButton from '@/components/BackButton'
-import { cn } from '@/lib/utils'
-import { subjectTheme, subjectVignette, GRID_PATTERN } from '@/lib/subject-style'
+import EnTetePage from '@/components/reviser/EnTetePage'
+import MedaillonMatiere from '@/components/reviser/MedaillonMatiere'
 
-// L'EN-TÊTE DE L'ENCYCLOPÉDIE — le même monde que le dossier de matière.
+// L'EN-TÊTE DE L'ENCYCLOPÉDIE — le même monde que le dossier de matière :
+// la recette commune de Réviser (`EnTetePage`), le médaillon de la matière,
+// et la rangée d'onglets du dossier dessous. Plus d'aplat orange derrière le
+// titre (audit du 23/09/2026) : le fond est le mur crème de toute l'app.
 //
 // Ce n'est pas `SubjectHeader` : celui-là porte une barre de PROGRESSION, et
 // l'encyclopédie n'a rien à mesurer. Elle ne donne ni XP, ni gemmes, ni
@@ -25,67 +27,21 @@ export default function EnteteRayon({
   /** La barre d'onglets du dossier. */
   children?: React.ReactNode
 }) {
-  const theme = subjectTheme(subject.color)
-  const vignette = subjectVignette(subject.slug)
-
   return (
-    <header
-      className={cn(
-        'relative overflow-hidden px-4 pt-20 pb-10 text-white md:px-8 md:pt-12',
-        'arena-tile',
-        theme.arena,
-      )}
-    >
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.06]"
-        style={GRID_PATTERN}
-        aria-hidden="true"
-      />
-      <div className="relative mx-auto w-full max-w-4xl">
-        <div className="mb-4 flex items-center gap-3">
-          <BackButton
-            fallback={`/reviser/${subject.slug}`}
-            label="Retour au dossier"
-          />
-        </div>
-        <div className="flex items-center gap-4">
-          <span
-            className={cn(
-              'relative flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl shadow-[0_4px_10px_rgba(0,0,0,0.2)] ring-1 ring-black/10',
-              vignette ? 'bg-background' : cn('arena-tile', theme.arena),
-            )}
-          >
-            {vignette ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={vignette}
-                alt=""
-                aria-hidden="true"
-                width={320}
-                height={320}
-                className="size-13 object-contain"
-              />
-            ) : (
-              <span aria-hidden="true" className="text-3xl">
-                📚
-              </span>
-            )}
+    <EnTetePage
+      retour={{ fallback: `/reviser/${subject.slug}`, label: 'Retour au dossier' }}
+      titre="Encyclopédie"
+      medaillon={<MedaillonMatiere slug={subject.slug} />}
+      sousTitre={
+        <>
+          {personnages} personnages · {evenements} événements
+          <span className="block text-xs">
+            {subject.name} · {grade}
           </span>
-          <div className="min-w-0 flex-1">
-            <h1 className="font-heading text-3xl font-bold md:text-4xl">
-              Encyclopédie
-            </h1>
-            <p className="text-sm font-medium opacity-80">
-              {personnages} personnages · {evenements} événements
-            </p>
-            <p className="text-xs font-medium opacity-60">
-              {subject.name} · {grade}
-            </p>
-          </div>
-        </div>
-
-        {children}
-      </div>
-    </header>
+        </>
+      }
+    >
+      {children}
+    </EnTetePage>
   )
 }

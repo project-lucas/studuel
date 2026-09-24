@@ -65,6 +65,9 @@ export const PLANS: readonly Plan[] = [
     members: 1,
     recommended: true,
     features: [
+      // Marcel et l'avatar dessiné : gatés par la migration 378 (crédits du mois).
+      'Marcel, ton coach IA : 200 crédits par mois',
+      'Ton avatar dessiné par Marcel, à ton idée',
       'Toutes les fiches de chapitre, sans gemme',
       'Toutes les fiches de révision',
       'Tous les quiz & flashcards premium',

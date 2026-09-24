@@ -1,16 +1,17 @@
 import { Skeleton } from '@/components/ui/skeleton'
 
-// Squelette d'une leçon : bandeau de titre + corps de contenu.
+// Squelette d'une leçon : l'en-tête commun de Réviser (retour rond, titre,
+// sous-titre) puis le corps du cours — sur le mur crème, comme la page qu'il
+// annonce (plus de bandeau coloré depuis le 23/09/2026).
 export default function LessonLoading() {
   return (
-    <div className="-mx-4 -mt-16 md:-mx-8 md:-mt-10">
-      <div className="bg-muted/60 px-4 pt-20 pb-6 md:px-8 md:pt-12">
-        <div className="mx-auto w-full max-w-4xl space-y-4">
-          <Skeleton className="h-5 w-40" />
-          <Skeleton className="h-8 w-72 max-w-full" />
-        </div>
+    <div className="mx-auto w-full max-w-2xl">
+      <Skeleton className="size-10 rounded-full" />
+      <div className="mt-4 space-y-2">
+        <Skeleton className="h-8 w-72 max-w-full" />
+        <Skeleton className="h-4 w-40" />
       </div>
-      <div className="mx-auto w-full max-w-4xl space-y-4 px-4 py-6 md:px-8">
+      <div className="mt-6 space-y-4">
         <Skeleton className="h-6 w-1/2" />
         <Skeleton className="h-4 w-full" />
         <Skeleton className="h-4 w-11/12" />

@@ -3,11 +3,11 @@
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Lock } from 'lucide-react'
-import { railDivisions, type EtatDivision } from '@/lib/amis/classement-ecole'
+import { echelon, railLigue, type EtatRail } from '@/lib/ligue'
 import { cn } from '@/lib/utils'
 
 /**
- * LE RAIL DES DIVISIONS DE L'ÉCOLE — le haut de l'écran de ligue de Duolingo
+ * LE RAIL DES RANGS DE LA LIGUE — le haut de l'écran de ligue de Duolingo
  * (Lucas, 16/09/2026 : « je veux cela comme Duolingo, voici les écussons par
  * division, ils doivent être cachés tant que le joueur n'a pas atteint le
  * palier suivant »).
@@ -21,8 +21,10 @@ import { cn } from '@/lib/utils'
  * opacité), pas un second dessin : le jour où l'élève monte, c'est le même
  * blason qui prend ses couleurs.
  *
- * L'état de chaque blason vient de `railDivisions` (lib/amis/classement-ecole,
- * testé) ; ici on ne fait que dessiner.
+ * Depuis le 24/09/2026, le rail suit l'ÉCHELON de la ligue de la semaine
+ * (lib/ligue : Bronze 4 → Maître), et non plus les trophées : sous le blason
+ * courant s'écrit la division (« Bronze 4 »). L'état de chaque blason vient de
+ * `railLigue` (testé) ; ici on ne fait que dessiner.
  */
 
 // Resserré le 17/09/2026 (Lucas : « ce bloc doit être plus petit ») : chez
@@ -31,16 +33,17 @@ import { cn } from '@/lib/utils'
 // 19/09/2026 (« l'illustration du rang n'est pas assez grande, agrandis tout
 // en étant raisonnable ») : 96 px au centre, soit un quart d'un écran de
 // 390 px, et les voisins à 54 — le blason se lit, la liste garde l'écran.
-const TAILLE: Record<EtatDivision, number> = {
+const TAILLE: Record<EtatRail, number> = {
   courante: 96,
   passee: 54,
   verrouillee: 54,
 }
 
-export default function RailDivisions({ trophies }: { trophies: number }) {
+export default function RailDivisions({ echelon: index }: { echelon: number }) {
   const rail = useRef<HTMLUListElement>(null)
   const actuel = useRef<HTMLLIElement>(null)
-  const divisions = railDivisions(trophies)
+  const divisions = railLigue(index)
+  const division = echelon(index)
 
   // La division courante au CENTRE du rail à l'ouverture. On déplace le rail
   // lui-même (scrollLeft) plutôt que `scrollIntoView`, qui ferait aussi défiler
@@ -53,12 +56,12 @@ export default function RailDivisions({ trophies }: { trophies: number }) {
     const reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     const gauche = cible.offsetLeft - (conteneur.clientWidth - cible.offsetWidth) / 2
     conteneur.scrollTo({ left: gauche, behavior: reduit ? 'auto' : 'smooth' })
-  }, [trophies])
+  }, [index])
 
   return (
     <ul
       ref={rail}
-      aria-label="Les divisions"
+      aria-label="Les rangs de la ligue"
       // Une marge d'une demi-largeur de chaque côté : même le premier blason
       // (Bronze, où tout le monde commence) peut se tenir AU CENTRE, comme la
       // coupe de Duolingo, avec la division suivante qui dépasse à droite.
@@ -72,9 +75,12 @@ export default function RailDivisions({ trophies }: { trophies: number }) {
       // jusqu'au dernier blason (869 px sur un écran de 412). Chrome Android
       // agrandissait alors la zone de mise en page : la barre d'onglets, fixée
       // en bas de CETTE zone, sortait de l'écran (17/09/2026).
-      className="relative flex snap-x snap-mandatory items-end gap-3 overflow-x-auto overscroll-x-contain px-[calc(50%-48px)] pt-2 pb-0.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      // `w-full self-stretch` : dans une colonne centrée (LigueSemaine), le
+      // rail prenait la largeur de ses six blasons au lieu de défiler — il
+      // débordait de l'écran et centrait Argent → Diamant (24/09/2026).
+      className="relative flex w-full self-stretch snap-x snap-mandatory items-end gap-3 overflow-x-auto overscroll-x-contain px-[calc(50%-48px)] pt-2 pb-0.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
     >
-      {divisions.map(({ tier, etat }) => {
+      {divisions.map(({ rang: tier, etat }) => {
         const taille = TAILLE[etat]
         const verrouillee = etat === 'verrouillee'
         return (
@@ -104,6 +110,8 @@ export default function RailDivisions({ trophies }: { trophies: number }) {
                 alt=""
                 width={224}
                 height={224}
+                // Le blason courant ouvre l'onglet : chargé d'emblée.
+                loading={etat === 'courante' ? 'eager' : undefined}
                 className={cn(
                   'size-full select-none object-contain',
                   verrouillee
@@ -133,10 +141,10 @@ export default function RailDivisions({ trophies }: { trophies: number }) {
                     : 'text-muted-foreground/60',
               )}
             >
-              {verrouillee ? '?' : tier.name}
+              {verrouillee ? '?' : etat === 'courante' ? division.nom : tier.name}
               <span className="sr-only">
                 {etat === 'courante'
-                  ? ` — ta division, ${tier.name}`
+                  ? ` — ta division, ${division.nom}`
                   : etat === 'passee'
                     ? ' — traversée'
                     : ' — à débloquer'}

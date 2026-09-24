@@ -1,3 +1,4 @@
+import { useId } from 'react'
 import { cn } from '@/lib/utils'
 import type { CouronneTier } from '@/lib/moi/couronnes'
 
@@ -36,10 +37,11 @@ export default function CouronneArt({
   className?: string
 }) {
   const m = METAUX[tier]
-  // Un id par métal : deux couronnes du même métal partagent leur dégradé, ce
-  // qui est exactement ce qu'on veut. Deux métaux différents ne se marchent
-  // jamais dessus.
-  const id = `couronne-${tier}`
+  // UN IDENTIFIANT PAR DESSIN (useId) : les onglets restent montés
+  // (components/OngletsVivants) et Chrome ne peint pas un dégradé défini dans un
+  // onglet caché (`display: none`). Un identifiant partagé pouvait donc viser
+  // le dégradé d'un onglet caché et laisser ce dessin sans couleur.
+  const id = useId()
 
   return (
     <svg

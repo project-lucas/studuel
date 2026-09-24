@@ -157,7 +157,7 @@ export function ParentIntroStep({ onContinue }: { onContinue: () => void }) {
         className="mt-4 rounded-[18px] border-2 p-4"
         style={{ borderColor: 'var(--onb-yl)', background: '#FFF7E0' }}
       >
-        <p className="text-[11px] font-extrabold tracking-[0.1em] uppercase" style={{ color: '#a06d00' }}>
+        <p className="surtitre" style={{ color: '#a06d00' }}>
           Comment ça marche
         </p>
         <ol className="mt-1.5 flex flex-col gap-1 text-[13.5px] leading-[1.4] font-semibold" style={{ color: 'var(--onb-ink)' }}>
@@ -430,7 +430,7 @@ export function GradeStep({
         <OptionGroup label="Tu es en quelle classe" className="flex flex-col gap-5">
           {GRADE_CYCLES.map((cycle) => (
             <div key={cycle.id} className="flex flex-col gap-[11px]">
-              <h3 className="text-xs font-extrabold tracking-wide text-muted-foreground uppercase">
+              <h3 className="titre-section">
                 {cycle.label}
               </h3>
               <div className="grid grid-cols-2 gap-[11px]">

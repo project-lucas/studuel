@@ -40,7 +40,7 @@ export default async function OralPage() {
       <BackButton fallback="/marcel?vue=oral" label="Retour — Marcel" />
 
       <header className="mt-4 mb-5">
-        <h1 className="font-heading text-2xl font-extrabold text-balance">
+        <h1 className="font-heading text-3xl font-extrabold text-balance">
           Répéter à voix haute
         </h1>
         <p className="text-muted-foreground mt-1 text-sm">

@@ -1,9 +1,8 @@
 // Couche sociale (onglet « Amis ») — logique pure + données de démonstration.
-// Amitiés, duels, « en direct » et « mon école » sont branchés sur Supabase ;
-// les `getMock*` restants ne servent que d'aperçu (visiteur non connecté ou
-// élève sans établissement), toujours signalé comme tel dans l'UI.
-
-import { type SchoolLevel } from '@/lib/clan'
+// Amitiés, duels et « en direct » sont branchés sur Supabase ; les `getMock*`
+// restants ne servent que d'aperçu, toujours signalé comme tel dans l'UI. Le
+// classement de l'école aux trophées a laissé la place à la ligue de la
+// semaine (lib/ligue, 24/09/2026).
 
 export type Friend = {
   id: string
@@ -70,45 +69,7 @@ export const DUEL_XP_BONUS = 50
 // utilisé par DuelMode pour son propre verrou quotidien côté client.
 export const DUEL_DAY_STORAGE_KEY = 'scolaria-duel-day'
 
-// ----------------------------------------------------------------- L'école
-// LE CLASSEMENT DE L'ÉCOLE SE FAIT AUX TROPHÉES (Lucas, 16/09/2026), plus au
-// temps de travail. Les heures mesuraient l'assiduité ; les trophées mesurent
-// ce que l'élève a GAGNÉ (duels classés, cf. lib/trophies) — c'est la même
-// monnaie que le classement entre amis et le rang de saison (lib/rank), donc
-// un seul vocabulaire sur tout l'onglet : « Bronze IV », « 480 trophées ».
-export type SchoolMate = {
-  id: string
-  name: string
-  emoji: string
-  // Blason choisi (migration 363) ; absent = blason fixe déduit de l'id.
-  portrait?: string
-  trophies: number // trophées de saison (cf. profiles.trophies, lib/trophies)
-  isMe?: boolean
-}
-
-export type SchoolBoard = {
-  name: string
-  emoji: string
-  // Cycle de l'établissement : pilote les textes (« ton collège »/« ton lycée »).
-  level: SchoolLevel
-  mates: SchoolMate[]
-}
-
-// Nom courant de l'établissement pour les phrases de l'UI.
-export function schoolNoun(level: SchoolLevel): string {
-  return level === 'lycee' ? 'lycée' : 'collège'
-}
-
-export function sortSchool(mates: SchoolMate[]): SchoolMate[] {
-  return [...mates].sort((a, b) => b.trophies - a.trophies)
-}
-
-// La RPC clan_mates (362) ne renvoie que les 50 élèves les mieux classés :
-// au-delà, le rang affiché ne couvre que ce top — l'UI doit le dire au lieu
-// de présenter la liste comme toute l'école.
-export const SCHOOL_BOARD_LIMIT = 50
-
-// --- Backend réel (migration 160) : « en direct » + « mon école » ------------
+// --- Backend réel (migration 160) : « en direct » ----------------------------
 
 // Texte d'activité selon le type de session renvoyé par friends_live.
 export const LIVE_KIND_LABEL: Record<string, { activity: string; subject: string }> = {
@@ -141,40 +102,6 @@ export function buildLiveSessions(rows: unknown): LiveSession[] {
       },
     ]
   })
-}
-
-// Construit le tableau « mon école » à partir du JSONB de la RPC clan_mates
-// ({ school_name, mates:[{ id, name, trophies }] }). Marque l'élève courant.
-// Les trophées arrivent avec la migration 362 ; une RPC plus ancienne (160/242)
-// ne les renvoie pas : ils valent alors 0, et la liste se lit quand même.
-export function buildSchoolBoard(
-  raw: unknown,
-  myId: string,
-  level: SchoolLevel = 'college',
-): SchoolBoard {
-  const o = (raw ?? {}) as Record<string, unknown>
-  const matesRaw = Array.isArray(o.mates) ? o.mates : []
-  const mates: SchoolMate[] = matesRaw.flatMap((m) => {
-    const mo = (m ?? {}) as Record<string, unknown>
-    const id = String(mo.id ?? '')
-    if (id.length === 0) return []
-    return [
-      {
-        id,
-        name: id === myId ? 'Toi' : String(mo.name ?? 'Élève'),
-        emoji: avatarEmojiFor(id),
-        portrait: typeof mo.portrait === 'string' ? mo.portrait : '',
-        trophies: Math.max(0, Math.floor(Number(mo.trophies) || 0)),
-        isMe: id === myId,
-      },
-    ]
-  })
-  return {
-    name: typeof o.school_name === 'string' ? o.school_name : '',
-    emoji: '🏫',
-    level,
-    mates: sortSchool(mates),
-  }
 }
 
 // -------------------------------------------------------- Séries des amis
@@ -357,153 +284,5 @@ export function duelView(row: DuelRow, myId: string, opponent: Friend): Duel {
     myScore,
     theirScore,
     total: row.total,
-  }
-}
-
-// L'école de l'élève (aperçu, signalé comme tel dans l'UI) — `myTrophies` vient
-// du vrai profil quand il est connecté, pour que sa place bouge avec ses
-// vrais duels. Le nom suit le cycle pour ne pas contredire le titre.
-export function getMockSchool(
-  myTrophies: number,
-  level: SchoolLevel = 'college',
-): SchoolBoard {
-  return {
-    name: level === 'lycee' ? 'Lycée Jean-Moulin' : 'Collège Jean-Moulin',
-    emoji: '🏫',
-    level,
-    mates: sortSchool([
-      { id: 'me', name: 'Toi', emoji: '🚀', trophies: myTrophies, isMe: true },
-      { id: 'naila', name: 'Naïla', emoji: '🦉', trophies: 1240 },
-      { id: 'rayan', name: 'Rayan', emoji: '🦁', trophies: 980 },
-      { id: 'lea', name: 'Léa', emoji: '🦊', trophies: 760 },
-      { id: 'ines', name: 'Inès', emoji: '🐝', trophies: 540 },
-      { id: 'tom', name: 'Tom', emoji: '🐼', trophies: 310 },
-      { id: 'hugo', name: 'Hugo', emoji: '🐺', trophies: 180 },
-      { id: 'chloe', name: 'Chloé', emoji: '🐰', trophies: 60 },
-    ]),
-  }
-}
-
-// --- Échelons géographiques du classement (docs/CADRAGE-GEO.md) ---------------
-// Du plus proche au plus large : ton établissement (la « ville » de départ),
-// ton département, ta région, le national. Un sélecteur d'échelon laisse
-// l'élève voir où il se situe à chaque échelle.
-
-export type GeoScope = 'school' | 'dept' | 'region' | 'national'
-
-export const GEO_SCOPES: readonly GeoScope[] = [
-  'school',
-  'dept',
-  'region',
-  'national',
-]
-
-// Libellé court de l'onglet. L'établissement suit le cycle (« Lycée »/« Collège »).
-export function geoScopeLabel(scope: GeoScope, level: SchoolLevel): string {
-  switch (scope) {
-    case 'school':
-      return level === 'lycee' ? 'Lycée' : 'Collège'
-    case 'dept':
-      return 'Département'
-    case 'region':
-      return 'Région'
-    case 'national':
-      return 'National'
-  }
-}
-
-// Titre du bloc pour l'échelon courant (« Ton lycée », « Ton département »…).
-export function geoScopeTitle(scope: GeoScope, level: SchoolLevel): string {
-  switch (scope) {
-    case 'school':
-      return `Ton ${schoolNoun(level)}`
-    case 'dept':
-      return 'Ton département'
-    case 'region':
-      return 'Ta région'
-    case 'national':
-      return 'France entière'
-  }
-}
-
-// Groupe nominal pour les phrases « … compte pour {…} » selon l'échelon.
-export function geoScopePossessive(scope: GeoScope, level: SchoolLevel): string {
-  switch (scope) {
-    case 'school':
-      return `ton ${schoolNoun(level)}`
-    case 'dept':
-      return 'ton département'
-    case 'region':
-      return 'ta région'
-    case 'national':
-      return 'la France'
-  }
-}
-
-// Meneurs d'exemple par échelon (hors établissement) : plus le vivier est large,
-// plus les meneurs cumulent de trophées. « Toi » y es inséré avec tes vrais
-// trophées, puis tout est trié — au national tu apparais donc plus bas, ce qui
-// dit la vérité du jeu : on grimpe en gagnant des duels.
-const GEO_DEMO_LEADERS: Record<
-  Exclude<GeoScope, 'school'>,
-  { name: string; emoji: string; leaders: Omit<SchoolMate, 'isMe'>[] }
-> = {
-  dept: {
-    name: 'Seine-et-Marne',
-    emoji: '🏙️',
-    leaders: [
-      { id: 'd1', name: 'Yasmine', emoji: '🦅', trophies: 2760 },
-      { id: 'd2', name: 'Théo', emoji: '🐯', trophies: 2340 },
-      { id: 'd3', name: 'Camille', emoji: '🦊', trophies: 1930 },
-      { id: 'd4', name: 'Adam', emoji: '🐺', trophies: 1530 },
-      { id: 'd5', name: 'Sofia', emoji: '🦉', trophies: 1290 },
-      { id: 'd6', name: 'Nael', emoji: '🐼', trophies: 1150 },
-    ],
-  },
-  region: {
-    name: 'Île-de-France',
-    emoji: '🗺️',
-    leaders: [
-      { id: 'r1', name: 'Jade', emoji: '🦄', trophies: 6420 },
-      { id: 'r2', name: 'Gabriel', emoji: '🐉', trophies: 5610 },
-      { id: 'r3', name: 'Louna', emoji: '🦅', trophies: 4690 },
-      { id: 'r4', name: 'Ibrahim', emoji: '🦁', trophies: 3990 },
-      { id: 'r5', name: 'Manon', emoji: '🦊', trophies: 3540 },
-      { id: 'r6', name: 'Ethan', emoji: '🐯', trophies: 3040 },
-    ],
-  },
-  national: {
-    name: 'France',
-    emoji: '🇫🇷',
-    leaders: [
-      { id: 'n1', name: 'Alia', emoji: '👑', trophies: 15360 },
-      { id: 'n2', name: 'Noah', emoji: '🚀', trophies: 14040 },
-      { id: 'n3', name: 'Lina', emoji: '🦄', trophies: 12650 },
-      { id: 'n4', name: 'Raphaël', emoji: '🐉', trophies: 11670 },
-      { id: 'n5', name: 'Emma', emoji: '🦅', trophies: 10560 },
-      { id: 'n6', name: 'Aymen', emoji: '🦁', trophies: 9550 },
-    ],
-  },
-}
-
-// Aperçu d'exemple d'un échelon géographique, tant que le back-end géo (code
-// postal + RPC geo_ranking, cf. docs/CADRAGE-GEO.md) n'est pas branché. Pour
-// l'établissement, on réutilise l'aperçu d'école existant.
-export function getMockGeoBoard(
-  scope: GeoScope,
-  myTrophies: number,
-  level: SchoolLevel = 'college',
-): SchoolBoard {
-  if (scope === 'school') return getMockSchool(myTrophies, level)
-
-  const preset = GEO_DEMO_LEADERS[scope]
-  return {
-    name: preset.name,
-    emoji: preset.emoji,
-    level,
-    mates: sortSchool([
-      { id: 'me', name: 'Toi', emoji: '🚀', trophies: myTrophies, isMe: true },
-      ...preset.leaders.map((l) => ({ ...l })),
-    ]),
   }
 }

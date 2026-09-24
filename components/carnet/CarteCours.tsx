@@ -171,8 +171,10 @@ export default function CarteCours({
     return (
       <li
         className={cn(
-          'carnet-dossier flex items-center gap-2.5 rounded-[1.75rem] bg-white p-2.5 ring-1',
-          cours.epingle && !cours.archive ? 'ring-highlight/70' : 'ring-black/[0.06]',
+          // Une seule recette de carte (tokens de globals.css, audit du 23/09/2026) ;
+          // `.carnet-dossier` garde son enfoncement au toucher.
+          'carte carnet-dossier flex items-center gap-2.5 p-2.5',
+          cours.epingle && !cours.archive ? 'ring-1 ring-highlight/70' : null,
           cours.archive && 'opacity-60',
         )}
       >
@@ -216,15 +218,16 @@ export default function CarteCours({
   }
 
   return (
-    <li className={cn('carnet-dossier relative rounded-[1.75rem]', cours.archive && 'opacity-60')}>
+    <li className={cn('carnet-dossier relative rounded-carte', cours.archive && 'opacity-60')}>
       <Link
         href={`/carnet/cours/${cours.id}`}
         onClick={() => sfx.tap()}
         className={cn(
-          'relative flex min-h-[88px] items-center gap-3 rounded-[1.75rem] bg-white p-2.5 pr-8 ring-1',
+          // Le rayon et le fond de LA carte ; l'ombre est portée par le <li>.
+          'relative flex min-h-[88px] items-center gap-3 rounded-carte bg-card p-2.5 pr-8',
           // Le liseré du favori : jaune solaire, fin — la même teinte que
           // l'étoile, pour que les deux se lisent comme un seul signe.
-          cours.epingle && !cours.archive ? 'ring-highlight/70' : 'ring-black/[0.06]',
+          cours.epingle && !cours.archive ? 'ring-1 ring-highlight/70' : null,
         )}
       >
         {/* Pastille « n à revoir » : coin haut-GAUCHE, sur la vignette, hors

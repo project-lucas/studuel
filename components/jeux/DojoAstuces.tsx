@@ -32,7 +32,7 @@ export default function DojoAstuces() {
       aria-labelledby="dojo-astuces-titre"
       className="mb-5 rounded-3xl bg-card p-4 shadow-sm ring-1 ring-black/5"
     >
-      <h2 id="dojo-astuces-titre" className="font-heading flex items-center gap-2 text-lg font-extrabold">
+      <h2 id="dojo-astuces-titre" className="titre-section flex items-center gap-2">
         <span className="bg-highlight text-foreground flex size-8 items-center justify-center rounded-xl">
           <Lightbulb className="size-4" strokeWidth={2.6} aria-hidden="true" />
         </span>
@@ -49,7 +49,7 @@ export default function DojoAstuces() {
             <li key={famille}>
               <details className="group rounded-2xl bg-background ring-1 ring-black/5">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3">
-                  <span className="font-heading font-bold">{famille}</span>
+                  <span className="font-heading font-extrabold">{famille}</span>
                   <span className="text-muted-foreground flex items-center gap-1 text-xs font-bold">
                     {fiches.length} astuce{fiches.length > 1 ? 's' : ''}
                     <ChevronRight

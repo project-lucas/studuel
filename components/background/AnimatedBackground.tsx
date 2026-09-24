@@ -1,17 +1,15 @@
-import FallingLeaves from './layers/FallingLeaves'
-import TorchFlames from './layers/TorchFlames'
 import GoldenDust from './layers/GoldenDust'
 
 /**
- * Fond animé de l'Arène : trois couches décoratives superposées au décor
- * peint, toutes en boucle continue sans coupure visible (CSS procédural +
- * canvas, aucune vidéo/GIF, aucune dépendance externe).
+ * Fond animé de l'Arène : la poussière de lumière dorée, en boucle continue
+ * par-dessus le décor peint (CSS procédural, aucune vidéo, aucune dépendance).
+ * Couche `pointer-events: none`, masquée si l'élève préfère réduire le
+ * mouvement.
  *
- * Empilement (z croissant) : image (0) → feuilles (2) → torches (3) →
- * poussière dorée (4). Les couches sont `pointer-events: none` et respectent
- * prefers-reduced-motion (flammes figées, reste masqué/arrêté). Les bannières
- * violettes suspendues aux bords ont été retirées : elles doublonnaient avec
- * les oriflammes déjà peintes dans le décor de l'arène.
+ * Il y avait aussi des feuilles qui tombaient (canvas) et deux braises dorées
+ * au sol : retirées le 23/09/2026 à la demande de Lucas. Les braises avaient
+ * été calées sur les vasques de l'ancien décor à mascotte ; sur l'académie
+ * flottante, elles ne prolongeaient plus aucune flamme dessinée.
  *
  * Deux modes d'emploi :
  * - DANS l'Arène (app/defi/layout.tsx → ArenaBackdrop) : sans `imageUrl`,
@@ -36,8 +34,6 @@ export default function AnimatedBackground({ imageUrl, children }: Props) {
         />
       ) : null}
       <div aria-hidden="true" className="abg-layers">
-        <FallingLeaves />
-        <TorchFlames />
         <GoldenDust />
       </div>
       {children != null ? <div className="relative z-10">{children}</div> : null}

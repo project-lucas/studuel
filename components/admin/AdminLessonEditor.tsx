@@ -425,7 +425,7 @@ function QuestionCard({
   return (
     <div className="space-y-3 rounded-2xl border bg-card p-4 shadow-sm">
       <div className="flex items-center gap-2">
-        <span className="font-heading shrink-0 text-sm font-bold text-muted-foreground">
+        <span className="font-heading shrink-0 text-sm font-extrabold text-muted-foreground">
           Q{index + 1}
         </span>
         <Input

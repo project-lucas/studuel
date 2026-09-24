@@ -1,0 +1,89 @@
+/* LE DÉ QUI ROULE — l'icône du bouton « Modes de jeu » (lib/defi/de-anime.ts).
+
+   Le dessin de l'export de Lucas (`dice-roll.jsx`), cote pour cote : tous les
+   nombres sont en pixels de la scène de l'export (512 × 512), convertis par
+   `--u`. La scène est son propre conteneur : `--u` vaut un 512e de sa largeur,
+   quelle que soit la taille du bouton.
+
+   Les couleurs sont celles de l'ILLUSTRATION (violet du dé, or des pastilles,
+   encre du cerne) — le dé remplace une image, pas un rôle de l'interface. */
+
+.scene {
+  --u: calc(100cqw / 512);
+  --de-encre: #4a1a53;
+  --de-clair: #9c5cb4;
+  --de-violet: #6b3a91;
+  --de-profond: #57297a;
+  --de-or: #de9f3a;
+  --de-or-clair: #f3c46e;
+  --de-reflet: rgba(255, 236, 214, 0.55);
+  container-type: inline-size;
+  position: relative;
+  display: block;
+  aspect-ratio: 1;
+  pointer-events: none;
+}
+
+.scene * {
+  position: absolute;
+  display: block;
+}
+
+/* L'ombre au sol, sous le dé. */
+.sol {
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(40, 10, 55, 0.35), rgba(40, 10, 55, 0) 70%);
+}
+
+/* Le corps couvre la scène : il saute et s'écrase autour du centre du dé. */
+.corps {
+  inset: 0;
+}
+
+/* Le cube : un point au centre du dé, d'où partent les faces. SANS perspective,
+   comme l'export — une projection à plat, où seul l'ordre des faces change. */
+.cube {
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+}
+
+/* Le noyau d'encre, derrière les faces : il cerne les sommets arrondis. */
+.noyau {
+  background: var(--de-encre);
+}
+
+.face {
+  overflow: hidden;
+  box-sizing: border-box;
+  border-radius: calc(44 * var(--u));
+  border: calc(7 * var(--u)) solid var(--de-encre);
+  background: linear-gradient(145deg, var(--de-clair) 0%, var(--de-violet) 50%, var(--de-profond) 100%);
+  box-shadow:
+    inset calc(9 * var(--u)) calc(9 * var(--u)) 0 calc(-1 * var(--u)) var(--de-reflet),
+    inset calc(-8 * var(--u)) calc(-8 * var(--u)) 0 rgba(40, 8, 55, 0.35);
+  /* Une face tournée dos à nous disparaît : c'est le `z > 0` de l'export. */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.point {
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: calc(5 * var(--u)) solid var(--de-encre);
+  background: radial-gradient(circle at 35% 30%, var(--de-or-clair), var(--de-or) 60%);
+}
+
+/* Le voile d'encre d'une face, plus ou moins opaque selon la lumière. */
+.ombre {
+  inset: 0;
+  background: #1d0a2a;
+}
+
+/* Mouvement réduit : le dé reste posé, à l'instant zéro de la boucle (chaque
+   couche porte sa première image en ligne). */
+@media (prefers-reduced-motion: reduce) {
+  .scene * {
+    animation: none !important;
+  }
+}

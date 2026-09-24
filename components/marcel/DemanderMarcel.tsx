@@ -16,6 +16,7 @@ import {
   X,
 } from 'lucide-react'
 import marcelTete from '@/public/images/nav/marcel.webp'
+import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { toast } from '@/lib/toast'
@@ -89,6 +90,7 @@ export type MatiereOption = { slug: string; name: string }
 export default function DemanderMarcel({
   tier,
   utilisesAujourdhui,
+  depensesMois,
   jetons,
   gemmes,
   matieres,
@@ -98,6 +100,8 @@ export default function DemanderMarcel({
 }: {
   tier: Tier
   utilisesAujourdhui: number
+  /** Crédits dépensés ce mois-ci (migration 378). */
+  depensesMois: number
   jetons: number
   gemmes: number
   /** Les matières suivies — celles que Marcel sait coacher. */
@@ -134,6 +138,7 @@ export default function DemanderMarcel({
     jetons,
     gemmes,
     utilises: utilisesAujourdhui,
+    depenses: depensesMois,
   })
   const [pending, start] = useTransition()
   const champ = useRef<HTMLTextAreaElement>(null)
@@ -144,6 +149,7 @@ export default function DemanderMarcel({
   const etat = etatDemande({
     tier,
     utilisesAujourdhui: solde.utilises,
+    depensesMois: solde.depenses,
     jetons: solde.jetons,
   })
   const occupeOuPending = occupe || pending
@@ -193,7 +199,8 @@ export default function DemanderMarcel({
           setSolde((s) => ({
             ...s,
             utilises: s.utilises + 1,
-            // Au-delà du quota, c'est un jeton qui a payé.
+            // Un crédit du mois, ou — au-delà — un jeton.
+            depenses: etat.source === 'credit' ? s.depenses + 1 : s.depenses,
             jetons:
               etat.source === 'jeton' ? Math.max(0, s.jetons - 1) : s.jetons,
           }))
@@ -212,8 +219,10 @@ export default function DemanderMarcel({
             'error',
           )
           setSolde((s) => ({ ...s, utilises: s.utilises + 1 }))
+        } else if (res.abonnement) {
+          toast('Marcel fait partie de Studuel+.', 'error')
         } else if (res.quota) {
-          toast('Tes questions du jour sont passées.', 'error')
+          toast('Tes crédits du mois sont passés.', 'error')
           setSolde((s) => ({ ...s, utilises: s.utilises + 1 }))
         } else if (res.unavailable) {
           toast('Marcel ne peut pas répondre pour le moment.', 'error')
@@ -231,17 +240,17 @@ export default function DemanderMarcel({
       const res = await rangerDansCarnet(filId)
       if (res.ok) {
         setRange(true)
-        toast(`C’est dans ton carnet, dans « ${res.cours} ».`, 'success')
+        toast(`C’est dans ta bibliothèque, dans « ${res.cours} ».`, 'success')
       } else if (res.vide) {
         toast('Il n’y a rien à ranger pour l’instant.', 'error')
       } else {
-        toast('Je n’ai pas réussi à écrire dans ton carnet.', 'error')
+        toast('Je n’ai pas réussi à écrire dans ta bibliothèque.', 'error')
       }
     })
   }
 
+  // Pas de `sfx.tap()` : le `Button` d'achat joue déjà le clic.
   const acheter = () => {
-    sfx.tap()
     start(async () => {
       const res = await acheterJetons(1)
       if (res.ok) {
@@ -326,7 +335,7 @@ export default function DemanderMarcel({
               )}
             >
               <BookMarked aria-hidden="true" className="size-3.5" />
-              {range ? 'Rangé dans ton carnet' : 'Ranger dans mon carnet'}
+              {range ? 'Rangé dans ta bibliothèque' : 'Ranger dans ma bibliothèque'}
             </button>
           )}
         </div>
@@ -365,8 +374,8 @@ export default function DemanderMarcel({
               )}
 
               <span className="text-primary bg-primary/10 rounded-full px-2.5 py-1 text-[11px] font-extrabold">
-                {etat.restantes > 0
-                  ? `${etat.restantes} restantes`
+                {etat.restants > 0
+                  ? `${etat.restants} crédits`
                   : `${solde.jetons} jetons`}
               </span>
             </div>
@@ -587,22 +596,37 @@ export default function DemanderMarcel({
             {etat.message}
           </p>
 
-          {etat.source !== 'plafond' && (
+          {/* LE GRATUIT : Marcel fait partie de Studuel+ (migration 378). Pas
+              de jetons à lui vendre : ils ne lui ouvriraient rien. */}
+          {etat.source === 'abonnement' && (
             <div className="mt-3 space-y-2">
-              <button
+              <p className="text-muted-foreground text-[12px] font-semibold text-balance">
+                200 crédits par mois&nbsp;: tes questions à Marcel, ses fiches, et tes avatars dessinés.
+              </p>
+              <Button asChild size="lg" className="w-full">
+                <Link href="/tresor">
+                  <Sparkles aria-hidden="true" />
+                  Découvrir Studuel+
+                </Link>
+              </Button>
+            </div>
+          )}
+
+          {etat.source !== 'plafond' && etat.source !== 'abonnement' && (
+            <div className="mt-3 space-y-2">
+              {/* Violet, pas or : c'est un achat en gemmes, comme à la
+                  Boutique — l'or est réservé à l'arène, aux gains et à
+                  Studuel+. */}
+              <Button
                 type="button"
+                size="lg"
                 onClick={acheter}
                 disabled={pending || !peutAcheter(solde.gemmes)}
-                className={cn(
-                  'flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl px-3 text-[13px] font-extrabold transition active:translate-y-px',
-                  peutAcheter(solde.gemmes)
-                    ? 'bg-highlight text-foreground shadow-[0_4px_0_color-mix(in_oklch,var(--highlight),black_25%)]'
-                    : 'bg-foreground/8 text-muted-foreground',
-                )}
+                className="w-full"
               >
-                <Gem aria-hidden="true" className="size-4" />
+                <Gem aria-hidden="true" />
                 {JETONS_PAR_PACK} jetons · {GEMMES_PAR_PACK} gemmes
-              </button>
+              </Button>
 
               <p className="text-muted-foreground text-[11px] font-semibold">
                 {manqueGemmes(solde.gemmes) ??

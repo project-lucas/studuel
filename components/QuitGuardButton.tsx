@@ -104,7 +104,7 @@ export default function QuitGuardButton({
                   sizes="128px"
                   className="mx-auto size-32 object-contain"
                 />
-                <h2 className="font-heading mt-1 text-2xl font-bold text-balance text-foreground">
+                <h2 className="font-heading mt-1 text-2xl font-extrabold text-balance text-foreground">
                   {title}
                 </h2>
                 <p className="mt-2 text-sm text-pretty text-muted-foreground">

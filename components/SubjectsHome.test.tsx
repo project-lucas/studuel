@@ -16,7 +16,10 @@ vi.mock('next/navigation', () => ({
   useRouter: () => ({ prefetch: vi.fn(), push: vi.fn() }),
   usePathname: () => '/reviser',
 }))
-vi.mock('@/lib/sounds', () => ({ sfx: { tap: vi.fn() } }))
+// `press` compris : « Terminé » et « Choisir mes matières » sont des `Button`,
+// qui jouent le clic eux-mêmes. Sans lui dans le mock, le clic jette et le
+// mode ne se referme jamais — le symptôme ressemble à un bug d'interface.
+vi.mock('@/lib/sounds', () => ({ sfx: { tap: vi.fn() }, press: vi.fn() }))
 vi.mock('@/lib/toast', () => ({ toast: vi.fn() }))
 const saveMatieresPrioritaires = vi.fn<(slugs: string[]) => Promise<void>>(
   async () => {},

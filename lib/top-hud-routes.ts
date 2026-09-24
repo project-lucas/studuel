@@ -106,3 +106,16 @@ export function isHudAccountHidden(pathname: string, connected: boolean): boolea
 export function isHudOverDarkScene(pathname: string): boolean {
   return pathname === '/defi' || pathname.startsWith('/defi/')
 }
+
+/**
+ * SUR L'ACCUEIL RÉVISER, LA FLAMME QUITTE L'ÉCUSSON (24/09/2026). La carte de
+ * série, 120 px plus bas, dit déjà la série en grand ; et le bord droit du
+ * bandeau porte la puce de classe (« la classe tient l'angle haut-droit »,
+ * 17/09/2026). Depuis que le bonus d'amis (aujourd'hui le coffre d'équipe)
+ * vit contre la barre de niveau,
+ * l'écusson et la puce ne tenaient plus ensemble sur 390 px. Exactement
+ * `/reviser` : ses sous-pages gardent la flamme.
+ */
+export function isHudSerieMasquee(pathname: string): boolean {
+  return pathname === '/reviser'
+}

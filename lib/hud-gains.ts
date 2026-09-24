@@ -82,3 +82,22 @@ export function centreVisible(
   if (r.width <= 0 || r.height <= 0) return null
   return { x: r.left + r.width / 2, y: r.top + r.height / 2 }
 }
+
+/**
+ * Le centre du premier élément VISIBLE d'une liste — ou `null`.
+ *
+ * Une même cible peut exister plusieurs fois : la pastille de gemmes du
+ * bandeau ET celle de la carte joueur de l'arène, maintenant que les onglets
+ * restent montés (components/OngletsVivants) — l'arène cachée garde la sienne
+ * dans le DOM. `querySelector` rendait la première dans l'ordre du document,
+ * cachée ou non ; on vise la première qu'on VOIT.
+ */
+export function premierCentreVisible(
+  elements: Iterable<Element>,
+): { x: number; y: number } | null {
+  for (const element of elements) {
+    const centre = centreVisible(element)
+    if (centre) return centre
+  }
+  return null
+}

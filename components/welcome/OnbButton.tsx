@@ -1,29 +1,34 @@
 'use client'
 
+import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
-export type OnbVariant = 'primary' | 'yellow' | 'ghost'
+export type OnbVariant = 'primary' | 'ghost'
 
-// Classe du bouton 3D « façon Duolingo » (définies dans globals.css sous `.onb`).
-export function onbButtonClass(variant: OnbVariant = 'primary'): string {
-  return cn(
-    'onb-btn',
-    variant === 'yellow' && 'onb-btn-yellow',
-    variant === 'ghost' && 'onb-btn-ghost',
-  )
-}
-
-// Bouton d'action de l'onboarding. Socle dur qui s'enfonce au press.
+// Le bouton d'action de l'onboarding, c'est LE bouton de l'app (23/09/2026).
+// `.onb-btn` avait sa propre robe — jaune pour la fin, capitales, rayon de
+// 16 px — et faisait de l'onboarding le seul monde à ses propres boutons. Le
+// jaune est parti : il dit « récompense », pas « action ». Les capitales avec
+// lui : « C'est parti » se lit, « C'EST PARTI » se crie. L'API reste la même
+// pour les écrans : `ghost` donne le contour, tout le reste est violet plein.
 export default function OnbButton({
   variant = 'primary',
   className,
-  type = 'button',
+  asChild = false,
+  type,
   ...props
-}: React.ComponentProps<'button'> & { variant?: OnbVariant }) {
+}: Omit<React.ComponentProps<typeof Button>, 'variant' | 'size'> & {
+  variant?: OnbVariant
+}) {
   return (
-    <button
-      type={type}
-      className={cn(onbButtonClass(variant), className)}
+    <Button
+      asChild={asChild}
+      // Un <button> sans `type` soumet le formulaire qui l'entoure ; un lien
+      // (`asChild`) n'a pas de type à recevoir.
+      type={asChild ? type : (type ?? 'button')}
+      size="xl"
+      variant={variant === 'ghost' ? 'outline' : 'default'}
+      className={cn('w-full', className)}
       {...props}
     />
   )

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#7a3fe0">
+<meta name="robots" content="noindex">
+<title>Studuel</title>
+<link rel="preload" as="image" href="/images/splash.webp">
+<!--
+  L'ÉCRAN DE LANCEMENT — le point d'entrée de l'app installée (app/manifest.ts,
+  `start_url`). Lucas, 24/09/2026 : « quand je clique sur l'app, je tombe tout de
+  suite sur ce rendu [l'icône sur fond violet] ; peut-on mettre l'écran de
+  chargement ? ».
+
+  Sur Android, le rideau SYSTÈME (l'icône sur le violet du manifest) reste en
+  place jusqu'au premier pixel de la page. Or la page d'entrée `/` attendait un
+  démarrage à froid du serveur, puis redirigeait vers `/defi` : l'élève fixait
+  l'icône tout ce temps. Ce fichier est STATIQUE, servi par le CDN sans fonction
+  ni base (proxy.ts ne le voit pas) : il peint en quelques dizaines de
+  millisecondes l'illustration et la barre du rideau de l'app (SplashScreen,
+  mêmes cotes, mêmes couleurs, même courbe), note l'heure du lancement, puis part
+  vers l'app. Le rideau de l'app PREND LA SUITE : même image, la barre reprend
+  où elle en était (lib/splash : CLE_LANCEMENT, scriptSuiteLancement), et le
+  logo arrive.
+
+  Pas de texte ici : les polices de l'app sont servies sous des noms hachés, et
+  un logo dans une police de repli sauterait à l'arrivée de la vraie.
+  À resynchroniser si le rideau change (globals.css : .splash, .splash-art,
+  .splash-veil, .splash-track, .splash-fill ; components/SplashScreen.tsx).
+-->
+<style>
+  html, body { margin: 0; height: 100%; background: #25184c; overflow: hidden; }
+  .splash {
+    position: fixed;
+    inset: 0;
+    background-color: color-mix(in oklch, #7a3fe0, black 62%);
+  }
+  .splash-art {
+    position: absolute;
+    inset: 0;
+    background: url('/images/splash.webp') center bottom / auto 108% no-repeat;
+  }
+  @media (min-width: 768px) {
+    .splash-art { background-size: cover; }
+  }
+  .splash-veil {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(28, 12, 61, 0.55) 0%,
+      rgba(28, 12, 61, 0) 26%,
+      rgba(28, 12, 61, 0) 62%,
+      rgba(28, 12, 61, 0.72) 100%
+    );
+  }
+  /* La bande basse du rideau : 28rem de large, 1,5rem de marge, et la barre à
+     2rem + le compteur (0,5rem + 1,75rem) au-dessus du bas de l'écran. */
+  .splash-bas {
+    position: absolute;
+    left: 50%;
+    bottom: calc(4.25rem + env(safe-area-inset-bottom));
+    width: 100%;
+    max-width: 28rem;
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    transform: translateX(-50%);
+  }
+  .splash-track {
+    position: relative;
+    height: 18px;
+    border-radius: 999px;
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    background: rgba(20, 8, 46, 0.72);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.55), 0 2px 0 rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .splash-fill {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 0;
+    border-radius: 999px;
+    background: linear-gradient(
+      180deg,
+      color-mix(in oklch, #f5b722, white 34%) 0%,
+      #f5b722 52%,
+      color-mix(in oklch, #f5b722, #c2410c 45%) 100%
+    );
+    box-shadow: 0 0 14px color-mix(in oklch, #f5b722, transparent 40%);
+    animation: splash-prefill 900ms cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  }
+  .splash-fill::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, 0.45) 50%, transparent 70%);
+    animation: splash-sheen 1400ms linear infinite;
+  }
+  @keyframes splash-prefill { from { width: 0; } to { width: 92%; } }
+  @keyframes splash-sheen { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+</style>
+</head>
+<body>
+<div class="splash" role="status" aria-label="Chargement de Studuel">
+  <div class="splash-art" aria-hidden="true"></div>
+  <div class="splash-veil" aria-hidden="true"></div>
+  <div class="splash-bas" aria-hidden="true">
+    <div class="splash-track"><div class="splash-fill"></div></div>
+  </div>
+</div>
+<script>
+  (function () {
+    // L'heure du lancement : le rideau de l'app en repartira (lib/splash,
+    // CLE_LANCEMENT). `performance.now()` part du début de CETTE page.
+    try {
+      sessionStorage.setItem('studuel:lancement', String(Math.round(Date.now() - performance.now())));
+    } catch (e) {}
+    // Élève connecté (cookie de session Supabase) : droit à l'arène, sans le
+    // détour de `/` qui ne fait que rediriger. Sinon `/` décide (accueil).
+    var connecte = /(?:^|;\s*)sb-[^=;]+-auth-token(?:\.\d+)?=/.test(document.cookie);
+    var cible = connecte ? '/defi' : '/';
+    // Après la première image : l'écran est peint avant que la navigation parte.
+    requestAnimationFrame(function () {
+      setTimeout(function () { location.replace(cible); }, 0);
+    });
+  })();
+</script>
+</body>
+</html>

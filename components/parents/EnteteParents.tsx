@@ -59,7 +59,7 @@ export default function EnteteParents({
         </nav>
 
         <div className="pt-6 pb-8 md:pt-8 md:pb-10">
-          <h1 className="font-heading text-3xl font-bold text-balance md:text-4xl">
+          <h1 className="font-heading text-3xl font-extrabold text-balance">
             {prenom ? `Bonjour ${prenom}` : 'Suivi de vos enfants'}
           </h1>
           <p className="mt-2 max-w-prose text-sm opacity-90">{sousTitre}</p>

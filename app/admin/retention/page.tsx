@@ -46,7 +46,7 @@ export default async function RetentionPage() {
   if (error || data === null) {
     return (
       <section className="rounded-2xl border bg-card p-6">
-        <h1 className="font-heading text-xl font-bold">Rétention</h1>
+        <h1 className="font-heading text-3xl font-extrabold">Rétention</h1>
         <p className="mt-2 text-sm text-muted-foreground">
           {error
             ? 'La migration 206 n’a pas encore été exécutée (SQL Editor Supabase).'
@@ -66,7 +66,7 @@ export default async function RetentionPage() {
   return (
     <div className="space-y-6">
       <header className="flex items-baseline justify-between gap-3">
-        <h1 className="font-heading text-2xl font-bold">Rétention</h1>
+        <h1 className="font-heading text-3xl font-extrabold">Rétention</h1>
         <p className="text-sm text-muted-foreground">
           {dashboard.totalUsers.toLocaleString('fr-FR')} comptes · 60 derniers jours
         </p>
@@ -81,7 +81,7 @@ export default async function RetentionPage() {
             : 'border-primary/40 bg-primary/10',
         )}
       >
-        <p className="flex items-start gap-3 font-heading text-lg font-bold">
+        <p className="flex items-start gap-3 font-heading text-lg font-extrabold">
           {verdict === 'alerte' ? (
             <AlertTriangle className="mt-0.5 size-5 shrink-0 text-destructive" />
           ) : (
@@ -102,7 +102,7 @@ export default async function RetentionPage() {
       {/* Engagement : la rétention seule décrit une corvée si on ne revient
           qu'une fois par jour. */}
       <section className="rounded-2xl border bg-card p-4">
-        <h2 className="flex items-center gap-2 font-heading text-lg font-bold">
+        <h2 className="titre-section flex items-center gap-2">
           <Activity className="size-4 text-primary" />
           Engagement
         </h2>
@@ -120,7 +120,7 @@ export default async function RetentionPage() {
       {/* L'entonnoir d'arrivée : la marche qui saigne le plus est l'écran à
           refaire en premier. */}
       <section className="rounded-2xl border bg-card p-4">
-        <h2 className="flex items-center gap-2 font-heading text-lg font-bold">
+        <h2 className="titre-section flex items-center gap-2">
           <Users className="size-4 text-primary" />
           Arrivée
         </h2>
@@ -161,7 +161,7 @@ export default async function RetentionPage() {
 
       {/* Le détail, pour qui veut voir si une journée précise a dérapé. */}
       <section className="rounded-2xl border bg-card p-4">
-        <h2 className="font-heading text-lg font-bold">Cohortes</h2>
+        <h2 className="titre-section">Cohortes</h2>
         <p className="mt-1 text-xs text-muted-foreground">
           « — » = l’horizon n’est pas encore atteint. En dessous de {MIN_COHORT}{' '}
           inscrits, un taux ne veut rien dire.

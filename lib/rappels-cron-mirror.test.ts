@@ -75,6 +75,7 @@ function utcHoursAccepted(kind: ScheduledReminder): number[] {
 const REMINDER_ROUTES: Record<ScheduledReminder, string> = {
   srs: '/api/push/send?type=srs',
   streak: '/api/push/send?type=streak',
+  coffre: '/api/push/send?type=coffre',
 }
 
 describe('rappels planifiés : rappels.yml ↔ isReminderDue', () => {
@@ -113,6 +114,29 @@ describe('rappels planifiés : rappels.yml ↔ isReminderDue', () => {
       )
     })
   }
+
+  it("programme le rappel « coffre » le lundi, aux heures qu'accepte isReminderDue", () => {
+    const entry = [...routes.entries()].find(([, route]) => route === REMINDER_ROUTES.coffre)
+    expect(entry, `aucun cron n'appelle ${REMINDER_ROUTES.coffre}`).toBeDefined()
+    const fields = cronFields(entry![0])
+    // Le lundi seulement (le coffre d'équipe s'ouvre à la fin de la semaine).
+    expect(fields.dayOfWeek).toBe('1')
+    expect(fields.dayOfMonth).toBe('*')
+    expect(fields.month).toBe('*')
+    // Les heures UTC acceptées un lundi d'hiver et un lundi d'été.
+    const acceptees = new Set<number>()
+    for (const [year, month, day] of [
+      [2026, 0, 19], // lundi d'hiver (UTC+1)
+      [2026, 6, 20], // lundi d'été (UTC+2)
+    ]) {
+      for (let h = 0; h < 24; h++) {
+        const minute = Number(fields.minute)
+        if (isReminderDue('coffre', new Date(Date.UTC(year, month, day, h, minute)))) acceptees.add(h)
+      }
+    }
+    const cronHours = fields.hour.split(',').map(Number).sort((a, b) => a - b)
+    expect(cronHours).toEqual([...acceptees].sort((a, b) => a - b))
+  })
 
   it('clôt la ligue le lundi, juste après minuit UTC', () => {
     // La semaine du projet commence le lundi (index 0, clés UTC — CLAUDE.md) :

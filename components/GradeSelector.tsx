@@ -71,7 +71,7 @@ export default function GradeSelector({
           <GraduationCap className="size-5" strokeWidth={2.2} aria-hidden="true" />
         </span>
         <div>
-          <h2 className="font-heading text-base font-bold text-foreground">
+          <h2 className="titre-section text-foreground">
             <label htmlFor={selectId}>Ma classe</label>
           </h2>
           <p className="text-xs text-muted-foreground">

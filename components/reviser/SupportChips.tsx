@@ -147,9 +147,12 @@ function GrilleGroupee({
         const centerLast = groupe.chips.length % 2 === 1
         return (
           <section key={groupe.groupe} aria-labelledby={`groupe-${groupe.groupe}`}>
+            {/* Les trois verbes sont des titres de section : casse de phrase,
+                plus de petites capitales (audit du 23/09/2026). Le filet à
+                droite reste. */}
             <h3
               id={`groupe-${groupe.groupe}`}
-              className="mb-2.5 flex items-center gap-2.5 text-[11px] font-extrabold tracking-[0.14em] text-muted-foreground uppercase"
+              className="titre-section mb-2.5 flex items-center gap-2.5"
             >
               {groupe.label}
               <span aria-hidden="true" className="h-px flex-1 bg-black/8" />
@@ -187,14 +190,16 @@ function Tuile({ chip, grid }: { chip: SupportChip; grid: boolean }) {
   const icone = ICONES[chip.kind]
   const eteinte = Boolean(chip.locked || chip.bientot)
   const classes = cn(
-    'relative border bg-card shadow-sm transition-all',
+    // Une seule recette de carte (tokens de globals.css, audit du 23/09/2026) :
+    // le « fait » se dit par un anneau violet, le « bientôt » par un bord tireté.
+    'carte relative transition-all',
     grid
-      ? 'flex aspect-square flex-col items-center justify-center gap-1 rounded-3xl p-3 text-center'
-      : 'flex h-full items-center gap-2.5 rounded-2xl px-3 py-2',
-    chip.done ? 'border-primary/30' : null,
+      ? 'flex aspect-square flex-col items-center justify-center gap-1 p-3 text-center'
+      : 'flex h-full items-center gap-2.5 px-3 py-2',
+    chip.done ? 'ring-1 ring-primary/30' : null,
     chip.bientot
-      ? 'cursor-default border-dashed'
-      : 'hover:-translate-y-0.5 hover:shadow-md active:scale-[0.98]',
+      ? 'cursor-default border border-dashed'
+      : 'hover:-translate-y-0.5 active:scale-[0.98]',
   )
 
   const contenu = (

@@ -537,19 +537,21 @@ describe('QuizPlayer — l’écran de question', () => {
     expect(container.querySelector('img[src*="vignettes"]')).toBeNull()
   })
 
-  it('« Valider » reste une plaque même ÉTEINT', async () => {
+  it('« Valider » est le bouton de la maison, violet, éteint comme allumé', async () => {
     // Un bouton désactivé doit rester reconnaissable comme bouton : c'est sa
-    // saturation qui tombe, pas sa forme.
+    // saturation qui tombe, pas sa forme — et il ne change pas de robe en
+    // s'allumant (il a été vert : un verdict posé sur une action).
     const user = userEvent.setup()
     rendreQuestion()
     const valider = () => screen.getByRole('button', { name: 'Valider' })
     expect(valider()).toBeDisabled()
-    expect(valider().className).toContain('quiz-plaque')
-    expect(valider().className).toContain('--plaque-bord')
+    expect(valider().className).toContain('btn-chunky')
+    expect(valider().className).toContain('bg-primary')
     await user.click(screen.getByRole('button', { name: 'Paris' }))
-    // Allumé : la robe change, la plaque reste.
-    expect(valider().className).toContain('quiz-plaque')
-    expect(valider().className).toContain('var(--success)')
+    expect(valider()).toBeEnabled()
+    expect(valider().className).toContain('btn-chunky')
+    expect(valider().className).toContain('bg-primary')
+    expect(valider().className).not.toContain('bg-success')
   })
 
   it('« Valider » et « Continuer » ont la MÊME plaque et la même hauteur', async () => {
@@ -562,7 +564,7 @@ describe('QuizPlayer — l’écran de question', () => {
 
     await user.click(screen.getByRole('button', { name: 'Paris' }))
     const valider = screen.getByRole('button', { name: 'Valider' })
-    const formeValider = ['quiz-plaque', 'h-14', 'w-full', 'text-lg'].filter((c) =>
+    const formeValider = ['btn-chunky', 'h-13', 'w-full', 'text-base'].filter((c) =>
       valider.className.includes(c),
     )
     expect(formeValider).toHaveLength(4)
@@ -601,7 +603,11 @@ describe('QuizPlayer — l’écran de question', () => {
     expect(src).not.toContain('reaction-')
   })
 
-  it('teinte le fond à la MATIÈRE, pas seulement le liseré', () => {
+  it('se joue sur le mur de l’app, en violet — plus de lavis de matière', () => {
+    // La session prenait la robe de la matière (`robe-red` pour l'allemand),
+    // et la teinte remontait jusque sur « Valider » et la barre. La couleur
+    // d'une matière est une identité (la vignette dans l'angle), jamais un
+    // rôle : ce qui se clique est violet, et le fond est celui de l'app.
     const { container } = render(
       <QuizPlayer
         quizId="quiz-test"
@@ -611,11 +617,11 @@ describe('QuizPlayer — l’écran de question', () => {
         record={false}
       />,
     )
-    const table = container.querySelector('.quiz-fond')
-    expect(table).not.toBeNull()
-    // La robe de la matière est bien celle demandée : sans elle, `--jeu-accent`
-    // retomberait sur le violet et toutes les matières se ressembleraient.
-    expect(table?.className).toContain('robe-red')
+    expect(container.querySelector('.quiz-fond')).toBeNull()
+    expect(container.querySelector('.robe-red')).toBeNull()
+    // La robe violette reste posée pour `AnswerBoard`, qui lit `--jeu-accent`
+    // pour cerner la réponse choisie.
+    expect(container.querySelector('.robe-purple')).not.toBeNull()
   })
 
   it('ancre les réponses en BAS de la colonne', () => {
@@ -702,18 +708,18 @@ describe('QuizPlayer — les reprises de l’écran de fin', () => {
     expect(rangee.indexOf(revoir)).toBeLessThan(rangee.indexOf(refaire))
   })
 
-  it('donne à chacun sa couleur — et PLUS DE ROUGE sur « À revoir »', async () => {
+  it('met « Revoir » en violet plein et « Continuer » en contour', async () => {
     const { revoir, refaire } = await jusquAuBout(userEvent.setup())
-    // Le corail se lisait comme un avertissement : on évitait le bouton, alors
-    // que les questions ratées sont le seul contenu utile qui reste. Il prend
-    // le VERT du succès.
-    expect(revoir.className).toContain('var(--success)')
-    expect(revoir.className).not.toContain('var(--destructive)')
-    expect(revoir.className).toContain('text-white')
-    // « Continuer » garde le violet, en version claire, avec l'encre marine.
-    expect(refaire.className).toContain('var(--primary)')
-    expect(refaire.className).toContain('text-foreground')
-    // Deux robes distinctes : c'est ce qui les rend reconnaissables d'un coup.
+    // « Revoir mes erreurs » a été corail (on l'évitait : un avertissement),
+    // puis vert (le succès — un verdict posé sur une action). Il porte le
+    // violet de ce qui se clique, comme tout le reste de l'app.
+    expect(revoir.className).toContain('bg-primary')
+    expect(revoir.className).not.toContain('bg-success')
+    expect(revoir.className).not.toContain('bg-destructive')
+    // « Continuer », sous lui, en contour : une seule évidence par écran.
+    expect(refaire.className).toContain('border-border')
+    expect(refaire.className).not.toContain('bg-primary')
+    // Deux reliefs distincts : c'est ce qui les rend reconnaissables d'un coup.
     expect(revoir.className).not.toBe(refaire.className)
   })
 
@@ -793,13 +799,11 @@ describe('QuizPlayer — les reprises de l’écran de fin', () => {
   })
 
   it('sont assez hauts pour un pouce', async () => {
-    // 56 px : la hauteur du CONTINUER de Duolingo. Les pilules faisaient 44 px,
-    // le minimum tactile — assez pour être touchées, pas pour être visées sans
-    // regarder.
+    // 52 px : la taille xl du bouton de la maison, celle de « Valider » et de
+    // « C'est parti ». Les pilules faisaient 44 px, le minimum tactile — assez
+    // pour être touchées, pas pour être visées sans regarder.
     const { refaire } = await jusquAuBout(userEvent.setup())
-    expect(refaire.className).toContain('h-14')
-    // Le coin plein vient de `.quiz-pilule` (border-radius: 999px) ET de la
-    // base du Button : les deux disent la même chose, aucune ne contredit.
+    expect(refaire.className).toContain('h-13')
     expect(refaire.className).toContain('rounded-full')
   })
 
@@ -830,22 +834,15 @@ describe('QuizPlayer — les reprises de l’écran de fin', () => {
     expect(mascotte?.className).toContain('w-56')
   })
 
-  it('portent le traitement du bouton DUEL, pas le socle plat de la maison', async () => {
-    // `.btn-chunky` pose UN trait sombre sous le bouton ; sous une carte claire
-    // il se lit comme une ombre portée mal découpée. `.quiz-pilule` reprend la
-    // plaque de l'arène : contour, dégradé, reflet interne, puis la tranche.
+  it('portent le socle de la maison, et plus la pilule du duel', async () => {
+    // Ils ont eu leur propre plaque (`.quiz-pilule`, reprise de l'arène) :
+    // une famille de gros bouton de plus. Depuis le 23/09/2026, hors arène il
+    // n'y en a qu'une — `Button` et son socle `.btn-chunky`.
     const { revoir, refaire } = await jusquAuBout(userEvent.setup())
     for (const bouton of [revoir, refaire]) {
-      expect(bouton.className).toContain('quiz-pilule')
-      // Le socle de la maison est neutralisé : deux profondeurs superposées
-      // donneraient deux tranches de couleurs différentes.
-      expect(bouton.className).toContain('[--btn-edge:transparent]')
-      expect(bouton.className).not.toContain('shadow-md')
-      // Chaque pilule porte ses trois teintes — sans elles, `.quiz-pilule`
-      // n'aurait ni fond ni contour.
-      expect(bouton.className).toContain('--pilule-haut')
-      expect(bouton.className).toContain('--pilule-bas')
-      expect(bouton.className).toContain('--pilule-bord')
+      expect(bouton.className).toContain('btn-chunky')
+      expect(bouton.className).not.toContain('quiz-pilule')
+      expect(bouton.className).not.toContain('--pilule')
     }
   })
 })
@@ -878,10 +875,10 @@ describe('QuizPlayer — l’écran de fin en XP', () => {
     const suivant = screen.getByRole('link', { name: /Quiz suivant/ })
     expect(suivant).toHaveAttribute('href', '/test/q-suite')
     expect(suivant.textContent).toContain('+30 XP')
-    // Même plaque pleine largeur que les autres boutons de fin.
+    // Même bouton pleine largeur que les autres boutons de fin, en violet.
     expect(suivant.className).toContain('w-full')
-    expect(suivant.className).toContain('quiz-pilule')
-    expect(suivant.className).toContain('var(--primary)')
+    expect(suivant.className).toContain('btn-chunky')
+    expect(suivant.className).toContain('bg-primary')
 
     expect(screen.getByRole('link', { name: 'Pas maintenant' })).toHaveAttribute(
       'href',

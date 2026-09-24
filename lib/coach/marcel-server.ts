@@ -10,6 +10,7 @@ import {
 import { HORS_NIVEAU } from '@/lib/types'
 import { readRowTolerant } from '@/lib/profile-read'
 import { toDayKey, computeStreak } from '@/lib/streak'
+import { debutDuMois } from '@/lib/coach/credits'
 import { fetchJoursActifs } from '@/lib/jours-actifs'
 import { rowsToControles, type ControleRow, type SessionRow } from '@/lib/prep-plan'
 import { pickMission, type ChapterCandidate } from '@/lib/mission'
@@ -93,6 +94,8 @@ export type MarcelSnapshot = {
   demande: {
     tier: Tier
     utilisesAujourdhui: number
+    /** Crédits dépensés ce mois-ci (migration 378). */
+    depensesMois: number
     jetons: number
     gemmes: number
   }
@@ -141,6 +144,7 @@ export async function getMarcelSnapshot(
     { data: sessionRows },
     { data: coachCalls },
     { data: coachTokens },
+    { data: coachCredits },
     chapitresVus,
     gelsSerie,
   ] = await Promise.all([
@@ -192,6 +196,13 @@ export async function getMarcelSnapshot(
       .from('coach_tokens')
       .select('balance')
       .eq('user_id', userId)
+      .maybeSingle(),
+    // Les crédits du mois (378). Absente : 0 dépensé — c'est la RPC qui décide.
+    supabase
+      .from('coach_credits')
+      .select('depenses')
+      .eq('user_id', userId)
+      .eq('mois', debutDuMois(new Date()))
       .maybeSingle(),
     // Ce que le prof a traité, déclaré par l'élève (migration 224) : c'est le
     // dénominateur du pourcentage de chaque matière.
@@ -338,6 +349,7 @@ export async function getMarcelSnapshot(
     demande: {
       tier: (profile?.subscription_tier as Tier) ?? 'free',
       utilisesAujourdhui: Number(coachCalls?.attempts ?? 0),
+      depensesMois: Number(coachCredits?.depenses ?? 0),
       jetons: Number(coachTokens?.balance ?? 0),
       gemmes: Number(profile?.gems ?? 0),
     },

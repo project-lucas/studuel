@@ -7,6 +7,7 @@ import { prechargerOnglet } from '@/components/PrechargeurOnglets'
 import PrechargeurDossiers from '@/components/reviser/PrechargeurDossiers'
 import { dossiersAPrecharger } from '@/lib/precharge-onglets'
 import { Check, Pencil, CalendarClock, Crown, Star, Swords } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { subjectTheme, subjectVignette } from '@/lib/subject-style'
 import {
@@ -30,11 +31,14 @@ import type { Subject } from '@/lib/types'
 import type { SubjectGroup } from '@/lib/subject-groups'
 import { programmeGroups } from '@/lib/subject-groups'
 
-// Palette des 3 paliers d'annotation « contrôle qui arrive » sur un dossier :
-// vert = de la marge, orange = bientôt, rouge = très proche.
-const PROX_STYLE: Record<ExamProximity, { ring: string; pill: string }> = {
-  far: { ring: 'ring-green-500/70', pill: 'bg-green-600 text-white' },
-  soon: { ring: 'ring-amber-500/80', pill: 'bg-amber-500 text-white' },
+// Les 3 paliers d'annotation « contrôle qui arrive » sur un dossier, en rôles
+// de la DA : « proche » = corail, « bientôt » = `warning`, « loin » = NEUTRE
+// (pastille grise, pas d'anneau). L'accueil de Réviser n'est pas un écran de
+// bilan : on n'y peint pas de feu tricolore, et un anneau vert autour d'une
+// matière tranquille disait « bravo » là où il n'y avait rien à féliciter.
+const PROX_STYLE: Record<ExamProximity, { ring: string | null; pill: string }> = {
+  far: { ring: null, pill: 'bg-muted text-muted-foreground' },
+  soon: { ring: 'ring-warning/80', pill: 'bg-warning text-white' },
   imminent: { ring: 'ring-destructive', pill: 'bg-destructive text-white' },
 }
 
@@ -220,7 +224,7 @@ function SubjectRow({
               // que l'étoile, pour que les deux se lisent comme un seul signe.
               'bg-white ring-1 ring-highlight/70'
             : 'bg-white ring-1 ring-black/[0.06]',
-        prox && !gardien ? `ring-2 ${prox.ring}` : null,
+        prox?.ring && !gardien ? `ring-2 ${prox.ring}` : null,
         !editing &&
           !prioritizing &&
           'group-hover:-translate-y-0.5 group-active:translate-y-[2px]',
@@ -378,7 +382,7 @@ function SubjectRow({
           className={cn(
             'flex size-6 shrink-0 items-center justify-center rounded-full border transition-colors',
             checked
-              ? 'border-green-500 bg-green-500 text-white'
+              ? 'border-success bg-success text-white'
               : 'border-muted-foreground/40 bg-muted',
           )}
         >
@@ -487,7 +491,7 @@ function SubjectGrid({
       {groups.map(({ label, items }) => (
         <section key={label ?? 'tout'} className="flex flex-col gap-2.5">
           {label ? (
-            <h3 className="font-heading px-1 text-xs font-bold tracking-wide text-muted-foreground uppercase">
+            <h3 className="titre-section px-1">
               {label}
             </h3>
           ) : null}
@@ -743,21 +747,10 @@ export default function SubjectsHome({
             <p className="text-sm text-muted-foreground">
               Aucune matière sélectionnée.
             </p>
-            <button
-              type="button"
-              onClick={() => {
-                sfx.tap()
-                setEditing(true)
-              }}
-              className="font-heading flex min-h-9 items-center gap-1.5 rounded-full bg-primary px-3.5 text-xs font-bold text-primary-foreground shadow-sm transition active:translate-y-px"
-            >
-              <Pencil
-                className="size-3.5"
-                strokeWidth={2.4}
-                aria-hidden="true"
-              />
+            <Button type="button" size="sm" onClick={() => setEditing(true)}>
+              <Pencil strokeWidth={2.4} aria-hidden="true" />
               Choisir mes matières
-            </button>
+            </Button>
           </div>
         ) : (
           <div className="flex flex-col gap-3">
@@ -768,15 +761,16 @@ export default function SubjectsHome({
                 <p className="min-w-0 text-sm text-muted-foreground">
                   Touche une matière pour l&apos;ajouter ou la retirer.
                 </p>
-                <button
+                <Button
                   type="button"
+                  size="sm"
                   onClick={finishEditing}
                   disabled={pending}
-                  className="font-heading flex min-h-9 shrink-0 items-center gap-1.5 rounded-full bg-primary px-3 text-xs font-bold text-primary-foreground shadow-sm transition active:translate-y-px disabled:opacity-60"
+                  className="shrink-0"
                 >
-                  <Check className="size-3.5" aria-hidden="true" />
+                  <Check aria-hidden="true" />
                   {pending ? 'Enregistrement…' : 'Terminé'}
-                </button>
+                </Button>
               </div>
             ) : null}
             {/* En mode « prioriser » : la consigne et la sortie. Chaque tap
@@ -787,17 +781,15 @@ export default function SubjectsHome({
                   Touche une matière pour la mettre en tête, ou l&apos;en
                   retirer.
                 </p>
-                <button
+                <Button
                   type="button"
-                  onClick={() => {
-                    sfx.tap()
-                    setPrioritizing(false)
-                  }}
-                  className="font-heading flex min-h-9 shrink-0 items-center gap-1.5 rounded-full bg-primary px-3 text-xs font-bold text-primary-foreground shadow-sm transition active:translate-y-px"
+                  size="sm"
+                  onClick={() => setPrioritizing(false)}
+                  className="shrink-0"
                 >
-                  <Check className="size-3.5" aria-hidden="true" />
+                  <Check aria-hidden="true" />
                   Terminé
-                </button>
+                </Button>
               </div>
             ) : null}
 
@@ -850,7 +842,7 @@ export default function SubjectsHome({
         {cultureShown.length > 0 ? (
           <div className="flex flex-col gap-3">
             <div className="flex items-baseline justify-between gap-2 px-1">
-              <h2 className="font-heading text-sm font-bold text-foreground">
+              <h2 className="font-heading text-sm font-extrabold text-foreground">
                 Culture générale
               </h2>
               <p className="shrink-0 text-[11px] font-semibold text-muted-foreground">

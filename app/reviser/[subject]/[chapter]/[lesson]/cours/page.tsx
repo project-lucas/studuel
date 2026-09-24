@@ -1,10 +1,8 @@
-import BackButton from '@/components/BackButton'
 import LessonCompleteButton from '@/components/LessonCompleteButton'
 import LessonPrintButton from '@/components/LessonPrintButton'
 import LessonRichContent from '@/components/LessonRichContent'
+import EnTetePage from '@/components/reviser/EnTetePage'
 import SupportChips from '@/components/reviser/SupportChips'
-import { cn } from '@/lib/utils'
-import { subjectTheme, GRID_PATTERN } from '@/lib/subject-style'
 import { loadLessonContext } from '../data'
 import { loadChapterSupports } from '../../supports'
 
@@ -35,92 +33,72 @@ export default async function CoursPage({
     loadChapterSupports(supabase, user.id, subject.slug, chapter, lesson.id),
   ])
 
-  const theme = subjectTheme(subject.color)
+  // Une feuille imprimée quitte l'app : sans la matière sous le titre, l'élève
+  // retrouve un titre nu au fond de son classeur, sans savoir d'où il vient. À
+  // l'écran, la ligne situe la leçon dans sa fiche — utile par un lien direct.
+  const sousTitre =
+    lesson.title.trim() !== chapter.title.trim()
+      ? `${subject.name} · ${lesson.title}`
+      : subject.name
 
   return (
     // `feuille-impression` : le repère qu'attend le bloc `@media print` de
-    // globals.css pour ne garder QUE le cours sur le papier.
-    <div className="feuille-impression -mx-4 -mt-16 md:-mx-8 md:-mt-10">
-      {/* Header quadrillé façon feuille de cahier, aux couleurs de la matière */}
-      <header
-        className={cn(
-          'entete-cours relative overflow-hidden px-4 pt-20 pb-10 md:px-8 md:pt-12',
-          theme.header,
-        )}
-      >
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.08]"
-          style={GRID_PATTERN}
-          aria-hidden="true"
-        />
-        <div className="relative mx-auto w-full max-w-2xl">
-          {/* Le retour et l'impression se font face : l'un ramène en arrière,
-              l'autre emporte la feuille. Aucun des deux n'a sa place sur le
-              papier — d'où `sans-papier` sur la rangée entière. */}
-          <div className="sans-papier flex items-center justify-between">
-            <BackButton fallback={`/reviser/${subject.slug}`} />
-            <LessonPrintButton />
-          </div>
-          {/* LE TITRE DE LA PAGE EST CELUI DE LA FICHE — le mot sur lequel
-              l'élève vient de taper (« Les noms »). Il portait le titre de la
-              leçon (« Dénombrables, indénombrables, pluriels irréguliers ») :
-              on atterrissait sur un intitulé qu'on n'avait pas choisi, et il
-              fallait relire la ligne du dessous pour être sûr d'être au bon
-              endroit. La leçon, elle, se dit dessous — quand elle a son propre
-              nom. */}
-          <h1 className="font-heading mt-4 text-center text-2xl font-bold text-balance md:text-3xl">
-            {chapter.title}
-          </h1>
-          {/* Une feuille imprimée quitte l'app : sans cette ligne, l'élève
-              retrouve un titre nu au fond de son classeur, sans savoir de
-              quelle matière il vient. À l'écran, elle situe la leçon dans sa
-              fiche — utile quand on arrive par un lien direct. */}
-          <p className="mt-1 text-center text-sm opacity-70">
-            {subject.name}
-            {lesson.title.trim() !== chapter.title.trim()
-              ? ` · ${lesson.title}`
-              : ''}
-          </p>
-        </div>
-      </header>
+    // globals.css pour ne garder QUE le cours sur le papier. Le cours est posé
+    // sur le mur crème de l'app, sans bandeau coloré ni feuille opaque (audit
+    // du 23/09/2026) : l'en-tête est celui de toutes les pages de Réviser.
+    <div className="feuille-impression mx-auto w-full max-w-2xl">
+      {/* `entete-cours` : sur papier, le bloc print remplace l'en-tête par un
+          filet sous le titre. Le retour et l'impression se font face dans la
+          rangée `sans-papier` d'EnTetePage : l'un ramène en arrière, l'autre
+          emporte la feuille, aucun des deux n'a sa place sur le papier.
 
-      {/* La feuille de cours qui chevauche le header */}
-      <div className="relative -mt-6 rounded-t-3xl bg-background">
-        <div className="mx-auto w-full max-w-2xl px-4 pt-6 pb-24 md:px-8">
-          <LessonRichContent content={lesson.content ?? 'Contenu à venir.'} />
+          LE TITRE DE LA PAGE EST CELUI DE LA FICHE — le mot sur lequel l'élève
+          vient de taper (« Les noms »). Il portait le titre de la leçon
+          (« Dénombrables, indénombrables, pluriels irréguliers ») : on
+          atterrissait sur un intitulé qu'on n'avait pas choisi. La leçon, elle,
+          se dit dessous — quand elle a son propre nom. */}
+      <EnTetePage
+        className="entete-cours"
+        retour={{ fallback: `/reviser/${subject.slug}` }}
+        droite={<LessonPrintButton />}
+        titre={chapter.title}
+        sousTitre={sousTitre}
+      />
 
-          {/* Le pied de page : une invitation à continuer DANS l'app. Sur
-              papier, un bouton qui ne se clique pas n'est qu'une tache. */}
-          <div className="sans-papier mt-8 border-t pt-6">
-            <LessonCompleteButton
-              lessonId={lesson.id}
-              initialDone={Boolean(completion)}
-            />
+      <div className="mt-6">
+        <LessonRichContent content={lesson.content ?? 'Contenu à venir.'} />
 
-            {/* La suite, sur place. Le cours ne se terminait que par « Tester
-                mes connaissances » : pour les flashcards, la fiche ou
-                l'exercice du MÊME chapitre, il fallait remonter à la page
-                matière et changer d'onglet. Les supports sont ici, rangés sous
-                leurs trois verbes et calés sur la leçon qu'on vient de lire. */}
-            {supports.length > 0 ? (
-              <section className="mt-8" aria-labelledby="suite-du-chapitre">
-                <h2
-                  id="suite-du-chapitre"
-                  className="font-heading text-center text-lg font-bold"
-                >
-                  Et maintenant ?
-                </h2>
-                <p className="mt-0.5 mb-5 text-center text-sm text-muted-foreground">
-                  Le cours est lu — voici de quoi le faire tenir.
-                </p>
-                <SupportChips
-                  chips={supports}
-                  layout="grid"
-                  label={`S’entraîner sur ${chapter.title}`}
-                />
-              </section>
-            ) : null}
-          </div>
+        {/* Le pied de page : une invitation à continuer DANS l'app. Sur
+            papier, un bouton qui ne se clique pas n'est qu'une tache. */}
+        <div className="sans-papier mt-8 border-t pt-6">
+          <LessonCompleteButton
+            lessonId={lesson.id}
+            initialDone={Boolean(completion)}
+          />
+
+          {/* La suite, sur place. Le cours ne se terminait que par « Tester
+              mes connaissances » : pour les flashcards, la fiche ou
+              l'exercice du MÊME chapitre, il fallait remonter à la page
+              matière et changer d'onglet. Les supports sont ici, rangés sous
+              leurs trois verbes et calés sur la leçon qu'on vient de lire. */}
+          {supports.length > 0 ? (
+            <section className="mt-8" aria-labelledby="suite-du-chapitre">
+              <h2
+                id="suite-du-chapitre"
+                className="titre-section text-center"
+              >
+                Et maintenant ?
+              </h2>
+              <p className="mt-0.5 mb-5 text-center text-sm text-muted-foreground">
+                Le cours est lu — voici de quoi le faire tenir.
+              </p>
+              <SupportChips
+                chips={supports}
+                layout="grid"
+                label={`S’entraîner sur ${chapter.title}`}
+              />
+            </section>
+          ) : null}
         </div>
       </div>
     </div>

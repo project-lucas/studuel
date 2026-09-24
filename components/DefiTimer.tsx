@@ -31,7 +31,7 @@ export default function DefiTimer() {
         <span className="font-mono text-lg font-bold tabular-nums">
           {mm}:{ss}
         </span>
-        <span className="text-[10px] font-semibold tracking-wide text-muted-foreground uppercase">
+        <span className="surtitre">
           Temps de travail
         </span>
       </span>

@@ -26,7 +26,7 @@ export default function MatieresSuivi({ rows }: { rows: SubjectRow[] }) {
   if (rows.length === 0) {
     return (
       <section>
-        <h4 className="text-muted-foreground mb-2 text-xs font-medium tracking-wide uppercase">
+        <h4 className="titre-section mb-2">
           Par matière
         </h4>
         <p className="text-muted-foreground rounded-xl border border-dashed p-3.5 text-sm">
@@ -39,7 +39,7 @@ export default function MatieresSuivi({ rows }: { rows: SubjectRow[] }) {
 
   return (
     <section>
-      <h4 className="text-muted-foreground mb-2 text-xs font-medium tracking-wide uppercase">
+      <h4 className="titre-section mb-2">
         Par matière
       </h4>
       <ul className="flex flex-col gap-2.5">

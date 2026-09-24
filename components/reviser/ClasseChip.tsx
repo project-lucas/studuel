@@ -5,7 +5,7 @@ import { ChevronDown, GraduationCap } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import type { GradeLevel } from '@/lib/types'
-import { GRADE_CYCLES, GRADE_SHORT_LABELS, isGradeLevel } from '@/lib/grades'
+import { GRADE_CYCLES, GRADE_PUCE_LABELS, GRADE_SHORT_LABELS, isGradeLevel } from '@/lib/grades'
 import { saveGradeLevel } from '@/app/moi/actions'
 
 /**
@@ -26,7 +26,14 @@ import { saveGradeLevel } from '@/app/moi/actions'
  * Même contrat que `GradeSelector` : sauvegarde immédiate, affichage optimiste,
  * réalignement sur le serveur si l'écriture a échoué (l'action ne lève pas).
  */
-export default function ClasseChip({ current }: { current: GradeLevel | null }) {
+export default function ClasseChip({
+  current,
+  court = false,
+}: {
+  current: GradeLevel | null
+  /** Libellé court (bandeau du téléphone) : « Tˡᵉ » au lieu de « Terminale ». */
+  court?: boolean
+}) {
   const [selected, setSelected] = useState<GradeLevel | null>(current)
   const [syncedCurrent, setSyncedCurrent] = useState(current)
   const [pending, startTransition] = useTransition()
@@ -50,7 +57,7 @@ export default function ClasseChip({ current }: { current: GradeLevel | null }) 
     })
   }
 
-  const label = selected ? GRADE_SHORT_LABELS[selected] : '—'
+  const label = selected ? (court ? GRADE_PUCE_LABELS : GRADE_SHORT_LABELS)[selected] : '—'
 
   return (
     <span className="relative shrink-0">
@@ -69,10 +76,11 @@ export default function ClasseChip({ current }: { current: GradeLevel | null }) 
           strokeWidth={2.4}
         />
         {label}
-        <ChevronDown
-          className="-mr-0.5 size-3.5 text-muted-foreground"
-          strokeWidth={2.6}
-        />
+        {/* Dans le bandeau (court), pas de chevron : la puce y partage sa
+            bande avec l'écusson, et le tap ouvre le menu sans lui. */}
+        {court ? null : (
+          <ChevronDown className="-mr-0.5 size-3.5 text-muted-foreground" strokeWidth={2.6} />
+        )}
       </span>
       <select
         id={selectId}

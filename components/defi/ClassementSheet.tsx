@@ -25,6 +25,7 @@ import { subjectRankFor, SUBJECT_DIVISION_SPAN } from '@/lib/subject-rank'
 import { DIVISION_SPAN, rankFor, type Rank } from '@/lib/rank'
 import { libelleTop, topPourcent } from '@/lib/defi/classement-arene'
 import { ordinal } from '@/lib/percentile'
+import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
 
 /**
  * LE CLASSEMENT — la plaque de l'angle droit de l'arène, sous Studuel+, et
@@ -65,6 +66,7 @@ export default function ClassementSheet({
 }) {
   const { board, active } = useDuelSubject()
   const [open, setOpen] = useState(false)
+  useFermeAuMasquage(setOpen, false)
   const reduce = useReducedMotion()
   const panel = useRef<HTMLDivElement>(null)
   useDialogFocus(panel, open)
@@ -165,7 +167,7 @@ export default function ClassementSheet({
                       <section aria-labelledby="classement-matieres">
                         <h3
                           id="classement-matieres"
-                          className="font-heading mb-2 px-1 text-base font-extrabold text-foreground"
+                          className="titre-section mb-2 px-1 text-foreground"
                         >
                           Mes matières
                         </h3>
@@ -190,9 +192,9 @@ export default function ClassementSheet({
                       </section>
 
                       {/* Le barème, replié : on le lit une fois, puis il gêne. */}
-                      <details className="group rounded-3xl bg-card p-4 shadow-sm ring-1 ring-black/5">
+                      <details className="carte group p-4">
                         <summary className="flex cursor-pointer list-none items-center justify-between gap-3">
-                          <h3 className="font-heading text-base font-extrabold text-foreground">
+                          <h3 className="titre-section text-foreground">
                             Comment on gagne des trophées
                           </h3>
                           <ChevronDown
@@ -265,15 +267,16 @@ function CarteMoi({
   return (
     <section
       aria-label="Mon classement"
-      className="rounded-3xl bg-card p-4 shadow-sm ring-1 ring-black/5"
+      className="carte p-4"
     >
       <div className="flex items-center gap-3">
         <RankBadge rank={rank} size={68} className="drop-shadow-[0_3px_6px_rgba(36,48,79,0.25)]" />
 
         <div className="min-w-0 flex-1">
-          <p className="text-[0.66rem] font-extrabold tracking-wider text-muted-foreground uppercase">
-            Mon rang
-          </p>
+          {/* Titre de section en casse de phrase, plus de petites capitales :
+              « MON RANG » puis « Mes matières » étaient deux conventions sur le
+              même écran (audit du 23/09/2026). */}
+          <h3 className="titre-section">Mon rang</h3>
           <p className="font-heading text-xl leading-tight font-extrabold text-foreground">
             {rank.label}
           </p>
@@ -361,8 +364,10 @@ function CarteMatiere({
     <article
       aria-label={`${entry.subject} — ${entry.trophies} trophées, ${rank.label}`}
       className={cn(
-        'rounded-3xl bg-card p-3.5 shadow-sm',
-        active ? 'ring-2 ring-primary' : 'ring-1 ring-black/5',
+        // Une seule recette de carte (tokens de globals.css, audit du 23/09/2026) ;
+        // seule la matière du duel garde son anneau violet.
+        'carte p-3.5',
+        active ? 'ring-2 ring-primary' : null,
       )}
     >
       <div className="flex items-center gap-3">

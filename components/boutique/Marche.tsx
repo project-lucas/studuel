@@ -29,6 +29,7 @@ import { cn } from '@/lib/utils'
 import xpIllustration from '@/public/images/boutique/marche/xp.webp'
 import bouclierIllustration from '@/public/images/boutique/marche/bouclier.webp'
 import ficheIllustration from '@/public/images/boutique/marche/fiche.webp'
+import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
 
 /**
  * La teinte de chaque article du Marché — la couleur de sa carte, son
@@ -108,6 +109,9 @@ function useMaintenant(depuisIso: string): Date {
  *     l'élève débloque la fiche qui l'intéresse (30 gemmes, incluse avec
  *     Studuel+).
  */
+/** Aucune fiche ouverte — une CONSTANTE : `useFermeAuMasquage` la veut stable. */
+const CHOIX_FERME: { id: string | null; open: boolean } = { id: null, open: false }
+
 export default function Marche({
   offres,
   boosts,
@@ -124,11 +128,15 @@ export default function Marche({
   premium: boolean
 }) {
   const maintenant = useMaintenant(maintenantIso)
-  const [choix, setChoix] = useState<{ id: string | null; open: boolean }>({ id: null, open: false })
+  const [choix, setChoix] = useState(CHOIX_FERME)
+  // Un visiteur renvoyé vers la connexion depuis la fiche quitte la Boutique
+  // sans la refermer : au retour sur l'onglet (gardé vivant), elle repart fermée.
+  useFermeAuMasquage(setChoix, CHOIX_FERME)
   const offre = offres.find((o) => o.id === choix.id) ?? null
 
   return (
-    <section aria-labelledby="marche-titre" className="flex flex-col gap-4">
+    // `id="marche"` : la bulle du multiplicateur d'XP du bandeau y mène (« Potion d'XP → »).
+    <section id="marche" aria-labelledby="marche-titre" className="flex scroll-mt-20 flex-col gap-4">
       <BandeauSection id="marche-titre" variante="plaque">
         Marché
       </BandeauSection>

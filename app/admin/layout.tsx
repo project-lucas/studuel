@@ -31,7 +31,7 @@ export default async function AdminLayout({
       <div className="mb-6 flex items-center justify-between gap-3 rounded-2xl border bg-card px-4 py-3 shadow-sm">
         <Link
           href="/admin"
-          className="font-heading flex items-center gap-2 text-sm font-bold"
+          className="font-heading flex items-center gap-2 text-sm font-extrabold"
         >
           <Wrench className="size-4 text-primary" aria-hidden="true" />
           Studio de contenu

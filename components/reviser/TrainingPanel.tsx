@@ -105,13 +105,13 @@ export default function TrainingPanel({
             sfx.tap()
             setFighting(true)
           }}
-          className="group flex w-full items-center gap-3 rounded-2xl border-b-4 border-b-black/25 bg-gradient-to-r from-primary to-[color-mix(in_oklch,var(--primary),black_18%)] p-3.5 text-left text-white shadow-md transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-[2px] active:border-b-2"
+          className="group flex w-full items-center gap-3 rounded-carte border-b-4 border-b-black/25 bg-gradient-to-r from-primary to-[color-mix(in_oklch,var(--primary),black_18%)] p-3.5 text-left text-white shadow-md transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-[2px] active:border-b-2"
         >
           <span className="flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white/15">
             <BossFace boss={boss} px={44} className="size-11" />
           </span>
           <span className="min-w-0 flex-1">
-            <span className="font-heading flex items-center gap-1.5 text-sm leading-tight font-bold">
+            <span className="font-heading flex items-center gap-1.5 text-sm leading-tight font-extrabold">
               <Swords className="size-4 shrink-0" aria-hidden="true" />
               Affronter {boss.name}
             </span>
@@ -137,10 +137,10 @@ export default function TrainingPanel({
            quand même, et ne répond pas. Une CARTE, qui montre l'anneau et dit le
            geste suivant : « 5 cartes de plus ». C'est la même information que
            l'écusson du header, à la taille où on peut la lire. */
-        <div className="flex w-full items-center gap-3 rounded-2xl bg-card p-3.5 text-left shadow-sm ring-1 ring-black/5">
+        <div className="carte flex w-full items-center gap-3 p-3.5 text-left">
           <GardienBadge vue={gardien} size="md" tone="light" decoratif />
           <span className="min-w-0 flex-1">
-            <span className="font-heading block text-sm leading-tight font-bold">
+            <span className="font-heading block text-sm leading-tight font-extrabold">
               {gardien.titre}
             </span>
             <span className="mt-0.5 block text-[11px] font-semibold text-muted-foreground">

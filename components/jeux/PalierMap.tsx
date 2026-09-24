@@ -15,7 +15,7 @@ import { MECHANIC_ICON } from '@/components/jeux/icons'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import type { GameFormat } from '@/lib/jeux/formats'
-import { hasTimeRecord, palierChips } from '@/lib/jeux/palier-format'
+import { hasTimeRecord } from '@/lib/jeux/palier-format'
 import { usePalierProgress } from '@/lib/jeux/use-palier-progress'
 import {
   PALIERS,
@@ -195,65 +195,43 @@ export default function PalierMap({
       />
 
       <div className="relative z-10 -mt-1 pb-6">
-        {/* Le bandeau de progression : la moisson d'étoiles du jeu, en un coup
-            d'œil. C'est le compteur qu'on cherche à remplir — il vaut mieux
-            qu'un score, qui ne dit jamais s'il reste quelque chose à faire. */}
+        {/* CE QU'IL RESTE À GAGNER, et rien d'autre (Lucas, 24/09/2026 : « à
+            l'arrivée, je veux voir les étoiles et les gemmes à compléter, et
+            c'est tout »). Le bloc « Ta collection » — titre, barre, phrase sur
+            la règle des paliers — est parti : deux compteurs, au centre. */}
         <section
           aria-label="Progression sur ce jeu"
-          className="mb-5 rounded-3xl bg-card p-4 shadow-sm ring-1 ring-black/5"
+          className="mb-5 flex flex-col items-center gap-2"
         >
-          <div className="flex items-center justify-between gap-3">
-            <h2 className="font-heading text-lg font-extrabold">
-              Ta collection
-            </h2>
-            <span className="flex items-center gap-1.5">
-              <span className="flex items-center gap-1.5 rounded-full bg-highlight/15 px-3 py-1 font-mono text-sm font-extrabold tabular-nums">
-                <Star
-                  className="size-4 fill-highlight text-highlight"
-                  aria-hidden="true"
-                />
-                {stars}
-                <span className="text-foreground/50">/{TOTAL_STARS}</span>
-              </span>
-              {/* Les gemmes que ces étoiles ont rapportées, sur tout le jeu. */}
-              <span
-                className="flex items-center gap-1 rounded-full bg-primary/10 py-1 pr-3 pl-1.5 font-mono text-sm font-extrabold tabular-nums"
-                aria-label={`${gemmesGagnees} gemmes gagnées sur ${GEMMES_PAR_JEU}`}
-              >
-                <CristalIcon className="size-5" />
-                {gemmesGagnees}
-                <span className="text-foreground/50">/{GEMMES_PAR_JEU}</span>
-              </span>
+          <span className="flex items-center justify-center gap-2">
+            <span
+              className="flex items-center gap-1.5 rounded-full bg-card px-3.5 py-1.5 font-mono text-base font-extrabold tabular-nums shadow-sm ring-1 ring-black/5"
+              aria-label={`${stars} étoiles sur ${TOTAL_STARS}`}
+            >
+              <Star className="size-5 fill-highlight text-highlight" aria-hidden="true" />
+              {stars}
+              <span className="text-foreground/50">/{TOTAL_STARS}</span>
             </span>
-          </div>
-          <div
-            className="mt-3 h-2.5 overflow-hidden rounded-full bg-muted"
-            role="progressbar"
-            aria-valuemin={0}
-            aria-valuemax={TOTAL_STARS}
-            aria-valuenow={stars}
-            aria-label={`${stars} étoiles sur ${TOTAL_STARS}`}
-          >
-            <div
-              className="h-full rounded-full bg-highlight transition-[width] duration-500 ease-out"
-              style={{ width: `${(stars / TOTAL_STARS) * 100}%` }}
-            />
-          </div>
+            {/* Les gemmes que ces étoiles ont rapportées, sur tout le jeu. */}
+            <span
+              className="flex items-center gap-1 rounded-full bg-card py-1.5 pr-3.5 pl-2 font-mono text-base font-extrabold tabular-nums shadow-sm ring-1 ring-black/5"
+              aria-label={`${gemmesGagnees} gemmes gagnées sur ${GEMMES_PAR_JEU}`}
+            >
+              <CristalIcon className="size-6" />
+              {gemmesGagnees}
+              <span className="text-foreground/50">/{GEMMES_PAR_JEU}</span>
+            </span>
+          </span>
           {rattrapage ? (
             <p
               role="status"
-              className="mt-3 flex items-center gap-2 rounded-2xl bg-highlight/20 px-3 py-2 text-sm font-bold"
+              className="flex items-center gap-2 rounded-2xl bg-highlight/20 px-3 py-2 text-sm font-bold"
             >
               <CristalIcon className="size-6 shrink-0" />
               Tes étoiles déjà décrochées t’ont rapporté {rattrapage} gemme
               {rattrapage > 1 ? 's' : ''} !
             </p>
           ) : null}
-          <p className="mt-2 text-sm text-muted-foreground">
-            {stars >= TOTAL_STARS
-              ? 'Toutes les étoiles décrochées. Il ne te reste qu’à battre tes propres records.'
-              : `Deux étoiles sur un palier ouvrent le suivant, et chaque étoile rapporte des gemmes. Tu es à ${palierDef(current).name}.`}
-          </p>
         </section>
 
         {dojo}
@@ -474,7 +452,6 @@ function PalierRow({
   acquises: number
 }) {
   const def = palierDef(level)
-  const chips = palierChips(format, level)
   const timed = timeMs !== null && hasTimeRecord(format)
   const previous = level > 1 ? palierDef((level - 1) as PalierLevel) : null
 
@@ -510,25 +487,8 @@ function PalierRow({
             : `Encore ${missing} étoile${missing > 1 ? 's' : ''} au palier ${previous?.name ?? ''} pour l’ouvrir`}
         </span>
 
-        {/* Ce qui change VRAIMENT à ce palier : les chiffres du format, et la
-            promesse de la banque quand elle est graduée. Deux paliers qui
-            n'annonceraient que « plus dur » ne donneraient envie de monter. */}
-        <span className="mt-2 flex flex-wrap gap-1.5">
-          {chips.map((chip) => (
-            <span
-              key={chip}
-              className={cn(
-                'rounded-full px-2.5 py-1 text-[11px] font-bold',
-                unlocked
-                  ? 'bg-[color:var(--jeu-accent)]/12 text-[color:var(--jeu-accent)]'
-                  : 'bg-muted text-foreground/45',
-              )}
-            >
-              {chip}
-            </span>
-          ))}
-        </span>
-
+        {/* Les jetons descriptifs (« 9 escales », « 10 s / escale ») sont partis
+            le 24/09/2026 — Lucas : « pas clairs ». Ne pas les remettre. */}
         {/* LA PISTE DU PALIER (22/09/2026) : une ligne, les trois jalons de
             gemmes (migration 373 : une par étoile, au tarif du palier), et le
             curseur du record dessus — au meilleur taux de réussite, l'axe des

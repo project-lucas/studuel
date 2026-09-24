@@ -2,6 +2,7 @@
 
 import { useState, useTransition } from 'react'
 import { Check, Lock, Loader2 } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 import { PROFILE_BANNERS } from '@/lib/profile-banners'
 import { updateGamertag, equipProfileBanner } from '@/app/defi/profile-actions'
 import { cn } from '@/lib/utils'
@@ -63,12 +64,10 @@ export default function ProfileEditor({
 
   return (
     <div className="flex flex-col gap-4">
-      {/* Pseudo de jeu */}
+      {/* Pseudo de jeu. Titres de section : la recette commune de l'app, plus
+          de Baloo en capitales à la main (audit du 23/09/2026). */}
       <div className="flex flex-col gap-1.5">
-        <label
-          htmlFor="gamertag"
-          className="font-heading text-sm font-extrabold tracking-wide text-white uppercase"
-        >
+        <label htmlFor="gamertag" className="titre-section text-white">
           Pseudo de jeu
         </label>
         <div className="flex gap-2">
@@ -83,11 +82,10 @@ export default function ProfileEditor({
             placeholder="Ton pseudo"
             className="min-w-0 flex-1 rounded-xl bg-white/10 px-3 py-2 text-sm font-semibold text-white ring-1 ring-white/20 placeholder:text-white/40 focus-visible:ring-2 focus-visible:ring-highlight focus-visible:outline-none"
           />
-          <button
-            type="button"
+          {/* Une ACTION, donc le violet : l'or reste réservé aux gains. */}
+          <Button
             onClick={saveName}
             disabled={pending || name.trim() === (gamertag ?? '')}
-            className="olympe-press flex items-center gap-1 rounded-xl bg-highlight px-3 py-2 text-sm font-extrabold text-foreground disabled:opacity-40"
           >
             {pending ? (
               <Loader2 className="size-4 animate-spin" aria-hidden="true" />
@@ -95,12 +93,12 @@ export default function ProfileEditor({
               <Check className="size-4" aria-hidden="true" />
             ) : null}
             {savedName ? 'Enregistré' : 'Valider'}
-          </button>
+          </Button>
         </div>
         <p
           role="status"
           aria-live="polite"
-          className={cn('text-[11px]', nameMsg ? 'text-red-300' : 'sr-only')}
+          className={cn('text-[11px]', nameMsg ? 'text-destructive' : 'sr-only')}
         >
           {nameMsg ?? ''}
         </p>
@@ -108,9 +106,7 @@ export default function ProfileEditor({
 
       {/* Bannière */}
       <div className="flex flex-col gap-1.5">
-        <p className="font-heading text-sm font-extrabold tracking-wide text-white uppercase">
-          Bannière
-        </p>
+        <h2 className="titre-section text-white">Bannière</h2>
         <ul className="grid grid-cols-2 gap-2" role="list">
           {PROFILE_BANNERS.map((b) => {
             const isOwned = owned.has(b.key)

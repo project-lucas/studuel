@@ -19,7 +19,7 @@ export type ResultatAchatCapsule =
 const MESSAGES: Record<string, string> = {
   anonyme: 'Connecte-toi pour débloquer une capsule.',
   inconnue: 'Cette capsule n’est plus disponible.',
-  deja: 'Cette capsule est déjà dans ton carnet.',
+  deja: 'Cette capsule est déjà dans ta bibliothèque.',
   pas_assez: 'Il te manque des gemmes pour cette capsule.',
   pas_de_carte: 'Cette capsule ne se paie pas par carte.',
 }

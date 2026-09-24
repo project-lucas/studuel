@@ -90,7 +90,7 @@ export function phraseCartes(nombre: number): string {
     return 'Je n’ai pas réussi à en faire des cartes. Redis-moi le chapitre, plus précisément.'
   }
   if (nombre === 1) {
-    return 'Voilà une carte. Relis-la : si elle est juste, range-la dans ton carnet.'
+    return 'Voilà une carte. Relis-la : si elle est juste, range-la dans ta bibliothèque.'
   }
-  return `Voilà ${nombre} cartes. Relis-les : celles qui sont justes, range-les dans ton carnet.`
+  return `Voilà ${nombre} cartes. Relis-les : celles qui sont justes, range-les dans ta bibliothèque.`
 }

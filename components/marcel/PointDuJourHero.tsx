@@ -27,12 +27,12 @@ export default function PointDuJourHero({ point }: { point: PointDuJour }) {
   return (
     <section
       className={cn(
-        'relative overflow-hidden rounded-3xl p-4 text-white',
+        // Rayon et ombre de LA carte (tokens de globals.css, audit du 23/09/2026).
+        'relative overflow-hidden rounded-carte p-4 text-white shadow-carte',
         // Le violet est SCULPTÉ à partir du token, pas recopié en hex : trois
         // valeurs figées (#9159ee/#6b31cd/#4d1aa2) auraient continué de vivre
         // leur vie le jour où --primary bouge.
         'bg-[radial-gradient(130%_100%_at_88%_-10%,color-mix(in_oklch,var(--highlight),transparent_70%),transparent_58%),linear-gradient(168deg,color-mix(in_oklch,var(--primary),white_10%)_0%,color-mix(in_oklch,var(--primary),black_14%)_48%,color-mix(in_oklch,var(--primary),black_30%)_100%)]',
-        'shadow-[0_18px_32px_-20px_color-mix(in_oklch,var(--primary),black_34%),inset_0_1px_0_rgba(255,255,255,.3)]',
       )}
     >
       {/* Halo doré, purement décoratif — coupé si l'utilisateur demande moins
@@ -55,11 +55,11 @@ export default function PointDuJourHero({ point }: { point: PointDuJour }) {
         </span>
 
         <div className="min-w-0 flex-1 pt-0.5">
-          <p className="text-highlight mb-1.5 flex items-center gap-1.5 text-[10px] font-black tracking-[.15em] uppercase">
+          <p className="surtitre text-highlight mb-1.5 flex items-center gap-1.5">
             <GraduationCap aria-hidden="true" className="size-3" />
             Marcel · le point du jour
           </p>
-          <h2 className="font-heading text-[16.5px] leading-[1.3] font-bold text-balance">
+          <h2 className="font-heading text-[16.5px] leading-[1.3] font-extrabold text-balance">
             {titre}
           </h2>
           {consigne && (

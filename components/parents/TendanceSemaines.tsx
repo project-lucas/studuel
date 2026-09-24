@@ -50,7 +50,7 @@ export default function TendanceSemaines({
   return (
     <section className="mb-5">
       <div className="mb-2.5 flex items-center justify-between gap-3">
-        <h4 className="text-muted-foreground text-xs font-medium tracking-wide uppercase">
+        <h4 className="titre-section">
           Ces 4 semaines
         </h4>
         <span className={`flex items-center gap-1 text-xs font-semibold ${tone}`}>

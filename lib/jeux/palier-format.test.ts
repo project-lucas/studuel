@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { GAME_FORMATS, MIN_WAVE_SECONDS, poolSizeFor } from './formats'
-import { bankBrief, hasGradedBank, palierChips, scaleFormat } from './palier-format'
+import { bankBrief, hasGradedBank, scaleFormat } from './palier-format'
 import { DEFAULT_PALIER, PALIER_LEVELS, type PalierLevel } from './paliers'
 
 const FORMATS = Object.values(GAME_FORMATS)
@@ -115,15 +115,7 @@ describe('la règle affichée', () => {
   })
 })
 
-describe('les jetons de la carte', () => {
-  it('donnent au moins un chiffre à lire pour chaque jeu et chaque palier', () => {
-    for (const format of FORMATS) {
-      for (const level of PALIER_LEVELS) {
-        expect(palierChips(format, level).length).toBeGreaterThan(0)
-      }
-    }
-  })
-
+describe('la banque graduée', () => {
   it('annoncent la banque UNIQUEMENT là où elle est réellement graduée', () => {
     expect(hasGradedBank('calcul-mental')).toBe(true)
     expect(hasGradedBank('capitales')).toBe(false)

@@ -93,7 +93,7 @@ export default function PanneauRecompenses({
         className,
       )}
     >
-      <p className="font-heading text-center text-[11px] font-extrabold tracking-wide text-[color-mix(in_oklch,var(--highlight),black_38%)] uppercase">
+      <p className="titre-section text-center text-[color-mix(in_oklch,var(--highlight),black_38%)]">
         {titre}
       </p>
 

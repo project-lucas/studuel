@@ -93,7 +93,7 @@ export default function FicheCapsule({
     <Feuille open={open} onClose={onClose} label={capsule.titre}>
       <CouvertureCapsule capsule={capsule} taille="affiche" />
 
-      <p className="mt-4 text-xs font-extrabold tracking-wide text-primary uppercase">
+      <p className="surtitre mt-4 text-primary">
         {theme?.label ?? 'Capsule'} · {capsule.dureeMin} min
       </p>
       <h2 className="font-heading text-2xl leading-tight font-extrabold text-balance">
@@ -137,7 +137,7 @@ export default function FicheCapsule({
             Connecte-toi pour la débloquer
           </Button>
         ) : phase === 'achetee' || etat.kind === 'possedee' ? (
-          <Rangee titre={phase === 'achetee' ? 'C’est rangé dans ton carnet !' : null}>
+          <Rangee titre={phase === 'achetee' ? 'C’est rangé dans ta bibliothèque !' : null}>
             <Button
               size="lg"
               className="w-full rounded-full font-bold"
@@ -146,18 +146,18 @@ export default function FicheCapsule({
                 router.push(lienCarnet)
               }}
             >
-              {phase === 'achetee' ? 'Ouvrir maintenant' : 'Ouvrir dans mon carnet'}
+              {phase === 'achetee' ? 'Ouvrir maintenant' : 'Ouvrir dans ma bibliothèque'}
             </Button>
           </Rangee>
         ) : phase === 'demandee' ? (
           <Message>
             C’est noté ! On recontacte ton parent pour le paiement par carte, et la capsule arrive
-            dans ton carnet dès qu’il est confirmé.
+            dans ta bibliothèque dès qu’il est confirmé.
           </Message>
         ) : phase === 'carte' && capsule.prixEuros !== null ? (
           <FormulaireDemandeCarte
             id={`capsule-${capsule.id}`}
-            intro={`Un parent paie ${libelleEuros(capsule.prixEuros)} par carte, et la capsule arrive dans ton carnet dès que le paiement est confirmé.`}
+            intro={`Un parent paie ${libelleEuros(capsule.prixEuros)} par carte, et la capsule arrive dans ta bibliothèque dès que le paiement est confirmé.`}
             contact={contact}
             onContact={setContact}
             enCours={enCours}
@@ -183,7 +183,7 @@ export default function FicheCapsule({
               {enCours ? (
                 'Un instant…'
               ) : capsule.prixGemmes === 0 ? (
-                'Offerte : l’ajouter à mon carnet'
+                'Offerte : l’ajouter à ma bibliothèque'
               ) : (
                 <>
                   Débloquer pour <PrixGemmes montant={capsule.prixGemmes} className="text-base" />

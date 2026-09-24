@@ -65,7 +65,7 @@ export default function OngletsMoi({
           aria-label="Sections du profil"
           className={cn(
             'moi-onglets grid grid-cols-3 gap-1 px-2.5 pb-2.5',
-            seule ? 'rounded-3xl pt-2.5' : 'rounded-b-3xl border-t border-white/10 pt-1.5',
+            seule ? 'rounded-carte pt-2.5' : 'rounded-b-carte border-t border-white/10 pt-1.5',
           )}
         >
           {onglets.map((o) => {

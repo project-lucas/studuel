@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { NotebookPen, Play } from 'lucide-react'
+import { hrefRayon } from '@/lib/bibliotheque'
 import { sfx } from '@/lib/sounds'
 import { normalizeCourseColor, normalizeCourseIcon } from '@/lib/carnet-cours'
 import { COURSE_ICON, COURSE_TINT } from '@/components/carnet/style'
@@ -42,7 +43,7 @@ export default function CarnetDeLaMatiere({
   return (
     <section
       aria-label={`Tes cours de ${matiere}`}
-      className="rev-card mb-3 rounded-3xl bg-white p-4 shadow-sm ring-1 ring-black/5"
+      className="carte mb-3 p-4"
     >
       <div className="mb-2.5 flex items-center gap-3 px-1">
         <span className="flex size-9 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
@@ -52,11 +53,11 @@ export default function CarnetDeLaMatiere({
           Tes cours
         </h2>
         <Link
-          href="/carnet"
+          href={hrefRayon('dossiers')}
           onClick={() => sfx.tap()}
           className="shrink-0 text-[11px] font-extrabold text-primary"
         >
-          Mon carnet
+          Ma bibliothèque
         </Link>
       </div>
 

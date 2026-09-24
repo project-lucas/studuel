@@ -79,14 +79,14 @@ export default function Vitrine({
       : `${bilan.gagnees} obtenue${bilan.gagnees > 1 ? 's' : ''} sur ${bilan.matieres}`
 
   return (
-    <section aria-label="Tes couronnes" className="moi-bloc rounded-[22px] p-4">
+    <section aria-label="Tes couronnes" className="carte p-4">
       <div className="flex items-center gap-2.5">
         <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-secondary text-primary">
           <Crown className="size-5" strokeWidth={2.4} aria-hidden="true" />
         </span>
         <div className="min-w-0 flex-1">
-          <h2 className="font-heading text-base leading-tight font-extrabold">Tes couronnes</h2>
-          <p className="moi-sourcil mt-0.5">{sousTitre}</p>
+          <h2 className="titre-section">Tes couronnes</h2>
+          <p className="surtitre mt-0.5">{sousTitre}</p>
         </div>
       </div>
       <ul role="list" className="mt-3 grid grid-cols-4 gap-x-2 gap-y-3">

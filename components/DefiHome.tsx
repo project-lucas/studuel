@@ -6,7 +6,6 @@ import dynamic from 'next/dynamic'
 import {
   Zap,
   Check,
-  X,
   ArrowRight,
   RotateCcw,
   BusFront,
@@ -23,6 +22,7 @@ import {
   type LucideIcon,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import AnswerBoard from '@/components/jeux/AnswerBoard'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import SoundToggle from '@/components/ui/SoundToggle'
@@ -428,7 +428,7 @@ export default function DefiHome({
 
   // ---------------------------------------------------------------- landing
   if (phase === 'landing') {
-    // Récompense affichée sur le GO : le potentiel du défi du jour.
+    // Récompense affichée sur le bouton Jouer : le potentiel du défi du jour.
     const dailyXp =
       items.length * XP_RULES.challengePerCorrect + XP_RULES.challengeBonus
     // Classement : moi (trophées suivis localement) + mes amis.
@@ -454,10 +454,8 @@ export default function DefiHome({
           trophies={trophies}
           bestTrophies={Math.max(bestTrophies, trophies)}
           players={rankedPlayers}
-          onPlay={() => {
-            sfx.open()
-            router.push('/defi')
-          }}
+          // Pas de son ici : le bouton de la carte est un `Button`, il joue déjà son clic.
+          onPlay={() => router.push('/defi')}
         />
 
         {/* HUD : niveau à gauche, série à droite — l'écran d'accueil du jeu. */}
@@ -517,7 +515,7 @@ export default function DefiHome({
           </p>
         ) : null}
 
-        {/* Défi du jour — carte « clay » violette qui appelle le bouton GO
+        {/* Défi du jour — carte « clay » violette qui appelle le bouton Jouer
             flottant (même couleur d'action). Contour clair + reflet doux =
             langage claymorphism, cohérent avec le reste du monde Studuel. */}
         <section aria-label="Défi du jour" className="w-full max-w-sm text-left">
@@ -528,10 +526,10 @@ export default function DefiHome({
             />
             <div className="relative flex items-start justify-between gap-3">
               <div className="min-w-0">
-                <p className="text-[11px] font-bold tracking-widest text-highlight uppercase">
-                  Défi du jour
-                </p>
-                <h1 className="font-heading mt-0.5 text-2xl font-bold text-balance">
+                {/* Le sourcil au-dessus du H1 : la seule place des petites
+                    capitales (recette `surtitre`, audit du 23/09/2026). */}
+                <p className="surtitre text-highlight">Défi du jour</p>
+                <h1 className="font-heading mt-0.5 text-2xl font-extrabold text-balance">
                   {doneToday
                     ? 'Encore un, pour la gloire ?'
                     : firstName
@@ -567,7 +565,7 @@ export default function DefiHome({
               <p className="relative mt-3 flex items-center gap-1.5 text-xs font-semibold text-primary-foreground/85">
                 <CornerDownRight className="size-4 text-highlight" aria-hidden="true" />
                 Appuie sur le gros bouton{' '}
-                <span className="font-heading font-extrabold">GO</span> en bas à
+                <span className="font-heading font-extrabold">Jouer</span> en bas à
                 droite
               </p>
             ) : (
@@ -585,7 +583,7 @@ export default function DefiHome({
         <div
           className="fixed z-50 right-[calc(env(safe-area-inset-right)+1rem)] bottom-[calc(env(safe-area-inset-bottom)+6rem)] md:right-[calc(env(safe-area-inset-right)+2rem)] md:bottom-[calc(env(safe-area-inset-bottom)+2rem)]"
         >
-          {/* Anneau d'arcade : pointillés en rotation lente autour du GO. */}
+          {/* Anneau d'arcade : pointillés en rotation lente autour du bouton. */}
           <span
             aria-hidden="true"
             className="go-ring pointer-events-none absolute -inset-2 rounded-full border-2 border-dashed border-white/40"
@@ -611,8 +609,10 @@ export default function DefiHome({
               className="pointer-events-none absolute inset-x-3 top-1.5 h-9 rounded-full bg-gradient-to-b from-white/25 to-transparent"
             />
             <Zap className="size-8 transition-transform group-hover:rotate-12" />
-            <span className="font-heading text-base leading-none font-bold">
-              GO
+            {/* Plus de « GO » nulle part dans l'app (audit du 23/09/2026) :
+                le rond d'arcade garde sa forme, son libellé dit le geste. */}
+            <span className="font-heading text-base leading-none font-extrabold">
+              Jouer
             </span>
           </button>
 
@@ -632,7 +632,9 @@ export default function DefiHome({
         <section className="w-full max-w-sm pt-2 text-left" aria-label="L’Arène">
           <div className="mb-5 flex items-center gap-3">
             <span aria-hidden="true" className="h-px flex-1 bg-white/25" />
-            <h2 className="font-heading flex items-center gap-1.5 text-base font-extrabold tracking-widest text-white uppercase italic">
+            {/* Titre de section : la recette commune de l'app, plus de Baloo
+                en capitales italiques à la main (audit du 23/09/2026). */}
+            <h2 className="titre-section flex items-center gap-1.5 text-white">
               <Swords className="size-4.5" /> L’Arène
             </h2>
             <span aria-hidden="true" className="h-px flex-1 bg-white/25" />
@@ -769,7 +771,7 @@ export default function DefiHome({
                     </span>
                   </span>
                   {playable ? (
-                    <span className="relative text-xs font-extrabold tracking-wide uppercase">
+                    <span className="relative text-xs font-extrabold tracking-wide">
                       Jouer ›
                     </span>
                   ) : null}
@@ -779,34 +781,27 @@ export default function DefiHome({
           </div>
 
           {/* Jouer à deux, en temps réel (Realtime). Coop = entraide, Duel =
-              affrontement — les deux se lancent par un code d'invitation. */}
+              affrontement — les deux se lancent par un code d'invitation.
+              Deux ACTIONS, donc des `Button` : violet pour la principale,
+              contour pour la seconde — l'or reste réservé aux gains et au
+              DUEL de l'arène (audit du 23/09/2026). Ils jouent leur clic
+              eux-mêmes, plus de `sfx.open()` par-dessus. */}
           {userId ? (
             <div className="mt-4 flex flex-col gap-2.5">
               {pool.length >= 2 ? (
-                <button
-                  type="button"
-                  onClick={() => {
-                    sfx.open()
-                    setPhase('coop')
-                  }}
-                  className="press-3d-deep flex w-full items-center justify-center gap-2 rounded-2xl bg-highlight px-4 py-3.5 font-heading text-sm font-extrabold tracking-wide text-foreground uppercase italic ring-1 ring-black/10 transition-transform active:scale-[0.99]"
-                >
-                  <HandHeart className="size-4.5" aria-hidden="true" /> Mode Coop ·
-                  à deux
-                </button>
+                <Button size="lg" className="w-full" onClick={() => setPhase('coop')}>
+                  <HandHeart aria-hidden="true" /> Mode Coop · à deux
+                </Button>
               ) : null}
               {pool.length >= ROUND_SIZE ? (
-                <button
-                  type="button"
-                  onClick={() => {
-                    sfx.open()
-                    setPhase('duel-live')
-                  }}
-                  className="press-3d-deep flex w-full items-center justify-center gap-2 rounded-2xl bg-white/10 px-4 py-3 text-sm font-extrabold tracking-wide text-white uppercase ring-1 ring-white/25 transition-transform hover:scale-[1.01] active:scale-95"
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="w-full border-white/40 bg-transparent text-white hover:bg-white/10 hover:text-white"
+                  onClick={() => setPhase('duel-live')}
                 >
-                  <Swords className="size-4" aria-hidden="true" /> Duel en direct
-                  · par code
-                </button>
+                  <Swords aria-hidden="true" /> Duel en direct · par code
+                </Button>
               ) : null}
             </div>
           ) : null}
@@ -824,7 +819,7 @@ export default function DefiHome({
           {ratio >= 0.8 ? '🏆' : ratio >= 0.5 ? '💪' : '🌱'}
         </div>
         <div>
-          <h1 className="font-heading text-3xl font-bold text-white">
+          <h1 className="font-heading text-3xl font-extrabold text-white">
             {ratio >= 0.8
               ? 'Excellent !'
               : ratio >= 0.5
@@ -875,7 +870,7 @@ export default function DefiHome({
 
   return (
     <div className="mx-auto flex max-w-xl flex-col gap-3">
-      {/* Chrono de la session, démarré au GO. */}
+      {/* Chrono de la session, démarré au lancement du défi. */}
       <DefiTimer />
 
       {/* Bouton d'arrêt rond, flottant en bas à droite (au-dessus de la barre
@@ -915,53 +910,31 @@ export default function DefiHome({
       </div>
 
       {item.subject ? (
-        <p className="text-xs font-semibold text-white/70 uppercase">
-          {item.subject}
-        </p>
+        <p className="surtitre text-white/70">{item.subject}</p>
       ) : null}
 
       {item.kind === 'question' ? (
         <div className="flex flex-col gap-2">
-          <h2 className="font-heading mb-1 text-xl font-bold text-balance text-white">
+          <h2 className="font-heading mb-1 text-xl font-extrabold text-balance text-white">
             {item.prompt}
           </h2>
-          {item.options.map((option, i) => {
-            const isCorrect = i === item.correctIndex
-            const isSelected = i === selected
-            return (
-              <button
-                key={i}
-                type="button"
-                disabled={answered}
-                onClick={() => {
-                  setSelected(i)
-                  if (isCorrect) sfx.correct()
-                  else sfx.wrong()
-                }}
-                className={cn(
-                  // bg-card : les options restent des cartes claires lisibles
-                  // sur le fond d'écran sombre de l'Arène.
-                  'flex items-center justify-between gap-3 rounded-2xl border bg-card px-4 py-3 text-left text-sm font-medium text-card-foreground transition-all',
-                  !answered &&
-                    'hover:border-primary/40 hover:bg-accent hover:text-accent-foreground active:scale-[0.99]',
-                  answered &&
-                    isCorrect &&
-                    'border-green-600 bg-green-50 text-green-700',
-                  answered &&
-                    isSelected &&
-                    !isCorrect &&
-                    'border-destructive bg-red-50 text-destructive',
-                  answered && !isSelected && !isCorrect && 'opacity-50',
-                )}
-              >
-                {option}
-                {answered && isCorrect ? <Check className="size-4 shrink-0" /> : null}
-                {answered && isSelected && !isCorrect ? (
-                  <X className="size-4 shrink-0" />
-                ) : null}
-              </button>
-            )
-          })}
+          {/* Le plateau partagé des jeux et du quiz : juste/faux en rôles
+              success/destructive, plus de liste maison en vert Tailwind
+              (audit du 23/09/2026). Ses plaques sont des cartes claires,
+              lisibles sur le fond sombre de l'Arène. La réponse se fige au
+              premier tap ; « Suivant » passe à la question d'après. */}
+          <AnswerBoard
+            options={item.options}
+            correctIndex={item.correctIndex}
+            selected={selected}
+            revealed={answered}
+            layout="liste"
+            onAnswer={(i) => {
+              setSelected(i)
+              if (i === item.correctIndex) sfx.correct()
+              else sfx.wrong()
+            }}
+          />
 
           {/* Retour juste/faux : annoncé et lisible, pas seulement la couleur. */}
           <p
@@ -970,12 +943,8 @@ export default function DefiHome({
             className={cn(
               'text-sm font-semibold',
               !answered && 'sr-only',
-              answered &&
-                selected === item.correctIndex &&
-                'text-green-300',
-              answered &&
-                selected !== item.correctIndex &&
-                'text-red-300',
+              answered && selected === item.correctIndex && 'text-success',
+              answered && selected !== item.correctIndex && 'text-destructive',
             )}
           >
             {answered
@@ -1032,11 +1001,13 @@ export default function DefiHome({
               !revealed && 'pointer-events-none opacity-0',
             )}
           >
+            {/* Deux ACTIONS (le verdict de l'élève), donc contour + violet :
+                le vert et l'ambre sont des ÉTATS, pas des boutons
+                (audit du 23/09/2026). */}
             <Button
               variant="outline"
               size="lg"
               tabIndex={revealed ? undefined : -1}
-              className="rounded-full border-amber-500/40 text-amber-700 hover:bg-amber-500/10 dark:text-amber-400"
               onClick={() => {
                 sfx.wrong()
                 next(false)
@@ -1047,7 +1018,6 @@ export default function DefiHome({
             <Button
               size="lg"
               tabIndex={revealed ? undefined : -1}
-              className="rounded-full bg-green-600 text-white hover:bg-green-600/85"
               onClick={() => {
                 sfx.correct()
                 next(true)

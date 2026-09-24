@@ -135,6 +135,17 @@ export const GRADE_SHORT_LABELS: Record<GradeLevel, string> = {
   'Tle techno': 'Terminale techno',
 }
 
+/**
+ * L'écriture de la PUCE de classe du bandeau, sur téléphone : la plus courte
+ * qui se lise encore. « Terminale techno » n'y tenait pas à côté de l'écusson
+ * de niveau (24/09/2026) ; le menu déroulant, lui, garde les noms entiers.
+ * Jamais « Tle » : ça ne se prononce pas.
+ */
+export const GRADE_PUCE_LABELS: Record<GradeLevel, string> = {
+  ...GRADE_SHORT_LABELS,
+  'Tle techno': 'Term. techno',
+}
+
 export function gradeLabel(grade: string | null | undefined): string | null {
   if (!isGradeLevel(grade)) return null
   return GRADE_FULL_LABELS[grade]

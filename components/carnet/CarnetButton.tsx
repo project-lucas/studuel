@@ -1,12 +1,14 @@
 'use client'
 
 import Link from 'next/link'
-import { NotebookPen } from 'lucide-react'
+import { LibraryBig } from 'lucide-react'
+import { hrefRayon } from '@/lib/bibliotheque'
 import { sfx } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
 
 /**
- * LA porte d'entrée de « Mon carnet » — les cours que l'élève écrit lui-même.
+ * LA porte d'entrée de « Ma bibliothèque » (ex-« Mon carnet », 24/09/2026) —
+ * les cours que l'élève écrit lui-même, ses capsules et ses fiches achetées.
  *
  * TROISIÈME FORME, ET LA PREMIÈRE QUI SE LIT. Elle a d'abord été une tuile
  * pleine largeur en bas de page : elle doublait visuellement les dossiers de
@@ -29,7 +31,7 @@ import { cn } from '@/lib/utils'
  * garder la même largeur qu'il y ait zéro ou quarante cours.
  *
  * ⚠️ `data-tour="carnet-switch"` EST UNE CIBLE DU TOUR GUIDÉ (`lib/tour.ts`,
- * étape « Mon carnet »). Sans cet attribut sur un élément monté, l'étape est
+ * étape « Ma bibliothèque »). Sans cet attribut sur un élément monté, l'étape est
  * silencieusement SAUTÉE — `nextAvailableStep` la considère hors écran. Elle
  * suit donc le bouton partout où il déménage.
  */
@@ -56,7 +58,7 @@ export default function CarnetButton({
   const summary =
     coursesCount > 0
       ? `${coursesCount} cours · ${questionsCount} question${questionsCount > 1 ? 's' : ''}`
-      : 'Crée tes cours et révise-les.'
+      : 'Tes cours, tes capsules et tes fiches.'
   const nouvelles =
     capsulesNouvelles > 0
       ? ` — ${capsulesNouvelles} nouvelle${capsulesNouvelles > 1 ? 's' : ''} capsule${capsulesNouvelles > 1 ? 's' : ''}`
@@ -64,10 +66,12 @@ export default function CarnetButton({
 
   return (
     <Link
-      href="/carnet"
+      // Une capsule neuve attend : on arrive sur son rayon, pas sur les
+      // Dossiers — sinon la pastille promettait du neuf qu'on ne voyait pas.
+      href={capsulesNouvelles > 0 ? hrefRayon('capsules') : hrefRayon('dossiers')}
       onClick={() => sfx.tap()}
       data-tour="carnet-switch"
-      aria-label={`Mon carnet — ${summary}${nouvelles}`}
+      aria-label={`Ma bibliothèque — ${summary}${nouvelles}`}
       // Robe des commandes blanches de l'accueil (crayon, loupe, agenda) :
       // blanc, filet noir à 5 %, ombre courte. L'ICÔNE porte le violet, le
       // libellé reste à l'encre : un aplat violet ici entrerait en concurrence
@@ -81,12 +85,18 @@ export default function CarnetButton({
           : 'bg-white pr-4 pl-3 shadow-sm ring-1 ring-black/5',
       )}
     >
-      <NotebookPen
+      {/* EN TRAIT, ET C'EST VOULU (24/09/2026). Une étagère dessinée (le lot des
+          onglets de la bibliothèque) a été essayée ici : à la taille réelle du
+          bouton, ses quatre dos et sa planche se fondaient en une tache violet
+          et or, et elle volait la vedette au « + Nouveau contrôle » — alors que
+          ses voisins de la carte de série sont en trait. Le dessin ne vaut qu'à
+          partir de ~30 px (onglets de la bibliothèque, tuiles de chapitre). */}
+      <LibraryBig
         className="size-4.5 text-primary"
         strokeWidth={2.4}
         aria-hidden="true"
       />
-      Mon carnet
+      Ma bibliothèque
       {capsulesNouvelles > 0 ? (
         // Même pastille que l'onglet Boutique (NavBoutiqueBadge) : un point
         // rouge et son halo — on voit qu'il y a du neuf, on ne compte pas.

@@ -54,7 +54,7 @@ export function PlacementIntroStep({
         </div>
       </div>
       <div className="mt-auto flex flex-col gap-2.5 pt-4">
-        <OnbButton variant="yellow" disabled={loading} onClick={onStart}>
+        <OnbButton disabled={loading} onClick={onStart}>
           {loading ? 'Préparation…' : 'Commencer le test'}
         </OnbButton>
         <OnbButton variant="ghost" disabled={loading} onClick={onSkip}>
@@ -140,7 +140,7 @@ export function PlacementQuizStep({
       <ProgressHeader progress={progress} onBack={onBack} lives={lives} />
       <div className="flex flex-1 flex-col px-[22px] pt-2">
         <p
-          className="mt-1.5 mb-2.5 text-[12px] font-extrabold tracking-[0.1em] uppercase"
+          className="surtitre mt-1.5 mb-2.5"
           style={{ color: 'var(--onb-mut)' }}
         >
           {q.subject ? `${q.subject} · ` : ''}Question {index + 1}/{questions.length}
@@ -176,7 +176,7 @@ export function PlacementQuizStep({
           {feedback}
         </p>
         {checked ? (
-          <OnbButton variant={isRight ? 'primary' : 'yellow'} onClick={advance}>
+          <OnbButton onClick={advance}>
             {isRight ? 'Continuer' : 'On continue'}
           </OnbButton>
         ) : (
@@ -294,7 +294,7 @@ export function PlacementResultStep({
       {fb.celebration ? <ConfettiRain /> : null}
       <div className="flex flex-1 flex-col items-center justify-center text-center">
         <p
-          className="text-[12px] font-extrabold tracking-[0.12em] uppercase"
+          className="surtitre"
           style={{ color: 'var(--onb-mut)' }}
         >
           Ton placement
@@ -320,9 +320,7 @@ export function PlacementResultStep({
         </div>
       </div>
       <div className="mt-auto pt-4">
-        <OnbButton variant={fb.celebration ? 'yellow' : 'primary'} onClick={onContinue}>
-          Continuer
-        </OnbButton>
+        <OnbButton onClick={onContinue}>Continuer</OnbButton>
       </div>
     </div>
   )
@@ -552,7 +550,7 @@ export function PlanStep({
               </span>
             )}
             <div className="min-w-0">
-              <p className="text-[12px] font-extrabold tracking-[0.1em] uppercase" style={{ color: 'var(--onb-pp)' }}>
+              <p className="surtitre" style={{ color: 'var(--onb-pp)' }}>
                 Joueur · {gradeLabel}
               </p>
               <p className="mt-0.5 text-[15px] leading-tight font-extrabold">
@@ -581,7 +579,7 @@ export function PlanStep({
           className="mt-4 rounded-[18px] border-2 p-4"
           style={{ borderColor: 'var(--onb-yl)', background: '#FFF7E0' }}
         >
-          <p className="text-[11px] font-extrabold tracking-[0.1em] uppercase" style={{ color: '#a06d00' }}>
+          <p className="surtitre" style={{ color: '#a06d00' }}>
             Ta première mission
           </p>
           <p className="mt-1 text-[16px] leading-tight font-extrabold">{mission.titre}</p>
@@ -591,7 +589,7 @@ export function PlanStep({
         </div>
       </div>
       <div className="relative mt-auto pt-4">
-        <OnbButton variant="yellow" disabled={finishing} onClick={onFinish}>
+        <OnbButton disabled={finishing} onClick={onFinish}>
           {finishing ? 'Un instant…' : 'C’est parti'}
         </OnbButton>
       </div>

@@ -25,7 +25,7 @@ import type { GardienVue } from '@/lib/reviser/gardien'
 export default function GardienBadge({
   vue,
   size = 'md',
-  tone = 'dark',
+  tone = 'light',
   onSelect,
   decoratif = false,
   className,
@@ -34,9 +34,10 @@ export default function GardienBadge({
   /** `md` dans le header, `sm` dans la barre collante. */
   size?: 'sm' | 'md'
   /**
-   * Le fond sur lequel il est posé. Le header de matière est un décor SOMBRE,
-   * la barre collante est crème : une silhouette blanche disparaîtrait sur l'une
-   * et une silhouette noire sur l'autre.
+   * Le fond sur lequel il est posé. Depuis le 23/09/2026 l'en-tête de matière
+   * est sur le mur crème comme la barre collante : `light` par défaut ;
+   * `dark` reste pour un décor sombre (une silhouette blanche disparaîtrait
+   * sur l'un et une silhouette noire sur l'autre).
    */
   tone?: 'dark' | 'light'
   /** Tap : on va au billet du gardien (onglet « Mode de jeu »). */

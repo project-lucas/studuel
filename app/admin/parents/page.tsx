@@ -34,7 +34,7 @@ export default async function AdminParentsPage() {
   return (
     <div className="space-y-6">
       <header>
-        <h1 className="font-heading flex items-center gap-2 text-2xl font-bold">
+        <h1 className="font-heading flex items-center gap-2 text-3xl font-extrabold">
           <MonitorPlay className="size-6" aria-hidden="true" />
           Programme parents
         </h1>

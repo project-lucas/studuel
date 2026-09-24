@@ -64,7 +64,7 @@ export default function ReglagesEnfant({
     goal !== prefs.weeklyGoalMinutes || alert !== prefs.alertAfterDays
 
   return (
-    <section className="bg-card rounded-2xl border p-5 shadow-sm">
+    <section className="carte p-5">
       <header className="mb-4 flex items-start justify-between gap-3">
         <h3 className="font-heading text-lg font-semibold">{childName}</h3>
         <UnlinkChildButton childId={childId} childName={childName} />
@@ -108,7 +108,7 @@ export default function ReglagesEnfant({
                       : 'hover:border-primary/40',
                   )}
                 >
-                  <span className="font-heading text-sm font-bold">
+                  <span className="font-heading text-sm font-extrabold">
                     {p.label}
                   </span>
                   <span className="text-muted-foreground text-[11px] leading-tight">

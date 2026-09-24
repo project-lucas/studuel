@@ -184,7 +184,6 @@ export default function OnboardingCompte({
             </p>
           ) : null}
           <OnbButton
-            variant={derniere ? 'yellow' : 'primary'}
             disabled={pending || !canAdvance(etape, answers)}
             onClick={next}
           >

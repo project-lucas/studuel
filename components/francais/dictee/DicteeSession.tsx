@@ -13,6 +13,7 @@ import {
   Volume2,
   X,
 } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import {
@@ -102,9 +103,10 @@ export default function DicteeSession({
     }, 0)
   }
 
+  // Pas de `sfx.tap()` ici : les deux boutons qui l'appellent sont des `Button`,
+  // qui jouent déjà le clic.
   const terminer = (support: SupportDictee) => {
     if (pending) return
-    sfx.tap()
     startTransition(async () => {
       const res = await enregistrerDictee(
         dicteeId,
@@ -176,16 +178,11 @@ export default function DicteeSession({
             ) : null}
           </div>
 
-          <button
-            type="button"
-            onClick={() => {
-              sfx.tap()
-              setEtape('support')
-            }}
-            className="quiz-plaque h-14 w-full text-lg font-extrabold text-white [--plaque-bas:color-mix(in_oklab,var(--success),black_14%)] [--plaque-bord:color-mix(in_oklab,var(--success),black_50%)] [--plaque-haut:color-mix(in_oklab,var(--success),white_14%)]"
-          >
+          {/* Violet, pas vert : le vert est un verdict, et on n'a encore rien
+              écrit. */}
+          <Button type="button" size="xl" onClick={() => setEtape('support')} className="w-full">
             Commencer à écrire
-          </button>
+          </Button>
         </div>
       </div>
     )
@@ -316,14 +313,15 @@ export default function DicteeSession({
 
           <div className="flex-1" aria-hidden="true" />
 
-          <button
+          <Button
             type="button"
+            size="xl"
             disabled={pending}
             onClick={() => terminer('papier')}
-            className="quiz-plaque h-14 w-full text-lg font-extrabold text-white disabled:opacity-60 [--plaque-bas:color-mix(in_oklab,var(--success),black_14%)] [--plaque-bord:color-mix(in_oklab,var(--success),black_50%)] [--plaque-haut:color-mix(in_oklab,var(--success),white_14%)]"
+            className="w-full"
           >
             {pending ? 'Correction…' : 'Voir mon score'}
-          </button>
+          </Button>
         </div>
       </div>
     )
@@ -419,19 +417,19 @@ export default function DicteeSession({
               ))}
             </div>
 
-            <button
+            <Button
               type="button"
+              size="lg"
               disabled={pending}
               onClick={() => {
-                sfx.tap()
                 if (dernierSegment) terminer('telephone')
                 else setIndexSegment((i) => i + 1)
               }}
-              className="quiz-plaque h-11 shrink-0 gap-1.5 px-4 text-sm font-extrabold text-white disabled:opacity-60 [--plaque-bas:color-mix(in_oklab,var(--primary),black_12%)] [--plaque-bord:color-mix(in_oklab,var(--primary),black_44%)] [--plaque-haut:color-mix(in_oklab,var(--primary),white_12%)]"
+              className="shrink-0"
             >
-              <Check className="size-4" aria-hidden="true" />
+              <Check aria-hidden="true" />
               {dernierSegment ? 'Terminer' : 'Suivant'}
-            </button>
+            </Button>
           </div>
         </div>
       </div>
@@ -455,17 +453,15 @@ export default function DicteeSession({
 
         <div className="mx-auto flex w-full max-w-xl flex-col gap-2.5">
           {resultat?.correction ? (
-            <button
+            <Button
               type="button"
-              onClick={() => {
-                sfx.tap()
-                setVoirCorrection(true)
-              }}
-              className="quiz-plaque h-14 w-full gap-2 text-lg font-extrabold text-foreground [--plaque-bas:color-mix(in_oklab,var(--card),black_6%)] [--plaque-bord:color-mix(in_oklab,var(--card),black_30%)] [--plaque-haut:var(--card)]"
+              size="xl"
+              onClick={() => setVoirCorrection(true)}
+              className="w-full"
             >
               Voir la correction
-              <Eye className="size-5" aria-hidden="true" />
-            </button>
+              <Eye aria-hidden="true" />
+            </Button>
           ) : null}
           <button
             type="button"

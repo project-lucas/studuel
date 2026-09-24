@@ -3,12 +3,12 @@
 import Image, { type StaticImageData } from 'next/image'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import type { ReactNode } from 'react'
+import { useState, type ReactNode } from 'react'
 import { CircleUser } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { estChromeMasque } from '@/lib/quiz-chrome'
 import { sfx } from '@/lib/sounds'
-import { NAV_TABS, type NavIconName } from '@/lib/nav-tabs'
+import { NAV_TABS, cheminAffiche, type NavIconName, type OngletVise } from '@/lib/nav-tabs'
 import { prechargerOnglet } from '@/components/PrechargeurOnglets'
 import amisIcone from '@/public/images/nav/amis.webp'
 import reviserIcone from '@/public/images/nav/reviser.webp'
@@ -86,13 +86,29 @@ export default function Navigation({
   // on retombe sur le buste dessiné, qui est de la même famille que les cinq
   // autres icônes — le repli ne se remarque pas.
   avatarSlot = null,
+  // Pastille de l'onglet Amis : un bilan de ligue attend d'être joué
+  // (components/amis/ligue/NavAmisBadge). `null` pour un visiteur.
+  amisBadge = null,
 }: {
   userLabel: string | null
   boutiqueBadge?: ReactNode
+  amisBadge?: ReactNode
   avatarSlot?: ReactNode
 }) {
   const pathname = usePathname()
   const router = useRouter()
+
+  // L'ONGLET TOUCHÉ, AFFICHÉ TOUT DE SUITE (`cheminAffiche`, lib/nav-tabs) : la
+  // plaque part vers lui au toucher, sans attendre que le nouvel écran soit
+  // construit. Remis à zéro dès que l'URL change — un ajustement d'état pendant
+  // le rendu, comme React le recommande, et non un effet.
+  const [vise, setVise] = useState<OngletVise | null>(null)
+  const [cheminVu, setCheminVu] = useState(pathname)
+  if (cheminVu !== pathname) {
+    setCheminVu(pathname)
+    setVise(null)
+  }
+  const affiche = cheminAffiche(pathname, vise)
 
   // Routes sans chrome : parcours d'accueil (façon Duolingo) ET sessions plein
   // écran (quiz, dictée). Le verdict est pris ICI, sur `usePathname()`, et non
@@ -102,7 +118,7 @@ export default function Navigation({
   if (estChromeMasque(pathname)) return null
 
   const isActive = (path: string) =>
-    pathname === path || pathname.startsWith(`${path}/`)
+    affiche === path || affiche.startsWith(`${path}/`)
 
   // Halo violet unique qui « voyage » vers l'onglet actif (barre mobile) : sa
   // position horizontale se dérive de l'index actif, le CSS anime le glissement.
@@ -141,8 +157,11 @@ export default function Navigation({
               aria-hidden="true"
               className="tab-plate"
               style={{
-                left: `${(activeIndex / links.length) * 100}%`,
                 width: `${100 / links.length}%`,
+                // Le glissement par `transform` : le compositeur le joue seul,
+                // même pendant que le nouvel onglet se construit. `left`
+                // recalculait la mise en page à chaque image.
+                transform: `translateX(${activeIndex * 100}%)`,
               }}
             />
           )}
@@ -171,8 +190,29 @@ export default function Navigation({
                   // doigt qui se pose relance juste celui qu'il vise, au cas
                   // où son entrée a expiré — sans coût quand elle est fraîche.
                   prefetch={false}
+                  // Le défilement des onglets est l'affaire d'OngletsVivants (chaque
+                  // onglet garde le sien). Celui de Next mesurait le nouvel écran
+                  // à chaque navigation : une mise en page forcée, 22 ms au
+                  // processeur ×4, pour rien.
+                  scroll={false}
                   onPointerDown={() => prechargerOnglet(router, path)}
-                  onClick={() => sfx.tap()}
+                  onClick={() => {
+                    sfx.tap()
+                    // L'onglet déjà à l'écran : on remonte en haut, comme toute
+                    // appli mobile (chaque onglet garde sinon son défilement,
+                    // components/OngletsVivants).
+                    if (isActive(path)) {
+                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      return
+                    }
+                    setVise({ cible: path, depuis: pathname })
+                    // Filet : une navigation qui n'aboutit pas (garde de
+                    // sortie, réseau coupé) ne laisse pas la barre mentir.
+                    window.setTimeout(
+                      () => setVise((v) => (v?.cible === path ? null : v)),
+                      5000,
+                    )
+                  }}
                   aria-label={name}
                   aria-current={active ? 'page' : undefined}
                   data-tour={`tab-${path.slice(1)}`}
@@ -244,6 +284,7 @@ export default function Navigation({
                       )}
                     </span>
                     {icon === 'tresor' ? boutiqueBadge : null}
+                    {icon === 'amis' ? amisBadge : null}
                   </span>
                   {/* LE MOT SOUS L'ONGLET ACTIF, et lui seul — le geste de
                       Clash Royale (Lucas, 16/09/2026). Les quatre autres
@@ -270,7 +311,7 @@ export default function Navigation({
 
       {/* Desktop : sidebar sticky */}
       <nav className="sticky top-0 hidden h-screen w-64 shrink-0 flex-col gap-8 border-r bg-card p-5 md:flex">
-        <Link href="/" className="font-heading px-3 text-2xl font-bold">
+        <Link href="/" className="font-heading px-3 text-2xl font-extrabold">
           Studuel
         </Link>
 

@@ -94,14 +94,14 @@ export default async function ApercuExercices({
   const liste = fichiers()
   return (
     <div className="mx-auto flex max-w-xl flex-col gap-4 pb-24">
-      <h1 className="font-heading text-2xl font-extrabold">Aperçu du cahier d’exercices</h1>
+      <h1 className="font-heading text-3xl font-extrabold">Aperçu du cahier d’exercices</h1>
       {liste.length === 0 ? <p>Aucun fichier dans contenu/exercices.</p> : null}
       {liste.map((f) => {
         const fichier = lire(f)
         const fautes = fichier ? validerFichier(fichier) : []
         return (
           <section key={f} className="rounded-2xl bg-[var(--card)] p-3">
-            <h2 className="font-bold">
+            <h2 className="titre-section">
               {f} · {fichier?.exercices.length ?? 0} exercices
               {fautes.length ? <span className="ml-2 text-[var(--destructive)]">{fautes.length} faute(s)</span> : null}
             </h2>

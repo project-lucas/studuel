@@ -3,6 +3,7 @@ import { GRADE_LEVELS, type GradeLevel } from '@/lib/types'
 import {
   GRADE_CYCLES,
   GRADE_FULL_LABELS,
+  GRADE_PUCE_LABELS,
   GRADE_SHORT_LABELS,
   contentLevelFor,
   cycleOf,
@@ -83,6 +84,13 @@ describe('écriture des classes', () => {
     expect(GRADE_FULL_LABELS.Tle).toBe('Terminale')
     expect(GRADE_SHORT_LABELS.Tle).toBe('Terminale')
     expect(GRADE_SHORT_LABELS['Tle techno']).toBe('Terminale techno')
+    for (const g of GRADE_LEVELS) expect(GRADE_PUCE_LABELS[g], g).not.toMatch(/Tle/)
+  })
+
+  it('écrit la puce du bandeau au plus court', () => {
+    expect(GRADE_PUCE_LABELS.Tle).toBe('Terminale')
+    expect(GRADE_PUCE_LABELS['Tle techno']).toBe('Term. techno')
+    expect(GRADE_PUCE_LABELS['6e']).toBe(GRADE_SHORT_LABELS['6e'])
   })
 
   it('dit toujours la voie : une techno n’est pas une générale', () => {

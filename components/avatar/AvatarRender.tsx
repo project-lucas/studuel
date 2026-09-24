@@ -1,7 +1,7 @@
 'use client'
 
 import { useMemo } from 'react'
-import { avatarDataUri, avatarPortraitSrc, type AvatarConfig } from '@/lib/avatar'
+import { avatarDataUri, avatarEstDessine, avatarPortraitSrc, type AvatarConfig } from '@/lib/avatar'
 import { PORTRAIT_FACE_CROP } from '@/lib/portraits'
 import { BannerArt, EquipmentArt } from '@/components/avatar/vestiaire-assets'
 import { cn } from '@/lib/utils'
@@ -48,7 +48,9 @@ export default function AvatarRender({
         </div>
       ) : null}
       {portrait ? (
-        forme === 'blason' ? (
+        // Un avatar dessiné par Marcel est un portrait carré : entier, arrondi
+        // par le cadre — jamais recadré sur le visage comme un blason.
+        forme === 'blason' || avatarEstDessine(config) ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={portrait} alt="" className="relative size-full object-contain" />
         ) : (

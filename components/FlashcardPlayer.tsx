@@ -153,7 +153,7 @@ export default function FlashcardPlayer({
           </span>
 
           <div>
-            <h1 className="font-heading text-2xl font-bold">Deck terminé !</h1>
+            <h1 className="font-heading text-2xl font-extrabold">Deck terminé !</h1>
             <p className="mt-1 text-sm opacity-80">{title}</p>
           </div>
 
@@ -319,15 +319,15 @@ export default function FlashcardPlayer({
           size="lg"
           tabIndex={flipped ? undefined : -1}
           onClick={() => answer(false)}
-          className="border-warning/40 text-warning hover:bg-warning/10"
         >
           <Undo2 className="size-4" /> À revoir
         </Button>
+        {/* Violet, pas vert : « Je savais » est une ACTION ; le vert reste au
+            verdict. */}
         <Button
           size="lg"
           tabIndex={flipped ? undefined : -1}
           onClick={() => answer(true)}
-          className="bg-success text-success-foreground hover:bg-success/85"
         >
           <Check className="size-4" /> Je savais
         </Button>

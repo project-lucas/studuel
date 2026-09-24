@@ -63,7 +63,13 @@ export async function proxy(request: NextRequest) {
 
 export const config = {
   // Tout sauf les assets statiques.
+  // `html` : l'écran de lancement statique (public/lancement.html, point
+  // d'entrée de l'app installée) doit partir du CDN sans passer par ici — il
+  // n'a pas de session à rafraîchir, et chaque milliseconde y compte.
+  // `api/avatar-ia/<id>` : l'image publique d'un avatar dessiné (migration
+  // 378) — même règle qu'un asset ; la route qui DESSINE (`api/avatar-ia`,
+  // sans segment) garde le rafraîchissement de session.
   matcher: [
-    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico)$).*)',
+    '/((?!_next/static|_next/image|favicon.ico|api/avatar-ia/.+|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|html)$).*)',
   ],
 }

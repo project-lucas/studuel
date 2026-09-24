@@ -15,13 +15,14 @@ moyenne).
 
 ```
 ┌──────────────────────────────────────────────┐
-│  [icône]  Anglais                   ( 1 % )  │   header violet, ANNEAU du
-│           Programme de 5e · 0/41 fiches      │   pourcentage à droite
+│  (←)                                         │   en-tête sur le MUR crème
+│  [médaillon] Anglais              [gardien]  │   (EnTetePage) : médaillon,
+│              Programme de 5e · 0/41 fiches   │   titre, programme, écusson
 │  ▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  │   barre de progression
 │  ( Programme )  ( 🎮 Mode de jeu )  ( Annales )│  onglets pilules
-├──────────────────────────────────────────────┤   panneau crème, coins hauts
-│  ON COMMENCE PAR ÇA                          │   arrondis, qui CHEVAUCHE
-│  ┌────────────────────────────────────────┐  │   le header
+│                                              │   la liste, posée sur le
+│  ON COMMENCE PAR ÇA                          │   même mur (plus de panneau
+│  ┌────────────────────────────────────────┐  │   ni de header coloré)
 │  │ (Commencer)                            │  │   la CARTE D'ENTRÉE, violette
 │  │ Les noms                             → │  │   (ResumeCard) : le geste,
 │  │ Le groupe nominal · ~6 min             │  │   la fiche, son chapitre,
@@ -44,6 +45,14 @@ moyenne).
 │                    …                          │
 └──────────────────────────────────────────────┘
 ```
+
+**L'en-tête est `EnTetePage` depuis le 23/09/2026** (`components/reviser/EnTetePage.tsx`,
+la seule recette d'en-tête de Réviser) : plus de header violet ni de bandeau
+à la couleur de la matière — le dossier se pose sur le mur crème de l'app, et
+c'est le **médaillon** (`MedaillonMatiere`, la vignette de la matière sur une
+plaque blanche) qui dit de quelle matière il s'agit ; l'écusson du gardien clôt
+la ligne du titre. Le panneau crème qui chevauchait le header a disparu avec
+lui : la carte d'entrée et les chapitres suivent directement.
 
 **La carte d'entrée** (`components/reviser/ResumeCard.tsx`) répond à « par où
 je commence ? » avant la liste. Elle écrit le libellé calculé par le serveur

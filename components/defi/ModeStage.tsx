@@ -4,6 +4,7 @@ import type { ReactNode } from 'react'
 import Image from 'next/image'
 import { ArrowLeft, type LucideIcon } from 'lucide-react'
 import WorldBackdrop from '@/components/WorldBackdrop'
+import { useHudAuDefilement } from '@/components/useHudAuDefilement'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 
@@ -77,6 +78,9 @@ export default function ModeStage({
 }) {
   const dark = tone === 'dark'
   const themed = !dark && !!theme
+  // Le bandeau du haut s'efface dès qu'on défile, revient en haut de page ;
+  // l'en-tête du mode monte alors à sa place (classes `[html.hud-replie_&]`).
+  useHudAuDefilement()
   const back = backLabel ?? 'Retour à l’Arène'
   return (
     <>
@@ -101,14 +105,26 @@ export default function ModeStage({
             : 'bg-background text-foreground',
       )}
     >
+      {/* L'EN-TÊTE RESTE EN PLACE (Lucas, 24/09/2026 : « laisse-le fixe, et
+          cache la barre de niveau, série et gemmes durant le défilement »).
+          Collé sous le bandeau tant qu'on est en haut ; dès qu'on défile, le
+          bandeau s'efface et l'en-tête MONTE à sa place (translation de 3 rem,
+          la hauteur de `top-12`) — un seul bandeau à l'écran, jamais deux.
+          Au-dessus du contenu (z-30) : la carte des paliers pose son contenu en
+          `relative z-10` ; à égalité, il passait PAR-DESSUS l'en-tête au
+          défilement (« Drapeau affiché… » lu à travers, 24/09/2026).
+          OPAQUE et sans flou : un `backdrop-blur` sur un élément collé se
+          recalcule à chaque image du défilement (saccades), et le texte qui
+          passait dessous se lisait à travers. */}
       <header
         className={cn(
-          'sticky top-12 z-10 flex items-center gap-3 px-4 py-3 backdrop-blur-md md:top-0',
+          'sticky top-12 z-30 flex items-center gap-3 px-4 py-3 transition-transform duration-200 ease-out motion-reduce:transition-none md:top-0',
+          '[html.hud-replie_&]:-translate-y-12 md:[html.hud-replie_&]:translate-y-0',
           dark
-            ? 'border-b border-white/10 bg-black/15'
+            ? 'border-b border-white/10 bg-[color-mix(in_oklch,var(--primary),black_44%)]'
             : themed
-              ? 'border-b border-black/5 bg-[color:var(--jeu-surface)]/80'
-              : 'border-b border-black/5 bg-background/80',
+              ? 'border-b border-black/5 bg-[color:var(--jeu-surface)]'
+              : 'border-b border-black/5 bg-background',
         )}
       >
         {/* Quitter le mode : une FLÈCHE RETOUR (pastille ronde) à GAUCHE, seul et

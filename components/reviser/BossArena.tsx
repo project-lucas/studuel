@@ -229,7 +229,7 @@ export default function BossArena({
 
         <div className="flex flex-col items-center gap-1">
           <div className="flex items-center gap-2">
-            <h2 className="font-heading text-3xl font-bold">{boss.name}</h2>
+            <h2 className="font-heading text-3xl font-extrabold">{boss.name}</h2>
             <RankStars rank={rank} onDark={false} />
           </div>
           <p className="text-sm font-semibold tracking-wide text-muted-foreground uppercase">
@@ -335,7 +335,7 @@ export default function BossArena({
           {/* Identité + barre de PV, sous le gardien. */}
           <div className="mt-4 flex flex-col items-center gap-1.5">
             <div className="flex items-center gap-2">
-              <h2 className="font-heading text-xl font-bold">{boss.name}</h2>
+              <h2 className="font-heading text-xl font-extrabold">{boss.name}</h2>
               <RankStars rank={rank} onDark />
             </div>
             <div className="flex w-full max-w-md items-center gap-2">
@@ -367,7 +367,7 @@ export default function BossArena({
                   {question.subject}
                 </p>
               ) : null}
-              <h3 className="font-heading mb-1 text-lg font-bold text-balance">
+              <h3 className="font-heading mb-1 text-lg font-extrabold text-balance">
                 {question.prompt}
               </h3>
               {question.options.map((option, i) => {
@@ -573,7 +573,7 @@ function Outcome({
       </div>
 
       <div>
-        <h2 className="font-heading text-2xl font-bold">
+        <h2 className="font-heading text-2xl font-extrabold">
           {won ? `${boss.name} est vaincu !` : `${boss.name} t’a eu…`}
         </h2>
         <p className="font-heading mt-1 text-base italic text-white/80">
@@ -678,7 +678,7 @@ function AbandonButton({ onConfirm }: { onConfirm: () => void }) {
                 <div className="mx-auto flex size-16 items-center justify-center rounded-full bg-destructive/10 text-3xl">
                   🏳️
                 </div>
-                <h2 className="font-heading mt-3 text-2xl font-bold">
+                <h2 className="font-heading mt-3 text-2xl font-extrabold">
                   Abandonner le combat ?
                 </h2>
                 <p className="mt-2 text-sm text-muted-foreground">

@@ -22,7 +22,7 @@ const storageKey = (id: string) => `studuel-palier-fete:${id}`
  * story ; repli : partage texte, puis copie dans le presse-papiers).
  * S'affiche UNE seule fois par palier (mémoire locale) — sauf `once=false`,
  * pour les paliers re-franchissables dont l'appelant gère déjà le re-tir
- * (ex. promotion de ligue détectée par LeaguePromotionWatch).
+ * (ex. un passage de palier).
  */
 export default function PalierCelebration({
   palier,
@@ -100,7 +100,7 @@ export default function PalierCelebration({
         <p className="font-heading mt-3 text-2xl font-extrabold tracking-tight uppercase italic">
           {palier.title}
         </p>
-        <p className="font-heading mt-1 text-lg font-bold text-primary">
+        <p className="font-heading mt-1 text-lg font-extrabold text-primary">
           {palier.name}
         </p>
         <p className="mt-2 text-sm text-muted-foreground">{palier.subtitle}</p>

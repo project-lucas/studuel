@@ -44,21 +44,21 @@ export default function CartesProposees({ cartes }: { cartes: CarteIa[] }) {
       if (res.ok && res.courseId) {
         setRange({ courseId: res.courseId, nombre: res.ajoutees ?? gardees.length })
         toast(
-          `${res.ajoutees ?? gardees.length} cartes dans ton carnet !`,
+          `${res.ajoutees ?? gardees.length} cartes dans ta bibliothèque !`,
           'success',
         )
         return
       }
-      toast('Je n’ai pas réussi à écrire dans ton carnet.', 'error')
+      toast('Je n’ai pas réussi à écrire dans ta bibliothèque.', 'error')
     })
   }
 
   if (range) {
     return (
-      <div className="bg-success/10 mt-2 ml-10 rounded-[18px] p-3">
+      <div className="bg-success/10 mt-2 ml-10 rounded-carte p-3">
         <p className="text-success flex items-center gap-2 text-[13px] font-extrabold">
           <Check aria-hidden="true" className="size-4" strokeWidth={3} />
-          {range.nombre} cartes rangées dans ton carnet
+          {range.nombre} cartes rangées dans ta bibliothèque
         </p>
         <Link
           href={`/carnet/cours/${range.courseId}`}
@@ -73,9 +73,9 @@ export default function CartesProposees({ cartes }: { cartes: CarteIa[] }) {
   return (
     <div
       data-teinte="vert"
-      className="bg-card outil-carte mt-2 ml-10 rounded-[18px] p-3"
+      className="carte outil-carte mt-2 ml-10 p-3"
     >
-      <p className="outil-encre mb-2 flex items-center gap-1.5 text-[11px] font-extrabold tracking-wide uppercase">
+      <p className="surtitre outil-encre mb-2 flex items-center gap-1.5">
         <Layers aria-hidden="true" className="size-3.5" />
         {gardees.length} carte{gardees.length > 1 ? 's' : ''} à relire
       </p>
@@ -139,7 +139,7 @@ export default function CartesProposees({ cartes }: { cartes: CarteIa[] }) {
         className="bg-primary text-primary-foreground mt-2.5 flex min-h-11 w-full items-center justify-center gap-2 rounded-2xl text-[13px] font-extrabold shadow-[0_3px_0_color-mix(in_oklch,var(--primary),black_28%)] transition active:translate-y-px disabled:opacity-40 disabled:shadow-none"
       >
         <BookMarked aria-hidden="true" className="size-4" />
-        {pending ? 'J’écris…' : 'Ajouter à mon carnet'}
+        {pending ? 'J’écris…' : 'Ajouter à ma bibliothèque'}
       </button>
     </div>
   )

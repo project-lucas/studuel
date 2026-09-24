@@ -96,7 +96,7 @@ export default function ParentsSpaces({
               tabIndex={active ? 0 : -1}
               onClick={() => select(id)}
               className={cn(
-                'font-heading focus-visible:ring-primary/50 flex cursor-pointer items-center justify-center gap-1.5 rounded-full py-2.5 text-sm font-bold transition-colors focus-visible:ring-2 focus-visible:outline-none',
+                'font-heading focus-visible:ring-primary/50 flex cursor-pointer items-center justify-center gap-1.5 rounded-full py-2.5 text-sm font-extrabold transition-colors focus-visible:ring-2 focus-visible:outline-none',
                 active
                   ? 'bg-primary text-primary-foreground shadow-[0_6px_14px_-6px_color-mix(in_oklch,var(--primary),transparent_30%)]'
                   : 'text-muted-foreground hover:text-foreground',

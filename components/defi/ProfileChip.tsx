@@ -2,11 +2,12 @@
 
 import { useState } from 'react'
 import ProfileModal from '@/components/defi/ProfileModal'
-import BadgeBoostXp from '@/components/BadgeBoostXp'
+import BadgeBoostXp, { useBoostEnCours } from '@/components/BadgeBoostXp'
 import AvatarRender from '@/components/avatar/AvatarRender'
 import FlammeAnimee from '@/components/FlammeAnimee'
 import { CristalIcon } from '@/components/ui/MonnaieIcon'
 import { walletLevelInfo } from '@/lib/wallet'
+import { libelleMultiplicateur, multiplicateurXp } from '@/lib/ligue'
 import type { ProfileData } from '@/app/defi/profile-actions'
 import { sfx } from '@/lib/sounds'
 
@@ -43,6 +44,7 @@ export default function ProfileChip({
   gems,
   streak,
   boostXpJusqua = null,
+  nbAmis = null,
 }: {
   data: ProfileData
   /** Solde de cristaux ; `null` = inconnu (rien d'affiché). */
@@ -51,8 +53,15 @@ export default function ProfileChip({
   streak: number | null
   /** Fin du Boost XP du Marché qui court (ISO) : « ×2 XP » contre le niveau. */
   boostXpJusqua?: string | null
+  /**
+   * Amis acceptés : le multiplicateur d'XP (+0,1 par ami, migration 380), posé
+   * contre la barre de niveau comme dans le bandeau. null : inconnu, rien
+   * d'affiché.
+   */
+  nbAmis?: number | null
 }) {
   const [open, setOpen] = useState(false)
+  const potion = useBoostEnCours(boostXpJusqua)
   const info = walletLevelInfo(data.summary.totalXp)
   const xpLabel = `${info.currentXp.toLocaleString('fr-FR')} / ${info.nextAt.toLocaleString('fr-FR')} XP`
   const xpPct = Math.round(info.progress * 100)
@@ -68,13 +77,24 @@ export default function ProfileChip({
         aria-haspopup="dialog"
         aria-label={`${data.displayName} — niveau ${info.level}, ${xpLabel}${
           streak !== null ? ` — série : ${streak} jour${streak > 1 ? 's' : ''}` : ''
-        }${gems !== null ? ` — ${gems} cristaux` : ''}. Voir mes stats et badges`}
+        }${gems !== null ? ` — ${gems} cristaux` : ''}${
+          nbAmis !== null ? ` — multiplicateur d’XP ${libelleMultiplicateur(multiplicateurXp(nbAmis, potion))}` : ''
+        }. Voir mes stats et badges`}
         className="olympe-glass olympe-glass--sculpte olympe-press flex w-[14.5rem] cursor-pointer flex-col gap-1.5 rounded-[18px] p-2 text-left focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
       >
         {/* --- La tête : avatar, nom, puis la série et les cristaux --------- */}
         <span className="flex items-center gap-2">
-          <span className="relative size-10 shrink-0 overflow-hidden rounded-full bg-black/30 ring-2 ring-highlight/70 shadow-[0_2px_4px_rgba(0,0,0,0.35)]">
-            <AvatarRender config={data.avatar} className="size-full" />
+          <span className="relative shrink-0">
+            <span className="relative block size-10 overflow-hidden rounded-full bg-black/30 ring-2 ring-highlight/70 shadow-[0_2px_4px_rgba(0,0,0,0.35)]">
+              <AvatarRender config={data.avatar} className="size-full" />
+            </span>
+            {/* LE BOOST XP QUI COURT, en étiquette au pied de l'avatar, comme
+                dans le bandeau : contre la barre, avec le badge du bonus
+                d'amis, il ne laissait à la jauge que 5 px. */}
+            <BadgeBoostXp
+              jusqua={boostXpJusqua}
+              className="absolute -bottom-1 left-1/2 -translate-x-1/2 px-1 text-[8px] whitespace-nowrap"
+            />
           </span>
           <span className="font-heading min-w-0 flex-1 truncate text-[0.86rem] leading-tight font-extrabold text-[#faf6ef]">
             {data.displayName}
@@ -134,7 +154,19 @@ export default function ProfileChip({
             {info.currentXp.toLocaleString('fr-FR')}
             <span className="text-white/55">/{info.nextAt.toLocaleString('fr-FR')}</span>
           </span>
-          <BadgeBoostXp jusqua={boostXpJusqua} />
+          {/* LE MULTIPLICATEUR D'XP, contre la barre qu'il remplit (Lucas,
+              24/09/2026) : le même « ×1,3 » que dans le bandeau des autres
+              onglets, doré quand la potion d'XP court. */}
+          {nbAmis !== null ? (
+            <span
+              aria-hidden="true"
+              className={`font-heading shrink-0 rounded-full px-1.5 py-0.5 text-[0.68rem] leading-none font-extrabold tabular-nums ${
+                potion ? 'bg-highlight text-foreground' : 'bg-white/15 text-[#faf6ef]'
+              }`}
+            >
+              {libelleMultiplicateur(multiplicateurXp(nbAmis, potion))}
+            </span>
+          ) : null}
         </span>
       </button>
 

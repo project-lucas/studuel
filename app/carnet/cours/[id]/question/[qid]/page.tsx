@@ -7,7 +7,7 @@ import {
   normalizeQuestionContent,
 } from '@/lib/carnet-cours'
 
-export const metadata = { title: 'Mon carnet — Studuel' }
+export const metadata = { title: 'Ma bibliothèque — Studuel' }
 export const dynamic = 'force-dynamic'
 
 // Éditeur d'une question d'un cours du carnet. Charge la question (RLS via la

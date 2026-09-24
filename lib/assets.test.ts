@@ -9,6 +9,8 @@ import { gameScene } from '@/lib/defi/modes-catalog'
 import { GAME_FORMATS } from '@/lib/jeux/formats'
 import { modeImage, modeScene, GAME_MODES } from '@/lib/defi-modes'
 import { SALONS } from '@/lib/jeux/catalog'
+import { SCENES_VIVANTES, fichiersDeScene } from '@/lib/arena-vivante'
+import { SCENES_CAPSULES, scenesCapsule } from '@/lib/capsules-scenes'
 
 // Garde des ASSETS DÉCLARÉS.
 //
@@ -187,6 +189,34 @@ describe('blasons de rang', () => {
 
   it('garde un emoji de repli par palier', () => {
     for (const tier of RANK_TIERS) expect(tier.emoji).toBeTruthy()
+  })
+})
+
+describe("scènes vivantes de l'arène", () => {
+  it('chaque scène déclarée a sa planche et ses nuages sur le disque', () => {
+    // Fabriqués par `node scripts/arene-vivante.mjs` depuis
+    // assets-sources/arene-vivante/<plage>/.
+    for (const scene of Object.values(SCENES_VIVANTES)) {
+      for (const src of fichiersDeScene(scene)) {
+        expect(assetExists(src), `${scene.period} : ${src} absent`).toBe(true)
+      }
+    }
+  })
+})
+
+describe('scènes des capsules', () => {
+  it('chaque scène annoncée existe sur le disque, dans l’ordre 1, 2, 3…', () => {
+    // Fabriquées par `node scripts/scenes-capsules.mjs` depuis
+    // assets-sources/capsules/<id>/.
+    for (const [id, nombre] of Object.entries(SCENES_CAPSULES)) {
+      const scenes = scenesCapsule(id)
+      expect(scenes, id).toHaveLength(nombre)
+      for (const src of scenes) expect(assetExists(src), `${id} : ${src} absent`).toBe(true)
+    }
+  })
+
+  it('une capsule sans scène n’en annonce aucune', () => {
+    expect(scenesCapsule('capsule-inconnue')).toEqual([])
   })
 })
 

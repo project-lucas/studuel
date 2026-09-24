@@ -1,0 +1,152 @@
+/* ==========================================================================
+   LE BLOC D'UNE CAPSULE (BlocCapsule.tsx) — les offres du magasin de Clash
+   Royale (Lucas, 24/09/2026) : un rectangle pleine largeur, un CADRE épais
+   dans la teinte de la capsule (plus épais aux extrémités gauche et droite,
+   comme les montants d'un cadre de jeu), la scène qui défile dedans, et le
+   panneau du prix posé sur son tiers droit.
+
+   La teinte vient de `.capsule-teinte-*` (globals.css : --capsule-a, clair ;
+   --capsule-b, sombre). Tout le reste en découle.
+
+   Dans un module et non dans globals.css : la feuille globale ne se
+   recompilait plus en développement.
+   ========================================================================== */
+
+.bloc {
+  --contour: color-mix(in oklch, var(--foreground), black 50%);
+  --epaisseur: color-mix(in oklch, var(--capsule-b), black 35%);
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  /* Le cadre : 5 px en haut et en bas, 8 px aux extrémités. */
+  padding: 5px 8px;
+  border-radius: 18px;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--capsule-a), white 30%) 0%,
+    var(--capsule-a) 38%,
+    var(--capsule-b) 100%
+  );
+  box-shadow:
+    0 0 0 1.5px var(--contour),
+    inset 0 1.5px 0 rgb(255 255 255 / 0.55),
+    0 5px 0 var(--epaisseur),
+    0 5px 0 1.5px var(--contour),
+    0 12px 22px rgb(20 10 40 / 0.18);
+  text-align: left;
+  transition: transform 0.15s var(--ease, ease);
+}
+.bloc:active {
+  transform: translateY(3px);
+}
+.bloc:focus-visible {
+  outline: 3px solid var(--highlight);
+  outline-offset: 4px;
+}
+
+/* La vitre : ce qu'on voit à travers le cadre. Son fond est la teinte de la
+   capsule — c'est ce qui reste d'une capsule qui n'a pas encore ses scènes. */
+.vitre {
+  position: relative;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  background: linear-gradient(145deg, var(--capsule-a), var(--capsule-b));
+  box-shadow: inset 0 0 0 1.5px var(--contour);
+  isolation: isolate;
+}
+
+/* Les scènes, empilées : une seule visible, les autres en fondu. */
+.scene {
+  opacity: 0;
+  transition: opacity 900ms ease;
+}
+.scene[data-active='true'] {
+  opacity: 1;
+}
+
+/* Le repli d'une capsule sans scène : son emoji, en grand, sur le tiers gauche. */
+.repli {
+  position: absolute;
+  inset: 0 40% 0 0;
+  display: grid;
+  place-items: center;
+  font-size: 4.2rem;
+  filter: drop-shadow(0 4px 6px rgb(0 0 0 / 0.3));
+}
+.repli::before {
+  content: '';
+  position: absolute;
+  width: 62%;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.16);
+  z-index: -1;
+}
+
+/* Le voile de droite : il assombrit le tiers du panneau — et efface la couture
+   qu'un générateur laisse parfois là où on lui a demandé « plus sombre ». */
+.voile {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 42%,
+    rgb(8 10 32 / 0.5) 60%,
+    rgb(8 10 32 / 0.62) 100%
+  );
+  pointer-events: none;
+}
+
+/* Le panneau du prix, sur le tiers droit : verre sombre, liseré clair. */
+.panneau {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  bottom: 7px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 9px 10px;
+  border-radius: 10px;
+  background: rgb(10 12 36 / 0.52);
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.14);
+  color: white;
+}
+
+/* Textes blancs cernés de noir, comme au magasin. */
+.cerne {
+  text-shadow:
+    0 1px 0 rgb(0 0 0 / 0.55),
+    0 0 6px rgb(0 0 0 / 0.4);
+}
+
+/* Les points du défilement, en bas à gauche de la scène. */
+.points {
+  position: absolute;
+  left: 10px;
+  bottom: 9px;
+  display: flex;
+  gap: 4px;
+}
+.point {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.45);
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 0.25);
+  transition: opacity 0.3s ease;
+}
+.point[data-active='true'] {
+  background: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scene,
+  .bloc {
+    transition: none;
+  }
+}

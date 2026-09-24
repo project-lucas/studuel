@@ -95,7 +95,7 @@ export default async function AbonnementsPage() {
           className="text-destructive mx-auto size-8"
           aria-hidden="true"
         />
-        <h1 className="font-heading mt-3 text-xl font-bold">
+        <h1 className="font-heading mt-3 text-3xl font-extrabold">
           La caisse n’est pas encore branchée
         </h1>
         <p className="text-muted-foreground mx-auto mt-2 max-w-md text-sm">
@@ -119,7 +119,7 @@ export default async function AbonnementsPage() {
   return (
     <div className="flex flex-col gap-6">
       <header>
-        <h1 className="font-heading flex items-center gap-2 text-2xl font-bold">
+        <h1 className="font-heading flex items-center gap-2 text-3xl font-extrabold">
           <CreditCard className="text-primary size-6" aria-hidden="true" />
           Abonnements
         </h1>
@@ -150,7 +150,7 @@ export default async function AbonnementsPage() {
       </div>
 
       <section>
-        <h2 className="font-heading mb-2 text-sm font-bold tracking-wide uppercase">
+        <h2 className="titre-section mb-2">
           Demandes
         </h2>
         {lignes.length === 0 ? (
@@ -200,7 +200,7 @@ export default async function AbonnementsPage() {
       </section>
 
       <section>
-        <h2 className="font-heading mb-2 text-sm font-bold tracking-wide uppercase">
+        <h2 className="titre-section mb-2">
           Derniers octrois
         </h2>
         {historique.length === 0 ? (

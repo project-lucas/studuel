@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { Trophy } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 import { gameScene } from '@/lib/defi/modes-catalog'
 import { cn } from '@/lib/utils'
 import type { GameFormat } from '@/lib/jeux/formats'
@@ -107,18 +108,13 @@ export function GameIntro({
         </p>
       ) : null}
 
-      <button
-        type="button"
-        onClick={onStart}
-        disabled={empty}
-        className="go-pulse font-heading relative grid size-28 place-items-center rounded-full bg-[color:var(--jeu-accent)] text-2xl font-extrabold text-[color:var(--jeu-ink)] shadow-xl transition-transform hover:scale-105 active:scale-95 disabled:opacity-40"
-      >
-        <span
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-5 top-2 h-10 rounded-full bg-gradient-to-b from-white/25 to-transparent"
-        />
-        GO
-      </button>
+      {/* LE bouton de l'écran, celui de la maison : violet plein, large, avec
+          le balayage de lumière réservé à l'action unique. Il a été un rond
+          « GO » à la teinte du jeu — la robe d'un jeu habille sa pièce et son
+          icône, jamais ce qui se clique, et « GO » n'est pas un mot français. */}
+      <Button type="button" size="xl" shine onClick={onStart} disabled={empty} className="w-full">
+        C&apos;est parti
+      </Button>
 
       {empty ? (
         <p className="text-sm text-muted-foreground">
@@ -129,15 +125,19 @@ export function GameIntro({
   )
 }
 
-/** Le décompte 3 · 2 · 1 · GO — la respiration avant la partie. */
+/** Le décompte 3 · 2 · 1 · Partez ! — la respiration avant la partie. */
 export function GameCountdown({ n }: { n: number }) {
   return (
     <div className="grid min-h-[60dvh] place-items-center">
       <span
         key={n}
-        className="font-heading animate-in zoom-in-50 fade-in text-8xl font-extrabold text-[color:var(--jeu-accent)] duration-300"
+        className={cn(
+          'font-heading animate-in zoom-in-50 fade-in font-extrabold text-primary duration-300',
+          // Un chiffre tient en 8xl ; « Partez ! » déborderait d'un téléphone.
+          n > 0 ? 'text-8xl' : 'text-5xl',
+        )}
       >
-        {n > 0 ? n : 'GO'}
+        {n > 0 ? n : 'Partez !'}
       </span>
     </div>
   )

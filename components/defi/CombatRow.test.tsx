@@ -172,7 +172,10 @@ describe('le bouton COMBAT', () => {
       </DuelSubjectProvider>,
     )
 
-    const rangeeDuel = combat().parentElement as HTMLElement
+    // La plaque DUEL est posée dans une enveloppe, avec le calque de sa lueur
+    // derrière elle : c'est l'enveloppe qui tient sa place dans la rangée.
+    const placeDuel = combat().parentElement as HTMLElement
+    const rangeeDuel = placeDuel.parentElement as HTMLElement
     await user.click(combat())
     const annuler = screen.getByRole('button', { name: 'Annuler' })
     const rangeeAnnuler = annuler.parentElement as HTMLElement
@@ -183,6 +186,7 @@ describe('le bouton COMBAT', () => {
       expect(rangeeAnnuler.className).toContain(classe)
     }
     // Même largeur : un centre étiré entre deux flancs de largeur fixe.
+    expect(placeDuel.className).toContain('flex-1')
     expect(annuler.className).toContain('flex-1')
     expect(rangeeAnnuler.querySelectorAll('.arena-plate-flank')).toHaveLength(2)
     // Même famille de plaque, et le mot au même gabarit typographique.
@@ -289,24 +293,28 @@ describe('la plaque Matière', () => {
     }
   })
 
-  it('porte l’illustration « Modes », et non un pictogramme de trait', () => {
+  it('porte le dé qui roule, et non un pictogramme de trait', () => {
     // `renderRow` ne monte pas le flanc gauche : on rend ModesSheet lui-même,
     // sinon le test chercherait une plaque absente de l'arbre.
     render(<ModesSheet todayKey="2026-08-23" />)
 
     const plaque = screen.getByRole('button', { name: /^Modes de jeu/ })
-    const dessin = plaque.querySelector('img')
-    expect(dessin?.getAttribute('src')).toContain('/images/defi/icones/modes-v4')
-    // UN SEUL FOND, ET L'ILLUSTRATION DESSUS. Trois états successifs ont été
-    // essayés : posée sur la plaque violette elle disparaissait (violet sur
+    // Le dé animé de Lucas (23/09/2026) a remplacé l'image fixe `modes-v4` :
+    // un cube CSS — six faces peintes et six faces du noyau d'encre, chacune
+    // placée par son repère —, décoratif, le bouton disant ce qu'il fait.
+    expect(plaque.querySelector('img')).toBeNull()
+    const de = plaque.firstElementChild
+    expect(de?.getAttribute('aria-hidden')).toBe('true')
+    expect(de?.querySelectorAll('[style*="matrix3d"]')).toHaveLength(12)
+    // UN SEUL FOND, ET LE DESSIN DESSUS. Trois états successifs ont été
+    // essayés : posée sur la plaque violette l'icône disparaissait (violet sur
     // violet) ; sur un médaillon crème elle se lisait, mais l'œil comptait
     // trois épaisseurs — cadre, disque, dessin — et le disque lui volait la
     // moitié de la plaque. La plaque est désormais claire elle-même : plus de
-    // disque, et le dessin passe de 48 à 64 px.
-    expect(dessin?.className).toContain('size-16')
-    expect(dessin?.parentElement?.className).toContain('arena-plate--clair')
+    // disque, et le dé occupe toute la plaque.
+    expect(plaque.className).toContain('arena-plate--clair')
     // Un seul fond, donc : la plaque le porte, rien d'autre.
-    expect(dessin?.parentElement?.getAttribute('style')).toMatch(/background/)
+    expect(plaque.getAttribute('style')).toMatch(/background/)
     // Le mot a QUITTÉ le pixel — mais pas l'étiquette lue à voix haute.
     expect(within(plaque).queryByText(/^Modes$/)).toBeNull()
     expect(plaque.getAttribute('aria-label')).toMatch(/Modes de jeu/)

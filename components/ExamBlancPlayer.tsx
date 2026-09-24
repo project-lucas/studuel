@@ -22,12 +22,12 @@ import type { ReviewAnswer } from '@/lib/srs'
 
 type Phase = 'intro' | 'playing' | 'done'
 
-// Pastille de verdict — couleurs sémantiques (vert/ambre/rouge), jamais
-// décoratives : c'est un diagnostic.
+// Pastille de verdict — le feu tricolore d'un écran de BILAN, en rôles de la DA
+// (`success` / `warning` / `destructive`), jamais en palette nommée : c'est un
+// diagnostic, et il doit se lire comme celui du tableau Progrès.
 const VERDICT_CLASS: Record<ExamVerdict, string> = {
-  solide:
-    'bg-success/10 text-success dark:text-green-400 border-success/40',
-  fragile: 'bg-amber-500/10 text-amber-700 dark:text-amber-400 border-amber-500/40',
+  solide: 'bg-success/10 text-success border-success/40',
+  fragile: 'bg-warning/10 text-warning border-warning/40',
   a_revoir: 'bg-destructive/10 text-destructive border-destructive/40',
 }
 
@@ -45,7 +45,6 @@ export default function ExamBlancPlayer({
   examTitle,
   lastScore,
   subjectName = null,
-  heading = 'Examen blanc',
   unit = 'chapitre',
 }: {
   questions: ExamQuestion[]
@@ -54,8 +53,6 @@ export default function ExamBlancPlayer({
   // Examen ciblé sur UNE matière (lancé depuis son dossier) → l'intro le dit ;
   // null = examen multi-matières classique.
   subjectName?: string | null
-  /** Le grand titre de l'intro (« Examen blanc », « Quiz du chapitre »). */
-  heading?: string
   /**
    * Le mot du bilan. Le moteur groupe ses résultats par ligne de `chapters` :
    * pour l'examen blanc c'est un chapitre, pour le quiz d'un chapitre du
@@ -186,8 +183,9 @@ export default function ExamBlancPlayer({
           <GraduationCap className="size-9" aria-hidden="true" />
         </span>
         <div className="space-y-1">
-          <h1 className="font-heading text-3xl font-bold">{heading}</h1>
-          <p className="text-sm font-semibold text-primary">{examTitle}</p>
+          {/* Le H1 de la page dit déjà « Examen blanc · SVT » : ici, le
+              titre de l'épreuve seulement (audit du 23/09/2026). */}
+          <h2 className="font-heading text-2xl font-extrabold">{examTitle}</h2>
           <p className="text-sm text-muted-foreground">
             {questions.length} questions · {formatClock(duration)} chrono ·{' '}
             {subjectName ?? 'toutes tes matières'}
@@ -206,19 +204,18 @@ export default function ExamBlancPlayer({
           </p>
         ) : null}
 
-        <button
+        {/* LE bouton de l'écran, celui de la maison — plus de rond « GO ». */}
+        <Button
           type="button"
+          size="xl"
+          shine
           onClick={start}
           disabled={questions.length === 0}
-          className="group go-pulse relative flex size-32 flex-col items-center justify-center gap-1 overflow-hidden rounded-full bg-primary text-primary-foreground shadow-xl shadow-primary/30 transition-all hover:scale-105 active:scale-95 disabled:opacity-40"
+          className="w-full max-w-xs"
         >
-          <span
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-x-4 top-2 h-12 rounded-full bg-gradient-to-b from-white/20 to-transparent"
-          />
-          <AlarmClock className="size-8 transition-transform group-hover:rotate-12" />
-          <span className="font-heading text-xl font-bold">GO</span>
-        </button>
+          <AlarmClock aria-hidden="true" />
+          C&apos;est parti
+        </Button>
 
         {questions.length === 0 ? (
           <p className="max-w-xs text-sm text-muted-foreground">
@@ -248,9 +245,9 @@ export default function ExamBlancPlayer({
               : '📚'}
         </div>
         <div>
-          <h1 className="font-heading text-3xl font-bold">
+          <h2 className="font-heading text-3xl font-extrabold">
             {score}/{questions.length}
-          </h1>
+          </h2>
           <p className="mt-1 text-sm text-muted-foreground">
             {globalVerdict === 'solide'
               ? 'Niveau examen — continue comme ça, tu es prêt·e.'
@@ -266,7 +263,7 @@ export default function ExamBlancPlayer({
           className="w-full rounded-2xl border bg-card p-4 text-left shadow-sm"
           aria-label={`Bilan par ${unit}`}
         >
-          <h2 className="font-heading mb-3 text-base font-bold">
+          <h2 className="font-heading mb-3 text-base font-extrabold">
             Bilan par {unit}
           </h2>
           <ul className="flex flex-col gap-2">
@@ -388,7 +385,7 @@ export default function ExamBlancPlayer({
         </p>
       ) : null}
 
-      <h2 className="font-heading mb-1 text-xl font-bold text-balance">
+      <h2 className="font-heading mb-1 text-xl font-extrabold text-balance">
         {question.prompt}
       </h2>
       <div className="flex flex-col gap-2">

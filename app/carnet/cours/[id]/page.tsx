@@ -15,7 +15,7 @@ import {
 import type { CourseQuestionRow } from '@/components/carnet/types'
 import { normaliserOrigine } from '@/lib/carnet/origine'
 
-export const metadata = { title: 'Mon carnet — Studuel' }
+export const metadata = { title: 'Ma bibliothèque — Studuel' }
 export const dynamic = 'force-dynamic'
 
 // Page d'un cours du carnet : un seul bloc — titre et icône, chapitres,

@@ -159,7 +159,7 @@ export function missingGemsLabel(gems: number): string | null {
 }
 
 const UNLOCK_MESSAGES: Record<UnlockResult, string> = {
-  unlocked: 'Chapitre débloqué ! Tous ses supports sont à toi, pour toujours.',
+  unlocked: 'Chapitre débloqué ! Sa fiche est à toi pour toujours, et elle t’attend dans ta bibliothèque.',
   already: 'Tu as déjà débloqué ce chapitre.',
   premium: 'Ton abonnement t’ouvre déjà tous les chapitres.',
   no_gems: `Il te faut ${GEM_COST_CHAPTER} gemmes. Invite un ami ou décroche des couronnes pour en gagner !`,

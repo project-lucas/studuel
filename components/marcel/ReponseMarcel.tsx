@@ -33,7 +33,7 @@ export default function ReponseMarcel({ texte }: { texte: string }) {
           return (
             <p
               key={cle}
-              className="outil-encre mt-2 text-[11px] font-extrabold tracking-wide uppercase"
+              className="surtitre outil-encre mt-2"
             >
               {bloc.texte}
             </p>

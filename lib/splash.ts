@@ -160,3 +160,46 @@ export function formatSplashPercent(progress: number): string {
   const clamped = Math.min(100, Math.max(0, Math.round(progress)))
   return `${clamped} %`
 }
+
+// ------------------------------------------------ l'écran de lancement statique
+// Sur Android, l'app installée affiche d'abord le rideau SYSTÈME (l'icône sur
+// le violet du manifest) jusqu'au premier pixel de la page — et la page, elle,
+// attendait un démarrage à froid du serveur puis la redirection de `/` vers
+// `/defi`. Lucas (24/09/2026) : « quand je clique sur l'app, je tombe tout de
+// suite sur ce rendu ; peut-on mettre l'écran de chargement ? ».
+//
+// Le point d'entrée de l'app installée est donc un fichier STATIQUE,
+// `public/lancement.html` (manifest `start_url`), servi par le CDN sans
+// fonction ni base : il peint l'illustration et la barre du rideau en quelques
+// dizaines de millisecondes, note l'heure du lancement, puis part vers l'app.
+// Le rideau de l'app (SplashScreen) PREND LA SUITE sans que la barre reparte
+// de zéro : il compte depuis ce lancement, et non depuis sa propre page.
+
+/** La clé de `sessionStorage` où lancement.html note l'heure du lancement. */
+export const CLE_LANCEMENT = 'studuel:lancement'
+/** Au-delà, la note est périmée (une vieille session) : on l'ignore. */
+export const LANCEMENT_VALIDITE_MS = 20_000
+
+/**
+ * Le temps écoulé depuis le lancement noté (ms), ou `null` quand il n'y a pas
+ * de lancement récent à prolonger — l'écran compte alors depuis sa page.
+ */
+export function depuisLancement(note: string | null, maintenant: number): number | null {
+  if (!note) return null
+  const debut = Number(note)
+  if (!Number.isFinite(debut)) return null
+  const ecart = maintenant - debut
+  return ecart >= 0 && ecart <= LANCEMENT_VALIDITE_MS ? ecart : null
+}
+
+/**
+ * Le script posé juste après le rideau dans le HTML (app/layout.tsx), qui joue
+ * AVANT l'hydratation : si l'on arrive de lancement.html, il décale les
+ * animations CSS de la barre et du compteur du temps déjà écoulé, pour qu'elles
+ * reprennent où celles du lancement en étaient. Il n'écrit dans AUCUN élément
+ * rendu par React — une feuille de style ajoutée dans <head>, rien d'autre —
+ * sans quoi l'hydratation signalerait un écart.
+ */
+export function scriptSuiteLancement(): string {
+  return `(function(){try{var e=Date.now()-Number(sessionStorage.getItem(${JSON.stringify(CLE_LANCEMENT)}));if(!(e>=0&&e<=${LANCEMENT_VALIDITE_MS}))return;var s=document.createElement('style');s.textContent='.splash:not([data-hydrated]) .splash-fill,.splash:not([data-hydrated]) .splash-pct{animation-delay:-'+Math.round(e)+'ms}';document.head.appendChild(s)}catch(x){}})()`
+}

@@ -131,7 +131,9 @@ export default function TrophyRules({
         </table>
       </div>
 
-      <h4 className="font-heading mt-3 mb-1.5 text-[0.7rem] font-extrabold tracking-wide text-foreground/80 uppercase">
+      {/* Titre de section en casse de phrase, comme « Mon rang » et « Mes
+          matières » sur le même écran clair (audit du 23/09/2026). */}
+      <h4 className="titre-section mt-3 mb-1.5 text-foreground/80">
         Les conditions
       </h4>
       <ul className="space-y-1.5 text-[0.72rem] leading-snug text-muted-foreground">

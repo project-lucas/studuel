@@ -231,7 +231,7 @@ function LigneMatiere({
   const panelId = `chapitres-${matiere.slug}`
 
   return (
-    <li className="bg-card rounded-[20px] px-3.5 py-3 shadow-[0_2px_0_rgba(36,48,79,.06),0_14px_26px_-22px_rgba(36,48,79,.9)]">
+    <li className="carte px-3.5 py-3">
       <button
         type="button"
         onClick={onOuvrir}
@@ -413,7 +413,7 @@ export default function ProgresPanel({
     return (
       <p
         className={cn(
-          'bg-card rounded-[20px] p-5 text-center text-[13px] leading-relaxed font-semibold',
+          'carte p-5 text-center text-[13px] leading-relaxed font-semibold',
           SECONDAIRE,
         )}
       >
@@ -502,7 +502,7 @@ export default function ProgresPanel({
       {/* L'oral du bac de français ne se compte pas en chapitres mais en TEXTES :
           le tableau ne peut pas le porter, la ligne le dit à côté. */}
       {examen && oral ? (
-        <section className="bg-card mt-3 flex items-center gap-3 rounded-[20px] p-3.5 shadow-[0_2px_0_rgba(36,48,79,.06)]">
+        <section className="carte mt-3 flex items-center gap-3 p-3.5">
           <span className="bg-primary/12 text-primary grid size-9 shrink-0 place-items-center rounded-xl">
             <Mic aria-hidden="true" className="size-4.5" />
           </span>

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
-import { ArrowLeft, Check, ChevronRight, Timer } from 'lucide-react'
+import { Check, ChevronRight, Timer } from 'lucide-react'
+import EnTetePage from '@/components/reviser/EnTetePage'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { formatNote } from '@/lib/francais/dictee/correction'
@@ -17,6 +18,9 @@ export const dynamic = 'force-dynamic'
  * l'élève l'a déjà faite, la carte porte sa DERNIÈRE NOTE — c'est ce qui
  * transforme une liste de contenus en tableau de bord, et ce qui donne envie de
  * refaire celle où l'on a eu 9.
+ *
+ * L'en-tête est celui de toutes les pages de Réviser (`EnTetePage`) : le lien
+ * texte « ‹ Réviser » était une recette de retour à part (audit du 23/09/2026).
  */
 export default async function DicteesPage() {
   const supabase = await createClient()
@@ -67,27 +71,18 @@ export default async function DicteesPage() {
 
   return (
     <div className="mx-auto w-full max-w-xl">
-      <Link
-        href="/reviser"
-        className="mb-4 inline-flex items-center gap-1.5 text-sm font-bold text-muted-foreground hover:text-foreground"
-      >
-        <ArrowLeft className="size-4" aria-hidden="true" />
-        Réviser
-      </Link>
-
-      <h1 className="font-heading text-3xl font-extrabold text-foreground">
-        Les dictées
-      </h1>
-      <p className="mt-1 text-sm text-muted-foreground">
-        Le moyen le plus efficace de te tester.
-      </p>
+      <EnTetePage
+        retour={{ fallback: '/reviser', label: 'Retour à Réviser' }}
+        titre="Les dictées"
+        sousTitre="Le moyen le plus efficace de te tester."
+      />
 
       {/* Le badge « Aperçu » — règle du projet : jamais de données de
           démonstration sans le dire. Un élève qui croirait avoir fait une vraie
           dictée chercherait sa note dans son historique et ne la trouverait
           pas : elle n'est écrite nulle part. */}
       {enDemo ? (
-        <p className="mt-3 flex items-center gap-2 rounded-2xl bg-highlight/25 px-3 py-2 text-xs font-semibold text-foreground">
+        <p className="mt-4 flex items-center gap-2 rounded-2xl bg-highlight/25 px-3 py-2 text-xs font-semibold text-foreground">
           <span className="rounded-full bg-highlight px-2 py-0.5 text-[11px] font-extrabold">
             Aperçu
           </span>
@@ -106,9 +101,11 @@ export default async function DicteesPage() {
             const faite = note !== undefined
             return (
               <li key={String(d.id)}>
+                {/* Une CARTE, pas une plaque de quiz : la dictée s'ouvre en
+                    touchant sa carte, comme une fiche de chapitre. */}
                 <Link
                   href={`/reviser/francais/dictee/${String(d.slug)}`}
-                  className="quiz-plaque relative w-full flex-col items-start gap-2 px-4 py-4 text-left [--plaque-bas:color-mix(in_oklab,var(--card),black_4%)] [--plaque-bord:color-mix(in_oklab,var(--foreground),white_72%)] [--plaque-haut:var(--card)]"
+                  className="relative flex w-full flex-col items-start gap-2 rounded-3xl border bg-card px-4 py-4 text-left shadow-sm transition-transform active:scale-[0.99]"
                 >
                   {d.premium ? (
                     <span className="absolute -top-px right-4 rounded-b-lg bg-destructive px-2.5 py-1 text-[11px] font-extrabold text-white">

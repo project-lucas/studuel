@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { BookOpen, FileText, Lightbulb, ListChecks, Medal, Wrench } from 'lucide-react'
-import BackButton from '@/components/BackButton'
+import EnTetePage from '@/components/reviser/EnTetePage'
 import { Button } from '@/components/ui/button'
 import CouvertureCapsule from '@/components/capsules/CouvertureCapsule'
 import QuizCapsule from '@/components/capsules/QuizCapsule'
@@ -14,6 +14,7 @@ import {
   type ContenuCapsule,
   type TypeElement,
 } from '@/lib/capsules'
+import { hrefRayon } from '@/lib/bibliotheque'
 import { sfx } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
 
@@ -60,12 +61,14 @@ export default function LecteurCapsule({
 
   return (
     <div ref={haut} className="mx-auto flex w-full max-w-xl scroll-mt-4 flex-col gap-4 pb-16">
-      <header className="flex items-center gap-3">
-        <BackButton fallback="/carnet" label="Retour au carnet" />
-        <CouvertureCapsule capsule={capsule} taille="vignette" />
-        <div className="min-w-0">
-          <h1 className="font-heading text-xl leading-tight font-extrabold text-balance">{capsule.titre}</h1>
-          <p className="flex items-center gap-1 text-xs font-bold text-muted-foreground">
+      {/* L'en-tête unique de Réviser (audit du 23/09/2026), la couverture
+          de la capsule en médaillon. */}
+      <EnTetePage
+        retour={{ fallback: hrefRayon('capsules'), label: 'Retour à ma bibliothèque' }}
+        titre={capsule.titre}
+        medaillon={<CouvertureCapsule capsule={capsule} taille="vignette" />}
+        sousTitre={
+          <span className="flex items-center gap-1">
             {terminee ? (
               <>
                 <Medal className="size-3.5 text-highlight" strokeWidth={2.6} aria-hidden="true" />
@@ -74,9 +77,9 @@ export default function LecteurCapsule({
             ) : (
               `${capsule.dureeMin} min · réussis le quiz pour le badge`
             )}
-          </p>
-        </div>
-      </header>
+          </span>
+        }
+      />
 
       {!contenu ? (
         <p className="rounded-3xl bg-card px-4 py-6 text-center text-sm font-bold text-muted-foreground ring-1 ring-border">

@@ -2,10 +2,10 @@
 
 import { useEffect, useId, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
-import Image from 'next/image'
 import { AnimatePresence, motion, useDragControls, useReducedMotion } from 'framer-motion'
 import { ChevronDown, LayoutGrid } from 'lucide-react'
 import ModeTicketCard from '@/components/defi/ModeTicket'
+import DeAnime from '@/components/defi/DeAnime'
 import { plaqueClaire } from '@/lib/defi/plaque-claire'
 import { casesPalmares, type LignePalmares } from '@/lib/palmares/palmares'
 import { isEpreuveId } from '@/lib/palmares/epreuves'
@@ -23,6 +23,7 @@ import {
 } from '@/lib/defi/modes-catalog'
 import { cn } from '@/lib/utils'
 import styles from './ModesSheet.module.css'
+import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
 
 /**
  * « 1er cette semaine », « 7e sur 41 » : la place de la semaine de chaque
@@ -86,6 +87,8 @@ export default function ModesSheet({
   premium?: boolean
 }) {
   const [open, setOpen] = useState(false)
+  // Un billet touché quitte l'arène : au retour, la feuille est refermée.
+  useFermeAuMasquage(setOpen, false)
   // Tous les modes de chaque matière, ou un seul (le jeu libre) : le choix
   // tient le temps de la visite de l'arène.
   const [tout, setTout] = useState(false)
@@ -93,6 +96,11 @@ export default function ModesSheet({
   const panel = useRef<HTMLDivElement>(null)
   const drag = useDragControls()
   const titreId = useId()
+  // UN IDENTIFIANT PAR DESSIN (useId) : les onglets restent montés
+  // (components/OngletsVivants) et Chrome ne peint pas un dégradé défini dans un
+  // onglet caché (`display: none`). Un identifiant partagé pouvait donc viser
+  // le dégradé d'un onglet caché et laisser ce dessin sans couleur.
+  const languetteId = useId()
   useDialogFocus(panel, open)
 
   // Fermeture au clavier (Échap) + verrou du défilement de la page tant que
@@ -157,15 +165,12 @@ export default function ModesSheet({
         className={`arena-plate arena-plate--clair arena-plate--press ${FLANK_CLASS} flex cursor-pointer flex-col items-center justify-center focus-visible:ring-4 focus-visible:ring-white/60 focus-visible:outline-none`}
         style={{ background: plaqueClaire() }}
       >
-        <Image
-          src="/images/defi/icones/modes-v4.webp"
-          alt=""
-          aria-hidden="true"
-          width={256}
-          height={256}
-          sizes="64px"
-          className="size-16 object-contain"
-        />
+        {/* Le dé qui roule (Lucas, 23/09/2026) : il a remplacé l'image fixe
+            `modes-v4.webp`. Sa scène (le dé, son saut, son ombre au sol)
+            déborde de 4 % de chaque côté, centrée : le dé au repos y gagne
+            quatre pixels, et au plus haut d'un roulé il effleure le cerne
+            sans en sortir. */}
+        <DeAnime className="w-[108%] shrink-0" />
       </button>
 
       {typeof document !== 'undefined'
@@ -211,7 +216,7 @@ export default function ModesSheet({
                     <div className={styles.languette} onPointerDown={(e) => drag.start(e)}>
                       <svg viewBox="0 0 285 115" preserveAspectRatio="none" aria-hidden="true">
                         <defs>
-                          <linearGradient id="modes-languette" x1="0" y1="0" x2="0" y2="1">
+                          <linearGradient id={languetteId} x1="0" y1="0" x2="0" y2="1">
                             <stop offset="0" className={styles.languetteHaut} />
                             <stop offset="0.3" className={styles.languetteMilieu} />
                             <stop offset="1" className={styles.languetteBas} />
@@ -219,7 +224,7 @@ export default function ModesSheet({
                         </defs>
                         <path
                           d="M0 118 L38 16 Q44 2 60 2 H225 Q241 2 247 16 L285 118 Z"
-                          fill="url(#modes-languette)"
+                          fill={`url(#${languetteId})`}
                         />
                         <path
                           d="M40 13 Q46 3 60 3 H225 Q239 3 245 13"

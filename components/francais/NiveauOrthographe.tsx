@@ -90,7 +90,7 @@ export default function NiveauOrthographe({ onClose }: { onClose: () => void }) 
           <span className="bg-primary/10 text-primary mx-auto flex size-14 items-center justify-center rounded-2xl">
             <PenLine className="size-7" aria-hidden="true" />
           </span>
-          <h2 className="font-heading mt-4 text-xl font-bold text-balance">
+          <h2 className="font-heading mt-4 text-xl font-extrabold text-balance">
             J’évalue mon niveau en orthographe
           </h2>
           <p className="mt-2 text-sm text-pretty text-muted-foreground">
@@ -183,7 +183,7 @@ export default function NiveauOrthographe({ onClose }: { onClose: () => void }) 
           </ul>
 
           <div className="bg-muted mt-5 rounded-2xl p-4">
-            <p className="font-heading font-bold">{v.titre}</p>
+            <p className="font-heading font-extrabold">{v.titre}</p>
             <p className="mt-1 text-sm text-pretty text-muted-foreground">
               {v.message}
             </p>
@@ -201,7 +201,7 @@ export default function NiveauOrthographe({ onClose }: { onClose: () => void }) 
 
           {bilan.aTravailler.length > 0 ? (
             <div className="mt-6">
-              <h3 className="font-heading font-bold">À travailler</h3>
+              <h3 className="font-heading font-extrabold">À travailler</h3>
               <ul className="mt-3 flex flex-col gap-3">
                 {bilan.aTravailler.map((q) => (
                   <li
@@ -246,7 +246,7 @@ export default function NiveauOrthographe({ onClose }: { onClose: () => void }) 
       {retour}
       <div className="rounded-3xl bg-card p-6 shadow-sm ring-1 ring-black/5">
         <div className="flex items-center justify-between gap-3">
-          <p className="text-primary text-xs font-extrabold tracking-wide uppercase">
+          <p className="surtitre text-primary">
             Question {index + 1} / {QUESTIONS.length}
           </p>
           <p className="text-xs font-semibold text-muted-foreground">
@@ -269,7 +269,7 @@ export default function NiveauOrthographe({ onClose }: { onClose: () => void }) 
           Complète la phrase avec le bon mot.
         </p>
 
-        <p className="font-heading mt-3 text-lg leading-relaxed font-bold text-balance">
+        <p className="font-heading mt-3 text-lg leading-relaxed font-extrabold text-balance">
           {morceaux.map((bout, i) => (
             <span key={i}>
               {bout}

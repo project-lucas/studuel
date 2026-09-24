@@ -701,6 +701,12 @@ de la tête de Marcel dans la barre d'onglets.
 > lignes ci-dessus, à ne pas diluer : un **bloc épais relié** (cahier), un
 > **éventail** (cartes), une **feuille unique à trombone** (fiche). Vérifier les
 > trois en grille avant de valider, jamais un par un.
+>
+> **Mise à jour du 24/09/2026 :** la fiche n'est plus la feuille à trombone. Lucas
+> a choisi le dessin de la « Fiche de révision » du Marché (la feuille surlignée
+> et son surligneur rose, `assets-sources/boutique-marche/fiche.png`), repris par
+> `scripts/supports-icones.mjs` pour la tuile « Fiche » et la bibliothèque. Sa
+> silhouette reste à part : la seule du lot avec un surligneur en diagonale.
 
 ### L5-b · Les 4 tuiles de Marcel — 4 générations
 

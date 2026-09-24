@@ -48,9 +48,9 @@ export default function UnlockChapterCard({
 
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 px-4 text-center">
         {/* Le cadenas annonce la couleur ET le prix, d'un seul coup d'œil. */}
-        <span className="bg-card flex items-center gap-2 rounded-2xl border px-4 py-3 shadow-md">
+        <span className="carte flex items-center gap-2 px-4 py-3">
           <Lock className="text-muted-foreground size-5" aria-hidden="true" />
-          <span className="flex items-center gap-1 font-heading text-sm font-bold">
+          <span className="flex items-center gap-1 font-heading text-sm font-extrabold">
             <GemIcon className="size-4" aria-hidden="true" />
             {gemsLabel(GEM_COST_CHAPTER)}
           </span>
@@ -62,7 +62,7 @@ export default function UnlockChapterCard({
           Débloque ce chapitre pour {gemsLabel(GEM_COST_CHAPTER)}
         </p>
         <p className="text-muted-foreground max-w-xs text-sm text-balance">
-          Tu gardes sa fiche et ses fiches de révision pour toujours.
+          Tu gardes sa fiche et ses fiches de révision pour toujours, rangées dans ta bibliothèque.
         </p>
 
         {canUnlock ? (

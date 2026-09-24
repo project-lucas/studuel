@@ -1,5 +1,4 @@
-import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
+import EnTetePage from '@/components/reviser/EnTetePage'
 
 // L'en-tête d'une sous-page de Marcel : une flèche de retour et le titre.
 //
@@ -25,19 +24,16 @@ import { ArrowLeft } from 'lucide-react'
 // depuis une notification ou un lien partagé, un retour d'historique sortirait
 // de l'app.
 
+//
+// Depuis le 23/09/2026 c'est l'en-tête unique de l'app (EnTetePage) : la
+// pastille de retour remonte l'historique quand il y en a un, et pousse
+// /marcel sinon — arrivé depuis une notification, on ne sort donc pas de l'app.
 export default function VueHeader({ titre }: { titre: string }) {
   return (
-    <header className="mb-3 flex items-center gap-2.5">
-      <Link
-        href="/marcel"
-        aria-label="Revenir au point du jour"
-        className="bg-card text-primary flex size-10 shrink-0 items-center justify-center rounded-full shadow-sm ring-1 ring-black/5 transition active:translate-y-px active:scale-95"
-      >
-        <ArrowLeft aria-hidden="true" className="size-5" strokeWidth={2.6} />
-      </Link>
-      <h1 className="font-heading min-w-0 flex-1 truncate text-[17px] font-extrabold">
-        {titre}
-      </h1>
-    </header>
+    <EnTetePage
+      retour={{ fallback: '/marcel', label: 'Revenir au point du jour' }}
+      titre={titre}
+      className="mb-3"
+    />
   )
 }

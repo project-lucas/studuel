@@ -56,7 +56,9 @@ export default function SubjectStickyBar({
           // Mobile seulement, comme le HUD sous lequel elle se range : sur
           // desktop la sidebar occupe la gauche, un bandeau pleine largeur y
           // passerait par-dessus — et le header entier y tient déjà à l'écran.
-          'fixed inset-x-0 top-14 z-30 border-b bg-card/95 backdrop-blur-md transition-all duration-200 md:hidden',
+          // OPAQUE et neutre, sans flou : un élément fixe flouté se recalcule
+          // à chaque image du défilement (règle CLAUDE.md, audit du 23/09/2026).
+          'fixed inset-x-0 top-14 z-30 border-b bg-background transition-all duration-200 md:hidden',
           stuck
             ? 'translate-y-0 opacity-100'
             : 'pointer-events-none -translate-y-full opacity-0',
@@ -71,7 +73,7 @@ export default function SubjectStickyBar({
             label="Retour aux matières"
             className="-ml-1 size-10 bg-transparent shadow-none"
           />
-          <span className="font-heading min-w-0 flex-1 truncate font-bold">
+          <span className="font-heading min-w-0 flex-1 truncate font-extrabold">
             {name}
           </span>
           {gardien}

@@ -31,15 +31,19 @@ export default function FriendAddCard({ code, name }: Props) {
     })
   }
 
+  // Une carte blanche, comme le reste de l'onglet Amis — elle a été un panneau
+  // vert à elle, avec des boutons blancs à l'encre verte : une couleur d'état
+  // en fond d'action, et une famille de boutons de plus. Sur le blanc, le
+  // violet plein va au geste principal, le contour et le fantôme au reste.
   return (
-    <div className="flex w-full flex-col items-center gap-4 rounded-3xl border border-[oklch(0.75_0.12_150)]/50 bg-gradient-to-b from-[oklch(0.6_0.15_150)] to-[oklch(0.48_0.14_152)] p-6 text-center shadow-[0_20px_45px_-18px_oklch(0.45_0.14_152)]">
+    <div className="flex w-full flex-col items-center gap-4 rounded-3xl bg-card p-6 text-center text-foreground shadow-sm ring-1 ring-black/5">
       {result?.ok ? (
         <PartyPopper className="size-10 text-highlight" aria-hidden="true" />
       ) : (
-        <UserPlus className="size-10 text-white" aria-hidden="true" />
+        <UserPlus className="size-10 text-primary" aria-hidden="true" />
       )}
 
-      <h1 className="font-heading text-2xl font-extrabold text-white">
+      <h1 className="font-heading text-3xl font-extrabold">
         {result?.ok
           ? result.message
           : name
@@ -50,38 +54,27 @@ export default function FriendAddCard({ code, name }: Props) {
       {result ? (
         <>
           {!result.ok ? (
-            <p className="text-sm font-semibold text-white/90">
+            <p className="text-sm font-semibold text-muted-foreground">
               {result.message}
             </p>
           ) : null}
           <div className="flex w-full flex-col gap-2">
-            <Button
-              asChild
-              className="w-full bg-white text-[oklch(0.35_0.12_152)] hover:bg-white/90"
-            >
+            <Button asChild size="lg" className="w-full">
               <Link href="/amis">Voir mes amis</Link>
             </Button>
-            <Button
-              asChild
-              variant="ghost"
-              className="w-full text-white hover:bg-white/10 hover:text-white"
-            >
+            <Button asChild variant="ghost" className="w-full">
               <Link href="/defi">Retour au Défi</Link>
             </Button>
           </div>
         </>
       ) : (
         <>
-          <p className="text-sm font-semibold text-white/90">
+          <p className="text-sm font-semibold text-muted-foreground">
             Tu as scanné le code{' '}
             <span className="font-mono font-bold tracking-widest">{code}</span>.
             Un tap et vous êtes amis — classements, duels et défis en commun !
           </p>
-          <Button
-            onClick={add}
-            disabled={pending}
-            className="w-full bg-white text-[oklch(0.35_0.12_152)] hover:bg-white/90"
-          >
+          <Button size="lg" onClick={add} disabled={pending} className="w-full">
             {pending ? (
               <Loader2 className="size-4 animate-spin" aria-hidden="true" />
             ) : null}

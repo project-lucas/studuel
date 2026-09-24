@@ -40,7 +40,7 @@ import { useWorkTimer } from '@/components/useWorkTimer'
 import BackButton from '@/components/BackButton'
 import QuitGuardButton from '@/components/QuitGuardButton'
 import AnswerBoard from '@/components/jeux/AnswerBoard'
-import { subjectRobe, subjectVignette } from '@/lib/subject-style'
+import { subjectVignette } from '@/lib/subject-style'
 import { layoutForQuestion } from '@/lib/quiz-layout'
 import BossApparition from '@/components/defi/BossApparition'
 import QuizFeedbackMascotte from '@/components/QuizFeedbackMascotte'
@@ -66,15 +66,18 @@ import { cn } from '@/lib/utils'
 import type { QuizQuestion } from '@/lib/types'
 
 /**
- * LA FORME des deux boutons de reprise — le traitement du bouton DUEL de
- * l'arène, ramené à l'échelle d'une pilule (`.quiz-pilule`, globals.css).
+ * LA ROBE DE LA SESSION : le violet de l'app, toujours.
  *
- * Le socle standard de `.btn-chunky` ne convenait pas ici : sous une carte
- * claire, son trait sombre se lisait comme une ombre portée mal découpée. La
- * plaque de l'arène résout le même problème autrement — contour foncé, dégradé
- * haut→bas, reflet interne, puis seulement la tranche. On neutralise donc le
- * socle de la maison (`--btn-edge` / `--btn-depth`) pour ne garder que celui-là.
+ * Elle prenait la couleur de la matière (`subjectRobe`) — un lavis rouge pour
+ * l'allemand, bleu pour les maths — et cette teinte remontait jusque sur
+ * « Valider » et la barre de progression. Depuis le 23/09/2026, la teinte d'une
+ * matière est une IDENTITÉ (la vignette dans l'angle la dit), jamais un rôle :
+ * le quiz se joue sur le mur crème de l'app, et ce qui se clique est violet.
+ * La robe reste posée pour `AnswerBoard`, qui lit `--jeu-accent` pour cerner
+ * la réponse choisie : violet, donc, comme partout ailleurs.
  */
+const ROBE_QUIZ = 'robe-purple'
+
 /**
  * La réponse d'une question passée sans que l'élève en propose une. Jamais
  * égale à un index d'option, donc toujours comptée ratée — par le score, par
@@ -86,51 +89,6 @@ import type { QuizQuestion } from '@/lib/types'
  * ratée plutôt que de passer pour la première option.
  */
 const SANS_REPONSE = -1
-
-const PILULE_REPRISE =
-  'quiz-pilule h-11 min-w-32 gap-1.5 px-5 text-sm font-extrabold whitespace-nowrap ' +
-  '[--btn-edge:transparent] [--btn-depth:0px] hover:brightness-[1.04]'
-
-/**
- * « À revoir » : le VERT du succès — celui des pastilles justes.
- *
- * Il portait le CORAIL des pastilles ratées. Cohérent sur le papier (« les
- * rouges, on les refait »), mais un bouton rouge se lit comme un
- * avertissement : on l'évite. Or c'est LE geste qu'on veut voir cliqué — les
- * questions ratées sont le seul contenu utile qui reste après un quiz.
- *
- * Trois teintes du MÊME vert : le haut éclairci donne le volume, le bas est la
- * couleur de référence, le contour est sa version foncée. Un contour pris
- * ailleurs que dans la couleur du bouton ferait un cerne, pas une tranche.
- */
-const ROBE_ERREURS = cn(
-  'text-white',
-  '[--pilule-haut:color-mix(in_oklab,var(--success),white_10%)]',
-  '[--pilule-bas:color-mix(in_oklab,var(--success),black_10%)]',
-  '[--pilule-bord:color-mix(in_oklab,var(--success),black_42%)]',
-)
-
-/**
- * « Continuer » : le violet clair, avec l'encre marine — plus lisible qu'un
- * blanc sur pastel, et assez doux pour laisser la pilule verte mener l'œil.
- */
-const ROBE_CONTINUER = cn(
-  'text-foreground',
-  '[--pilule-haut:color-mix(in_oklab,var(--primary),white_62%)]',
-  '[--pilule-bas:color-mix(in_oklab,var(--primary),white_48%)]',
-  '[--pilule-bord:color-mix(in_oklab,var(--primary),black_18%)]',
-)
-
-/**
- * « Quiz suivant » : le VIOLET plein de l'action, en plaque 3D — c'est LE
- * bouton de l'écran de fin, celui qui empêche la fin d'en être une.
- */
-const ROBE_SUIVANT = cn(
-  'text-primary-foreground',
-  '[--pilule-haut:color-mix(in_oklab,var(--primary),white_12%)]',
-  '[--pilule-bas:color-mix(in_oklab,var(--primary),black_6%)]',
-  '[--pilule-bord:color-mix(in_oklab,var(--primary),black_38%)]',
-)
 
 /** Une pilule de bilan : pastille d'icône à gauche, le chiffre en Baloo. */
 const PILULE_BILAN =
@@ -148,7 +106,6 @@ export default function QuizPlayer({
   questions: allQuestions,
   deck = null,
   subject = null,
-  subjectColor = null,
   subjectSlug = null,
   tempsTotalSecondes = 0,
   backHref = '/reviser',
@@ -175,9 +132,10 @@ export default function QuizPlayer({
   deck?: QuizQuestion[] | null
   subject?: string | null
   /**
-   * Couleur de la matière (`subjects.color`) — elle donne sa ROBE à la session,
-   * comme chaque jeu de salon porte la sienne. Absente (quiz personnel, quiz
-   * détaché) : repli sur le violet de l'app.
+   * Couleur de la matière (`subjects.color`). Elle donnait sa ROBE à la
+   * session ; depuis le 23/09/2026 le quiz se joue en violet sur le mur crème
+   * (cf. `ROBE_QUIZ`). Toujours acceptée pour ne rien casser chez les pages qui
+   * la passent — elle n'habille plus rien.
    */
   subjectColor?: string | null
   /**
@@ -213,10 +171,6 @@ export default function QuizPlayer({
    */
   chrono?: boolean
 }) {
-  // LA ROBE DE LA SESSION : la couleur de la matière, posée en variables
-  // `--jeu-*` (globals.css). Les mêmes que celles des jeux de salon — c'est ce
-  // qui fait qu'un quiz et une partie se ressemblent enfin.
-  const robe = subjectRobe(subjectColor)
   // L'illustration du dossier de la matière — absente pour un quiz détaché.
   const vignette = subjectSlug ? subjectVignette(subjectSlug) : undefined
 
@@ -541,10 +495,7 @@ export default function QuizPlayer({
     return (
       <div
         key="quiz-hors-delai"
-        className={cn(
-          robe,
-          'jeu-table quiz-fond relative flex min-h-svh flex-col items-center justify-center px-4 py-10 text-center text-foreground md:px-8',
-        )}
+        className="relative flex min-h-svh flex-col items-center justify-center px-4 py-10 text-center text-foreground md:px-8"
       >
         <span
           aria-hidden="true"
@@ -559,19 +510,12 @@ export default function QuizPlayer({
           n’attend pas — reprends, plus vite.
         </p>
         <div className="mt-8 flex w-full max-w-xs flex-col gap-3">
-          <Button
-            type="button"
-            onClick={() => {
-              sfx.tap()
-              replay(questions)
-            }}
-            className="min-h-12 w-full rounded-full"
-          >
-            <RotateCcw className="size-4" aria-hidden="true" /> Réessayer
+          <Button type="button" size="xl" onClick={() => replay(questions)} className="w-full">
+            <RotateCcw aria-hidden="true" /> Réessayer
           </Button>
-          <Button variant="outline" asChild className="min-h-11 w-full rounded-full">
-            <Link href={backHref} onClick={() => sfx.tap()}>
-              <ArrowLeft className="size-4" /> Quitter
+          <Button variant="outline" size="lg" asChild className="w-full">
+            <Link href={backHref}>
+              <ArrowLeft /> Quitter
             </Link>
           </Button>
         </div>
@@ -590,8 +534,8 @@ export default function QuizPlayer({
     const ratio = questions.length > 0 ? score / questions.length : 0
     const missed = missedQuestions(questions, choices)
     const v = verdictFor(ratio, gradeLevel)
-    // Y a-t-il des erreurs à revoir ? La réponse commande le LIBELLÉ comme la
-    // robe des deux boutons de reprise : calculée une fois, pas trois.
+    // Y a-t-il des erreurs à revoir ? La réponse commande le LIBELLÉ comme le
+    // relief de « Continuer » (contour ou violet) : calculée une fois, pas trois.
     const peutRevoir = canRetryMissed(questions.length, missed.length)
     // Ce que la manche a RAPPORTÉ, tel que la base l'a écrit — jamais le barème
     // espéré. Vide sur un rejeu : l'XP d'un chapitre déjà maîtrisé ne se repaye
@@ -652,10 +596,7 @@ export default function QuizPlayer({
       // ─────────────────────────────────────────────────────────────────────
       <div
         key="quiz-fin"
-        className={cn(
-          robe,
-          'jeu-table min-h-svh px-4 pt-6 pb-16 text-foreground md:px-8 md:pt-8',
-        )}
+        className="min-h-svh px-4 pt-6 pb-16 text-foreground md:px-8 md:pt-8"
       >
         {/* La Traque : si ce quiz a fait déborder la jauge, le gardien surgit
             PAR-DESSUS le bilan. Il se monte en portail (document.body), donc sa
@@ -714,7 +655,7 @@ export default function QuizPlayer({
             className="mt-5 w-full rounded-3xl bg-card p-4 ring-1 ring-black/5"
           >
             <div className="flex items-center justify-between gap-3">
-              <h2 className="font-heading text-base font-extrabold text-foreground">
+              <h2 className="titre-section text-foreground">
                 Questions maîtrisées
               </h2>
               <span className="font-heading shrink-0 rounded-full bg-primary/10 px-3 py-1 text-sm font-extrabold text-primary tabular-nums">
@@ -882,29 +823,25 @@ export default function QuizPlayer({
           ) : null}
 
           {/* LES BOUTONS — pleine largeur, empilés, comme le CONTINUER de
-              Duolingo.
+              Duolingo, et tous de la maison (`Button`, taille xl).
 
-              « Revoir mes erreurs » passe DEVANT et garde son vert : c'est le
+              « Revoir mes erreurs » passe DEVANT, en violet plein : c'est le
               geste qu'on veut voir cliqué, les questions ratées étant le seul
-              contenu utile qui reste après un quiz.
+              contenu utile qui reste après un quiz. Il a porté le vert du
+              succès — un ÉTAT posé sur une action ; depuis le 23/09/2026 ce
+              qui se clique est violet, et le vert ne dit plus que « juste ».
 
               Puis LA TENTATION : « Quiz suivant » avec, dans sa pastille, l'XP
               qu'il promet — la mécanique de Wilgo et de Duolingo, où l'écran
               de fin n'est jamais une fin. Il respire (framer-motion, 1,8 s)
               pour être le seul objet qui bouge ; immobile en mouvement réduit.
               Sans quiz suivant (fin du programme, quiz détaché), « Continuer »
-              ramène d'où l'on vient. */}
+              ramène d'où l'on vient — en contour sous « Revoir », en violet
+              s'il est seul. */}
           <div className="mt-6 flex w-full flex-col gap-2.5">
             {peutRevoir ? (
-              <Button
-                onClick={() => replay(missed)}
-                className={cn(
-                  PILULE_REPRISE,
-                  ROBE_ERREURS,
-                  'h-14 w-full text-base',
-                )}
-              >
-                <RotateCcw className="size-4" aria-hidden="true" />
+              <Button size="xl" onClick={() => replay(missed)} className="w-full">
+                <RotateCcw aria-hidden="true" />
                 Revoir mes {missed.length} erreur{missed.length > 1 ? 's' : ''}
               </Button>
             ) : null}
@@ -915,20 +852,12 @@ export default function QuizPlayer({
                 animate={reduce ? undefined : { scale: [1, 1.03, 1] }}
                 transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
               >
-                <Button
-                  asChild
-                  className={cn(
-                    PILULE_REPRISE,
-                    ROBE_SUIVANT,
-                    'h-14 w-full text-base',
-                  )}
-                >
+                <Button asChild size="xl" className="w-full">
                   <Link
                     href={quizSuivant.href}
-                    onClick={() => sfx.tap()}
                     aria-label={`Quiz suivant : ${quizSuivant.titre}${quizSuivant.xp > 0 ? `, +${quizSuivant.xp} XP` : ''}`}
                   >
-                    <Play className="size-4 fill-current" aria-hidden="true" />
+                    <Play className="fill-current" aria-hidden="true" />
                     Quiz suivant
                     {quizSuivant.xp > 0 ? (
                       <span
@@ -944,15 +873,11 @@ export default function QuizPlayer({
             ) : (
               <Button
                 asChild
-                className={cn(
-                  PILULE_REPRISE,
-                  ROBE_CONTINUER,
-                  'h-14 w-full text-base',
-                )}
+                size="xl"
+                variant={peutRevoir ? 'outline' : 'default'}
+                className="w-full"
               >
-                <Link href={backHref} onClick={() => sfx.tap()}>
-                  Continuer
-                </Link>
+                <Link href={backHref}>Continuer</Link>
               </Button>
             )}
           </div>
@@ -1084,7 +1009,7 @@ export default function QuizPlayer({
 
                         {q.explanation ? (
                           <div className="mt-4 border-t border-dashed pt-4">
-                            <h3 className="text-sm font-bold">Explication</h3>
+                            <h3 className="font-heading text-sm font-extrabold">Explication</h3>
                             <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
                               {q.explanation}
                             </p>
@@ -1095,13 +1020,9 @@ export default function QuizPlayer({
                   })}
                 </ol>
 
-                <Button
-                  variant="outline"
-                  asChild
-                  className="mt-6 w-full rounded-full"
-                >
+                <Button variant="outline" size="lg" asChild className="mt-6 w-full">
                   <Link href={backHref}>
-                    <ArrowLeft className="size-4" /> Retour aux révisions
+                    <ArrowLeft /> Retour aux révisions
                   </Link>
                 </Button>
               </div>
@@ -1130,10 +1051,11 @@ export default function QuizPlayer({
     <div
       key="quiz-session"
       className={cn(
-        robe,
-        // `quiz-fond` par-dessus `jeu-table` : le lavis de la matière, assez
-        // dense pour qu'un quiz d'allemand ne ressemble pas à un quiz de maths.
-        'jeu-table quiz-fond relative flex min-h-svh flex-col overflow-hidden px-4 pt-3 text-foreground md:px-8',
+        // Le mur crème de l'app (`.tab-bg`, posé par le layout) : plus de
+        // table ni de lavis de matière — la vignette dans l'angle suffit à
+        // dire ce qu'on révise. La robe ne sert qu'à `AnswerBoard`.
+        ROBE_QUIZ,
+        'relative flex min-h-svh flex-col overflow-hidden px-4 pt-3 text-foreground md:px-8',
       )}
       // La feuille de la mascotte se pose PAR-DESSUS le bas de l'écran : sans
       // cette marge, la dernière réponse disparaîtrait sous elle. Elle tient
@@ -1208,22 +1130,20 @@ export default function QuizPlayer({
           </QuitGuardButton>
           <span className="sr-only">{title}</span>
 
-          {/* LA BARRE — plus courte, et à la COULEUR DE LA MATIÈRE.
-              Elle courait d'un bord à l'autre, en gris : sur un fond déjà pâle,
-              elle disparaissait, et rien ne disait de quelle matière on
-              révisait. Le rail passe en teinte foncée du fond (elle se voit
-              même vide) et la jauge prend `--jeu-accent`, la couleur du dossier.
-              Elle raccourcit pour laisser sa place au chrono. */}
+          {/* LA BARRE — plus courte, violette sur son rail neutre : la
+              progression est un rôle de l'app, pas une teinte de matière (elle
+              a pris `--jeu-accent` un temps, et un quiz de maths avançait en
+              bleu-gris). Elle raccourcit pour laisser sa place au chrono. */}
           <div
             role="progressbar"
             aria-valuemin={0}
             aria-valuemax={questions.length}
             aria-valuenow={index + (valide ? 1 : 0)}
             aria-label={`Question ${index + 1} sur ${questions.length}`}
-            className="h-4 min-w-0 flex-1 overflow-hidden rounded-full bg-black/12 ring-1 ring-black/5 ring-inset"
+            className="h-4 min-w-0 flex-1 overflow-hidden rounded-full bg-muted ring-1 ring-black/5 ring-inset"
           >
             <div
-              className="h-full rounded-full bg-[color:var(--jeu-accent)] transition-[width] duration-300 ease-out"
+              className="h-full rounded-full bg-primary transition-[width] duration-300 ease-out"
               style={{
                 width: `${((index + (valide ? 1 : 0)) / questions.length) * 100}%`,
               }}
@@ -1243,16 +1163,15 @@ export default function QuizPlayer({
               cours, seconde par seconde. C'est le seul chiffre de l'écran qui
               monte quoi qu'il arrive — même sur une mauvaise réponse.
 
-              IL EST DE LA MÊME FAMILLE QUE LES PLAQUES. C'était une pastille
-              plate à liseré gris, posée à côté d'objets qui ont tous un contour,
-              un dégradé et une tranche : elle avait l'air d'appartenir à une
-              autre application. Même traitement, en pilule — mais tranche plus
-              fine et pas d'enfoncement au tap : ce n'est pas un bouton, c'est un
-              compteur, et rien ne doit laisser croire qu'on peut le presser.
+              C'EST UN COMPTEUR, PAS UN BOUTON : une plaque neutre
+              (`.quiz-compteur`, globals.css) — pilule blanche, bord fin, tranche
+              à peine marquée, et pas d'enfoncement au tap. Elle a emprunté la
+              plaque des boutons du quiz tant qu'ils avaient la leur ; depuis
+              qu'ils sont ceux de la maison, elle garde juste un corps.
 
-              Le cadran est un JETON à la couleur de la matière : il donne au
-              chrono le seul point de couleur saturée du bandeau, et sépare
-              l'icône du nombre au lieu de les laisser flotter côte à côte.
+              Le cadran est un JETON violet : il donne au chrono le seul point
+              de couleur saturée du bandeau, et sépare l'icône du nombre au
+              lieu de les laisser flotter côte à côte.
 
               ⚠️ Le bouton de coupure du son quitte donc cet écran. Comme le
               bandeau du haut est masqué pendant la session, il n'y a plus de
@@ -1268,21 +1187,14 @@ export default function QuizPlayer({
               role="timer"
               aria-live="off"
               aria-label={`${secondesRestantes} secondes restantes`}
-              className={cn(
-                'quiz-plaque quiz-plaque--ronde quiz-plaque--compteur h-9 shrink-0 gap-1.5 pr-3 pl-1 [--plaque-bas:color-mix(in_oklab,var(--card),black_5%)] [--plaque-haut:var(--card)]',
-                chronoEnAlerte(secondesRestantes)
-                  ? '[--plaque-bord:color-mix(in_oklab,var(--destructive),black_20%)]'
-                  : '[--plaque-bord:color-mix(in_oklab,var(--jeu-accent),black_26%)]',
-              )}
+              className="quiz-compteur h-9 shrink-0 gap-1.5 pr-3 pl-1"
               title="Temps restant pour la manche"
             >
               <span
                 aria-hidden="true"
                 className={cn(
                   'flex size-7 items-center justify-center rounded-full text-white shadow-[inset_0_-2px_0_rgba(0,0,0,0.18)]',
-                  chronoEnAlerte(secondesRestantes)
-                    ? 'bg-destructive'
-                    : 'bg-[color:var(--jeu-accent)]',
+                  chronoEnAlerte(secondesRestantes) ? 'bg-destructive' : 'bg-primary',
                 )}
               >
                 <Hourglass className="size-4" strokeWidth={2.6} />
@@ -1300,12 +1212,12 @@ export default function QuizPlayer({
             </span>
           ) : (
             <span
-              className="quiz-plaque quiz-plaque--ronde quiz-plaque--compteur h-9 shrink-0 gap-1.5 pr-3 pl-1 [--plaque-bas:color-mix(in_oklab,var(--card),black_5%)] [--plaque-bord:color-mix(in_oklab,var(--jeu-accent),black_26%)] [--plaque-haut:var(--card)]"
+              className="quiz-compteur h-9 shrink-0 gap-1.5 pr-3 pl-1"
               title="Ton temps de révision total"
             >
               <span
                 aria-hidden="true"
-                className="flex size-7 items-center justify-center rounded-full bg-[color:var(--jeu-accent)] text-white shadow-[inset_0_-2px_0_rgba(0,0,0,0.18)]"
+                className="flex size-7 items-center justify-center rounded-full bg-primary text-white shadow-[inset_0_-2px_0_rgba(0,0,0,0.18)]"
               >
                 <Clock className="size-4" strokeWidth={2.6} />
               </span>
@@ -1376,7 +1288,7 @@ export default function QuizPlayer({
               réponse » sur tout ce qui n'était pas un vrai/faux : sur une
               phrase à compléter, c'est faux — on ne choisit pas une réponse, on
               complète un texte. Trois formes, trois consignes. */}
-          <p className="mb-2.5 text-xs font-extrabold tracking-wide text-foreground/45 uppercase">
+          <p className="surtitre mb-2.5 text-foreground/45">
             {trou
               ? 'Complète la phrase'
               : question.kind === 'true_false'
@@ -1512,29 +1424,21 @@ export default function QuizPlayer({
           // point fixe de la session, celui où le pouce revient sans regarder.
           // Tout ce qu'on ajouterait SOUS ce bouton le déplacerait.
           <div className="mt-3 mb-4 flex shrink-0 flex-col gap-2.5">
-            <button
+            {/* LE BOUTON DE LA MAISON, en violet, en casse de phrase. Il a été
+                une plaque à lui (« VALIDER », verte une fois allumée, teintée à
+                la matière éteinte) : le vert est un verdict, pas une action,
+                et un bouton qui change de famille d'un écran à l'autre se
+                réapprend à chaque fois. Éteint, il garde sa forme et perd sa
+                saturation — c'est le comportement standard de `Button`. */}
+            <Button
               type="button"
+              size="xl"
               disabled={selected === null}
               onClick={() => valider(selected)}
-              className={cn(
-                'quiz-plaque h-14 w-full text-lg font-extrabold tracking-wide uppercase',
-                selected === null
-                  ? // ÉTEINT — mais toujours une PLAQUE. Il était plat, sans
-                    // contour ni tranche : un aplat beige qui ne ressemblait
-                    // plus à un bouton du tout. Un bouton désactivé doit rester
-                    // reconnaissable comme bouton, sinon on ne comprend pas ce
-                    // qu'on attend de nous. C'est sa SATURATION qui tombe, pas
-                    // sa forme.
-                    // ÉTEINT, mais PAS INCOLORE. Il était gris sur fond pâle :
-                    // le texte blanc s'y perdait et le contour n'existait pas.
-                    // Il garde la teinte de la matière, très désaturée, avec un
-                    // contour franc — on voit un bouton, on voit qu'il attend.
-                    'cursor-not-allowed text-foreground/45 [--plaque-bas:color-mix(in_oklab,var(--jeu-accent),white_74%)] [--plaque-bord:color-mix(in_oklab,var(--jeu-accent),black_28%)] [--plaque-haut:color-mix(in_oklab,var(--jeu-accent),white_82%)]'
-                  : 'text-white [--plaque-bas:color-mix(in_oklab,var(--success),black_14%)] [--plaque-bord:color-mix(in_oklab,var(--success),black_50%)] [--plaque-haut:color-mix(in_oklab,var(--success),white_14%)]',
-              )}
+              className="w-full"
             >
               Valider
-            </button>
+            </Button>
           </div>
         ) : null}
 

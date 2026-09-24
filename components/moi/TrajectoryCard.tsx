@@ -86,10 +86,10 @@ export default function TrajectoryCard({
   return (
     <section
       aria-label="Ta trajectoire au bac"
-      className="moi-card rounded-3xl bg-white p-4"
+      className="carte-plaque p-4"
     >
       <div>
-        <h2 className="font-heading text-xl leading-tight font-extrabold text-foreground">
+        <h2 className="titre-section text-foreground">
           Ta trajectoire au bac
         </h2>
         <p className="mt-0.5 text-xs text-muted-foreground">

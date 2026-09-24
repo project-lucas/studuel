@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import CarnetButton from '@/components/carnet/CarnetButton'
 import SerieBar from '@/components/reviser/SerieBar'
 import { toDayKey } from '@/lib/streak'
 
@@ -13,6 +14,8 @@ export const dynamic = 'force-dynamic'
 //
 //   /dev/serie            la barre, le jour fait (la validation se joue une fois)
 //   /dev/serie?fete=1     la validation rejoue à chaque chargement
+//
+// Le bouton « Ma bibliothèque » est posé en pied de carte, comme dans Réviser.
 export default function ApercuSerie() {
   if (process.env.NODE_ENV === 'production') notFound()
   const now = new Date()
@@ -33,6 +36,7 @@ export default function ApercuSerie() {
         subjectMeta={{}}
         subjects={[]}
         goalMinutes={15}
+        carnetSlot={<CarnetButton coursesCount={3} questionsCount={42} pleineLargeur />}
       />
     </div>
   )

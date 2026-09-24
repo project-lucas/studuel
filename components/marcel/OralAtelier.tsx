@@ -195,8 +195,10 @@ export default function OralAtelier({
     setMessage(
       r.plafond
         ? 'Tu as beaucoup travaillé aujourd’hui. On reprend demain.'
-        : r.quota
-          ? 'Tes questions du jour sont passées. L’atelier, lui, reste ouvert.'
+        : r.abonnement
+          ? 'L’avis de Marcel fait partie de Studuel+. L’atelier, lui, reste ouvert.'
+          : r.quota
+          ? 'Tes crédits du mois sont passés. L’atelier, lui, reste ouvert.'
           : r.unavailable
             ? 'L’avis de Marcel n’est pas disponible pour l’instant.'
             : 'Marcel n’a pas réussi à répondre. Réessaie.',
@@ -205,7 +207,7 @@ export default function OralAtelier({
 
   if (!disponible) {
     return (
-      <div className="bg-card rounded-[20px] p-6 text-center">
+      <div className="carte p-6 text-center">
         <MicOff
           className="text-muted-foreground mx-auto size-7"
           aria-hidden="true"
@@ -224,7 +226,7 @@ export default function OralAtelier({
   return (
     <div className="flex flex-col gap-4">
       {/* --- Réglage : de quoi on parle, et pour quelle épreuve --- */}
-      <section className="bg-card rounded-[20px] p-4 shadow-[0_2px_0_rgba(36,48,79,.06)]">
+      <section className="carte p-4">
         <label htmlFor="oral-sujet" className="text-[13px] font-extrabold">
           Sur quoi tu passes&nbsp;?
         </label>
@@ -282,7 +284,7 @@ export default function OralAtelier({
       </section>
 
       {/* --- Le chrono --- */}
-      <section className="bg-card rounded-[20px] p-5 text-center shadow-[0_2px_0_rgba(36,48,79,.06)]">
+      <section className="carte p-5 text-center">
         <p
           className="font-heading text-5xl font-extrabold tabular-nums"
           role="timer"
@@ -342,7 +344,7 @@ export default function OralAtelier({
 
       {/* --- Bilan : le verdict, l'écoute, l'auto-évaluation --- */}
       {etape === 'bilan' ? (
-        <section className="bg-card rounded-[20px] p-4 shadow-[0_2px_0_rgba(36,48,79,.06)]">
+        <section className="carte p-4">
           <p className="font-heading text-[15px] font-extrabold">
             {verdict.tenu ? 'Tu as tenu.' : 'Passage terminé.'}
           </p>
@@ -400,7 +402,7 @@ export default function OralAtelier({
           <div className="mt-4">
             {conseils ? (
               <div className="bg-accent/50 rounded-[18px] p-3">
-                <p className="text-accent-foreground/80 mb-1.5 flex items-center gap-1.5 text-[11px] font-extrabold tracking-wide uppercase">
+                <p className="surtitre text-accent-foreground/80 mb-1.5 flex items-center gap-1.5">
                   <Sparkles aria-hidden="true" className="size-3.5" />
                   Pour ton prochain passage
                 </p>
@@ -499,7 +501,7 @@ function BarreauQuatre({
   }
 
   return (
-    <section className="bg-card rounded-[20px] p-4 shadow-[0_2px_0_rgba(36,48,79,.06)]">
+    <section className="carte p-4">
       <h2 className="font-heading flex items-center gap-1.5 text-[15px] font-extrabold">
         <Users className="text-primary size-4" aria-hidden="true" />
         Le dernier barreau : quelqu’un t’écoute

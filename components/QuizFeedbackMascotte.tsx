@@ -1,7 +1,7 @@
 "use client";
 
-import type { CSSProperties } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 /**
  * Feuille de retour après une question : un panneau clair (menthe si c'est
@@ -180,37 +180,27 @@ export default function QuizFeedbackMascotte({
                   ) : null}
                 </div>
 
-                {/* LE MÊME BOUTON QUE « VALIDER », À LA COULEUR PRÈS.
+                {/* LE MÊME BOUTON QUE « VALIDER », EXACTEMENT.
                   Il avait sa propre géométrie : rayon de 16 px contre 18, pas de
                   contour, une tranche posée à la main, et une hauteur déduite du
                   padding. Trois écarts minuscules qui, mis bout à bout,
                   déplaçaient et redimensionnaient le bouton à l'instant où
                   l'élève y pose déjà le pouce.
 
-                  Il porte donc `.quiz-plaque` et la MÊME hauteur (`h-14`) : même
-                  largeur, même place, même forme. Seule la ROBE change — verte
-                  quand c'est juste, corail quand ça ne l'est pas — et c'est
-                  exactement ce qu'on veut qu'on remarque.
+                  C'est donc le `Button` de la maison, en taille xl, comme
+                  « Valider » : même largeur, même place, même forme — et la
+                  MÊME robe violette. Il a été vert ou corail selon le verdict ;
+                  c'est la feuille qui porte la couleur du verdict désormais,
+                  le bouton ne dit que « on continue ».
 
                   ⚠️ TOUTE RETOUCHE ICI SE FAIT EN DOUBLE, avec « Valider »
-                  (QuizPlayer) : hauteur, taille de texte, gouttière et marge
-                  basse. Ces deux boutons occupent le MÊME rectangle à l'écran —
-                  c'est le seul point fixe d'une session, celui où le pouce
-                  revient sans regarder. */}
-                <button
-                  type="button"
-                  onClick={onContinue}
-                  className="quiz-plaque font-heading mt-4 h-14 w-full cursor-pointer text-lg font-extrabold tracking-wide text-white uppercase"
-                  style={
-                    {
-                      "--plaque-haut": `color-mix(in oklch, ${teinte}, white 14%)`,
-                      "--plaque-bas": `color-mix(in oklch, ${teinte}, black 14%)`,
-                      "--plaque-bord": `color-mix(in oklch, ${teinte}, black 50%)`,
-                    } as CSSProperties
-                  }
-                >
+                  (QuizPlayer) : taille, gouttière et marge basse. Ces deux
+                  boutons occupent le MÊME rectangle à l'écran — c'est le seul
+                  point fixe d'une session, celui où le pouce revient sans
+                  regarder. */}
+                <Button type="button" size="xl" onClick={onContinue} className="mt-4 w-full">
                   {ctaLabel}
-                </button>
+                </Button>
               </div>
             </div>
           </div>

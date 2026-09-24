@@ -82,9 +82,11 @@ const PROPS = {
 /** Intro → décompte 3·2·1 → partie lancée. */
 async function lancerLaPartie() {
   await act(async () => {
-    fireEvent.click(screen.getByRole('button', { name: /GO/ }))
+    // « C'est parti » — le « GO » rond a été remplacé par le bouton de la
+    // maison le 23/09/2026.
+    fireEvent.click(screen.getByRole('button', { name: /C.est parti/ }))
   })
-  // Le décompte s'enchaîne par minuteurs SUCCESSIFS (3 → 2 → 1 → GO), chacun
+  // Le décompte s'enchaîne par minuteurs SUCCESSIFS (3 → 2 → 1 → Partez !), chacun
   // reprogrammé par l'effet du rendu suivant : il faut donc rendre la main à
   // React entre deux avances, sinon on reste bloqué sur « 2 ».
   for (let i = 0; i < 6; i += 1) {

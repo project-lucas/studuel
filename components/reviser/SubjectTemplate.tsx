@@ -97,12 +97,17 @@ export default function SubjectTemplate({
   const versLeGardien = () => {
     if (jeuId) setTab(jeuId)
   }
+  // `tone="light"` : l'en-tête est posé sur le mur crème depuis le 23/09/2026,
+  // plus sur un bandeau sombre — une silhouette blanche y disparaîtrait.
   const ecusson = afficheEcusson(gardien) ? (
-    <GardienBadge vue={gardien} onSelect={versLeGardien} />
+    <GardienBadge vue={gardien} tone="light" onSelect={versLeGardien} />
   ) : null
 
   return (
-    <div className="-mx-4 -mt-16 md:-mx-8 md:-mt-10">
+    // Plus de marges négatives ni de bandeau plein écran : l'en-tête est celui
+    // de toutes les pages de Réviser, sur le mur crème de l'app (audit du
+    // 23/09/2026), dans les marges de lecture du gabarit.
+    <div>
       <SubjectHeader
         subject={data.subject}
         grade={data.grade}
@@ -147,14 +152,12 @@ export default function SubjectTemplate({
         }
       />
 
-      {/* Panneau de contenu : il chevauche le header, façon carnet. Le `key`
-          rejoue la petite animation d'entrée à chaque changement d'onglet —
-          la seule animation de la page. */}
-      <div className="relative -mt-6 rounded-t-3xl bg-background">
-        <div
-          key={tabId(active)}
-          className="pop-in mx-auto w-full max-w-4xl px-4 pt-5 pb-24 md:px-8"
-        >
+      {/* Panneau de contenu, posé directement sur le mur quadrillé — plus de
+          feuille opaque qui le couvrait (audit du 23/09/2026). Le `key` rejoue
+          la petite animation d'entrée à chaque changement d'onglet — la seule
+          animation de la page. */}
+      <div>
+        <div key={tabId(active)} className="pop-in mt-5">
           {mode === 'programme' ? (
             <>
               {/* PLUS DE BANDEAU « n notions à revoir » NI DE CARTE « On commence

@@ -1,5 +1,3 @@
-import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
 import JaugeCapacite from '@/components/moi/JaugeCapacite'
 import CatalogueHabitudes, {
   type LigneHabitude,
@@ -22,6 +20,7 @@ import {
   FENETRE_JOURS,
 } from '@/lib/moi/habitudes'
 import type { CommuteSlot, Habit, HabitLog } from '@/lib/types'
+import EnTetePage from '@/components/reviser/EnTetePage'
 
 export const metadata = { title: 'Mes habitudes — Studuel' }
 export const dynamic = 'force-dynamic'
@@ -194,21 +193,15 @@ export default async function HabitudesPage() {
   )
 }
 
-// L'en-tête de retour. Un vrai lien vers /moi, pas un `history.back()` : arrivé
-// depuis une notification, un retour d'historique sortirait de l'app.
+// L'en-tête de retour : la recette unique de l'app (EnTetePage, audit du
+// 23/09/2026). Sa pastille pousse /moi quand il n'y a pas d'historique — arrivé
+// depuis une notification, on ne sort donc pas de l'app.
 function RetourHeader() {
   return (
-    <header className="mb-3 flex items-center gap-1">
-      <Link
-        href="/moi"
-        aria-label="Revenir à mon profil"
-        className="text-muted-foreground -ml-2 flex size-11 shrink-0 items-center justify-center rounded-full transition-colors active:bg-foreground/8"
-      >
-        <ArrowLeft aria-hidden="true" className="size-5" strokeWidth={2.4} />
-      </Link>
-      <h1 className="font-heading min-w-0 flex-1 truncate text-[17px] font-extrabold">
-        Mes habitudes
-      </h1>
-    </header>
+    <EnTetePage
+      retour={{ fallback: '/moi', label: 'Revenir à mon profil' }}
+      titre="Mes habitudes"
+      className="mb-3"
+    />
   )
 }

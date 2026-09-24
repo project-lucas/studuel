@@ -55,7 +55,7 @@ export default function NiveauOrthographeCarte({
         <PenLine className="size-5" aria-hidden="true" />
       </span>
       <span className="min-w-0 flex-1">
-        <span className="font-heading block text-sm leading-tight font-bold">
+        <span className="font-heading block text-sm leading-tight font-extrabold">
           J’évalue mon niveau en orthographe
         </span>
         <span className="mt-0.5 block text-[11px] font-semibold text-muted-foreground">

@@ -19,16 +19,24 @@ import { normaliserPreferences } from '@/lib/carnet/preferences'
 import type { CoursCarnet } from '@/lib/carnet/priorite'
 import { toutLire } from '@/lib/postgrest-pages'
 import { toDayKey } from '@/lib/streak'
-import EtagereCapsules from '@/components/carnet/EtagereCapsules'
+import Bibliotheque from '@/components/bibliotheque/Bibliotheque'
+import { lireRayon } from '@/lib/bibliotheque'
+import { lireMesFichesAchetees } from '@/lib/bibliotheque-server'
 import { etagereCarnet } from '@/lib/capsules'
 import { lireCatalogueCapsules, lireMesAchats } from '@/lib/capsules-server'
+import { isPremiumTier } from '@/lib/gems'
+import type { Tier } from '@/lib/subscription'
 
-export const metadata = { title: 'Mon carnet — Studuel' }
+export const metadata = { title: 'Ma bibliothèque — Studuel' }
 export const dynamic = 'force-dynamic'
 
 /**
- * L'ONGLET CARNET — le Wooflash propre à l'élève : ses cours saisis ou
- * importés, ses cartes, sa révision espacée, ses dossiers.
+ * MA BIBLIOTHÈQUE (ex-« Mon carnet », 24/09/2026) — tout ce qui est à l'élève :
+ * ses DOSSIERS (le Wooflash propre à l'élève : ses cours saisis ou importés,
+ * ses cartes, sa révision espacée), ses CAPSULES achetées dans la Boutique et
+ * ses FICHES de révision achetées en gemmes. Un filtre les range
+ * (`?rayon=dossiers|capsules|fiches`, lib/bibliotheque) ; l'adresse reste
+ * `/carnet`.
  *
  * REFONTE DU 08/09/2026 (Lucas : « ma semaine est à supprimer ; il faut le
  * côté répétition espacée, lui proposer le cours prioritaire ; pouvoir
@@ -45,7 +53,11 @@ export const dynamic = 'force-dynamic'
  * LA FEUILLE « NOUVEAU DOSSIER » ne demande plus qu'un nom (10/09/2026,
  * « comme Wooflash ») : les matières de Réviser ne sont plus lues ici.
  */
-export default async function CarnetPage() {
+export default async function CarnetPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ rayon?: string | string[] }>
+}) {
   const supabase = await createClient()
   const user = await getCurrentUser()
   if (!user) redirect('/login?next=/carnet')
@@ -62,9 +74,19 @@ export default async function CarnetPage() {
     { data: carnetStateRows },
     catalogueCapsules,
     achatsCapsules,
+    fichesAchetees,
+    { rayon },
   ] = await Promise.all([
       // Les préférences du carnet (356) : colonne tardive, relue avec tolérance.
-      readRowTolerant<{ carnet_prefs: unknown }>(supabase, 'profiles', 'id', user.id, ['carnet_prefs']),
+      // L'abonnement dans la même lecture : un abonné a toutes les fiches, le
+      // rayon Fiches ne l'invite pas à en acheter.
+      readRowTolerant<{ carnet_prefs: unknown; subscription_tier: string }>(
+        supabase,
+        'profiles',
+        'id',
+        user.id,
+        ['carnet_prefs', 'subscription_tier'],
+      ),
       // Cours du carnet (186) + les trois colonnes de la 356. Si la 356 dort,
       // Postgres refuse la requête entière (42703) : on relit sans elles.
       lireCours(supabase, user.id),
@@ -100,6 +122,9 @@ export default async function CarnetPage() {
       // migration dort — l'étagère ne s'affiche alors pas.
       lireCatalogueCapsules(supabase),
       lireMesAchats(supabase, user.id),
+      // Les fiches de révision achetées : les chapitres débloqués (183).
+      lireMesFichesAchetees(supabase, user.id),
+      searchParams,
     ])
 
   // --- Questions JOUABLES par cours (brouillons exclus) ----------------------
@@ -159,21 +184,24 @@ export default async function CarnetPage() {
   })
 
   return (
-    <>
-      {/* Le « + » flottant vit dans BentoCarnet : une seule feuille « Nouveau
-          dossier », qui connaît les dossiers existants (doublons). */}
-      <BentoCarnet
-        cours={cours}
-        prefs={normaliserPreferences(profil?.carnet_prefs)}
-        revuesAujourdhui={revuesAujourdhui}
-        aujourdhui={todayKey}
-        capsules={
-          catalogueCapsules.length > 0 ? (
-            <EtagereCapsules etagere={etagereCarnet(catalogueCapsules, achatsCapsules)} />
-          ) : null
-        }
-      />
-    </>
+    <Bibliotheque
+      rayonInitial={lireRayon(rayon)}
+      capsules={etagereCarnet(catalogueCapsules, achatsCapsules)}
+      capsulesDisponibles={catalogueCapsules.length > 0}
+      fiches={fichesAchetees}
+      premium={isPremiumTier((profil?.subscription_tier as Tier | undefined) ?? 'free')}
+      nbDossiers={cours.length}
+      dossiers={
+        // Le « + » flottant vit dans BentoCarnet : une seule feuille « Nouveau
+        // dossier », qui connaît les dossiers existants (doublons).
+        <BentoCarnet
+          cours={cours}
+          prefs={normaliserPreferences(profil?.carnet_prefs)}
+          revuesAujourdhui={revuesAujourdhui}
+          aujourdhui={todayKey}
+        />
+      }
+    />
   )
 }
 

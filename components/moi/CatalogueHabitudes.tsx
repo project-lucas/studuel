@@ -122,7 +122,7 @@ function Ligne({
   }
 
   return (
-    <li className="moi-card rounded-3xl bg-white px-4 py-3">
+    <li className="carte-plaque px-4 py-3">
       <div className="flex items-start gap-3">
         <span
           aria-hidden="true"
@@ -270,7 +270,7 @@ export default function CatalogueHabitudes({
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="moi-card rounded-3xl bg-white px-4 py-4">
+      <div className="carte-plaque px-4 py-4">
         <p className="font-heading text-[15px] leading-snug font-extrabold text-balance text-foreground">
           {verdict}
         </p>
@@ -284,7 +284,7 @@ export default function CatalogueHabitudes({
       </div>
 
       <section aria-label="Mes habitudes suivies">
-        <h2 className="font-heading mx-0.5 mb-2 text-[15px] font-extrabold">
+        <h2 className="titre-section mx-0.5 mb-2">
           {suivies.length > 0
             ? `Je suis ${suivies.length} habitude${suivies.length > 1 ? 's' : ''}`
             : 'Tu ne suis encore aucune habitude'}
@@ -309,7 +309,7 @@ export default function CatalogueHabitudes({
 
       {libres.length > 0 ? (
         <section aria-label="Habitudes à ajouter">
-          <h2 className="font-heading mx-0.5 mb-2 text-[15px] font-extrabold">
+          <h2 className="titre-section mx-0.5 mb-2">
             À ajouter quand tu veux
           </h2>
           <ul className="flex flex-col gap-2">

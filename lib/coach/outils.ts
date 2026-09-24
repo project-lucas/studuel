@@ -122,7 +122,7 @@ export const MODES: Record<ModeCle, Mode> = {
   flashcards: {
     cle: 'flashcards',
     label: 'Des flashcards',
-    hint: 'Des cartes à réviser, dans ton carnet',
+    hint: 'Des cartes à réviser, dans ta bibliothèque',
     teinte: 'vert',
     placeholder: 'Le chapitre à transformer en cartes',
     consigne: [

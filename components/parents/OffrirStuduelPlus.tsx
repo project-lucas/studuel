@@ -2,6 +2,7 @@
 
 import { useState, useTransition } from 'react'
 import { Check, Crown } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 import { declarerInteret } from '@/app/tresor/actions'
 import { PLANS, formatPrice, tierDuPlan } from '@/lib/premium'
 
@@ -41,10 +42,10 @@ export default function OffrirStuduelPlus({
   }
 
   return (
-    <section className="bg-primary text-primary-foreground relative overflow-hidden rounded-2xl p-5 shadow-sm">
+    <section className="bg-primary text-primary-foreground relative overflow-hidden rounded-carte p-5 shadow-carte">
       <span aria-hidden="true" className="absolute -top-10 -right-8 size-32 rounded-full bg-white/10" />
       <div className="relative">
-        <p className="text-highlight flex items-center gap-1.5 text-xs font-extrabold tracking-wide uppercase">
+        <p className="surtitre flex items-center gap-1.5 text-highlight">
           <Crown className="size-4" strokeWidth={2.6} aria-hidden="true" />
           Studuel+ pour {childName}
         </p>
@@ -68,14 +69,22 @@ export default function OffrirStuduelPlus({
                 : 'Votre demande est déjà enregistrée. Nous revenons vers vous rapidement.'}
             </p>
           ) : (
-            <button
+            // Le CTA Studuel+ : LA MÊME recette que la carte de la Boutique
+            // (`CarteStudueLPlus`) — le bouton de la maison, en or, qui brille.
+            // L'or est réservé à l'arène, aux gains et à Studuel+ : ici il
+            // est à sa place, mais il porte le socle et le son de tous les
+            // autres boutons.
+            <Button
               type="button"
+              size="lg"
+              variant="secondary"
+              shine
               onClick={demander}
               disabled={pending}
-              className="bg-highlight text-foreground min-h-11 cursor-pointer rounded-xl px-5 font-bold transition-opacity hover:opacity-90 disabled:opacity-60"
+              className="rounded-full bg-highlight font-extrabold text-foreground hover:bg-highlight/90"
             >
               {pending ? 'Un instant…' : 'Je suis intéressé·e'}
-            </button>
+            </Button>
           )}
           {etat === 'erreur' ? (
             <p role="alert" className="text-sm font-semibold">

@@ -6,12 +6,14 @@ import { Check, GraduationCap, Pencil, School, Settings } from 'lucide-react'
 import AvatarRender from '@/components/avatar/AvatarRender'
 import CompteurVerre, { type CompteurCarte } from '@/components/moi/CompteurVerre'
 import ProfileEditor from '@/components/defi/ProfileEditor'
+import AtelierAvatarIa from '@/components/moi/AtelierAvatarIa'
+import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
 import BadgeGallery from '@/components/defi/BadgeGallery'
 import type { BadgeRank } from '@/components/defi/RankBadge'
 import { CristalIcon } from '@/components/ui/MonnaieIcon'
 import { setEquippedBadges } from '@/app/defi/profile-actions'
 import { MAX_EQUIPPED, type BadgeState } from '@/lib/badges'
-import { avatarPortraitSrc, type AvatarConfig } from '@/lib/avatar'
+import { avatarEstDessine, avatarPortraitSrc, type AvatarConfig } from '@/lib/avatar'
 import { sfx } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
 
@@ -146,6 +148,8 @@ export default function CarteProfil({
   tuileNotes = null,
   suite = null,
   soudee = false,
+  abonne = false,
+  boutonGauche = null,
 }: {
   data: CarteProfilData
   /** Le titre d'assiduité (« Assidu »), sans numéro. */
@@ -163,6 +167,10 @@ export default function CarteProfil({
   soudee?: boolean
   /** Rendu sous la carte, dans la même section (l'écran continue). */
   suite?: ReactNode
+  /** Studuel+ : Marcel dessine l'avatar (sinon, l'atelier montre ce qu'il ouvrirait). */
+  abonne?: boolean
+  /** À gauche de la rangée du haut, en face des gemmes : le bouton du rythme. */
+  boutonGauche?: ReactNode
 }) {
   const [editing, setEditing] = useState(false)
   const [banner, setBanner] = useState(data.profileBanner)
@@ -181,7 +189,12 @@ export default function CarteProfil({
   const enAvant = equipped
     .map((id) => data.badges.find((b) => b.id === id))
     .filter((b): b is BadgeState => b !== undefined)
-  const aPortrait = avatarPortraitSrc(data.avatar) !== null
+  // Le blason s'affiche ENTIER (un écu) ; un avatar dessiné par Marcel, comme
+  // l'avatar composé, dans l'anneau d'or.
+  const aPortrait = avatarPortraitSrc(data.avatar) !== null && !avatarEstDessine(data.avatar)
+  // « MARCEL DESSINE TON AVATAR » s'ouvre au toucher de l'avatar.
+  const [atelier, setAtelier] = useState(false)
+  useFermeAuMasquage(setAtelier, false)
 
   const toggleEquip = (id: string) => {
     if (!earnedIds.has(id)) return
@@ -209,7 +222,8 @@ export default function CarteProfil({
       <div
         className={cn(
           'moi-carte relative overflow-hidden text-white',
-          soudee ? 'rounded-t-3xl' : 'rounded-3xl',
+          // Le rayon de LA carte (token) : le dégradé documenté reste le sien.
+          soudee ? 'rounded-t-carte' : 'rounded-carte',
         )}
         onClick={() => setReflet((n) => n + 1)}
       >
@@ -217,8 +231,11 @@ export default function CarteProfil({
         {reflet > 0 ? <span key={reflet} className="moi-foil" aria-hidden="true" /> : null}
 
         <div className="relative px-4 pt-3 pb-4">
-          {/* --- La rangée de ressources : monnaies à droite, engrenage au bout. */}
-          <div className="flex items-center justify-end gap-1.5">
+          {/* --- La rangée de ressources : le rythme à gauche, les monnaies à
+              droite, l'engrenage au bout. */}
+          <div className="flex items-center gap-1.5">
+            {boutonGauche}
+            <span className="flex-1" />
             {monnaies ? (
               <MonnaieVerre
                 icone={<CristalIcon className="size-6" />}
@@ -241,12 +258,14 @@ export default function CarteProfil({
 
           {/* --- L'identité, sous la rangée : l'avatar en grand ------------- */}
           <div className="mt-1 flex items-center gap-4">
-            <Link
-              href="/moi/avatar"
+            <button
+              type="button"
               onClick={(e) => {
                 e.stopPropagation()
                 sfx.tap()
+                setAtelier(true)
               }}
+              aria-haspopup="dialog"
               aria-label="Changer mon avatar"
               className={cn(
                 'relative block shrink-0 transition-transform active:scale-[0.96]',
@@ -276,7 +295,7 @@ export default function CarteProfil({
                 Niv. {data.level}
                 <span className="sr-only"> — niveau</span>
               </span>
-            </Link>
+            </button>
 
             <div className="min-w-0 flex-1">
               <div className="flex items-start gap-2">
@@ -387,6 +406,7 @@ export default function CarteProfil({
         ) : null}
       </div>
       {suite}
+      <AtelierAvatarIa open={atelier} onClose={() => setAtelier(false)} abonne={abonne} />
     </section>
   )
 }

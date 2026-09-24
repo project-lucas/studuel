@@ -52,7 +52,7 @@ export default function ClanWeekCard({
   return (
     <section className="rounded-2xl border bg-card p-4 shadow-sm">
       <header className="flex items-center justify-between gap-2">
-        <h2 className="flex items-center gap-2 font-heading text-lg font-bold">
+        <h2 className="flex items-center gap-2 font-heading text-lg font-extrabold">
           <Users className="size-5 text-primary" />
           Clan de la semaine
         </h2>

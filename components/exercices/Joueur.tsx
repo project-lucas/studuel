@@ -197,7 +197,7 @@ export default function Joueur({
         <div className="flex items-center gap-2.5">
           <span className={s.numero}>{exercice.position}</span>
           <div className="min-w-0">
-            <p className="text-[0.72rem] font-extrabold tracking-wider text-[var(--muted-foreground)] uppercase">{COMPETENCES[contenu.competence]}</p>
+            <p className="surtitre">{COMPETENCES[contenu.competence]}</p>
             <h1 className="font-heading text-[1.45rem] leading-tight font-extrabold text-balance">{contenu.titre}</h1>
           </div>
         </div>
@@ -360,7 +360,7 @@ function Erreur({ raison, retour, onReessayer }: { raison: RaisonCahier; retour:
   return (
     <div className="rounded-3xl border-2 border-dashed border-[var(--border)] p-6 text-center">
       {raison === 'verrouille' ? <Lock className="mx-auto mb-2 size-6 text-[var(--muted-foreground)]" aria-hidden="true" /> : null}
-      <p className="font-heading font-bold text-balance">{message}</p>
+      <p className="font-heading font-extrabold text-balance">{message}</p>
       <div className="mt-4 flex flex-col items-center gap-2">
         {raison === 'premium' ? (
           <Button asChild className="rounded-full">

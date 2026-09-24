@@ -115,7 +115,8 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
     return (
       <div className="flex flex-col items-center gap-4 pt-10 text-center">
         <div className="text-5xl">🌿</div>
-        <h1 className="font-heading text-2xl font-bold">Rien à revoir !</h1>
+        {/* La page porte déjà le H1 (« À revoir ») : ici, un h2. */}
+        <h2 className="font-heading text-2xl font-extrabold">Rien à revoir !</h2>
         <p className="max-w-xs text-sm text-muted-foreground">
           Ta mémoire est à jour. Continue tes leçons et tes quiz — la file se
           remplira toute seule, au bon moment.
@@ -148,13 +149,13 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
           {ratio >= 0.8 ? '🧠' : ratio >= 0.5 ? '💪' : '🌱'}
         </div>
         <div>
-          <h1 className="font-heading text-3xl font-bold">
+          <h2 className="font-heading text-2xl font-extrabold">
             {ratio >= 0.8
               ? 'Mémoire affûtée !'
               : ratio >= 0.5
                 ? 'Bien repris !'
                 : 'Ça reviendra vite !'}
-          </h1>
+          </h2>
           <p className="mt-1 text-muted-foreground">
             {correct}/{answers.length} retenues — chaque item est reprogrammé
             au bon moment.
@@ -244,7 +245,7 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
 
       {item.kind === 'question' ? (
         <div className="flex flex-col gap-2">
-          <h2 className="font-heading mb-1 text-xl font-bold text-balance">
+          <h2 className="font-heading mb-1 text-xl font-extrabold text-balance">
             {item.prompt}
           </h2>
           {item.options.map((option, i) => {
@@ -360,7 +361,7 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
               variant="outline"
               size="lg"
               tabIndex={revealed ? undefined : -1}
-              className="rounded-full border-warning/40 text-warning hover:bg-warning/10"
+              className="rounded-full"
               onClick={() => {
                 setStreak(0)
                 sfx.wrong()
@@ -373,7 +374,9 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
             <Button
               size="lg"
               tabIndex={revealed ? undefined : -1}
-              className="rounded-full bg-success text-white hover:bg-success/85"
+              // Violet, pas vert : « Je savais » est une ACTION ; le vert reste
+              // au verdict (la carte, les pastilles).
+              className="rounded-full"
               onClick={() => {
                 const nextStreak = streak + 1
                 setStreak(nextStreak)

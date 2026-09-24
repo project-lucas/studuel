@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { Check } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import {
@@ -158,16 +159,9 @@ export default function SerieCelebration({
 
       {/* La sortie, en bas — sous le pouce, comme les réponses du quiz. */}
       <div className="mx-auto w-full max-w-sm pt-6">
-        <button
-          type="button"
-          onClick={() => {
-            sfx.tap()
-            onContinue()
-          }}
-          className="quiz-pilule h-12 w-full text-sm font-extrabold text-white [--pilule-bas:color-mix(in_oklab,var(--primary),black_6%)] [--pilule-bord:color-mix(in_oklab,var(--primary),black_32%)] [--pilule-haut:color-mix(in_oklab,var(--primary),white_8%)]"
-        >
+        <Button type="button" size="xl" onClick={onContinue} className="w-full">
           Continuer
-        </button>
+        </Button>
       </div>
     </div>
   )

@@ -107,7 +107,7 @@ export default function ParrainageCard({
           className="size-16 shrink-0 select-none object-contain"
         />
         <div className="min-w-0 flex-1">
-          <h2 className="font-heading text-lg leading-tight font-extrabold">Invite un ami</h2>
+          <h2 className="titre-section">Invite un ami</h2>
           <p className="mt-0.5 flex items-center gap-1 text-sm font-bold text-primary">
             <GemIcon className="size-4" aria-hidden="true" />+{gemsLabel(REFERRAL_GEM_REWARD)}{' '}
             pour toi et pour lui

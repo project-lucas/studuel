@@ -1,0 +1,421 @@
+/* L'ÉCRAN DE FIN DE SEMAINE DE LA LIGUE — la fête (ou le recul) en trois temps :
+   0,3 s  le blason de la semaine passée entre ;
+   1,1 s  L'ÉVÉNEMENT : les rayons s'ouvrent, une onde part, le blason change
+          (nouveau rang) ou se gonfle (nouvelle division), le nom de la
+          division bascule, un point de division s'allume ;
+   1,6 s  le titre, la phrase, puis les gains un par un et « Continuer ».
+
+   Règle de l'app : on n'anime QUE `transform` et `opacity`, avec des valeurs
+   littérales dans les images-clés. L'état FINAL est l'état de base de chaque
+   élément : sous « mouvement réduit », les animations sautent et l'écran
+   montre directement le résultat. */
+
+.voile {
+  position: fixed;
+  inset: 0;
+  /* Au-dessus du bandeau et de la barre (50), sous le vol des gains (60). */
+  z-index: 55;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: max(1.25rem, env(safe-area-inset-top)) 1.25rem max(1.25rem, env(safe-area-inset-bottom));
+  color: var(--ink-on-dark);
+  background:
+    radial-gradient(90% 55% at 50% 32%, color-mix(in oklch, var(--primary) 70%, transparent), transparent 72%),
+    var(--carte-sombre-fond);
+  animation: voileEntre 320ms ease-out both;
+}
+.voile[data-etat='ferme'] {
+  animation: voileSort 240ms ease-in both;
+}
+
+.confettis {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  animation: apparait 200ms 1100ms both;
+}
+
+.scene {
+  position: relative;
+  width: 100%;
+  max-width: 23rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.surtitre {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-on-dark-muted);
+  animation: monte 420ms 120ms ease-out both;
+}
+
+/* ------------------------------------------------------------ le blason */
+
+.embleme {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 13rem;
+  height: 13rem;
+}
+
+.halo,
+.rayonsCadre,
+.onde,
+.blason {
+  grid-area: 1 / 1;
+}
+
+.halo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in oklch, var(--highlight) 55%, transparent), transparent 66%);
+  opacity: 0.75;
+  animation:
+    haloEntre 600ms 1100ms ease-out both,
+    haloRespire 2.6s 1700ms ease-in-out infinite;
+}
+
+.rayonsCadre {
+  width: 170%;
+  height: 170%;
+  animation: rayonsEntre 700ms 1050ms cubic-bezier(0.2, 1.2, 0.4, 1) both;
+}
+.rayons {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    from 0deg,
+    color-mix(in oklch, var(--highlight) 50%, transparent) 0deg 8deg,
+    transparent 8deg 22.5deg
+  );
+  mask-image: radial-gradient(circle, black 18%, transparent 66%);
+  animation: tourne 20s linear infinite;
+}
+.rang .rayons {
+  background: repeating-conic-gradient(
+    from 0deg,
+    color-mix(in oklch, var(--highlight) 70%, transparent) 0deg 10deg,
+    transparent 10deg 20deg
+  );
+}
+
+.onde {
+  width: 72%;
+  height: 72%;
+  border-radius: 50%;
+  border: 4px solid var(--highlight);
+  opacity: 0;
+  animation: onde 900ms 1100ms ease-out both;
+}
+.onde2 {
+  animation-delay: 1300ms;
+}
+
+.blason {
+  width: 9.5rem;
+  height: 9.5rem;
+  object-fit: contain;
+  user-select: none;
+  filter: drop-shadow(0 10px 18px rgb(0 0 0 / 0.45));
+}
+
+/* Un seul blason : il entre, puis réagit selon la semaine. */
+.promu {
+  animation:
+    blasonEntre 620ms 300ms cubic-bezier(0.2, 1.4, 0.4, 1) both,
+    gonfle 760ms 1100ms ease-out;
+}
+.maintenu {
+  animation:
+    blasonEntre 620ms 300ms cubic-bezier(0.2, 1.4, 0.4, 1) both,
+    flotte 3.2s 1100ms ease-in-out infinite;
+}
+.relegue {
+  animation:
+    blasonEntre 620ms 300ms cubic-bezier(0.2, 1.4, 0.4, 1) both,
+    tasse 820ms 1100ms ease-in-out;
+}
+
+/* Deux blasons : l'ancien part, le nouveau arrive. */
+.avant {
+  opacity: 0;
+  animation:
+    blasonEntre 620ms 300ms cubic-bezier(0.2, 1.4, 0.4, 1) both,
+    sortHaut 460ms 1050ms ease-in forwards;
+}
+.avantBas {
+  animation:
+    blasonEntre 620ms 300ms cubic-bezier(0.2, 1.4, 0.4, 1) both,
+    sortBas 520ms 1050ms ease-in forwards;
+}
+.apres {
+  animation:
+    arrive 950ms 1250ms cubic-bezier(0.2, 1.5, 0.35, 1) both,
+    flotte 3.2s 2300ms ease-in-out infinite;
+}
+.apresDoux {
+  animation:
+    blasonEntre 700ms 1350ms cubic-bezier(0.2, 1.2, 0.4, 1) both;
+}
+
+/* ------------------------------------------------ le nom de la division */
+
+.division {
+  position: relative;
+  height: 2.4rem;
+  width: 100%;
+  overflow: hidden;
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+  font-size: 1.625rem;
+  font-weight: 800;
+  line-height: 2.4rem;
+}
+.nom {
+  position: absolute;
+  inset: 0;
+}
+.nomAvant {
+  opacity: 0;
+  animation: nomSortHaut 440ms 1150ms ease-in both;
+}
+.nomApres {
+  animation: nomEntreBas 520ms 1250ms cubic-bezier(0.2, 1.3, 0.4, 1) both;
+}
+[data-sens='bas'] .nomAvant {
+  animation-name: nomSortBas;
+}
+[data-sens='bas'] .nomApres {
+  animation-name: nomEntreHaut;
+}
+.nomOr {
+  color: var(--highlight);
+}
+
+/* --------------------------------------------- les points de division */
+
+.pips {
+  display: flex;
+  gap: 0.45rem;
+  margin-top: -0.25rem;
+}
+.pip {
+  position: relative;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 999px;
+  background: color-mix(in oklch, var(--ink-on-dark) 22%, transparent);
+}
+.lumiere {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--highlight);
+  box-shadow: 0 0 10px color-mix(in oklch, var(--highlight) 80%, transparent);
+}
+.pipNouveau .lumiere {
+  animation: pipAllume 520ms 1250ms cubic-bezier(0.2, 1.6, 0.4, 1) both;
+}
+.pipPerdu .lumiere {
+  opacity: 0;
+  animation: pipEteint 520ms 1150ms ease-in both;
+}
+.pipsNeufs .lumiere {
+  animation: pipAllume 460ms calc(1350ms + var(--i, 0) * 90ms) cubic-bezier(0.2, 1.6, 0.4, 1) both;
+}
+
+.xp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.75rem 0.3rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 800;
+  background: color-mix(in oklch, var(--ink-on-dark) 10%, transparent);
+  animation: monte 420ms 500ms ease-out both;
+}
+
+/* ------------------------------------------------------ le récit, les gains */
+
+.titre {
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+  font-size: 1.875rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-wrap: balance;
+  animation: monte 500ms 1600ms ease-out both;
+}
+.phrase {
+  max-width: 20rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ink-on-dark-muted);
+  text-wrap: balance;
+  animation: monte 500ms 1750ms ease-out both;
+}
+
+.gains {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+.gain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: 1rem;
+  background: color-mix(in oklch, var(--ink-on-dark) 9%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--ink-on-dark) 14%, transparent);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-align: left;
+  animation: gainEntre 460ms calc(2000ms + var(--i, 0) * 150ms) cubic-bezier(0.2, 1.3, 0.4, 1) both;
+}
+.montant {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--highlight);
+  font-variant-numeric: tabular-nums;
+}
+
+.suite {
+  width: 100%;
+  margin-top: 0.5rem;
+  animation: monte 450ms var(--retard-bouton, 2400ms) ease-out both;
+}
+
+/* ------------------------------------------------------ images-clés */
+
+@keyframes voileEntre {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes voileSort {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@keyframes apparait {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes monte {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes haloEntre {
+  from { opacity: 0; transform: scale(0.4); }
+  to { opacity: 0.75; transform: scale(1); }
+}
+@keyframes haloRespire {
+  0%, 100% { opacity: 0.75; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.06); }
+}
+@keyframes rayonsEntre {
+  from { opacity: 0; transform: scale(0.3); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes tourne {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes onde {
+  0% { opacity: 0; transform: scale(0.5); }
+  12% { opacity: 1; }
+  100% { opacity: 0; transform: scale(2); }
+}
+@keyframes blasonEntre {
+  from { opacity: 0; transform: scale(0.3); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes gonfle {
+  0% { transform: scale(1); }
+  35% { transform: scale(1.22); }
+  65% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+@keyframes flotte {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+@keyframes tasse {
+  0% { transform: translateY(0) scale(1); }
+  40% { transform: translateY(12px) scale(0.9); }
+  100% { transform: translateY(0) scale(1); }
+}
+@keyframes sortHaut {
+  from { opacity: 1; transform: scale(1) rotate(0deg); }
+  to { opacity: 0; transform: scale(1.6) rotate(-14deg); }
+}
+@keyframes sortBas {
+  from { opacity: 1; transform: translateY(0) scale(1); }
+  to { opacity: 0; transform: translateY(40px) scale(0.8); }
+}
+@keyframes arrive {
+  0% { opacity: 0; transform: scale(0.2) rotate(-30deg); }
+  55% { opacity: 1; transform: scale(1.22) rotate(6deg); }
+  80% { transform: scale(0.95) rotate(-2deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+@keyframes nomSortHaut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-100%); }
+}
+@keyframes nomSortBas {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(100%); }
+}
+@keyframes nomEntreBas {
+  from { opacity: 0; transform: translateY(100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes nomEntreHaut {
+  from { opacity: 0; transform: translateY(-100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pipAllume {
+  0% { opacity: 0; transform: scale(0); }
+  60% { opacity: 1; transform: scale(1.7); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes pipEteint {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.3); }
+}
+@keyframes gainEntre {
+  from { opacity: 0; transform: translateY(18px) scale(0.92); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .voile *,
+  .voile {
+    animation: none !important;
+  }
+  .avant,
+  .avantBas,
+  .nomAvant,
+  .onde {
+    display: none;
+  }
+}

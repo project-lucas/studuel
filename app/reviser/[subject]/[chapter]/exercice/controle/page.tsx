@@ -36,7 +36,7 @@ export default async function ControlePage({
   if (!canAccessPremiumTests(tier)) redirect(cahierHref)
 
   return (
-    <PageChapitre couleur={subject.color} surtitre={`${subject.name} · ${chapter.title}`} titre="Le contrôle blanc" retour={cahierHref}>
+    <PageChapitre sousTitre={`${subject.name} · ${chapter.title}`} titre="Le contrôle blanc" retour={cahierHref}>
       <ControleBlanc chapterId={chapter.id} chapterTitle={chapter.title} backHref={cahierHref} />
     </PageChapitre>
   )

@@ -15,6 +15,7 @@ import { sfx } from '@/lib/sounds'
 import poigneeIllustration from '@/public/images/boutique/gemmes/poignee.webp'
 import sacIllustration from '@/public/images/boutique/gemmes/sac.webp'
 import barilIllustration from '@/public/images/boutique/gemmes/baril.webp'
+import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
 
 /**
  * L'illustration de chaque pack, en IMPORT STATIQUE (URL à empreinte de
@@ -43,6 +44,9 @@ const ILLUSTRATIONS: Partial<Record<IdPack, IllustrationMagasin>> = {
  * Un pack se demande dans une feuille : un parent paie par carte, les gemmes
  * arrivent quand le paiement est confirmé (migration 369).
  */
+/** Aucune fiche ouverte — une CONSTANTE : `useFermeAuMasquage` la veut stable. */
+const CHOIX_FERME: { id: string | null; open: boolean } = { id: null, open: false }
+
 export default function RayonGemmes({
   packs,
   connecte,
@@ -50,7 +54,10 @@ export default function RayonGemmes({
   packs: readonly PackGemmes[]
   connecte: boolean
 }) {
-  const [choix, setChoix] = useState<{ id: string | null; open: boolean }>({ id: null, open: false })
+  const [choix, setChoix] = useState(CHOIX_FERME)
+  // Un visiteur renvoyé vers la connexion depuis la fiche quitte la Boutique
+  // sans la refermer : au retour sur l'onglet (gardé vivant), elle repart fermée.
+  useFermeAuMasquage(setChoix, CHOIX_FERME)
   const pack = packs.find((p) => p.id === choix.id) ?? null
 
   return (

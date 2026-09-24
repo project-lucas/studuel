@@ -198,7 +198,7 @@ export default function ReviewSession({
     const pct = Math.round((correctCount / total) * 100)
     return (
       <div className="mx-auto w-full max-w-md">
-        <div className="rev-card rounded-3xl bg-white p-6 text-center shadow-sm ring-1 ring-black/5">
+        <div className="carte p-6 text-center">
           <p className="text-4xl" aria-hidden="true">
             {pct >= 80 ? '🏆' : pct >= 50 ? '💪' : '📚'}
           </p>
@@ -290,7 +290,7 @@ export default function ReviewSession({
       </p>
 
       {/* La question du moment — `key` remonte un joueur neuf à chaque pas. */}
-      <div className="rev-card rounded-3xl bg-white p-4 shadow-sm ring-1 ring-black/5">
+      <div className="carte p-4">
         <QuestionPlayer
           key={current.id}
           type={current.type}

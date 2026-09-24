@@ -1,9 +1,7 @@
 import Link from 'next/link'
-import { Layers } from 'lucide-react'
-import BackButton from '@/components/BackButton'
 import LessonFlashcards from '@/components/LessonFlashcards'
 import LessonSupportLock from '@/components/LessonSupportLock'
-import SubjectIcon from '@/components/SubjectIcon'
+import EnTetePage from '@/components/reviser/EnTetePage'
 import { flashcardsFromQuestions } from '@/lib/flashcards'
 import { quizSourceLabel } from '@/lib/lesson-quiz'
 import { canAccessPremiumTests, getUserTierFor } from '@/lib/subscription'
@@ -59,58 +57,55 @@ export default async function FlashcardsPage({
 
   return (
     <div className="mx-auto w-full max-w-2xl pb-16">
-      <BackButton fallback={backHref} />
+      {/* L'en-tête commun de Réviser (audit du 23/09/2026) : le titre à gauche,
+          la matière, le chapitre et la leçon dessous. */}
+      <EnTetePage
+        retour={{ fallback: backHref }}
+        titre="Flashcards"
+        sousTitre={
+          <>
+            {subject.name} · {chapter.title}
+            {lesson.title.trim() !== chapter.title.trim() ? ` · ${lesson.title}` : ''}
+            {emprunt ? (
+              // Honnêteté : ces cartes viennent du quiz d'une leçon voisine.
+              // On le dit plutôt que de les faire passer pour celles de cette
+              // leçon.
+              <span className="block text-xs text-muted-foreground/80">{emprunt}</span>
+            ) : null}
+          </>
+        }
+      />
 
-      <div className="mt-4 mb-8 text-center">
-        <span className="text-muted-foreground inline-flex items-center gap-1.5 text-sm font-medium">
-          <SubjectIcon
-            slug={subject.slug}
-            className="size-4 shrink-0"
-            strokeWidth={2}
-            aria-hidden="true"
+      <div className="mt-8">
+        {locked ? (
+          <LessonSupportLock support="Les flashcards" backHref={backHref} />
+        ) : cards.length > 0 ? (
+          <LessonFlashcards
+            cards={cards}
+            backHref={backHref}
+            // La matière étiquette les items de la file « À revoir ».
+            subject={subject.name}
+            title={`${cards.length} carte${cards.length > 1 ? 's' : ''} · ${lesson.title}`}
           />
-          {subject.name} · {chapter.title}
-        </span>
-        <h1 className="font-heading mt-1 flex items-center justify-center gap-2 text-2xl font-bold text-balance md:text-3xl">
-          <Layers className="text-primary size-6" aria-hidden="true" />
-          Flashcards
-        </h1>
-        <p className="text-muted-foreground mt-1 text-sm">{lesson.title}</p>
-        {emprunt ? (
-          // Honnêteté : ces cartes viennent du quiz d'une leçon voisine. On le
-          // dit plutôt que de les faire passer pour celles de cette leçon.
-          <p className="text-muted-foreground/80 mt-1 text-xs">{emprunt}</p>
-        ) : null}
+        ) : (
+          <div className="mx-auto max-w-md rounded-3xl border border-dashed p-8 text-center">
+            <p className="font-heading font-semibold">
+              Aucune carte pour ce chapitre.
+            </p>
+            <p className="text-muted-foreground mt-2 text-sm">
+              Les cartes se construisent à partir des questions du chapitre — et
+              aucun quiz n&apos;y est encore rattaché. Reviens par le cours&nbsp;:
+              il est complet, lui.
+            </p>
+            <Link
+              href={backHref}
+              className="text-primary mt-4 inline-block text-sm font-medium underline underline-offset-4"
+            >
+              Retour à la leçon
+            </Link>
+          </div>
+        )}
       </div>
-
-      {locked ? (
-        <LessonSupportLock support="Les flashcards" backHref={backHref} />
-      ) : cards.length > 0 ? (
-        <LessonFlashcards
-          cards={cards}
-          backHref={backHref}
-          // La matière étiquette les items de la file « À revoir ».
-          subject={subject.name}
-          title={`${cards.length} carte${cards.length > 1 ? 's' : ''} · ${lesson.title}`}
-        />
-      ) : (
-        <div className="mx-auto max-w-md rounded-3xl border border-dashed p-8 text-center">
-          <p className="font-heading font-semibold">
-            Aucune carte pour ce chapitre.
-          </p>
-          <p className="text-muted-foreground mt-2 text-sm">
-            Les cartes se construisent à partir des questions du chapitre — et
-            aucun quiz n&apos;y est encore rattaché. Reviens par le cours&nbsp;:
-            il est complet, lui.
-          </p>
-          <Link
-            href={backHref}
-            className="text-primary mt-4 inline-block text-sm font-medium underline underline-offset-4"
-          >
-            Retour à la leçon
-          </Link>
-        </div>
-      )}
     </div>
   )
 }

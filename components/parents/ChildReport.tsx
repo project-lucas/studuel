@@ -114,7 +114,7 @@ export default function ChildReport({
 
   return (
     <article
-      className="bg-card mb-6 rounded-2xl border p-5 shadow-sm"
+      className="carte mb-6 p-5"
       aria-labelledby={`enfant-${childId}`}
     >
       <header className="mb-4">
@@ -208,7 +208,7 @@ export default function ChildReport({
       </div>
 
       <section className="mb-5">
-        <h4 className="text-muted-foreground mb-2 text-xs font-medium tracking-wide uppercase">
+        <h4 className="titre-section mb-2">
           Cette semaine
         </h4>
         <div className="flex gap-2">
@@ -261,11 +261,11 @@ function BigStat({
   sub: string
 }) {
   return (
-    <div className="border-primary/25 bg-primary/5 rounded-2xl border p-3 text-center">
+    <div className="border-primary/25 bg-primary/5 rounded-carte border p-3 text-center">
       <span className="bg-primary/10 text-primary mx-auto mb-1.5 flex size-8 items-center justify-center rounded-lg">
         {icon}
       </span>
-      <span className="font-heading block text-lg leading-none font-bold tabular-nums">
+      <span className="font-heading block text-lg leading-none font-extrabold tabular-nums">
         {value}
       </span>
       <span className="text-muted-foreground mt-1.5 block text-[11px] leading-tight font-medium">

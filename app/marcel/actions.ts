@@ -53,8 +53,10 @@ export type DemandeResult = {
   cartes?: CarteIa[]
   /** Un refus qui se dit à l'élève tel quel (pièce jointe illisible, trop lourde). */
   erreur?: string
-  /** Quota et jetons épuisés — ce n'est pas une panne. */
+  /** Crédits et jetons épuisés — ce n'est pas une panne. */
   quota?: boolean
+  /** Élève gratuit : Marcel fait partie de Studuel+ (migration 378). */
+  abonnement?: boolean
   /** Plafond quotidien de coût atteint : rien ne le lève. */
   plafond?: boolean
   /** Aucune clé configurée, ou migration 215 pas encore exécutée. */
@@ -188,9 +190,9 @@ export async function demanderAMarcel(
     // Marcel répond TOUJOURS quelque chose, y compris quand il n'a rien pu
     // faire : un ordre qui ne reçoit pas de réponse se lit comme une panne.
     const reponse = range
-      ? `C’est rangé dans ton carnet, dans « ${range.cours} ». Tu le reverras en révision.`
+      ? `C’est rangé dans ta bibliothèque, dans « ${range.cours} ». Tu le reverras en révision.`
       : echange
-        ? 'Je n’ai pas réussi à écrire dans ton carnet. Réessaie dans un instant.'
+        ? 'Je n’ai pas réussi à écrire dans ta bibliothèque. Réessaie dans un instant.'
         : 'Je n’ai encore rien à ranger : pose-moi d’abord une question.'
 
     const garde = await enregistrerEchange(supabase, user.id, {
@@ -223,7 +225,10 @@ export async function demanderAMarcel(
     return { ok: false, unavailable: true }
   }
   if (verdict === 'plafond') return { ok: false, plafond: true }
-  if (verdict !== 'quota' && verdict !== 'jeton') return { ok: false, quota: true }
+  if (verdict === 'abonnement') return { ok: false, abonnement: true }
+  // « credit » : crédits du mois (378) ; « quota » : quota du jour (215, tant
+  // que la 378 n'est pas passée) ; « jeton » : la rallonge.
+  if (verdict !== 'credit' && verdict !== 'quota' && verdict !== 'jeton') return { ok: false, quota: true }
 
   const client = await aiClient(vision ?? undefined)
   if (!client) return { ok: false, unavailable: true }

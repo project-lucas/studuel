@@ -30,6 +30,9 @@ on:
     - cron: '0 17,18 * * *'
     # Clôture de la ligue hebdomadaire — lundi, juste après minuit UTC.
     - cron: '10 0 * * 1'
+    # « Ton coffre d'équipe est ouvert » — lundi, 8h de Paris (7h UTC en
+    # hiver, 6h UTC en été ; la route garde la bonne des deux).
+    - cron: '30 6,7 * * 1'
   # Permet de déclencher un rappel à la main depuis l'onglet Actions, pour
   # vérifier le montage sans attendre le lendemain matin.
   workflow_dispatch:
@@ -39,7 +42,7 @@ on:
         required: true
         default: 'srs'
         type: choice
-        options: [srs, streak, league]
+        options: [srs, streak, league, coffre]
 
 jobs:
   rappel:
@@ -67,11 +70,13 @@ jobs:
             '0 6,7 * * *')   chemin='/api/push/send?type=srs' ;;
             '0 17,18 * * *') chemin='/api/push/send?type=streak' ;;
             '10 0 * * 1')    chemin='/api/cron/league-reset' ;;
+            '30 6,7 * * 1')  chemin='/api/push/send?type=coffre' ;;
             *)
               case "${CIBLE:-srs}" in
                 srs)    chemin='/api/push/send?type=srs' ;;
                 streak) chemin='/api/push/send?type=streak' ;;
                 league) chemin='/api/cron/league-reset' ;;
+                coffre) chemin='/api/push/send?type=coffre' ;;
                 *) echo "::error::Cible inconnue : ${CIBLE:-}" ; exit 1 ;;
               esac
               ;;

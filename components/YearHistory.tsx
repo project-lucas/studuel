@@ -105,7 +105,7 @@ export default function YearHistory({
             <CalendarDays className="size-5" strokeWidth={2.3} aria-hidden="true" />
           </span>
           <div className="min-w-0 flex-1">
-            <h2 className="font-heading text-lg font-extrabold text-foreground">
+            <h2 className="titre-section text-foreground">
               Ton historique
             </h2>
             <p className="flex items-center gap-1 text-xs font-semibold text-muted-foreground">

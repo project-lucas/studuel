@@ -44,7 +44,7 @@ export default function SubjectGames({
       </p>
       <h2
         id="jeux-matiere"
-        className="font-heading mt-0.5 flex items-center gap-2 text-lg font-bold text-balance"
+        className="titre-section mt-0.5 flex items-center gap-2"
       >
         <Gamepad2 className="size-5 shrink-0 text-primary" aria-hidden="true" />
         Modes de jeu · {subject.name}

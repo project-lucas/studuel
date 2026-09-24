@@ -198,7 +198,7 @@ export default function TourGuide({
           <button
             type="button"
             onClick={goNext}
-            className="font-heading rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground shadow-sm transition-transform active:scale-95"
+            className="font-heading rounded-full bg-primary px-5 py-2.5 text-sm font-extrabold text-primary-foreground shadow-sm transition-transform active:scale-95"
           >
             {isLast ? 'C’est parti !' : 'Suivant'}
           </button>

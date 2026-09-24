@@ -4,22 +4,32 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { LogIn } from 'lucide-react'
-import BadgeBoostXp from '@/components/BadgeBoostXp'
+import BadgeBoostXp, { useBoostEnCours } from '@/components/BadgeBoostXp'
 import FlammeAnimee from '@/components/FlammeAnimee'
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { CristalIcon } from '@/components/ui/MonnaieIcon'
 import type { UniteGain } from '@/lib/gains'
 import { GEM_COST_CHAPTER } from '@/lib/gems'
 import { ecouterGains } from '@/lib/hud-gains'
+import { AMIS_MAX, libelleMultiplicateur, multiplicateurXp } from '@/lib/ligue'
+import { PORTRAIT_FACE_CROP } from '@/lib/portraits'
+import type { AvatarAffiche } from '@/lib/avatar-affiche'
 import {
   isHudAccountHidden,
   isHudHidden,
   isHudOverDarkScene,
+  isHudSerieMasquee,
 } from '@/lib/top-hud-routes'
 import { cn } from '@/lib/utils'
 
-/** Quelle bulle de monnaie est ouverte, s'il y en a une. */
-type OpenPurse = 'cristal' | null
+/** Quelle bulle est ouverte, s'il y en a une : les cristaux ou le multiplicateur d'XP. */
+type OpenPurse = 'cristal' | 'multiplicateur' | null
+
+/**
+ * L'avatar de l'élève, déjà résolu par le serveur (lib/avatar-affiche) : le
+ * bandeau n'embarque pas DiceBear, il n'importe que le type.
+ */
+export type AvatarHud = AvatarAffiche
 
 /**
  * Le bandeau du haut, façon Clash Royale : les infos de jeu que l'élève garde
@@ -40,6 +50,8 @@ export default function TopHud({
   progress,
   userLabel,
   boostXpJusqua = null,
+  avatar = null,
+  nbAmis = null,
 }: {
   /** Solde de gemmes, ou null pour un visiteur non connecté. */
   gems: number | null
@@ -62,6 +74,13 @@ export default function TopHud({
    * ici une fois acheté »).
    */
   boostXpJusqua?: string | null
+  /** L'avatar de l'élève, dans le disque de l'écusson ; null : le numéro de niveau. */
+  avatar?: AvatarHud | null
+  /**
+   * Amis acceptés, qui règlent le multiplicateur d'XP (lib/ligue, migration
+   * 380 : +0,1 par ami, 10 au plus). null : inconnu, il ne s'affiche pas.
+   */
+  nbAmis?: number | null
 }) {
   const pathname = usePathname()
   // La bulle d'explication d'une monnaie (façon Brawl Stars). Une seule ouverte
@@ -74,6 +93,9 @@ export default function TopHud({
   })
   const openPurse = opened.path === pathname ? opened.purse : null
   const pursesRef = useRef<HTMLDivElement>(null)
+  // Le multiplicateur vit dans le bloc de niveau, loin de la bourse : sa boîte
+  // est surveillée elle aussi par la fermeture au tap extérieur.
+  const multiplicateurRef = useRef<HTMLSpanElement>(null)
   // L'écusson encaisse les jetons d'XP : il ne porte pas de nombre, donc il n'a
   // rien à incrémenter — seul le sursaut dit que quelque chose est arrivé. La
   // barre, elle, se remplira au rafraîchissement qui suit la volée.
@@ -92,7 +114,8 @@ export default function TopHud({
     if (!openPurse) return
 
     const closeOnOutside = (event: PointerEvent) => {
-      if (!pursesRef.current?.contains(event.target as Node)) closePurse()
+      const cible = event.target as Node
+      if (!pursesRef.current?.contains(cible) && !multiplicateurRef.current?.contains(cible)) closePurse()
     }
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key === 'Escape') closePurse()
@@ -145,7 +168,9 @@ export default function TopHud({
   // Le bandeau ne capte plus les taps : seules les pastilles sont cliquables,
   // le reste de la bande laisse passer vers le décor derrière.
   return (
-    <header className="pointer-events-none fixed inset-x-0 top-0 z-50 flex h-14 items-center gap-2 px-3 md:hidden">
+    // Sur un mode de jeu, le bandeau s'efface dès qu'on défile et revient en
+    // haut de page (`html.hud-replie`, posée par components/useHudAuDefilement).
+    <header className="pointer-events-none fixed inset-x-0 top-0 z-50 flex h-14 items-center gap-2 px-3 transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none md:hidden [html.hud-replie_&]:-translate-y-full [html.hud-replie_&]:opacity-0">
       {connected ? (
         <>
           {/* Niveau : écusson de jeu flottant — disque violet ciselé (dégradé,
@@ -160,34 +185,61 @@ export default function TopHud({
               // La cible du vol des récompenses (cf. lib/gains, UNITES).
               data-hud-cible="xp"
               className={cn(
-                'pointer-events-auto relative flex min-w-0 items-center gap-2.5 rounded-full py-1 pl-1',
+                'pointer-events-auto relative flex min-w-0 items-center gap-2 rounded-full py-1 pl-1',
                 gems === null ? 'pr-3' : 'pr-0',
                 pillSurface,
               )}
               title={levelTitle ?? undefined}
             >
-              <span
-                className="font-heading flex size-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-b from-primary to-[color-mix(in_oklch,var(--primary),black_24%)] text-sm font-extrabold text-primary-foreground tabular-nums ring-2 ring-highlight/70 shadow-[inset_0_1px_0_rgba(255,255,255,0.45),0_2px_5px_rgba(0,0,0,0.3)]"
-                aria-hidden="true"
-              >
-                {level}
+              {/* L'AVATAR DANS LE DISQUE (Lucas, 24/09/2026 : « à la place du
+                  7, place l'avatar, cela fait doublon » avec « NIVEAU 7 »). Le
+                  disque garde sa bague d'or ; sans avatar connu, il reprend
+                  le numéro de niveau. */}
+              <span className="relative shrink-0">
+                <span
+                  className="font-heading relative flex size-9 items-center justify-center overflow-hidden rounded-full bg-gradient-to-b from-primary to-[color-mix(in_oklch,var(--primary),black_24%)] text-sm font-extrabold text-primary-foreground tabular-nums ring-2 ring-highlight/70 shadow-[inset_0_1px_0_rgba(255,255,255,0.45),0_2px_5px_rgba(0,0,0,0.3)]"
+                  aria-hidden="true"
+                >
+                  {avatar ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={avatar.src}
+                      alt=""
+                      className={avatar.visage ? 'absolute max-w-none object-contain' : 'size-full'}
+                      style={avatar.visage ? PORTRAIT_FACE_CROP : undefined}
+                    />
+                  ) : (
+                    level
+                  )}
+                </span>
+                {/* LE BOOST XP QUI COURT, en étiquette au pied du disque : collé
+                    au niveau, parce que c'est l'XP qu'il double. Il vivait à
+                    droite de « NIVEAU 7 » ; depuis que le multiplicateur prend le
+                    bout de l'écusson, cette place ne tenait plus — le libellé
+                    passait sur deux lignes et le badge mordait la flamme. */}
+                <BadgeBoostXp
+                  jusqua={boostXpJusqua}
+                  className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 px-1 text-[8px] whitespace-nowrap"
+                />
               </span>
               <div className="min-w-0">
                 <p
                   className={cn(
-                    'font-heading flex items-center gap-1 text-[10px] leading-none font-extrabold tracking-wide uppercase',
+                    'font-heading flex items-center gap-1 text-[10px] leading-none font-extrabold tracking-wide whitespace-nowrap uppercase',
                     dark ? 'text-[#faf6ef]' : 'text-primary',
                   )}
                 >
                   Niveau {level}
-                  {/* LE BOOST XP QUI COURT : collé au niveau, parce que c'est
-                      l'XP qu'il double. */}
-                  <BadgeBoostXp jusqua={boostXpJusqua} />
                 </p>
-                <div className="mt-1 flex items-center gap-1.5">
+                <div className="mt-1 flex items-center">
                   <div
                     className={cn(
-                      'h-2 w-16 overflow-hidden rounded-full',
+                      'h-2 overflow-hidden rounded-full',
+                      // 52 px contre le multiplicateur : « ×1,3 » tient en
+                      // 34 px, la barre reprend ce que le badge du coffre lui
+                      // avait pris (la puce de classe de Réviser borne
+                      // l'écusson).
+                      nbAmis === null ? 'w-16' : 'w-13',
                       dark
                         ? 'bg-black/35 ring-1 ring-white/15'
                         : 'bg-muted ring-1 ring-black/[0.06]',
@@ -203,6 +255,23 @@ export default function TopHud({
                       style={{ width: `${pct}%` }}
                     />
                   </div>
+                  {/* LE MULTIPLICATEUR D'XP, CONTRE LA BARRE QU'IL REMPLIT
+                      (Lucas, 24/09/2026 : « à côté de la barre de niveau,
+                      ajoute-le simplement : ×1,0, ×1,1, ×1,2… »). Il y a
+                      remplacé le badge du coffre d'équipe, qui vit dans
+                      l'onglet Amis. En bout d'écusson il coûterait 94 px, et
+                      sur Réviser l'écusson passerait sous la puce de classe. */}
+                  {nbAmis !== null ? (
+                    <span ref={multiplicateurRef} className="pointer-events-auto flex shrink-0">
+                      <MultiplicateurPill
+                        nbAmis={nbAmis}
+                        boostXpJusqua={boostXpJusqua}
+                        open={openPurse === 'multiplicateur'}
+                        onToggle={() => togglePurse('multiplicateur')}
+                        dark={dark}
+                      />
+                    </span>
+                  ) : null}
                 </div>
               </div>
 
@@ -227,7 +296,7 @@ export default function TopHud({
                   ⚠️ Sur l'arène (/defi), où la pastille de niveau se replie au
                   profit de la carte joueur du décor, la série retrouve sa
                   pastille séparée — sinon elle disparaîtrait de l'écran. */}
-              {streak === null ? null : (
+              {streak === null || isHudSerieMasquee(pathname) ? null : (
                 <span
                   className={cn(
                     'flex shrink-0 items-center gap-1 self-stretch border-l pl-2.5',
@@ -262,36 +331,39 @@ export default function TopHud({
               même élève dans deux objets, et un bord droit occupé. La bourse
               garde SA boîte (`pursesRef`) : c'est elle que surveille la
               fermeture au tap extérieur. */}
-              {gems !== null ? (
-                <div
-                  ref={pursesRef}
-                  className={cn(
-                    'flex shrink-0 items-center self-stretch border-l',
-                    dark ? 'border-white/15' : 'border-black/[0.07]',
-                  )}
-                >
-                  <ResourcePill
-                    unite="gemme"
-                    name="Cristal"
-                    nameClassName={dark ? 'text-[#c9b4ff]' : 'text-primary'}
-                    description={
-                      <>
-                        La monnaie du contenu. {GEM_COST_CHAPTER} cristaux ouvrent
-                        un chapitre entier — sa fiche et ses fiches de révision — pour
-                        toujours. Ils se gagnent surtout en invitant tes amis.
-                      </>
-                    }
-                    open={openPurse === 'cristal'}
-                    onToggle={() => togglePurse('cristal')}
-                    label={(n) => `${n} cristaux — à quoi sert cette monnaie`}
-                    plusLabel="Obtenir des cristaux"
-                    value={gems}
-                    icon={<CristalIcon className="size-5" />}
-                    dark={dark}
-                    className={dark ? 'text-[#d8c9ff]' : 'text-primary'}
-                  />
-                </div>
-              ) : null}
+              {/* Les cristaux : la boîte surveillée par la fermeture au tap
+                  extérieur (`pursesRef`). */}
+              <div ref={pursesRef} className="flex shrink-0 items-center self-stretch">
+                {gems !== null ? (
+                  <div
+                    className={cn(
+                      'flex shrink-0 items-center self-stretch border-l',
+                      dark ? 'border-white/15' : 'border-black/[0.07]',
+                    )}
+                  >
+                    <ResourcePill
+                      unite="gemme"
+                      name="Cristal"
+                      nameClassName={dark ? 'text-[#c9b4ff]' : 'text-primary'}
+                      description={
+                        <>
+                          La monnaie du contenu. {GEM_COST_CHAPTER} cristaux ouvrent
+                          un chapitre entier — sa fiche et ses fiches de révision — pour
+                          toujours. Ils se gagnent surtout en invitant tes amis.
+                        </>
+                      }
+                      open={openPurse === 'cristal'}
+                      onToggle={() => togglePurse('cristal')}
+                      label={(n) => `${n} cristaux — à quoi sert cette monnaie`}
+                      plusLabel="Obtenir des cristaux"
+                      value={gems}
+                      icon={<CristalIcon className="size-5" />}
+                      dark={dark}
+                      className={dark ? 'text-[#d8c9ff]' : 'text-primary'}
+                    />
+                  </div>
+                ) : null}
+              </div>
             </div>
           }
         </>
@@ -299,7 +371,7 @@ export default function TopHud({
         <Link
           href="/"
           className={cn(
-            'pointer-events-auto font-heading rounded-full px-3 py-1.5 text-lg font-bold',
+            'pointer-events-auto font-heading rounded-full px-3 py-1.5 text-lg font-extrabold',
             pillSurface,
           )}
         >
@@ -462,6 +534,7 @@ function ResourcePill({
   icon,
   dark,
   className,
+  pointeClassName = 'right-6',
 }: {
   /** L'unité que cette pastille compte — c'est elle qui reçoit les jetons. */
   unite: UniteGain
@@ -480,6 +553,8 @@ function ResourcePill({
   dark: boolean
   /** Robe de la pastille (verre de nuit sur l'arène, crème ailleurs). */
   className: string
+  /** Où tombe la pointe de la bulle, depuis le bord droit de l'écusson. */
+  pointeClassName?: string
 }) {
   const panelId = `bourse-${name.toLowerCase()}`
   const { delta, ref } = useEncaissement(unite, value)
@@ -511,38 +586,14 @@ function ResourcePill({
         </button>
       </div>
 
-      {/* La bulle : ancrée sous l'ÉCUSSON (l'ancêtre positionné), calée à
-          son bord gauche pour rester dans l'écran, la pointe sous la bourse
-          qui vit au bord droit de l'écusson. Elle sort du flux (absolute)
-          pour ne jamais pousser la bande. */}
       {open ? (
-        <div
+        <BulleHud
           id={panelId}
-          className={cn(
-            'absolute top-full left-0 z-10 mt-2 w-60 rounded-2xl p-3 text-left font-sans text-xs leading-relaxed shadow-xl',
-            dark
-              ? 'olympe-glass olympe-glass--sculpte text-[#ece5f7]'
-              : 'bg-card text-foreground/80 ring-1 ring-black/10 backdrop-blur-md',
-          )}
+          titre={name}
+          titreClassName={nameClassName}
+          dark={dark}
+          pointeClassName={pointeClassName}
         >
-          <span
-            aria-hidden="true"
-            className={cn(
-              'absolute -top-1 right-6 size-2.5 rotate-45 rounded-[2px]',
-              // La pointe doit être OPAQUE (elle sort du verre, donc du flou) et
-              // reprendre le ton du HAUT de la bulle, où le voile clair de
-              // `.olympe-glass` est le plus fort — d'où le violet éclairci.
-              dark ? 'bg-[oklch(0.31_0.055_300)]' : 'bg-card',
-            )}
-          />
-          <p
-            className={cn(
-              'font-heading mb-1 text-sm font-extrabold',
-              nameClassName,
-            )}
-          >
-            {name}
-          </p>
           <p>{description}</p>
           {/* LE CHEMIN VERS LA BOUTIQUE, en toutes lettres.
               Il était porté par un petit disque « + » collé au compteur : le
@@ -560,8 +611,142 @@ function ResourcePill({
           >
             {plusLabel} →
           </Link>
-        </div>
+        </BulleHud>
       ) : null}
     </div>
   )
 }
+
+/**
+ * La bulle d'explication d'une pastille du bandeau (façon Brawl Stars) :
+ * ancrée sous l'ÉCUSSON (l'ancêtre positionné), calée à son bord gauche pour
+ * rester dans l'écran, la pointe sous la pastille qui l'a ouverte. Elle sort
+ * du flux (absolute) pour ne jamais pousser la bande.
+ */
+function BulleHud({
+  id,
+  titre,
+  titreClassName,
+  dark,
+  pointeClassName,
+  children,
+}: {
+  id: string
+  titre: string
+  titreClassName: string
+  dark: boolean
+  pointeClassName: string
+  children: ReactNode
+}) {
+  return (
+    <div
+      id={id}
+      className={cn(
+        'absolute top-full left-0 z-10 mt-2 w-60 rounded-2xl p-3 text-left font-sans text-xs leading-relaxed shadow-xl',
+        dark
+          ? 'olympe-glass olympe-glass--sculpte text-[#ece5f7]'
+          : 'bg-card text-foreground/80 ring-1 ring-black/10 backdrop-blur-md',
+      )}
+    >
+      <span
+        aria-hidden="true"
+        className={cn(
+          'absolute -top-1 size-2.5 rotate-45 rounded-[2px]',
+          pointeClassName,
+          // La pointe doit être OPAQUE (elle sort du verre, donc du flou) et
+          // reprendre le ton du HAUT de la bulle, où le voile clair de
+          // `.olympe-glass` est le plus fort — d'où le violet éclairci.
+          dark ? 'bg-[oklch(0.31_0.055_300)]' : 'bg-card',
+        )}
+      />
+      <p className={cn('font-heading mb-1 text-sm font-extrabold', titreClassName)}>{titre}</p>
+      {children}
+    </div>
+  )
+}
+
+/**
+ * LE MULTIPLICATEUR D'XP, contre la barre de niveau : « ×1,3 », tout simple
+ * (Lucas, 24/09/2026). Toute l'XP versée est multipliée par ce nombre — +0,1
+ * par ami (10 au plus), ×2 tant que la potion d'XP court (lib/ligue,
+ * `multiplicateurXp` ; migration 380). Doré quand la potion court. Le tap
+ * déplie la bulle : ce que c'est, et les deux façons de le faire monter.
+ */
+function MultiplicateurPill({
+  nbAmis,
+  boostXpJusqua,
+  open,
+  onToggle,
+  dark,
+}: {
+  nbAmis: number
+  boostXpJusqua: string | null
+  open: boolean
+  onToggle: () => void
+  dark: boolean
+}) {
+  const potion = useBoostEnCours(boostXpJusqua)
+  const amis = Math.min(AMIS_MAX, Math.max(0, nbAmis))
+  const libelle = libelleMultiplicateur(multiplicateurXp(amis, potion))
+  const libelleAmis = libelleMultiplicateur(multiplicateurXp(amis, false))
+  const titreClassName = dark ? 'text-highlight' : 'text-primary'
+  const lienClassName = cn('font-heading inline-flex min-h-11 items-center gap-1 text-xs font-extrabold', titreClassName)
+  return (
+    <>
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-expanded={open}
+        aria-controls="bourse-multiplicateur"
+        aria-label={`Multiplicateur d’XP ${libelle} — à quoi il sert`}
+        // Petit à l'œil, large au doigt : les marges négatives agrandissent
+        // la zone de tap sans pousser la barre.
+        className="-my-2 flex cursor-pointer items-center py-2 pl-1.5 transition active:scale-95"
+      >
+        <span
+          className={cn(
+            'font-heading rounded-full px-1.5 py-0.5 text-[12px] leading-none font-extrabold tabular-nums',
+            potion
+              ? 'bg-highlight text-foreground'
+              : dark
+                ? 'bg-white/15 text-[#faf6ef]'
+                : 'bg-primary/10 text-primary',
+          )}
+        >
+          {libelle}
+        </span>
+      </button>
+      {open ? (
+        <BulleHud
+          id="bourse-multiplicateur"
+          titre={`Multiplicateur d’XP ${libelle}`}
+          titreClassName={titreClassName}
+          dark={dark}
+          // Sous la pastille : disque 36 + marges + barre 52 + la moitié d'elle.
+          pointeClassName="left-[7.5rem]"
+        >
+          <p>Toute l’XP que tu gagnes est multipliée par ce nombre. Deux façons de le faire monter&nbsp;:</p>
+          <ul className="mt-1.5 flex flex-col gap-1">
+            <li>
+              <strong>Tes amis</strong>&nbsp;: +0,1 par ami, jusqu’à ×2,0 à {AMIS_MAX}&nbsp;amis
+              {amis > 0 ? ` (tu en as ${amis} : ${libelleAmis})` : ''}.
+            </li>
+            <li>
+              <strong>La potion d’XP</strong>&nbsp;: elle double tout pendant 2&nbsp;h
+              {potion ? ' — elle est active.' : '.'}
+            </li>
+          </ul>
+          <div className="mt-1 flex flex-wrap gap-x-4">
+            <Link href="/amis" className={lienClassName}>
+              Ajouter un ami →
+            </Link>
+            <Link href="/tresor#marche" className={lienClassName}>
+              Potion d’XP →
+            </Link>
+          </div>
+        </BulleHud>
+      ) : null}
+    </>
+  )
+}
+

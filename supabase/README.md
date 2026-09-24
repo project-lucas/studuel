@@ -41,6 +41,15 @@ node _ASSOCIE/genere-a-executer.mjs   # sonde la base, écrit _ASSOCIE/a-execute
 
 puis coller `_ASSOCIE/a-executer.sql` en entier (Ctrl+A) → Run.
 
+**Écrites depuis cette mesure**, dans l'ordre : 376 (ligue de la semaine) · 377
+(tirelire d'amis) · 378 (crédits de Marcel, avatar dessiné) · **379 (coffre
+d'équipe, qui remplace la tirelire : à coller APRÈS la 378)** · **380
+(multiplicateur de gains d'XP : +0,1 par ami, ×2 sous potion ; APRÈS la 379)** ·
+**381 (révision par quiz, pour le récap des matières de l'onglet Moi ; APRÈS la
+380)**.
+`npm run sonde` dit lesquelles manquent encore ; le générateur ci-dessus les
+rassemble.
+
 **Ensuite, `contenu/365_exercices_6e.sql`** : le catalogue d'exercices de 6e
 dépend de la 364 (colonnes `difficulte` et `origine`). Sa sonde est impossible à la
 clé anon, mais la 364 étant absente, la 365 n'a pas pu tourner.

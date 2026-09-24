@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { motion, useReducedMotion } from 'framer-motion'
 import { Swords } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 import { bossById } from '@/lib/bosses'
 import { sfx } from '@/lib/sounds'
 import { CLOCK_STEP_MS, useClock } from '@/lib/use-clock'
@@ -110,8 +111,8 @@ export default function BossApparition({
     onClose?.()
   }
 
+  // Pas de `sfx.tap()` : « Le défier » est un `Button`, qui joue déjà le clic.
   const fight = () => {
-    sfx.tap()
     setVisible(false)
     onClose?.()
     router.push(`/defi/traque/${boss.id}`)
@@ -221,15 +222,18 @@ export default function BossApparition({
           >
             Plus tard
           </button>
-          <button
+          {/* Violet, pas or : le rideau surgit dans Réviser, hors de l'arène,
+              et l'or y est réservé au DUEL et aux gains. */}
+          <Button
             ref={defierRef}
             type="button"
+            size="lg"
             onClick={fight}
-            className="olympe-gold olympe-press flex flex-[1.4] items-center justify-center gap-2 rounded-2xl px-4 py-3 font-heading text-sm font-extrabold focus-visible:ring-4 focus-visible:ring-highlight/70 focus-visible:outline-none"
+            className="flex-[1.4]"
           >
-            <Swords className="size-4" strokeWidth={2.8} aria-hidden="true" />
+            <Swords strokeWidth={2.8} aria-hidden="true" />
             Le défier
-          </button>
+          </Button>
         </div>
       </motion.div>
     </div>,

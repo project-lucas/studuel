@@ -6,13 +6,18 @@
 // trait ; on pourra substituer des visuels générés sans toucher au code.
 // -----------------------------------------------------------------------------
 
-import type { JSX } from 'react'
+import { useId, type JSX } from 'react'
 
 // --- Bannières ----------------------------------------------------------------
 // Chaque bannière remplit son conteneur (preserveAspectRatio slice) : utilisée
 // en grand derrière l'avatar et en vignette dans la grille.
 
 function BannerSvg({ children, from, to }: { children?: React.ReactNode; from: string; to: string }) {
+  // UN IDENTIFIANT PAR DESSIN (useId) : les onglets restent montés
+  // (components/OngletsVivants) et Chrome ne peint pas un dégradé défini dans un
+  // onglet caché (`display: none`). Un identifiant partagé pouvait donc viser
+  // le dégradé d'un onglet caché et laisser ce dessin sans couleur.
+  const id = useId()
   return (
     <svg
       viewBox="0 0 320 180"
@@ -21,12 +26,12 @@ function BannerSvg({ children, from, to }: { children?: React.ReactNode; from: s
       aria-hidden="true"
     >
       <defs>
-        <linearGradient id={`ban-${from}-${to}`} x1="0" y1="0" x2="0" y2="1">
+        <linearGradient id={id} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor={from} />
           <stop offset="100%" stopColor={to} />
         </linearGradient>
       </defs>
-      <rect width="320" height="180" fill={`url(#ban-${from}-${to})`} />
+      <rect width="320" height="180" fill={`url(#${id})`} />
       {children}
     </svg>
   )

@@ -142,7 +142,7 @@ function EntryRow({ entry }: { entry: RankingEntry }) {
             {entry.rank}
           </span>
         ) : (
-          <span className="font-heading text-sm font-bold text-white/45">
+          <span className="font-heading text-sm font-extrabold text-white/45">
             {entry.rank}
           </span>
         )}

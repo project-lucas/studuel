@@ -92,7 +92,7 @@ export function AreneIntro({
 
       <div className="pt-5">
         {chapitre || matiere ? (
-          <p className="text-xs font-extrabold tracking-wide text-[color:var(--jeu-accent)] uppercase">
+          <p className="surtitre text-[color:var(--jeu-accent)]">
             {[matiere, chapitre].filter(Boolean).join(' · ')}
           </p>
         ) : null}

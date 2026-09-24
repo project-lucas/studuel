@@ -1,10 +1,8 @@
 'use client'
 
 import { useState, useTransition } from 'react'
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import {
-  ArrowLeft,
   ChevronDown,
   Eye,
   Pencil,
@@ -12,7 +10,9 @@ import {
   Sparkles,
   Trash2,
 } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
+import BackButton from '@/components/BackButton'
 import { sfx } from '@/lib/sounds'
 import {
   emptyQuestionContent,
@@ -83,9 +83,9 @@ function FeedbackField({
   const [pending, startTransition] = useTransition()
   const [message, setMessage] = useState<string | null>(null)
 
+  // Pas de `sfx.tap()` : le `Button` de génération joue déjà le clic.
   const generate = () => {
     if (pending || enonce.trim().length === 0) return
-    sfx.tap()
     setMessage(null)
     startTransition(async () => {
       const res = await generateQuestionFeedback(enonce, bonneReponse)
@@ -111,15 +111,17 @@ function FeedbackField({
         placeholder="Explication montrée après la réponse…"
         className={inputClass}
       />
-      <button
+      {/* Violet, pas or : c'est une action ; l'or reste aux gains. */}
+      <Button
         type="button"
+        size="sm"
         disabled={pending || enonce.trim().length === 0}
         onClick={generate}
-        className="mt-1.5 flex cursor-pointer items-center gap-1.5 rounded-full bg-highlight/30 px-3 py-1.5 text-[11px] font-extrabold text-foreground transition active:translate-y-px disabled:opacity-50"
+        className="mt-1.5 self-start"
       >
-        <Sparkles className="size-3.5" aria-hidden="true" />
+        <Sparkles aria-hidden="true" />
         {pending ? 'Génération…' : 'Générer un feedback'}
-      </button>
+      </Button>
       {message ? (
         <p role="alert" className="mt-1 text-[11px] font-semibold text-destructive">
           {message}
@@ -521,16 +523,13 @@ export default function QuestionEditor({
 
   return (
     <div className="mx-auto w-full max-w-md pb-24">
-      <Link
-        href={`/carnet/cours/${courseId}`}
-        onClick={() => sfx.tap()}
-        className="mb-3 inline-flex items-center gap-1.5 text-sm font-bold text-muted-foreground hover:text-foreground"
-      >
-        <ArrowLeft className="size-4" aria-hidden="true" />
-        Retour au cours
-      </Link>
+      {/* La pastille de retour de toute l'app, plus un lien texte à part
+          (audit du 23/09/2026). */}
+      <div className="mb-3">
+        <BackButton fallback={`/carnet/cours/${courseId}`} label="Retour au cours" />
+      </div>
 
-      <div className="rev-card rounded-3xl bg-white p-4 shadow-sm ring-1 ring-black/5">
+      <div className="carte p-4">
         {/* Type + Aperçu. */}
         <div className="mb-4 flex items-center gap-2">
           <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">

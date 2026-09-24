@@ -52,7 +52,9 @@ export default function Feuille({
         data-etat={etat}
         onAnimationEnd={onAnimationEnd}
         onClick={(e) => e.stopPropagation()}
-        className="modale-panneau relative flex max-h-[92svh] w-full max-w-md flex-col overflow-y-auto overscroll-contain rounded-t-3xl bg-background p-4 pb-[max(1rem,env(safe-area-inset-bottom))] shadow-[0_24px_60px_-20px_rgba(0,0,0,0.6)] outline-none sm:rounded-3xl"
+        // Feuille BLANCHE comme toutes les autres feuilles de l'app (audit du
+        // 23/09/2026) : elle était la seule en crème.
+        className="modale-panneau relative flex max-h-[92svh] w-full max-w-md flex-col overflow-y-auto overscroll-contain rounded-t-3xl bg-card p-4 pb-[max(1rem,env(safe-area-inset-bottom))] shadow-[0_24px_60px_-20px_rgba(0,0,0,0.6)] outline-none sm:rounded-3xl"
       >
         <button
           type="button"

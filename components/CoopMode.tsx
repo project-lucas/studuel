@@ -14,6 +14,7 @@ import {
   PartyPopper,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import AnswerBoard from '@/components/jeux/AnswerBoard'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { createClient } from '@/lib/supabase/client'
@@ -148,7 +149,7 @@ export default function CoopMode({ userId, pool, subject, onExit }: Props) {
     return (
       <div className="mx-auto flex max-w-md flex-col gap-4 p-4">
         <div className="text-center">
-          <h2 className="font-heading flex items-center justify-center gap-2 text-xl font-bold text-white">
+          <h2 className="font-heading flex items-center justify-center gap-2 text-xl font-extrabold text-white">
             <HandHeart className="size-5 text-highlight" aria-hidden="true" /> Mode Coop
           </h2>
           <p className="mt-1 text-sm text-white/75">
@@ -202,7 +203,7 @@ export default function CoopMode({ userId, pool, subject, onExit }: Props) {
   if (state.phase === 'error') {
     return (
       <div className="mx-auto flex max-w-md flex-col items-center gap-4 p-6">
-        <p className="text-sm text-red-200">
+        <p className="text-sm text-destructive">
           Cette équipe n’est pas disponible (déjà complète ou expirée).
         </p>
         <Button onClick={handleExit}>Retour</Button>
@@ -234,7 +235,7 @@ export default function CoopMode({ userId, pool, subject, onExit }: Props) {
           <Copy className="size-4 shrink-0" aria-hidden="true" />
           {state.sessionId}
         </button>
-        {copied ? <span className="text-xs text-green-300">Copié !</span> : null}
+        {copied ? <span className="text-xs text-success">Copié !</span> : null}
         <Button variant="ghost" onClick={handleExit} className="text-white hover:text-white">
           Annuler
         </Button>
@@ -261,7 +262,7 @@ export default function CoopMode({ userId, pool, subject, onExit }: Props) {
         <span aria-hidden="true" className="text-6xl">
           {won ? '🏆' : status.outcome === 'lost' ? '💔' : '🤝'}
         </span>
-        <h2 className="font-heading text-2xl font-bold text-white">
+        <h2 className="font-heading text-2xl font-extrabold text-white">
           {won ? 'Équipe victorieuse !' : status.outcome === 'lost' ? 'Équipe à terre' : 'Manche terminée'}
         </h2>
         <p className="flex items-center gap-2 rounded-full bg-highlight px-5 py-2.5 font-mono text-lg font-bold text-foreground tabular-nums">
@@ -376,7 +377,7 @@ function BotCoopMatch({
         <span aria-hidden="true" className="text-6xl">
           {won ? '🏆' : status.outcome === 'lost' ? '💔' : '🤝'}
         </span>
-        <h2 className="font-heading text-2xl font-bold text-white">
+        <h2 className="font-heading text-2xl font-extrabold text-white">
           {won
             ? 'Équipe victorieuse !'
             : status.outcome === 'lost'
@@ -464,7 +465,7 @@ function CoopPlay({
         <span className="text-xs font-semibold text-foreground">Vies partagées</span>
         <span className="flex items-center gap-1 text-xs text-muted-foreground">
           {partnerPresent ? (
-            <Wifi className="size-3.5 text-green-600" aria-hidden="true" />
+            <Wifi className="size-3.5 text-success" aria-hidden="true" />
           ) : (
             <WifiOff className="size-3.5 text-destructive" aria-hidden="true" />
           )}
@@ -572,7 +573,7 @@ function CoopQuestion({
         <span
           className={cn(
             'font-mono text-sm font-bold tabular-nums',
-            lowTime ? 'text-red-300' : 'text-white',
+            lowTime ? 'text-destructive' : 'text-white',
           )}
         >
           {remaining}s
@@ -596,38 +597,24 @@ function CoopQuestion({
       </div>
 
       {question.subject ? (
-        <p className="mt-1 text-xs font-semibold text-white/70 uppercase">
-          {question.subject}
-        </p>
+        <p className="surtitre mt-1 text-white/70">{question.subject}</p>
       ) : null}
-      <h2 className="font-heading mb-1 text-xl font-bold text-balance text-white">
+      <h2 className="font-heading mb-1 text-xl font-extrabold text-balance text-white">
         {question.prompt}
       </h2>
 
-      <div className="flex flex-col gap-2">
-        {question.options.map((option, i) => {
-          const isCorrect = i === question.correctIndex
-          const isSelected = i === selected
-          return (
-            <button
-              key={i}
-              type="button"
-              disabled={answered}
-              onClick={() => commit(i)}
-              className={cn(
-                'flex items-center justify-between gap-3 rounded-2xl border bg-card px-4 py-3 text-left text-sm font-medium text-card-foreground transition-all',
-                !answered &&
-                  'hover:border-primary/40 hover:bg-accent hover:text-accent-foreground active:scale-[0.99]',
-                answered && isCorrect && 'border-green-600 bg-green-50 text-green-700',
-                answered && isSelected && !isCorrect && 'border-destructive bg-red-50 text-destructive',
-                answered && !isSelected && !isCorrect && 'opacity-50',
-              )}
-            >
-              {option}
-            </button>
-          )
-        })}
-      </div>
+      {/* Le plateau partagé des jeux et du quiz : juste/faux en rôles
+          success/destructive, plus de liste maison en vert Tailwind (audit du
+          23/09/2026). À zéro, `commit(-1)` révèle la bonne réponse sans en
+          marquer aucune en faux. La réponse se fige au premier tap. */}
+      <AnswerBoard
+        options={question.options}
+        correctIndex={question.correctIndex}
+        selected={selected}
+        revealed={answered}
+        layout="liste"
+        onAnswer={commit}
+      />
       <p role="status" aria-live="polite" className="sr-only">
         {answered
           ? selected === question.correctIndex

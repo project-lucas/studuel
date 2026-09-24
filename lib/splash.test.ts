@@ -1,12 +1,16 @@
 import { describe, expect, it } from 'vitest'
 import {
+  CLE_LANCEMENT,
+  LANCEMENT_VALIDITE_MS,
   SPLASH_MIN_MS,
   SPLASH_RAMP_MS,
   SPLASH_READY_CAP_MS,
   SPLASH_TIPS,
   SPLASH_WAIT_CEILING,
+  depuisLancement,
   formatSplashPercent,
   isSplashReady,
+  scriptSuiteLancement,
   shouldShowSplash,
   splashProgress,
   tipOfDay,
@@ -188,5 +192,30 @@ describe('formatSplashPercent', () => {
 
   it('arrondit les valeurs intermédiaires', () => {
     expect(formatSplashPercent(66.6)).toBe('67 %')
+  })
+})
+
+describe('la suite de l’écran de lancement (public/lancement.html)', () => {
+  it('mesure le temps écoulé depuis le lancement noté', () => {
+    expect(depuisLancement('10000', 11_200)).toBe(1_200)
+    expect(depuisLancement(String(10_000), 10_000)).toBe(0)
+  })
+
+  it('ignore une note absente, illisible, dans le futur ou trop vieille', () => {
+    expect(depuisLancement(null, 5_000)).toBeNull()
+    expect(depuisLancement('', 5_000)).toBeNull()
+    expect(depuisLancement('abc', 5_000)).toBeNull()
+    expect(depuisLancement('6000', 5_000)).toBeNull()
+    expect(depuisLancement('1000', 1_000 + LANCEMENT_VALIDITE_MS + 1)).toBeNull()
+  })
+
+  it('le script d’enchaînement lit la même clé et la même fenêtre que le code', () => {
+    const script = scriptSuiteLancement()
+    expect(script).toContain(JSON.stringify(CLE_LANCEMENT))
+    expect(script).toContain(String(LANCEMENT_VALIDITE_MS))
+    // Il ne touche AUCUN élément rendu par React (sinon : écart d'hydratation) :
+    // il ajoute une feuille de style dans <head>, c'est tout.
+    expect(script).toContain('document.head.appendChild')
+    expect(script).not.toMatch(/\.style\./)
   })
 })

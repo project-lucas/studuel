@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest'
 import {
+  COFFRE_URL,
   SRS_URL,
   STREAK_URL,
+  coffreMessage,
   isReminderDue,
   srsMessage,
   streakMessage,
@@ -94,5 +96,27 @@ describe('urlBase64ToUint8Array', () => {
     // octets [0xFB, 0xFF] → base64 "+/8=" → base64url "-_8"
     const out = urlBase64ToUint8Array('-_8')
     expect(Array.from(out)).toEqual([251, 255])
+  })
+})
+
+describe('le rappel du coffre d’équipe (migration 379)', () => {
+  it('annonce le niveau et le contenu du coffre, et mène à l’onglet Amis', () => {
+    const m = coffreMessage(3)
+    expect(m).toMatchObject({ kind: 'coffre', title: 'Ton coffre d’équipe est ouvert !', url: COFFRE_URL })
+    expect(m?.body).toBe('Niveau 3 : 450 XP et 15 gemmes t’attendent. Viens l’ouvrir !')
+  })
+
+  it('ne dit rien d’un coffre vide', () => {
+    expect(coffreMessage(0)).toBeNull()
+    expect(coffreMessage(Number.NaN)).toBeNull()
+  })
+
+  it('ne part que le lundi, à 8h de Paris, dans les deux saisons', () => {
+    // lundi 21/09/2026 (été, UTC+2) et lundi 19/01/2026 (hiver, UTC+1)
+    expect(isReminderDue('coffre', new Date('2026-09-21T06:30:00Z'))).toBe(true)
+    expect(isReminderDue('coffre', new Date('2026-09-21T07:30:00Z'))).toBe(false)
+    expect(isReminderDue('coffre', new Date('2026-01-19T07:30:00Z'))).toBe(true)
+    // mardi 22/09/2026 à 8h de Paris : pas de coffre
+    expect(isReminderDue('coffre', new Date('2026-09-22T06:30:00Z'))).toBe(false)
   })
 })

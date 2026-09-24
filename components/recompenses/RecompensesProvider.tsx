@@ -23,7 +23,7 @@ import {
   type Gain,
   type UniteGain,
 } from '@/lib/gains'
-import { centreVisible, emettreGain, selecteurCible } from '@/lib/hud-gains'
+import { emettreGain, premierCentreVisible, selecteurCible } from '@/lib/hud-gains'
 import { sfx } from '@/lib/sounds'
 
 /**
@@ -155,7 +155,7 @@ export default function RecompensesProvider({
         // masqué (écran large) : le gain reste affiché dans le panneau, il ne
         // traverse pas l'écran vers un compteur qui n'existe pas.
         const arrivee = cible
-          ? centreVisible(document.querySelector(selecteurCible(cible)))
+          ? premierCentreVisible(document.querySelectorAll(selecteurCible(cible)))
           : null
         if (!arrivee) continue
 

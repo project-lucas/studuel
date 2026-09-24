@@ -40,14 +40,14 @@ export default function Palmares({
   const resumeDesJeux = resumeJeux(groupesJeux)
 
   return (
-    <section aria-label="Ton palmarès" className="moi-bloc rounded-[22px] p-4">
+    <section aria-label="Ton palmarès" className="carte p-4">
       <div className="flex items-center justify-between gap-3">
         <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-secondary text-primary">
           <Medal className="size-5" strokeWidth={2.4} aria-hidden="true" />
         </span>
         <div className="min-w-0 flex-1">
-          <h2 className="font-heading text-base leading-tight font-extrabold">Ton palmarès</h2>
-          <p className="moi-sourcil">{sousTitrePalmares(resume)}</p>
+          <h2 className="titre-section">Ton palmarès</h2>
+          <p className="surtitre">{sousTitrePalmares(resume)}</p>
         </div>
         {resume.podiums > 0 ? (
           <span className="shrink-0 rounded-full bg-highlight px-3 py-1 text-xs font-extrabold text-foreground">
@@ -73,7 +73,7 @@ export default function Palmares({
             <Swords className="size-5" aria-hidden="true" />
           </span>
           <span className="min-w-0 flex-1">
-            <span className="block text-xs font-extrabold tracking-wide text-muted-foreground uppercase">
+            <span className="surtitre block">
               Duels classés
             </span>
             <span className="block text-sm font-bold">
@@ -99,8 +99,8 @@ export default function Palmares({
           vides. Une ligne par matière, avec son compte de records ; un tap
           ouvre ses jeux. */}
       <div className="mt-5 mb-1">
-        <h3 className="font-heading text-base font-extrabold">Jeux par matière</h3>
-        <p className="moi-sourcil">{sousTitreJeux(resumeDesJeux)}</p>
+        <h3 className="titre-section">Jeux par matière</h3>
+        <p className="surtitre">{sousTitreJeux(resumeDesJeux)}</p>
       </div>
       {groupesJeux.map((g) => {
         const joues = g.cases.filter((c) => c.ligne).length

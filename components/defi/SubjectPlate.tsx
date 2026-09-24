@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useId, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { AnimatePresence, useReducedMotion } from 'framer-motion'
 import { Check, Lock } from 'lucide-react'
@@ -12,6 +12,7 @@ import Image from 'next/image'
 import SubjectIcon from '@/components/SubjectIcon'
 import { sfx } from '@/lib/sounds'
 import styles from './SubjectPlate.module.css'
+import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
 
 /**
  * LE FLANC DROIT DE LA BARRE — la matière du combat, et la feuille qui la change.
@@ -79,6 +80,11 @@ function Fleche({
   onClick: () => void
 }) {
   const haut = direction === 'haut'
+  // UN IDENTIFIANT PAR DESSIN (useId) : les onglets restent montés
+  // (components/OngletsVivants) et Chrome ne peint pas un dégradé défini dans un
+  // onglet caché (`display: none`). Un identifiant partagé pouvait donc viser
+  // le dégradé d'un onglet caché et laisser ce dessin sans couleur.
+  const orId = useId()
   return (
     <button
       type="button"
@@ -107,7 +113,7 @@ function Fleche({
       <span className={styles.fleche} data-sens={direction} aria-hidden="true">
         <svg viewBox="0 0 28 20" className={`size-full ${haut ? '' : 'rotate-180'}`}>
           <defs>
-            <linearGradient id={`fleche-or-${direction}`} x1="0" y1="0" x2="0" y2="1">
+            <linearGradient id={orId} x1="0" y1="0" x2="0" y2="1">
               <stop offset="0" stopColor="#fff3a8" />
               <stop offset="0.45" stopColor="#ffd13d" />
               <stop offset="1" stopColor="#ef9410" />
@@ -115,7 +121,7 @@ function Fleche({
           </defs>
           <path
             d="M14 2.2 25.6 17.4H2.4Z"
-            fill={`url(#fleche-or-${direction})`}
+            fill={`url(#${orId})`}
             stroke="#1e1638"
             strokeWidth="3.2"
             strokeLinejoin="round"
@@ -136,6 +142,7 @@ function Fleche({
 export default function SubjectPlate() {
   const { board, index, active, select } = useDuelSubject()
   const [open, setOpen] = useState(false)
+  useFermeAuMasquage(setOpen, false)
   const reduce = useReducedMotion()
 
   if (board.length === 0 || !active) return null

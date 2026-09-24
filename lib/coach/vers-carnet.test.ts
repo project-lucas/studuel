@@ -17,6 +17,11 @@ describe('veutCarnet', () => {
       'note ça dans mon carnet',
       'garde ça dans mon carnet',
       'enregistre dans mon carnet',
+      // Le carnet s'appelle « Ma bibliothèque » depuis le 24/09/2026 : les
+      // deux mots rangent.
+      'mets ça dans ma bibliothèque',
+      'range ça dans ma bibliotheque',
+      'ajoute ça à ma biblio',
     ]) {
       expect(veutCarnet(phrase), phrase).toBe(true)
     }
@@ -27,6 +32,7 @@ describe('veutCarnet', () => {
     // carte au lieu de recevoir une réponse.
     for (const phrase of [
       'c’est quoi un carnet de bord ?',
+      'c’est quoi ma bibliothèque ?',
       'à quoi sert mon carnet ?',
       'explique-moi le carnet de Lucas',
       'comment on révise ?',

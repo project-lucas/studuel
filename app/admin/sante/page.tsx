@@ -91,7 +91,7 @@ export default async function SantePage() {
   return (
     <div className="space-y-6">
       <header className="flex items-baseline justify-between gap-3">
-        <h1 className="font-heading text-2xl font-bold">Santé de la base</h1>
+        <h1 className="font-heading text-3xl font-extrabold">Santé de la base</h1>
         <p className="text-sm text-muted-foreground">
           {MIGRATIONS_SANTE.length} migrations surveillées
         </p>
@@ -106,7 +106,7 @@ export default async function SantePage() {
             : 'border-destructive/50 bg-destructive/10',
         )}
       >
-        <p className="flex items-start gap-3 font-heading text-lg font-bold">
+        <p className="flex items-start gap-3 font-heading text-lg font-extrabold">
           {toutVivant ? (
             <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-primary" />
           ) : (
@@ -131,7 +131,7 @@ export default async function SantePage() {
           migration, et sans laisser la moindre trace. */}
       <section className="rounded-2xl border bg-card p-4">
         <div className="flex items-baseline justify-between gap-3">
-          <h2 className="font-heading text-lg font-bold">Configuration</h2>
+          <h2 className="titre-section">Configuration</h2>
           <p className="text-sm text-muted-foreground">
             {envManquantes.length === 0
               ? 'tout est posé'
@@ -150,7 +150,7 @@ export default async function SantePage() {
 
       {/* La carte de l'éteint : feature ↔ migration ↔ ce que l'élève voit. */}
       <section className="rounded-2xl border bg-card p-4">
-        <h2 className="font-heading text-lg font-bold">Feature par feature</h2>
+        <h2 className="titre-section">Feature par feature</h2>
         <ul className="mt-3 space-y-3">
           {MIGRATIONS_SANTE.map((m) => (
             <LigneSante key={m.id} migration={m} verdict={verdicts.get(m.id)!} />

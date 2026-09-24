@@ -6,6 +6,7 @@ import MatchmakingOverlay from '@/components/defi/MatchmakingOverlay'
 import { useDuelSubject } from '@/components/defi/DuelSubjectProvider'
 import { duelTarget, rankedBlockedReason } from '@/lib/defi/duel-board'
 import { duelGoalSentence, type DuelGoal } from '@/lib/duel-cta'
+import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
 
 /**
  * LE BOUTON DUEL — l'unique appel à l'action de l'arène, et le seul objet doré
@@ -53,6 +54,9 @@ export default function CombatButton({
   const target = active ? duelTarget(active) : null
   // Le rideau de recherche d'adversaire est ouvert ?
   const [recherche, setRecherche] = useState(false)
+  // Onglet caché (la course est partie, cf. OngletsVivants) : le rideau se
+  // referme, sinon il réapparaîtrait figé au retour sur l'arène.
+  useFermeAuMasquage(setRecherche, false)
 
   const hasPresence = Boolean(onlineFriendName)
 
@@ -92,31 +96,39 @@ export default function CombatButton({
 
   return (
     <>
-      {/* UN BOUTON, PAS UN LIEN. Il ouvrait la route du duel directement ; il
-          ouvre maintenant le rideau de recherche d'adversaire, qui navigue
-          lui-même une fois la mise en scène jouée. La distinction compte pour
-          l'accessibilité : ce qui déclenche un processus est un `button`, ce
-          qui mène ailleurs est un `a`. Ici on déclenche. */}
-      <button
-        type="button"
-        onClick={() => {
-          sfx.tap()
-          setRecherche(true)
-        }}
-        aria-label={label}
-        title={reason ? `${target.label} · ${active.subject} — ${reason}` : undefined}
-        className={`${shell} arena-plate--gold arena-plate--press duel-lueur cursor-pointer focus-visible:ring-4 focus-visible:ring-white/70 focus-visible:outline-none ${
-          hasPresence ? 'duel-pulse' : ''
-        }`}
-      >
-        <span className="combat-word font-heading">DUEL</span>
-        {/* LA MATIÈRE, en second rang. Elle est tronquée plutôt que repliée sur
-            deux lignes : « Histoire-Géographie » ferait grandir le bouton d'une
-            ligne entière et casserait l'alignement des trois plaques, qui
-            partagent une hauteur fixe. Le nom complet reste dans
-            l'`aria-label`. */}
-        <span className="combat-sous-mot font-heading">{active.subject}</span>
-      </button>
+      {/* LA LUEUR, un calque frère DERRIÈRE la plaque : la plaque rogne ce qui
+          dépasse d'elle (`overflow-hidden`), et le halo doit déborder. Le
+          calque respire par son opacité, jamais par son ombre (cf.
+          `.duel-lueur`, globals.css : l'ombre animée se repeignait 60 fois par
+          seconde). L'enveloppe prend la place de la plaque dans la barre. */}
+      <div className="relative flex min-w-0 flex-1">
+        <span aria-hidden="true" className="duel-lueur" />
+        {/* UN BOUTON, PAS UN LIEN. Il ouvrait la route du duel directement ; il
+            ouvre maintenant le rideau de recherche d'adversaire, qui navigue
+            lui-même une fois la mise en scène jouée. La distinction compte pour
+            l'accessibilité : ce qui déclenche un processus est un `button`, ce
+            qui mène ailleurs est un `a`. Ici on déclenche. */}
+        <button
+          type="button"
+          onClick={() => {
+            sfx.tap()
+            setRecherche(true)
+          }}
+          aria-label={label}
+          title={reason ? `${target.label} · ${active.subject} — ${reason}` : undefined}
+          className={`${shell} arena-plate--gold arena-plate--press cursor-pointer focus-visible:ring-4 focus-visible:ring-white/70 focus-visible:outline-none ${
+            hasPresence ? 'duel-pulse' : ''
+          }`}
+        >
+          <span className="combat-word font-heading">DUEL</span>
+          {/* LA MATIÈRE, en second rang. Elle est tronquée plutôt que repliée sur
+              deux lignes : « Histoire-Géographie » ferait grandir le bouton d'une
+              ligne entière et casserait l'alignement des trois plaques, qui
+              partagent une hauteur fixe. Le nom complet reste dans
+              l'`aria-label`. */}
+          <span className="combat-sous-mot font-heading">{active.subject}</span>
+        </button>
+      </div>
 
       {recherche ? (
         <MatchmakingOverlay

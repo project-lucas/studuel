@@ -79,7 +79,10 @@ export default async function EncyclopediePage({
     : null
 
   return (
-    <div className="-mx-4 -mt-16 md:-mx-8 md:-mt-10">
+    // L'en-tête et le rayon sont posés sur le mur crème de l'app, dans les
+    // marges du gabarit — plus de bandeau plein écran ni de feuille opaque qui
+    // couvrait le papier quadrillé (audit du 23/09/2026), comme le dossier.
+    <div>
       <EnteteRayon
         subject={{ slug: subject.slug, name: subject.name, color: subject.color }}
         grade={grade}
@@ -89,17 +92,14 @@ export default async function EncyclopediePage({
         <OngletsRayon modes={modes} slug={slug} />
       </EnteteRayon>
 
-      {/* Le panneau chevauche l'en-tête, façon carnet — comme le dossier. */}
-      <div className="relative -mt-6 rounded-t-3xl bg-background">
-        <div className="pop-in mx-auto w-full max-w-4xl px-4 pt-5 pb-24 md:px-8">
-          {vedette ? <CitationDuJour entree={vedette} slug={slug} /> : null}
-          <EncyclopedieEcran
-            slug={slug}
-            apercus={liste}
-            niveauEleve={niveauEleve}
-            voletInitial={volet === 'evenements' ? 'evenements' : 'personnages'}
-          />
-        </div>
+      <div className="pop-in mt-5">
+        {vedette ? <CitationDuJour entree={vedette} slug={slug} /> : null}
+        <EncyclopedieEcran
+          slug={slug}
+          apercus={liste}
+          niveauEleve={niveauEleve}
+          voletInitial={volet === 'evenements' ? 'evenements' : 'personnages'}
+        />
       </div>
     </div>
   )

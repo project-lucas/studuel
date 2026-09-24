@@ -135,7 +135,7 @@ export default function FreeFieldRow({
   return (
     <section aria-label={FREE_FIELD_LABELS[field]}>
       {withTitle ? (
-        <h3 className="mb-2 text-xs font-extrabold tracking-wide text-muted-foreground uppercase">
+        <h3 className="titre-section mb-2">
           {FREE_FIELD_LABELS[field]}
         </h3>
       ) : null}

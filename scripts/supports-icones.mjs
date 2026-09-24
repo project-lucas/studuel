@@ -1,6 +1,7 @@
 /**
  * Fabrique LES SIX ICÔNES DE SUPPORT — la rangée « Cours · Quiz · Flashcards ·
- * Fiches · Défi » (+ « Revoir mes erreurs ») :
+ * Fiches · Défi » (+ « Revoir mes erreurs ») — et les deux onglets de « Ma
+ * bibliothèque » qui n'en sont pas (Dossiers, Capsules) :
  *   assets-sources/supports/*.png        (originaux, LOCAUX — hors dépôt)
  *     → public/images/supports/<kind>.webp   (256x256, fond transparent)
  *
@@ -58,16 +59,36 @@ const SIZE = 256
  * de la carte mentale d'avant), et `erreurs` s'appelle « erreur » au singulier
  * chez le dessinateur. Dériver le nom de la clé marcherait pour trois d'entre
  * elles et échouerait en silence sur les deux autres.
+ *
+ * Un nom avec un « / » se lit depuis `assets-sources/` : c'est un original
+ * emprunté à un autre lot.
  */
 const ORIGINAUX = {
   cours: 'cours',
   quiz: 'quizz',
   flashcards: 'flashcard',
-  carte: 'fiches',
+  // LA FICHE EST CELLE DU MARCHÉ (Lucas, 24/09/2026 : « cette illustration
+  // par défaut, partout ») : la feuille surlignée et son surligneur rose, qui
+  // vendait déjà la « Fiche de révision » dans la Boutique. Même objet, même
+  // dessin, de la Boutique à la tuile du chapitre et à la bibliothèque. La
+  // feuille à trombone d'avant (`supports/fiches.png`) n'est plus servie.
+  carte: 'boutique-marche/fiche',
   // `ia` (« Moi vs IA ») porte le bouclier qui était celui du Défi solo de
   // leçon, retiré le 16/09/2026 : même dessin, même original, nouvelle clé.
   ia: 'defi',
   erreurs: 'erreur',
+  // LES ONGLETS DE « MA BIBLIOTHÈQUE » (24/09/2026). Ce ne sont pas des supports
+  // de chapitre, mais ils s'affichent à côté de la Fiche (Dossiers · Capsules ·
+  // Fiches) : ils passent par la MÊME trame, sinon l'un des trois onglets
+  // semblerait plus gros que les autres. Un dossier à onglet entrouvert, une
+  // capsule de distributeur (mi-violette, mi-or, étoile) — pas une gélule, qui
+  // se lisait « médicament ».
+  dossiers: 'dossier',
+  capsules: 'capsule',
+  // L'étagère du bouton « Ma bibliothèque » (assets-sources/supports/
+  // bibliotheque.png) a été produite puis écartée le 24/09/2026 : trop petite
+  // sur ce bouton, qui garde son pictogramme en trait (components/carnet/
+  // CarnetButton). L'original reste là si un écran la montre un jour en grand.
 }
 // `exercice` n'est PAS produit ici : c'est le parchemin à coches de l'arène
 // (public/images/defi/icones/quetes-v2.webp), repris tel quel dans
@@ -76,8 +97,9 @@ const ORIGINAUX = {
 
 /** L'original d'un support : même nom, quelle que soit son extension. */
 async function source(nom) {
+  const base = nom.includes('/') ? `assets-sources/${nom}` : `${SRC_DIR}/${nom}`
   for (const ext of ['png', 'webp']) {
-    const chemin = `${SRC_DIR}/${nom}.${ext}`
+    const chemin = `${base}.${ext}`
     try {
       await access(chemin)
       return chemin
@@ -86,7 +108,7 @@ async function source(nom) {
     }
   }
   throw new Error(
-    `Original introuvable : ${SRC_DIR}/${nom}.{png,webp}. ` +
+    `Original introuvable : ${base}.{png,webp}. ` +
       `Les originaux sont LOCAUX (assets-sources/ est dans .gitignore) — ` +
       `après un clone, il faut les redéposer avant de relancer ce script.`,
   )

@@ -35,6 +35,7 @@
 // -----------------------------------------------------------------------------
 
 import { createAvatar } from '@dicebear/core'
+import { estAvatarIa, idAvatarIa, srcAvatarIa } from '@/lib/avatar-ia'
 import { openPeeps } from '@dicebear/collection'
 import { PORTRAIT_KEYS, isPortraitKey, portraitSrc } from '@/lib/portraits'
 
@@ -344,6 +345,8 @@ export function normalizeAvatarConfig(input: unknown): AvatarConfig {
     (BANNER_KEYS as readonly string[]).includes(raw.banner)
       ? raw.banner
       : DEFAULT_BANNER
+  // L'avatar DESSINÉ PAR MARCEL (migration 378) : `ia:<uuid>`, gardé tel quel.
+  if (estAvatarIa(raw.portrait)) out.portrait = raw.portrait
   return out
 }
 
@@ -377,9 +380,19 @@ export function avatarSvg(cfg: AvatarConfig, size = 96): string {
   }).toString()
 }
 
-/** L'URL du blason choisi, ou null si l'élève garde son avatar composé. */
+/**
+ * L'URL du blason choisi — ou de l'avatar dessiné par Marcel (`ia:<uuid>`) —,
+ * ou null si l'élève garde son avatar composé.
+ */
 export function avatarPortraitSrc(cfg: AvatarConfig): string | null {
+  const ia = idAvatarIa(cfg.portrait)
+  if (ia) return srcAvatarIa(ia)
   return isPortraitKey(cfg.portrait) ? portraitSrc(cfg.portrait) : null
+}
+
+/** Un avatar dessiné est un portrait carré entier : on ne le recadre pas sur le visage. */
+export function avatarEstDessine(cfg: AvatarConfig): boolean {
+  return estAvatarIa(cfg.portrait)
 }
 
 // Data-URI de l'avatar — à passer directement à <img src> (aucun HTML injecté,

@@ -5,6 +5,7 @@ import {
   isHudHidden,
   isHudLevelHidden,
   isHudOverDarkScene,
+  isHudSerieMasquee,
 } from './top-hud-routes'
 
 describe('isHudHidden', () => {
@@ -106,5 +107,17 @@ describe('isHudDataSkipped', () => {
     // l'écart entre les deux verdicts — ne pas « simplifier » en les fusionnant.
     expect(isHudHidden('/test/abc-123')).toBe(true)
     expect(isHudDataSkipped('/test/abc-123')).toBe(false)
+  })
+})
+
+describe('isHudSerieMasquee', () => {
+  it('retire la flamme de l’accueil Réviser, où la carte de série la montre en grand', () => {
+    expect(isHudSerieMasquee('/reviser')).toBe(true)
+  })
+
+  it('la garde partout ailleurs, sous-pages de Réviser comprises', () => {
+    expect(isHudSerieMasquee('/reviser/maths')).toBe(false)
+    expect(isHudSerieMasquee('/amis')).toBe(false)
+    expect(isHudSerieMasquee('/tresor')).toBe(false)
   })
 })

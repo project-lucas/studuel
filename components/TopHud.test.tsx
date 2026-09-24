@@ -109,3 +109,42 @@ describe('le compteur qui encaisse', () => {
     ).toBeInTheDocument()
   })
 })
+
+describe('l’écusson', () => {
+  it('montre l’avatar à la place du numéro de niveau, déjà écrit à côté', () => {
+    const { container } = render(
+      <TopHud {...PROPS} avatar={{ src: '/images/profil/renard.webp', visage: true }} />,
+    )
+    const disque = container.querySelector('img[src="/images/profil/renard.webp"]')
+    expect(disque).not.toBeNull()
+    expect(screen.getByText(/Niveau 7/)).toBeInTheDocument()
+    expect(screen.queryByText(/^7$/)).not.toBeInTheDocument()
+  })
+
+  it('garde le numéro sans avatar connu', () => {
+    render(<TopHud {...PROPS} />)
+    expect(screen.getByText(/^7$/)).toBeInTheDocument()
+  })
+})
+
+describe('le multiplicateur d’XP', () => {
+  it('affiche ×1,3 à trois amis et l’explique au toucher', () => {
+    render(<TopHud {...PROPS} nbAmis={3} />)
+    const bouton = screen.getByRole('button', { name: /Multiplicateur d’XP ×1,3/ })
+    act(() => bouton.click())
+    expect(bouton).toHaveAttribute('aria-expanded', 'true')
+    expect(screen.getByText(/Toute l’XP que tu gagnes est multipliée par ce nombre/)).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Ajouter un ami/ })).toHaveAttribute('href', '/amis')
+    expect(screen.getByRole('link', { name: /Potion d’XP/ })).toHaveAttribute('href', '/tresor#marche')
+  })
+
+  it('compte la potion d’XP qui court, dit ×1,0 sans ami, et se tait quand le compte est inconnu', () => {
+    const dansUneHeure = new Date(Date.now() + 3_600_000).toISOString()
+    const { rerender } = render(<TopHud {...PROPS} nbAmis={3} boostXpJusqua={dansUneHeure} />)
+    expect(screen.getByRole('button', { name: /Multiplicateur d’XP ×2,6/ })).toBeInTheDocument()
+    rerender(<TopHud {...PROPS} nbAmis={0} />)
+    expect(screen.getByRole('button', { name: /Multiplicateur d’XP ×1,0/ })).toBeInTheDocument()
+    rerender(<TopHud {...PROPS} />)
+    expect(screen.queryByRole('button', { name: /Multiplicateur d’XP/ })).not.toBeInTheDocument()
+  })
+})

@@ -64,7 +64,7 @@ export default function EnfantsPanneaux({
               aria-controls={`enfant-panneau-${e.id}`}
               onClick={() => select(e.id)}
               className={cn(
-                'font-heading focus-visible:ring-primary/50 flex min-h-11 cursor-pointer items-center gap-2 rounded-full border px-4 text-sm font-bold transition-colors focus-visible:ring-2 focus-visible:outline-none',
+                'font-heading focus-visible:ring-primary/50 flex min-h-11 cursor-pointer items-center gap-2 rounded-full border px-4 text-sm font-extrabold transition-colors focus-visible:ring-2 focus-visible:outline-none',
                 on
                   ? 'border-primary bg-primary text-primary-foreground'
                   : 'bg-card text-muted-foreground hover:border-primary/40 hover:text-foreground',

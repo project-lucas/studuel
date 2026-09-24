@@ -28,8 +28,10 @@ const SEUIL_DEUX_COLONNES = 4
 // débordaient : les deux derniers (« Mes erreurs », « Boss ») vivaient hors
 // écran, derrière un scroll horizontal que rien n'annonçait. Ici tout est
 // visible d'un coup d'œil, chaque onglet occupe la même part — plus de contenu
-// caché, plus de scroll. Actif : fond crème, texte encre ; inactifs : outline
-// sur le fond coloré.
+// caché, plus de scroll. Les pilules se lisent sur le MUR CRÈME de l'app
+// (plus de bandeau coloré depuis l'audit du 23/09/2026) : l'actif est violet
+// plein — la couleur de ce qui se clique —, les autres blancs à liseré.
+// L'espace au-dessus est posé par l'en-tête (`EnTetePage`), pas ici.
 export default function ModeTabs({
   modes,
   active,
@@ -52,7 +54,7 @@ export default function ModeTabs({
     <nav
       aria-label="Contenus de la matière"
       className={cn(
-        'mt-5 gap-2',
+        'gap-2',
         // Deux colonnes sur téléphone, UNE SEULE RANGÉE dès qu'il y a de la
         // place : sur large écran, cinq onglets tiennent sans se tronquer, et
         // une grille de quatre colonnes y laisserait le cinquième tout seul
@@ -84,8 +86,8 @@ export default function ModeTabs({
               'flex min-w-0 flex-1 items-center justify-center gap-1.5 rounded-full px-2 py-2 text-sm transition-colors',
               seulSurSaLigne ? 'col-span-2' : null,
               isActive
-                ? 'bg-card font-bold text-foreground shadow-sm'
-                : 'border border-white/50 font-semibold text-white hover:bg-white/10',
+                ? 'bg-primary font-bold text-primary-foreground shadow-sm'
+                : 'border bg-card font-semibold text-foreground hover:bg-muted',
               annonce ? 'relative' : null,
             )}
           >

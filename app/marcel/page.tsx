@@ -59,7 +59,7 @@ export default async function MarcelPage({
       <div>
         <PageHeader title="Marcel" description="Ton prof" />
         <div className="p-4">
-          <p className="bg-card text-muted-foreground rounded-[20px] p-5 text-center text-[13px] leading-relaxed font-semibold">
+          <p className="carte text-muted-foreground p-5 text-center text-[13px] leading-relaxed font-semibold">
             Connecte-toi pour que je puisse regarder ton travail.
           </p>
           <Link
@@ -153,7 +153,7 @@ export default async function MarcelPage({
               <CoachEntete salut="Salut !" bulle={point.titre} />
 
               {catalogueVide && (
-                <p className="bg-card text-muted-foreground mt-3 shrink-0 rounded-[20px] p-4 text-center text-[13px] leading-relaxed font-semibold">
+                <p className="carte text-muted-foreground mt-3 shrink-0 p-4 text-center text-[13px] leading-relaxed font-semibold">
                   Je n’ai pas encore de chapitres pour ta classe. Choisis tes
                   matières dans Réviser et je m’occupe du reste.
                 </p>
@@ -164,6 +164,7 @@ export default async function MarcelPage({
               <DemanderMarcel
                 tier={demande.tier}
                 utilisesAujourdhui={demande.utilisesAujourdhui}
+                depensesMois={demande.depensesMois}
                 jetons={demande.jetons}
                 gemmes={demande.gemmes}
                 matieres={matieres.map((m) => ({ slug: m.slug, name: m.name }))}

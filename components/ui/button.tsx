@@ -35,6 +35,11 @@ const buttonVariants = cva(
         xs: "h-7 gap-1 px-2.5 text-xs has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3",
         sm: "h-8 gap-1.5 px-3 text-[0.8rem] has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 [&_svg:not([class*='size-'])]:size-3.5",
         lg: "h-11 gap-2 px-5 has-data-[icon=inline-end]:pr-4 has-data-[icon=inline-start]:pl-4",
+        // xl : L'ACTION PRINCIPALE d'un écran (« C'est parti », « Valider »,
+        // « Continuer »). C'est la seule famille de gros bouton hors arène
+        // depuis le 23/09/2026 : elle remplace `.onb-btn` (onboarding),
+        // `.quiz-plaque` (quiz, dictée) et les ronds « GO » des modes.
+        xl: "h-13 gap-2 px-6 text-base font-extrabold has-data-[icon=inline-end]:pr-5 has-data-[icon=inline-start]:pl-5 [&_svg:not([class*='size-'])]:size-5",
         icon: "size-10",
         "icon-xs": "size-7 [&_svg:not([class*='size-'])]:size-3",
         "icon-sm": "size-8",

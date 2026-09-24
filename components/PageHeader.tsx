@@ -9,7 +9,7 @@ export default function PageHeader({
 }) {
   return (
     <header className="mb-8 space-y-1.5">
-      <h1 className="font-heading text-3xl font-bold text-balance md:text-4xl">
+      <h1 className="font-heading text-3xl font-extrabold text-balance">
         {title}
       </h1>
       {description ? (

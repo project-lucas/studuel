@@ -29,9 +29,9 @@ export default function ObjectifSemaine({
   const p = goalProgress(weekSeconds, goalMinutes)
 
   return (
-    <section className="border-primary/20 bg-primary/[0.04] rounded-2xl border p-4">
+    <section className="border-primary/20 bg-primary/[0.04] rounded-carte border p-4">
       <div className="mb-2.5 flex items-baseline justify-between gap-3">
-        <h4 className="font-heading flex items-center gap-1.5 text-sm font-bold">
+        <h4 className="font-heading flex items-center gap-1.5 text-sm font-extrabold">
           {p.reached ? (
             <Check className="text-highlight size-4" strokeWidth={3} aria-hidden="true" />
           ) : (

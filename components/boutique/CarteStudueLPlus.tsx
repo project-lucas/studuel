@@ -37,7 +37,7 @@ export default function CarteStudueLPlus({ tier }: { tier: Tier }) {
       <div className="relative">
         <div className="flex items-start justify-between gap-3">
           <div>
-            <p className="flex items-center gap-1.5 text-xs font-extrabold tracking-wide text-highlight uppercase">
+            <p className="surtitre flex items-center gap-1.5 text-highlight">
               <Crown className="size-4" strokeWidth={2.6} aria-hidden="true" />
               {abonne ? 'Ton abonnement' : 'Abonnement'}
             </p>

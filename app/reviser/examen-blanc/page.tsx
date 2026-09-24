@@ -10,7 +10,7 @@ import {
   CardFooter,
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import PageHeader from '@/components/PageHeader'
+import EnTetePage from '@/components/reviser/EnTetePage'
 import ExamBlancPlayer from '@/components/ExamBlancPlayer'
 import WorkTimer from '@/components/WorkTimer'
 import { createClient } from '@/lib/supabase/server'
@@ -56,10 +56,11 @@ export default async function ExamenBlancPage({
 
   if (!user) {
     return (
-      <div>
-        <PageHeader
-          title="Examen blanc"
-          description="Chrono, plusieurs matières, bilan par chapitre."
+      <div className="flex flex-col gap-6">
+        <EnTetePage
+          retour={{ fallback: '/reviser', label: 'Retour à Réviser' }}
+          titre="Examen blanc"
+          sousTitre="Chrono, plusieurs matières, bilan par chapitre."
         />
         <Card className="mx-auto w-full max-w-md">
           <CardHeader>
@@ -90,8 +91,11 @@ export default async function ExamenBlancPage({
   const grade = profile?.grade_level ?? null
   if (!grade) {
     return (
-      <div>
-        <PageHeader title="Examen blanc" />
+      <div className="flex flex-col gap-6">
+        <EnTetePage
+          retour={{ fallback: '/reviser', label: 'Retour à Réviser' }}
+          titre="Examen blanc"
+        />
         <Card className="mx-auto w-full max-w-md">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -291,15 +295,22 @@ export default async function ExamenBlancPage({
       {/* Un examen blanc est l'exercice le plus long de l'app : ne pas le
           compter dans le temps de travail était le plus gros trou du compteur. */}
       <WorkTimer />
-      <PageHeader
-        title={
+      {/* L'en-tête commun de Réviser : un H1 seul, sans retour, était une
+          recette à part (audit du 23/09/2026). Le retour ramène au dossier de
+          la matière quand l'examen a été lancé depuis lui. */}
+      <EnTetePage
+        retour={{
+          fallback: targetSubject ? `/reviser/${targetSubject.slug}` : '/reviser',
+          label: targetSubject ? `Retour — ${targetSubject.name}` : 'Retour à Réviser',
+        }}
+        titre={
           chapitreVise
             ? `Quiz du chapitre · ${chapitreVise}`
             : targetSubjectName
               ? `Examen blanc · ${targetSubjectName}`
               : 'Examen blanc'
         }
-        description={
+        sousTitre={
           chapitreVise
             ? `Tout le chapitre d'un coup, en ${targetSubjectName} : chrono et bilan fiche par fiche.`
             : targetSubjectName
@@ -309,7 +320,6 @@ export default async function ExamenBlancPage({
       />
       <ExamBlancPlayer
         questions={examQuestions}
-        heading={chapitreVise ? 'Quiz du chapitre' : 'Examen blanc'}
         unit={chapitreVise ? 'fiche' : 'chapitre'}
         examTitle={
           chapitreVise

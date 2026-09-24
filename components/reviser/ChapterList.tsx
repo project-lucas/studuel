@@ -375,7 +375,9 @@ export default function ChapterList({
               // Pas d' : la bulle du quiz du chapitre déborde de
               // la carte, et s'y faisait couper. C'est le quadrillage qui se
               // découpe lui-même (ci-dessous).
-              'relative rounded-3xl px-4 py-4 transition-opacity duration-200',
+              // La plaque violette garde sa robe (`ROBES`) ; son rayon est celui de
+              // LA carte (token `--carte-rayon`, audit du 23/09/2026).
+              'relative rounded-carte px-4 py-4 transition-opacity duration-200',
               ROBES[etat],
               efface ? EFFACE : null,
             )}
@@ -384,7 +386,7 @@ export default function ChapterList({
                 c'est la plaque violette de l'arène (toutes les cartes la
                 portent depuis le 16/09/2026, cf. `ROBES`). */}
             <div
-              className="pointer-events-none absolute inset-0 rounded-3xl opacity-[0.07]"
+              className="pointer-events-none absolute inset-0 rounded-carte opacity-[0.07]"
               style={GRID_PATTERN}
               aria-hidden="true"
             />

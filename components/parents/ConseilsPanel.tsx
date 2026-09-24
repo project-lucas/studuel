@@ -41,7 +41,7 @@ export default function ConseilsPanel({ videos }: { videos: ParentVideo[] }) {
       <OuvrirFicheDepuisHash />
       {videos.length > 0 ? (
         <section>
-          <h2 className="font-heading mb-1 flex items-center gap-2 text-lg font-semibold">
+          <h2 className="titre-section mb-1 flex items-center gap-2">
             <span className="bg-primary text-primary-foreground flex size-8 items-center justify-center rounded-xl">
               <MonitorPlay className="size-4" aria-hidden="true" />
             </span>
@@ -57,9 +57,9 @@ export default function ConseilsPanel({ videos }: { videos: ParentVideo[] }) {
                   href={video.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-card hover:border-primary/50 flex items-start gap-4 rounded-2xl border p-4 shadow-sm transition-colors"
+                  className="carte flex items-start gap-4 p-4 transition-shadow hover:ring-2 hover:ring-primary/40"
                 >
-                  <span className="bg-accent text-accent-foreground font-heading flex size-10 shrink-0 items-center justify-center rounded-xl font-bold">
+                  <span className="bg-accent text-accent-foreground font-heading flex size-10 shrink-0 items-center justify-center rounded-xl font-extrabold">
                     {i + 1}
                   </span>
                   <span className="min-w-0 flex-1">
@@ -111,14 +111,14 @@ export default function ConseilsPanel({ videos }: { videos: ParentVideo[] }) {
             <li key={c.id}>
               <details
                 id={`conseil-${c.id}`}
-                className="bg-card group scroll-mt-4 rounded-2xl border shadow-sm"
+                className="carte group scroll-mt-4"
               >
                 <summary className="flex cursor-pointer list-none items-start gap-3 p-4">
                   <span className="min-w-0 flex-1">
-                    <span className="text-muted-foreground mb-1 block text-[11px] font-bold tracking-wide uppercase">
+                    <span className="surtitre mb-1 block">
                       {c.theme}
                     </span>
-                    <span className="font-heading block text-balance font-bold">
+                    <span className="font-heading block text-balance font-extrabold">
                       {c.titre}
                     </span>
                     <span className="text-muted-foreground mt-1 block text-sm">

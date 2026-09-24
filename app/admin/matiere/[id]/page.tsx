@@ -82,7 +82,7 @@ export default async function AdminSubjectPage({
           {subject.icon}
         </span>
         <div>
-          <h1 className="font-heading text-2xl font-bold">{subject.name}</h1>
+          <h1 className="font-heading text-3xl font-extrabold">{subject.name}</h1>
           <p className="text-sm text-muted-foreground">
             Chapitres et leçons par niveau — clique sur une leçon pour éditer
             son contenu.

@@ -34,8 +34,8 @@ export default function BilanSemaine({
         : 'border-primary/25 bg-primary/[0.04]'
 
   return (
-    <section className={`mb-5 rounded-2xl border-2 p-4 ${liseré}`} aria-label="Bilan de la semaine">
-      <h4 className="font-heading flex items-center gap-1.5 text-sm font-bold">
+    <section className={`carte mb-5 border-2 p-4 ${liseré}`} aria-label="Bilan de la semaine">
+      <h4 className="font-heading flex items-center gap-1.5 text-sm font-extrabold">
         <MessageSquareHeart className="text-primary size-4" strokeWidth={2.4} aria-hidden="true" />
         Cette semaine
       </h4>
@@ -50,7 +50,7 @@ export default function BilanSemaine({
 
       {gestes.length > 0 ? (
         <>
-          <h5 className="text-muted-foreground mt-4 mb-1.5 flex items-center gap-1.5 text-xs font-bold tracking-wide uppercase">
+          <h5 className="titre-section mt-4 mb-1.5 flex items-center gap-1.5">
             <Lightbulb className="size-3.5" strokeWidth={2.6} aria-hidden="true" />
             Ce que vous pouvez faire
           </h5>

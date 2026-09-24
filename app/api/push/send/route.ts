@@ -2,6 +2,7 @@ import { timingSafeEqual } from 'node:crypto'
 import { createClient } from '@supabase/supabase-js'
 import webpush from 'web-push'
 import {
+  coffreMessage,
   isReminderDue,
   srsMessage,
   streakMessage,
@@ -9,10 +10,12 @@ import {
 } from '@/lib/notifications'
 
 // Endpoint déclenché par la planification GitHub Actions
-// (.github/workflows/rappels.yml) pour envoyer les rappels push. Deux passes
+// (.github/workflows/rappels.yml) pour envoyer les rappels push. Trois passes
 // selon ?type= :
 //   - srs    : « X cartes à revoir » (le matin, 8h de Paris)
 //   - streak : « ta série est en jeu » (le soir, 19h de Paris)
+//   - coffre : « ton coffre d'équipe est ouvert » (le lundi, 8h de Paris ;
+//              cibles : push_coffre_targets, migration 379)
 // Sécurisé par l'en-tête Authorization: Bearer $CRON_SECRET (posé par le
 // workflow depuis le secret du dépôt, valeur identique à celle de Vercel).
 // Utilise la clé service_role (RLS contournée) pour lire tous les abonnés.
@@ -33,6 +36,7 @@ type Target = {
   due_count?: number
   top_subject?: string | null
   streak?: number
+  niveau?: number
 }
 
 function todayKeyUtc(): string {
@@ -63,7 +67,7 @@ export async function GET(request: Request): Promise<Response> {
 
   const url = new URL(request.url)
   const type = url.searchParams.get('type') ?? 'srs'
-  if (type !== 'srs' && type !== 'streak') {
+  if (type !== 'srs' && type !== 'streak' && type !== 'coffre') {
     return new Response('unknown type', { status: 400 })
   }
 
@@ -92,7 +96,8 @@ export async function GET(request: Request): Promise<Response> {
   })
 
   const today = todayKeyUtc()
-  const rpcName = type === 'srs' ? 'push_srs_targets' : 'push_streak_targets'
+  const rpcName =
+    type === 'srs' ? 'push_srs_targets' : type === 'streak' ? 'push_streak_targets' : 'push_coffre_targets'
   const { data, error } = await admin.rpc(rpcName, { p_today: today })
   if (error) {
     console.error('push targets', error)
@@ -111,7 +116,9 @@ export async function GET(request: Request): Promise<Response> {
       const message: PushMessage | null =
         type === 'srs'
           ? srsMessage(Number(t.due_count ?? 0), t.top_subject ?? null)
-          : streakMessage(Number(t.streak ?? 0), false)
+          : type === 'streak'
+            ? streakMessage(Number(t.streak ?? 0), false)
+            : coffreMessage(Number(t.niveau ?? 0))
       if (!message) return
 
       try {

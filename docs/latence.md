@@ -1,4 +1,4 @@
-# Latence — pour des onglets qui s'ouvrent comme chez Duolingo
+# Latence — pour des onglets qui s'ouvrent comme chez Clash Royale
 
 Chantier ouvert le 03/09/2026. Lucas testait l'app sur son téléphone : « ce n'est
 pas fluide du tout ». Ce document dit ce qui a été **mesuré**, ce qui a été
@@ -163,6 +163,104 @@ Et autour de la navigation :
 - **Base (migration 374)** : Realtime vérifié par clé primaire (plus de parcours
   complet de `live_duels` à chaque connexion), six index en double retirés
   (chaque écriture les payait), `friendships(addressee_id)` ajouté.
+
+### Cinquième lot (23/09) — les onglets vivants, comme chez Clash Royale
+
+Lucas : « l'app doit être aussi fluide que Clash Royale dans sa navigation du
+changement d'icône, c'est bien trop lent ». Mesuré connecté (compte de test), en
+production, processeur bridé ×4 (un téléphone moyen), onglets préchargés :
+
+| Tap | Temps jusqu'à l'onglet affiché |
+|---|---|
+| → Réviser | 303 à 676 ms |
+| → Boutique | 257 à 647 ms |
+| → Amis | 226 à 622 ms |
+| → Arène | 205 à 214 ms |
+| → Moi | 173 à 213 ms |
+
+**Aucune requête réseau pendant ces taps** : le préchargeur avait tout servi.
+Le temps partait ailleurs, et la trace d'un tap l'a découpé :
+
+1. **La barre ne bougeait pas.** La plaque violette suivait l'URL, qui ne change
+   qu'une fois le nouvel écran construit : pendant 150 à 700 ms, le doigt avait
+   touché et rien ne répondait. C'est cette immobilité qui se lit « lent ».
+2. **Chaque changement d'onglet RECONSTRUISAIT l'écran** (React rend et insère
+   toute la page) puis détruisait l'ancien — alors que ré-afficher un onglet
+   déjà construit coûte 35 à 130 ms au même processeur.
+3. **L'arène occupait le fil principal pendant ce temps** : ses animations
+   recalculaient les styles à chaque image (39 % du fil, cf. plus bas), et
+   React, qui construit l'écran suivant par tranches de 5 ms, n'avait qu'un
+   quart du temps pour avancer.
+
+Ce qui a changé :
+
+- **La sélection part au toucher** (`cheminAffiche`, lib/nav-tabs ; Navigation)
+  : la plaque glisse vers l'onglet touché aussitôt, par `transform` — le
+  compositeur la joue seul, même quand le fil principal est occupé. Toucher
+  l'onglet déjà actif remonte en haut.
+- **Les cinq onglets restent montés.** Chaque onglet a son EMPLACEMENT dans la
+  mise en page racine (routes parallèles `app/@defi`, `app/@reviser`,
+  `app/@amis`, `app/@moi`, `app/@tresor`) ; son contenu vit dans
+  `app/<onglet>/onglet.tsx`, et `app/<onglet>/page.tsx` ne porte plus que le
+  titre. Lors d'une navigation dans l'app, Next garde un emplacement que l'URL
+  ne vise plus ; `components/OngletsVivants` montre celui de l'URL et cache les
+  autres avec `<Activity>` de React : DOM et état conservés, effets suspendus,
+  portails masqués (le décor de l'arène aussi). Seule la PREMIÈRE visite d'un
+  onglet le construit.
+- **Chaque onglet garde son défilement** (OngletsVivants le note et le rend).
+- **Les écrans transitoires se referment** quand leur onglet a été caché
+  (`components/useFermeAuMasquage`) : rideau du DUEL, feuille des modes,
+  Classement, menu et feuilles de l'arène, roulette des matières, bannière de
+  clan, fenêtres d'ajout d'ami, et les fiches de la Boutique (capsule, objet de
+  profil, Marché, gemmes — trouvées par la relecture : leur bouton quitte
+  l'onglet sans les refermer). Sans cela, le rideau réapparaissait figé au
+  retour d'une course. Les volets pilotés par leur parent (Réviser, Moi) restent
+  comme on les a laissés : c'est la conservation voulue.
+- **Les animations de l'arène passent au compositeur** : la poussière dorée,
+  les flèches de la plaque de matière, les reflets de la cascade, la brume, les
+  nuages et rochers de l'arène vivante n'ont plus de `var()` dans leurs
+  images-clés ; la flamme n'anime plus son `filter` ; les ondes d'appel de
+  Réviser (gardien, carte de tête, « Nouveau contrôle ? ») sont des anneaux dont
+  seules l'opacité et l'échelle bougent ; la lueur du DUEL (lot précédent, même
+  jour) ne se repeint plus. Et chaque FIN DE CYCLE se paie sur le fil
+  principal : la poussière est passée de 30 points aux cycles de 6 à 14 s à 14
+  points de 16 à 26 s (4,5 % → 1,7 % du fil au ×4).
+
+Résultat (build de production local, même compte, processeur ×4) :
+
+| Tap | Avant (prod) | 1re visite | Revisites |
+|---|---|---|---|
+| → Réviser | 303 à 474 ms | 240 à 390 ms | 205 à 241 ms |
+| → Amis | 226 ms | 190 à 260 ms | 134 à 191 ms |
+| → Moi | 173 ms | 140 à 300 ms | 121 à 150 ms |
+| → Boutique | 257 ms | 220 à 870 ms | 207 à 224 ms |
+| → Arène | 205 à 214 ms | (construite au chargement) | 173 à 216 ms |
+
+Et, surtout, la barre répond dans l'image qui suit le toucher.
+
+**Ce qu'il faut savoir pour la suite :**
+
+- Un rafraîchissement (`router.refresh()`, une action qui revalide) rafraîchit
+  AUSSI les onglets gardés : Next envoie une requête par onglet vivant, en
+  arrière-plan. La réponse de l'action, elle, n'attend pas (la promesse est
+  résolue avant ; lu dans `server-action-reducer.js`).
+- **Un dégradé SVG ne se peint pas s'il est défini dans un onglet caché** : un
+  identifiant de dégradé écrit en dur, partagé par deux dessins, peut viser
+  celui de l'onglet caché. Toujours `useId()` (CouronneArt, SubjectPlate,
+  JaugeCapacite, bannières du vestiaire et languette des modes corrigés).
+- **Un `querySelector` peut tomber sur l'exemplaire d'un onglet caché** : viser
+  le premier élément VISIBLE (`premierCentreVisible`, lib/hud-gains — le vol des
+  récompenses ; la visite guidée le faisait déjà).
+- Refermer un écran au MASQUAGE ne marche pas (mise à jour différée dans un
+  arbre caché) : on referme au REMONTAGE, avant la première image.
+- Un onglet ne doit rien rendre qui dépende de l'URL précise : il est construit
+  une fois et vit sous toutes les URL. Les sous-pages (`/reviser/maths`) sont des
+  pages ordinaires (`children`).
+
+Reste à gagner : la PREMIÈRE visite de la Boutique (squelette puis contenu,
+~870 ms au ×4), et le recalcul de styles du ré-affichage (`display: none` imposé
+par `<Activity>` ; `content-visibility` coûterait moitié moins, mais sans la mise
+en veille des effets).
 
 ## Comment vérifier sur le téléphone (après déploiement)
 

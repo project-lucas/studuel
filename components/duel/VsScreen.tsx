@@ -82,7 +82,7 @@ export default function VsScreen({
         <div className="course-vs-centre" aria-hidden="true">
           {counting ? (
             <span key={count} className={cn('course-vs-compte', count === 0 && 'course-vs-compte--go')}>
-              {count > 0 ? count : 'GO'}
+              {count > 0 ? count : 'Partez !'}
             </span>
           ) : (
             <>

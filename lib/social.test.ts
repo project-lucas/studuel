@@ -1,16 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import {
   buildLiveSessions,
-  buildSchoolBoard,
-  sortSchool,
-  schoolNoun,
-  getMockSchool,
-  getMockGeoBoard,
-  geoScopeLabel,
-  geoScopeTitle,
-  geoScopePossessive,
-  GEO_SCOPES,
-  type GeoScope,
   sinceLabel,
   mapFriendsOverview,
   addFriendMessage,
@@ -20,30 +10,6 @@ import {
   type FriendOverviewRow,
   type StreakEntry,
 } from '@/lib/social'
-
-describe('sortSchool', () => {
-  it('classe l’école aux trophées décroissants', () => {
-    const mates = [
-      { id: 'a', name: 'A', emoji: '🦊', trophies: 100 },
-      { id: 'b', name: 'B', emoji: '🐼', trophies: 500 },
-    ]
-    expect(sortSchool(mates)[0].id).toBe('b')
-  })
-})
-
-describe('schoolNoun / getMockSchool', () => {
-  it('nomme l’établissement selon le cycle', () => {
-    expect(schoolNoun('college')).toBe('collège')
-    expect(schoolNoun('lycee')).toBe('lycée')
-  })
-
-  it('l’aperçu suit le cycle (nom et level cohérents avec le titre)', () => {
-    expect(getMockSchool(0).name).toBe('Collège Jean-Moulin')
-    expect(getMockSchool(0).level).toBe('college')
-    expect(getMockSchool(0, 'lycee').name).toBe('Lycée Jean-Moulin')
-    expect(getMockSchool(0, 'lycee').level).toBe('lycee')
-  })
-})
 
 describe('sinceLabel', () => {
   it('formate la présence en session', () => {
@@ -220,90 +186,5 @@ describe('buildLiveSessions', () => {
   it('jette les lignes sans id, tolère un non-tableau', () => {
     expect(buildLiveSessions([{ full_name: 'X', kind: 'defi' }])).toEqual([])
     expect(buildLiveSessions(null)).toEqual([])
-  })
-})
-
-describe('buildSchoolBoard', () => {
-  it('construit le tableau école, marque « Toi », trie aux trophées', () => {
-    const board = buildSchoolBoard(
-      {
-        school_name: 'Lycée Hugo',
-        mates: [
-          { id: 'a', name: 'Ana', trophies: 100 },
-          { id: 'me', name: 'Lucas', trophies: 500 },
-        ],
-      },
-      'me',
-    )
-    expect(board.name).toBe('Lycée Hugo')
-    expect(board.mates[0]).toMatchObject({ id: 'me', name: 'Toi', isMe: true, trophies: 500 })
-    expect(board.mates[1]).toMatchObject({ id: 'a', name: 'Ana' })
-  })
-
-  it('une RPC d’avant la 362 (sans trophées) donne 0, jamais NaN', () => {
-    const board = buildSchoolBoard(
-      { school_name: 'X', mates: [{ id: 'a', name: 'Ana', seconds: 100 }] },
-      'me',
-    )
-    expect(board.mates[0].trophies).toBe(0)
-  })
-
-  it('porte le cycle demandé (collège par défaut)', () => {
-    expect(buildSchoolBoard(null, 'me').level).toBe('college')
-    expect(buildSchoolBoard(null, 'me', 'lycee').level).toBe('lycee')
-  })
-
-  it('forme vide → école sans nom, sans camarade', () => {
-    expect(buildSchoolBoard(null, 'me')).toEqual({
-      name: '',
-      emoji: '🏫',
-      level: 'college',
-      mates: [],
-    })
-  })
-})
-
-describe('échelons géographiques', () => {
-  it('couvre les 4 échelons dans l’ordre', () => {
-    expect(GEO_SCOPES).toEqual(['school', 'dept', 'region', 'national'])
-  })
-
-  it('libellé d’onglet : l’établissement suit le cycle', () => {
-    expect(geoScopeLabel('school', 'lycee')).toBe('Lycée')
-    expect(geoScopeLabel('school', 'college')).toBe('Collège')
-    expect(geoScopeLabel('dept', 'lycee')).toBe('Département')
-    expect(geoScopeLabel('national', 'college')).toBe('National')
-  })
-
-  it('titre et groupe nominal cohérents par échelon', () => {
-    expect(geoScopeTitle('school', 'lycee')).toBe('Ton lycée')
-    expect(geoScopeTitle('region', 'lycee')).toBe('Ta région')
-    expect(geoScopePossessive('national', 'college')).toBe('la France')
-    expect(geoScopePossessive('school', 'college')).toBe('ton collège')
-  })
-
-  it('échelon établissement → réutilise l’aperçu d’école', () => {
-    const board = getMockGeoBoard('school', 400, 'lycee')
-    expect(board).toEqual(getMockSchool(400, 'lycee'))
-  })
-
-  it('échelon large → me place au bon rang selon mes vrais trophées', () => {
-    // Peu de trophées : « Toi » finit dernier du vivier national.
-    const low = getMockGeoBoard('national', 40, 'lycee')
-    expect(low.name).toBe('France')
-    expect(low.mates.at(-1)).toMatchObject({ id: 'me', isMe: true })
-
-    // Beaucoup : « Toi » remonte en tête.
-    const high = getMockGeoBoard('national', 99999, 'lycee')
-    expect(high.mates[0]).toMatchObject({ id: 'me', isMe: true })
-  })
-
-  it('chaque échelon large porte un nom, un vivier et un seul « Toi »', () => {
-    for (const scope of GEO_SCOPES.filter((s) => s !== 'school') as GeoScope[]) {
-      const board = getMockGeoBoard(scope, 500, 'college')
-      expect(board.name.length).toBeGreaterThan(0)
-      expect(board.mates.length).toBeGreaterThan(1)
-      expect(board.mates.filter((m) => m.isMe)).toHaveLength(1)
-    }
   })
 })

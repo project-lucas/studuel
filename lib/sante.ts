@@ -2502,6 +2502,60 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
       'Rien ne casse et rien ne se voit : les index en double continuent d’être entretenus à chaque écriture, les tables mortes gardent leur place. À exécuter APRÈS la 374.',
     sonde: { type: 'table-absente', table: 'library_items' },
   },
+  {
+    id: '376',
+    fichier: '376_ligue_hebdo.sql',
+    feature:
+      'LA LIGUE DE LA SEMAINE, dans l’onglet Amis (façon Duolingo) : chaque semaine, un groupe de 30 du même échelon (Bronze 4 → Maître, 21 marches), classé à l’XP de la semaine ; les 7 premiers montent, les 5 derniers descendent. Rivaux IA pour compléter les groupes, gemmes de promotion et de podium (source « ligue »), et le MULTIPLICATEUR D’AMIS : +10 % de l’XP de la semaine par ami, jusqu’à ×2, versé à la clôture dans la barre de niveau (source « bonus_amis »). Clôture paresseuse, joueur par joueur (ligue_toucher, ligue_etat, ligue_bilan_vu).',
+    siAbsente:
+      'L’onglet Amis affiche « La ligue ouvre bientôt » à la place de la ligue : pas de groupe, pas de montée, pas de bonus d’amis. Le reste de l’onglet (stories, amis, groupe, demandes) marche. À exécuter APRÈS la 375.',
+    sonde: { type: 'table', table: 'ligue_bilans' },
+  },
+  {
+    id: '377',
+    fichier: '377_tirelire_amis.sql',
+    feature:
+      'LA TIRELIRE D’AMIS (onglet Amis) : chaque ami fait tomber 10 % de MON XP de la semaine ET 10 % de la SIENNE dans ma tirelire (10 amis au plus) ; des paliers dans la semaine — 100 XP → +5 gemmes, 300 → +10, 600 → +20 — à encaisser depuis l’onglet (tirelire_encaisser, source « tirelire ») ou versés à la clôture ; le lundi, la tirelire se casse dans la barre de niveau. Rien sans avoir joué soi-même. Remplace ligue_cloturer et ligue_etat de la 376.',
+    siAbsente:
+      'La ligue garde l’ancien bonus d’amis (10 % de mon XP par ami) : la carte « Tirelire » de l’onglet Amis n’a ni part des amis ni paliers, et « Encaisser » ne répond pas. À exécuter APRÈS la 376.',
+    sonde: { type: 'rpc', fn: 'tirelire_encaisser', args: {} },
+  },
+  {
+    id: '378',
+    fichier: '378_credits_marcel_avatar_ia.sql',
+    feature:
+      'LES CRÉDITS MENSUELS DE MARCEL ET L’AVATAR DESSINÉ : 200 crédits par mois pour Studuel+ (une question = 1, un avatar = 25), rien pour le gratuit — `coach_ask_allowed` réécrite (rend « credit », « jeton », « abonnement », « plafond », « refuse »). L’avatar dessiné par Nano Banana (onglet Moi) : `avatar_ia_reserver` dépense les crédits AVANT l’appel au modèle, `avatar_ia_terminer` n’accepte qu’une image SIGNÉE (HMAC, secret dans `avatars_ia_cle` = variable AVATAR_IA_SECRET), `avatar_ia_echec` rend les crédits, `avatar_ia_appliquer` fait du dessin le portrait (`ia:<id>`), `avatar_ia_image` le sert à tous.',
+    siAbsente:
+      'Marcel garde l’ancien quota du jour (3 questions gratuites, 30 abonné) ; le bouton « Nouvel avatar avec Marcel » répond « bientôt ». ⚠️ Après l’avoir exécutée, insérer UNE fois le secret : INSERT INTO public.avatars_ia_cle (cle) VALUES (\'<AVATAR_IA_SECRET>\') — sans lui, les avatars restent indisponibles (aucun crédit dépensé). À exécuter APRÈS la 377, et APRÈS le déploiement du code qui comprend « credit ».',
+    sonde: { type: 'rpc', fn: 'credits_etat', args: {} },
+  },
+  {
+    id: '379',
+    fichier: '379_coffre_equipe.sql',
+    feature:
+      'LE COFFRE D’ÉQUIPE (onglet Amis), à la place de la tirelire : toute l’XP de la semaine compte deux fois — dans la barre de niveau et dans le coffre —, et celle des 10 amis qui ont le plus joué aussi, à 100 %. Cinq niveaux (100 → +100 XP +5 gemmes, 250 → +250 +10, 450 → +450 +15, 700 → +700 +25, 1 000 → +1 000 +40), le contenu du niveau ATTEINT. La clôture du lundi ENREGISTRE le coffre (`coffres_equipe`), rien n’est versé ; l’élève l’ouvre quand il veut (`coffre_equipe_ouvrir`, sources « coffre_equipe »). Rien sans XP à soi. `ligue_etat` rend `coffre` et `coffres_prets`, `ligue_toucher` rend `coffre`, `coffre_equipe_etat` nourrit le bandeau, `push_coffre_targets` le push du lundi 8 h (type « coffre »). `tirelire_encaisser` ne paie plus rien.',
+    siAbsente:
+      'La carte du coffre montre sa jauge calculée par l’app, mais on ne peut pas l’ouvrir ; la tirelire de la 377 continue de verser à la clôture (paliers et XP « bonus_amis »). À exécuter APRÈS la 378.',
+    sonde: { type: 'rpc', fn: 'coffre_equipe_etat', args: {} },
+  },
+  {
+    id: '380',
+    fichier: '380_multiplicateur_xp.sql',
+    feature:
+      'LE MULTIPLICATEUR DE GAINS D’XP, bien réel : chaque gain d’XP est multiplié au moment où il tombe — ×1,0 sans ami, +0,1 par ami accepté (10 au plus → ×2,0), et la potion d’XP (Boost XP du Marché) double le tout (×4,0 au plus). `xp_avec_bonus` réécrite (arrondi, puis ×2 sous potion), `xp_amis_comptes` (amis distincts, 10 au plus), et `multiplicateur_xp()` pour le bandeau ({ amis, potion, potion_jusqua, multiplicateur }). L’XP de ligue, les points du coffre d’équipe et l’XP rendue par un coffre en profitent aussi.',
+    siAbsente:
+      'Les amis ne multiplient rien : seule la potion double l’XP (368). Le « ×1,3 » du bandeau est calculé par l’app et ne correspond pas à ce qui est versé. À exécuter APRÈS la 379.',
+    sonde: { type: 'rpc', fn: 'multiplicateur_xp', args: {} },
+  },
+  {
+    id: '381',
+    fichier: '381_revision_par_quiz.sql',
+    feature:
+      'LA RÉVISION PAR QUIZ, agrégée en base (onglet Moi, récap « les matières que je révise le plus ») : `revision_par_quiz()` rend, pour chaque quiz joué par l’élève connecté, le nombre de séances et la somme des questions — une ligne par quiz au lieu d’une par séance. SECURITY INVOKER comme `mastery_inputs` (la RLS de test_sessions reste seule maîtresse), sur l’index `test_sessions_user_quiz_idx` (223). La matière se retrouve côté app par la charpente en cache.',
+    siAbsente:
+      'Le récap des matières révisées de l’onglet Moi se replie sur les 1 000 dernières sessions. À exécuter APRÈS la 380.',
+    sonde: { type: 'rpc', fn: 'revision_par_quiz', args: {} },
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

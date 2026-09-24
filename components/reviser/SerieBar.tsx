@@ -159,7 +159,7 @@ export default function SerieBar({
   return (
     <section
       aria-label="Ta série"
-      className="rev-card rounded-[1.75rem] bg-white p-3.5 ring-1 ring-black/5"
+      className="carte p-3.5"
     >
       {/* Ligne du haut : la flamme et son compte à gauche, les deux commandes
           à droite (mon historique · annoncer un contrôle). */}

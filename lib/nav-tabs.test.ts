@@ -1,7 +1,7 @@
 import { existsSync } from 'node:fs'
 import path from 'node:path'
 import { describe, expect, it } from 'vitest'
-import { NAV_TABS, tabIndexForPath } from './nav-tabs'
+import { NAV_TABS, cheminAffiche, ongletVivant, tabIndexForPath } from './nav-tabs'
 
 /** Les illustrations servies par la barre d'onglets, depuis la racine du dépôt. */
 const NAV_DIR = path.join(import.meta.dirname, '..', 'public', 'images', 'nav')
@@ -98,3 +98,42 @@ describe('NAV_TABS', () => {
   })
 })
 
+
+describe('cheminAffiche', () => {
+  it('suit l’URL quand aucun onglet n’a été touché', () => {
+    expect(cheminAffiche('/defi', null)).toBe('/defi')
+  })
+
+  it('montre l’onglet touché avant que l’URL ne change', () => {
+    expect(cheminAffiche('/defi', { cible: '/reviser', depuis: '/defi' })).toBe('/reviser')
+  })
+
+  it('rend la main à l’URL dès qu’elle a bougé', () => {
+    const vise = { cible: '/reviser', depuis: '/defi' }
+    expect(cheminAffiche('/reviser', vise)).toBe('/reviser')
+    // Arrivé ailleurs entre-temps (un lien dans la page) : l’URL l’emporte.
+    expect(cheminAffiche('/amis', vise)).toBe('/amis')
+  })
+
+  it('vaut aussi depuis une sous-page', () => {
+    expect(cheminAffiche('/reviser/maths', { cible: '/defi', depuis: '/reviser/maths' })).toBe('/defi')
+  })
+})
+
+describe('ongletVivant', () => {
+  it('reconnaît la racine exacte de chaque onglet', () => {
+    for (const tab of NAV_TABS) expect(ongletVivant(tab.path)).toBe(tab.path)
+  })
+
+  it('ne prend pas une sous-page pour l’onglet : elle vit dans la page ordinaire', () => {
+    expect(ongletVivant('/reviser/maths')).toBeNull()
+    expect(ongletVivant('/defi/jouer')).toBeNull()
+    expect(ongletVivant('/moi/avatar')).toBeNull()
+  })
+
+  it('renvoie null hors des onglets', () => {
+    expect(ongletVivant('/')).toBeNull()
+    expect(ongletVivant('/marcel')).toBeNull()
+    expect(ongletVivant('/defis')).toBeNull()
+  })
+})

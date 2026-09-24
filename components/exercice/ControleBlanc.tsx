@@ -159,7 +159,7 @@ export default function ControleBlanc({
     return (
       <div className="mx-auto flex max-w-md flex-col items-center gap-3 py-16 text-center">
         <LoaderCircle className="text-primary size-8 animate-spin" aria-hidden="true" />
-        <p className="font-heading font-bold">Le professeur prépare ton sujet…</p>
+        <p className="font-heading font-extrabold">Le professeur prépare ton sujet…</p>
         <p className="text-muted-foreground text-sm">
           Un contrôle sur « {chapterTitle} », écrit à partir du cours.
         </p>
@@ -215,23 +215,23 @@ export default function ControleBlanc({
             <PenLine className="size-3.5" aria-hidden="true" />
             {libelleStyle(servi.style)} · {libelleDifficulte(servi.difficulte)}
           </span>
-          <h2 className="font-heading mt-3 text-xl font-bold text-balance">{exercice.titre}</h2>
+          <h2 className="font-heading mt-3 text-xl font-extrabold text-balance">{exercice.titre}</h2>
           <p className="text-muted-foreground mt-2 text-sm leading-relaxed">{exercice.consigne}</p>
 
           <dl className="mt-4 grid grid-cols-2 gap-3 text-sm">
             <div className="rounded-2xl bg-muted/60 p-3">
-              <dt className="text-muted-foreground text-[11px] font-bold uppercase">Durée</dt>
+              <dt className="surtitre">Durée</dt>
               <dd className="font-heading mt-0.5 text-lg font-extrabold tabular-nums">
                 {exercice.dureeMin} min
               </dd>
             </div>
             <div className="rounded-2xl bg-muted/60 p-3">
-              <dt className="text-muted-foreground text-[11px] font-bold uppercase">Noté sur</dt>
+              <dt className="surtitre">Noté sur</dt>
               <dd className="font-heading mt-0.5 text-lg font-extrabold tabular-nums">20</dd>
             </div>
           </dl>
 
-          <h3 className="text-muted-foreground mt-4 text-[11px] font-bold uppercase">Barème</h3>
+          <h3 className="titre-section mt-4">Barème</h3>
           <ul className="mt-1.5 flex flex-col gap-1 text-sm">
             {exercice.bareme.map((b) => (
               <li key={b.critere} className="flex items-baseline justify-between gap-3">
@@ -279,7 +279,7 @@ export default function ControleBlanc({
     return (
       <div className="mx-auto flex max-w-md flex-col items-center gap-3 py-16 text-center">
         <LoaderCircle className="text-primary size-8 animate-spin" aria-hidden="true" />
-        <p className="font-heading font-bold">Copie rendue. Le professeur corrige…</p>
+        <p className="font-heading font-extrabold">Copie rendue. Le professeur corrige…</p>
         <p className="text-muted-foreground text-sm">Quelques secondes.</p>
       </div>
     )
@@ -292,7 +292,7 @@ export default function ControleBlanc({
     return (
       <div className="mx-auto flex w-full max-w-md flex-col gap-5">
         <div className="rounded-3xl bg-card p-6 text-center shadow-sm ring-1 ring-black/5">
-          <p className="text-muted-foreground text-[11px] font-bold tracking-wide uppercase">
+          <p className="surtitre">
             Ta note
           </p>
           <p
@@ -304,7 +304,7 @@ export default function ControleBlanc({
             {formatNote(correction.note)}
             <span className="text-muted-foreground text-2xl font-bold">/{correction.sur}</span>
           </p>
-          <p className="font-heading mt-1 text-lg font-bold">
+          <p className="font-heading mt-1 text-lg font-extrabold">
             {appreciation(correction.note, correction.sur)}
           </p>
           <p className="text-muted-foreground mt-3 text-sm leading-relaxed text-balance">
@@ -313,7 +313,7 @@ export default function ControleBlanc({
         </div>
 
         <section className="rounded-3xl bg-card p-5 shadow-sm ring-1 ring-black/5">
-          <h3 className="text-muted-foreground text-[11px] font-bold uppercase">
+          <h3 className="titre-section">
             Points par critère
           </h3>
           <ul className="mt-3 flex flex-col gap-3">
@@ -348,7 +348,7 @@ export default function ControleBlanc({
         </section>
 
         <section className="rounded-3xl bg-card p-5 shadow-sm ring-1 ring-black/5">
-          <h3 className="text-muted-foreground text-[11px] font-bold uppercase">Corrigé</h3>
+          <h3 className="titre-section">Corrigé</h3>
           <LessonRichContent content={correction.corrige} className="mt-2 text-sm" />
         </section>
 
@@ -433,13 +433,13 @@ export default function ControleBlanc({
       </div>
 
       <section className="rounded-3xl bg-card p-5 shadow-sm ring-1 ring-black/5">
-        <h2 className="font-heading text-lg font-bold text-balance">{exercice.titre}</h2>
+        <h2 className="font-heading text-lg font-extrabold text-balance">{exercice.titre}</h2>
         <p className="text-muted-foreground mt-1 text-sm">{exercice.consigne}</p>
         <LessonRichContent content={exercice.enonce} className="mt-3 text-sm" />
       </section>
 
       <label className="flex flex-col gap-1.5">
-        <span className="text-muted-foreground text-[11px] font-bold uppercase">Ta copie</span>
+        <span className="surtitre">Ta copie</span>
         <textarea
           value={copie}
           onChange={(e) => {

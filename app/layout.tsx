@@ -24,8 +24,11 @@ import BackGuard from "@/components/BackGuard";
 // Toasts globaux (« Enregistré ✓ ») : file lib/toast, aucun provider.
 import Toaster from "@/components/Toaster";
 import RecompensesProvider from "@/components/recompenses/RecompensesProvider";
+import OngletsVivants from "@/components/OngletsVivants";
 // Écran de chargement au lancement, façon jeu mobile (illustration + barre).
 import SplashScreen from "@/components/SplashScreen";
+import LigueVeille from "@/components/LigueVeille";
+import NavAmisBadge from "@/components/amis/ligue/NavAmisBadge";
 // Capteur « le premier écran est peint » : autorise le rideau à lever.
 import AppReadyBeacon from "@/components/AppReadyBeacon";
 // Gabarit de page : marges de lecture, ou plein écran. Client, pour suivre la
@@ -36,7 +39,7 @@ import WorldBackdrop from "@/components/WorldBackdrop";
 // joue à la verticale, et seulement (Lucas, 22/09/2026).
 import GardePortrait from "@/components/GardePortrait";
 import { estPleinEcran } from "@/lib/quiz-chrome";
-import { shouldShowSplash, tipOfDay } from "@/lib/splash";
+import { scriptSuiteLancement, shouldShowSplash, tipOfDay } from "@/lib/splash";
 import { getCurrentUser } from "@/lib/supabase/user";
 import { headers } from "next/headers";
 
@@ -85,8 +88,20 @@ export const viewport: Viewport = {
 
 export default async function RootLayout({
   children,
+  defi,
+  reviser,
+  amis,
+  moi,
+  tresor,
 }: Readonly<{
   children: React.ReactNode;
+  // LES CINQ ONGLETS, chacun dans son emplacement (`app/@defi`…) : ils restent
+  // montés d'un onglet à l'autre, comme chez Clash Royale (components/OngletsVivants).
+  defi: React.ReactNode;
+  reviser: React.ReactNode;
+  amis: React.ReactNode;
+  moi: React.ReactNode;
+  tresor: React.ReactNode;
 }>) {
   // Utilisateur courant pour l'affichage du lien compte dans la navigation.
   // Vérification LOCALE du jeton (getClaims) et mémoïsée pour la requête : ce
@@ -134,7 +149,14 @@ export default async function RootLayout({
             deux rendus affichent la même phrase — sinon React signale une
             différence d'hydratation sur le tout premier écran de l'app. */}
         {showSplash ? (
-          <SplashScreen tip={tipOfDay(new Date().toISOString().slice(0, 10))} />
+          <>
+            <SplashScreen tip={tipOfDay(new Date().toISOString().slice(0, 10))} />
+            {/* Arrivée de l'écran de lancement statique (public/lancement.html,
+                le point d'entrée de l'app installée) : la barre reprend où
+                elle en était au lieu de repartir de zéro. Joue avant
+                l'hydratation, n'écrit que dans <head> (lib/splash). */}
+            <script dangerouslySetInnerHTML={{ __html: scriptSuiteLancement() }} />
+          </>
         ) : null}
         {/* Mobile first : contenu entre la barre du haut (compte) et la barre
             d'onglets du bas ; sur desktop la sidebar sticky passe à gauche et
@@ -145,6 +167,10 @@ export default async function RootLayout({
           {/* Ne rend rien. Réservé aux élèves connectés : un visiteur n'a
               que des vitrines, inutile de les calculer d'avance. */}
           {user ? <PrechargeurOnglets /> : null}
+          {/* La ligue de la semaine se clôture joueur par joueur : ce réveil
+              fait entrer l'élève dans son groupe et lui verse ses gains, même
+              s'il n'ouvre pas l'onglet Amis (migration 376). Ne rend rien. */}
+          {user ? <LigueVeille /> : null}
           {/* Bandeau du haut streamé : ne bloque pas le rendu de la page. Le
               repli est une barre vide de même hauteur (aucun saut de mise en
               page). */}
@@ -179,6 +205,8 @@ export default async function RootLayout({
             // Avatar de l'onglet Moi, streamé de la même façon. Le repli est le
             // buste dessiné, ici comme dans le chargeur : la case de l'onglet
             // n'est jamais vide, ni pendant l'attente ni après une panne.
+            // Pastille de l'onglet Amis : un bilan de la ligue attend.
+            amisBadge={user ? <NavAmisBadge /> : null}
             avatarSlot={
               <Suspense fallback={<NavMoiBust />}>
                 <NavAvatarLoader />
@@ -194,7 +222,17 @@ export default async function RootLayout({
               personne n'a rien gagné. */}
           <RecompensesProvider>
             <AppMain>
-              {children}
+              <OngletsVivants
+                onglets={{
+                  "/defi": defi,
+                  "/reviser": reviser,
+                  "/amis": amis,
+                  "/moi": moi,
+                  "/tresor": tresor,
+                }}
+              >
+                {children}
+              </OngletsVivants>
             </AppMain>
           </RecompensesProvider>
         </div>

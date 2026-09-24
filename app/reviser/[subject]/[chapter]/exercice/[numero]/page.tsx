@@ -64,8 +64,7 @@ export default async function ExerciceNumeroPage({
 
   return (
     <PageChapitre
-      couleur={subject.color}
-      surtitre={`${subject.name} · ${chapter.title}`}
+      sousTitre={`${subject.name} · ${chapter.title}`}
       titre={`Exercice ${position}`}
       retour={cahierHref}
       compact

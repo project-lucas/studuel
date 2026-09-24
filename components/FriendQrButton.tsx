@@ -4,22 +4,29 @@ import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { QRCodeSVG } from 'qrcode.react'
 import { QrCode, Share2, UserPlus, X } from 'lucide-react'
-import { sfx } from '@/lib/sounds'
+import { Button } from '@/components/ui/button'
 import { useDialogFocus } from '@/lib/use-dialog'
 import { useSortieAnimee } from '@/components/useSortieAnimee'
+import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
 
 interface FriendQrButtonProps {
-  /** Code ami de l'élève (profiles.friend_code) — encodé dans le QR vert. */
+  /** Code ami de l'élève (profiles.friend_code) — encodé dans le QR. */
   friendCode: string
 }
 
 /**
- * Le bouton vert « Mon QR code » de l'onglet Amis : ouvre une modale avec
- * MON QR — quiconque le scanne devient mon ami (route /amis/ajouter/<code>).
+ * Le bouton « Mon QR code » de l'onglet Amis : ouvre une modale avec MON QR —
+ * quiconque le scanne devient mon ami (route /amis/ajouter/<code>).
  * (Déplacé depuis la rangée sociale de l'arène Défi.)
+ *
+ * Bouton et fenêtre ont été verts (un dégradé à eux, un QR vert foncé) : le
+ * vert est un état, pas une action, et cette fenêtre est la seule de l'app à
+ * avoir sa propre couleur. Elle est blanche comme les autres, ses boutons sont
+ * ceux de la maison, et le QR est noir sur blanc — ce qu'un lecteur lit le mieux.
  */
 export default function FriendQrButton({ friendCode }: FriendQrButtonProps) {
   const [open, setOpen] = useState(false)
+  useFermeAuMasquage(setOpen, false)
   const panel = useRef<HTMLDivElement>(null)
   useDialogFocus(panel, open)
   const [copied, setCopied] = useState(false)
@@ -44,7 +51,6 @@ export default function FriendQrButton({ friendCode }: FriendQrButtonProps) {
   }, [open])
 
   const share = async () => {
-    sfx.tap()
     const data = {
       title: 'Studuel — deviens mon ami !',
       text: 'Scanne ou ouvre ce lien pour devenir mon ami sur Studuel :',
@@ -65,20 +71,17 @@ export default function FriendQrButton({ friendCode }: FriendQrButtonProps) {
 
   return (
     <>
-      <button
+      <Button
         type="button"
-        onClick={() => {
-          sfx.tap()
-          setOpen(true)
-        }}
+        variant="outline"
+        size="lg"
+        onClick={() => setOpen(true)}
         aria-haspopup="dialog"
-        className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-full border border-[oklch(0.72_0.13_150)] bg-gradient-to-b from-[oklch(0.66_0.16_150)] to-[oklch(0.53_0.15_152)] px-4 py-2.5 shadow-[0_10px_22px_-10px_oklch(0.48_0.15_152)] transition-transform active:scale-95 focus-visible:ring-4 focus-visible:ring-[oklch(0.66_0.16_150)]/40 focus-visible:outline-none"
+        className="w-full"
       >
-        <QrCode className="size-4 text-white" aria-hidden="true" />
-        <span className="font-heading text-sm font-extrabold text-white">
-          Mon QR code à scanner
-        </span>
-      </button>
+        <QrCode aria-hidden="true" />
+        Mon QR code à scanner
+      </Button>
 
       {typeof document !== 'undefined'
         ? createPortal(
@@ -95,58 +98,52 @@ export default function FriendQrButton({ friendCode }: FriendQrButtonProps) {
                     ref={panel}
                     data-etat={etat}
                     onAnimationEnd={onAnimationEnd}
-                    className="modale-panneau flex w-full max-w-sm flex-col items-center gap-4 rounded-3xl border border-[oklch(0.75_0.12_150)]/60 bg-gradient-to-b from-[oklch(0.6_0.15_150)] to-[oklch(0.48_0.14_152)] p-6 text-center shadow-[0_24px_60px_-20px_rgba(0,0,0,0.7)] outline-none"
+                    className="modale-panneau flex w-full max-w-sm flex-col items-center gap-4 rounded-3xl bg-card p-6 text-center text-foreground shadow-[0_24px_60px_-20px_rgba(0,0,0,0.6)] ring-1 ring-foreground/10 outline-none"
                     onClick={(e) => e.stopPropagation()}
                   >
                     <div className="flex w-full items-center gap-3">
                       <UserPlus
-                        className="size-5 shrink-0 text-white"
+                        className="size-5 shrink-0 text-primary"
                         aria-hidden="true"
                       />
-                      <h2 className="font-heading min-w-0 flex-1 truncate text-left text-xl font-extrabold text-white">
+                      <h2 className="font-heading min-w-0 flex-1 truncate text-left text-xl font-extrabold">
                         Ajouter un ami
                       </h2>
                       <button
                         type="button"
                         onClick={() => setOpen(false)}
                         aria-label="Fermer"
-                        className="flex size-9 shrink-0 cursor-pointer items-center justify-center rounded-full text-white/80 transition-colors hover:bg-white/10 active:scale-90"
+                        className="flex size-9 shrink-0 cursor-pointer items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-muted active:scale-90"
                       >
                         <X className="size-5" strokeWidth={2.4} aria-hidden="true" />
                       </button>
                     </div>
 
                     {shareUrl ? (
-                      <div className="rounded-2xl bg-white p-3 shadow-inner">
+                      <div className="rounded-2xl bg-white p-3 ring-1 ring-black/5">
                         <QRCodeSVG
                           value={shareUrl}
                           size={208}
                           marginSize={1}
-                          fgColor="#14532d"
-                          bgColor="#ffffff"
                           aria-label="Ton QR code ami — à faire scanner"
                         />
                       </div>
                     ) : null}
 
-                    <p className="text-sm font-semibold text-white/90">
+                    <p className="text-sm font-semibold text-muted-foreground">
                       Toute personne qui scanne ce code sera ajoutée
                       instantanément à ta liste d’amis !
                     </p>
-                    <p className="font-mono text-sm font-bold tracking-[0.2em] text-white">
+                    <p className="font-mono text-sm font-bold tracking-[0.2em]">
                       {friendCode}
                     </p>
 
-                    <button
-                      type="button"
-                      onClick={share}
-                      className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-2xl border border-white/25 bg-white/15 px-4 py-2.5 font-heading text-sm font-extrabold text-white transition-transform active:scale-95"
-                    >
-                      <Share2 className="size-4" aria-hidden="true" />
+                    <Button type="button" size="lg" onClick={share} className="w-full">
+                      <Share2 aria-hidden="true" />
                       Partager
-                    </button>
+                    </Button>
                     {copied ? (
-                      <span className="text-xs font-bold text-highlight">
+                      <span className="text-xs font-bold text-success">
                         Lien copié !
                       </span>
                     ) : null}

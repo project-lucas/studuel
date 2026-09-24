@@ -29,21 +29,23 @@ export default function CitationDuJour({
   const auteur = estEvenement(entree) ? (citation.qui ?? entree.nom) : entree.nom
 
   return (
+    // Une carte BLANCHE, la même que partout (audit du 23/09/2026) : la plaque
+    // teintée `styles.citation` faisait ici une couleur de plus — ni période
+    // ni rôle — en tête de la liste. La teinte ne reste que sur le guillemet.
     <section
       data-teinte={teinteDe(entree.periode)}
-      className={cn(styles.citation, 'mb-4 px-5 py-4')}
+      className="carte relative mb-4 overflow-hidden px-5 py-4"
       aria-labelledby="citation-du-jour"
     >
       <span className={styles.guillemet} aria-hidden="true">
         “
       </span>
       <div className="relative">
-        <p
-          id="citation-du-jour"
-          className="text-[0.65rem] font-extrabold tracking-[0.14em] text-muted-foreground uppercase"
-        >
+        {/* Un vrai titre de section, en casse de phrase (une seule convention —
+            audit du 23/09/2026) : c'est lui que la section annonce. */}
+        <h2 id="citation-du-jour" className="titre-section">
           La citation du jour
-        </p>
+        </h2>
         <blockquote
           className={cn(
             styles.citationTexte,

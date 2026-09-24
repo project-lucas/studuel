@@ -78,7 +78,7 @@ function BranchCard({
       >
         <p
           className={cn(
-            'font-heading flex items-center gap-2 font-bold',
+            'font-heading flex items-center gap-2 font-extrabold',
             side === 'left' && 'flex-row-reverse text-right',
           )}
         >
@@ -155,7 +155,7 @@ export default function MindMap({
             className="absolute inset-y-6 w-1 rounded-full bg-primary/20"
           />
           <div className="bg-primary text-primary-foreground relative z-10 max-w-[13rem] rounded-3xl px-6 py-4 text-center shadow-lg">
-            <p className="font-heading text-lg font-bold text-balance md:text-xl">
+            <p className="font-heading text-lg font-extrabold text-balance md:text-xl">
               {data.centre}
             </p>
           </div>

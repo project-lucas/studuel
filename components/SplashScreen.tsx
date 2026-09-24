@@ -4,7 +4,9 @@ import { useEffect, useState } from 'react'
 import { onAppReady } from '@/lib/app-ready'
 import { verrouillerDefilement } from '@/lib/scroll-lock'
 import {
+  CLE_LANCEMENT,
   SPLASH_READY_CAP_MS,
+  depuisLancement,
   formatSplashPercent,
   isSplashReady,
   splashProgress,
@@ -70,6 +72,21 @@ export default function SplashScreen({ tip }: Props) {
       appReady = true
     })
 
+    // ARRIVÉ DE L'ÉCRAN DE LANCEMENT (public/lancement.html) ? La barre y
+    // tournait déjà : elle continue d'ici, sans repartir de zéro. `avance` est
+    // le temps passé entre le lancement et le début de CETTE page ; la note est
+    // effacée après lecture, un rechargement repart de sa propre page.
+    let noteLancement: string | null = null
+    try {
+      noteLancement = window.sessionStorage.getItem(CLE_LANCEMENT)
+      window.sessionStorage.removeItem(CLE_LANCEMENT)
+    } catch {
+      // stockage indisponible : on compte depuis cette page, comme avant
+    }
+    const ecartLancement = depuisLancement(noteLancement, Date.now())
+    const avance =
+      ecartLancement === null ? 0 : Math.max(0, ecartLancement - performance.now())
+
     let raf = 0
     let fadeTimer: ReturnType<typeof setTimeout> | undefined
     let termine = false
@@ -92,9 +109,12 @@ export default function SplashScreen({ tip }: Props) {
       // déjà consommé ce temps-là. Repartir de zéro ici ferait reculer la
       // barre au moment précis où le JavaScript arrive — et prolongerait
       // d'autant l'écran.
+      // Le plafond de sécurité se compte depuis CETTE page (le rideau ne doit
+      // pas lever sur des squelettes parce que le lancement a traîné) ; la
+      // barre, elle, depuis le lancement de l'app.
       const elapsedMs = performance.now()
       const value = splashProgress(
-        elapsedMs,
+        elapsedMs + avance,
         isSplashReady({ documentLoaded, appReady, elapsedMs }),
       )
       setProgress(value)

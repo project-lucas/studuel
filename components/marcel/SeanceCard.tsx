@@ -28,7 +28,7 @@ export default function SeanceCard({
         </span>
       </header>
 
-      <ol className="bg-card relative rounded-[20px] p-3 shadow-[0_2px_0_rgba(36,48,79,.06),0_14px_26px_-22px_rgba(36,48,79,.9)]">
+      <ol className="carte relative p-3">
         {/* Le fil qui relie les trois temps : ils se suivent, ils ne sont pas
             trois options au choix. */}
         <span

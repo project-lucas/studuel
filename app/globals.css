@@ -58,6 +58,70 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  /* LA CARTE (une seule recette, cf. bloc « La carte » plus bas) :
+     `rounded-carte` et `shadow-carte` lisent les tokens de :root. */
+  --radius-carte: var(--carte-rayon);
+  --shadow-carte: var(--carte-ombre);
+  --shadow-carte-socle: var(--carte-socle);
+}
+
+/* =============================================================================
+   LES RECETTES PARTAGÉES — homogénéisation du 23/09/2026 (docs/audit-design-2026-09-23.md)
+
+   LA CARTE : un rayon, une ombre, un fond, en trois variantes nommées.
+     .carte         blanche, ombre douce violette — la carte ordinaire
+     .carte-plaque  blanche, liseré violet clair + socle dur — la carte « jouet »
+                    (ancienne .moi-card)
+     .carte-sombre  violet profond, encre crème — feuilles de l'arène, carte de
+                    joueur
+   Les recettes locales (.rev-card, .moi-bloc, .moi-card, Card shadcn) lisent
+   les mêmes tokens : une carte de Réviser et une carte de Moi ont le même
+   rayon et la même ombre.
+
+   LE TITRE DE SECTION : UNE convention — Baloo 2 extrabold, casse de phrase
+   (« Mes matières », « Ton rythme »). Plus de petites capitales espacées pour
+   un titre de section : elles cohabitaient avec Baloo 2 pour le même rôle,
+   parfois sur le même écran. Le SURTITRE (petites capitales) ne vit qu'au-
+   dessus d'un H1 de page, jamais comme titre de section.
+
+   Dans @layer components : une utilitaire Tailwind posée à côté (text-xl,
+   text-white, rounded-none) garde le dernier mot.
+   ========================================================================== */
+@layer components {
+  .carte {
+    background: var(--card);
+    color: var(--card-foreground);
+    border-radius: var(--carte-rayon);
+    box-shadow: var(--carte-ombre);
+  }
+  .carte-plaque {
+    background: var(--card);
+    color: var(--card-foreground);
+    border-radius: var(--carte-rayon);
+    border: 2px solid var(--carte-liseret);
+    box-shadow: var(--carte-socle);
+  }
+  .carte-sombre {
+    background: var(--carte-sombre-fond);
+    color: var(--ink-on-dark);
+    border-radius: var(--carte-rayon);
+    box-shadow: var(--carte-ombre);
+  }
+  .titre-section {
+    font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+    font-weight: 800;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .surtitre {
+    font-size: 0.6875rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+  }
 }
 
 /* =============================================================================
@@ -108,6 +172,26 @@
   --chart-4: #8f8a78;
   --chart-5: #24304f;
   --radius: 1.1rem;
+  /* LA CARTE — UNE recette pour toute l'app (audit du 23/09/2026 : au moins
+     quatre rayons et quatre ombres pour « une carte »). Un rayon, une ombre
+     douce violette, un liseré et un socle pour la variante « plaque ». Les
+     recettes locales (.rev-card, .moi-bloc, .moi-card, Card shadcn, cartes de
+     Marcel) LISENT ces tokens au lieu de porter les leurs. */
+  --carte-rayon: 1.5rem;
+  --carte-ombre:
+    0 1px 2px oklch(0.4 0.15 296 / 0.06),
+    0 12px 28px -16px oklch(0.42 0.18 296 / 0.36);
+  --carte-liseret: oklch(0.62 0.14 296 / 0.32);
+  --carte-socle:
+    0 5px 0 oklch(0.45 0.19 295 / 0.34),
+    0 16px 24px -16px oklch(0.4 0.18 296 / 0.28);
+  /* La carte SOMBRE (feuilles de l'arène, carte de joueur) : le violet profond
+     de `.defi3-sheet`, une seule recette pour les sept « violets profonds ». */
+  --carte-sombre-fond: color-mix(in oklch, var(--primary) 34%, oklch(0.17 0.035 300));
+  /* L'encre sur fond sombre (et sa version atténuée) : les composants du Défi
+     l'écrivaient en quatre hex différents. */
+  --ink-on-dark: #faf6ef;
+  --ink-on-dark-muted: #d8c9ff;
   --sidebar: #ffffff;
   --sidebar-foreground: #24304f;
   --sidebar-primary: #7a3fe0;
@@ -464,37 +548,62 @@
   }
 }
 
+/* LES ONDES D'APPEL (2, 3, 4 ci-dessous, et le « C'est parti » d'AreneIntro) :
+   un halo qui s'écarte d'un objet pour dire « ici ». Elles animaient la
+   `box-shadow` de l'objet — un repeint à chaque image sur le fil principal,
+   et l'ombre propre de l'objet (la carte, le socle du bouton) écrasée tant que
+   l'onde courait (23/09/2026). L'onde est désormais un ANNEAU posé autour de
+   l'objet (`::after`, `inset` négatif, bordure de la largeur du halo — il ne
+   recouvre jamais l'objet) dont seules l'opacité et l'échelle bougent : le
+   compositeur la joue seul. Aucune variable dans ces images-clés. */
+.gardien-pouls,
+.rev-appel,
+.controle-appel {
+  position: relative;
+}
+.gardien-pouls::after,
+.rev-appel::after,
+.controle-appel::after,
+.go-pulse::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+}
+@keyframes onde-appel {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  12% {
+    opacity: 1;
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+}
+
 /* 2. LE GARDIEN SORTI, sur le dossier de sa matière. Le dossier est déjà
       écarlate ; ce halo dit que le compte à rebours COURT. Plus rapide que les
       deux autres (1,8 s) : il ne reste qu'une heure. */
-@keyframes gardien-pouls {
-  0%,
-  100% {
-    box-shadow: 0 0 0 0 rgba(226, 72, 72, 0.55);
-  }
-  60% {
-    box-shadow: 0 0 0 8px rgba(226, 72, 72, 0);
-  }
-}
-.gardien-pouls {
-  animation: gardien-pouls 1.8s ease-out infinite;
+.gardien-pouls::after {
+  inset: -8px;
+  border: 8px solid rgba(226, 72, 72, 0.35);
+  border-radius: 9999px;
+  animation: onde-appel 1.8s ease-out infinite;
 }
 
 /* 3. « ON COMMENCE PAR ÇA » — la seule recommandation de l'écran. Elle était
       une carte violette parmi des cartes blanches : distincte, mais silencieuse.
       Un halo de sa propre couleur s'en écarte lentement (3,2 s), assez pour
       qu'on la remarque en arrivant, assez lent pour qu'on l'oublie ensuite. */
-@keyframes rev-appel {
-  0%,
-  100% {
-    box-shadow: 0 0 0 0 color-mix(in oklch, var(--primary), transparent 62%);
-  }
-  55% {
-    box-shadow: 0 0 0 10px color-mix(in oklch, var(--primary), transparent 100%);
-  }
-}
-.rev-appel {
-  animation: rev-appel 3.2s ease-out infinite;
+.rev-appel::after {
+  inset: -10px;
+  border: 10px solid color-mix(in oklch, var(--primary), transparent 78%);
+  border-radius: calc(var(--carte-rayon) + 10px);
+  animation: onde-appel 3.2s ease-out infinite;
 }
 
 /* 4. « NOUVEAU CONTRÔLE ? » — le bouton RESPIRE : une pulsation d'échelle
@@ -509,17 +618,19 @@
   0%,
   100% {
     transform: scale(1);
-    box-shadow: 0 0 0 0 color-mix(in oklch, var(--primary), transparent 45%);
   }
   40% {
     transform: scale(1.05);
   }
-  70% {
-    box-shadow: 0 0 0 9px color-mix(in oklch, var(--primary), transparent 100%);
-  }
 }
 .controle-appel {
   animation: controle-appel 2.2s ease-in-out infinite;
+}
+.controle-appel::after {
+  inset: -9px;
+  border: 9px solid color-mix(in oklch, var(--primary), transparent 72%);
+  border-radius: 9999px;
+  animation: onde-appel 2.2s ease-out infinite;
 }
 
 /* 5. LA FLÈCHE DE LA CARTE DE TÊTE avance et revient (4 px, 1,4 s) : « vas-y ».
@@ -543,9 +654,11 @@
    la carte, le libellé du bouton. Un halo n'a jamais porté seul une information. */
 @media (prefers-reduced-motion: reduce) {
   .jour-onde,
-  .gardien-pouls,
-  .rev-appel,
+  .gardien-pouls::after,
+  .rev-appel::after,
   .controle-appel,
+  .controle-appel::after,
+  .go-pulse::after,
   .rev-fleche {
     animation: none;
   }
@@ -725,19 +838,23 @@ a:hover > .wiggle-on-hover {
 
 /* --- Barre de série (WeekStrip) ------------------------------------------- */
 
-/* La flamme respire : léger scale + glow qui s'intensifie et s'atténue */
+/* La flamme respire : un léger gonflement sous un halo fixe.
+   Le halo pulsait aussi (un `filter` animé) : un filtre animé se repeint à
+   chaque image sur le fil principal, et la flamme vit dans le HUD de l'arène,
+   visible en permanence (23/09/2026). Le halo est désormais FIXE, au milieu de
+   son ancienne course ; seul le gonflement bouge — une transformation, que le
+   compositeur joue seul. */
 @keyframes flame-breathe {
   0%,
   100% {
     transform: scale(1);
-    filter: drop-shadow(0 0 4px rgba(237, 169, 78, 0.4));
   }
   50% {
     transform: scale(1.08);
-    filter: drop-shadow(0 0 14px rgba(224, 138, 40, 0.6));
   }
 }
 .flame-breathe {
+  filter: drop-shadow(0 0 8px rgba(230, 150, 60, 0.5));
   animation: flame-breathe 2.4s ease-in-out infinite;
   transform-origin: center bottom;
 }
@@ -767,17 +884,11 @@ a:hover > .wiggle-on-hover {
 }
 
 /* Le bouton GO respire tant que le défi du jour n'est pas fait */
-@keyframes go-pulse {
-  0%,
-  100% {
-    box-shadow: 0 0 0 0 color-mix(in oklch, var(--primary), transparent 45%);
-  }
-  70% {
-    box-shadow: 0 0 0 18px transparent;
-  }
-}
-.go-pulse {
-  animation: go-pulse 2.2s ease-out infinite;
+.go-pulse::after {
+  inset: -18px;
+  border: 18px solid color-mix(in oklch, var(--primary), transparent 72%);
+  border-radius: 9999px;
+  animation: onde-appel 2.2s ease-out infinite;
 }
 
 /* --- Onglet Défi : l'Arène ------------------------------------------------ */
@@ -1596,14 +1707,12 @@ a:hover > .wiggle-on-hover {
   animation: ring-spin 24s linear infinite;
 }
 
-/* --- Fond animé de l'Arène : bannières, feuilles, torches, poussière ----------
+/* --- Fond animé de l'Arène : la poussière dorée ---------------------------------
    Monté DANS le WorldBackdrop du Défi (components/background/AnimatedBackground.tsx),
-   PAR-DESSUS le décor peint. Quatre couches procédurales en boucle continue,
-   sans coupure visible. Tout est décoratif : pointer-events désactivés,
-   animations transform/opacity uniquement, et neutralisées si l'utilisateur
-   préfère réduire le mouvement. Les positions en % suivent la composition
-   portrait de l'illustration (braseros violets en bas, torches dorées de part
-   et d'autre de l'escalier). */
+   PAR-DESSUS le décor peint. Une couche procédurale en boucle continue, sans
+   coupure visible, décorative (pointer-events désactivés), neutralisée si
+   l'utilisateur préfère réduire le mouvement. Les feuilles qui tombaient et
+   les deux braises dorées ont été retirées le 23/09/2026 (Lucas). */
 .abg {
   position: absolute;
   inset: 0;
@@ -1627,131 +1736,85 @@ a:hover > .wiggle-on-hover {
   position: absolute;
   inset: 0;
 }
-/* Empilement : feuilles (2) → torches (3) → poussière (4). */
-.abg-layer--leaves {
-  z-index: 2;
-}
-.abg-layer--torches {
-  z-index: 3;
-}
+/* La poussière passe au-dessus du décor. */
 .abg-layer--dust {
   z-index: 4;
 }
 
-/* Canvas des feuilles (composant FallingLeaves) : il remplit sa couche, le
-   dessin et la physique sont pilotés en JS (lib/animated-background.ts). */
-.abg-canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Une flamme : halo radial doux qui vacille (l'exactitude au pixel n'est pas
-   requise — le halo est diffus, il « rallume » la zone peinte). Deux rythmes
-   superposés (vacillement + respiration) pour un feu organique, jamais robotique. */
-@keyframes abg-flame-flicker {
-  0% {
-    opacity: 0.55;
-    transform: translate(-50%, -50%) scale(0.92) scaleY(0.96);
-  }
-  18% {
-    opacity: 0.85;
-    transform: translate(-50%, -52%) scale(1.05) scaleY(1.08);
-  }
-  33% {
-    opacity: 0.62;
-    transform: translate(-51%, -50%) scale(0.97) scaleY(1);
-  }
-  52% {
-    opacity: 0.92;
-    transform: translate(-49%, -53%) scale(1.08) scaleY(1.12);
-  }
-  71% {
-    opacity: 0.6;
-    transform: translate(-50%, -50%) scale(0.95) scaleY(0.98);
-  }
-  87% {
-    opacity: 0.8;
-    transform: translate(-50%, -51%) scale(1.02) scaleY(1.05);
-  }
-  100% {
-    opacity: 0.55;
-    transform: translate(-50%, -50%) scale(0.92) scaleY(0.96);
-  }
-}
-.abg-flame {
-  position: absolute;
-  width: 18%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: screen;
-  will-change: opacity, transform;
-  animation: abg-flame-flicker 2.4s ease-in-out infinite;
-}
-/* DEUX FOYERS, ET DEUX SEULEMENT : les vasques peintes au sol, de part et
-   d'autre du podium.
-
-   Il y en avait quatre. Les deux dorées étaient calées à `top: 36%` — la
-   HAUTEUR DE LA TÊTE de la mascotte : elles lui allumaient le visage sans
-   qu'aucune source ne le justifie dans le décor. Les deux violettes, aux
-   angles bas, n'éclairaient rien de peint non plus. Un halo qui ne prolonge
-   pas une flamme dessinée ne se lit pas comme une lumière, mais comme une
-   tache.
-
-   Les positions viennent du décor lui-même, pas de l'œil : les vasques y sont
-   à 18 % et 84 % de la largeur, aux deux tiers de la hauteur.
-
-   DISCRÈTES MAIS VISIBLES : le halo est plus petit qu'avant (18 % contre 26 %)
-   et son opacité plafonne à 0,55 au lieu de 0,92 — il réchauffe la vasque sans
-   éclabousser le sol. C'est une braise, pas un projecteur. */
-.abg-flame--braise {
-  width: 18%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 214, 138, 0.7) 0%,
-    rgba(251, 146, 60, 0.42) 32%,
-    rgba(234, 88, 12, 0.16) 58%,
-    transparent 72%
-  );
-}
-.abg-flame--braise-g {
-  left: 18%;
-  top: 66%;
-  animation-duration: 2.6s;
-}
-.abg-flame--braise-d {
-  left: 84%;
-  top: 66%;
-  animation-duration: 2.1s;
-  animation-delay: -0.9s;
-}
-
 /* Poussière de lumière ambiante : petits points dorés qui montent lentement
    en pulsant. Positions/délais/durées randomisés côté lib (graine fixe, rendu
-   SSR identique) et posés en styles inline par GoldenDust.tsx. */
-@keyframes abg-dust-float {
+   SSR identique) et posés en styles inline par GoldenDust.tsx.
+
+   ⚠️ AUCUNE VARIABLE DANS CES IMAGES-CLÉS (23/09/2026). Elles lisaient
+   `--dust-opacity` et `--dust-drift` : trente animations sur le fil principal,
+   qui recalculaient les styles de l'arène à chaque image — 39 % du fil au
+   processeur ×4, et la construction de l'onglet suivant ralentie d'autant.
+   L'opacité de pointe de chaque point est portée par son enveloppe
+   (`.abg-dust`, immobile), la pulsation par le grain (de 0 à 1, multipliée) ;
+   la dérive a trois sens écrits en dur (`data-derive`, lib/animated-background). */
+@keyframes abg-dust-monte {
   0% {
-    transform: translateY(0) translateX(0);
+    transform: translate(0, 0);
     opacity: 0;
   }
   18% {
-    opacity: var(--dust-opacity, 0.45);
+    opacity: 1;
   }
   55% {
-    opacity: calc(var(--dust-opacity, 0.45) * 0.55);
+    opacity: 0.55;
   }
   78% {
-    opacity: var(--dust-opacity, 0.45);
+    opacity: 1;
   }
   100% {
-    transform: translateY(-14vh) translateX(var(--dust-drift, 0px));
+    transform: translate(0, -20vh);
+    opacity: 0;
+  }
+}
+@keyframes abg-dust-monte-gauche {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  18% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0.55;
+  }
+  78% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-12px, -20vh);
+    opacity: 0;
+  }
+}
+@keyframes abg-dust-monte-droite {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  18% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0.55;
+  }
+  78% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(12px, -20vh);
     opacity: 0;
   }
 }
 .abg-dust {
   position: absolute;
+}
+.abg-dust-grain {
+  position: absolute;
+  inset: 0;
   border-radius: 50%;
   background: radial-gradient(
     circle,
@@ -1760,16 +1823,17 @@ a:hover > .wiggle-on-hover {
     transparent 75%
   );
   will-change: transform, opacity;
-  animation: abg-dust-float var(--dust-duration, 9s) linear infinite;
+  animation: abg-dust-monte 9s linear infinite;
+}
+.abg-dust[data-derive='gauche'] .abg-dust-grain {
+  animation-name: abg-dust-monte-gauche;
+}
+.abg-dust[data-derive='droite'] .abg-dust-grain {
+  animation-name: abg-dust-monte-droite;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .abg-flame {
-    animation: none;
-    opacity: 0.7;
-  }
-  .abg-dust,
-  .abg-canvas {
+  .abg-dust {
     display: none;
   }
 }
@@ -1829,10 +1893,11 @@ a:hover > .wiggle-on-hover {
    2026-07-10). Tokens locaux à cet écran — le reste de l'app garde le code
    couleur marine/orange. Violet vif du bandeau, crème chaud du fond, jaune
    solaire des barres de progression. */
+/* La carte de Réviser lit les tokens de LA carte (audit du 23/09/2026) : même
+   rayon et même ombre que .moi-bloc et Card shadcn. */
 .rev-card {
-  box-shadow:
-    0 1px 2px oklch(0.4 0.15 310 / 0.06),
-    0 14px 28px -18px oklch(0.42 0.18 310 / 0.42);
+  border-radius: var(--carte-rayon);
+  box-shadow: var(--carte-ombre);
 }
 /* La barre de recherche d'un chapitre (ChapterList) : elle se déplie SOUS
    l'en-tête, dans le bloc. Elle descend de quelques pixels en apparaissant —
@@ -2001,15 +2066,14 @@ a:hover > .wiggle-on-hover {
     28px 28px,
     28px 28px;
 }
-/* La carte « jouet » : liseré violet léger + socle d'ombre dure violette.
-   Recalée sur la teinte de la marque (295) comme la carte de joueur : le liseré
-   tirait sur le magenta (305) et, sous une carte de joueur devenue franchement
-   violette, il se lisait comme une TROISIÈME couleur sur le même écran. */
+/* La carte « jouet » : liseré violet léger + socle d'ombre dure violette,
+   calée sur la teinte de la marque (295) pour ne pas faire une troisième
+   couleur sous la carte de joueur. Elle lit les tokens de la carte « plaque »
+   (audit du 23/09/2026) : même liseré, même socle, même rayon que .carte-plaque. */
 .moi-card {
-  border: 2px solid oklch(0.62 0.14 296 / 0.32);
-  box-shadow:
-    0 5px 0 oklch(0.45 0.19 295 / 0.34),
-    0 16px 24px -16px oklch(0.4 0.18 296 / 0.28);
+  border: 2px solid var(--carte-liseret);
+  box-shadow: var(--carte-socle);
+  border-radius: var(--carte-rayon);
 }
 /* --- Onglet Moi v8 : le PANNEAU d'identité -----------------------------------
    L'écran était une pile de six cartes blanches de même taille, de même rayon,
@@ -2103,8 +2167,10 @@ a:hover > .wiggle-on-hover {
   color: var(--onb-ink);
   font-family: var(--font-nunito), system-ui, sans-serif;
 }
+/* Les titres de l'onboarding sont en Baloo 2 comme TOUS les titres de l'app
+   (audit du 23/09/2026 : c'était le seul monde en Nunito 800). */
 .onb-title {
-  font-family: var(--font-nunito), system-ui, sans-serif;
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
   font-weight: 800;
   letter-spacing: -0.01em;
 }
@@ -2114,52 +2180,9 @@ a:hover > .wiggle-on-hover {
   letter-spacing: -0.01em;
 }
 
-/* Boutons 3D « façon Duolingo » : socle dur qui s'enfonce au press (~80 ms). */
-.onb-btn {
-  width: 100%;
-  border: none;
-  border-radius: 16px;
-  background: var(--onb-pp);
-  color: #fff;
-  font-family: var(--font-nunito), system-ui, sans-serif;
-  font-weight: 800;
-  font-size: 15px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding: 15px;
-  box-shadow: 0 5px 0 var(--onb-ppd);
-  transition:
-    transform 0.08s ease,
-    box-shadow 0.08s ease;
-}
-.onb-btn:active:not(:disabled) {
-  transform: translateY(4px);
-  box-shadow: 0 1px 0 var(--onb-ppd);
-}
-.onb-btn:disabled {
-  background: var(--onb-track);
-  color: #fff;
-  box-shadow: 0 5px 0 #c7bda6;
-  cursor: not-allowed;
-}
-.onb-btn-yellow {
-  background: var(--onb-yl);
-  color: #5a3d00;
-  box-shadow: 0 5px 0 var(--onb-yld);
-}
-.onb-btn-yellow:active:not(:disabled) {
-  box-shadow: 0 1px 0 var(--onb-yld);
-}
-.onb-btn-ghost {
-  background: #fff;
-  color: var(--onb-pp);
-  border: 2px solid var(--onb-line);
-  box-shadow: 0 4px 0 var(--onb-line);
-}
-.onb-btn-ghost:active:not(:disabled) {
-  transform: translateY(3px);
-  box-shadow: 0 1px 0 var(--onb-line);
-}
+/* Les boutons de l'onboarding sont ceux de l'app (`Button`, socle `.btn-chunky`)
+   depuis le 23/09/2026 : l'ancienne famille `.onb-btn` (jaune, capitales) a été
+   retirée avec `components/welcome/OnbButton`. */
 
 /* Cartes de choix (options / cases à cocher) : socle dur « façon Duolingo »,
    plus grandes, qui s'enfoncent au press, avec un petit rebond « pop » au clic. */
@@ -2701,11 +2724,13 @@ body {
 .tab-plate {
   position: absolute;
   inset-block: 0;
+  left: 0;
   z-index: 0;
   pointer-events: none;
-  transition:
-    left 320ms cubic-bezier(0.16, 1, 0.3, 1),
-    width 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  /* Elle glisse par `transform` (posé en ligne, `Navigation`), jamais par
+     `left` : le compositeur joue le glissement seul, même pendant que le
+     nouvel onglet se construit sur le fil principal. */
+  transition: transform 320ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 /* Le dessin vit dans ::before : l'enveloppe épouse exactement la cellule (pour
    que le glissement soit juste), le retrait visuel se fait ici. */
@@ -2853,7 +2878,9 @@ body {
   gap: 0.24em;
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: clamp(1.8rem, 8.6vw, 2.4rem);
+  /* La taille FIXE de tous les H1 de l'app (text-3xl, audit du 23/09/2026) ;
+     le contour violet reste, c'est l'identité du monde de Marcel. */
+  font-size: 1.875rem;
   line-height: 1.15;
   letter-spacing: -0.01em;
 }
@@ -4052,28 +4079,41 @@ body {
        désigner est le BOUTON ENTIER. Chez Clash Royale, rien ne traverse le
        bouton : c'est son POURTOUR qui respire.
 
-   D'où le déplacement du halo à l'extérieur. Il est posé en `box-shadow`
-   diffuse et non en pseudo-élément : une ombre ne crée pas de boîte, donc elle
-   ne peut ni rogner le contenu, ni intercepter un tap, ni forcer un
-   `overflow: hidden` qui trancherait le biseau de la plaque.
+   D'où le déplacement du halo à l'extérieur, sur un CALQUE FRÈRE posé derrière
+   le bouton (`components/defi/CombatButton.tsx`) : pas un pseudo-élément, que
+   l'`overflow: hidden` de la plaque rognerait, et un calque sans
+   `pointer-events`, qui n'intercepte aucun tap.
+
+   ⚠️ ON N'ANIME PAS L'OMBRE, ON ANIME L'OPACITÉ (23/09/2026). La lueur
+   animait la `box-shadow` du bouton : le navigateur la repeignait 60 fois par
+   seconde sur le fil principal (mesuré en production : 13 points de fil
+   principal sur 17, le premier coût de l'arène, loin devant l'arène vivante et
+   le dé) — et, au passage, l'animation écrasait le biseau et l'ombre portée
+   de `.arena-plate`, que la plaque DUEL avait perdus. Le calque porte le halo
+   au plus fort, figé, et seule son opacité respire : le compositeur s'en
+   charge seul.
 
    Le cycle est LENT (2,6 s) et l'amplitude faible : une pulsation rapide se lit
    comme une alerte. Ici, l'objet respire — il ne clignote pas. */
 @keyframes duel-lueur {
   0%,
   100% {
-    box-shadow:
-      0 0 0 0 rgba(255, 214, 107, 0),
-      0 0 14px 2px rgba(255, 198, 74, 0.35);
+    opacity: 0.4;
   }
   50% {
-    box-shadow:
-      0 0 0 6px rgba(255, 214, 107, 0.12),
-      0 0 26px 8px rgba(255, 198, 74, 0.55);
+    opacity: 1;
   }
 }
 
 .duel-lueur {
+  position: absolute;
+  inset: 0;
+  /* Le rayon extérieur de `.arena-plate` : le calque épouse la plaque. */
+  border-radius: 20px;
+  box-shadow:
+    0 0 0 6px rgba(255, 214, 107, 0.12),
+    0 0 26px 8px rgba(255, 198, 74, 0.55);
+  pointer-events: none;
   animation: duel-lueur 2.6s ease-in-out infinite;
 }
 
@@ -4082,7 +4122,7 @@ body {
    biseau, qui suffisent à la désigner. */
 @media (prefers-reduced-motion: reduce) {
   .duel-lueur {
-    animation: none;
+    display: none;
   }
 }
 
@@ -4146,166 +4186,33 @@ body {
 }
 
 /* ---------------------------------------------------------------------------
-   LA PILULE DE FIN DE QUIZ — le traitement du bouton DUEL, en petit.
+   LE COMPTEUR DU QUIZ (le chrono) — une plaque NEUTRE, pas un bouton.
 
-   Les deux reprises de l'écran de score ont d'abord porté le socle standard de
-   `.btn-chunky` : un simple trait sombre sous le bouton. Posé sous une carte
-   claire, ce trait ne se lit pas comme une tranche mais comme une ombre portée
-   mal découpée — plat, et sans rapport avec le reste du bouton.
+   Les boutons du quiz, de la dictée et de l'écran de score ont eu leur propre
+   famille (`.quiz-plaque`, `.quiz-pilule` : la plaque du DUEL en barre, teintée
+   par trois variables passées en ligne) et la session son propre fond
+   (`.quiz-fond`, un lavis à la couleur de la matière). Retirés le 23/09/2026 :
+   hors arène, il n'y a plus qu'UNE famille de gros bouton — `Button` et son
+   socle `.btn-chunky` —, ce qui se clique est violet, et le quiz se joue sur le
+   mur crème de l'app comme tout le reste.
 
-   Le bouton Duel de l'arène (`.arena-plate`) résout exactement le même problème,
-   et bien : la profondeur n'y vient pas d'UN trait, elle vient de QUATRE choses
-   qui se répondent — un contour foncé qui ferme la forme, un dégradé haut→bas
-   qui donne le volume, un reflet interne en haut, une ombre interne en bas, et
-   seulement ensuite la tranche pleine. C'est ce faisceau qu'on reprend ici, à
-   l'échelle d'une pilule.
-
-   Les trois teintes sont passées en variables par le composant : la pilule ne
-   connaît que sa géométrie, jamais sa couleur — c'est ce qui lui permet d'être
-   verte d'un côté et lavande de l'autre sans dupliquer la règle.
+   Il ne reste que le chrono à habiller : il empruntait la plaque des boutons
+   (modificateur `--compteur`), donc leur teinte de matière. Une pilule blanche,
+   un bord fin, une tranche à peine marquée — assez pour qu'il ait un corps,
+   pas assez pour qu'on croie pouvoir le presser (pas d'enfoncement au tap).
+   Aucune variable de robe : il est le même dans toutes les matières.
    --------------------------------------------------------------------------- */
-.quiz-pilule {
-  border-radius: 999px;
-  border: 2px solid var(--pilule-bord);
-  background: linear-gradient(
-    180deg,
-    var(--pilule-haut) 0%,
-    var(--pilule-bas) 100%
-  );
-  box-shadow:
-    inset 0 2px 0 rgba(255, 255, 255, 0.32),
-    inset 0 -3px 0 rgba(0, 0, 0, 0.16),
-    0 3px 0 var(--pilule-bord),
-    0 5px 10px rgba(0, 0, 0, 0.16);
-  transition:
-    transform 0.1s var(--ease),
-    box-shadow 0.1s var(--ease);
-}
-
-/* L'enfoncement : la pilule descend de la hauteur de sa tranche, et la tranche
-   disparaît sous elle. Le reflet et l'ombre interne RESTENT — c'est ce qui fait
-   qu'elle a l'air enfoncée plutôt qu'aplatie. */
-.quiz-pilule:active:not(:disabled) {
-  transform: translateY(3px);
-  box-shadow:
-    inset 0 2px 0 rgba(255, 255, 255, 0.32),
-    inset 0 -3px 0 rgba(0, 0, 0, 0.16),
-    0 0 0 var(--pilule-bord),
-    0 1px 3px rgba(0, 0, 0, 0.16);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .quiz-pilule {
-    transition: none;
-  }
-}
-
-/* ---------------------------------------------------------------------------
-   LE FOND D'UNE SESSION DE QUIZ — la matière, en vrai.
-
-   `.jeu-table` peint déjà `--jeu-surface`, mais cette variable est calibrée
-   pour les jeux de salon : 0.965 de clarté et 0.02 de chroma, c'est-à-dire à
-   deux doigts du blanc. Résultat, un quiz d'allemand et un quiz de maths ont
-   rigoureusement le même fond bleu pâle — la robe est branchée, elle ne se voit
-   pas.
-
-   On ne touche PAS à `--jeu-surface` : elle est partagée avec les treize jeux,
-   qui posent dessus des plateaux colorés et n'ont pas besoin de plus. On
-   superpose ici un lavis tiré de `--jeu-accent`, dense en haut, dissous à
-   mi-hauteur. La matière se reconnaît dès l'ouverture, et les plaques de
-   réponse gardent le fond clair qu'il leur faut pour rester lisibles.
-   --------------------------------------------------------------------------- */
-.quiz-fond {
-  background-color: var(--jeu-surface);
-  background-image:
-    /* Le halo du haut, comme sur la table de jeu — mais plus franc. */
-    radial-gradient(
-      115% 45% at 50% -6%,
-      color-mix(in oklab, var(--jeu-accent), transparent 62%),
-      transparent 72%
-    ),
-    /* Le lavis : il descend jusqu'à la respiration, jamais jusqu'aux réponses. */
-      linear-gradient(
-        180deg,
-        color-mix(in oklab, var(--jeu-accent), white 84%) 0%,
-        var(--jeu-surface) 58%
-      );
-}
-
-/* ---------------------------------------------------------------------------
-   LA PLAQUE DU QUIZ — le bouton DUEL de l'arène, en barre.
-
-   `.quiz-pilule` (l'écran de score) reprenait déjà l'idée ; les boutons de la
-   session en avaient besoin plus encore, et plus franchement. « Valider »
-   désactivé était un aplat beige sans contour ni tranche — il ne ressemblait
-   même plus à un bouton — et « Je ne sais pas » n'était qu'un texte gris posé
-   sur le fond, dont la zone tactile s'arrêtait aux lettres.
-
-   Mêmes quatre couches que `.arena-plate`, et dans le même ordre : contour
-   foncé qui ferme la forme, dégradé haut→bas pour le volume, reflet interne en
-   haut, ombre interne en bas, puis la tranche pleine. La différence avec la
-   plaque d'arène tient à l'échelle (contour de 2 px et non 3, rayon de barre)
-   et au fait que les trois teintes viennent d'en ligne : la plaque ne connaît
-   que sa géométrie, jamais sa couleur.
-   --------------------------------------------------------------------------- */
-.quiz-plaque {
+.quiz-compteur {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 18px;
-  border: 2px solid var(--plaque-bord);
-  background: linear-gradient(
-    180deg,
-    var(--plaque-haut) 0%,
-    var(--plaque-bas) 100%
-  );
-  box-shadow:
-    inset 0 2px 0 rgba(255, 255, 255, 0.4),
-    inset 0 -3px 0 rgba(0, 0, 0, 0.14),
-    0 4px 0 var(--plaque-bord),
-    0 6px 12px rgba(0, 0, 0, 0.14);
-  transition:
-    transform 0.1s var(--ease),
-    box-shadow 0.1s var(--ease);
-  /* Supprime le délai de 300 ms au double-tap : c'est ce retard, pas
-     l'animation, qui fait « site web » au lieu d'« app ». */
-  touch-action: manipulation;
-}
-
-/* L'enfoncement : la plaque descend de sa tranche, qui disparaît sous elle. Le
-   reflet et l'ombre interne RESTENT — c'est ce qui donne « enfoncé » plutôt
-   qu'« aplati ». Un bouton désactivé, lui, n'a rien à enfoncer. */
-.quiz-plaque:active:not(:disabled) {
-  transform: translateY(4px);
-  box-shadow:
-    inset 0 2px 0 rgba(255, 255, 255, 0.4),
-    inset 0 -3px 0 rgba(0, 0, 0, 0.14),
-    0 0 0 var(--plaque-bord),
-    0 1px 3px rgba(0, 0, 0, 0.14);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .quiz-plaque {
-    transition: none;
-  }
-}
-
-/* La MÊME plaque, en pilule — pour les objets courts (le chrono du quiz).
-   Un modificateur plutôt qu'une classe de plus : la géométrie ne change que
-   d'un rayon, tout le reste (contour, dégradé, biseau, tranche) est identique. */
-.quiz-plaque--ronde {
   border-radius: 999px;
-}
-
-/* Le chrono ne s'enfonce pas : ce n'est pas un bouton, c'est un compteur. Sa
-   tranche est plus fine, juste assez pour qu'il appartienne à la même famille
-   d'objets que les plaques sans se faire passer pour cliquable. */
-.quiz-plaque--compteur {
+  border: 2px solid var(--border);
+  background: var(--card);
   box-shadow:
-    inset 0 2px 0 rgba(255, 255, 255, 0.5),
-    inset 0 -2px 0 rgba(0, 0, 0, 0.08),
-    0 2px 0 var(--plaque-bord),
-    0 3px 6px rgba(0, 0, 0, 0.1);
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 2px 0 var(--border),
+    0 3px 6px rgba(0, 0, 0, 0.06);
 }
 
 /* ===========================================================================
@@ -4344,9 +4251,8 @@ body {
   }
 
   /* Les marges de lecture de l'écran (sous le bandeau, au-dessus des onglets)
-     n'ont plus d'objet une fois les deux barres parties — et la page de cours
-     les compense par des marges négatives qui, sans cette remise à zéro,
-     tireraient le titre hors de la feuille. */
+     n'ont plus d'objet une fois les deux barres parties ; la feuille, centrée
+     à l'écran, colle au bord de la page. */
   main {
     padding: 0 !important;
   }
@@ -4361,8 +4267,9 @@ body {
     display: none !important;
   }
 
-  /* Le bandeau coloré de la matière deviendrait un aplat d'encre pleine page.
-     Sur papier, un filet sous le titre dit la même chose pour rien. */
+  /* L'en-tête du cours (`EnTetePage` avec `entete-cours`) : sur papier, un
+     filet sous le titre et la matière — le retour et l'impression, dans leur
+     rangée `sans-papier`, sont déjà partis. */
   .entete-cours {
     background: none !important;
     padding: 0 0 0.75rem !important;
@@ -4421,23 +4328,8 @@ body {
    précédent que components/moi/CouronneArt.tsx).
    ========================================================================== */
 
-/* Un bloc de l'onglet : blanc, sans bord, une ombre douce et violette qui le
-   décolle du crème. Pas de liseré — quatre blocs à liseré font un formulaire. */
-.moi-bloc {
-  background: var(--card);
-  box-shadow:
-    0 1px 0 oklch(0.3 0.05 278 / 0.04),
-    0 10px 30px -12px oklch(0.4 0.18 296 / 0.28);
-}
-/* Le sourcil d'un bloc : petites capitales espacées, en encre atténuée. */
-.moi-sourcil {
-  font-size: 10.5px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted-foreground);
-}
-
+/* Les blocs de l'onglet Moi sont des `.carte` depuis le 23/09/2026
+   (`.moi-bloc` n'a plus d'utilisateur). */
 /* LE REFLET HOLOGRAPHIQUE de la carte de joueur : une bande claire en biais
    qui traverse la carte une fois. `mix-blend-mode: screen` la fait réagir au
    violet dessous au lieu de le blanchir. Il ne joue qu'au montage et au
@@ -5438,7 +5330,8 @@ body {
 .course-vs-compte--go {
   color: #fffdf7;
   -webkit-text-stroke-color: #b8700a;
-  font-size: 64px;
+  /* « Partez ! » (et non plus « GO ») : à 64 px il déborderait du centre VS. */
+  font-size: 40px;
 }
 
 /* La couronne du leader, posée sur l'avatar. */
@@ -6251,13 +6144,11 @@ body {
 }
 
 /* --- carnet bento --- */
-/* Le bloc de suggestion et les dossiers du carnet : une ombre violette
-   douce, la même que les tuiles du Dashboard, et l'enfoncement au tap. */
+/* Le bloc de suggestion et les dossiers du carnet : l'ombre de LA carte
+   (token, audit du 23/09/2026) et l'enfoncement au tap. */
 .carnet-hero,
 .carnet-dossier {
-  box-shadow:
-    0 1px 0 oklch(0.3 0.05 278 / 0.04),
-    0 10px 30px -12px oklch(0.4 0.18 296 / 0.28);
+  box-shadow: var(--carte-ombre);
   -webkit-tap-highlight-color: transparent;
   transition:
     transform 0.12s var(--ease),

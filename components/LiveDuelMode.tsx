@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Bot, Copy, Loader2, Swords, Trophy, Wifi, WifiOff, Zap } from 'lucide-react'
 import { QRCodeSVG } from 'qrcode.react'
 import { Button } from '@/components/ui/button'
+import AnswerBoard from '@/components/jeux/AnswerBoard'
 import { createClient } from '@/lib/supabase/client'
 import { useLiveDuel } from '@/components/useLiveDuel'
 import DuelMode from '@/components/DuelMode'
@@ -171,7 +172,7 @@ export default function LiveDuelMode({
   if (state.phase === 'idle') {
     return (
       <div className="mx-auto flex max-w-md flex-col gap-4 p-4">
-        <h2 className="font-heading flex items-center gap-2 text-xl font-bold">
+        <h2 className="font-heading flex items-center gap-2 text-xl font-extrabold">
           <Swords className="text-primary size-5" aria-hidden="true" /> Duel en
           ligne
         </h2>
@@ -340,7 +341,7 @@ export default function LiveDuelMode({
           className={`size-12 ${iWon ? 'text-highlight' : 'text-muted-foreground'}`}
           aria-hidden="true"
         />
-        <h2 className="font-heading text-2xl font-bold">
+        <h2 className="font-heading text-2xl font-extrabold">
           {iWon ? 'Victoire !' : 'Défaite'}
         </h2>
         <p className="text-muted-foreground text-sm">
@@ -402,7 +403,10 @@ function LiveMatch({
   const [index, setIndex] = useState(0)
   const [correct, setCorrect] = useState(0)
   const [startedAt] = useState(() => nowMs())
-  const [answered, setAnswered] = useState(false)
+  // La réponse choisie (et non plus un simple « répondu ») : le plateau
+  // partagé montre aussi le faux choisi en corail, pas seulement le juste.
+  const [selected, setSelected] = useState<number | null>(null)
+  const answered = selected !== null
   // Verrou synchrone anti-double-tap : la garde `answered` (state) est en retard
   // d'un rendu, donc deux taps rapprochés la franchissent tous deux. Sur la
   // dernière question d'une manche, cela appellerait `onRoundDone` (→ sendRound)
@@ -462,7 +466,7 @@ function LiveMatch({
   const answer = (choice: number) => {
     if (answered || advancingRef.current) return
     advancingRef.current = true
-    setAnswered(true)
+    setSelected(choice)
     const isCorrect = choice === q.correctIndex
     const nextCorrect = correct + (isCorrect ? 1 : 0)
     setCorrect(nextCorrect)
@@ -471,7 +475,7 @@ function LiveMatch({
         onRoundDone(nextCorrect, Math.round(nowMs() - startedAt))
       } else {
         setIndex(index + 1)
-        setAnswered(false)
+        setSelected(null)
       }
     }, 350)
   }
@@ -484,7 +488,7 @@ function LiveMatch({
         </span>
         <span className="flex items-center gap-1">
           {opponentPresent ? (
-            <Wifi className="size-3 text-green-600" aria-hidden="true" />
+            <Wifi className="size-3 text-success" aria-hidden="true" />
           ) : (
             <WifiOff className="text-destructive size-3" aria-hidden="true" />
           )}
@@ -493,23 +497,17 @@ function LiveMatch({
       </div>
 
       <p className="font-medium">{q.prompt}</p>
-      <div className="flex flex-col gap-2">
-        {q.options.map((opt, i) => (
-          <button
-            key={i}
-            type="button"
-            disabled={answered}
-            onClick={() => answer(i)}
-            className={`rounded-xl border bg-card px-4 py-3 text-left text-sm text-card-foreground transition-colors ${
-              answered && i === q.correctIndex
-                ? 'border-green-500 bg-green-50 text-green-700'
-                : 'hover:border-primary/50'
-            } disabled:cursor-default`}
-          >
-            {opt}
-          </button>
-        ))}
-      </div>
+      {/* Le plateau partagé des jeux et du quiz : juste/faux en rôles
+          success/destructive, plus de liste maison en vert Tailwind
+          (audit du 23/09/2026). La réponse se fige au premier tap. */}
+      <AnswerBoard
+        options={q.options}
+        correctIndex={q.correctIndex}
+        selected={selected}
+        revealed={answered}
+        layout="liste"
+        onAnswer={answer}
+      />
       <Button variant="ghost" size="sm" onClick={onExit} className="self-start">
         Abandonner
       </Button>

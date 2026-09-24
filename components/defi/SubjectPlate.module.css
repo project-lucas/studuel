@@ -17,25 +17,37 @@
   width: 26px;
   height: 19px;
   filter: drop-shadow(0 1.5px 0 #120d24);
-  animation: rebond 1.15s ease-in-out infinite;
-}
-.fleche[data-sens='haut'] {
-  --sens: -1;
+  animation: rebond-haut 1.15s ease-in-out infinite;
 }
 .fleche[data-sens='bas'] {
-  --sens: 1;
+  animation-name: rebond-bas;
 }
 
-@keyframes rebond {
+/* Deux images-clés aux valeurs écrites en dur, une par sens : elles lisaient
+   `var(--sens)`, et une animation qui lit une variable tourne sur le fil
+   principal (recalcul des styles à chaque image, mesuré le 23/09/2026). */
+@keyframes rebond-haut {
   0%,
   100% {
     transform: translateY(0);
   }
   45% {
-    transform: translateY(calc(var(--sens) * 4px));
+    transform: translateY(-4px);
   }
   60% {
-    transform: translateY(calc(var(--sens) * 3px));
+    transform: translateY(-3px);
+  }
+}
+@keyframes rebond-bas {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  45% {
+    transform: translateY(4px);
+  }
+  60% {
+    transform: translateY(3px);
   }
 }
 

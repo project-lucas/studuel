@@ -94,11 +94,11 @@ export default async function CarnetRevoirPage() {
       <ReviewSession
         courseId={null}
         chapterId={null}
-        courseTitle="Mon carnet"
+        courseTitle="Ma bibliothèque"
         scopeLabel="À revoir aujourd’hui"
         questions={queue}
         backHref="/carnet"
-        backLabel="Retour au carnet"
+        backLabel="Retour à ma bibliothèque"
       />
     </>
   )

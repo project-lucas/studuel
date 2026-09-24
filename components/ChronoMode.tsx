@@ -1,7 +1,8 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { Hourglass, Check, X, Trophy } from 'lucide-react'
+import { Hourglass, Trophy } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { gameSfx, sfx } from '@/lib/sounds'
 import type { Gain } from '@/lib/gains'
@@ -24,6 +25,7 @@ import {
   modeScene,
 } from '@/lib/defi-modes'
 import ModeHero from '@/components/defi/ModeHero'
+import AnswerBoard from '@/components/jeux/AnswerBoard'
 
 type Phase = 'intro' | 'playing' | 'done'
 
@@ -91,8 +93,9 @@ export default function ChronoMode({
   const question = pool.length > 0 ? pool[qIndex % pool.length] : null
   const answered = selected !== null
 
+  // Pas de son ici : les deux boutons qui lancent une partie (« C'est parti »,
+  // « Rejouer ») sont des `Button`, qui jouent déjà leur clic.
   const start = () => {
-    sfx.flip()
     finishedRef.current = false
     statsRef.current = { correct: 0, answered: 0 }
     streakRef.current = 0
@@ -218,19 +221,11 @@ export default function ChronoMode({
           </p>
         ) : null}
 
-        <button
-          type="button"
-          onClick={start}
-          disabled={pool.length === 0}
-          className="group go-pulse relative flex size-32 flex-col items-center justify-center gap-1 overflow-hidden rounded-full bg-primary text-primary-foreground shadow-xl shadow-primary/30 transition-all hover:scale-105 active:scale-95 disabled:opacity-40"
-        >
-          <span
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-x-4 top-2 h-12 rounded-full bg-gradient-to-b from-white/20 to-transparent"
-          />
-          <Hourglass className="size-9 transition-transform group-hover:rotate-12" />
-          <span className="font-heading text-xl font-bold">GO</span>
-        </button>
+        {/* L'action unique de l'écran : le gros bouton de l'app, plus le rond
+            « GO » maison (audit du 23/09/2026). */}
+        <Button size="xl" shine className="w-full" onClick={start} disabled={pool.length === 0}>
+          <Hourglass /> C&apos;est parti
+        </Button>
 
         {pool.length === 0 ? (
           <p className="max-w-xs text-sm text-muted-foreground">
@@ -281,9 +276,9 @@ export default function ChronoMode({
               key={answeredCount}
               className={cn(
                 'pop-spring font-mono text-sm font-bold tabular-nums',
-                lastDelta > 0
-                  ? 'text-green-700 dark:text-green-400'
-                  : 'text-destructive',
+                // Temps gagné / perdu : les rôles success/destructive, comme
+                // le verdict des réponses.
+                lastDelta > 0 ? 'text-success' : 'text-destructive',
               )}
             >
               {lastDelta > 0 ? `+${lastDelta}` : lastDelta} s
@@ -310,47 +305,23 @@ export default function ChronoMode({
       </div>
 
       {question.subject ? (
-        <p className="text-xs font-semibold text-muted-foreground uppercase">
-          {question.subject}
-        </p>
+        <p className="surtitre">{question.subject}</p>
       ) : null}
 
-      <h2 className="font-heading mb-1 text-xl font-bold text-balance">
+      <h2 className="font-heading mb-1 text-xl font-extrabold text-balance">
         {question.prompt}
       </h2>
-      <div className="flex flex-col gap-2">
-        {question.options.map((option, i) => {
-          const isCorrect = i === question.correctIndex
-          const isSelected = i === selected
-          return (
-            <button
-              key={i}
-              type="button"
-              disabled={answered}
-              onClick={() => answer(i)}
-              className={cn(
-                'flex items-center justify-between gap-3 rounded-2xl border px-4 py-3 text-left text-sm font-medium transition-all',
-                !answered &&
-                  'hover:border-primary/40 hover:bg-accent hover:text-accent-foreground active:scale-[0.99]',
-                answered &&
-                  isCorrect &&
-                  'border-green-600 bg-green-600/10 text-green-700 dark:text-green-400',
-                answered &&
-                  isSelected &&
-                  !isCorrect &&
-                  'border-destructive bg-destructive/10 text-destructive',
-                answered && !isSelected && !isCorrect && 'opacity-50',
-              )}
-            >
-              {option}
-              {answered && isCorrect ? <Check className="size-4 shrink-0" /> : null}
-              {answered && isSelected && !isCorrect ? (
-                <X className="size-4 shrink-0" />
-              ) : null}
-            </button>
-          )
-        })}
-      </div>
+      {/* Le plateau partagé des jeux et du quiz : juste/faux en rôles
+          success/destructive, plus de liste maison en vert Tailwind
+          (audit du 23/09/2026). La réponse se fige au premier tap. */}
+      <AnswerBoard
+        options={question.options}
+        correctIndex={question.correctIndex}
+        selected={selected}
+        revealed={answered}
+        layout="liste"
+        onAnswer={answer}
+      />
 
       <p role="status" aria-live="polite" className="sr-only">
         {answered

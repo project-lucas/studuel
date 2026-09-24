@@ -74,7 +74,7 @@ export default function ItemGrid({
         <section key={category} aria-label={CATEGORY_LABELS[category]}>
           {/* Un seul groupe dans l'onglet : le titre serait redondant. */}
           {groupCount > 1 ? (
-            <h3 className="mb-2 text-xs font-extrabold tracking-wide text-muted-foreground uppercase">
+            <h3 className="titre-section mb-2">
               {CATEGORY_LABELS[category]}
             </h3>
           ) : null}

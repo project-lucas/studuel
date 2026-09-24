@@ -32,7 +32,7 @@ export default function MethodePanel({
 }) {
   if (matieres.length === 0) {
     return (
-      <p className="bg-card text-muted-foreground rounded-[20px] p-5 text-center text-[13px] leading-relaxed font-semibold">
+      <p className="carte text-muted-foreground p-5 text-center text-[13px] leading-relaxed font-semibold">
         Choisis tes matières dans Réviser, et je te dirai comment on travaille
         chacune d’elles.
       </p>
@@ -70,8 +70,10 @@ export default function MethodePanel({
 
       {spec && Icone && courante && regime !== null ? (
         <>
-          <section className="from-primary relative overflow-hidden rounded-[20px] bg-gradient-to-b to-[color-mix(in_oklch,var(--primary),black_26%)] p-3.5 text-white shadow-[0_14px_26px_-20px_color-mix(in_oklch,var(--primary),transparent_5%),inset_0_1px_0_rgba(255,255,255,.28)]">
-            <p className="flex items-center gap-1.5 text-[10px] font-black tracking-[.15em] text-white/80 uppercase">
+          {/* La carte du régime garde son violet ; rayon et ombre sont ceux de LA carte
+              (tokens de globals.css, audit du 23/09/2026). */}
+          <section className="from-primary relative overflow-hidden rounded-carte bg-gradient-to-b to-[color-mix(in_oklch,var(--primary),black_26%)] p-3.5 text-white shadow-carte">
+            <p className="surtitre flex items-center gap-1.5 text-white/80">
               <Icone aria-hidden="true" className="size-3.5" />
               Régime · {spec.name}
             </p>
@@ -100,7 +102,7 @@ export default function MethodePanel({
         </>
       ) : (
         // Matière hors doctrine : Marcel se tait plutôt que de dire une bêtise.
-        <p className="bg-card text-muted-foreground rounded-[20px] p-5 text-center text-[13px] leading-relaxed font-semibold">
+        <p className="carte text-muted-foreground p-5 text-center text-[13px] leading-relaxed font-semibold">
           Sur cette matière, je n’ai pas de méthode à te donner — elle se
           travaille ailleurs qu’ici, et je préfère me taire que dire une bêtise.
         </p>

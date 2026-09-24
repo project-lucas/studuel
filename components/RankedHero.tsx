@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { Trophy, Swords, ChevronUp, ChevronDown, Crown } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import {
   rankPlayers,
@@ -125,7 +126,7 @@ export default function RankedHero({
         {/* Objectif : doubler le rival juste devant (ou tenir sa place). */}
         {ahead ? (
           <div className="flex items-center gap-2 rounded-2xl bg-accent/50 px-3 py-2 text-sm">
-            <ChevronUp className="size-4 shrink-0 text-green-600" aria-hidden="true" />
+            <ChevronUp className="size-4 shrink-0 text-success" aria-hidden="true" />
             <span className="min-w-0 flex-1">
               <span className="font-bold">{ahead.name}</span> est devant toi
             </span>
@@ -187,13 +188,9 @@ export default function RankedHero({
             dans le bouton COMBAT : on choisit sa matière puis son jeu, et
             chaque jeu a son propre compteur de trophées. La salle de jeu
             n'étant qu'une sous-page, elle pointe vers la porte d'entrée. */}
-        <button
-          type="button"
-          onClick={onPlay}
-          className="press-3d-deep mt-1 flex w-full items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3.5 font-heading text-base font-extrabold tracking-wide text-primary-foreground uppercase italic transition-transform active:scale-[0.99]"
-        >
-          <Swords className="size-5" aria-hidden="true" /> Aller au combat
-        </button>
+        <Button size="xl" className="mt-1 w-full" onClick={onPlay}>
+          <Swords aria-hidden="true" /> Aller au combat
+        </Button>
         <p className="-mt-1 text-center text-[11px] text-muted-foreground">
           Choisis ta matière et ton jeu · chacun a ses trophées
         </p>

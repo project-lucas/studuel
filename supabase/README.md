@@ -23,15 +23,19 @@ vitesse de l'app dépend des requêtes faites à chaque écran, pas de l'histori
 
 ## Ce qui reste à exécuter en production
 
-**Au 01/10/2026 au soir : une seule, la 465** (`schema/465_classement_amis.sql`,
-écrite après la mesure ci-dessous) : `classement_amis()`, qui sert le bloc
-« Toi et tes amis » de l'onglet Moi — trophées et temps de travail de la
-semaine, pour l'élève et ses amis acceptés. Essayée sur PGlite (rejeu double,
-périmètre, droits). Tant qu'elle dort, le bloc ne montre que la colonne de
-l'élève. La 381 (`revision_par_quiz`) n'est plus appelée par l'app depuis que ce
+**Au 01/10/2026 dans la nuit : rien.** La **465** (`schema/465_classement_amis.sql`)
+est passée la dernière : `classement_amis()`, qui sert le bloc « Toi et tes
+amis » de l'onglet Moi — trophées et temps de travail de la semaine, pour
+l'élève et ses amis acceptés. Essayée sur PGlite (rejeu double, périmètre,
+droits), puis en production dans une transaction annulée, puis exécutée deux
+fois (API de gestion) et contrôlée : la fonction existe, `SECURITY DEFINER`,
+exécutable par `authenticated`, refusée à `anon`, et un élève n'y voit que son
+cercle ; la sonde la marque ✓. ⚠️ La production n'avait ce soir-là **aucune
+amitié** (9 profils) : le chemin « avec amis » n'a pu être vérifié que sur
+PGlite. La 381 (`revision_par_quiz`) n'est plus appelée par l'app depuis que ce
 bloc a remplacé « Tes matières » ; elle peut rester en base.
 
-**Avant la 465 : rien.** Mesuré en SQL (API de gestion), et non plus à la seule
+**Avant la 465 : rien non plus.** Mesuré en SQL (API de gestion), et non plus à la seule
 clé anon : les 212 fonctions de la base sont identiques à leur dernière
 définition dans les migrations, aucune policy n'appelle `auth.uid()` à nu,
 aucune table n'est sans RLS, et les migrations « non sondables » (194 → 362,
